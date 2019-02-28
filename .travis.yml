@@ -10,7 +10,7 @@ before_script:
   - npm install -g @angular/cli
 script:
   - ng build --prod --base-href http://gois.dev/gorila-ui-components/
-  - npm run compodoc
+  - npm run ghpages
 deploy:
   provider: pages
   skip_cleanup: true
