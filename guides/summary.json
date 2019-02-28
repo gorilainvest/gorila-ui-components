@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Getting started",
+    "file": "./getting-started.md"
+  },
+  {
+    "title": "Contributing",
+    "file": "./contributing.md"
+  },
+  {
+    "title": "Dev Environment",
+    "file": "./dev-environment.md"
+  }
+]

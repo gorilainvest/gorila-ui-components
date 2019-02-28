@@ -26,7 +26,8 @@
     "dep-graph": "./node_modules/.bin/nx dep-graph",
     "help": "./node_modules/.bin/nx help",
     "server": "lite-server",
-    "precise-commits": "precise-commits"
+    "precise-commits": "precise-commits",
+    "compodoc": "compodoc -p ./tsconfig.compodoc.json --includes guides"
   },
   "private": true,
   "dependencies": {
@@ -56,6 +57,7 @@
     "@angular/language-service": "^6.0.0",
     "@commitlint/cli": "^7.5.2",
     "@commitlint/config-conventional": "^7.5.0",
+    "@compodoc/compodoc": "^1.1.8",
     "@ngrx/store-devtools": "6.1.2",
     "@nrwl/builders": "7.5.2",
     "@nrwl/schematics": "7.5.2",
