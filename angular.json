@@ -1,0 +1,146 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "",
+  "projects": {
+    "widgets-system": {
+      "root": "apps/widgets-system/",
+      "sourceRoot": "apps/widgets-system/src",
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "style": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/widgets-system",
+            "index": "apps/widgets-system/src/index.html",
+            "main": "apps/widgets-system/src/main.ts",
+            "polyfills": "apps/widgets-system/src/polyfills.ts",
+            "tsConfig": "apps/widgets-system/tsconfig.app.json",
+            "assets": [
+              "apps/widgets-system/src/favicon.ico",
+              "apps/widgets-system/src/assets"
+            ],
+            "styles": ["apps/widgets-system/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/widgets-system/src/environments/environment.ts",
+                  "with": "apps/widgets-system/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": true,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "widgets-system:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "widgets-system:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "widgets-system:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/widgets-system/src/test.ts",
+            "polyfills": "apps/widgets-system/src/polyfills.ts",
+            "tsConfig": "apps/widgets-system/tsconfig.spec.json",
+            "karmaConfig": "apps/widgets-system/karma.conf.js",
+            "styles": ["apps/widgets-system/src/styles.scss"],
+            "scripts": [],
+            "assets": [
+              "apps/widgets-system/src/favicon.ico",
+              "apps/widgets-system/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/widgets-system/tsconfig.app.json",
+              "apps/widgets-system/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    },
+    "widgets-system-e2e": {
+      "root": "apps/widgets-system-e2e",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/builders:cypress",
+          "options": {
+            "cypressConfig": "apps/widgets-system-e2e/cypress.json",
+            "tsConfig": "apps/widgets-system-e2e/tsconfig.e2e.json",
+            "devServerTarget": "widgets-system:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "widgets-system:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/widgets-system-e2e/tsconfig.e2e.json",
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    },
+  },
+  "cli": {
+    "warnings": {
+      "typescriptMismatch": false,
+      "versionMismatch": false
+    },
+    "defaultCollection": "@nrwl/schematics",
+    "packageManager": "npm"
+  },
+  "schematics": {
+    "@nrwl/schematics:application": {
+      "style": "scss"
+    },
+    "@nrwl/schematics:library": {
+      "style": "scss"
+    }
+  },
+  "defaultProject": "widgets-system"
+}
