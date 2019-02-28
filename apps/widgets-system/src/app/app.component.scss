@@ -80,3 +80,57 @@ $menu-icon-size: 24px;
     width: 100%;
   }
 }
+
+.mat-card-content {
+  height: 400px;
+  .mat-card-title {
+    font-size: 4rem;
+  }
+  .mat-list[role='list'] {
+    display: grid;
+    grid-row-gap: 10px;
+    grid-auto-rows: 60px;
+  }
+}
+.mat-grid-list > div {
+  display: grid;
+  grid-template-areas: 'a b b b c' 'a d d d c';
+  grid-template-columns: 1.3fr 1fr 1fr 1fr 0.7fr;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+  width: 100%;
+  .mat-grid-tile {
+    height: 100% !important;
+    left: unset !important;
+    position: relative !important;
+    top: unset !important;
+    width: 100% !important;
+  }
+  .mat-grid-tile .mat-figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .mat-grid-tile-header {
+    align-self: flex-start;
+    background: transparent;
+    color: black;
+    font-size: 2rem;
+    position: relative;
+  }
+  .left-aside {
+    grid-area: a;
+  }
+  .visual {
+    grid-area: b;
+  }
+  .right-aside {
+    grid-area: c;
+  }
+  .code {
+    grid-area: d;
+  }
+}
+.card-body__configurations {
+  width: 100%;
+}

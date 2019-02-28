@@ -13,8 +13,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
-import { EnhancedTitleModule } from '@gorila-bot/ui/enhanced-title';
-import { SlideToggleModule } from '@gorila-bot/ui/slide-toggle';
+import { EnhancedTitleModule } from '@gorilainvest/ui-enhanced-title';
+import { SlideToggleModule } from '@gorilainvest/ui-slide-toggle';
 import { NxModule } from '@nrwl/nx';
 
 import { AppComponent } from './app.component';
