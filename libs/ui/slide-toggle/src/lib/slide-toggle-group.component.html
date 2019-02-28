@@ -1,0 +1,12 @@
+<ng-container *ngIf="data && data.length > 0">
+  <ng-container *ngFor="let toggle of data">
+    <slide-toggle
+      [id]="toggle?.cod"
+      [checked]="toggle?.checked"
+      [color]="toggle?.color"
+      [title]="toggle?.title"
+      (toggleChange)="toggleChange(toggle?.cod, $event)"
+      ngDefaultControl
+    ></slide-toggle>
+  </ng-container>
+</ng-container>

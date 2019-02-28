@@ -125,6 +125,80 @@
         }
       }
     },
+    "ui-enhanced-title": {
+      "root": "libs/ui/enhanced-title",
+      "sourceRoot": "libs/ui/enhanced-title/src",
+      "projectType": "library",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/ui/enhanced-title/tsconfig.lib.json",
+            "project": "libs/ui/enhanced-title/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui/enhanced-title/tsconfig.lib.json",
+              "libs/ui/enhanced-title/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/ui/enhanced-title/src/test.ts",
+            "tsConfig": "libs/ui/enhanced-title/tsconfig.spec.json",
+            "karmaConfig": "libs/ui/enhanced-title/karma.conf.js"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "ui-slide-toggle": {
+      "root": "libs/ui/slide-toggle",
+      "sourceRoot": "libs/ui/slide-toggle/src",
+      "projectType": "library",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/ui/slide-toggle/tsconfig.lib.json",
+            "project": "libs/ui/slide-toggle/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/ui/slide-toggle/src/test.ts",
+            "tsConfig": "libs/ui/slide-toggle/tsconfig.spec.json",
+            "karmaConfig": "libs/ui/slide-toggle/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui/slide-toggle/tsconfig.lib.json",
+              "libs/ui/slide-toggle/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    }
   },
   "cli": {
     "warnings": {

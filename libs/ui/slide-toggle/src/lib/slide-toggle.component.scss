@@ -1,0 +1,85 @@
+$trail-width: 20px;
+$trail-height: 7px;
+$ball-size: 11px;
+.toggle-container {
+  display: flex;
+  width: fit-content;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  .title {
+    text-transform: uppercase;
+    margin-right: 8px;
+  }
+}
+.toggle-container.disabled {
+  cursor: initial;
+  pointer-events: none;
+
+  .slider-before {
+    background: #888e8e !important;
+  }
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: $trail-width;
+  height: $trail-height;
+  margin-right: 5px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  display: none;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d8dada;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+
+  &.round {
+    border-radius: 15px;
+  }
+}
+
+.slider-before {
+  position: absolute;
+  content: '';
+  height: $ball-size;
+  width: $ball-size;
+  left: 0;
+  bottom: -2px;
+  background-color: #a7a9ac;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.active {
+  .slider-before {
+    background-color: #555b5b;
+  }
+}
+
+input:checked + .slider {
+  background-color: #dbdddd;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #dbdddd;
+}
+
+.active .slider-before {
+  -webkit-transform: translateX($ball-size);
+  -ms-transform: translateX($ball-size);
+  transform: translateX($ball-size);
+}
