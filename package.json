@@ -25,7 +25,8 @@
     "workspace-schematic": "./node_modules/.bin/nx workspace-schematic",
     "dep-graph": "./node_modules/.bin/nx dep-graph",
     "help": "./node_modules/.bin/nx help",
-    "server": "lite-server"
+    "server": "lite-server",
+    "precise-commits": "precise-commits"
   },
   "private": true,
   "dependencies": {
@@ -77,6 +78,7 @@
     "lite-server": "^2.4.0",
     "ng-packagr": "^4.2.0",
     "ngrx-store-freeze": "0.2.4",
+    "precise-commits": "^1.0.2",
     "prettier": "^1.15.2",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
