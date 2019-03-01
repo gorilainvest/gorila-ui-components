@@ -9,8 +9,10 @@ only:
 before_script:
   - npm install -g @angular/cli
 script:
-  - ng build --prod --base-href http://gois.dev/gorila-ui-components/
+  - ng build --prod --base-href https://gois.dev/gorila-ui-components/
+
   - npm run ghpages
+
 deploy:
   provider: pages
   skip_cleanup: true
