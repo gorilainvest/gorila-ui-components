@@ -29,7 +29,7 @@
     "precise-commits": "precise-commits",
     "compodoc": "compodoc -p ./tsconfig.compodoc.json --includes guides",
     "ghpages": "npm run compodoc -- --output dist/apps/widgets-system/docs",
-    "codacy-coverage": "node_modules/.bin/lcov-result-merger coverage/**/*/lcov.info | codacy-coverage"
+    "codacy-coverage": "node_modules/.bin/lcov-result-merger coverage/**/*/lcov.info | codacy-coverage --username guilhermejcgois --project gorila-ui-components"
   },
   "private": true,
   "dependencies": {
