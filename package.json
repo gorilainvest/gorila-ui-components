@@ -7,7 +7,7 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "./node_modules/.bin/nx lint && ng lint",
+    "lint": "./node_modules/.bin/nx lint && ng lint && remark .",
     "e2e": "ng e2e",
     "affected:apps": "./node_modules/.bin/nx affected:apps",
     "affected:libs": "./node_modules/.bin/nx affected:libs",
@@ -47,6 +47,9 @@
     "@ngrx/store": "6.1.2",
     "@nrwl/nx": "7.5.2",
     "core-js": "^2.5.4",
+    "remark-cli": "^6.0.1",
+    "remark-lint": "^6.0.4",
+    "remark-preset-lint-recommended": "^3.0.2",
     "rxjs": "~6.4.0",
     "zone.js": "^0.8.26"
   },

@@ -3,11 +3,11 @@
 We would love for you to contribute to Gorila Widgets System and help make it ever better!
 As a contributor, here are the guidelines we would like you to follow:
 
- - [Issues and Bugs](#issue)
- - [Feature Requests](#feature)
- - [Submission Guidelines](#submit-pr)
- - [Coding Rules](#rules)
- - [Commit Message Guidelines](#commit)
+- [Issues and Bugs](#issue)
+- [Feature Requests](#feature)
+- [Submission Guidelines](#submit-pr)
+- [Coding Rules](#rules)
+- [Commit Message Guidelines](#commit)
 
 ## <a name="issue"></a> Found an Issue?
 If you find a bug in the source code or a mistake in the documentation, you can help us by
@@ -209,7 +209,5 @@ A detailed explanation can be found in this [document][commit-message-format].
 [style-guide]: https://angular.io/guide/styleguide
 [codepen]: http://codepen.io/
 [jsbin]: http://jsbin.com/
-[jsfiddle]: http://jsfiddle.net/
 [plunker]: http://plnkr.co/edit
-[runnable]: http://runnable.com/
 [jira]: https://gorila.atlassian.net/secure/RapidBoard.jspa
