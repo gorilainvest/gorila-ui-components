@@ -10,6 +10,7 @@ before_script:
   - npm install -g @angular/cli
 script:
   - ng build --prod --base-href https://gois.dev/gorila-ui-components/
+  - npm test -- --code-coverage
   - npm run codacy-coverage
   - npm run ghpages
 
