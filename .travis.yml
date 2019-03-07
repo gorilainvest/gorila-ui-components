@@ -21,6 +21,7 @@ deploy:
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   local_dir: dist/apps/widgets-system/
+  fqdn: ui.gorilainvest.com.br
   keep-history: true
   on:
     branch: master
