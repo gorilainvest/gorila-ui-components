@@ -21,5 +21,6 @@ deploy:
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   local_dir: dist/apps/widgets-system/
+  keep-history: true
   on:
     branch: master
