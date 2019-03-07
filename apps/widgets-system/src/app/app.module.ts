@@ -40,7 +40,7 @@ import { GdkCardComponent } from './gdk/gdk-card/gdk-card.component';
     FormsModule,
     ReactiveFormsModule,
     NxModule.forRoot(),
-    RouterModule.forRoot(ROUTES, { initialNavigation: 'enabled' }),
+    RouterModule.forRoot(ROUTES, { initialNavigation: 'enabled', useHash: true }),
     MatCardModule,
     MatCheckboxModule,
     MatExpansionModule,
