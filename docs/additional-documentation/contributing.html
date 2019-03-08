@@ -58,15 +58,15 @@ As a contributor, here are the guidelines we would like you to follow:</p>
 <li><a href="#commit">Commit Message Guidelines</a></li>
 </ul>
 <h2 id="a-nameissuea-found-an-issue"><a name="issue"></a> Found an Issue?</h2>
-<p>If you find a bug in the source code or a mistake in the documentation, you can help us by
-<a href="#submit-issue">submitting an issue</a> to our <a href="https://bitbucket.org/guilhermejcgois/experimental-gorila-app-angular-common/">Bitbucket Repository</a>. Including an issue 
-reproduction (via CodePen, JsBin, Plunkr, etc.) is the absolute best way to help the team quickly
+<p>If you find a bug in the source code or a mistake in the documentation, you can help us by</p>
+<p><a href="#submit-issue">submitting an issue</a> to our <a href="https://github.org/guilhermejcgois/gorila-ui-components/">github Repository</a>. Including an issue </p>
+<p>reproduction (via CodePen, JsBin, Plunkr, etc.) is the absolute best way to help the team quickly
 diagnose the problem. Screenshots are also helpful.</p>
 <p>You can help the team even more and <a href="#submit-pr">submit a Pull Request</a> with a fix.</p>
 <h2 id="a-namefeaturea-want-a-feature"><a name="feature"></a> Want a Feature?</h2>
-<p>You can <em>request</em> a new feature by <a href="#submit-issue">submitting an issue</a> to our <a href="https://bitbucket.org/guilhermejcgois/experimental-gorila-app-angular-common/">Bitbucket
-Repository</a>. If you would like to <em>implement</em> a new feature, please submit an issue with
-a proposal for your work first, to be sure that we can use it. 
+<p>You can <em>request</em> a new feature by <a href="#submit-issue">submitting an issue</a> to our <a href="https://github.org/guilhermejcgois/gorila-ui-components/">github
+Repository</a>. If you would like to <em>implement</em> a new feature, please submit an issue with</p>
+<p>a proposal for your work first, to be sure that we can use it. 
 Please consider what kind of change it is:</p>
 <ul>
 <li>For a <strong>Major Feature</strong>, first open an issue and outline your proposal so that it can be
@@ -95,12 +95,12 @@ chances of your issue being dealt with quickly:</p>
 <li><strong>Suggest a Fix</strong> - if you can&#39;t fix the bug yourself, perhaps you can point to what might be
   causing the problem (line of code or commit)</li>
 </ul>
-<p>You can file new issues by providing the above information <a href="https://gorila.atlassian.net/secure/RapidBoard.jspa">here</a>.</p>
+<p>You can file new issues by providing the above information <a href="https://github.com/guilhermejcgois/gorila-ui-components/issues">here</a>.</p>
 <h3 id="a-namesubmit-pra-submitting-a-pull-request-pr"><a name="submit-pr"></a> Submitting a Pull Request (PR)</h3>
 <p>Before you submit your Pull Request (PR) consider the following guidelines:</p>
 <ul>
-<li><p>Search <a href="https://bitbucket.org/guilhermejcgois/experimental-gorila-app-angular-common/pull-requests/">Bitbucket</a> for an open or closed PR
-that relates to your submission. You don&#39;t want to duplicate effort.</p>
+<li><p>Search <a href="https://github.org/guilhermejcgois/gorila-ui-components/pull-requests/">github</a> for an open or closed PR</p>
+<p>that relates to your submission. You don&#39;t want to duplicate effort.</p>
 </li>
 <li><p>Make your changes in a new git branch:</p>
 <p>   <code>shell
@@ -122,11 +122,14 @@ is necessary because release notes are automatically generated from these messag
    git commit -a</code>
 Note: the optional commit <code>-a</code> command line option will automatically &quot;add&quot; and &quot;rm&quot; edited files.</p>
 </li>
-<li><p>Push your branch to Bitbucket:</p>
-<p>  <code>shell
-  git push my-fork my-fix-branch</code></p>
-</li>
-<li><p>In Bitbucket, send a pull request to <code>material2:master</code>.</p>
+</ul>
+<ul>
+<li>Push your branch to Github:</li>
+</ul>
+<div><pre class="line-numbers"><code class="language-none">```shell
+git push my-fork my-fix-branch
+```</code></pre></div><ul>
+<li><p>In Github, send a pull request to <code>material2:master</code>.</p>
 </li>
 <li><p>If we suggest changes then:</p>
 <ul>
@@ -134,8 +137,8 @@ Note: the optional commit <code>-a</code> command line option will automatically
 </li>
 <li><p>Re-run the Gorila Widgets System test suites to ensure tests are still passing.</p>
 </li>
-<li><p>Rebase your branch and force push to your Bitbucket repository (this will update your Pull
-Request):</p>
+<li><p>Rebase your branch and force push to your Github repository (this will update your Pull</p>
+<p>Request):</p>
 <p><code>shell
 git rebase master -i
 git push -f</code></p>
@@ -148,8 +151,8 @@ git push -f</code></p>
 <p>After your pull request is merged, you can safely delete your branch and pull the changes
 from the main (upstream) repository:</p>
 <ul>
-<li><p>Delete the remote branch on Bitbucket either through the Bitbucket web UI or your local shell as
-  follows:</p>
+<li><p>Delete the remote branch on Github either through the Github web UI or your local shell as</p>
+<p>  follows:</p>
 <p>  <code>shell
   git push my-fork --delete my-fix-branch</code></p>
 </li>
@@ -189,8 +192,8 @@ format that includes a <strong>type</strong>, a <strong>scope</strong> and a <st
 ```
 
 <p>The <strong>header</strong> is mandatory and the <strong>scope</strong> of the header is optional.</p>
-<p>Any line of the commit message cannot be longer 100 characters! This allows the message to be easier
-to read on Bitbucket as well as in various git tools.</p>
+<p>Any line of the commit message cannot be longer 100 characters! This allows the message to be easier</p>
+<p>to read on Github as well as in various git tools.</p>
 <h3 id="revert">Revert</h3>
 <p>If the commit reverts a previous commit, it should begin with <code>revert:</code>, followed by the header of
 the reverted commit. In the body it should say: <code>This reverts commit &lt;hash&gt;.</code>, where the hash is
@@ -223,8 +226,8 @@ semi-colons, etc)</li>
 <p>Just as in the <strong>subject</strong>, use the imperative, present tense: &quot;change&quot; not &quot;changed&quot; nor &quot;changes&quot;.
 The body should include the motivation for the change and contrast this with previous behavior.</p>
 <h3 id="footer">Footer</h3>
-<p>The footer should contain any information about <strong>Breaking Changes</strong> and is also the place to
-reference Bitbucket issues that this commit <strong>Closes</strong>.</p>
+<p>The footer should contain any information about <strong>Breaking Changes</strong> and is also the place to</p>
+<p>reference Github issues that this commit <strong>Closes</strong>.</p>
 <p><strong>Breaking Changes</strong> should start with the word <code>BREAKING CHANGE:</code> with a space or two newlines.
 The rest of the commit message is then used for this.</p>
 <p>A detailed explanation can be found in this <a href="https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/preview">document</a>.</p>
