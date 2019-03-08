@@ -8,6 +8,7 @@ This is the home for the Gorila team's components, built by developers for devel
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 ![Website](https://img.shields.io/website-up-down-green-red/http/ui.gorilainvest.com.br.svg?style=flat)
 
+
 ### Getting Started
 
 See our [Getting Started Guide](./additional-documentation/getting-started.html) if you're building a project with ours widgets.
