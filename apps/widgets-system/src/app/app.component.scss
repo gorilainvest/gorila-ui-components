@@ -44,6 +44,12 @@ $menu-icon-size: 24px;
     top: ($header-height - $menu-icon-size) / 2 - 5px;
     width: $menu-icon-size;
   }
+
+  .github-link {
+    position: absolute;
+    right: ($header-height - $menu-icon-size) / 2 + 5px;
+    top: ($header-height - $menu-icon-size) / 2 - 8px;
+  }
 }
 
 .sidenav-container {
