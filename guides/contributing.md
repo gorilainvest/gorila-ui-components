@@ -11,15 +11,19 @@ As a contributor, here are the guidelines we would like you to follow:
 
 ## <a name="issue"></a> Found an Issue?
 If you find a bug in the source code or a mistake in the documentation, you can help us by
-[submitting an issue](#submit-issue) to our [Bitbucket Repository][bitbucket]. Including an issue 
+
+[submitting an issue](#submit-issue) to our [github Repository][github]. Including an issue 
+
 reproduction (via CodePen, JsBin, Plunkr, etc.) is the absolute best way to help the team quickly
 diagnose the problem. Screenshots are also helpful.
 
 You can help the team even more and [submit a Pull Request](#submit-pr) with a fix.
 
 ## <a name="feature"></a> Want a Feature?
-You can *request* a new feature by [submitting an issue](#submit-issue) to our [Bitbucket
-Repository][bitbucket]. If you would like to *implement* a new feature, please submit an issue with
+
+You can *request* a new feature by [submitting an issue](#submit-issue) to our [github
+Repository][github]. If you would like to *implement* a new feature, please submit an issue with
+
 a proposal for your work first, to be sure that we can use it. 
 Please consider what kind of change it is:
 
@@ -50,13 +54,17 @@ chances of your issue being dealt with quickly:
 * **Suggest a Fix** - if you can't fix the bug yourself, perhaps you can point to what might be
     causing the problem (line of code or commit)
 
-You can file new issues by providing the above information [here][jira].
+
+You can file new issues by providing the above information [here][bug-tracker].
+
 
 
 ### <a name="submit-pr"></a> Submitting a Pull Request (PR)
 Before you submit your Pull Request (PR) consider the following guidelines:
 
-* Search [Bitbucket][bitbucket-pr] for an open or closed PR
+
+* Search [github][github-pr] for an open or closed PR
+
   that relates to your submission. You don't want to duplicate effort.
 * Make your changes in a new git branch:
 
@@ -78,17 +86,23 @@ Before you submit your Pull Request (PR) consider the following guidelines:
      ```
   Note: the optional commit `-a` command line option will automatically "add" and "rm" edited files.
 
-* Push your branch to Bitbucket:
+
+* Push your branch to Github:
+
 
     ```shell
     git push my-fork my-fix-branch
     ```
 
-* In Bitbucket, send a pull request to `material2:master`.
+
+* In Github, send a pull request to `material2:master`.
+
 * If we suggest changes then:
   * Make the required updates.
   * Re-run the Gorila Widgets System test suites to ensure tests are still passing.
-  * Rebase your branch and force push to your Bitbucket repository (this will update your Pull
+
+  * Rebase your branch and force push to your Github repository (this will update your Pull
+
     Request):
 
     ```shell
@@ -103,7 +117,9 @@ That's it! Thank you for your contribution!
 After your pull request is merged, you can safely delete your branch and pull the changes
 from the main (upstream) repository:
 
-* Delete the remote branch on Bitbucket either through the Bitbucket web UI or your local shell as
+
+* Delete the remote branch on Github either through the Github web UI or your local shell as
+
     follows:
 
     ```shell
@@ -156,7 +172,9 @@ format that includes a **type**, a **scope** and a **subject**:
 The **header** is mandatory and the **scope** of the header is optional.
 
 Any line of the commit message cannot be longer 100 characters! This allows the message to be easier
-to read on Bitbucket as well as in various git tools.
+
+to read on Github as well as in various git tools.
+
 
 ### Revert
 If the commit reverts a previous commit, it should begin with `revert: `, followed by the header of
@@ -195,7 +213,9 @@ The body should include the motivation for the change and contrast this with pre
 
 ### Footer
 The footer should contain any information about **Breaking Changes** and is also the place to
-reference Bitbucket issues that this commit **Closes**.
+
+reference Github issues that this commit **Closes**.
+
 
 **Breaking Changes** should start with the word `BREAKING CHANGE:` with a space or two newlines.
 The rest of the commit message is then used for this.
@@ -204,10 +224,13 @@ A detailed explanation can be found in this [document][commit-message-format].
 
 [commit-message-format]: https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/preview
 [dev-doc]: ./additional-documentation/dev-environment.html
-[bitbucket]: https://bitbucket.org/guilhermejcgois/experimental-gorila-app-angular-common/
-[bitbucket-pr]: https://bitbucket.org/guilhermejcgois/experimental-gorila-app-angular-common/pull-requests/
+
+[github]: https://github.org/guilhermejcgois/gorila-ui-components/
+[github-pr]: https://github.org/guilhermejcgois/gorila-ui-components/pull-requests/
+
 [style-guide]: https://angular.io/guide/styleguide
 [codepen]: http://codepen.io/
 [jsbin]: http://jsbin.com/
 [plunker]: http://plnkr.co/edit
-[jira]: https://gorila.atlassian.net/secure/RapidBoard.jspa
+
+[bug-tracker]: https://github.com/guilhermejcgois/gorila-ui-components/issues

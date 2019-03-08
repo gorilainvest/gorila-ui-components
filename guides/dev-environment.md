@@ -3,9 +3,13 @@
 1. Make sure you have `node` installed with a version at _least_ 8.0.0 and `yarn` with a version
    of at least 1.10.0. We recommend using `nvm` to manage your node versions.
 2. Run `yarn global add gulp` to install gulp.
-3. Fork the `guilhermejcgois/experimental-gorila-app-angular-common` repo on Bitbucket.
+
+3. Fork the `guilhermejcgois/gorila-ui-components` repo on Github.
+
 4. Clone your fork to your machine with `git clone`.
-   Recommendation: name your git remotes `upstream` for `guilhermejcgois/experimental-gorila-app-angular-common`
+
+   Recommendation: name your git remotes `upstream` for `guilhermejcgois/gorila-ui-components`
+
    and `<your-username>` for your fork.
 5. From the root of the project, run `yarn` or `npm install`.
 

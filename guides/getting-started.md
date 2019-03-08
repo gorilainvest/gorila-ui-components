@@ -9,11 +9,15 @@ You can use either the npm or yarn command-line tool to install packages. Use wh
 
 #### NPM
 ```bash
-npm install --save @gorila-bot/ui-enhanced-title
+
+npm install --save @gorilainvest/ui-enhanced-title
+
 ```
 #### Yarn
 ```bash
-yarn add @gorila-bot/ui-enhanced-title
+
+yarn add @gorilainvest/ui-enhanced-title
+
 ```
 
 ### Step 3: Import the component module
@@ -21,7 +25,9 @@ yarn add @gorila-bot/ui-enhanced-title
 Import the NgModule for the component you want to use:
 
 ```ts
-import { EnhancedTitleModule } from '@gorila-bot/ui-enhanced-title';
+
+import { EnhancedTitleModule } from '@gorilainvest/ui-enhanced-title';
+
 
 @NgModule({
   ...
