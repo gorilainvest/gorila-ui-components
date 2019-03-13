@@ -1,12 +1,17 @@
 <ng-container *ngIf="data && data.length > 0">
-  <ng-container *ngFor="let toggle of data">
-    <slide-toggle
-      [id]="toggle?.cod"
-      [checked]="toggle?.checked"
-      [color]="toggle?.color"
-      [title]="toggle?.title"
-      (toggleChange)="toggleChange(toggle?.cod, $event)"
-      ngDefaultControl
-    ></slide-toggle>
-  </ng-container>
+  <div class="toggle-group-container">
+    <ng-container *ngFor="let toggle of data">
+      <div class="toggle-container">
+        <span *ngIf="!!labels[i]" class="toggle-label">{{ labels[i] }}:</span>
+        <slide-toggle
+          [id]="toggle?.cod"
+          [checked]="toggle?.checked"
+          [color]="toggle?.color"
+          [title]="toggle?.title"
+          (toggleChange)="toggleChange(toggle?.cod, $event)"
+          ngDefaultControl
+        ></slide-toggle>
+      </div>
+    </ng-container>
+  </div>
 </ng-container>

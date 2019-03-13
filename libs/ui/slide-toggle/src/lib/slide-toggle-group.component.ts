@@ -10,11 +10,15 @@ import { ToggleData } from './slide-toggle.model';
   styleUrls: ['./slide-toggle-group.component.scss']
 })
 export class SlideToggleGroupComponent {
-
   /**
    * An array of toggle objects.
    */
   @Input() public data: Array<ToggleData> = [];
+
+  /**
+   * An array of labels for `data` input.
+   */
+  @Input() public labels: Array<string> = [];
 
   /**
    * Event indicanting the check state change of all toggles.
@@ -22,7 +26,6 @@ export class SlideToggleGroupComponent {
   @Output() public selecteds = new EventEmitter<Array<string>>();
 
   constructor() {}
-
 
   /**
    * public toggleChange - updates and emit changes due to toggle changes

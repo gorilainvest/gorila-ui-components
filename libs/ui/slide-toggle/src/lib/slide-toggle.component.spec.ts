@@ -46,7 +46,7 @@ describe('SlideToggleComponent', () => {
       component.checked = false;
       fixture.detectChanges();
       const buttonDebugElement = fixture.debugElement.query(
-        By.css('.slider-before')
+        By.css('.slider.round')
       );
       expect(buttonDebugElement.styles['backgroundColor']).toEqual('');
     });
@@ -56,7 +56,7 @@ describe('SlideToggleComponent', () => {
       component.color = '#ff0000';
       fixture.detectChanges();
       const buttonDebugElement = fixture.debugElement.query(
-        By.css('.slider-before')
+        By.css('.slider.round')
       );
       expect(buttonDebugElement.styles['backgroundColor']).toEqual('#ff0000');
     });
