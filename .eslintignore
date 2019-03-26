@@ -1,0 +1,7 @@
+/apps/*
+/dist/*
+/documentation/*
+/guides/*
+/libs/*
+/node_modules/*
+/tools/*
