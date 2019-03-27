@@ -1,6 +1,7 @@
 {
-  "name": "gorila-app-widgets-system",
+  "name": "@gorilainvest/ui-toolkit",
   "version": "0.0.0",
+  "files": ["dist"],
   "license": "MIT",
   "config": {
     "port": 8000,
