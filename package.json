@@ -2,6 +2,10 @@
   "name": "gorila-app-widgets-system",
   "version": "0.0.0",
   "license": "MIT",
+  "config": {
+    "port": 8000,
+    "folder": "dist"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
