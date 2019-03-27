@@ -36,6 +36,13 @@
     "prepublishOnly": "node scripts/build-all.js",
     "codacy-coverage": "cat coverage/**/*/lcov.info | codacy-coverage -p ."
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gorilainvest/gorila-ui-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gorilainvest/gorila-ui-components/issues"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^6.0.0",
