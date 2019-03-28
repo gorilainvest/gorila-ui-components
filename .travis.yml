@@ -12,6 +12,7 @@ script:
   - npm test -- --code-coverage
   - 'if [ "$TRAVIS_PULL_REQUEST" = "false" -a "$TRAVIS_BRANCH" = "master" ]; then npm run codacy-coverage; fi'
   - 'if [ "$TRAVIS_PULL_REQUEST" = "false" -a "$TRAVIS_BRANCH" = "master" ]; then npm run ghpages; fi'
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" -a "$TRAVIS_BRANCH" = "master" ]; then npm pack; fi'
 deploy:
   - provider: pages
     skip_cleanup: true
@@ -29,7 +30,6 @@ deploy:
     on:
       tags: true
       repo: gorilainvest/gorila-ui-components
-  - npm pack
   - provider: releases
     api_key:
       secure: dzdFOBAt2UJr2V8kLhtevg8AY3N/GWZx3j0TnQ12EauIYFK/Mf3YH/lo5b//3ze+ya+7QI9ee1k4F4OX9R0SCtIRbyN+pIvFABp/NHueZLSmsaPJAVH6F9lGV5wZXNYijJQrM3NJL/acNmXSzoyZurIVY3V2NLe3A2oNl1MJTTErivvYcNU80puApcBRjjAoaQRApl560Vsi8jnM4FsGXbcoHJcOUpHZkCAkVkixPbXbkaw+lCp4dGUZcf+p8IzR1+Z8Ue780iMdu05WpGWB48ZHCWg16VXdoxPiiB3YfCRojtYb4WFwLC5ps7qapPcwN/Xj1kGg+8gNf7rfEw/+KJrr70EPd6mJJl9Dp6iAJByjvwuuVqLSS9c+71sYdH373rv9MlV7Hs9V9lsihCGJV0NLDx1n7C9dSXwSZ4mSeWRul5cHWwQ+X50nXg9Lr6boz9TRRNGhUbclX4NpYYWDcgKTuylgUUT4ioEh3qIVapIH2o59ZUUV+9HGSI+kRos+tHBPXCvfAoYwxGL8l7HlMs9tHnlAEydReM9quwHsRucWjTcRqq6llC2L67ZLrVKJT7nS7iFkQVmw576tkhiXk/J+yKaGVq1G0E2t2jMPC+uZn6kpoPagb/xaKjYNPjVzIZARwFAP0i4mHHP8Cuh3ilWTXT0qsDuSHcfpy5JR7vY=
