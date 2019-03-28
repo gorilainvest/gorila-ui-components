@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>gorila-app-widgets-system documentation</title>
+        <title>@gorilainvest/ui-toolkit documentation</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,7 +13,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">gorila-app-widgets-system documentation</a>
+            <a href="../" class="navbar-brand">@gorilainvest/ui-toolkit documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -479,8 +479,8 @@ export class SlideToggleGroupComponent {
   /**
    * public toggleChange - updates and emit changes due to toggle changes
    *
-   * @param  {string} cod      the toggle that have changed
-   * @param  {boolean} checked the new state for the specified toggle
+   * @param  cod      the toggle that have changed
+   * @param  checked the new state for the specified toggle
    */
   public toggleChange(cod: string, checked: boolean): void {
     try {
@@ -511,7 +511,7 @@ export class SlideToggleGroupComponent {
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;ng-container *ngIf&#x3D;&quot;data &amp;&amp; data.length &gt; 0&quot;&gt;
   &lt;div class&#x3D;&quot;toggle-group-container&quot;&gt;
-    &lt;ng-container *ngFor&#x3D;&quot;let toggle of data&quot;&gt;
+    &lt;ng-container *ngFor&#x3D;&quot;let toggle of data;let i&#x3D;index&quot;&gt;
       &lt;div class&#x3D;&quot;toggle-container&quot;&gt;
         &lt;span *ngIf&#x3D;&quot;!!labels[i]&quot; class&#x3D;&quot;toggle-label&quot;&gt;{{ labels[i] }}:&lt;/span&gt;
         &lt;slide-toggle
@@ -597,7 +597,7 @@ export class SlideToggleGroupComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="data && data.length > 0">  <div class="toggle-group-container">    <ng-container *ngFor="let toggle of data">      <div class="toggle-container">        <span *ngIf="!!labels[i]" class="toggle-label">{{ labels[i] }}:</span>        <slide-toggle          [id]="toggle?.cod"          [checked]="toggle?.checked"          [color]="toggle?.color"          [title]="toggle?.title"          (toggleChange)="toggleChange(toggle?.cod, $event)"          ngDefaultControl        ></slide-toggle>      </div>    </ng-container>  </div></ng-container></div>'
+        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="data && data.length > 0">  <div class="toggle-group-container">    <ng-container *ngFor="let toggle of data;let i=index">      <div class="toggle-container">        <span *ngIf="!!labels[i]" class="toggle-label">{{ labels[i] }}:</span>        <slide-toggle          [id]="toggle?.cod"          [checked]="toggle?.checked"          [color]="toggle?.color"          [title]="toggle?.title"          (toggleChange)="toggleChange(toggle?.cod, $event)"          ngDefaultControl        ></slide-toggle>      </div>    </ng-container>  </div></ng-container></div>'
     var COMPONENTS = [{'name': 'EnhancedTitleComponent', 'selector': 'enhanced-title'},{'name': 'SlideToggleComponent', 'selector': 'slide-toggle'},{'name': 'SlideToggleGroupComponent', 'selector': 'slide-toggle-group'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SlideToggleGroupComponent'};
