@@ -1,6 +1,6 @@
 <ng-container *ngIf="data && data.length > 0">
   <div class="toggle-group-container">
-    <ng-container *ngFor="let toggle of data">
+    <ng-container *ngFor="let toggle of data;let i=index">
       <div class="toggle-container">
         <span *ngIf="!!labels[i]" class="toggle-label">{{ labels[i] }}:</span>
         <slide-toggle

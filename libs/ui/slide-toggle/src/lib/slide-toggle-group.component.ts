@@ -30,8 +30,8 @@ export class SlideToggleGroupComponent {
   /**
    * public toggleChange - updates and emit changes due to toggle changes
    *
-   * @param  {string} cod      the toggle that have changed
-   * @param  {boolean} checked the new state for the specified toggle
+   * @param  cod      the toggle that have changed
+   * @param  checked the new state for the specified toggle
    */
   public toggleChange(cod: string, checked: boolean): void {
     try {

@@ -1,14 +1,8 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
-
 # compiled output
-dist/*
-!dist/index.js
+/dist/apps
 /documentation
-/tmp
 /out-tsc
-
-# dependencies
-/node_modules
+/tmps
 
 # IDEs and editors
 /.idea
@@ -43,3 +37,26 @@ Thumbs.db
 # lock files
 package-lock.json
 yarn.lock
+
+# other folders
+/apps
+/coverage
+/guides
+/libs
+/scripts
+/tool
+
+# other files
+*.tgz
+.editorconfig
+.*rc
+.prettier*
+.travis.yml
+angular.json
+*conf.js
+*conf.json
+*config.js
+*config.json
+nx.json
+tsconfig*json
+tslint.json

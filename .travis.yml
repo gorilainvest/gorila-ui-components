@@ -1,11 +1,8 @@
 language: node_js
 node_js:
-   - '9'
+  - '9'
 dist: trusty
 sudo: required
-branches:
-only:
-  - master
 before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
@@ -13,15 +10,32 @@ before_script:
 script:
   - ng build --prod
   - npm test -- --code-coverage
-  - npm run codacy-coverage
-  - npm run ghpages
-
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" -a "$TRAVIS_BRANCH" = "master" ]; then npm run codacy-coverage; fi'
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" -a "$TRAVIS_BRANCH" = "master" ]; then npm run ghpages; fi'
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  local_dir: dist/apps/widgets-system/
-  fqdn: ui.gorilainvest.com.br
-  keep-history: true
-  on:
-    branch: master
+  - provider: pages
+    skip_cleanup: true
+    github_token: "$GITHUB_TOKEN"
+    local_dir: dist/apps/widgets-system/
+    fqdn: ui.gorilainvest.com.br
+    keep-history: true
+    on:
+      branch: master
+      repo: gorilainvest/gorila-ui-components
+  - provider: npm
+    email: it@gorilainvest.com.br
+    api_key:
+      secure: aMSe0CyVVQwOILizVyI04SaNvP7yu+rY0LrKH6YtSc0gS4/OB8Vj87ccAK6DKGyFUVXJEwvPcEy4ZCEfyIWs+A3uXr26fwcbp1po0TB0DfDJb7g2ik4dlBqZPxxrIbYASfewDpk5TPMudpCUYrTOyXjhT8owmMqQ4acCaAuSsnnUv5XTQvtKe2vP4gq45kq2oYDPG34WqCMKN3FPYF4xBNj7zD27j1MmAW5LxyTBN5SW9q+/Cr/s5I8Ls/0nh9MmHnx2LyY8Z2lw0viFIMpYbsTO6lXCG10Zrvkd33DkmHroYNIhiDZwQZPd+nZyz6H5EuKp1dQP5CJHMsKWJy+SR90Jt0RGFLQ3RzpFmliRmGNakZYe0X4+LMxe7fvY8AOF3Timwz5VjRLljvrKrh7Vl7QDuSMq6dACtrYl0HWvuWtw2mcAkyg4uJSemjwUUTQj1LD6L3TV8lgb4Jcrzn5160RcWt4/WBV6UcbSYnGxW6JmNumJzgmwZ9UHUF1VhpQ4Yu8oRkUZsH+kEaUeRfstovNEvQpW9IXZIbyyEGgbz7vhqC0kHCwa7ZxF1QGMLksrQtL3D7Xe9PAm2Cpif3fvERuMmU7ozgOUuGE+lKfRfidvJSy+uvJaUypTnP1ybj6gkN7IvdVJRhzNXNiD1/sV4hvaU+EcQ+XjVrAED60JRyc=
+    on:
+      tags: true
+      repo: gorilainvest/gorila-ui-components
+  - npm pack
+  - provider: releases
+    api_key:
+      secure: dzdFOBAt2UJr2V8kLhtevg8AY3N/GWZx3j0TnQ12EauIYFK/Mf3YH/lo5b//3ze+ya+7QI9ee1k4F4OX9R0SCtIRbyN+pIvFABp/NHueZLSmsaPJAVH6F9lGV5wZXNYijJQrM3NJL/acNmXSzoyZurIVY3V2NLe3A2oNl1MJTTErivvYcNU80puApcBRjjAoaQRApl560Vsi8jnM4FsGXbcoHJcOUpHZkCAkVkixPbXbkaw+lCp4dGUZcf+p8IzR1+Z8Ue780iMdu05WpGWB48ZHCWg16VXdoxPiiB3YfCRojtYb4WFwLC5ps7qapPcwN/Xj1kGg+8gNf7rfEw/+KJrr70EPd6mJJl9Dp6iAJByjvwuuVqLSS9c+71sYdH373rv9MlV7Hs9V9lsihCGJV0NLDx1n7C9dSXwSZ4mSeWRul5cHWwQ+X50nXg9Lr6boz9TRRNGhUbclX4NpYYWDcgKTuylgUUT4ioEh3qIVapIH2o59ZUUV+9HGSI+kRos+tHBPXCvfAoYwxGL8l7HlMs9tHnlAEydReM9quwHsRucWjTcRqq6llC2L67ZLrVKJT7nS7iFkQVmw576tkhiXk/J+yKaGVq1G0E2t2jMPC+uZn6kpoPagb/xaKjYNPjVzIZARwFAP0i4mHHP8Cuh3ilWTXT0qsDuSHcfpy5JR7vY=
+    file_glob: true
+    file: gorila-app-widgets-system@*.tgz
+    draft: true
+    on:
+      tags: true
+      repo: gorilainvest/gorila-ui-components
