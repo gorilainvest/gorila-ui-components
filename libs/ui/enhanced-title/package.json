@@ -1,5 +1,5 @@
 {
-  "name": "@gorilainvest/ui-enhanced-title",
+  "name": "@gorilainvest/ui-toolkit/dist/enhanced-title",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^6.0.0",

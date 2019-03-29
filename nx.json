@@ -1,5 +1,5 @@
 {
-  "npmScope": "gorila-bot",
+  "npmScope": "gorilainvest",
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": "*",

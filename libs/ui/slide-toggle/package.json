@@ -1,5 +1,5 @@
 {
-  "name": "@gorilainvest/ui-slide-toggle",
+  "name": "@gorilainvest/ui-toolkit/dist/slide-toggle",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^6.0.0",
