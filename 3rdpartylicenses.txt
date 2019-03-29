@@ -86,10 +86,6 @@ MIT
 @angular/router
 MIT
 
-@gorilainvest/ui-enhanced-title
-
-@gorilainvest/ui-slide-toggle
-
 @gorilainvest/ui-toolkit
 MIT
 MIT License
@@ -114,6 +110,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+
+@gorilainvest/ui-toolkit/dist/enhanced-title
+
+@gorilainvest/ui-toolkit/dist/slide-toggle
 
 @ngrx/effects
 MIT
