@@ -44,6 +44,9 @@
   "bugs": {
     "url": "https://github.com/gorilainvest/gorila-ui-components/issues"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@angular/animations": "^6.0.0",
     "@angular/cdk": "^6.0.0",
