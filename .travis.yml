@@ -14,7 +14,7 @@ script:
   - 'if [ "$TRAVIS_PULL_REQUEST" = "false" -a "$TRAVIS_BRANCH" = "master" ]; then npm run codacy-coverage; fi'
   - 'if [ "$TRAVIS_PULL_REQUEST" = "false" -a "$TRAVIS_BRANCH" = "master" ]; then npm run ghpages; fi'
   - 'if [ "$TRAVIS_PULL_REQUEST" = "false" -a "$TRAVIS_BRANCH" = "master" ]; then npm pack; fi'
-before_deploy
+before_deploy:
   - npm install @angular/cli
 deploy:
   - provider: pages
