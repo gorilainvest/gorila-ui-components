@@ -4,18 +4,18 @@
    of at least 1.10.0. We recommend using `nvm` to manage your node versions.
 2. Run `yarn global add gulp` to install gulp.
 
-3. Fork the `guilhermejcgois/gorila-ui-components` repo on Github.
+3. Fork the `gorilainvest/gorila-ui-components` repo on Github.
 
 4. Clone your fork to your machine with `git clone`.
 
-   Recommendation: name your git remotes `upstream` for `guilhermejcgois/gorila-ui-components`
+   Recommendation: name your git remotes `upstream` for `gorilainvest/gorila-ui-components`
 
    and `<your-username>` for your fork.
 5. From the root of the project, run `yarn` or `npm install`.
 
 
-To build Material in dev mode, run `ng build --app <widget-name>`.
-To build Material in release mode, run `ng build --app <widget-name> --prod`
+To build UI Toolkit in dev mode, run `ng build`.
+To build UI Toolkit in release mode, run `ng build --prod`
 
 To bring up a local server, run `npm start`. This will automatically watch for changes
 and rebuild. The browser should refresh automatically when changes are made.

@@ -1,6 +1,6 @@
-# Contributing to Gorila Widgets System
+# Contributing to Gorila Invest UI Toolkit
 
-We would love for you to contribute to Gorila Widgets System and help make it ever better!
+We would love for you to contribute to Gorila Invest UI Toolkit and help make it ever better!
 As a contributor, here are the guidelines we would like you to follow:
 
 - [Issues and Bugs](#issue)
@@ -12,7 +12,7 @@ As a contributor, here are the guidelines we would like you to follow:
 ## <a name="issue"></a> Found an Issue?
 If you find a bug in the source code or a mistake in the documentation, you can help us by
 
-[submitting an issue](#submit-issue) to our [github Repository][github]. Including an issue 
+[submitting an issue](#submit-issue) to our [GitHub Repository][github]. Including an issue 
 
 reproduction (via CodePen, JsBin, Plunkr, etc.) is the absolute best way to help the team quickly
 diagnose the problem. Screenshots are also helpful.
@@ -21,7 +21,7 @@ You can help the team even more and [submit a Pull Request](#submit-pr) with a f
 
 ## <a name="feature"></a> Want a Feature?
 
-You can *request* a new feature by [submitting an issue](#submit-issue) to our [github
+You can *request* a new feature by [submitting an issue](#submit-issue) to our [GitHub
 Repository][github]. If you would like to *implement* a new feature, please submit an issue with
 
 a proposal for your work first, to be sure that we can use it. 
@@ -48,7 +48,7 @@ chances of your issue being dealt with quickly:
 * **Browsers and Operating System** - is this a problem with all browsers?
 * **Reproduce the Error** - provide a live example (using [CodePen][codepen], [JsBin][jsbin],
     [Plunker][plunker], etc.) or a unambiguous set of steps
-* **Screenshots** - Due to the visual nature of Gorila Widgets System, screenshots can help the team
+* **Screenshots** - Due to the visual nature of Gorila Invest UI Toolkit, screenshots can help the team
     triage issues far more quickly than a text description.
 * **Related Issues** - has a similar issue been reported before?
 * **Suggest a Fix** - if you can't fix the bug yourself, perhaps you can point to what might be
@@ -75,7 +75,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
 * Create your patch, **including appropriate test cases**.
 * Follow our [Coding Rules](#rules).
 * Test your changes with our supported browsers and screen readers.
-* Run the full Gorila Widgets System test suite, as described in the [developer documentation][dev-doc],
+* Run the full Gorila Invest UI Toolkit test suite, as described in the [developer documentation][dev-doc],
   and ensure that all tests pass.
 * Commit your changes using a descriptive commit message that follows our
   [commit message conventions](#commit). Adherence to these conventions
@@ -99,7 +99,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
 
 * If we suggest changes then:
   * Make the required updates.
-  * Re-run the Gorila Widgets System test suites to ensure tests are still passing.
+  * Re-run the Gorila Invest UI Toolkit test suites to ensure tests are still passing.
 
   * Rebase your branch and force push to your Github repository (this will update your Pull
 
@@ -155,7 +155,7 @@ To ensure consistency throughout the source code, keep these rules in mind as yo
 
 We have very precise rules over how our git commit messages can be formatted.  This leads to **more
 readable messages** that are easy to follow when looking through the **project history**.  But also,
-we use the git commit messages to **generate the Gorila Widgets System change log**.
+we use the git commit messages to **generate the Gorila Invest UI Toolkit change log**.
 
 ### Commit Message Format
 Each commit message consists of a **header**, a **body** and a **footer**.  The header has a special
@@ -224,13 +224,10 @@ A detailed explanation can be found in this [document][commit-message-format].
 
 [commit-message-format]: https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/preview
 [dev-doc]: ./additional-documentation/dev-environment.html
-
-[github]: https://github.org/guilhermejcgois/gorila-ui-components/
-[github-pr]: https://github.org/guilhermejcgois/gorila-ui-components/pull-requests/
-
+[github]: https://github.org/gorilainvest/gorila-ui-components/
+[github-pr]: https://github.org/gorilainvest/gorila-ui-components/pull-requests/
 [style-guide]: https://angular.io/guide/styleguide
 [codepen]: http://codepen.io/
 [jsbin]: http://jsbin.com/
 [plunker]: http://plnkr.co/edit
-
-[bug-tracker]: https://github.com/guilhermejcgois/gorila-ui-components/issues
+[bug-tracker]: https://github.com/gorilainvest/gorila-ui-components/issues
