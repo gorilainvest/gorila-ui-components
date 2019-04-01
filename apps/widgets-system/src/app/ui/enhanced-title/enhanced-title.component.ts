@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'gorila-bot-enhanced-title',
+  selector: 'gorilainvest-enhanced-title',
   templateUrl: './enhanced-title.component.html',
   styleUrls: ['./enhanced-title.component.scss']
 })

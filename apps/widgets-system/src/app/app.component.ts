@@ -8,7 +8,7 @@ import { MediaMatcher } from '@angular/cdk/layout';
 import { items } from './sidebar.items';
 
 @Component({
-  selector: 'gorila-bot-root',
+  selector: 'gorilainvest-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None

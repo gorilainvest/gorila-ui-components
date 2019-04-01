@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'gorila-bot-home',
+  selector: 'gorilainvest-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
