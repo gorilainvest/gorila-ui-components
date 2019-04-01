@@ -16,7 +16,7 @@ import { items } from './sidebar.items';
 export class AppComponent implements OnDestroy {
   items = items.map(it => ({ text: it.replace('-', ' '), route: it }));
   mobileQuery: MediaQueryList;
-  title = 'Gorila Widgets System';
+  title = 'Gorila Invest UI Toolkit';
 
   private _mobileQueryListener: () => void;
 
