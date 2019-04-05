@@ -49,6 +49,7 @@ import { GdkCardComponent } from './gdk/gdk-card/gdk-card.component';
     MatIconModule,
     MatInputModule,
     MatListModule,
+    MatMenuModule,
     MatToolbarModule,
     MatSidenavModule
   ],

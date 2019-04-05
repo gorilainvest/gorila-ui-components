@@ -22,3 +22,43 @@ $gorila-app-theme: mat-light-theme($gorila-app-primary, $gorila-app-accent, $gor
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($gorila-app-theme);
+
+$gorila-app-cash-primary: mat-palette($mat-gorila-cash-primary);
+$gorila-app-cash-accent: mat-palette($mat-gorila-cash-accent, A200, A100, A400);
+$gorila-app-cash-warn: mat-palette($mat-red);
+$gorila-app-cash-theme: mat-light-theme($gorila-app-cash-primary, $gorila-app-cash-accent, $gorila-app-cash-warn);
+.asset-cash-theme {
+  @include angular-material-theme($gorila-app-cash-theme);
+}
+
+$gorila-app-currency-primary: mat-palette($mat-gorila-currency-primary);
+$gorila-app-currency-accent: mat-palette($mat-gorila-currency-accent, A200, A100, A400);
+$gorila-app-currency-warn: mat-palette($mat-red);
+$gorila-app-currency-theme: mat-light-theme($gorila-app-currency-primary, $gorila-app-currency-accent, $gorila-app-currency-warn);
+.asset-currency-theme {
+  @include angular-material-theme($gorila-app-currency-theme);
+}
+
+$gorila-app-fixed_income-primary: mat-palette($mat-gorila-fixed_income-primary);
+$gorila-app-fixed_income-accent: mat-palette($mat-gorila-fixed_income-accent, A200, A100, A400);
+$gorila-app-fixed_income-warn: mat-palette($mat-red);
+$gorila-app-fixed_income-theme: mat-light-theme($gorila-app-fixed_income-primary, $gorila-app-fixed_income-accent, $gorila-app-fixed_income-warn);
+.asset-fixed_income-theme {
+  @include angular-material-theme($gorila-app-fixed_income-theme);
+}
+
+$gorila-app-multimarket-primary: mat-palette($mat-gorila-multimarket-primary);
+$gorila-app-multimarket-accent: mat-palette($mat-gorila-multimarket-accent, A200, A100, A400);
+$gorila-app-multimarket-warn: mat-palette($mat-red);
+$gorila-app-multimarket-theme: mat-light-theme($gorila-app-multimarket-primary, $gorila-app-multimarket-accent, $gorila-app-multimarket-warn);
+.asset-multimarket-theme {
+  @include angular-material-theme($gorila-app-multimarket-theme);
+}
+
+$gorila-app-stocks-primary: mat-palette($mat-gorila-stocks-primary);
+$gorila-app-stocks-accent: mat-palette($mat-gorila-stocks-accent, A200, A100, A400);
+$gorila-app-stocks-warn: mat-palette($mat-red);
+$gorila-app-stocks-theme: mat-light-theme($gorila-app-stocks-primary, $gorila-app-stocks-accent, $gorila-app-stocks-warn);
+.asset-stocks-theme {
+  @include angular-material-theme($gorila-app-stocks-theme);
+}
