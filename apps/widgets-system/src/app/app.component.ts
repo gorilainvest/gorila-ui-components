@@ -2,10 +2,12 @@ import {
   ChangeDetectorRef,
   Component,
   OnDestroy,
+  OnInit,
   ViewEncapsulation
 } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { items } from './sidebar.items';
+import { Theme, Themes, THEMES } from './themes.config';
 
 @Component({
   selector: 'gorilainvest-root',
@@ -13,10 +15,12 @@ import { items } from './sidebar.items';
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class AppComponent implements OnDestroy {
-  items = items.map(it => ({ text: it.replace('-', ' '), route: it }));
-  mobileQuery: MediaQueryList;
-  title = 'Gorila Invest UI Toolkit';
+export class AppComponent implements OnDestroy, OnInit {
+  public currentTheme: Theme = THEMES.find(t => t.isDefault) || THEMES[0];
+  public items = items.map(it => ({ text: it.replace('-', ' '), route: it }));
+  public mobileQuery: MediaQueryList;
+  public title = 'Gorila Invest UI Toolkit';
+  public themes: Themes;
 
   private _mobileQueryListener: () => void;
 
@@ -26,7 +30,20 @@ export class AppComponent implements OnDestroy {
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
 
+  ngOnInit(): void {
+    this.updateThemesList();
+  }
+
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
+  }
+
+  public applyTheme(theme: Theme) {
+    this.currentTheme = theme;
+    this.updateThemesList();
+  }
+
+  private updateThemesList() {
+    this.themes = THEMES.filter(t => t.name !== this.currentTheme.name);
   }
 }
