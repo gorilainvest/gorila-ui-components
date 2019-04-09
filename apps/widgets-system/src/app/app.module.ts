@@ -10,6 +10,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
@@ -35,12 +37,13 @@ import { GdkCardComponent } from './gdk/gdk-card/gdk-card.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    EnhancedTitleModule,
-    SlideToggleModule,
     FormsModule,
     ReactiveFormsModule,
     NxModule.forRoot(),
-    RouterModule.forRoot(ROUTES, { initialNavigation: 'enabled', useHash: true }),
+    RouterModule.forRoot(ROUTES, {
+      initialNavigation: 'enabled',
+      useHash: true
+    }),
     MatCardModule,
     MatCheckboxModule,
     MatExpansionModule,
@@ -51,7 +54,10 @@ import { GdkCardComponent } from './gdk/gdk-card/gdk-card.component';
     MatListModule,
     MatMenuModule,
     MatToolbarModule,
-    MatSidenavModule
+    MatSelectModule,
+    MatSidenavModule,
+    EnhancedTitleModule,
+    SlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

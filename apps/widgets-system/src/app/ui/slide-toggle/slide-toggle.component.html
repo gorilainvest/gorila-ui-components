@@ -7,6 +7,7 @@
     <mat-list-item role="listitem" class="checked-config-container">
       <mat-checkbox
         class="full-width"
+        color="primary"
         [checked]="checked"
         (change)="checked = $event?.checked"
         >Check me!</mat-checkbox
@@ -26,6 +27,7 @@
     <mat-list-item role="listitem" class="disabled-config-container">
       <mat-checkbox
         class="full-width"
+        color="primary"
         [checked]="disabled"
         (change)="disabled = $event?.checked"
         >Disable me!</mat-checkbox
