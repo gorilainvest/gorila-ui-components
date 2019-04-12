@@ -66,10 +66,13 @@
     "@nrwl/nx": "7.5.2",
     "codacy-coverage": "^3.4.0",
     "core-js": "^2.5.4",
+    "popper.js": "1.14.6",
+    "ramda": "0.25.0",
     "remark-cli": "^6.0.1",
     "remark-lint": "^6.0.4",
     "remark-preset-lint-recommended": "^3.0.2",
     "rxjs": "~6.4.0",
+    "tippy.js": "3.1.1",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
