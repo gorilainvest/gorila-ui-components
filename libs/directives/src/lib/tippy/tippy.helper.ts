@@ -5,11 +5,19 @@ import tippy, { Instance as TippyInstance, Props as TippyProps, Targets } from '
 
 import { tippyOptionsDefault } from './tippy.model';
 
+/**
+ * @description
+ *
+ * Helper class to safely manage tippy instances.
+ */
 export class TippyHelper {
   private htmlItem: {[s: string]: any} = {};
   private popper: {[s: string]: Popper} = {};
   private tippy: {[s: string]: TippyInstance} = {};
 
+  /**
+   * Reset helper state and invokes `stopTippy` for all active tippy instance.
+   */
   public destroy() {
     this.htmlItem = {};
     keys(this.tippy).forEach(id => this.stopTippy(id));
@@ -17,7 +25,10 @@ export class TippyHelper {
     this.popper = {};
   }
 
-  public startTippy(id: string, tippyOptions: TippyProps, hoverElement: Targets, tippyElement?: Targets): boolean {
+  /**
+   * Act as a proxy to tippy library creating a new or updating a existent one.
+   */
+  public startTippy(id: string, tippyOptions: TippyProps, hoverElement: Targets, tippyElement?: Targets) {
     if (!path(['content'], tippyOptions) && !path(['html'], tippyOptions)) {
       console.warn('tippy not started because you didn`t pass content or html parameters');
       return;
@@ -44,6 +55,11 @@ export class TippyHelper {
     });
   }
 
+  /**
+   * Effectively and safely destroy tippy instances.
+   * @returns boolean Indicating if a tippy instance was destroyed. Otherwise, if have
+   * errors or doesn't exist return false.
+   */
   public stopTippy(id): boolean {
     try {
       if (!!this.tippy[id]) {

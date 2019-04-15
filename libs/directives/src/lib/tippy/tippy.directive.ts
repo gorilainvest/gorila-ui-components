@@ -6,11 +6,18 @@ import tippy, { Instance as TippyInstance, Props as TippyProps } from 'tippy.js'
 
 import { tippyOptionsDefault } from './tippy.model';
 
-@Directive({
-    selector: '[gorTippy]'
-})
+/**
+ * @description
+ *
+ * Lets a component or DOM element to have a tippy tooltip on hover.
+ *
+ */
+@Directive({selector: '[gorTippy]'})
 export class TippyDirective implements OnInit, OnChanges {
 
+  /**
+   * The descriptor of a tippy instance.
+   */
   @Input() public tippyOptions: TippyProps = {};
 
   private tippy: TippyInstance = null;
@@ -19,10 +26,16 @@ export class TippyDirective implements OnInit, OnChanges {
 
   constructor(private el: ElementRef) { }
 
+  /**
+   * Load a tippy instance on init lifecicle.
+   */
   public ngOnInit() {
     this.loadTippy();
   }
 
+  /**
+   * Load new / update tippy instance when `tippyOptions` change.
+   */
   public ngOnChanges(changes: SimpleChanges) {
     if (changes['tippyOptions']) {
       this.loadTippy();

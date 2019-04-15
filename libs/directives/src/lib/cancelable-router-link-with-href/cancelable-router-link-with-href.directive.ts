@@ -10,10 +10,15 @@ import {
   RouterLinkWithHref
 } from '@angular/router';
 
-@Directive({
-  selector: 'a[gorCancelableRouterLink]'
-})
+/**
+ * @see https://github.com/angular/angular/blob/master/packages/router/src/directives/router_link.ts
+ *
+ */
+@Directive({selector: 'a[gorCancelableRouterLink]'})
 export class CancelableRouterLinkWithHrefDirective extends RouterLinkWithHref {
+  /**
+   * Indicates that router should not be notified about navigation.
+   */
   @Input() public cancel = false;
 
   constructor(
@@ -24,11 +29,16 @@ export class CancelableRouterLinkWithHrefDirective extends RouterLinkWithHref {
     super(router, route, locationStrategy);
   }
 
-  @Input()
-  set cancelableRouterLink(commands: any[] | string) {
+  /**
+   * Sets the router link target for navigation when clicked.
+   */
+  @Input() set cancelableRouterLink(commands: any[] | string) {
     this.routerLink = commands;
   }
 
+  /**
+   * Listen to host click and determines if routing must occurr.
+   */
   @HostListener('click', [ '$event.button', '$event.ctrlKey', '$event.metaKey', '$event.shiftKey' ])
   public onClick(button: number, ctrlKey: boolean, metaKey: boolean, shiftKey: boolean): boolean {
     return this.cancel
