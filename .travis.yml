@@ -11,7 +11,7 @@ before_script:
 script:
   - ng build --prod
   - npm test -- --code-coverage
-  - 'if [ "$TRAVIS_PULL_REQUEST" = "true" ]; then npm run compodoc:coverage; fi'
+  - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then npm run compodoc:coverage; fi'
   - 'if [ "$TRAVIS_PULL_REQUEST" = "false" -a "$TRAVIS_BRANCH" = "master" ]; then npm run codacy-coverage; fi'
   - 'if [ "$TRAVIS_PULL_REQUEST" = "false" -a "$TRAVIS_BRANCH" = "master" ]; then npm run ghpages; fi'
   - 'if [ "$TRAVIS_PULL_REQUEST" = "false" -a "$TRAVIS_BRANCH" = "master" ]; then npm pack; fi'
