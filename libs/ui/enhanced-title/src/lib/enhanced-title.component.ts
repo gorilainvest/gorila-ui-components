@@ -5,7 +5,7 @@ import { Component, Input } from '@angular/core';
  * This comment can receive child components too.
  */
 @Component({
-  selector: 'enhanced-title',
+  selector: 'gro-enhanced-title',
   templateUrl: './enhanced-title.component.html',
   styleUrls: ['./enhanced-title.component.scss']
 })
