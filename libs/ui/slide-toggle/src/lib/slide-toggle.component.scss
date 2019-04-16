@@ -15,7 +15,6 @@ $ball-size: 13px;
 .toggle.disabled {
   cursor: initial;
   pointer-events: none;
-
   .slider-before {
     background: #888e8e !important;
   }
@@ -24,10 +23,9 @@ $ball-size: 13px;
 /* The switch - the box around the slider */
 .switch {
   position: relative;
-  display: inline-block;
   width: $trail-width;
   height: $trail-height;
-  margin-right: 15px;
+  margin: auto 15px auto 0;
 }
 
 /* Hide default HTML checkbox */
