@@ -14,7 +14,8 @@
     "baseUrl": ".",
     "paths": {
       "@gorilainvest/ui-enhanced-title": ["libs/ui/enhanced-title/src/index.ts"],
-      "@gorilainvest/ui-slide-toggle": ["libs/ui/slide-toggle/src/index.ts"]
+      "@gorilainvest/ui-slide-toggle": ["libs/ui/slide-toggle/src/index.ts"],
+      "@gorilainvest/directives": ["libs/directives/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -46,7 +46,7 @@
     </mat-list-item>
   </mat-list>
 
-  <slide-toggle
+  <mur-slide-toggle
     class="widget"
     [checked]="checked"
     [color]="colorFormControl.value"
@@ -54,19 +54,19 @@
     [title]="titleFormControl.value"
     (toggleChange)="checked = $event"
   >
-  </slide-toggle>
+  </mur-slide-toggle>
 
   <pre class="code">
 <span>// module import</span>
 <span>import &#123; SlideToggleModule &#125; from '@gorilainvest/ui-toolkit/dist/slide-toggle';</span>
 <span></span>
 <span>// template.html</span>
-<span>&lt;slide-toggle</span>
+<span>&lt;mur-slide-toggle</span>
 <span>  [checked]=&quot;{{checked}}&quot;</span>
 <span>  [color]=&quot;{{colorFormControl.value}}&quot;</span>
 <span>  [disabled]=&quot;{{disabled}}&quot;</span>
 <span>  [title]=&quot;{{titleFormControl.value}}&quot;&gt;</span>
-<span>&lt;/slide-toggle&gt;</span>
+<span>&lt;/mur-slide-toggle&gt;</span>
 <span></span>
   </pre>
 </gdk-card>

@@ -70,13 +70,23 @@
     "directive-selector": [
       true,
       "attribute",
-      "app",
+      [
+        "gor",
+        "gro",
+        "mag",
+        "mur"
+      ],
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      [],
+      [
+        "gor",
+        "gro",
+        "mag",
+        "mur"
+      ],
       "kebab-case"
     ],
     "no-output-on-prefix": true,

@@ -19,6 +19,9 @@
     },
     "widgets-system-e2e": {
       "tags": []
+    },
+    "directives": {
+      "tags": ["shared"]
     }
   }
 }
