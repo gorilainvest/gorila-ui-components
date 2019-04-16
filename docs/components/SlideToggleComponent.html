@@ -466,11 +466,11 @@ export class SlideToggleComponent {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;toggle-container&quot; [ngClass]&#x3D;&quot;{ disabled: disabled }&quot;&gt;
-  &lt;label class&#x3D;&quot;switch&quot; [ngClass]&#x3D;&quot;{ active: checked }&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;toggle&quot; [ngClass]&#x3D;&quot;{ disabled: disabled }&quot;&gt;
+  &lt;label class&#x3D;&quot;switch&quot;&gt;
     &lt;input type&#x3D;&quot;checkbox&quot; [checked]&#x3D;&quot;checked&quot; (change)&#x3D;&quot;changeChecked()&quot; /&gt;
     &lt;span class&#x3D;&quot;slider round&quot; [style.backgroundColor]&#x3D;&quot;checked ? color : &#x27;&#x27;&quot;&gt;
-      &lt;span class&#x3D;&quot;slider-before&quot;&gt;&lt;/span&gt;
+      &lt;span class&#x3D;&quot;slider-before&quot; [ngClass]&#x3D;&quot;{ active: checked }&quot;&gt;&lt;/span&gt;
     &lt;/span&gt;
   &lt;/label&gt;
   &lt;span class&#x3D;&quot;title&quot;&gt;{{ title }}&lt;/span&gt;
@@ -482,26 +482,23 @@ export class SlideToggleComponent {
                 <p class="comment">
                     <code>./slide-toggle.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">$trail-width: 20px;
-$trail-height: 14px;
+                <pre class="line-numbers"><code class="language-scss">$trail-width: 28px;
+$trail-height: 15px;
 $ball-size: 13px;
 
-.toggle-container {
+.toggle {
   display: flex;
   width: fit-content;
-  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  margin: 0 20px;
   .title {
     text-transform: uppercase;
-    margin-right: 8px;
   }
 }
 
-.toggle-container.disabled {
+.toggle.disabled {
   cursor: initial;
   pointer-events: none;
-
   .slider-before {
     background: #888e8e !important;
   }
@@ -510,11 +507,9 @@ $ball-size: 13px;
 /* The switch - the box around the slider */
 .switch {
   position: relative;
-  display: inline-block;
   width: $trail-width;
   height: $trail-height;
-  margin-right: 15px;
-  margin-top: -2px;
+  margin: auto 15px auto 0;
 }
 
 /* Hide default HTML checkbox */
@@ -543,7 +538,6 @@ $ball-size: 13px;
 
 .slider-before {
   position: absolute;
-  content: &#x27;&#x27;;
   height: $ball-size;
   width: $ball-size;
   left: 2px;
@@ -553,12 +547,11 @@ $ball-size: 13px;
   transition: 0.4s;
   border-radius: 50%;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
-}
 
-.active {
-  .slider-before {
-    background-color: #ffffff;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+  &amp;.active {
+    -webkit-transform: translateX($ball-size);
+    -ms-transform: translateX($ball-size);
+    transform: translateX($ball-size);
   }
 }
 
@@ -568,12 +561,6 @@ input:checked + .slider {
 
 input:focus + .slider {
   box-shadow: 0 0 1px #dbdddd;
-}
-
-.active .slider-before {
-  -webkit-transform: translateX($ball-size);
-  -ms-transform: translateX($ball-size);
-  transform: translateX($ball-size);
 }
 </code></pre>
     </div>
@@ -603,7 +590,7 @@ input:focus + .slider {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="toggle-container" [ngClass]="{ disabled: disabled }">  <label class="switch" [ngClass]="{ active: checked }">    <input type="checkbox" [checked]="checked" (change)="changeChecked()" />    <span class="slider round" [style.backgroundColor]="checked ? color : \'\'">      <span class="slider-before"></span>    </span>  </label>  <span class="title">{{ title }}</span></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="toggle" [ngClass]="{ disabled: disabled }">  <label class="switch">    <input type="checkbox" [checked]="checked" (change)="changeChecked()" />    <span class="slider round" [style.backgroundColor]="checked ? color : \'\'">      <span class="slider-before" [ngClass]="{ active: checked }"></span>    </span>  </label>  <span class="title">{{ title }}</span></div></div>'
     var COMPONENTS = [{'name': 'EnhancedTitleComponent', 'selector': 'enhanced-title'},{'name': 'SlideToggleComponent', 'selector': 'slide-toggle'},{'name': 'SlideToggleGroupComponent', 'selector': 'slide-toggle-group'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SlideToggleComponent'};
