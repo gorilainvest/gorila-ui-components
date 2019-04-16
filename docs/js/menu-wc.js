@@ -76,6 +76,32 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </a>
                         <ul class="links collapse" ${ isNormalMode ? 'id="modules-links"' : 'id="xs-modules-links"' }>
                             <li class="link">
+                                <a href="modules/DirectivesModule.html" data-type="entity-link">DirectivesModule</a>
+                                <li class="chapter inner">
+                                    <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                        'data-target="#directives-links-module-DirectivesModule-b28d7cfe33c287a45403fd375bfdafbc"' : 'data-target="#xs-directives-links-module-DirectivesModule-b28d7cfe33c287a45403fd375bfdafbc"' }>
+                                        <span class="icon ion-md-code-working"></span>
+                                        <span>Directives</span>
+                                        <span class="icon ion-ios-arrow-down"></span>
+                                    </div>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="directives-links-module-DirectivesModule-b28d7cfe33c287a45403fd375bfdafbc"' :
+                                        'id="xs-directives-links-module-DirectivesModule-b28d7cfe33c287a45403fd375bfdafbc"' }>
+                                        <li class="link">
+                                            <a href="directives/CancelableRouterLinkWithHrefDirective.html"
+                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules">CancelableRouterLinkWithHrefDirective</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="directives/TippyDirective.html"
+                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules">TippyDirective</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="directives/TruncateDirective.html"
+                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules">TruncateDirective</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </li>
+                            <li class="link">
                                 <a href="modules/EnhancedTitleModule.html" data-type="entity-link">EnhancedTitleModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
@@ -118,6 +144,19 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                 </ul>
                 </li>
                     <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#classes-links"' :
+                            'data-target="#xs-classes-links"' }>
+                            <span class="icon ion-ios-paper"></span>
+                            <span>Classes</span>
+                            <span class="icon ion-ios-arrow-down"></span>
+                        </div>
+                        <ul class="links collapse" ${ isNormalMode ? 'id="classes-links"' : 'id="xs-classes-links"' }>
+                            <li class="link">
+                                <a href="classes/TippyHelper.html" data-type="entity-link">TippyHelper</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter">
                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#interfaces-links"' :
                             'data-target="#xs-interfaces-links"' }>
                             <span class="icon ion-md-information-circle-outline"></span>
@@ -127,6 +166,19 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         <ul class="links collapse" ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
                             <li class="link">
                                 <a href="interfaces/ToggleData.html" data-type="entity-link">ToggleData</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#miscellaneous-links"'
+                            : 'data-target="#xs-miscellaneous-links"' }>
+                            <span class="icon ion-ios-cube"></span>
+                            <span>Miscellaneous</span>
+                            <span class="icon ion-ios-arrow-down"></span>
+                        </div>
+                        <ul class="links collapse" ${ isNormalMode ? 'id="miscellaneous-links"' : 'id="xs-miscellaneous-links"' }>
+                            <li class="link">
+                                <a href="miscellaneous/variables.html" data-type="entity-link">Variables</a>
                             </li>
                         </ul>
                     </li>

@@ -92,7 +92,7 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>slide-toggle-group</code></td>
+                <td class="col-md-9"><code>mur-slide-toggle-group</code></td>
             </tr>
 
             <tr>
@@ -454,7 +454,7 @@ import { ToggleData } from &#x27;./slide-toggle.model&#x27;;
  * The component that represent a group of toggles.
  */
 @Component({
-  selector: &#x27;slide-toggle-group&#x27;,
+  selector: &#x27;mur-slide-toggle-group&#x27;,
   templateUrl: &#x27;./slide-toggle-group.component.html&#x27;,
   styleUrls: [&#x27;./slide-toggle-group.component.scss&#x27;]
 })
@@ -514,14 +514,14 @@ export class SlideToggleGroupComponent {
     &lt;ng-container *ngFor&#x3D;&quot;let toggle of data;let i&#x3D;index&quot;&gt;
       &lt;div class&#x3D;&quot;toggle-container&quot;&gt;
         &lt;span *ngIf&#x3D;&quot;!!labels[i]&quot; class&#x3D;&quot;toggle-label&quot;&gt;{{ labels[i] }}:&lt;/span&gt;
-        &lt;slide-toggle
+        &lt;mur-slide-toggle
           [id]&#x3D;&quot;toggle?.cod&quot;
           [checked]&#x3D;&quot;toggle?.checked&quot;
           [color]&#x3D;&quot;toggle?.color&quot;
           [title]&#x3D;&quot;toggle?.title&quot;
           (toggleChange)&#x3D;&quot;toggleChange(toggle?.cod, $event)&quot;
           ngDefaultControl
-        &gt;&lt;/slide-toggle&gt;
+        &gt;&lt;/mur-slide-toggle&gt;
       &lt;/div&gt;
     &lt;/ng-container&gt;
   &lt;/div&gt;
@@ -589,9 +589,9 @@ export class SlideToggleGroupComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="data && data.length > 0">  <div class="toggle-group-container">    <ng-container *ngFor="let toggle of data;let i=index">      <div class="toggle-container">        <span *ngIf="!!labels[i]" class="toggle-label">{{ labels[i] }}:</span>        <slide-toggle          [id]="toggle?.cod"          [checked]="toggle?.checked"          [color]="toggle?.color"          [title]="toggle?.title"          (toggleChange)="toggleChange(toggle?.cod, $event)"          ngDefaultControl        ></slide-toggle>      </div>    </ng-container>  </div></ng-container></div>'
-    var COMPONENTS = [{'name': 'EnhancedTitleComponent', 'selector': 'enhanced-title'},{'name': 'SlideToggleComponent', 'selector': 'slide-toggle'},{'name': 'SlideToggleGroupComponent', 'selector': 'slide-toggle-group'}];
-    var DIRECTIVES = [];
+        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="data && data.length > 0">  <div class="toggle-group-container">    <ng-container *ngFor="let toggle of data;let i=index">      <div class="toggle-container">        <span *ngIf="!!labels[i]" class="toggle-label">{{ labels[i] }}:</span>        <mur-slide-toggle          [id]="toggle?.cod"          [checked]="toggle?.checked"          [color]="toggle?.color"          [title]="toggle?.title"          (toggleChange)="toggleChange(toggle?.cod, $event)"          ngDefaultControl        ></mur-slide-toggle>      </div>    </ng-container>  </div></ng-container></div>'
+    var COMPONENTS = [{'name': 'EnhancedTitleComponent', 'selector': 'gro-enhanced-title'},{'name': 'SlideToggleComponent', 'selector': 'mur-slide-toggle'},{'name': 'SlideToggleGroupComponent', 'selector': 'mur-slide-toggle-group'}];
+    var DIRECTIVES = [{'name': 'CancelableRouterLinkWithHrefDirective', 'selector': 'a[gorCancelableRouterLink]'},{'name': 'TippyDirective', 'selector': '[gorTippy]'},{'name': 'TruncateDirective', 'selector': '[gorTruncate]'}];
     var ACTUAL_COMPONENT = {'name': 'SlideToggleGroupComponent'};
 </script>
 <script src="../js/tree.js"></script>

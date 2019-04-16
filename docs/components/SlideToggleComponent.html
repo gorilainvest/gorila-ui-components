@@ -92,7 +92,7 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>slide-toggle</code></td>
+                <td class="col-md-9"><code>mur-slide-toggle</code></td>
             </tr>
 
             <tr>
@@ -415,7 +415,7 @@
  * The component that represent a single toggle.
  */
 @Component({
-  selector: &#x27;slide-toggle&#x27;,
+  selector: &#x27;mur-slide-toggle&#x27;,
   templateUrl: &#x27;./slide-toggle.component.html&#x27;,
   styleUrls: [&#x27;./slide-toggle.component.scss&#x27;]
 })
@@ -591,8 +591,8 @@ input:focus + .slider {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div class="toggle" [ngClass]="{ disabled: disabled }">  <label class="switch">    <input type="checkbox" [checked]="checked" (change)="changeChecked()" />    <span class="slider round" [style.backgroundColor]="checked ? color : \'\'">      <span class="slider-before" [ngClass]="{ active: checked }"></span>    </span>  </label>  <span class="title">{{ title }}</span></div></div>'
-    var COMPONENTS = [{'name': 'EnhancedTitleComponent', 'selector': 'enhanced-title'},{'name': 'SlideToggleComponent', 'selector': 'slide-toggle'},{'name': 'SlideToggleGroupComponent', 'selector': 'slide-toggle-group'}];
-    var DIRECTIVES = [];
+    var COMPONENTS = [{'name': 'EnhancedTitleComponent', 'selector': 'gro-enhanced-title'},{'name': 'SlideToggleComponent', 'selector': 'mur-slide-toggle'},{'name': 'SlideToggleGroupComponent', 'selector': 'mur-slide-toggle-group'}];
+    var DIRECTIVES = [{'name': 'CancelableRouterLinkWithHrefDirective', 'selector': 'a[gorCancelableRouterLink]'},{'name': 'TippyDirective', 'selector': '[gorTippy]'},{'name': 'TruncateDirective', 'selector': '[gorTruncate]'}];
     var ACTUAL_COMPONENT = {'name': 'SlideToggleComponent'};
 </script>
 <script src="../js/tree.js"></script>

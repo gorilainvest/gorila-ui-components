@@ -93,7 +93,7 @@ This comment can receive child components too.</p>
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>enhanced-title</code></td>
+                <td class="col-md-9"><code>gro-enhanced-title</code></td>
             </tr>
 
             <tr>
@@ -269,7 +269,7 @@ This comment can receive child components too.</p>
  * This comment can receive child components too.
  */
 @Component({
-  selector: &#x27;enhanced-title&#x27;,
+  selector: &#x27;gro-enhanced-title&#x27;,
   templateUrl: &#x27;./enhanced-title.component.html&#x27;,
   styleUrls: [&#x27;./enhanced-title.component.scss&#x27;]
 })
@@ -371,8 +371,8 @@ export class EnhancedTitleComponent {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div class="header-container" [ngClass]="cssClass">  <h1>    {{ title }} <span class="highlight" *ngIf="highlight">{{ highlight }}</span>    <ng-content></ng-content>  </h1></div></div>'
-    var COMPONENTS = [{'name': 'EnhancedTitleComponent', 'selector': 'enhanced-title'},{'name': 'SlideToggleComponent', 'selector': 'slide-toggle'},{'name': 'SlideToggleGroupComponent', 'selector': 'slide-toggle-group'}];
-    var DIRECTIVES = [];
+    var COMPONENTS = [{'name': 'EnhancedTitleComponent', 'selector': 'gro-enhanced-title'},{'name': 'SlideToggleComponent', 'selector': 'mur-slide-toggle'},{'name': 'SlideToggleGroupComponent', 'selector': 'mur-slide-toggle-group'}];
+    var DIRECTIVES = [{'name': 'CancelableRouterLinkWithHrefDirective', 'selector': 'a[gorCancelableRouterLink]'},{'name': 'TippyDirective', 'selector': '[gorTippy]'},{'name': 'TruncateDirective', 'selector': '[gorTruncate]'}];
     var ACTUAL_COMPONENT = {'name': 'EnhancedTitleComponent'};
 </script>
 <script src="../js/tree.js"></script>
