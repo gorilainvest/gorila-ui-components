@@ -4,7 +4,6 @@
   justify-content: center;
   padding: 15px;
   background: #ffffff;
-
 }
 
 .toggle-label {
@@ -15,15 +14,8 @@
   text-transform: uppercase;
 }
 
-.toggle {
-  margin: auto 20px;
-}
-
 .toggle-group-container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: auto;
   width: 85%;
   >:first-child {
     margin-right: auto;
@@ -32,5 +24,5 @@
 
 .toggle-container {
   display: flex;
-
 }
+
