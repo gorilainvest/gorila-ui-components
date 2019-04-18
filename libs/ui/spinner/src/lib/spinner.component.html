@@ -1,0 +1,10 @@
+<div class='loading_component' [ngClass]="{'loading_component--center': !!centered}" *ngIf="!hide">
+  <div class="loading-spinner"
+    [style.height.px]="_size"
+    [style.width.px]="_size"
+    [style.border-width.px]="circleSize"
+  >
+    <i [ngClass]="icon"></i>
+  </div>
+  <div *ngIf="message">{{message}}</div>
+</div>
