@@ -1,14 +1,8 @@
 import { LocationStrategy } from '@angular/common';
-import {
-  Directive,
-  HostListener,
-  Input
-} from '@angular/core';
-import {
-  ActivatedRoute,
-  Router,
-  RouterLinkWithHref
-} from '@angular/router';
+
+import { Directive, HostListener, Input } from '@angular/core';
+import { ActivatedRoute, Router, RouterLinkWithHref } from '@angular/router';
+
 
 /**
  * @see https://github.com/angular/angular/blob/master/packages/router/src/directives/router_link.ts
