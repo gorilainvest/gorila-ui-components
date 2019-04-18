@@ -1,7 +1,10 @@
 language: node_js
 node_js:
   - '9'
-cache: npm
+cache:
+  npm: true
+  directories:
+    - ~/.cache
 dist: trusty
 sudo: required
 before_script:
