@@ -4,6 +4,6 @@ describe('Hello Nx', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display welcome message', () => {
-    getGreeting().contains('Welcome to Gorila Widgets System!');
+    getGreeting().contains('Welcome to Gorila Invest UI Toolkit!');
   });
 });
