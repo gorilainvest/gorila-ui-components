@@ -50,6 +50,9 @@ export class ArrowVariationComponent implements OnChanges {
   constructor() {}
 
   /**
+
+   *
+
    * Updates type and CSS classes on value change.
    */
   public ngOnChanges(changes: SimpleChanges) {
@@ -64,4 +67,3 @@ export class ArrowVariationComponent implements OnChanges {
     this.cssclasses = [this.type, this.size];
   }
 }
-
