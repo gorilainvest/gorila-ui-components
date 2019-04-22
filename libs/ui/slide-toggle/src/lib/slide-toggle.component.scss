@@ -78,3 +78,9 @@ input:checked + .slider {
 input:focus + .slider {
   box-shadow: 0 0 1px #dbdddd;
 }
+
+@media only screen and (max-width: 1199px) {
+  .toggle {
+    margin: 10px 0;
+  }
+}
