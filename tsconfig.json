@@ -13,17 +13,50 @@
     "lib": ["es2017", "dom"],
     "baseUrl": ".",
     "paths": {
-      "@gorilainvest/directives": ["libs/directives/src/index.ts"],
-      "@gorilainvest/ui-arrow-variation": ["libs/ui/arrow-variation/src/index.ts"],
-      "@gorilainvest/ui-button": ["libs/ui/button/src/index.ts"],
-      "@gorilainvest/ui-card-container": ["libs/ui/card-container/src/index.ts"],
-      "@gorilainvest/ui-countdown-button": ["libs/ui/countdown-button/src/index.ts"],
-      "@gorilainvest/ui-enhanced-title": ["libs/ui/enhanced-title/src/index.ts"],
-      "@gorilainvest/ui-loading": ["libs/ui/loading/src/index.ts"],
-      "@gorilainvest/ui-popup-confirm": ["libs/ui/popup-confirm/src/index.ts"],
-      "@gorilainvest/ui-section-title": ["libs/ui/section-title/src/index.ts"],
-      "@gorilainvest/ui-slide-toggle": ["libs/ui/slide-toggle/src/index.ts"],
-      "@gorilainvest/ui-spinner": ["libs/ui/spinner/src/index.ts"]
+      "@gorilainvest/ui-toolkit/directives": [
+        "dist/directives",
+        "libs/directives/src/index.ts"
+      ],
+      "@gorilainvest/ui-toolkit/arrow-variation": [
+        "dist/arrow-variation",
+        "libs/ui/arrow-variation/src/index.ts"
+      ],
+      "@gorilainvest/ui-toolkit/button": [
+        "dist/button",
+        "libs/ui/button/src/index.ts"
+      ],
+      "@gorilainvest/ui-toolkit/card-container": [
+        "dist/card-container",
+        "libs/ui/card-container/src/index.ts"
+      ],
+      "@gorilainvest/ui-toolkit/countdown-button": [
+        "dist/countdown-button",
+        "libs/ui/countdown-button/src/index.ts"
+      ],
+      "@gorilainvest/ui-toolkit/enhanced-title": [
+        "dist/enhanced-title",
+        "libs/ui/enhanced-title/src/index.ts"
+      ],
+      "@gorilainvest/ui-toolkit/loading": [
+        "dist/loading",
+        "libs/ui/loading/src/index.ts"
+      ],
+      "@gorilainvest/ui-toolkit/popup-confirm": [
+        "dist/popup-confirm",
+        "libs/ui/popup-confirm/src/index.ts"
+      ],
+      "@gorilainvest/ui-toolkit/section-title": [
+        "dist/section-title",
+        "libs/ui/section-title/src/index.ts"
+      ],
+      "@gorilainvest/ui-toolkit/slide-toggle": [
+        "dist/slide-toggle",
+        "libs/ui/slide-toggle/src/index.ts"
+      ],
+      "@gorilainvest/ui-toolkit/spinner": [
+        "dist/spinner",
+        "libs/ui/spinner/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
