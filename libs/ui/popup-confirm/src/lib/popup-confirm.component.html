@@ -1,0 +1,20 @@
+<ng-container *ngIf="data">
+
+  <h2 mat-dialog-title>{{data.title}}</h2>
+  <div *ngFor="let content of data.content" [ngClass]="content.class ? content.class : ''">
+    <div *ngIf="content.separator" class='separator-container'>
+      <div class='popup-separator'></div>
+      <div class='separator-title'> {{content.separator}} </div>
+      <div class='popup-separator'></div>
+    </div>
+    <mat-dialog-content>{{content.text}}</mat-dialog-content>
+    <mat-dialog-actions>
+      <ng-container *ngFor="let btn of content.actions">
+        <button mat-button [mat-dialog-close]="btn.value">
+          {{btn.text}}
+        </button>
+      </ng-container>
+    </mat-dialog-actions>
+  </div>
+
+</ng-container>

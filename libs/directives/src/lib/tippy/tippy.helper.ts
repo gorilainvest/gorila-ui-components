@@ -1,7 +1,13 @@
 import Popper from 'popper.js';
 import { keys, merge, path } from 'ramda';
 import { timer } from 'rxjs';
-import tippy, { Instance as TippyInstance, Props as TippyProps, Targets } from 'tippy.js';
+
+import tippy, {
+  Instance as TippyInstance,
+  Props as TippyProps,
+  Targets
+} from 'tippy.js';
+
 
 import { tippyOptionsDefault } from './tippy.model';
 
@@ -30,7 +36,11 @@ export class TippyHelper {
    */
   public startTippy(id: string, tippyOptions: TippyProps, hoverElement: Targets, tippyElement?: Targets) {
     if (!path(['content'], tippyOptions) && !path(['html'], tippyOptions)) {
-      console.warn('tippy not started because you didn`t pass content or html parameters');
+
+      console.warn(
+        'tippy not started because you didn`t pass content or html parameters'
+      );
+
       return;
     }
     timer(500).subscribe(() => {
@@ -51,7 +61,10 @@ export class TippyHelper {
         }
         this.tippy[id].enable();
         this.popper[id] = this.tippy[id].popperInstance;
-      } catch (e) { console.warn(e); }
+      } catch (e) {
+        console.warn(e);
+      }
+
     });
   }
 
@@ -86,9 +99,16 @@ export class TippyHelper {
     if (!!item) {
       this.updateItem(id, item);
     } else {
-      console.warn('tippy target not found or invalid content', {htmlOption: html});
+
+      console.warn('tippy target not found or invalid content', {
+        htmlOption: html
+      });
+
     }
-    options['content'] = item || options['content'] || 'please set content or html option';
+
+    options['content'] =
+      item || options['content'] || 'please set content or html option';
+
     return options;
   }
 

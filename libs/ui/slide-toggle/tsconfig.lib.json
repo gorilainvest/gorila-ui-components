@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../../dist/out-tsc/libs/ui/slide-toggle",
+    "outDir": "../../../dist/out-tsc/slide-toggle",
     "target": "es2015",
     "module": "es2015",
     "moduleResolution": "node",

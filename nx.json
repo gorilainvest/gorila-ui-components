@@ -8,10 +8,34 @@
     "nx.json": "*"
   },
   "projects": {
+    "ui-arrow-variation": {
+      "tags": ["murphy", "shared", "ui"]
+    },
+    "ui-button": {
+      "tags": ["magilla", "shared", "ui"]
+    },
+    "ui-card-container": {
+      "tags": ["grodd", "shared", "ui"]
+    },
+    "ui-countdown-button": {
+      "tags": ["magilla", "shared", "ui"]
+    },
     "ui-enhanced-title": {
-      "tags": ["shared", "ui"]
+      "tags": ["grodd", "shared", "ui"]
+    },
+    "ui-loading": {
+      "tags": ["murphy", "shared", "ui"]
+    },
+    "ui-popup-confirm": {
+      "tags": ["magilla", "shared", "ui"]
+    },
+    "ui-section-title": {
+      "tags": ["grodd", "shared", "ui"]
     },
     "ui-slide-toggle": {
+      "tags": ["murphy", "shared", "ui"]
+    },
+    "ui-spinner": {
       "tags": ["murphy", "shared", "ui"]
     },
     "widgets-system": {

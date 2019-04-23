@@ -1,2 +1,1 @@
-export * from './lib/enhanced-title.component';
-export * from './lib/enhanced-title.module';
+export * from './public_api';

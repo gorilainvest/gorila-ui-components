@@ -1,8 +1,21 @@
-import { Directive, ElementRef, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import {
+  Directive,
+  ElementRef,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges
+} from '@angular/core';
+
 import Popper from 'popper.js';
 import { merge, path } from 'ramda';
 import { timer } from 'rxjs';
-import tippy, { Instance as TippyInstance, Props as TippyProps } from 'tippy.js';
+
+import tippy, {
+  Instance as TippyInstance,
+  Props as TippyProps
+} from 'tippy.js';
+
 
 import { tippyOptionsDefault } from './tippy.model';
 
@@ -12,9 +25,8 @@ import { tippyOptionsDefault } from './tippy.model';
  * Lets a component or DOM element to have a tippy tooltip on hover.
  *
  */
-@Directive({selector: '[gorTippy]'})
+@Directive({ selector: '[gorTippy]' })
 export class TippyDirective implements OnInit, OnChanges {
-
   /**
    * The descriptor of a tippy instance.
    */
@@ -24,7 +36,7 @@ export class TippyDirective implements OnInit, OnChanges {
   private popper: Popper = null;
   private htmlItem = null;
 
-  constructor(private el: ElementRef) { }
+  constructor(private el: ElementRef) {}
 
   /**
    * Load a tippy instance on init lifecicle.
@@ -43,7 +55,14 @@ export class TippyDirective implements OnInit, OnChanges {
   }
 
   private loadTippy() {
-    if (!path(['content'], this.tippyOptions) && !path(['html'], this.tippyOptions)) { return; }
+
+    if (
+      !path(['content'], this.tippyOptions) &&
+      !path(['html'], this.tippyOptions)
+    ) {
+      return;
+    }
+
 
     timer(500).subscribe(() => {
       try {
@@ -51,9 +70,15 @@ export class TippyDirective implements OnInit, OnChanges {
         if (this.tippy) {
           this.tippy.destroy();
         }
-        this.tippy = tippy.one(el, this.getOptions(el, this.tippyOptions));
+        this.tippy = tippy.one(
+          el,
+          this.getOptions(el, this.tippyOptions)
+        );
         this.popper = this.tippy.popperInstance;
-      } catch (e) { console.warn(e); }
+      } catch (e) {
+        console.warn(e);
+      }
+
     });
   }
 
@@ -72,7 +97,10 @@ export class TippyDirective implements OnInit, OnChanges {
       item.style.visibility = '';
       this.htmlItem = item;
     }
-    options['content'] = item || options['content'] || 'please set content or html option';
+
+    options['content'] =
+      item || options['content'] || 'please set content or html option';
+
     return options;
   }
 }

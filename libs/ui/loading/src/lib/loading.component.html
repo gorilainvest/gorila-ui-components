@@ -1,0 +1,6 @@
+<ng-container *ngIf="!stopLoading">
+  <div class='container' *ngIf="!iconOnly">
+    <mur-spinner icon="fa fa-spinner fa-spin fa-3x fa-fw" [message]="message" [hide]="stopLoading"></mur-spinner>
+  </div>
+  <mur-spinner *ngIf="iconOnly" icon="fa fa-spinner fa-spin fa-3x fa-fw" [message]="message" [hide]="stopLoading"></mur-spinner>
+</ng-container>

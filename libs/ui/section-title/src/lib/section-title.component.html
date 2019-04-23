@@ -1,0 +1,8 @@
+<div class="section-title" [ngStyle]="{'background-color': bgColor}" [ngClass]="{'inverse-color':bgColor==''}">
+  <h4>
+    <span [ngStyle]="{'color': color}">{{title}} </span>
+    <div class='content-container'>
+      <ng-content></ng-content>
+    </div>
+  </h4>
+</div>

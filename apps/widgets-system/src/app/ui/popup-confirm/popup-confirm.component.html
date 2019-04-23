@@ -1,0 +1,74 @@
+<gdk-card
+  title="Slide Toggle"
+  subtitle="Wrapper for angular material slide toggle"
+  [withoutOutput]="true"
+>
+  <mat-list role="list" class="inputs">
+    <mat-list-item role="listitem" class="title-config-container">
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Title"
+          [formControl]="titleFormControl"
+          maxlength="20"
+        />
+        <mat-hint>The modal title</mat-hint>
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem" class="text-config-container">
+      <mat-form-field class="full-width">
+        <textarea
+          matInput
+          placeholder="Text"
+          [formControl]="textFormControl"
+          maxlength="300"
+          rows="5">
+        </textarea>
+        <mat-hint>The modal text</mat-hint>
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem" class="action-one-config-container">
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Texto da ação 1"
+          [formControl]="actionOneFormControl"
+          maxlength="20"
+        />
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem" class="action-two-config-container">
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Texto da ação 2"
+          [formControl]="actionTwoFormControl"
+          maxlength="20"
+        />
+        <mat-hint>The number of actions can be &lt; 2.</mat-hint>
+      </mat-form-field>
+    </mat-list-item>
+  </mat-list>
+
+  <mag-countdown-button
+    class="widget"
+    actionText="Open modal"
+    waitText="Wait a moment"
+    waitTime="5"
+    (buttonClick)="open()">
+  </mag-countdown-button>
+
+  <!-- <pre class="code">
+<span>// module import</span>
+<span>import &#123; SlideToggleModule &#125; from '@gorilainvest/ui-toolkit/dist/slide-toggle';</span>
+<span></span>
+<span>// template.html</span>
+<span>&lt;slide-toggle</span>
+<span>  [checked]=&quot;{{checked}}&quot;</span>
+<span>  [color]=&quot;{{colorFormControl.value}}&quot;</span>
+<span>  [disabled]=&quot;{{disabled}}&quot;</span>
+<span>  [title]=&quot;{{titleFormControl.value}}&quot;&gt;</span>
+<span>&lt;/slide-toggle&gt;</span>
+<span></span>
+  </pre> -->
+</gdk-card>

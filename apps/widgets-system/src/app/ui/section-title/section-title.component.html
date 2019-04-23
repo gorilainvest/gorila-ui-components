@@ -1,0 +1,62 @@
+<gdk-card
+  title="Section Title"
+  subtitle="Title component for a section in the app"
+  [withoutOutput]="true"
+>
+  <mat-list role="list" class="inputs">
+    <mat-list-item role="listitem" class="bgColor-config-container">
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          type="color"
+          placeholder="Background Color"
+          [formControl]="bgColorFormControl"
+        />
+        <mat-hint>The title background color</mat-hint>
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem" class="color-config-container">
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          type="color"
+          placeholder="Color"
+          [formControl]="colorFormControl"
+        />
+        <mat-hint>The title color</mat-hint>
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem" class="title-config-container">
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Title"
+          [formControl]="titleFormControl"
+          maxlength="20"
+        />
+        <mat-hint>The section title itself</mat-hint>
+      </mat-form-field>
+    </mat-list-item>
+  </mat-list>
+
+  <gro-section-title
+    class="widget"
+    [bgColor]="bgColorFormControl.value"
+    [color]="colorFormControl.value"
+    [title]="titleFormControl.value"
+  >
+  </gro-section-title>
+
+  <pre class="code">
+<span>// module import</span>
+<span>import &#123; SectionTitleModule &#125; from '@gorilainvest/ui-toolkit/dist/section-title';</span>
+<span></span>
+<span>// template.html</span>
+<span>&lt;gro-section-title</span>
+<span>  [bgColor]=&quot;{{bgColorFormControl.value}}&quot;</span>
+<span>  [color]=&quot;{{colorFormControl.value}}&quot;</span>
+<span>  [title]=&quot;{{titleFormControl.value}}&quot;&gt;</span>
+<span>&lt;/gro-section-title&gt;</span>
+<span></span>
+  </pre>
+</gdk-card>
