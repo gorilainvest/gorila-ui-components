@@ -66,6 +66,8 @@ THE SOFTWARE.
 
 @angular/material/core
 
+@angular/material/dialog
+
 @angular/material/expansion
 
 @angular/material/form-field
@@ -77,6 +79,8 @@ THE SOFTWARE.
 @angular/material/list
 
 @angular/material/menu
+
+@angular/material/select
 
 @angular/material/sidenav
 
@@ -113,9 +117,25 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-@gorilainvest/ui-toolkit/dist/enhanced-title
+@gorilainvest/ui-toolkit/arrow-variation
 
-@gorilainvest/ui-toolkit/dist/slide-toggle
+@gorilainvest/ui-toolkit/button
+
+@gorilainvest/ui-toolkit/card-container
+
+@gorilainvest/ui-toolkit/countdown-button
+
+@gorilainvest/ui-toolkit/enhanced-title
+
+@gorilainvest/ui-toolkit/loading
+
+@gorilainvest/ui-toolkit/popup-confirm
+
+@gorilainvest/ui-toolkit/section-title
+
+@gorilainvest/ui-toolkit/slide-toggle
+
+@gorilainvest/ui-toolkit/spinner
 
 @ngrx/effects
 MIT
@@ -151,6 +171,9 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+
+ngx-take-until-destroy
+MIT
 
 rxjs
 Apache-2.0

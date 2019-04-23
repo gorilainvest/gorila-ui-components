@@ -172,7 +172,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">libs/directives/src/lib/tippy/tippy.helper.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">libs/directives/src/lib/tippy/tippy.helper.ts:20</a></div>
                             </td>
                         </tr>
 
@@ -205,7 +205,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">libs/directives/src/lib/tippy/tippy.helper.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">libs/directives/src/lib/tippy/tippy.helper.ts:21</a></div>
                             </td>
                         </tr>
 
@@ -238,7 +238,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">libs/directives/src/lib/tippy/tippy.helper.ts:16</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">libs/directives/src/lib/tippy/tippy.helper.ts:22</a></div>
                             </td>
                         </tr>
 
@@ -276,8 +276,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="21"
-                            class="link-to-prism">libs/directives/src/lib/tippy/tippy.helper.ts:21</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">libs/directives/src/lib/tippy/tippy.helper.ts:27</a></div>
                 </td>
             </tr>
 
@@ -319,8 +319,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="75"
-                            class="link-to-prism">libs/directives/src/lib/tippy/tippy.helper.ts:75</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="88"
+                            class="link-to-prism">libs/directives/src/lib/tippy/tippy.helper.ts:88</a></div>
                 </td>
             </tr>
 
@@ -414,8 +414,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="31"
-                            class="link-to-prism">libs/directives/src/lib/tippy/tippy.helper.ts:31</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="37"
+                            class="link-to-prism">libs/directives/src/lib/tippy/tippy.helper.ts:37</a></div>
                 </td>
             </tr>
 
@@ -524,8 +524,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="63"
-                            class="link-to-prism">libs/directives/src/lib/tippy/tippy.helper.ts:63</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="76"
+                            class="link-to-prism">libs/directives/src/lib/tippy/tippy.helper.ts:76</a></div>
                 </td>
             </tr>
 
@@ -596,8 +596,8 @@ errors or doesn&#39;t exist return false.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="95"
-                            class="link-to-prism">libs/directives/src/lib/tippy/tippy.helper.ts:95</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="115"
+                            class="link-to-prism">libs/directives/src/lib/tippy/tippy.helper.ts:115</a></div>
                 </td>
             </tr>
 
@@ -662,7 +662,13 @@ errors or doesn&#39;t exist return false.</p>
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import Popper from &#x27;popper.js&#x27;;
 import { keys, merge, path } from &#x27;ramda&#x27;;
 import { timer } from &#x27;rxjs&#x27;;
-import tippy, { Instance as TippyInstance, Props as TippyProps, Targets } from &#x27;tippy.js&#x27;;
+
+import tippy, {
+  Instance as TippyInstance,
+  Props as TippyProps,
+  Targets
+} from &#x27;tippy.js&#x27;;
+
 
 import { tippyOptionsDefault } from &#x27;./tippy.model&#x27;;
 
@@ -691,7 +697,11 @@ export class TippyHelper {
    */
   public startTippy(id: string, tippyOptions: TippyProps, hoverElement: Targets, tippyElement?: Targets) {
     if (!path([&#x27;content&#x27;], tippyOptions) &amp;&amp; !path([&#x27;html&#x27;], tippyOptions)) {
-      console.warn(&#x27;tippy not started because you didn&#x60;t pass content or html parameters&#x27;);
+
+      console.warn(
+        &#x27;tippy not started because you didn&#x60;t pass content or html parameters&#x27;
+      );
+
       return;
     }
     timer(500).subscribe(() &#x3D;&gt; {
@@ -712,7 +722,10 @@ export class TippyHelper {
         }
         this.tippy[id].enable();
         this.popper[id] &#x3D; this.tippy[id].popperInstance;
-      } catch (e) { console.warn(e); }
+      } catch (e) {
+        console.warn(e);
+      }
+
     });
   }
 
@@ -747,9 +760,16 @@ export class TippyHelper {
     if (!!item) {
       this.updateItem(id, item);
     } else {
-      console.warn(&#x27;tippy target not found or invalid content&#x27;, {htmlOption: html});
+
+      console.warn(&#x27;tippy target not found or invalid content&#x27;, {
+        htmlOption: html
+      });
+
     }
-    options[&#x27;content&#x27;] &#x3D; item || options[&#x27;content&#x27;] || &#x27;please set content or html option&#x27;;
+
+    options[&#x27;content&#x27;] &#x3D;
+      item || options[&#x27;content&#x27;] || &#x27;please set content or html option&#x27;;
+
     return options;
   }
 

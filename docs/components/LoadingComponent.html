@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>EnhancedTitleComponent</li>
+  <li>LoadingComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,20 +61,24 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>libs/ui/enhanced-title/src/lib/enhanced-title.component.ts</code>
+    <code>libs/ui/loading/src/lib/loading.component.ts</code>
 </p>
 
     <p class="comment">
         <h3>Description</h3>
     </p>
     <p class="comment">
-        <p>The component that represent a title for a page.
-This comment can receive child components too.</p>
+        <p>A simple loading component that use SpinnerComponent.</p>
 
     </p>
 
 
 
+    <p class="comment">
+        <h3>Example</h3>
+    </p>
+    <div class="io-description">
+    </div>
 
 <section>
     <h3>Metadata</h3>
@@ -93,19 +97,19 @@ This comment can receive child components too.</p>
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>gro-enhanced-title</code></td>
+                <td class="col-md-9"><code>mur-loading</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./enhanced-title.component.scss</code></td>
+                <td class="col-md-9"><code>./loading.component.scss</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./enhanced-title.component.html</code></td>
+                <td class="col-md-9"><code>./loading.component.html</code></td>
             </tr>
 
 
@@ -134,13 +138,13 @@ This comment can receive child components too.</p>
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#cssClass">cssClass</a>
+                                <a href="#iconOnly">iconOnly</a>
                             </li>
                             <li>
-                                <a href="#highlight">highlight</a>
+                                <a href="#message">message</a>
                             </li>
                             <li>
-                                <a href="#title">title</a>
+                                <a href="#stopLoading">stopLoading</a>
                             </li>
                         </ul>
                     </td>
@@ -164,10 +168,16 @@ This comment can receive child components too.</p>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">libs/ui/enhanced-title/src/lib/enhanced-title.component.ts:27</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">libs/ui/loading/src/lib/loading.component.ts:29</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Empty constructor.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -178,23 +188,23 @@ This comment can receive child components too.</p>
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="cssClass"></a>
-                        <b>cssClass</b>
+                        <a name="iconOnly"></a>
+                        <b>iconOnly</b>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                        <i>Default value : </i><code>true</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">libs/ui/enhanced-title/src/lib/enhanced-title.component.ts:27</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">libs/ui/loading/src/lib/loading.component.ts:19</a></div>
                             </td>
                         </tr>
                 <tr>
                     <td class="col-md-4">
-                        <div class="io-description"><p>A custom css class to be aplied to the div container.</p>
+                        <div class="io-description"><p>Indicates if the loading must not be wrapped by a container.</p>
 </div>
                     </td>
                 </tr>
@@ -204,23 +214,24 @@ This comment can receive child components too.</p>
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="highlight"></a>
-                        <b>highlight</b>
+                        <a name="message"></a>
+                        <b>message</b>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">libs/ui/enhanced-title/src/lib/enhanced-title.component.ts:22</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">libs/ui/loading/src/lib/loading.component.ts:24</a></div>
                             </td>
                         </tr>
                 <tr>
                     <td class="col-md-4">
-                        <div class="io-description"><p>Part of the title, but highlighted with bold weight.</p>
+                        <div class="io-description"><p>The message to be displayed below spinner.</p>
 </div>
                     </td>
                 </tr>
@@ -230,23 +241,24 @@ This comment can receive child components too.</p>
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="title"></a>
-                        <b>title</b>
+                        <a name="stopLoading"></a>
+                        <b>stopLoading</b>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">libs/ui/enhanced-title/src/lib/enhanced-title.component.ts:17</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">libs/ui/loading/src/lib/loading.component.ts:29</a></div>
                             </td>
                         </tr>
                 <tr>
                     <td class="col-md-4">
-                        <div class="io-description"><p>The title to be displayed.</p>
+                        <div class="io-description"><p>Stop the loading if false, removing it from DOM.</p>
 </div>
                     </td>
                 </tr>
@@ -265,82 +277,58 @@ This comment can receive child components too.</p>
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input } from &#x27;@angular/core&#x27;;
 
 /**
- * The component that represent a title for a page.
- * This comment can receive child components too.
+ * A simple loading component that use SpinnerComponent.
+ *
+ * @see SpinnerComponent
  */
 @Component({
-  selector: &#x27;gro-enhanced-title&#x27;,
-  templateUrl: &#x27;./enhanced-title.component.html&#x27;,
-  styleUrls: [&#x27;./enhanced-title.component.scss&#x27;]
+  selector: &#x27;mur-loading&#x27;,
+  templateUrl: &#x27;./loading.component.html&#x27;,
+  styleUrls: [&#x27;./loading.component.scss&#x27;]
 })
-export class EnhancedTitleComponent {
+export class LoadingComponent {
+  /**
+   * Indicates if the loading must not be wrapped by a container.
+   *
+   * @default true
+   */
+  @Input() public iconOnly &#x3D; true;
 
   /**
-   * The title to be displayed.
+   * The message to be displayed below spinner.
    */
-  @Input() public title &#x3D; &#x27;&#x27;;
+  @Input() public message: string;
 
   /**
-   * Part of the title, but highlighted with bold weight.
+   * Stop the loading if false, removing it from DOM.
    */
-  @Input() public highlight &#x3D; &#x27;&#x27;;
+  @Input() public stopLoading: boolean;
 
   /**
-   * A custom css class to be aplied to the div container.
+   * Empty constructor.
    */
-  @Input() public cssClass &#x3D; &#x27;&#x27;;
-
   constructor() {}
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;header-container&quot; [ngClass]&#x3D;&quot;cssClass&quot;&gt;
-  &lt;h1&gt;
-    {{ title }} &lt;span class&#x3D;&quot;highlight&quot; *ngIf&#x3D;&quot;highlight&quot;&gt;{{ highlight }}&lt;/span&gt;
-    &lt;ng-content&gt;&lt;/ng-content&gt;
-  &lt;/h1&gt;
-&lt;/div&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;ng-container *ngIf&#x3D;&quot;!stopLoading&quot;&gt;
+  &lt;div class&#x3D;&#x27;container&#x27; *ngIf&#x3D;&quot;!iconOnly&quot;&gt;
+    &lt;mur-spinner icon&#x3D;&quot;fa fa-spinner fa-spin fa-3x fa-fw&quot; [message]&#x3D;&quot;message&quot; [hide]&#x3D;&quot;stopLoading&quot;&gt;&lt;/mur-spinner&gt;
+  &lt;/div&gt;
+  &lt;mur-spinner *ngIf&#x3D;&quot;iconOnly&quot; icon&#x3D;&quot;fa fa-spinner fa-spin fa-3x fa-fw&quot; [message]&#x3D;&quot;message&quot; [hide]&#x3D;&quot;stopLoading&quot;&gt;&lt;/mur-spinner&gt;
+&lt;/ng-container&gt;
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./enhanced-title.component.scss</code>
+                    <code>./loading.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">:host {
-  display: block;
-  width: 100%;
-}
-
-.header-container {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  padding-left: 1px;
-  margin-bottom: 10px;
+                <pre class="line-numbers"><code class="language-scss">.container {
+  height: 100%;
   position: relative;
-
-  h1 {
-    font-weight: lighter;
-    margin: 0;
-    text-transform: capitalize;
-    span {
-      font-weight: normal;
-      text-transform: lowercase;
-    }
-  }
-
-  a {
-    margin-left: 10px;
-
-    color: #2d2d2d;
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-decoration: underline;
-    text-align: left;
-  }
 }
 </code></pre>
     </div>
@@ -370,10 +358,10 @@ export class EnhancedTitleComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="header-container" [ngClass]="cssClass">  <h1>    {{ title }} <span class="highlight" *ngIf="highlight">{{ highlight }}</span>    <ng-content></ng-content>  </h1></div></div>'
+        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="!stopLoading">  <div class=\'container\' *ngIf="!iconOnly">    <mur-spinner icon="fa fa-spinner fa-spin fa-3x fa-fw" [message]="message" [hide]="stopLoading"></mur-spinner>  </div>  <mur-spinner *ngIf="iconOnly" icon="fa fa-spinner fa-spin fa-3x fa-fw" [message]="message" [hide]="stopLoading"></mur-spinner></ng-container></div>'
     var COMPONENTS = [{'name': 'ArrowVariationComponent', 'selector': 'mur-arrow-variation'},{'name': 'ButtonComponent', 'selector': 'mag-button'},{'name': 'CardContainerComponent', 'selector': 'gro-card-container'},{'name': 'CountdownButtonComponent', 'selector': 'mag-countdown-button'},{'name': 'EnhancedTitleComponent', 'selector': 'gro-enhanced-title'},{'name': 'LoadingComponent', 'selector': 'mur-loading'},{'name': 'PopupConfirmComponent', 'selector': 'mag-popup-confirm'},{'name': 'SectionTitleComponent', 'selector': 'gro-section-title'},{'name': 'SlideToggleComponent', 'selector': 'mur-slide-toggle'},{'name': 'SlideToggleGroupComponent', 'selector': 'mur-slide-toggle-group'},{'name': 'SpinnerComponent', 'selector': 'mur-spinner'}];
     var DIRECTIVES = [{'name': 'CancelableRouterLinkWithHrefDirective', 'selector': 'a[gorCancelableRouterLink]'},{'name': 'TippyDirective', 'selector': '[gorTippy]'},{'name': 'TruncateDirective', 'selector': '[gorTruncate]'}];
-    var ACTUAL_COMPONENT = {'name': 'EnhancedTitleComponent'};
+    var ACTUAL_COMPONENT = {'name': 'LoadingComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -407,7 +395,7 @@ export class EnhancedTitleComponent {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'EnhancedTitleComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'LoadingComponent.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>
