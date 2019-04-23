@@ -500,6 +500,13 @@
       "sourceRoot": "libs/directives/src",
       "projectType": "library",
       "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/directives/tsconfig.lib.json",
+            "project": "libs/directives/ng-package.json"
+          }
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
