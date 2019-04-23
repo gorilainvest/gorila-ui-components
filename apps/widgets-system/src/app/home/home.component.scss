@@ -1,9 +1,47 @@
 :host {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-row-gap: 10px;
+}
+
+section {
+  height: 100%;
+  width: 100%;
+}
+
+.main {
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  max-height: 400px;
-  padding-top: 100px;
-  width: 50vw;
+  justify-content: space-evenly
+}
+
+.getting-started {
+  display: grid;
+  grid-row-gap: 20px;
+
+  h1,
+  h3 {
+    text-align: center;
+  }
+
+  .pre-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  pre {
+    min-height: unset;
+    max-height: 200px;
+    max-width: 50%;
+    overflow: hidden;
+  }
+
+  .code.install {
+    height: 70px;
+  }
+
+  .code.tsconfig {
+    height: 170px;
+  }
 }
