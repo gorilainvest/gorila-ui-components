@@ -1,2 +1,1 @@
-export * from './lib/countdown-button.component';
-export * from './lib/countdown-button.module';
+export * from './public_api';

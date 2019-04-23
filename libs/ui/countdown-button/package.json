@@ -1,5 +1,5 @@
 {
-  "name": "@gorilainvest/ui-countdown-button",
+  "name": "@gorilainvest/ui-toolkit/countdown-button",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^7.2.0",

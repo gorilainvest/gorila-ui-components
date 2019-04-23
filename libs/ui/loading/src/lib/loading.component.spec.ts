@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SpinnerModule } from '@gorilainvest/ui-spinner';
+import { SpinnerModule } from '@gorilainvest/ui-toolkit/spinner';
 
 import { LoadingComponent } from './loading.component';
 

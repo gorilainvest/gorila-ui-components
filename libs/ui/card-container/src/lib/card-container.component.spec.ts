@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SectionTitleModule } from '@gorilainvest/ui-section-title';
+import { SectionTitleModule } from '@gorilainvest/ui-toolkit/section-title';
 
 import { CardContainerComponent } from './card-container.component';
 

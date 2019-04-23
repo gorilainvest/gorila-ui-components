@@ -1,2 +1,1 @@
-export * from './lib/loading.component';
-export * from './lib/loading.module';
+export * from './public_api';

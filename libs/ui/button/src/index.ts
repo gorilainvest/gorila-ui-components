@@ -1,2 +1,1 @@
-export * from './lib/button.component';
-export * from './lib/button.module';
+export * from './public_api';

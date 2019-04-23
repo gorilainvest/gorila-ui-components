@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SpinnerModule } from '@gorilainvest/ui-spinner';
+import { SpinnerModule } from '@gorilainvest/ui-toolkit/spinner';
 import { LoadingComponent } from './loading.component';
 
 @NgModule({
@@ -9,4 +9,3 @@ import { LoadingComponent } from './loading.component';
   exports: [LoadingComponent]
 })
 export class LoadingModule {}
-

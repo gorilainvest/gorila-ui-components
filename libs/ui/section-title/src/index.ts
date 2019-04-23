@@ -1,2 +1,1 @@
-export * from './lib/section-title.component';
-export * from './lib/section-title.module';
+export * from './public_api';

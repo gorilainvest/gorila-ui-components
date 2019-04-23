@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ButtonModule } from '@gorilainvest/ui-button';
+import { ButtonModule } from '@gorilainvest/ui-toolkit/button';
 import { CountdownButtonComponent } from './countdown-button.component';
 
 @NgModule({
