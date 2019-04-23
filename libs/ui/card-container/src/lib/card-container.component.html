@@ -1,4 +1,4 @@
-<div *ngIf="cssClass||gradientBgColor" class="card-top" [ngClass]="cssClass" [ngStyle]="{'background':gradientBgColor?.changingThisBreaksApplicationSecurity}"></div>
+<div *ngIf="cssClass||gradientBgColor" class="card-top" [ngClass]="cssClass" [style.background]="gradientBgColor"></div>
 <div class="card-title" *ngIf="title">
   <gro-section-title [title]="title">
     <ng-content select="[header]"></ng-content>
