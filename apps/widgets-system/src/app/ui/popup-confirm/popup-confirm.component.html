@@ -1,6 +1,6 @@
 <gdk-card
-  title="Slide Toggle"
-  subtitle="Wrapper for angular material slide toggle"
+  title="Popup confirm"
+  subtitle="A standardized modal alert to pop up in the screen"
   [withoutOutput]="true"
 >
   <mat-list role="list" class="inputs">
@@ -58,17 +58,27 @@
     (buttonClick)="open()">
   </mag-countdown-button>
 
-  <!-- <pre class="code">
+  <pre class="code">
 <span>// module import</span>
-<span>import &#123; SlideToggleModule &#125; from '@gorilainvest/ui-toolkit/dist/slide-toggle';</span>
+<span>import &#123; PopupConfirmModule &#125; from '@gorilainvest/ui-toolkit/popup-confirm';</span>
 <span></span>
-<span>// template.html</span>
-<span>&lt;slide-toggle</span>
-<span>  [checked]=&quot;{{checked}}&quot;</span>
-<span>  [color]=&quot;{{colorFormControl.value}}&quot;</span>
-<span>  [disabled]=&quot;{{disabled}}&quot;</span>
-<span>  [title]=&quot;{{titleFormControl.value}}&quot;&gt;</span>
-<span>&lt;/slide-toggle&gt;</span>
+<span>// component.ts</span>
+<span>...</span>
+<span>import &#123; MatDialog &#125; from '@angular/material/dialog';</span>
+<span>import &#123; PopupConfirmComponent &#125; from '@gorilainvest/ui-toolkit/popup-confirm';</span>
+<span>...</span>
+<span>export class GorilaComponent ...&#123;</span>
+<span>...</span>
+<span>  constructor(</span>
+<span>    ...</span>
+<span>    private dialog: MatDialog</span>
+<span>  ) &#123;&#125;</span>
+<span>...</span>
+<span>  public openAlert() &#123;</span>
+<span>    this.dialog.open(PopupConfirmComponent, &#123;...&#125;);</span>
+<span>  &#125;</span>
+<span>...</span>
+<span>&#125;</span>
 <span></span>
-  </pre> -->
+  </pre>
 </gdk-card>
