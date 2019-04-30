@@ -10,7 +10,7 @@
     <mat-dialog-content>{{content.text}}</mat-dialog-content>
     <mat-dialog-actions>
       <ng-container *ngFor="let btn of content.actions">
-        <button mat-button [mat-dialog-close]="btn.value">
+        <button mat-button [mat-dialog-close]="btn.value" [ngClass]="btn.class">
           {{btn.text}}
         </button>
       </ng-container>
