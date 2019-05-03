@@ -1,9 +1,16 @@
 @import "libs/../apps/widgets-system/src/styles/colors";
 
-mag-popup-confirm {
-
-  background-color: #ffffff;
+mat-dialog-container {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+}
+
+mag-popup-confirm {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+  width: 100%;
 
   .mat-dialog-title{
     text-align: center;
