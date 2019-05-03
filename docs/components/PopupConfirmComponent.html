@@ -304,7 +304,7 @@ export class PopupConfirmComponent {
     &lt;mat-dialog-content&gt;{{content.text}}&lt;/mat-dialog-content&gt;
     &lt;mat-dialog-actions&gt;
       &lt;ng-container *ngFor&#x3D;&quot;let btn of content.actions&quot;&gt;
-        &lt;button mat-button [mat-dialog-close]&#x3D;&quot;btn.value&quot;&gt;
+        &lt;button mat-button [mat-dialog-close]&#x3D;&quot;btn.value&quot; [ngClass]&#x3D;&quot;btn.class&quot;&gt;
           {{btn.text}}
         &lt;/button&gt;
       &lt;/ng-container&gt;
@@ -321,10 +321,17 @@ export class PopupConfirmComponent {
                 </p>
                 <pre class="line-numbers"><code class="language-scss">@import &quot;libs/../apps/widgets-system/src/styles/colors&quot;;
 
-mag-popup-confirm {
-
-  background-color: #ffffff;
+mat-dialog-container {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+}
+
+mag-popup-confirm {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+  width: 100%;
 
   .mat-dialog-title{
     text-align: center;
@@ -420,7 +427,7 @@ mag-popup-confirm {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="data">  <h2 mat-dialog-title>{{data.title}}</h2>  <div *ngFor="let content of data.content" [ngClass]="content.class ? content.class : \'\'">    <div *ngIf="content.separator" class=\'separator-container\'>      <div class=\'popup-separator\'></div>      <div class=\'separator-title\'> {{content.separator}} </div>      <div class=\'popup-separator\'></div>    </div>    <mat-dialog-content>{{content.text}}</mat-dialog-content>    <mat-dialog-actions>      <ng-container *ngFor="let btn of content.actions">        <button mat-button [mat-dialog-close]="btn.value">          {{btn.text}}        </button>      </ng-container>    </mat-dialog-actions>  </div></ng-container></div>'
+        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="data">  <h2 mat-dialog-title>{{data.title}}</h2>  <div *ngFor="let content of data.content" [ngClass]="content.class ? content.class : \'\'">    <div *ngIf="content.separator" class=\'separator-container\'>      <div class=\'popup-separator\'></div>      <div class=\'separator-title\'> {{content.separator}} </div>      <div class=\'popup-separator\'></div>    </div>    <mat-dialog-content>{{content.text}}</mat-dialog-content>    <mat-dialog-actions>      <ng-container *ngFor="let btn of content.actions">        <button mat-button [mat-dialog-close]="btn.value" [ngClass]="btn.class">          {{btn.text}}        </button>      </ng-container>    </mat-dialog-actions>  </div></ng-container></div>'
     var COMPONENTS = [{'name': 'ArrowVariationComponent', 'selector': 'mur-arrow-variation'},{'name': 'ButtonComponent', 'selector': 'mag-button'},{'name': 'CardContainerComponent', 'selector': 'gro-card-container'},{'name': 'CountdownButtonComponent', 'selector': 'mag-countdown-button'},{'name': 'EnhancedTitleComponent', 'selector': 'gro-enhanced-title'},{'name': 'LoadingComponent', 'selector': 'mur-loading'},{'name': 'PopupConfirmComponent', 'selector': 'mag-popup-confirm'},{'name': 'SectionTitleComponent', 'selector': 'gro-section-title'},{'name': 'SlideToggleComponent', 'selector': 'mur-slide-toggle'},{'name': 'SlideToggleGroupComponent', 'selector': 'mur-slide-toggle-group'},{'name': 'SpinnerComponent', 'selector': 'mur-spinner'}];
     var DIRECTIVES = [{'name': 'CancelableRouterLinkWithHrefDirective', 'selector': 'a[gorCancelableRouterLink]'},{'name': 'TippyDirective', 'selector': '[gorTippy]'},{'name': 'TruncateDirective', 'selector': '[gorTruncate]'}];
     var ACTUAL_COMPONENT = {'name': 'PopupConfirmComponent'};
