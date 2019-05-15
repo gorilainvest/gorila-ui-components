@@ -52,7 +52,7 @@ rimraf('dist', { disableGlob: true }, async err => {
       );
   };
 
-  await Rx.timer(0, 000).pipe(
+  await Rx.timer(0, 0).pipe(
     RxOp.filter(() => buildObservable === null),
     RxOp.takeWhile(() => libs.length)
   ).subscribe(() => {
