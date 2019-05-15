@@ -30,10 +30,14 @@
 @media only screen and (max-width: 1199px) {
   .toggle-group-container {
     flex-wrap: wrap;
+    >:first-child {
+      flex: 1 0 100%;
+    }
   }
   .toggle-container {
     display: block;
     flex: 1 0 50%;
     text-align: left;
+    margin-top: auto;
   }
 }
