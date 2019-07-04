@@ -16,6 +16,7 @@
 
 .toggle-group-container {
   display: flex;
+  min-width: 730px;
   width: 85%;
   >:first-child {
     margin-right: auto;
@@ -30,6 +31,7 @@
 @media only screen and (max-width: 1199px) {
   .toggle-group-container {
     flex-wrap: wrap;
+    min-width: unset;
     >:first-child {
       flex: 1 0 100%;
     }
