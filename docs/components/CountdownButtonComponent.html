@@ -538,10 +538,12 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Start the countdown timer for enable back the button again.</p>
-<p>To avoid memory leak, the obserable will complete on:
-1. component destroy life cycle event
-2. when counter is equal to 0
-3. button was clicked</p>
+<p>To avoid memory leak, the obserable will complete on:</p>
+<ol>
+<li>component destroy life cycle event</li>
+<li>when counter is equal to 0</li>
+<li>button was clicked</li>
+</ol>
 <p>In each tick, 1s, the button label will be updated.</p>
 </div>
 
@@ -802,6 +804,7 @@ export class CountdownButtonComponent implements OnDestroy, OnInit {
 
 
 
+                   
 
 
 

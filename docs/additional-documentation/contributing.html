@@ -43,6 +43,7 @@
 
 
 
+                   
 
 
 
@@ -103,9 +104,7 @@ chances of your issue being dealt with quickly:</p>
 <p>that relates to your submission. You don&#39;t want to duplicate effort.</p>
 </li>
 <li><p>Make your changes in a new git branch:</p>
-<p>   <code>shell
-   git checkout -b my-fix-branch master</code></p>
-</li>
+<div><pre class="line-numbers"><code class="language-shell">   git checkout -b my-fix-branch master</code></pre></div></li>
 <li><p>Create your patch, <strong>including appropriate test cases</strong>.</p>
 </li>
 <li><p>Follow our <a href="#rules">Coding Rules</a>.</p>
@@ -118,9 +117,7 @@ and ensure that all tests pass.</p>
 <li><p>Commit your changes using a descriptive commit message that follows our
 <a href="#commit">commit message conventions</a>. Adherence to these conventions
 is necessary because release notes are automatically generated from these messages.</p>
-<p>   <code>shell
-   git commit -a</code>
-Note: the optional commit <code>-a</code> command line option will automatically &quot;add&quot; and &quot;rm&quot; edited files.</p>
+<div><pre class="line-numbers"><code class="language-shell">   git commit -a</code></pre></div><p>Note: the optional commit <code>-a</code> command line option will automatically &quot;add&quot; and &quot;rm&quot; edited files.</p>
 </li>
 </ul>
 <ul>
@@ -139,10 +136,8 @@ git push my-fork my-fix-branch
 </li>
 <li><p>Rebase your branch and force push to your Github repository (this will update your Pull</p>
 <p>Request):</p>
-<p><code>shell
-git rebase master -i
-git push -f</code></p>
-</li>
+<div><pre class="line-numbers"><code class="language-shell">git rebase master -i
+git push -f</code></pre></div></li>
 </ul>
 </li>
 </ul>
@@ -153,21 +148,13 @@ from the main (upstream) repository:</p>
 <ul>
 <li><p>Delete the remote branch on Github either through the Github web UI or your local shell as</p>
 <p>  follows:</p>
-<p>  <code>shell
-  git push my-fork --delete my-fix-branch</code></p>
-</li>
+<div><pre class="line-numbers"><code class="language-shell">  git push my-fork --delete my-fix-branch</code></pre></div></li>
 <li><p>Check out the master branch:</p>
-<p>  <code>shell
-  git checkout master -f</code></p>
-</li>
+<div><pre class="line-numbers"><code class="language-shell">  git checkout master -f</code></pre></div></li>
 <li><p>Delete the local branch:</p>
-<p>  <code>shell
-  git branch -D my-fix-branch</code></p>
-</li>
+<div><pre class="line-numbers"><code class="language-shell">  git branch -D my-fix-branch</code></pre></div></li>
 <li><p>Update your master with the latest upstream version:</p>
-<p>  <code>shell
-  git pull --ff upstream master</code></p>
-</li>
+<div><pre class="line-numbers"><code class="language-shell">  git pull --ff upstream master</code></pre></div></li>
 </ul>
 <h2 id="a-namerulesa-coding-rules"><a name="rules"></a> Coding Rules</h2>
 <p>To ensure consistency throughout the source code, keep these rules in mind as you are working:</p>
@@ -183,15 +170,11 @@ we use the git commit messages to <strong>generate the Gorila Invest UI Toolkit 
 <h3 id="commit-message-format">Commit Message Format</h3>
 <p>Each commit message consists of a <strong>header</strong>, a <strong>body</strong> and a <strong>footer</strong>.  The header has a special
 format that includes a <strong>type</strong>, a <strong>scope</strong> and a <strong>subject</strong>:</p>
-<p>```
-<type>(<scope>): <subject>
-<BLANK LINE></p>
-<body>
-<BLANK LINE>
-<footer>
-```
-
-<p>The <strong>header</strong> is mandatory and the <strong>scope</strong> of the header is optional.</p>
+<div><pre class="line-numbers"><code class="language-none">&lt;type&gt;(&lt;scope&gt;): &lt;subject&gt;
+&lt;BLANK LINE&gt;
+&lt;body&gt;
+&lt;BLANK LINE&gt;
+&lt;footer&gt;</code></pre></div><p>The <strong>header</strong> is mandatory and the <strong>scope</strong> of the header is optional.</p>
 <p>Any line of the commit message cannot be longer 100 characters! This allows the message to be easier</p>
 <p>to read on Github as well as in various git tools.</p>
 <h3 id="revert">Revert</h3>
