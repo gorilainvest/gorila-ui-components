@@ -1,4 +1,4 @@
-export type SidebarGroup = {
+export interface SidebarGroup {
   group: string;
   items: SidebarItems;
   label: string;

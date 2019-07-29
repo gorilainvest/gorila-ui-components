@@ -69,8 +69,8 @@ export class AppComponent implements AfterViewChecked, OnDestroy, OnInit {
   }
 
   ngAfterViewChecked(): void {
-    const groupByUrl = it => currUrl.indexOf(it) !== -1;
     const currUrl = this.router.routerState.snapshot.url;
+    const groupByUrl = it => currUrl.indexOf(it) !== -1;
     if (currUrl === this.lastCurrUrl) {
       return;
     }
