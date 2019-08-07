@@ -26,13 +26,38 @@
         <mat-list-item [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
           <a matLine>Home</a>
         </mat-list-item>
-        <mat-list-item
-          *ngFor="let item of items"
-          [routerLink]="['/', item.route]"
-          routerLinkActive="active"
-        >
-          <a matLine class="capitalize">{{ item.text }}</a>
-        </mat-list-item>
+
+
+        <ng-container *ngFor="let item of items">
+          <ng-container *ngIf="!item.group; else groupTpl">
+            <mat-list-item class="single"
+              routerLinkActive="active"
+              [routerLink]="['/', item.route]">
+              <a matLine class="capitalize">{{ item.text }}</a>
+            </mat-list-item>
+          </ng-container>
+          <ng-template #groupTpl>
+            <mat-list-item class="group" [ngClass]="{'has-active':item.group==activeGroup}">
+              <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    {{ item.label }}
+                  </mat-expansion-panel-header>
+
+                  <mat-nav-list>
+                    <mat-list-item *ngFor="let it of item.items"
+                      routerLinkActive="active"
+                      [routerLink]="['/', it.route]">
+                      <a matLine class="capitalize">{{ it.text }}</a>
+                    </mat-list-item>
+                  </mat-nav-list>
+                </mat-expansion-panel>
+              </mat-accordion>
+            </mat-list-item>
+          </ng-template>
+
+        </ng-container>
+
         <mat-list-item class="doc-anchor">
           <a matLine href="./docs/index.html" target="_blank">Documentation</a>
         </mat-list-item>

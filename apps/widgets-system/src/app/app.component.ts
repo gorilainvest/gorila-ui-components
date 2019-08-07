@@ -1,4 +1,5 @@
 import {
+  AfterViewChecked,
   ChangeDetectorRef,
   Component,
   OnDestroy,
@@ -6,8 +7,30 @@ import {
   ViewEncapsulation
 } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
-import { items } from './sidebar.items';
+import { Router } from '@angular/router';
+
+import { items, SidebarItem, SidebarGroup } from './sidebar.items';
 import { Theme, Themes, THEMES } from './themes.config';
+
+const flattenedItems = (acc, it) => {
+  if (it.group) {
+    return acc.concat(it.items.reduce(flattenedItems, []));
+  }
+  return acc.concat(it);
+};
+
+const mapSidebarItems = (it: SidebarItem) => {
+  if (typeof it === 'string') {
+    return { text: it.replace('-', ' '), route: it };
+  }
+  it = it as SidebarGroup;
+  return {
+    group: it.group,
+    label: it.label,
+    items: it.items.map(mapSidebarItems)
+  };
+};
+
 
 @Component({
   selector: 'gorilainvest-root',
@@ -15,16 +38,27 @@ import { Theme, Themes, THEMES } from './themes.config';
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class AppComponent implements OnDestroy, OnInit {
+export class AppComponent implements AfterViewChecked, OnDestroy, OnInit {
+  public activeGroup: string;
+
   public currentTheme: Theme = THEMES.find(t => t.isDefault) || THEMES[0];
-  public items = items.map(it => ({ text: it.replace('-', ' '), route: it }));
+
+  public items = items.map(mapSidebarItems);
+
   public mobileQuery: MediaQueryList;
   public title = 'Gorila Invest UI Toolkit';
   public themes: Themes;
 
+  private flattenItems = items.reduce(flattenedItems, []);
+  private lastCurrUrl = '';
+
   private _mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
+  constructor(
+    changeDetectorRef: ChangeDetectorRef,
+    media: MediaMatcher,
+    private router: Router
+  ) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
@@ -34,6 +68,16 @@ export class AppComponent implements OnDestroy, OnInit {
     this.updateThemesList();
   }
 
+  ngAfterViewChecked(): void {
+    const currUrl = this.router.routerState.snapshot.url;
+    const groupByUrl = it => currUrl.indexOf(it) !== -1;
+    if (currUrl === this.lastCurrUrl) {
+      return;
+    }
+    this.lastCurrUrl = currUrl;
+    this.updateActiveGroup(this.flattenItems.find(groupByUrl));
+  }
+
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
@@ -41,6 +85,10 @@ export class AppComponent implements OnDestroy, OnInit {
   public applyTheme(theme: Theme) {
     this.currentTheme = theme;
     this.updateThemesList();
+  }
+
+  public updateActiveGroup(group: string) {
+    this.activeGroup = group;
   }
 
   private updateThemesList() {
