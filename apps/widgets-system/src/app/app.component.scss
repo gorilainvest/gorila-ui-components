@@ -64,15 +64,52 @@ $theme-picker-accent-stripe-size: 6px;
 
 .sidenav-container {
   flex: 1;
+
   h1 {
     font-weight: bold;
   }
+
+  .mat-list-item,
+  .mat-list-item-content {
+    height: auto !important;
+    min-height: 48px;
+  }
+
+  .group>.mat-list-item-content {
+    padding: 0 !important;
+
+  }
+
   .mat-list-item.active .mat-line {
      color: #11C0C5;
      text-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   }
+
   .mat-drawer.mat-sidenav {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+
+    width: 200px;
+  }
+
+  .mat-accordion,
+  .mat-expansion-panel {
+    width: 100%;
+  }
+
+  .mat-expansion-panel-header,
+  .mat-list-item-content {
+    padding-left: 16px;
+  }
+
+  .mat-expanded .mat-expansion-panel-header {
+    text-decoration: underline;
+  }
+
+  .has-active,
+  .mat-expanded .mat-expansion-panel-header {
+    color: #11C0C5;
+    font-weight: light;
+
   }
 }
 

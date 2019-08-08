@@ -16,7 +16,7 @@
 
 .toggle-group-container {
   display: flex;
-  min-width: 730px;
+  min-width: inherit;
   width: 85%;
   >:first-child {
     margin-right: auto;
