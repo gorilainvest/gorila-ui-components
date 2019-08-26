@@ -58,7 +58,8 @@
         "dist/spinner",
         "libs/ui/spinner/src/index.ts"
       ]
-    }
+    },
+    "rootDir": "."
   },
   "exclude": ["node_modules", "tmp"]
 }
