@@ -10,43 +10,103 @@
   "projects": {
     "ui-arrow-variation": {
       "implicitDependencies": [],
-      "tags": ["exportable", "team:murphy", "scope:shared", "scope:ui"]
+      "tags": [
+        "exportable",
+        "team:murphy",
+        "scope:shared",
+        "scope:ui",
+        "group:presentational"
+      ]
     },
     "ui-button": {
       "implicitDependencies": [],
-      "tags": ["exportable", "team:magilla", "scope:shared", "scope:ui"]
+      "tags": [
+        "exportable",
+        "team:magilla",
+        "scope:shared",
+        "scope:ui",
+        "group:buttons-indicators"
+      ]
     },
     "ui-card-container": {
       "implicitDependencies": ["ui-section-title"],
-      "tags": ["exportable", "team:grodd", "scope:shared", "scope:ui"]
+      "tags": [
+        "exportable",
+        "team:grodd",
+        "scope:shared",
+        "scope:ui",
+        "group:layout"
+      ]
     },
     "ui-countdown-button": {
       "implicitDependencies": ["ui-button"],
-      "tags": ["exportable", "team:magilla", "scope:shared", "scope:ui"]
+      "tags": [
+        "exportable",
+        "team:magilla",
+        "scope:shared",
+        "scope:ui",
+        "group:buttons-indicators"
+      ]
     },
     "ui-enhanced-title": {
       "implicitDependencies": [],
-      "tags": ["exportable", "team:grodd", "scope:shared", "scope:ui"]
+      "tags": [
+        "exportable",
+        "team:grodd",
+        "scope:shared",
+        "scope:ui",
+        "group:layout"
+      ]
     },
     "ui-loading": {
       "implicitDependencies": ["ui-spinner"],
-      "tags": ["exportable", "team:murphy", "scope:shared", "scope:ui"]
+      "tags": [
+        "exportable",
+        "team:murphy",
+        "scope:shared",
+        "scope:ui",
+        "group:buttons-indicators"
+      ]
     },
     "ui-popup-confirm": {
       "implicitDependencies": [],
-      "tags": ["exportable", "team:magilla", "scope:shared", "scope:ui"]
+      "tags": [
+        "exportable",
+        "team:magilla",
+        "scope:shared",
+        "scope:ui",
+        "group:popups-modals"
+      ]
     },
     "ui-section-title": {
       "implicitDependencies": [],
-      "tags": ["exportable", "team:grodd", "scope:shared", "scope:ui"]
+      "tags": [
+        "exportable",
+        "team:grodd",
+        "scope:shared",
+        "scope:ui",
+        "group:layout"
+      ]
     },
     "ui-slide-toggle": {
       "implicitDependencies": [],
-      "tags": ["exportable", "team:murphy", "scope:shared", "scope:ui"]
+      "tags": [
+        "exportable",
+        "team:murphy",
+        "scope:shared",
+        "scope:ui",
+        "group:controls"
+      ]
     },
     "ui-spinner": {
       "implicitDependencies": [],
-      "tags": ["exportable", "team:murphy", "scope:shared", "scope:ui"]
+      "tags": [
+        "exportable",
+        "team:murphy",
+        "scope:shared",
+        "scope:ui",
+        "group:buttons-indicators"
+      ]
     },
     "widgets-system": {
       "implicitDependencies": [

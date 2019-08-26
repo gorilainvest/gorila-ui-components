@@ -9,8 +9,10 @@ import {
 import { MediaMatcher } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
 
-import { items, SidebarItem, SidebarGroup } from './sidebar.items';
+import { getItems, SidebarItem, SidebarGroup } from "./sidebar.items";
 import { Theme, Themes, THEMES } from './themes.config';
+
+const items = getItems();
 
 const flattenedItems = (acc, it) => {
   if (it.group) {
@@ -61,6 +63,7 @@ export class AppComponent implements AfterViewChecked, OnDestroy, OnInit {
   ) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+    // tslint:disable-next-line
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
 
@@ -79,6 +82,7 @@ export class AppComponent implements AfterViewChecked, OnDestroy, OnInit {
   }
 
   ngOnDestroy(): void {
+    // tslint:disable-next-line
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
