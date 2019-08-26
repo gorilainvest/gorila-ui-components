@@ -1,4 +1,3 @@
-// tslint:disable-next-line
 import * as nx from "../../../../nx.json";
 import { forEachObjIndexed } from "ramda";
 

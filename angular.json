@@ -94,7 +94,7 @@
               "apps/widgets-system/tsconfig.app.json",
               "apps/widgets-system/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": ["**/node_modules/**", "**/*.json"]
           }
         }
       }
