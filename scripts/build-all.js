@@ -2,37 +2,20 @@ const ngPackage = require('ng-packagr');
 const rimraf = require('rimraf');
 const Rx = require('rxjs');
 const RxOp = require('rxjs/operators');
-
-
 const nxjson = require("../nx.json");
-
-
 
 const clog = msg => console.log('\x1b[36m%s\x1b[0m', msg);
 
-
-
-
 const COMPILED_LIBS = Object.keys(nxjson.projects)
-
   .filter(lib => nxjson.projects[lib].tags.find(tag => tag === "exportable"))
-
   .reduce((acc, lib) => ({ ...acc, [lib]: false }), {});
-
-
 
 const DEP_GRAPH = Object.keys(COMPILED_LIBS).reduce((acc, k) => ({
   ...acc,
   [k]: nxjson.projects[k].implicitDependencies
 }));
 
-
-
-
 const libs = Object.keys(COMPILED_LIBS);
-
-
-
 
 rimraf('dist', { disableGlob: true }, async err => {
   if (err) {
