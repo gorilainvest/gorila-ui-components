@@ -16,9 +16,10 @@ const runTarget = allPrjKeys.filter(getTestArchitect).reduce(
   { jest: [], karma: [] }
 );
 
+const cc = !!process.env.ENABLE_COVERAGE;
 let exitCode = 0;
 const execTest = Rx.bindCallback(exec);
-const runCoverage = p => execTest(`npx ng t ${p} --code-coverage`);
+const runCoverage = p => execTest(`npx ng t ${p} --code-coverage ${cc}`);
 const printResult = r => {
   if (r[0]) {
     console.error(r[0]);
@@ -50,4 +51,3 @@ Rx.combineLatest([
   complete: combLatComplete,
   error: combLatError
 });
-
