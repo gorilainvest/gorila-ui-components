@@ -1,15 +1,15 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { AppModule } from '../../app.module';
-import { GdkCardComponent } from './gdk-card.component';
+import { GdkModule } from "../gdk.module";
+import { GdkCardComponent } from "./gdk-card.component";
 
-describe('GdkCardComponent', () => {
+describe("GdkCardComponent", () => {
   let component: GdkCardComponent;
   let fixture: ComponentFixture<GdkCardComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [AppModule]
+      imports: [GdkModule]
     }).compileComponents();
   }));
 
@@ -19,7 +19,8 @@ describe('GdkCardComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
+

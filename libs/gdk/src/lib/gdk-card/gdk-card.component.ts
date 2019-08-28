@@ -1,9 +1,9 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from "@angular/core";
 
 @Component({
-  selector: 'gdk-card',
-  templateUrl: './gdk-card.component.html',
-  styleUrls: ['./gdk-card.component.scss'],
+  selector: "gdk-card",
+  templateUrl: "./gdk-card.component.html",
+  styleUrls: ["./gdk-card.component.scss"],
   encapsulation: ViewEncapsulation.None
 })
 export class GdkCardComponent implements OnInit {
@@ -17,3 +17,4 @@ export class GdkCardComponent implements OnInit {
 
   ngOnInit() {}
 }
+

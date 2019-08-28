@@ -531,6 +531,33 @@
           "styleext": "scss"
         }
       }
+    },
+    "gdk": {
+      "projectType": "library",
+      "root": "libs/gdk",
+      "sourceRoot": "libs/gdk/src",
+      "prefix": "gorilainvest",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/gdk/tsconfig.lib.json",
+              "libs/gdk/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/gdk/jest.config.js",
+            "tsConfig": "libs/gdk/tsconfig.spec.json",
+            "setupFile": "libs/gdk/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
     }
   },
   "cli": {
