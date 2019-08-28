@@ -14,7 +14,7 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "eslint .",
+    "lint": "eslint . && ng lint",
     "e2e": "ng e2e",
     "affected:apps": "./node_modules/.bin/nx affected:apps",
     "affected:libs": "./node_modules/.bin/nx affected:libs",
@@ -38,6 +38,7 @@
     "compodoc:coverage": "compodoc -p ./tsconfig.compodoc.json --includes guides --coverageTest",
     "ghpages": "npm run compodoc -- --output dist/apps/widgets-system/docs",
     "prepublishOnly": "node scripts/build-all.js",
+    "coverage": "node scripts/coverage-all.js",
     "codacy-coverage": "cat coverage/**/*/lcov.info | codacy-coverage -p ."
   },
   "repository": {
