@@ -54,13 +54,13 @@
     "directive-selector": [
       true,
       "attribute",
-      ["gor", "gro", "mag", "mur"],
+      ["gdk", "gor", "gro", "mag", "mur"],
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      ["gor", "gro", "mag", "mur"],
+      ["gdk", "gor", "gro", "mag", "mur"],
       "kebab-case"
     ],
     "no-output-on-prefix": true,

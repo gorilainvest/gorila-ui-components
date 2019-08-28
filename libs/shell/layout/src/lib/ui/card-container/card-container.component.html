@@ -1,0 +1,70 @@
+<gdk-card
+  title="Card Container"
+  subtitle="A card container for your widgets with a colored top bar"
+  [withoutOutput]="true"
+>
+  <mat-list role="list" class="inputs">
+    <mat-list-item role="listitem" class="colorInit-config-container">
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          type="color"
+          placeholder="Color Init"
+          [formControl]="colorInitFormControl"
+        />
+        <mat-hint>The begin gradient color for top bar</mat-hint>
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem" class="colorEnd-config-container">
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          type="color"
+          placeholder="Color End"
+          [formControl]="colorEndFormControl"
+        />
+        <mat-hint>The end gradient color for top bar</mat-hint>
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem" class="title-config-container">
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Title"
+          [formControl]="titleFormControl"
+          maxlength="20"
+        />
+        <mat-hint>The section title itself</mat-hint>
+      </mat-form-field>
+    </mat-list-item>
+  </mat-list>
+
+  <gro-card-container
+    class="widget"
+    [colorInit]="colorInitFormControl.value"
+    [colorEnd]="colorEndFormControl.value"
+    [title]="titleFormControl.value"
+  >
+  <ng-container body>
+    <div class="dummy-container">
+      <div class="dummy-content">
+        Your content here
+      </div>
+    </div>
+  </ng-container>
+  </gro-card-container>
+
+  <pre class="code">
+<span>// module import</span>
+<span>import &#123; CardContainerModule &#125; from '@gorilainvest/ui-toolkit/dist/card-container';</span>
+<span></span>
+<span>// template.html</span>
+<span>&lt;gro-card-container</span>
+<span>  [colorInit]=&quot;{{colorInitFormControl.value}}&quot;</span>
+<span>  [colorEnd]=&quot;{{colorEndFormControl.value}}&quot;</span>
+<span>  [title]=&quot;{{titleFormControl.value}}&quot;&gt;</span>
+<span>&lt;/gro-card-container&gt;</span>
+<span></span>
+  </pre>
+</gdk-card>
+

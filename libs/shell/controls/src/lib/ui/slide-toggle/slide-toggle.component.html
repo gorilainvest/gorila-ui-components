@@ -1,0 +1,72 @@
+<gdk-card
+  title="Slide Toggle"
+  subtitle="Wrapper for angular material slide toggle"
+  [withoutOutput]="true"
+>
+  <mat-list role="list" class="inputs">
+    <mat-list-item role="listitem" class="checked-config-container">
+      <mat-checkbox
+        class="full-width"
+        color="primary"
+        [checked]="checked"
+        (change)="checked = $event?.checked"
+        >Check me!</mat-checkbox
+      >
+    </mat-list-item>
+    <mat-list-item role="listitem" class="color-config-container">
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          type="color"
+          placeholder="Color"
+          [formControl]="colorFormControl"
+        />
+        <mat-hint>The toggle color</mat-hint>
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem" class="disabled-config-container">
+      <mat-checkbox
+        class="full-width"
+        color="primary"
+        [checked]="disabled"
+        (change)="disabled = $event?.checked"
+        >Disable me!</mat-checkbox
+      >
+    </mat-list-item>
+    <mat-list-item role="listitem" class="title-config-container">
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Title"
+          [formControl]="titleFormControl"
+          maxlength="20"
+        />
+        <mat-hint>The toggle title</mat-hint>
+      </mat-form-field>
+    </mat-list-item>
+  </mat-list>
+
+  <mur-slide-toggle
+    class="widget"
+    [checked]="checked"
+    [color]="colorFormControl.value"
+    [disabled]="disabled"
+    [title]="titleFormControl.value"
+    (toggleChange)="checked = $event"
+  >
+  </mur-slide-toggle>
+
+  <pre class="code">
+<span>// module import</span>
+<span>import &#123; SlideToggleModule &#125; from '@gorilainvest/ui-toolkit/dist/slide-toggle';</span>
+<span></span>
+<span>// template.html</span>
+<span>&lt;mur-slide-toggle</span>
+<span>  [checked]=&quot;{{checked}}&quot;</span>
+<span>  [color]=&quot;{{colorFormControl.value}}&quot;</span>
+<span>  [disabled]=&quot;{{disabled}}&quot;</span>
+<span>  [title]=&quot;{{titleFormControl.value}}&quot;&gt;</span>
+<span>&lt;/mur-slide-toggle&gt;</span>
+<span></span>
+  </pre>
+</gdk-card>
