@@ -5,5 +5,12 @@
     "types": []
   },
   "exclude": ["test.ts", "**/*.spec.ts"],
-  "include": ["**/*.ts"]
+  "include": [
+    "**/*.ts",
+    "../../libs/shell/buttons-indicators-shell/src/index.ts",
+    "../../libs/shell/controls-shell/src/index.ts",
+    "../../libs/shell/layout-shell/src/index.ts",
+    "../../libs/shell/popups-modals-shell/src/index.ts",
+    "../../libs/shell/presentational-shell/src/index.ts"
+  ]
 }
