@@ -6,7 +6,6 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatListModule } from "@angular/material/list";
 import { MatSelectModule } from "@angular/material/select";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { RouterModule } from "@angular/router";
 import { GdkModule } from "@gorilainvest/gdk";
 import { ArrowVariationModule } from "@gorilainvest/ui-toolkit/arrow-variation";
@@ -16,7 +15,6 @@ import { ArrowVariationComponent } from "./ui/arrow-variation/arrow-variation.co
 @NgModule({
   imports: [
     CommonModule,
-    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     MatCheckboxModule,

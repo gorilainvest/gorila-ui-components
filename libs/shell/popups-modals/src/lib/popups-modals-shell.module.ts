@@ -6,7 +6,6 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatListModule } from "@angular/material/list";
 import { MatSelectModule } from "@angular/material/select";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { RouterModule } from "@angular/router";
 import { GdkModule } from "@gorilainvest/gdk";
 import { CountdownButtonModule } from "@gorilainvest/ui-toolkit/countdown-button";
@@ -17,7 +16,6 @@ import { PopupConfirmComponent } from "./ui/popup-confirm/popup-confirm.componen
 @NgModule({
   imports: [
     CommonModule,
-    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     MatCheckboxModule,

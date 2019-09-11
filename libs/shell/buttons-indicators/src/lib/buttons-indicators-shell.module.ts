@@ -6,7 +6,6 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatListModule } from "@angular/material/list";
 import { MatSelectModule } from "@angular/material/select";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { RouterModule } from "@angular/router";
 import { GdkModule } from "@gorilainvest/gdk";
 import { ButtonModule } from "@gorilainvest/ui-toolkit/button";
@@ -22,7 +21,6 @@ import { SpinnerComponent } from "./ui/spinner/spinner.component";
 @NgModule({
   imports: [
     CommonModule,
-    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     MatCheckboxModule,
