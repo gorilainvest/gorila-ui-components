@@ -94,7 +94,7 @@
               "apps/widgets-system/tsconfig.app.json",
               "apps/widgets-system/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": ["**/node_modules/**", "**/*.json"]
           }
         }
       }
@@ -104,7 +104,7 @@
       "projectType": "application",
       "architect": {
         "e2e": {
-          "builder": "@nrwl/builders:cypress",
+          "builder": "@nrwl/cypress:cypress",
           "options": {
             "cypressConfig": "apps/widgets-system-e2e/cypress.json",
             "tsConfig": "apps/widgets-system-e2e/tsconfig.e2e.json",
@@ -531,6 +531,168 @@
           "styleext": "scss"
         }
       }
+    },
+    "buttons-indicators-shell": {
+      "projectType": "library",
+      "root": "libs/shell/buttons-indicators",
+      "sourceRoot": "libs/shell/buttons-indicators/src",
+      "prefix": "gorilainvest",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shell/buttons-indicators/tsconfig.lib.json",
+              "libs/shell/buttons-indicators/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shell/buttons-indicators/jest.config.js",
+            "tsConfig": "libs/shell/buttons-indicators/tsconfig.spec.json",
+            "setupFile": "libs/shell/buttons-indicators/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "controls-shell": {
+      "projectType": "library",
+      "root": "libs/shell/controls",
+      "sourceRoot": "libs/shell/controls/src",
+      "prefix": "gorilainvest",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shell/controls/tsconfig.lib.json",
+              "libs/shell/controls/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shell/controls/jest.config.js",
+            "tsConfig": "libs/shell/controls/tsconfig.spec.json",
+            "setupFile": "libs/shell/controls/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "layout-shell": {
+      "projectType": "library",
+      "root": "libs/shell/layout",
+      "sourceRoot": "libs/shell/layout/src",
+      "prefix": "gorilainvest",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shell/layout/tsconfig.lib.json",
+              "libs/shell/layout/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shell/layout/jest.config.js",
+            "tsConfig": "libs/shell/layout/tsconfig.spec.json",
+            "setupFile": "libs/shell/layout/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "popups-modals-shell": {
+      "projectType": "library",
+      "root": "libs/shell/popups-modals",
+      "sourceRoot": "libs/shell/popups-modals/src",
+      "prefix": "gorilainvest",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shell/popups-modals/tsconfig.lib.json",
+              "libs/shell/popups-modals/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shell/popups-modals/jest.config.js",
+            "tsConfig": "libs/shell/popups-modals/tsconfig.spec.json",
+            "setupFile": "libs/shell/popups-modals/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "presentational-shell": {
+      "projectType": "library",
+      "root": "libs/shell/presentational",
+      "sourceRoot": "libs/shell/presentational/src",
+      "prefix": "gorilainvest",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shell/presentational/tsconfig.lib.json",
+              "libs/shell/presentational/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shell/presentational/jest.config.js",
+            "tsConfig": "libs/shell/presentational/tsconfig.spec.json",
+            "setupFile": "libs/shell/presentational/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "gdk": {
+      "projectType": "library",
+      "root": "libs/gdk",
+      "sourceRoot": "libs/gdk/src",
+      "prefix": "gorilainvest",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/gdk/tsconfig.lib.json",
+              "libs/gdk/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/gdk/jest.config.js",
+            "tsConfig": "libs/gdk/tsconfig.spec.json",
+            "setupFile": "libs/gdk/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
     }
   },
   "cli": {
@@ -538,15 +700,22 @@
       "typescriptMismatch": false,
       "versionMismatch": false
     },
-    "defaultCollection": "@nrwl/schematics",
+    "defaultCollection": "@nrwl/angular",
     "packageManager": "npm"
   },
   "schematics": {
     "@nrwl/schematics:application": {
-      "style": "scss"
+      "style": "scss",
+      "unitTestRunner": "karma",
+      "e2eTestRunner": "protractor"
     },
     "@nrwl/schematics:library": {
-      "style": "scss"
+      "style": "scss",
+      "unitTestRunner": "karma",
+      "framework": "angular"
+    },
+    "@nrwl/schematics:node-application": {
+      "framework": "express"
     }
   },
   "defaultProject": "widgets-system"

@@ -9,34 +9,104 @@
   },
   "projects": {
     "ui-arrow-variation": {
-      "tags": ["murphy", "shared", "ui"]
+      "implicitDependencies": [],
+      "tags": [
+        "exportable",
+        "team:murphy",
+        "scope:shared",
+        "scope:ui",
+        "group:presentational"
+      ]
     },
     "ui-button": {
-      "tags": ["magilla", "shared", "ui"]
+      "implicitDependencies": [],
+      "tags": [
+        "exportable",
+        "team:magilla",
+        "scope:shared",
+        "scope:ui",
+        "group:buttons-indicators"
+      ]
     },
     "ui-card-container": {
-      "tags": ["grodd", "shared", "ui"]
+      "implicitDependencies": ["ui-section-title"],
+      "tags": [
+        "exportable",
+        "team:grodd",
+        "scope:shared",
+        "scope:ui",
+        "group:layout"
+      ]
     },
     "ui-countdown-button": {
-      "tags": ["magilla", "shared", "ui"]
+      "implicitDependencies": ["ui-button"],
+      "tags": [
+        "exportable",
+        "team:magilla",
+        "scope:shared",
+        "scope:ui",
+        "group:buttons-indicators"
+      ]
     },
     "ui-enhanced-title": {
-      "tags": ["grodd", "shared", "ui"]
+      "implicitDependencies": [],
+      "tags": [
+        "exportable",
+        "team:grodd",
+        "scope:shared",
+        "scope:ui",
+        "group:layout"
+      ]
     },
     "ui-loading": {
-      "tags": ["murphy", "shared", "ui"]
+      "implicitDependencies": ["ui-spinner"],
+      "tags": [
+        "exportable",
+        "team:murphy",
+        "scope:shared",
+        "scope:ui",
+        "group:buttons-indicators"
+      ]
     },
     "ui-popup-confirm": {
-      "tags": ["magilla", "shared", "ui"]
+      "implicitDependencies": [],
+      "tags": [
+        "exportable",
+        "team:magilla",
+        "scope:shared",
+        "scope:ui",
+        "group:popups-modals"
+      ]
     },
     "ui-section-title": {
-      "tags": ["grodd", "shared", "ui"]
+      "implicitDependencies": [],
+      "tags": [
+        "exportable",
+        "team:grodd",
+        "scope:shared",
+        "scope:ui",
+        "group:layout"
+      ]
     },
     "ui-slide-toggle": {
-      "tags": ["murphy", "shared", "ui"]
+      "implicitDependencies": [],
+      "tags": [
+        "exportable",
+        "team:murphy",
+        "scope:shared",
+        "scope:ui",
+        "group:controls"
+      ]
     },
     "ui-spinner": {
-      "tags": ["murphy", "shared", "ui"]
+      "implicitDependencies": [],
+      "tags": [
+        "exportable",
+        "team:murphy",
+        "scope:shared",
+        "scope:ui",
+        "group:buttons-indicators"
+      ]
     },
     "widgets-system": {
       "tags": []
@@ -45,7 +115,40 @@
       "tags": []
     },
     "directives": {
-      "tags": ["shared"]
+      "implicitDependencies": [],
+      "tags": ["exportable", "scope:shared"]
+    },
+    "buttons-indicators-shell": {
+      "implicitDependencies": [
+        "ui-button",
+        "ui-countdown-button",
+        "ui-loading",
+        "ui-spinner"
+      ],
+      "tags": []
+    },
+    "controls-shell": {
+      "implicitDependencies": ["ui-slide-toggle"],
+      "tags": []
+    },
+    "layout-shell": {
+      "implicitDependencies": [
+        "ui-card-container",
+        "ui-enhanced-title",
+        "ui-section-title"
+      ],
+      "tags": []
+    },
+    "popups-modals-shell": {
+      "implicitDependencies": ["ui-popup-confirm"],
+      "tags": []
+    },
+    "presentational-shell": {
+      "implicitDependencies": ["ui-arrow-variation"],
+      "tags": []
+    },
+    "gdk": {
+      "tags": []
     }
   }
 }

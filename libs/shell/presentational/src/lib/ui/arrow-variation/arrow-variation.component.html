@@ -1,0 +1,50 @@
+<gdk-card
+  title="Arrow Variation"
+  subtitle="Triangle arrow for positive negative and zero variation"
+  [withoutOutput]="true"
+>
+  <mat-list role="list" class="inputs">
+    <mat-list-item role="listitem" class="size-config-container">
+      <mat-form-field class="full-width">
+        <mat-label>Size</mat-label>
+        <mat-select [formControl]="sizeFormControl" required>
+          <mat-option value="sm">sm</mat-option>
+          <mat-option value="md">md</mat-option>
+          <mat-option value="lg">lg</mat-option>
+        </mat-select>
+        <mat-hint>The arrow size</mat-hint>
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem" class="value-config-container">
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Value"
+          [formControl]="valueFormControl"
+          type="number"
+        />
+        <mat-hint>The variation number</mat-hint>
+      </mat-form-field>
+    </mat-list-item>
+  </mat-list>
+
+  <div class="widget">
+    <mur-arrow-variation
+      [size]="sizeFormControl.value"
+      [value]="valueFormControl.value">
+    </mur-arrow-variation>
+    <p>{{valueFormControl.value}}</p>
+  </div>
+
+  <pre class="code">
+<span>// module import</span>
+<span>import &#123; ArrowVariationComponentModule &#125; from '@gorilainvest/ui-toolkit/dist/arrow-variation';</span>
+<span></span>
+<span>// template.html</span>
+<span>&lt;mur-arrow-variation [size]=&quot;{{sizeFormControl.value}}&quot; [value]=&quot;{{valueFormControl.value}}&quot;&gt;</span>
+<span>&lt;/mur-arrow-variation&gt;</span>
+<span></span>
+  </pre>
+</gdk-card>
+
+

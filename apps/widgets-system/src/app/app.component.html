@@ -32,7 +32,7 @@
           <ng-container *ngIf="!item.group; else groupTpl">
             <mat-list-item class="single"
               routerLinkActive="active"
-              [routerLink]="['/', item.route]">
+              [routerLink]="item.route">
               <a matLine class="capitalize">{{ item.text }}</a>
             </mat-list-item>
           </ng-container>
@@ -47,7 +47,7 @@
                   <mat-nav-list>
                     <mat-list-item *ngFor="let it of item.items"
                       routerLinkActive="active"
-                      [routerLink]="['/', it.route]">
+                      [routerLink]="it.route">
                       <a matLine class="capitalize">{{ it.text }}</a>
                     </mat-list-item>
                   </mat-nav-list>
