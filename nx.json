@@ -109,27 +109,46 @@
       ]
     },
     "widgets-system": {
-      "implicitDependencies": [
-        "ui-arrow-variation",
-        "ui-button",
-        "ui-card-container",
-        "ui-countdown-button",
-        "ui-enhanced-title",
-        "ui-loading",
-        "ui-popup-confirm",
-        "ui-section-title",
-        "ui-slide-toggle",
-        "ui-spinner"
-      ],
       "tags": []
     },
     "widgets-system-e2e": {
-      "implicitDependencies": ["widgets-system"],
       "tags": []
     },
     "directives": {
       "implicitDependencies": [],
       "tags": ["exportable", "scope:shared"]
+    },
+    "buttons-indicators-shell": {
+      "implicitDependencies": [
+        "ui-button",
+        "ui-countdown-button",
+        "ui-loading",
+        "ui-spinner"
+      ],
+      "tags": []
+    },
+    "controls-shell": {
+      "implicitDependencies": ["ui-slide-toggle"],
+      "tags": []
+    },
+    "layout-shell": {
+      "implicitDependencies": [
+        "ui-card-container",
+        "ui-enhanced-title",
+        "ui-section-title"
+      ],
+      "tags": []
+    },
+    "popups-modals-shell": {
+      "implicitDependencies": ["ui-popup-confirm"],
+      "tags": []
+    },
+    "presentational-shell": {
+      "implicitDependencies": ["ui-arrow-variation"],
+      "tags": []
+    },
+    "gdk": {
+      "tags": []
     }
   }
 }

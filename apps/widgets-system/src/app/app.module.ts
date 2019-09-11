@@ -16,51 +16,14 @@ import { MatSelectModule } from "@angular/material/select";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { RouterModule } from "@angular/router";
-import { ArrowVariationModule } from "@gorilainvest/ui-toolkit/arrow-variation";
-import { ButtonModule } from "@gorilainvest/ui-toolkit/button";
-import { CardContainerModule } from "@gorilainvest/ui-toolkit/card-container";
-import { CountdownButtonModule } from "@gorilainvest/ui-toolkit/countdown-button";
-import { EnhancedTitleModule } from "@gorilainvest/ui-toolkit/enhanced-title";
-import { LoadingModule } from "@gorilainvest/ui-toolkit/loading";
-import { PopupConfirmModule } from "@gorilainvest/ui-toolkit/popup-confirm";
-import { SectionTitleModule } from "@gorilainvest/ui-toolkit/section-title";
-import { SlideToggleModule } from "@gorilainvest/ui-toolkit/slide-toggle";
-import { SpinnerModule } from "@gorilainvest/ui-toolkit/spinner";
 import { NxModule } from "@nrwl/angular";
 
 import { AppComponent } from "./app.component";
 import { ROUTES } from "./app.routes";
-import { ArrowVariationComponent } from "./ui/arrow-variation/arrow-variation.component";
-import { ButtonComponent } from "./ui/button/button.component";
-import { CardContainerComponent } from "./ui/card-container/card-container.component";
-import { CountdownButtonComponent } from "./ui/countdown-button/countdown-button.component";
-import { EnhancedTitleComponent } from "./ui/enhanced-title/enhanced-title.component";
-import { LoadingComponent } from "./ui/loading/loading.component";
-import { PopupConfirmComponent } from "./ui/popup-confirm/popup-confirm.component";
-import { SectionTitleComponent } from "./ui/section-title/section-title.component";
-import { SlideToggleComponent } from "./ui/slide-toggle/slide-toggle.component";
-import { SpinnerComponent } from "./ui/spinner/spinner.component";
 import { HomeComponent } from "./home/home.component";
-import { GdkCardComponent } from "./gdk/gdk-card/gdk-card.component";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ArrowVariationComponent,
-    ButtonComponent,
-    CountdownButtonComponent,
-    CardContainerComponent,
-    EnhancedTitleComponent,
-    HomeComponent,
-    LoadingComponent,
-
-    PopupConfirmComponent,
-
-    SectionTitleComponent,
-    SlideToggleComponent,
-    SpinnerComponent,
-    GdkCardComponent
-  ],
+  declarations: [AppComponent, HomeComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -83,20 +46,9 @@ import { GdkCardComponent } from "./gdk/gdk-card/gdk-card.component";
     MatMenuModule,
     MatToolbarModule,
     MatSelectModule,
-    MatSidenavModule,
-    ArrowVariationModule,
-    ButtonModule,
-    CardContainerModule,
-    CountdownButtonModule,
-    EnhancedTitleModule,
-    LoadingModule,
-    PopupConfirmModule,
-    SectionTitleModule,
-    SlideToggleModule,
-    SpinnerModule
+    MatSidenavModule
   ],
   providers: [],
-  entryComponents: [PopupConfirmComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -21,23 +21,30 @@ const flattenedItems = (acc, it) => {
   return acc.concat(it);
 };
 
-const mapSidebarItems = (it: SidebarItem) => {
-  if (typeof it === 'string') {
-    return { text: it.replace('-', ' '), route: it };
+
+const mapSidebarItems = (it: SidebarItem, group?: string) => {
+  if (typeof it === "string") {
+
+    return {
+      text: it.replace("-", " "),
+      route: [`/${group}/${it}`]
+    };
+
   }
   it = it as SidebarGroup;
   return {
     group: it.group,
     label: it.label,
-    items: it.items.map(mapSidebarItems)
+
+    items: it.items.map(i => mapSidebarItems(i, (it as SidebarGroup).group))
   };
 };
 
 
 @Component({
-  selector: 'gorilainvest-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: "gorilainvest-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"],
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements AfterViewChecked, OnDestroy, OnInit {
@@ -45,14 +52,14 @@ export class AppComponent implements AfterViewChecked, OnDestroy, OnInit {
 
   public currentTheme: Theme = THEMES.find(t => t.isDefault) || THEMES[0];
 
-  public items = items.map(mapSidebarItems);
+  public items = items.map(it => mapSidebarItems(it));
 
   public mobileQuery: MediaQueryList;
-  public title = 'Gorila Invest UI Toolkit';
+  public title = "Gorila Invest UI Toolkit";
   public themes: Themes;
 
   private flattenItems = items.reduce(flattenedItems, []);
-  private lastCurrUrl = '';
+  private lastCurrUrl = "";
 
   private _mobileQueryListener: () => void;
 
@@ -61,7 +68,7 @@ export class AppComponent implements AfterViewChecked, OnDestroy, OnInit {
     media: MediaMatcher,
     private router: Router
   ) {
-    this.mobileQuery = media.matchMedia('(max-width: 600px)');
+    this.mobileQuery = media.matchMedia("(max-width: 600px)");
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     // tslint:disable-next-line
     this.mobileQuery.addListener(this._mobileQueryListener);
