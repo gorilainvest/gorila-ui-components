@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 
 import { LayoutShellModule } from "../../layout-shell.module";
 import { SectionTitleComponent } from "./section-title.component";
@@ -9,7 +10,7 @@ describe("SectionTitleComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [LayoutShellModule]
+      imports: [LayoutShellModule, NoopAnimationsModule]
     }).compileComponents();
   }));
 

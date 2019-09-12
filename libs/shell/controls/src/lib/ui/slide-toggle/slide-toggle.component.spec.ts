@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 
 import { ControlsShellModule } from "../../controls-shell.module";
 import { SlideToggleComponent } from "./slide-toggle.component";
@@ -9,7 +10,7 @@ describe("SlideToggleComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ControlsShellModule]
+      imports: [ControlsShellModule, NoopAnimationsModule]
     }).compileComponents();
   }));
 
