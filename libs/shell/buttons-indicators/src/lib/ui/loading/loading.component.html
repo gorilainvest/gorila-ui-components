@@ -13,14 +13,31 @@
         >Stop!</mat-checkbox
       >
     </mat-list-item>
-    <mat-list-item role="listitem" class="icon-only-config-container">
-      <mat-checkbox
-        class="full-width"
-        color="primary"
-        [checked]="iconOnly"
-        (change)="iconOnly = $event?.checked"
-        >Use icon only!</mat-checkbox
-      >
+    <mat-list-item role="listitem" class="thickness-config-container">
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Thickness"
+          [formControl]="thicknessFormControl"
+          type="number"
+          min="1"
+          max="20"
+        />
+        <mat-hint>The spinner thickness in pixels</mat-hint>
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem" class="size-config-container">
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Size"
+          [formControl]="sizeFormControl"
+          type="number"
+          min="20"
+          max="70"
+        />
+        <mat-hint>The spinner size in pixels</mat-hint>
+      </mat-form-field>
     </mat-list-item>
     <mat-list-item role="listitem" class="message-config-container">
       <mat-form-field class="full-width">
@@ -37,9 +54,10 @@
 
   <mur-loading
     class="widget"
-    [stopLoading]="stop"
-    [iconOnly]="iconOnly"
     [message]="messageFormControl.value"
+    [size]="sizeFormControl.value"
+    [stopLoading]="stop"
+    [thickness]="thicknessFormControl.value"
   >
   </mur-loading>
 
@@ -50,8 +68,9 @@
 <span>// template.html</span>
 <span>&lt;mur-loading</span>
 <span>  [stopLoading]=&quot;{{stop}}&quot;</span>
-<span>  [iconOnly]=&quot;{{iconOnly}}&quot;</span>
 <span>  [message]=&quot;{{messageFormControl.value}}&quot;&gt;</span>
+<span>  [size]=&quot;{{sizeFormControl.value}}&quot;&gt;</span>
+<span>  [thickness]=&quot;{{thicknessFormControl.value}}&quot;&gt;</span>
 <span>&lt;/mur-loading&gt;</span>
 <span></span>
   </pre>
