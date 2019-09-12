@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 
 import { PresentationalShellModule } from "../../presentational-shell.module";
 import { ArrowVariationComponent } from "./arrow-variation.component";
@@ -9,7 +10,7 @@ describe("ArrowVariationComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [PresentationalShellModule]
+      imports: [PresentationalShellModule, NoopAnimationsModule]
     }).compileComponents();
   }));
 

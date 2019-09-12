@@ -6,7 +6,6 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatListModule } from "@angular/material/list";
 import { MatSelectModule } from "@angular/material/select";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { RouterModule } from "@angular/router";
 import { GdkModule } from "@gorilainvest/gdk";
 import { CardContainerModule } from "@gorilainvest/ui-toolkit/card-container";
@@ -20,7 +19,6 @@ import { SectionTitleComponent } from "./ui/section-title/section-title.componen
 @NgModule({
   imports: [
     CommonModule,
-    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     MatCheckboxModule,

@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 
 import { ButtonsIndicatorsShellModule } from "../../buttons-indicators-shell.module";
 import { CountdownButtonComponent } from "./countdown-button.component";
@@ -9,7 +10,7 @@ describe("CountdownButtonComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ButtonsIndicatorsShellModule]
+      imports: [ButtonsIndicatorsShellModule, NoopAnimationsModule]
     }).compileComponents();
   }));
 
