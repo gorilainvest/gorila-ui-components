@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SpinnerModule } from '@gorilainvest/ui-toolkit/spinner';
 
 import { LoadingComponent } from './loading.component';
 
@@ -9,8 +8,7 @@ describe('LoadingComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [LoadingComponent],
-      imports: [SpinnerModule]
+      declarations: [LoadingComponent]
     }).compileComponents();
   }));
 

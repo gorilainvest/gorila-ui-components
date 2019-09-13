@@ -8,4 +8,3 @@ export * from './dist/loading';
 export * from './dist/popup-confirm';
 export * from './dist/section-title';
 export * from './dist/slide-toggle';
-export * from './dist/spinner';
