@@ -11,12 +11,10 @@ import { GdkModule } from "@gorilainvest/gdk";
 import { ButtonModule } from "@gorilainvest/ui-toolkit/button";
 import { CountdownButtonModule } from "@gorilainvest/ui-toolkit/countdown-button";
 import { LoadingModule } from "@gorilainvest/ui-toolkit/loading";
-import { SpinnerModule } from "@gorilainvest/ui-toolkit/spinner";
 import { ButtonsIndicatorsComponent } from "./buttons-indicators/buttons-indicators.component";
 import { ButtonComponent } from "./ui/button/button.component";
 import { CountdownButtonComponent } from "./ui/countdown-button/countdown-button.component";
 import { LoadingComponent } from "./ui/loading/loading.component";
-import { SpinnerComponent } from "./ui/spinner/spinner.component";
 
 @NgModule({
   imports: [
@@ -32,7 +30,6 @@ import { SpinnerComponent } from "./ui/spinner/spinner.component";
     ButtonModule,
     CountdownButtonModule,
     LoadingModule,
-    SpinnerModule,
     RouterModule.forChild([
       { path: "button", pathMatch: "full", component: ButtonComponent },
       {
@@ -41,7 +38,6 @@ import { SpinnerComponent } from "./ui/spinner/spinner.component";
         component: CountdownButtonComponent
       },
       { path: "loading", pathMatch: "full", component: LoadingComponent },
-      { path: "spinner", pathMatch: "full", component: SpinnerComponent },
       { path: "", pathMatch: "full", component: ButtonsIndicatorsComponent }
     ])
   ],
@@ -49,7 +45,6 @@ import { SpinnerComponent } from "./ui/spinner/spinner.component";
     ButtonComponent,
     CountdownButtonComponent,
     LoadingComponent,
-    SpinnerComponent,
     ButtonsIndicatorsComponent
   ]
 })

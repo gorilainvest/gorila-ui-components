@@ -1,6 +1,11 @@
-<ng-container *ngIf="!stopLoading">
-  <div class='container' *ngIf="!iconOnly">
-    <mur-spinner icon="fa fa-spinner fa-spin fa-3x fa-fw" [message]="message" [hide]="stopLoading"></mur-spinner>
+<div *ngIf="!stopLoading" class="container">
+  <div class='loading-component' [style.width.px]="width">
+    <div class="loading-spinner"
+      [style.height.px]="size"
+      [style.width.px]="size"
+      [style.border-width.px]="thickness"
+    >
+    </div>
+    <div id='msg' *ngIf="message">{{message}}</div>
   </div>
-  <mur-spinner *ngIf="iconOnly" icon="fa fa-spinner fa-spin fa-3x fa-fw" [message]="message" [hide]="stopLoading"></mur-spinner>
-</ng-container>
+</div>

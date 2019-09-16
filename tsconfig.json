@@ -54,10 +54,6 @@
         "libs/ui/slide-toggle/src/index.ts",
         "dist/slide-toggle"
       ],
-      "@gorilainvest/ui-toolkit/spinner": [
-        "libs/ui/spinner/src/index.ts",
-        "dist/spinner"
-      ],
       "@gorilainvest/shell/buttons-indicators": [
         "libs/shell/buttons-indicators/src/index.ts"
       ],

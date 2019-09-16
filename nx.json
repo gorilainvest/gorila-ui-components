@@ -59,7 +59,7 @@
       ]
     },
     "ui-loading": {
-      "implicitDependencies": ["ui-spinner"],
+      "implicitDependencies": [],
       "tags": [
         "exportable",
         "team:murphy",
@@ -98,16 +98,6 @@
         "group:controls"
       ]
     },
-    "ui-spinner": {
-      "implicitDependencies": [],
-      "tags": [
-        "exportable",
-        "team:murphy",
-        "scope:shared",
-        "scope:ui",
-        "group:buttons-indicators"
-      ]
-    },
     "widgets-system": {
       "tags": []
     },
@@ -122,8 +112,7 @@
       "implicitDependencies": [
         "ui-button",
         "ui-countdown-button",
-        "ui-loading",
-        "ui-spinner"
+        "ui-loading"
       ],
       "tags": []
     },

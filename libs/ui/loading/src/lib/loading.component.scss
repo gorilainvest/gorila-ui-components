@@ -1,4 +1,56 @@
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
   height: 100%;
-  position: relative;
+}
+
+.loading-component {
+  color: #22bdbf;
+  font-weight: 800;
+  text-align: center;
+
+  div {
+    width: 100%;
+  }
+}
+
+// Based on https://codepen.io/msisto/pen/LntJe
+@mixin rotate-forever {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* stylelint-disable at-rule-no-vendor-prefix */
+@-webkit-keyframes rotate-forever {
+  @include rotate-forever;
+}
+@-moz-keyframes rotate-forever {
+  @include rotate-forever;
+}
+@keyframes rotate-forever {
+  @include rotate-forever;
+}
+/* stylelint-enable at-rule-no-vendor-prefix */
+
+.loading-spinner {
+  display: inline-block;
+
+  border-color: #22bdbf;
+  border-style: solid;
+  border-right-color: transparent;
+  border-radius: 50%;
+
+  animation-name: rotate-forever;
+  animation-duration: 0.75s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
