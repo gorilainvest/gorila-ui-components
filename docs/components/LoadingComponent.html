@@ -68,17 +68,12 @@
         <h3>Description</h3>
     </p>
     <p class="comment">
-        <p>A simple loading component that use SpinnerComponent.</p>
+        <p>A simple customizable loading component.</p>
 
     </p>
 
 
 
-    <p class="comment">
-        <h3>Example</h3>
-    </p>
-    <div class="io-description">
-    </div>
 
 <section>
     <h3>Metadata</h3>
@@ -138,13 +133,19 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#iconOnly">iconOnly</a>
-                            </li>
-                            <li>
                                 <a href="#message">message</a>
                             </li>
                             <li>
+                                <a href="#size">size</a>
+                            </li>
+                            <li>
                                 <a href="#stopLoading">stopLoading</a>
+                            </li>
+                            <li>
+                                <a href="#thickness">thickness</a>
+                            </li>
+                            <li>
+                                <a href="#width">width</a>
                             </li>
                         </ul>
                     </td>
@@ -168,7 +169,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">libs/ui/loading/src/lib/loading.component.ts:29</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">libs/ui/loading/src/lib/loading.component.ts:41</a></div>
                             </td>
                         </tr>
 
@@ -188,32 +189,6 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="iconOnly"></a>
-                        <b>iconOnly</b>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>true</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">libs/ui/loading/src/lib/loading.component.ts:19</a></div>
-                            </td>
-                        </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Indicates if the loading must not be wrapped by a container.</p>
-</div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
                         <a name="message"></a>
                         <b>message</b>
                     </td>
@@ -226,12 +201,38 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">libs/ui/loading/src/lib/loading.component.ts:24</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">libs/ui/loading/src/lib/loading.component.ts:15</a></div>
                             </td>
                         </tr>
                 <tr>
                     <td class="col-md-4">
                         <div class="io-description"><p>The message to be displayed below spinner.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="size"></a>
+                        <b>size</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>30</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">libs/ui/loading/src/lib/loading.component.ts:34</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The size in pixels of the spinner.</p>
 </div>
                     </td>
                 </tr>
@@ -253,12 +254,64 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">libs/ui/loading/src/lib/loading.component.ts:29</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">libs/ui/loading/src/lib/loading.component.ts:20</a></div>
                             </td>
                         </tr>
                 <tr>
                     <td class="col-md-4">
                         <div class="io-description"><p>Stop the loading if false, removing it from DOM.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="thickness"></a>
+                        <b>thickness</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>8</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">libs/ui/loading/src/lib/loading.component.ts:27</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The spinner thickness in pixels.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="width"></a>
+                        <b>width</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>120</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">libs/ui/loading/src/lib/loading.component.ts:41</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The container width in pixel</p>
 </div>
                     </td>
                 </tr>
@@ -277,23 +330,14 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input } from &#x27;@angular/core&#x27;;
 
 /**
- * A simple loading component that use SpinnerComponent.
- *
- * @see SpinnerComponent
+ * A simple customizable loading component.
  */
 @Component({
-  selector: &#x27;mur-loading&#x27;,
-  templateUrl: &#x27;./loading.component.html&#x27;,
-  styleUrls: [&#x27;./loading.component.scss&#x27;]
+  selector: &quot;mur-loading&quot;,
+  templateUrl: &quot;./loading.component.html&quot;,
+  styleUrls: [&quot;./loading.component.scss&quot;]
 })
 export class LoadingComponent {
-  /**
-   * Indicates if the loading must not be wrapped by a container.
-   *
-   * @default true
-   */
-  @Input() public iconOnly &#x3D; true;
-
   /**
    * The message to be displayed below spinner.
    */
@@ -305,6 +349,27 @@ export class LoadingComponent {
   @Input() public stopLoading: boolean;
 
   /**
+   * The spinner thickness in pixels.
+   *
+   * @default 8
+   */
+  @Input() public thickness &#x3D; 8;
+
+  /**
+   * The size in pixels of the spinner.
+   *
+   * @default 30
+   */
+  @Input() public size &#x3D; 30;
+
+  /**
+   * The container width in pixel
+   *
+   * @default 120
+   */
+  @Input() public width &#x3D; 120;
+
+  /**
    * Empty constructor.
    */
   constructor() {}
@@ -313,12 +378,17 @@ export class LoadingComponent {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;ng-container *ngIf&#x3D;&quot;!stopLoading&quot;&gt;
-  &lt;div class&#x3D;&#x27;container&#x27; *ngIf&#x3D;&quot;!iconOnly&quot;&gt;
-    &lt;mur-spinner icon&#x3D;&quot;fa fa-spinner fa-spin fa-3x fa-fw&quot; [message]&#x3D;&quot;message&quot; [hide]&#x3D;&quot;stopLoading&quot;&gt;&lt;/mur-spinner&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div *ngIf&#x3D;&quot;!stopLoading&quot; class&#x3D;&quot;container&quot;&gt;
+  &lt;div class&#x3D;&#x27;loading-component&#x27; [style.width.px]&#x3D;&quot;width&quot;&gt;
+    &lt;div class&#x3D;&quot;loading-spinner&quot;
+      [style.height.px]&#x3D;&quot;size&quot;
+      [style.width.px]&#x3D;&quot;size&quot;
+      [style.border-width.px]&#x3D;&quot;thickness&quot;
+    &gt;
+    &lt;/div&gt;
+    &lt;div id&#x3D;&#x27;msg&#x27; *ngIf&#x3D;&quot;message&quot;&gt;{{message}}&lt;/div&gt;
   &lt;/div&gt;
-  &lt;mur-spinner *ngIf&#x3D;&quot;iconOnly&quot; icon&#x3D;&quot;fa fa-spinner fa-spin fa-3x fa-fw&quot; [message]&#x3D;&quot;message&quot; [hide]&#x3D;&quot;stopLoading&quot;&gt;&lt;/mur-spinner&gt;
-&lt;/ng-container&gt;
+&lt;/div&gt;
 </code></pre>
     </div>
 
@@ -327,8 +397,60 @@ export class LoadingComponent {
                     <code>./loading.component.scss</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss">.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
   height: 100%;
-  position: relative;
+}
+
+.loading-component {
+  color: #22bdbf;
+  font-weight: 800;
+  text-align: center;
+
+  div {
+    width: 100%;
+  }
+}
+
+// Based on https://codepen.io/msisto/pen/LntJe
+@mixin rotate-forever {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* stylelint-disable at-rule-no-vendor-prefix */
+@-webkit-keyframes rotate-forever {
+  @include rotate-forever;
+}
+@-moz-keyframes rotate-forever {
+  @include rotate-forever;
+}
+@keyframes rotate-forever {
+  @include rotate-forever;
+}
+/* stylelint-enable at-rule-no-vendor-prefix */
+
+.loading-spinner {
+  display: inline-block;
+
+  border-color: #22bdbf;
+  border-style: solid;
+  border-right-color: transparent;
+  border-radius: 50%;
+
+  animation-name: rotate-forever;
+  animation-duration: 0.75s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 </code></pre>
     </div>
@@ -358,8 +480,8 @@ export class LoadingComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="!stopLoading">  <div class=\'container\' *ngIf="!iconOnly">    <mur-spinner icon="fa fa-spinner fa-spin fa-3x fa-fw" [message]="message" [hide]="stopLoading"></mur-spinner>  </div>  <mur-spinner *ngIf="iconOnly" icon="fa fa-spinner fa-spin fa-3x fa-fw" [message]="message" [hide]="stopLoading"></mur-spinner></ng-container></div>'
-    var COMPONENTS = [{'name': 'ArrowVariationComponent', 'selector': 'mur-arrow-variation'},{'name': 'ButtonComponent', 'selector': 'mag-button'},{'name': 'CardContainerComponent', 'selector': 'gro-card-container'},{'name': 'CountdownButtonComponent', 'selector': 'mag-countdown-button'},{'name': 'EnhancedTitleComponent', 'selector': 'gro-enhanced-title'},{'name': 'GdkCardComponent', 'selector': 'gdk-card'},{'name': 'LoadingComponent', 'selector': 'mur-loading'},{'name': 'PopupConfirmComponent', 'selector': 'mag-popup-confirm'},{'name': 'SectionTitleComponent', 'selector': 'gro-section-title'},{'name': 'SlideToggleComponent', 'selector': 'mur-slide-toggle'},{'name': 'SlideToggleGroupComponent', 'selector': 'mur-slide-toggle-group'},{'name': 'SpinnerComponent', 'selector': 'mur-spinner'}];
+        var COMPONENT_TEMPLATE = '<div><div *ngIf="!stopLoading" class="container">  <div class=\'loading-component\' [style.width.px]="width">    <div class="loading-spinner"      [style.height.px]="size"      [style.width.px]="size"      [style.border-width.px]="thickness"    >    </div>    <div id=\'msg\' *ngIf="message">{{message}}</div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'ArrowVariationComponent', 'selector': 'mur-arrow-variation'},{'name': 'ButtonComponent', 'selector': 'mag-button'},{'name': 'CardContainerComponent', 'selector': 'gro-card-container'},{'name': 'CountdownButtonComponent', 'selector': 'mag-countdown-button'},{'name': 'EnhancedTitleComponent', 'selector': 'gro-enhanced-title'},{'name': 'GdkCardComponent', 'selector': 'gdk-card'},{'name': 'LoadingComponent', 'selector': 'mur-loading'},{'name': 'PopupConfirmComponent', 'selector': 'mag-popup-confirm'},{'name': 'SectionTitleComponent', 'selector': 'gro-section-title'},{'name': 'SlideToggleComponent', 'selector': 'mur-slide-toggle'},{'name': 'SlideToggleGroupComponent', 'selector': 'mur-slide-toggle-group'}];
     var DIRECTIVES = [{'name': 'CancelableRouterLinkWithHrefDirective', 'selector': 'a[gorCancelableRouterLink]'},{'name': 'TippyDirective', 'selector': '[gorTippy]'},{'name': 'TruncateDirective', 'selector': '[gorTruncate]'}];
     var ACTUAL_COMPONENT = {'name': 'LoadingComponent'};
 </script>

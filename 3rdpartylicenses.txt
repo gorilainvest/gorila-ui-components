@@ -160,8 +160,6 @@ SOFTWARE.
 
 @gorilainvest/ui-toolkit/slide-toggle
 
-@gorilainvest/ui-toolkit/spinner
-
 @ngrx/effects
 MIT
 
