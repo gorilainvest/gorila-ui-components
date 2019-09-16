@@ -26,7 +26,7 @@ describe('LoadingComponent', () => {
   it('should display message passed', () => {
     component.message = 'test message';
     fixture.detectChanges();
-    const message = fixture.debugElement.query(By.css('#message')).nativeElement.textContent.trim();
+    const message = fixture.debugElement.query(By.css('#msg')).nativeElement.textContent.trim();
     expect(message).toBe('test message');
   });
 
