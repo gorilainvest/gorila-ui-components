@@ -1,1 +1,6 @@
-<div class="arrow-variation" [ngClass]="cssclasses"></div>
+<div id="emptyDiv" *ngIf="isZero" class="arrow-variation zero" [ngClass]="size"></div>
+<div *ngIf="!isZero" class="arrow" [ngClass]="size">
+  <svg width="100%" height="100%" viewBox="0 0 24 24" style="display: block">
+    <path [attr.fill]="arrowColor" [attr.d]="arrowDirection" />
+  </svg>
+</div>
