@@ -30,12 +30,10 @@ export class ArrowVariationComponent {
   /**
    * Sets the image source and the flag to hide arrow
    *
-   * @param n number to check if it is positive, negative or zero
+   * @param n
    */
   @Input() set value(n: number | '') {
-    this.isZero = !n;
-    this.arrowColor = n > 0 ? '#75B629' : '#EF2E2E';
-    this.arrowDirection = n > 0 ? PATH_ARROW.UP : PATH_ARROW.DOWN;
+    this.updateArrow(n);
   };
 
   /**
@@ -62,4 +60,15 @@ export class ArrowVariationComponent {
    * Empty constructor.
    */
   constructor() {}
+
+  /**
+   * Check if the value is positive, negative or zero
+   *
+   * @param n number to check
+   */
+  public updateArrow(n: number | '') {
+    this.isZero = !n;
+    this.arrowColor = n > 0 ? '#75B629' : '#EF2E2E';
+    this.arrowDirection = n > 0 ? PATH_ARROW.UP : PATH_ARROW.DOWN;
+  }
 }

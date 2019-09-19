@@ -1,7 +1,8 @@
 import { SimpleChange } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from "@angular/platform-browser";
 
-import { ArrowVariationComponent } from './arrow-variation.component';
+import { ArrowVariationComponent, PATH_ARROW } from './arrow-variation.component';
 
 describe('ArrowVariationComponent', () => {
   let component: ArrowVariationComponent;
@@ -24,68 +25,38 @@ describe('ArrowVariationComponent', () => {
   });
 
   describe('positive values', () => {
-    it('arrow type must be `positive`', () => {
-      component.value = 2019;
+    it('arrow direction must be `up`', () => {
+      component.updateArrow(2019);
+      fixture.detectChanges();
 
-      component.ngOnChanges({
-        value: new SimpleChange(null, component.value, false)
-      });
-
-      expect(component.type).toEqual('positive');
-    });
-
-    it('arrow css class must have `positive`', () => {
-      component.value = 2019;
-
-      component.ngOnChanges({
-        value: new SimpleChange(null, component.value, false)
-      });
-
-      expect(component.cssclasses).toContain('positive');
+      const arrow = fixture.debugElement.query(By.css('path')).nativeElement;
+      const color = arrow.getAttribute('fill');
+      const path = arrow.getAttribute('d');
+      expect(color).toBe('#75B629');
+      expect(path).toBe(PATH_ARROW.UP);
     });
   });
 
   describe('negative values', () => {
-    it('arrow type must be `negative`', () => {
-      component.value = -2019;
+    it('arrow direction must be `down`', () => {
+      component.updateArrow(-2019);
+      fixture.detectChanges();
 
-      component.ngOnChanges({
-        value: new SimpleChange(null, component.value, false)
-      });
-
-      expect(component.type).toEqual('negative');
-    });
-
-    it('arrow css class must have `negative`', () => {
-      component.value = -2019;
-
-      component.ngOnChanges({
-        value: new SimpleChange(null, component.value, false)
-      });
-
-      expect(component.cssclasses).toContain('negative');
+      const arrow = fixture.debugElement.query(By.css('path')).nativeElement;
+      const color = arrow.getAttribute('fill');
+      const path = arrow.getAttribute('d');
+      expect(color).toBe('#EF2E2E');
+      expect(path).toBe(PATH_ARROW.DOWN);
     });
   });
 
   describe('zero values', () => {
-    it('arrow type must be `zero`', () => {
-      component.value = 0;
+    it('arrow must not be displayed', () => {
+      component.updateArrow(0);
+      fixture.detectChanges();
 
-      component.ngOnChanges({
-        value: new SimpleChange(null, component.value, false)
-      });
-
-      expect(component.type).toEqual('zero');
-    });
-
-    it('arrow css class must have `zero`', () => {
-      component.value = 0;
-
-      component.ngOnChanges({
-        value: new SimpleChange(null, component.value, false)
-      });
-
-      expect(component.cssclasses).toContain('zero');
+      const emptyDiv = fixture.debugElement.query(By.css('#emptyDiv'));
+      expect(emptyDiv).toBeTruthy();
     });
   });
 });
