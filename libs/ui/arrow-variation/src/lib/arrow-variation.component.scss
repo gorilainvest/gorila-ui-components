@@ -1,14 +1,10 @@
-@import "libs/../apps/widgets-system/src/styles/colors";
-
 $sm-size: 6px;
 $md-size: 12px;
 $lg-size: 18px;
 
 :host{
   display: block;
-  margin-left: 6px;
-  margin-right: 6px;
-  margin-bottom: 2px;
+  margin: 0 6px;
 }
 
 .arrow-variation {
@@ -16,6 +12,11 @@ $lg-size: 18px;
   height: 0;
 }
 
+.arrow {
+  object-fit: contain;
+}
+
+.arrow,
 .zero {
   &.lg {
     width: $lg-size;
@@ -30,34 +31,3 @@ $lg-size: 18px;
     height: $sm-size;
   }
 }
-
-.positive {
-  border-color: transparent transparent $positive transparent;
-  border-style: none solid solid solid;
-
-  &.lg {
-    border-width: 0 ($lg-size/2) $lg-size ($lg-size/2);
-  }
-  &.md {
-    border-width: 0 ($md-size/2) $md-size ($md-size/2);
-  }
-  &.sm {
-    border-width: 0 ($sm-size/2) $sm-size ($sm-size/2);
-  }
-}
-
-.negative {
-  border-color: $negative transparent transparent transparent;
-  border-style: solid solid none solid;
-
-  &.lg {
-    border-width: $lg-size ($lg-size/2) 0 ($lg-size/2);
-  }
-  &.md {
-    border-width: $md-size ($md-size/2) 0 ($md-size/2);
-  }
-  &.sm {
-    border-width: $sm-size ($sm-size/2) 0 ($sm-size/2);
-  }
-}
-

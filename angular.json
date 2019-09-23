@@ -26,6 +26,9 @@
               "apps/widgets-system/src/assets"
             ],
             "styles": ["apps/widgets-system/src/styles.scss"],
+            "stylePreprocessorOptions": {
+              "includePaths": ["libs/shared-styles"]
+            },
             "scripts": []
           },
           "configurations": {
@@ -134,7 +137,10 @@
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
             "tsConfig": "libs/ui/arrow-variation/tsconfig.lib.json",
-            "project": "libs/ui/arrow-variation/ng-package.json"
+            "project": "libs/ui/arrow-variation/ng-package.json",
+            "stylePreprocessorOptions": {
+              "includePaths": ["libs/shared-styles"]
+            }
           }
         },
         "lint": {
@@ -171,7 +177,10 @@
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
             "tsConfig": "libs/ui/button/tsconfig.lib.json",
-            "project": "libs/ui/button/ng-package.json"
+            "project": "libs/ui/button/ng-package.json",
+            "stylePreprocessorOptions": {
+              "includePaths": ["libs/shared-styles"]
+            }
           }
         },
         "lint": {
@@ -208,7 +217,10 @@
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
             "tsConfig": "libs/ui/card-container/tsconfig.lib.json",
-            "project": "libs/ui/card-container/ng-package.json"
+            "project": "libs/ui/card-container/ng-package.json",
+            "stylePreprocessorOptions": {
+              "includePaths": ["libs/shared-styles"]
+            }
           }
         },
         "lint": {
@@ -245,7 +257,10 @@
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
             "tsConfig": "libs/ui/countdown-button/tsconfig.lib.json",
-            "project": "libs/ui/countdown-button/ng-package.json"
+            "project": "libs/ui/countdown-button/ng-package.json",
+            "stylePreprocessorOptions": {
+              "includePaths": ["libs/shared-styles"]
+            }
           }
         },
         "lint": {
@@ -282,7 +297,10 @@
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
             "tsConfig": "libs/ui/enhanced-title/tsconfig.lib.json",
-            "project": "libs/ui/enhanced-title/ng-package.json"
+            "project": "libs/ui/enhanced-title/ng-package.json",
+            "stylePreprocessorOptions": {
+              "includePaths": ["libs/shared-styles"]
+            }
           }
         },
         "lint": {
@@ -319,7 +337,10 @@
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
             "tsConfig": "libs/ui/loading/tsconfig.lib.json",
-            "project": "libs/ui/loading/ng-package.json"
+            "project": "libs/ui/loading/ng-package.json",
+            "stylePreprocessorOptions": {
+              "includePaths": ["libs/shared-styles"]
+            }
           }
         },
         "lint": {
@@ -356,7 +377,10 @@
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
             "tsConfig": "libs/ui/popup-confirm/tsconfig.lib.json",
-            "project": "libs/ui/popup-confirm/ng-package.json"
+            "project": "libs/ui/popup-confirm/ng-package.json",
+            "stylePreprocessorOptions": {
+              "includePaths": ["libs/shared-styles"]
+            }
           }
         },
         "lint": {
@@ -393,7 +417,10 @@
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
             "tsConfig": "libs/ui/section-title/tsconfig.lib.json",
-            "project": "libs/ui/section-title/ng-package.json"
+            "project": "libs/ui/section-title/ng-package.json",
+            "stylePreprocessorOptions": {
+              "includePaths": ["libs/shared-styles"]
+            }
           }
         },
         "lint": {
@@ -430,7 +457,10 @@
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
             "tsConfig": "libs/ui/slide-toggle/tsconfig.lib.json",
-            "project": "libs/ui/slide-toggle/ng-package.json"
+            "project": "libs/ui/slide-toggle/ng-package.json",
+            "stylePreprocessorOptions": {
+              "includePaths": ["libs/shared-styles"]
+            }
           }
         },
         "test": {

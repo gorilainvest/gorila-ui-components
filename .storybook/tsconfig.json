@@ -1,0 +1,9 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "types": ["node"]
+  },
+  "exclude": ["../apps/**/*", "../libs/**/*.spec.ts"],
+  "include": ["./stories/**/*", "../libs/**/*"],
+  "files": ["./typings.d.ts"]
+}
