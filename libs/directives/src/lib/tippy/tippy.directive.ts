@@ -12,12 +12,11 @@ import { merge, path } from 'ramda';
 import { timer } from 'rxjs';
 
 import tippy, {
-  Instance as TippyInstance,
-  Props as TippyProps
+  Instance as TippyInstance
 } from 'tippy.js';
 
 
-import { tippyOptionsDefault } from './tippy.model';
+import { HTMLTippyProps, tippyOptionsDefault } from './tippy.model';
 
 /**
  * @description
@@ -30,7 +29,7 @@ export class TippyDirective implements OnInit, OnChanges {
   /**
    * The descriptor of a tippy instance.
    */
-  @Input() public tippyOptions: TippyProps = {};
+  @Input() public tippyOptions: HTMLTippyProps = {};
 
   private tippy: TippyInstance = null;
   private popper: Popper = null;
@@ -49,7 +48,7 @@ export class TippyDirective implements OnInit, OnChanges {
    * Load new / update tippy instance when `tippyOptions` change.
    */
   public ngOnChanges(changes: SimpleChanges) {
-    if (changes['tippyOptions']) {
+    if (changes.tippyOptions) {
       this.loadTippy();
     }
   }
@@ -82,15 +81,15 @@ export class TippyDirective implements OnInit, OnChanges {
     });
   }
 
-  private getOptions(el, options): TippyProps {
+  private getOptions(el: HTMLElement, options: HTMLTippyProps): HTMLTippyProps {
     options = merge(tippyOptionsDefault, options || {});
     let item = null;
-    if (options['html']) {
-      item = el.querySelector(options['html']);
+    if (options.html) {
+      item = el.querySelector(options.html);
       if (!item && !!this.htmlItem) {
         item = this.htmlItem;
       }
-      delete options['html'];
+      delete options.html;
     }
     if (!!item) {
       item.style.display = 'block';
@@ -98,8 +97,8 @@ export class TippyDirective implements OnInit, OnChanges {
       this.htmlItem = item;
     }
 
-    options['content'] =
-      item || options['content'] || 'please set content or html option';
+    options.content =
+      item || options.content || 'please set content or html option';
 
     return options;
   }

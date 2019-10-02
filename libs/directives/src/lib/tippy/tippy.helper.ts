@@ -4,12 +4,11 @@ import { timer } from 'rxjs';
 
 import tippy, {
   Instance as TippyInstance,
-  Props as TippyProps,
   Targets
 } from 'tippy.js';
 
 
-import { tippyOptionsDefault } from './tippy.model';
+import { HTMLTippyProps, tippyOptionsDefault } from './tippy.model';
 
 /**
  * @description
@@ -34,7 +33,7 @@ export class TippyHelper {
   /**
    * Act as a proxy to tippy library creating a new or updating a existent one.
    */
-  public startTippy(id: string, tippyOptions: TippyProps, hoverElement: Targets, tippyElement?: Targets) {
+  public startTippy(id: string, tippyOptions: HTMLTippyProps, hoverElement: Targets, tippyElement?: Targets) {
     if (!path(['content'], tippyOptions) && !path(['html'], tippyOptions)) {
 
       console.warn(
@@ -73,7 +72,7 @@ export class TippyHelper {
    * @returns boolean Indicating if a tippy instance was destroyed. Otherwise, if have
    * errors or doesn't exist return false.
    */
-  public stopTippy(id): boolean {
+  public stopTippy(id: string): boolean {
     try {
       if (!!this.tippy[id]) {
         this.tippy[id].destroy();
@@ -85,16 +84,16 @@ export class TippyHelper {
     return false;
   }
 
-  private getOptions(id: string, el, opts: TippyProps): TippyProps {
+  private getOptions(id: string, el, opts: HTMLTippyProps): HTMLTippyProps {
     const options = merge(tippyOptionsDefault, opts || {});
     let item = null;
-    const html = options['html'];
-    if (!!options['html']) {
-      item = el.querySelector(options['html']);
+    const html = options.html;
+    if (!!options.html) {
+      item = el.querySelector(options.html);
       if (!item && !!this.htmlItem[id]) {
         item = this.htmlItem[id];
       }
-      delete options['html'];
+      delete options.html;
     }
     if (!!item) {
       this.updateItem(id, item);
@@ -106,13 +105,13 @@ export class TippyHelper {
 
     }
 
-    options['content'] =
-      item || options['content'] || 'please set content or html option';
+    options.content =
+      item || options.content || 'please set content or html option';
 
     return options;
   }
 
-  private updateItem(id, item?) {
+  private updateItem(id: string, item?: HTMLElement) {
     if (!!this.htmlItem[id]) {
       this.htmlItem[id].style.display = 'block';
       this.htmlItem[id].style.visibility = '';

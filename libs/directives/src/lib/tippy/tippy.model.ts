@@ -1,10 +1,17 @@
 import { Props as TippyProps } from 'tippy.js';
 
+
+export interface HTMLTippyProps extends TippyProps {
+  html?: string;
+}
+
+
 /**
  * Default tippy options.
  */
-export const tippyOptionsDefault: TippyProps = {
-  theme: 'gorila-dark',
+
+export const tippyOptionsDefault: HTMLTippyProps = {
+  theme: "gorila-dark",
   arrow: true,
   delay: [50, 0],
   duration: [500, 200],
