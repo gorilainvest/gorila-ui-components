@@ -31,6 +31,13 @@ export class CardContainerComponent implements OnChanges {
   @Input() public title = '';
 
   /**
+
+   * The subtitle for the card.
+   */
+  @Input() public subtitle = '';
+
+  /**
+
    * Sanitized gradient background color for the top bar.
    */
   public gradientBgColor: SafeStyle;
