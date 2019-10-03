@@ -25,7 +25,9 @@
               "apps/widgets-system/src/favicon.ico",
               "apps/widgets-system/src/assets"
             ],
-            "styles": ["apps/widgets-system/src/styles.scss"],
+            "styles": [
+              "apps/widgets-system/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -79,7 +81,9 @@
             "polyfills": "apps/widgets-system/src/polyfills.ts",
             "tsConfig": "apps/widgets-system/tsconfig.spec.json",
             "karmaConfig": "apps/widgets-system/karma.conf.js",
-            "styles": ["apps/widgets-system/src/styles.scss"],
+            "styles": [
+              "apps/widgets-system/src/styles.scss"
+            ],
             "scripts": [],
             "assets": [
               "apps/widgets-system/src/favicon.ico",
@@ -94,7 +98,10 @@
               "apps/widgets-system/tsconfig.app.json",
               "apps/widgets-system/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "**/*.json"]
+            "exclude": [
+              "**/node_modules/**",
+              "**/*.json"
+            ]
           }
         }
       }
@@ -120,7 +127,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/widgets-system-e2e/tsconfig.e2e.json",
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
@@ -144,7 +153,9 @@
               "libs/ui/arrow-variation/tsconfig.lib.json",
               "libs/ui/arrow-variation/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -181,7 +192,9 @@
               "libs/ui/button/tsconfig.lib.json",
               "libs/ui/button/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -218,7 +231,9 @@
               "libs/ui/card-container/tsconfig.lib.json",
               "libs/ui/card-container/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -255,7 +270,9 @@
               "libs/ui/countdown-button/tsconfig.lib.json",
               "libs/ui/countdown-button/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -292,7 +309,9 @@
               "libs/ui/enhanced-title/tsconfig.lib.json",
               "libs/ui/enhanced-title/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -329,7 +348,9 @@
               "libs/ui/loading/tsconfig.lib.json",
               "libs/ui/loading/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -366,7 +387,9 @@
               "libs/ui/popup-confirm/tsconfig.lib.json",
               "libs/ui/popup-confirm/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -403,7 +426,9 @@
               "libs/ui/section-title/tsconfig.lib.json",
               "libs/ui/section-title/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -448,7 +473,9 @@
               "libs/ui/slide-toggle/tsconfig.lib.json",
               "libs/ui/slide-toggle/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       },
@@ -485,7 +512,9 @@
               "libs/directives/tsconfig.lib.json",
               "libs/directives/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       },
@@ -508,7 +537,9 @@
               "libs/shell/buttons-indicators/tsconfig.lib.json",
               "libs/shell/buttons-indicators/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -535,7 +566,9 @@
               "libs/shell/controls/tsconfig.lib.json",
               "libs/shell/controls/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -562,7 +595,9 @@
               "libs/shell/layout/tsconfig.lib.json",
               "libs/shell/layout/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -589,7 +624,9 @@
               "libs/shell/popups-modals/tsconfig.lib.json",
               "libs/shell/popups-modals/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -616,7 +653,9 @@
               "libs/shell/presentational/tsconfig.lib.json",
               "libs/shell/presentational/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -643,7 +682,9 @@
               "libs/gdk/tsconfig.lib.json",
               "libs/gdk/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -656,6 +697,46 @@
         }
       },
       "schematics": {}
+    },
+    "ui-scroll-container": {
+      "projectType": "library",
+      "root": "libs/ui/scroll-container",
+      "sourceRoot": "libs/ui/scroll-container/src",
+      "prefix": "gorilainvest",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/ui/scroll-container/tsconfig.lib.json",
+            "project": "libs/ui/scroll-container/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui/scroll-container/tsconfig.lib.json",
+              "libs/ui/scroll-container/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/ui/scroll-container/src/test.ts",
+            "tsConfig": "libs/ui/scroll-container/tsconfig.spec.json",
+            "karmaConfig": "libs/ui/scroll-container/karma.conf.js"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

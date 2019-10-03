@@ -10,8 +10,13 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "typeRoots": ["node_modules/@types"],
-    "lib": ["es2017", "dom"],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
     "baseUrl": ".",
     "paths": {
       "@gorilainvest/ui-toolkit/directives": [
@@ -57,17 +62,29 @@
       "@gorilainvest/shell/buttons-indicators": [
         "libs/shell/buttons-indicators/src/index.ts"
       ],
-      "@gorilainvest/shell/controls": ["libs/shell/controls/src/index.ts"],
-      "@gorilainvest/shell/layout": ["libs/shell/layout/src/index.ts"],
+      "@gorilainvest/shell/controls": [
+        "libs/shell/controls/src/index.ts"
+      ],
+      "@gorilainvest/shell/layout": [
+        "libs/shell/layout/src/index.ts"
+      ],
       "@gorilainvest/shell/popups-modals": [
         "libs/shell/popups-modals/src/index.ts"
       ],
       "@gorilainvest/shell/presentational": [
         "libs/shell/presentational/src/index.ts"
       ],
-      "@gorilainvest/gdk": ["libs/gdk/src/index.ts"]
+      "@gorilainvest/gdk": [
+        "libs/gdk/src/index.ts"
+      ],
+      "@gorilainvest/ui/scroll-container": [
+        "libs/ui/scroll-container/src/index.ts"
+      ]
     },
     "rootDir": "."
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }

@@ -29,7 +29,9 @@
       ]
     },
     "ui-card-container": {
-      "implicitDependencies": ["ui-section-title"],
+      "implicitDependencies": [
+        "ui-section-title"
+      ],
       "tags": [
         "exportable",
         "team:grodd",
@@ -39,7 +41,9 @@
       ]
     },
     "ui-countdown-button": {
-      "implicitDependencies": ["ui-button"],
+      "implicitDependencies": [
+        "ui-button"
+      ],
       "tags": [
         "exportable",
         "team:magilla",
@@ -106,7 +110,10 @@
     },
     "directives": {
       "implicitDependencies": [],
-      "tags": ["exportable", "scope:shared"]
+      "tags": [
+        "exportable",
+        "scope:shared"
+      ]
     },
     "buttons-indicators-shell": {
       "implicitDependencies": [
@@ -117,7 +124,9 @@
       "tags": []
     },
     "controls-shell": {
-      "implicitDependencies": ["ui-slide-toggle"],
+      "implicitDependencies": [
+        "ui-slide-toggle"
+      ],
       "tags": []
     },
     "layout-shell": {
@@ -129,14 +138,21 @@
       "tags": []
     },
     "popups-modals-shell": {
-      "implicitDependencies": ["ui-popup-confirm"],
+      "implicitDependencies": [
+        "ui-popup-confirm"
+      ],
       "tags": []
     },
     "presentational-shell": {
-      "implicitDependencies": ["ui-arrow-variation"],
+      "implicitDependencies": [
+        "ui-arrow-variation"
+      ],
       "tags": []
     },
     "gdk": {
+      "tags": []
+    },
+    "ui-scroll-container": {
       "tags": []
     }
   }
