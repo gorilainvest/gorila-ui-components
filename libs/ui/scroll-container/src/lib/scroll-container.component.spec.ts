@@ -16,9 +16,8 @@ describe('ScrollContainerComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [CommonModule, ScrollingModule],
-      declarations: [ ScrollContainerComponent ]
-    })
-    .compileComponents();
+      declarations: [ScrollContainerComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

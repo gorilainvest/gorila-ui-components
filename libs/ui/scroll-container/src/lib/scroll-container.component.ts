@@ -1,4 +1,16 @@
-import { Component, AfterViewInit, Input, HostBinding, Output, EventEmitter, ElementRef, ChangeDetectorRef, OnDestroy, Optional, SkipSelf } from '@angular/core';
+import {
+  Component,
+  AfterViewInit,
+  Input,
+  HostBinding,
+  Output,
+  EventEmitter,
+  ElementRef,
+  ChangeDetectorRef,
+  OnDestroy,
+  Optional,
+  SkipSelf
+} from '@angular/core';
 import { ScrollDispatcher, CdkScrollable } from '@angular/cdk/scrolling';
 import { setupScrollSubscription, onWindowScroll } from './scroll-manager';
 
@@ -50,7 +62,6 @@ export class ScrollContainerComponent implements AfterViewInit, OnDestroy {
    */
   @HostBinding('class.scrolled') public hostClassScrolled = false;
 
-
   /**
    * Indicates that the scroll effect must be activated.
    *
@@ -61,17 +72,17 @@ export class ScrollContainerComponent implements AfterViewInit, OnDestroy {
   private previousScroll = 0;
 
   public scrollStyle = {
-    'height': this.initialHeight,
-    'transition': 'height 0.4s ease-out',
-    'width': this.initialWidth,
-    'display': 'flex',
+    height: this.initialHeight,
+    transition: 'height 0.4s ease-out',
+    width: this.initialWidth,
+    display: 'flex',
     'flex-direction': 'column'
   };
 
   public fixedStyle = {
-    'display': 'flex',
+    display: 'flex',
     'flex-direction': 'column',
-    'height': '100%'
+    height: '100%'
   };
 
   constructor(
@@ -79,10 +90,15 @@ export class ScrollContainerComponent implements AfterViewInit, OnDestroy {
     private el: ElementRef,
     private cdRef: ChangeDetectorRef,
     @Optional() @SkipSelf() private parentCdRef: ChangeDetectorRef
-  ) { }
+  ) {}
 
   ngAfterViewInit() {
-    setupScrollSubscription<ScrollContainerComponent>(this.activateScrollEffect, this, this.scrollDispatcher, this.onWindowScroll);
+    setupScrollSubscription<ScrollContainerComponent>(
+      this.activateScrollEffect,
+      this,
+      this.scrollDispatcher,
+      this.onWindowScroll
+    );
 
     if (this.activateScrollEffect) {
       this.el.nativeElement.style.width = 'max-content';
@@ -129,5 +145,4 @@ export class ScrollContainerComponent implements AfterViewInit, OnDestroy {
 
     this.detectChanges();
   }
-
 }

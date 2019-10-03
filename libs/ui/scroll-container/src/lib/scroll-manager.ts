@@ -9,9 +9,13 @@ export const setupScrollSubscription = <C>(
   scrollDispatcher: ScrollDispatcher,
   windowScrollFn: Function
 ) => {
-  if (!activate) { return; }
 
-  scrollDispatcher.scrolled()
+  if (!activate) {
+    return;
+  }
+
+  scrollDispatcher
+    .scrolled()
     .pipe(untilDestroyed(componentRef))
     .subscribe(windowScrollFn.bind(componentRef));
 };
@@ -29,7 +33,10 @@ export const onWindowScroll = (
   departureOffset = 100,
   returnOffset = 10
 ): ScrollInfo | null => {
-  if (!event) { return null; }
+
+  if (!event) {
+    return null;
+  }
 
   const scrollOffset = event.measureScrollOffset(edge) || 0;
 
