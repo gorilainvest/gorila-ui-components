@@ -19,43 +19,43 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@gorilainvest/ui-toolkit/directives": [
+      "@gorilainvest/directives": [
         "libs/directives/src/index.ts",
         "dist/directives"
       ],
-      "@gorilainvest/ui-toolkit/arrow-variation": [
+      "@gorilainvest/ui/arrow-variation": [
         "libs/ui/arrow-variation/src/index.ts",
         "dist/arrow-variation"
       ],
-      "@gorilainvest/ui-toolkit/button": [
+      "@gorilainvest/ui/button": [
         "libs/ui/button/src/index.ts",
         "dist/button"
       ],
-      "@gorilainvest/ui-toolkit/card-container": [
+      "@gorilainvest/ui/card-container": [
         "libs/ui/card-container/src/index.ts",
         "dist/card-container"
       ],
-      "@gorilainvest/ui-toolkit/countdown-button": [
+      "@gorilainvest/ui/countdown-button": [
         "libs/ui/countdown-button/src/index.ts",
         "dist/countdown-button"
       ],
-      "@gorilainvest/ui-toolkit/enhanced-title": [
+      "@gorilainvest/ui/enhanced-title": [
         "libs/ui/enhanced-title/src/index.ts",
         "dist/enhanced-title"
       ],
-      "@gorilainvest/ui-toolkit/loading": [
+      "@gorilainvest/ui/loading": [
         "libs/ui/loading/src/index.ts",
         "dist/loading"
       ],
-      "@gorilainvest/ui-toolkit/popup-confirm": [
+      "@gorilainvest/ui/popup-confirm": [
         "libs/ui/popup-confirm/src/index.ts",
         "dist/popup-confirm"
       ],
-      "@gorilainvest/ui-toolkit/section-title": [
+      "@gorilainvest/ui/section-title": [
         "libs/ui/section-title/src/index.ts",
         "dist/section-title"
       ],
-      "@gorilainvest/ui-toolkit/slide-toggle": [
+      "@gorilainvest/ui/slide-toggle": [
         "libs/ui/slide-toggle/src/index.ts",
         "dist/slide-toggle"
       ],

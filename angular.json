@@ -134,7 +134,7 @@
         }
       }
     },
-    "ui-arrow-variation": {
+    "arrow-variation": {
       "root": "libs/ui/arrow-variation",
       "sourceRoot": "libs/ui/arrow-variation/src",
       "projectType": "library",
@@ -173,7 +173,7 @@
         }
       }
     },
-    "ui-button": {
+    "button": {
       "root": "libs/ui/button",
       "sourceRoot": "libs/ui/button/src",
       "projectType": "library",
@@ -212,7 +212,7 @@
         }
       }
     },
-    "ui-card-container": {
+    "card-container": {
       "root": "libs/ui/card-container",
       "sourceRoot": "libs/ui/card-container/src",
       "projectType": "library",
@@ -251,7 +251,7 @@
         }
       }
     },
-    "ui-countdown-button": {
+    "countdown-button": {
       "root": "libs/ui/countdown-button",
       "sourceRoot": "libs/ui/countdown-button/src",
       "projectType": "library",
@@ -290,7 +290,7 @@
         }
       }
     },
-    "ui-enhanced-title": {
+    "enhanced-title": {
       "root": "libs/ui/enhanced-title",
       "sourceRoot": "libs/ui/enhanced-title/src",
       "projectType": "library",
@@ -329,7 +329,7 @@
         }
       }
     },
-    "ui-loading": {
+    "loading": {
       "root": "libs/ui/loading",
       "sourceRoot": "libs/ui/loading/src",
       "projectType": "library",
@@ -368,7 +368,7 @@
         }
       }
     },
-    "ui-popup-confirm": {
+    "popup-confirm": {
       "root": "libs/ui/popup-confirm",
       "sourceRoot": "libs/ui/popup-confirm/src",
       "projectType": "library",
@@ -407,7 +407,7 @@
         }
       }
     },
-    "ui-section-title": {
+    "section-title": {
       "root": "libs/ui/section-title",
       "sourceRoot": "libs/ui/section-title/src",
       "projectType": "library",
@@ -446,7 +446,7 @@
         }
       }
     },
-    "ui-slide-toggle": {
+    "slide-toggle": {
       "root": "libs/ui/slide-toggle",
       "sourceRoot": "libs/ui/slide-toggle/src",
       "projectType": "library",
@@ -698,7 +698,7 @@
       },
       "schematics": {}
     },
-    "ui-scroll-container": {
+    "scroll-container": {
       "projectType": "library",
       "root": "libs/ui/scroll-container",
       "sourceRoot": "libs/ui/scroll-container/src",

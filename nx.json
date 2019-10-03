@@ -8,8 +8,7 @@
     "nx.json": "*"
   },
   "projects": {
-    "ui-arrow-variation": {
-      "implicitDependencies": [],
+    "arrow-variation": {
       "tags": [
         "exportable",
         "team:murphy",
@@ -18,8 +17,7 @@
         "group:presentational"
       ]
     },
-    "ui-button": {
-      "implicitDependencies": [],
+    "button": {
       "tags": [
         "exportable",
         "team:magilla",
@@ -28,10 +26,7 @@
         "group:buttons-indicators"
       ]
     },
-    "ui-card-container": {
-      "implicitDependencies": [
-        "ui-section-title"
-      ],
+    "card-container": {
       "tags": [
         "exportable",
         "team:grodd",
@@ -40,10 +35,7 @@
         "group:layout"
       ]
     },
-    "ui-countdown-button": {
-      "implicitDependencies": [
-        "ui-button"
-      ],
+    "countdown-button": {
       "tags": [
         "exportable",
         "team:magilla",
@@ -52,8 +44,7 @@
         "group:buttons-indicators"
       ]
     },
-    "ui-enhanced-title": {
-      "implicitDependencies": [],
+    "enhanced-title": {
       "tags": [
         "exportable",
         "team:grodd",
@@ -62,8 +53,7 @@
         "group:layout"
       ]
     },
-    "ui-loading": {
-      "implicitDependencies": [],
+    "loading": {
       "tags": [
         "exportable",
         "team:murphy",
@@ -72,8 +62,7 @@
         "group:buttons-indicators"
       ]
     },
-    "ui-popup-confirm": {
-      "implicitDependencies": [],
+    "popup-confirm": {
       "tags": [
         "exportable",
         "team:magilla",
@@ -82,8 +71,7 @@
         "group:popups-modals"
       ]
     },
-    "ui-section-title": {
-      "implicitDependencies": [],
+    "section-title": {
       "tags": [
         "exportable",
         "team:grodd",
@@ -92,8 +80,7 @@
         "group:layout"
       ]
     },
-    "ui-slide-toggle": {
-      "implicitDependencies": [],
+    "slide-toggle": {
       "tags": [
         "exportable",
         "team:murphy",
@@ -109,50 +96,30 @@
       "tags": []
     },
     "directives": {
-      "implicitDependencies": [],
       "tags": [
         "exportable",
         "scope:shared"
       ]
     },
     "buttons-indicators-shell": {
-      "implicitDependencies": [
-        "ui-button",
-        "ui-countdown-button",
-        "ui-loading"
-      ],
       "tags": []
     },
     "controls-shell": {
-      "implicitDependencies": [
-        "ui-slide-toggle"
-      ],
       "tags": []
     },
     "layout-shell": {
-      "implicitDependencies": [
-        "ui-card-container",
-        "ui-enhanced-title",
-        "ui-section-title"
-      ],
       "tags": []
     },
     "popups-modals-shell": {
-      "implicitDependencies": [
-        "ui-popup-confirm"
-      ],
       "tags": []
     },
     "presentational-shell": {
-      "implicitDependencies": [
-        "ui-arrow-variation"
-      ],
       "tags": []
     },
     "gdk": {
       "tags": []
     },
-    "ui-scroll-container": {
+    "scroll-container": {
       "tags": []
     }
   }
