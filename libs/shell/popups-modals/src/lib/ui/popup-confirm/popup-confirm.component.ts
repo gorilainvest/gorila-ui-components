@@ -1,7 +1,9 @@
 import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 import { FormControl } from "@angular/forms";
 import { MatDialog } from "@angular/material/dialog";
-import { PopupConfirmComponent as ModalComponent } from "@gorilainvest/ui/popup-confirm";
+
+import { PopupConfirmComponent as ModalComponent } from '@gorilainvest/ui/popup-confirm';
+
 
 @Component({
   selector: "gorilainvest-popup-confirm",

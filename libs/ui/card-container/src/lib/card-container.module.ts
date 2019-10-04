@@ -1,7 +1,9 @@
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+
 import { SectionTitleModule } from '@gorilainvest/ui/section-title';
+
 
 import { CardContainerComponent } from './card-container.component';
 
