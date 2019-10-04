@@ -26,17 +26,22 @@ describe('CardContainerComponent', () => {
   });
 
   it('should display the colored upper ribbon', () => {
+    component.cssClass = 'asset-gradient';
+
+    fixture.detectChanges();
+
     const upperRibbon = fixture.debugElement.query(By.css('.card-top.asset-gradient')).nativeElement;
+
     expect(upperRibbon).toBeTruthy();
   });
 
   it('should display the title', () => {
-    const title = fixture.debugElement.query(By.css('gro-section-title')).nativeElement.textContent.trim();
-    expect(title).toEqual('Test Card');
-  });
+    component.title = 'Title';
 
-  it('should display the card content', () => {
-    const content = fixture.debugElement.query(By.css('.card-content')).nativeElement.textContent.trim();
-    expect(content).toEqual('Card Content');
+    fixture.detectChanges();
+
+    const title = fixture.debugElement.query(By.css('gro-section-title')).nativeElement.textContent.trim();
+
+    expect(title).toEqual('Title');
   });
 });
