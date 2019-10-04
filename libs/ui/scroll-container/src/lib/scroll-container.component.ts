@@ -1,6 +1,5 @@
 import {
   Component,
-  AfterViewInit,
   Input,
   HostBinding,
   Output,
@@ -12,20 +11,32 @@ import {
   SkipSelf
 } from '@angular/core';
 import { ScrollDispatcher, CdkScrollable } from '@angular/cdk/scrolling';
-import { setupScrollSubscription, onWindowScroll } from './scroll-manager';
+import { setupScrollSubscription, onWindowScroll, Scrollable } from './scroll-manager';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'gor-scroll-container',
   templateUrl: './scroll-container.component.html',
   styleUrls: ['./scroll-container.component.scss']
 })
-export class ScrollContainerComponent implements AfterViewInit, OnDestroy {
+export class ScrollContainerComponent implements OnDestroy, Scrollable {
+  public scrolledSubs: Subscription;
+  private _activateScrollEffect = false;
   /**
    * Indicates that the scroll effect must be activated.
    *
    * @default false
    */
-  @Input() public activateScrollEffect = false;
+  @Input() public set activateScrollEffect(activateScrollEffect) {
+    if (this._activateScrollEffect === activateScrollEffect) { return; }
+
+    this._activateScrollEffect = activateScrollEffect
+
+    this.activateSideEffect();
+  }
+  public get activateScrollEffect() {
+    return this._activateScrollEffect;
+  }
 
   /**
    * Initial CSS height value.
@@ -92,7 +103,9 @@ export class ScrollContainerComponent implements AfterViewInit, OnDestroy {
     @Optional() @SkipSelf() private parentCdRef: ChangeDetectorRef
   ) {}
 
-  ngAfterViewInit() {
+  ngOnDestroy() { }
+
+  private activateSideEffect() {
     setupScrollSubscription<ScrollContainerComponent>(
       this.activateScrollEffect,
       this,
@@ -110,8 +123,6 @@ export class ScrollContainerComponent implements AfterViewInit, OnDestroy {
 
     this.updateStyle();
   }
-
-  ngOnDestroy() {}
 
   private detectChanges() {
     this.cdRef.detectChanges();

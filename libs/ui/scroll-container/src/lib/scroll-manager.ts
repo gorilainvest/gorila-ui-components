@@ -1,20 +1,28 @@
 import { CdkScrollable, ScrollDispatcher } from '@angular/cdk/scrolling';
 import { untilDestroyed } from 'ngx-take-until-destroy';
+import { Subscription } from 'rxjs';
+
+export interface Scrollable {
+  scrolledSubs: Subscription;
+}
 
 export type Edge = 'top' | 'left' | 'right' | 'bottom' | 'start' | 'end';
 
-export const setupScrollSubscription = <C>(
+export const setupScrollSubscription = <C extends Scrollable>(
   activate: boolean,
   componentRef: C,
   scrollDispatcher: ScrollDispatcher,
   windowScrollFn: Function
 ) => {
+  if (componentRef.scrolledSubs) {
+    componentRef.scrolledSubs.unsubscribe();
+  }
 
   if (!activate) {
     return;
   }
 
-  scrollDispatcher
+  componentRef.scrolledSubs = scrollDispatcher
     .scrolled()
     .pipe(untilDestroyed(componentRef))
     .subscribe(windowScrollFn.bind(componentRef));
