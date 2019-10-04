@@ -1,7 +1,7 @@
 {
   "hooks": {
     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-    "pre-commit": "npm run precise-commits && npm run lint",
-    "pre-push": "npm test",
+    "pre-commit": "npm run precise-commits && npm run affected:lint",
+    "pre-push": "npm run affected:test",
   }
 }
