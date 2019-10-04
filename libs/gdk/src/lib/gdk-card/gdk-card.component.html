@@ -39,7 +39,13 @@
           </mat-accordion>
         </mat-grid-tile>
         <mat-grid-tile colspan="3" rowSpan="1" class="visual">
-          <mat-grid-tile-header>Visual result:</mat-grid-tile-header>
+
+          <mat-grid-tile-header>
+            <h4 mat-line>
+              Visual result:
+            </h4>
+          </mat-grid-tile-header>
+
           <ng-content select=".widget"></ng-content>
         </mat-grid-tile>
         <mat-grid-tile colspan="3" rowSpan="1" class="code">
@@ -52,7 +58,13 @@
           rowSpan="2"
           class="right-aside"
         >
-          <mat-grid-tile-header>Summary:</mat-grid-tile-header>
+
+          <mat-grid-tile-header>
+            <h4 mat-line>
+              Summary:
+            </h4>
+          </mat-grid-tile-header>
+
           <ng-content select="mat-list[role='list'].summary"></ng-content>
         </mat-grid-tile>
       </mat-grid-list>

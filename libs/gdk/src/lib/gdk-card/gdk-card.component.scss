@@ -47,6 +47,9 @@ gdk-card .mat-grid-list > div {
     background: transparent;
     color: black;
     font-size: 2rem;
+
+    overflow: initial;
+
     position: relative;
   }
   .left-aside {
