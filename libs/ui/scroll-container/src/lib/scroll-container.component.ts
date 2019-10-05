@@ -1,4 +1,5 @@
 import {
+  AfterViewInit,
   Component,
   Input,
   HostBinding,
@@ -19,7 +20,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './scroll-container.component.html',
   styleUrls: ['./scroll-container.component.scss']
 })
-export class ScrollContainerComponent implements OnDestroy, Scrollable {
+export class ScrollContainerComponent implements AfterViewInit, OnDestroy, Scrollable {
   public scrolledSubs: Subscription;
   private _activateScrollEffect = false;
   /**
@@ -102,6 +103,10 @@ export class ScrollContainerComponent implements OnDestroy, Scrollable {
     private cdRef: ChangeDetectorRef,
     @Optional() @SkipSelf() private parentCdRef: ChangeDetectorRef
   ) {}
+
+  ngAfterViewInit() {
+    this.updateStyle();
+  }
 
   ngOnDestroy() { }
 
