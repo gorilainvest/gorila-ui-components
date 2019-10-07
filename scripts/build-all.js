@@ -2,17 +2,24 @@ const ngPackage = require('ng-packagr');
 const rimraf = require('rimraf');
 const Rx = require('rxjs');
 const RxOp = require('rxjs/operators');
+const ngjson = require("../angular.json");
+const nxdepsjson = require("../dist/nxdeps.json");
 const nxjson = require("../nx.json");
 
 const clog = msg => console.log('\x1b[36m%s\x1b[0m', msg);
 
 const COMPILED_LIBS = Object.keys(nxjson.projects)
-  .filter(lib => nxjson.projects[lib].tags.find(tag => tag === "exportable"))
+  .filter(lib => ngjson.projects[lib].projectType === 'library' && !!ngjson.projects[lib].architect.build)
   .reduce((acc, lib) => ({ ...acc, [lib]: false }), {});
+
+const getDeps = proj =>
+  nxdepsjson.dependencies[proj]
+    .map(dep => dep.projectName)
+    .filter(dep => COMPILED_LIBS[dep] === false);
 
 const DEP_GRAPH = Object.keys(COMPILED_LIBS).reduce((acc, k) => ({
   ...acc,
-  [k]: nxjson.projects[k].implicitDependencies
+  [k]: getDeps(k)
 }));
 
 const libs = Object.keys(COMPILED_LIBS);
@@ -24,12 +31,12 @@ rimraf('dist', { disableGlob: true }, async err => {
 
   let buildObservable = null;
   const asyncBuild = lib => {
-    const midPath = lib.indexOf('ui-') === -1 ? `/${lib}` : `/${lib.replace(/-/, '/')}`;
+    const buildOptions = ngjson.projects[lib].architect.build.options;
 
     return ngPackage
       .ngPackagr()
-      .forProject(`libs${midPath}/ng-package.json`)
-      .withTsConfig(`libs${midPath}/tsconfig.lib.json`)
+      .forProject(buildOptions.project)
+      .withTsConfig(buildOptions.tsConfig)
       .buildAsObservable()
       .pipe(
         RxOp.catchError(error => {

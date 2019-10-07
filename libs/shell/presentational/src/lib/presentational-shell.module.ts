@@ -8,7 +8,13 @@ import { MatListModule } from "@angular/material/list";
 import { MatSelectModule } from "@angular/material/select";
 import { RouterModule } from "@angular/router";
 import { GdkModule } from "@gorilainvest/gdk";
-import { ArrowVariationModule } from "@gorilainvest/ui-toolkit/arrow-variation";
+
+
+
+
+import { ArrowVariationModule } from '@gorilainvest/ui-toolkit/arrow-variation';
+
+
 import { PresentationalComponent } from "./presentational/presentational.component";
 import { ArrowVariationComponent } from "./ui/arrow-variation/arrow-variation.component";
 

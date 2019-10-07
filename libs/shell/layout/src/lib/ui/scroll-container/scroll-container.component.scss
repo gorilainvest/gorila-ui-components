@@ -1,0 +1,37 @@
+scroll-card-container {
+  width: calc(100% - 100px);
+}
+
+.widget {
+  background: transparent;
+  height: 100vh;
+  overflow-y: scroll;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+
+  >.dummy-container {
+    height: 100px;
+  }
+}
+
+.dummy-container {
+  background: #ccc;
+  height: calc(100% - 25px);
+  padding: 10px 0;
+}
+
+.dummy-content {
+  border: 3px dashed #444;
+  border-radius: 10px;
+  color: #444;
+  height: 100%;
+  width: calc(100% - 20px);
+}
+
+.center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}

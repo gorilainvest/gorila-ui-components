@@ -8,13 +8,22 @@ import { MatListModule } from "@angular/material/list";
 import { MatSelectModule } from "@angular/material/select";
 import { RouterModule } from "@angular/router";
 import { GdkModule } from "@gorilainvest/gdk";
-import { CardContainerModule } from "@gorilainvest/ui-toolkit/card-container";
-import { EnhancedTitleModule } from "@gorilainvest/ui-toolkit/enhanced-title";
-import { SectionTitleModule } from "@gorilainvest/ui-toolkit/section-title";
+
+
+
+import { CardContainerModule } from '@gorilainvest/ui-toolkit/card-container';
+import { EnhancedTitleModule } from '@gorilainvest/ui-toolkit/enhanced-title';
+import { ScrollContainerModule } from '@gorilainvest/ui-toolkit/scroll-container';
+
+import { SectionTitleModule } from '@gorilainvest/ui-toolkit/section-title';
+
+
 import { LayoutComponent } from "./layout/layout.component";
 import { CardContainerComponent } from "./ui/card-container/card-container.component";
 import { EnhancedTitleComponent } from "./ui/enhanced-title/enhanced-title.component";
+import { ScrollContainerComponent } from './ui/scroll-container/scroll-container.component';
 import { SectionTitleComponent } from "./ui/section-title/section-title.component";
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   imports: [
@@ -26,9 +35,11 @@ import { SectionTitleComponent } from "./ui/section-title/section-title.componen
     MatInputModule,
     MatListModule,
     MatSelectModule,
+    ScrollingModule,
     GdkModule,
     CardContainerModule,
     EnhancedTitleModule,
+    ScrollContainerModule,
     SectionTitleModule,
     RouterModule.forChild([
       {
@@ -42,6 +53,11 @@ import { SectionTitleComponent } from "./ui/section-title/section-title.componen
         component: EnhancedTitleComponent
       },
       {
+        path: "scroll-container",
+        pathMatch: "full",
+        component: ScrollContainerComponent
+      },
+      {
         path: "section-title",
         pathMatch: "full",
         component: SectionTitleComponent
@@ -52,6 +68,7 @@ import { SectionTitleComponent } from "./ui/section-title/section-title.componen
   declarations: [
     CardContainerComponent,
     EnhancedTitleComponent,
+    ScrollContainerComponent,
     SectionTitleComponent,
     LayoutComponent
   ]

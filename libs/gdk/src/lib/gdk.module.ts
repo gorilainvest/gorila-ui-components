@@ -7,11 +7,13 @@ import { MatInputModule } from "@angular/material/input";
 import { MatListModule } from "@angular/material/list";
 import { MatSelectModule } from "@angular/material/select";
 import { GdkCardComponent } from "./gdk-card/gdk-card.component";
+import { MatCommonModule } from '@angular/material/core';
 
 @NgModule({
   imports: [
     CommonModule,
     MatCardModule,
+    MatCommonModule,
     MatExpansionModule,
     MatGridListModule,
     MatInputModule,
