@@ -9,7 +9,11 @@ import { MatSelectModule } from "@angular/material/select";
 import { RouterModule } from "@angular/router";
 import { GdkModule } from "@gorilainvest/gdk";
 
-import { SlideToggleModule } from '@gorilainvest/ui/slide-toggle';
+
+
+
+import { SlideToggleModule } from '@gorilainvest/ui-toolkit/slide-toggle';
+
 
 import { ControlsComponent } from "./controls/controls.component";
 import { SlideToggleComponent } from "./ui/slide-toggle/slide-toggle.component";

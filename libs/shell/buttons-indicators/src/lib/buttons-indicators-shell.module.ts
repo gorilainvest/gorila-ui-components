@@ -9,9 +9,13 @@ import { MatSelectModule } from "@angular/material/select";
 import { RouterModule } from "@angular/router";
 import { GdkModule } from "@gorilainvest/gdk";
 
-import { ButtonModule } from '@gorilainvest/ui/button';
-import { CountdownButtonModule } from '@gorilainvest/ui/countdown-button';
-import { LoadingModule } from '@gorilainvest/ui/loading';
+
+
+import { ButtonModule } from '@gorilainvest/ui-toolkit/button';
+import { CountdownButtonModule } from '@gorilainvest/ui-toolkit/countdown-button';
+
+import { LoadingModule } from '@gorilainvest/ui-toolkit/loading';
+
 
 import { ButtonsIndicatorsComponent } from "./buttons-indicators/buttons-indicators.component";
 import { ButtonComponent } from "./ui/button/button.component";

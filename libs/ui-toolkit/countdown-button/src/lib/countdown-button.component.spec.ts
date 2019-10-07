@@ -8,7 +8,7 @@ import {
 import { asyncScheduler } from 'rxjs';
 
 
-import { ButtonComponent } from '@gorilainvest/ui/button';
+import { ButtonComponent } from '@gorilainvest/ui-toolkit/button';
 
 import { CountdownButtonComponent } from './countdown-button.component';
 

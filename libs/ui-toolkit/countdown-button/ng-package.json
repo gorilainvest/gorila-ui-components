@@ -4,7 +4,7 @@
   "lib": {
     "entryFile": "src/index.ts",
     "umdModuleIds": {
-      "@gorilainvest/ui/button": "@gorilainvest/ui-toolkit/dist/button"
+      "@gorilainvest/ui-toolkit/button": "@gorilainvest/ui-toolkit/dist/button"
     }
   }
 }

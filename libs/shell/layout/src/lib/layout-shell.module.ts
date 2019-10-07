@@ -9,10 +9,14 @@ import { MatSelectModule } from "@angular/material/select";
 import { RouterModule } from "@angular/router";
 import { GdkModule } from "@gorilainvest/gdk";
 
-import { CardContainerModule } from '@gorilainvest/ui/card-container';
-import { EnhancedTitleModule } from '@gorilainvest/ui/enhanced-title';
-import { ScrollContainerModule } from '@gorilainvest/ui/scroll-container';
-import { SectionTitleModule } from '@gorilainvest/ui/section-title';
+
+
+import { CardContainerModule } from '@gorilainvest/ui-toolkit/card-container';
+import { EnhancedTitleModule } from '@gorilainvest/ui-toolkit/enhanced-title';
+import { ScrollContainerModule } from '@gorilainvest/ui-toolkit/scroll-container';
+
+import { SectionTitleModule } from '@gorilainvest/ui-toolkit/section-title';
+
 
 import { LayoutComponent } from "./layout/layout.component";
 import { CardContainerComponent } from "./ui/card-container/card-container.component";

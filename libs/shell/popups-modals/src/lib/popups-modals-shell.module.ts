@@ -9,8 +9,12 @@ import { MatSelectModule } from "@angular/material/select";
 import { RouterModule } from "@angular/router";
 import { GdkModule } from "@gorilainvest/gdk";
 
-import { CountdownButtonModule } from '@gorilainvest/ui/countdown-button';
-import { PopupConfirmModule } from '@gorilainvest/ui/popup-confirm';
+
+
+import { CountdownButtonModule } from '@gorilainvest/ui-toolkit/countdown-button';
+
+import { PopupConfirmModule } from '@gorilainvest/ui-toolkit/popup-confirm';
+
 
 import { PopupsModalsComponent } from "./popups-modals/popups-modals.component";
 import { PopupConfirmComponent } from "./ui/popup-confirm/popup-confirm.component";
