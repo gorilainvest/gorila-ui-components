@@ -43,7 +43,7 @@
 
 <ol class="breadcrumb">
   <li>Interfaces</li>
-  <li>PopupConfirmAction</li>
+  <li>HTMLTippyProps</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,17 +61,16 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>libs/ui-toolkit/popup-confirm/src/lib/popup-confirm.model.ts</code>
+            <code>libs/ui-toolkit/directives/src/lib/tippy/tippy.model.ts</code>
         </p>
 
+
             <p class="comment">
-                <h3>Description</h3>
+                <h3>Extends</h3>
             </p>
             <p class="comment">
-                <p>Define an action (button) in the popup confirm template.</p>
-
+                    <code>TippyProps</code>
             </p>
-
 
         <section>
             <h3 id="index">Index</h3>
@@ -86,13 +85,8 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#class">class</a>
-                                </li>
-                                <li>
-                                        <a href="#text">text</a>
-                                </li>
-                                <li>
-                                        <a href="#value">value</a>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#html">html</a>
                                 </li>
                             </ul>
                         </td>
@@ -109,13 +103,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="class"></a>
-                                        <span class="name"><b>class</b><a href="#class"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="html"></a>
+                                        <span class="name"><b>html</b><a href="#html"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>class:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>html:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -128,86 +122,15 @@
                                         </td>
                                     </tr>
 
-
-
-
-
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>Additional css class to be added to action button.</p>
-</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="text"></a>
-                                        <span class="name"><b>text</b><a href="#text"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>text:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
+                                            <i>Optional</i>
                                         </td>
                                     </tr>
 
 
 
 
-
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>The text of the action.</p>
-</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="value"></a>
-                                        <span class="name"><b>value</b><a href="#value"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>value:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>The value that identified a click in the action.</p>
-</div>
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
             </section>
@@ -215,62 +138,27 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export interface PopupConfirmAction {
-  /**
-   * Additional css class to be added to action button.
-   */
-  class: string;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Props as TippyProps } from &#x27;tippy.js&#x27;;
 
-  /**
-   * The text of the action.
-   */
-  text: string;
 
-  /**
-  * The value that identified a click in the action.
-  */
-  value: string;
+export interface HTMLTippyProps extends TippyProps {
+  html?: string;
 }
+
 
 /**
- * Define the content of a popup.
+ * Default tippy options.
  */
-export interface PopupConfirmContent {
-  /**
-   * A list of actions (buttons) to be displayed in the modal footer.
-   */
-  actions: PopupConfirmAction[];
 
-  /**
-   * Additional css class to be added to content &#x60;DIV&#x60;.
-   */
-  class?: string;
-
-  /**
-   * A teext to be displayed between separators line.
-   *
-   * The separator will exist between popup title and content.
-   */
-  separator?: string;
-
-  /**
-   * The popup dialog content itself.
-   */
-  text: string;
-}
-
-/**
- * The model for the popup.
- *
- * @see MAT_DIALOG_DATA
- */
-export interface PopupConfirmModel {
-  /**
-   * A list of content to be displayed inside popup.
-   */
-  content: PopupConfirmContent[];
-  title: string;
-}
+export const tippyOptionsDefault: HTMLTippyProps &#x3D; {
+  theme: &quot;gorila-dark&quot;,
+  arrow: true,
+  delay: [50, 0],
+  duration: [500, 200],
+  performance: true,
+  interactive: true,
+  interactiveDebounce: 0
+};
 </code></pre>
     </div>
 </div>
@@ -298,7 +186,7 @@ export interface PopupConfirmModel {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
-            var COMPODOC_CURRENT_PAGE_URL = 'PopupConfirmAction.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'HTMLTippyProps.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

@@ -43,7 +43,7 @@
 
 <ol class="breadcrumb">
   <li>Interfaces</li>
-  <li>ToggleData</li>
+  <li>ScrollInfo</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,14 +61,14 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>libs/ui-toolkit/slide-toggle/src/lib/slide-toggle.model.ts</code>
+            <code>libs/ui-toolkit/scroll-container/src/lib/scroll-manager.ts</code>
         </p>
 
             <p class="comment">
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Define the toogle item for the component.</p>
+                <p>A interface to provide information about the last scroll event received.</p>
 
             </p>
 
@@ -86,17 +86,10 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#checked">checked</a>
+                                        <a href="#offset">offset</a>
                                 </li>
                                 <li>
-                                        <a href="#cod">cod</a>
-                                </li>
-                                <li>
-                                            <span class="modifier">Optional</span>
-                                        <a href="#color">color</a>
-                                </li>
-                                <li>
-                                        <a href="#title">title</a>
+                                        <a href="#scrolled">scrolled</a>
                                 </li>
                             </ul>
                         </td>
@@ -113,13 +106,48 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="checked"></a>
-                                        <span class="name"><b>checked</b><a href="#checked"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="offset"></a>
+                                        <span class="name"><b>offset</b><a href="#offset"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>checked:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>offset:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>How many pixels was scrolled.</p>
+</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="scrolled"></a>
+                                        <span class="name"><b>scrolled</b><a href="#scrolled"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>scrolled:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -138,117 +166,7 @@
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>Indicates if the toggle is toggled.</p>
-</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="cod"></a>
-                                        <span class="name"><b>cod</b><a href="#cod"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>cod:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>The identifier value of the toggle.</p>
-</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="color"></a>
-                                        <span class="name"><b>color</b><a href="#color"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>color:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
-
-
-
-
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>The custom color for the toggle.</p>
-</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="title"></a>
-                                        <span class="name"><b>title</b><a href="#title"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>title:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>The text to be displayed aside the toggle.</p>
+                                    <div class="io-description"><p>Indicates that the scroll was detected.</p>
 </div>
                                 </td>
                             </tr>
@@ -259,32 +177,94 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export interface ToggleData {
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { CdkScrollable, ScrollDispatcher } from &#x27;@angular/cdk/scrolling&#x27;;
+import { untilDestroyed } from &#x27;ngx-take-until-destroy&#x27;;
+import { Subscription } from &#x27;rxjs&#x27;;
 
+/**
+ * Define a interface to guarantee a subscription instance to be managed
+ * in seupScrollSubscription.
+ */
+export interface Scrollable {
   /**
-   * The identifier value of the toggle.
+   * The subscription for *Scrolldispatcher.scrolled* method call.
    */
-  cod: string;
-
-
-  /**
-   * Indicates if the toggle is toggled.
-   */
-  checked: boolean;
-
-
-  /**
-   * The text to be displayed aside the toggle.
-   */
-  title: string;
-
-
-  /**
-   * The custom color for the toggle.
-   * @Optional
-   */
-  color?: string;
+  scrolledSubs: Subscription;
 }
+
+export type Edge &#x3D; &#x27;top&#x27; | &#x27;left&#x27; | &#x27;right&#x27; | &#x27;bottom&#x27; | &#x27;start&#x27; | &#x27;end&#x27;;
+
+/**
+ * Setups a new scroll subscription, also unsubscribe from previous subscriptions
+ * if needed.
+ *
+ * @param activate indicates if a new subscription must be created
+ * @param componentRef a **scrollable** component that implements &#x60;Scrollable&#x60; interface
+ * @param scrollDispatcher the responsible to listen for scroll events
+ * @param windowScrollFn a callback for scroll subscription
+ */
+export const setupScrollSubscription &#x3D; &lt;C extends Scrollable&gt;(
+  activate: boolean,
+  componentRef: C,
+  scrollDispatcher: ScrollDispatcher,
+  windowScrollFn: Function
+) &#x3D;&gt; {
+  if (componentRef.scrolledSubs) {
+    componentRef.scrolledSubs.unsubscribe();
+  }
+
+  if (!activate) {
+    return;
+  }
+
+  componentRef.scrolledSubs &#x3D; scrollDispatcher
+    .scrolled()
+    .pipe(untilDestroyed(componentRef))
+    .subscribe(windowScrollFn.bind(componentRef));
+};
+
+/**
+ * A interface to provide information about the last scroll event received.
+ */
+export interface ScrollInfo {
+  /**
+   * How many pixels was scrolled.
+   */
+  offset: number;
+
+  /**
+   * Indicates that the scroll was detected.
+   */
+  scrolled: boolean;
+}
+
+export const onWindowScroll &#x3D; (
+  event: CdkScrollable,
+  edge: Edge &#x3D; &#x27;top&#x27;,
+  previousScroll &#x3D; 0,
+  minDif &#x3D; 10,
+  departureOffset &#x3D; 100,
+  returnOffset &#x3D; 10
+): ScrollInfo | null &#x3D;&gt; {
+
+  if (!event) {
+    return null;
+  }
+
+  const scrollOffset &#x3D; event.measureScrollOffset(edge) || 0;
+
+  if (Math.abs(scrollOffset - previousScroll) &lt; minDif) {
+    return null;
+  }
+
+  if (scrollOffset &gt; departureOffset) {
+    return { scrolled: true, offset: scrollOffset };
+  } else if (scrollOffset &lt; returnOffset) {
+    return { scrolled: false, offset: scrollOffset };
+  }
+
+  return null;
+};
 </code></pre>
     </div>
 </div>
@@ -312,7 +292,7 @@
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
-            var COMPODOC_CURRENT_PAGE_URL = 'ToggleData.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'ScrollInfo.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

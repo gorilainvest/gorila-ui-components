@@ -61,7 +61,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>libs/ui/card-container/src/lib/card-container.component.ts</code>
+    <code>libs/ui-toolkit/card-container/src/lib/card-container.component.ts</code>
 </p>
 
     <p class="comment">
@@ -177,6 +177,9 @@
                                 <a href="#cssClass">cssClass</a>
                             </li>
                             <li>
+                                <a href="#subtitle">subtitle</a>
+                            </li>
+                            <li>
                                 <a href="#title">title</a>
                             </li>
                         </ul>
@@ -201,7 +204,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">libs/ui/card-container/src/lib/card-container.component.ts:36</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">libs/ui-toolkit/card-container/src/lib/card-container.component.ts:43</a></div>
                             </td>
                         </tr>
 
@@ -258,7 +261,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">libs/ui/card-container/src/lib/card-container.component.ts:16</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">libs/ui-toolkit/card-container/src/lib/card-container.component.ts:16</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -284,7 +287,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">libs/ui/card-container/src/lib/card-container.component.ts:21</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">libs/ui-toolkit/card-container/src/lib/card-container.component.ts:21</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -310,12 +313,38 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">libs/ui/card-container/src/lib/card-container.component.ts:26</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">libs/ui-toolkit/card-container/src/lib/card-container.component.ts:26</a></div>
                             </td>
                         </tr>
                 <tr>
                     <td class="col-md-4">
                         <div class="io-description"><p>Additional css classes to card top bar.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="subtitle"></a>
+                        <b>subtitle</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">libs/ui-toolkit/card-container/src/lib/card-container.component.ts:37</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The subtitle for the card.</p>
 </div>
                     </td>
                 </tr>
@@ -336,7 +365,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">libs/ui/card-container/src/lib/card-container.component.ts:31</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">libs/ui-toolkit/card-container/src/lib/card-container.component.ts:31</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -378,8 +407,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="49"
-                            class="link-to-prism">libs/ui/card-container/src/lib/card-container.component.ts:49</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">libs/ui-toolkit/card-container/src/lib/card-container.component.ts:56</a></div>
                 </td>
             </tr>
 
@@ -455,7 +484,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">libs/ui/card-container/src/lib/card-container.component.ts:36</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">libs/ui-toolkit/card-container/src/lib/card-container.component.ts:43</a></div>
                             </td>
                         </tr>
 
@@ -507,6 +536,13 @@ export class CardContainerComponent implements OnChanges {
   @Input() public title &#x3D; &#x27;&#x27;;
 
   /**
+
+   * The subtitle for the card.
+   */
+  @Input() public subtitle &#x3D; &#x27;&#x27;;
+
+  /**
+
    * Sanitized gradient background color for the top bar.
    */
   public gradientBgColor: SafeStyle;
@@ -537,6 +573,8 @@ export class CardContainerComponent implements OnChanges {
 &lt;div class&#x3D;&quot;card-title&quot; *ngIf&#x3D;&quot;title&quot;&gt;
   &lt;gro-section-title [title]&#x3D;&quot;title&quot;&gt;
     &lt;ng-content select&#x3D;&quot;[header]&quot;&gt;&lt;/ng-content&gt;
+
+    &lt;span class&#x3D;&quot;card-subtitle&quot; *ngIf&#x3D;&quot;subtitle&quot;&gt;{{subtitle}}&lt;/span&gt;
   &lt;/gro-section-title&gt;
 &lt;/div&gt;
 &lt;div class&#x3D;&quot;card-container&quot;&gt;
@@ -551,43 +589,81 @@ export class CardContainerComponent implements OnChanges {
                 <p class="comment">
                     <code>./card-container.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">$sectionTitleHeight:25px;
+                <pre class="line-numbers"><code class="language-scss">$sectionTitleHeight: 25px;
 
-:host{
+
+:host {
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.13);
-  background: #fff;
-  width: 100%;
-  height: 100%;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  height: 100%;
   overflow: hidden;
-  gro-section-title{
+
+  background: #fff;
+
+  gro-section-title {
+    display: block;
+
     height: $sectionTitleHeight;
     padding: 2px 8px;
-    display: block;
+  }
+
+  /* stylelint-disable selector-max-compound-selectors */
+  ::ng-deep gro-section-title .content-container {
+    position: relative;
+  }
+  /* stylelint-enable selector-max-compound-selectors */
+
+  gro-section-title .card-subtitle {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    color: #888e8e;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1.33;
+    text-transform: none;
+
   }
 }
-.card-container{
-  background: #fff;
-  padding: 8px;
-  padding-top: 0;
-  height: calc(100% - #{$sectionTitleHeight});
+
+
+.card-container {
   display: block;
-  .card-content{
-    height: 100%;
-    width: 100%;
+
+  flex: 1;
+  width: 100%;
+  padding: 0 8px 8px;
+
+  .card-content {
     display: block;
+
+    width: 100%;
+    height: 100%;
+
     padding-bottom: 8px;
   }
 }
 
-.card-top{
-  height: 5px;
+
+/* stylelint-disable property-no-vendor-prefix */
+/* stylelint-disable property-no-unknown */
+.card-top {
   width: 100%;
+
+  height: 5px;
+
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
+
+/* stylelint-enable property-no-unknown */
+/* stylelint-enable property-no-vendor-prefix */
+
 </code></pre>
     </div>
 
@@ -616,8 +692,8 @@ export class CardContainerComponent implements OnChanges {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div *ngIf="cssClass||gradientBgColor" class="card-top" [ngClass]="cssClass" [style.background]="gradientBgColor"></div><div class="card-title" *ngIf="title">  <gro-section-title [title]="title">    <ng-content select="[header]"></ng-content>  </gro-section-title></div><div class="card-container">  <div class=\'card-content\'>    <ng-content select="[body]"></ng-content>  </div></div></div>'
-    var COMPONENTS = [{'name': 'ArrowVariationComponent', 'selector': 'mur-arrow-variation'},{'name': 'ButtonComponent', 'selector': 'mag-button'},{'name': 'CardContainerComponent', 'selector': 'gro-card-container'},{'name': 'CountdownButtonComponent', 'selector': 'mag-countdown-button'},{'name': 'EnhancedTitleComponent', 'selector': 'gro-enhanced-title'},{'name': 'GdkCardComponent', 'selector': 'gdk-card'},{'name': 'LoadingComponent', 'selector': 'mur-loading'},{'name': 'PopupConfirmComponent', 'selector': 'mag-popup-confirm'},{'name': 'SectionTitleComponent', 'selector': 'gro-section-title'},{'name': 'SlideToggleComponent', 'selector': 'mur-slide-toggle'},{'name': 'SlideToggleGroupComponent', 'selector': 'mur-slide-toggle-group'}];
+        var COMPONENT_TEMPLATE = '<div><div *ngIf="cssClass||gradientBgColor" class="card-top" [ngClass]="cssClass" [style.background]="gradientBgColor"></div><div class="card-title" *ngIf="title">  <gro-section-title [title]="title">    <ng-content select="[header]"></ng-content>    <span class="card-subtitle" *ngIf="subtitle">{{subtitle}}</span>  </gro-section-title></div><div class="card-container">  <div class=\'card-content\'>    <ng-content select="[body]"></ng-content>  </div></div></div>'
+    var COMPONENTS = [{'name': 'ArrowVariationComponent', 'selector': 'mur-arrow-variation'},{'name': 'ButtonComponent', 'selector': 'mag-button'},{'name': 'CardContainerComponent', 'selector': 'gro-card-container'},{'name': 'CountdownButtonComponent', 'selector': 'mag-countdown-button'},{'name': 'EnhancedTitleComponent', 'selector': 'gro-enhanced-title'},{'name': 'GdkCardComponent', 'selector': 'gdk-card'},{'name': 'LoadingComponent', 'selector': 'mur-loading'},{'name': 'PopupConfirmComponent', 'selector': 'mag-popup-confirm'},{'name': 'ScrollContainerComponent', 'selector': 'gor-scroll-container'},{'name': 'SectionTitleComponent', 'selector': 'gro-section-title'},{'name': 'SlideToggleComponent', 'selector': 'mur-slide-toggle'},{'name': 'SlideToggleGroupComponent', 'selector': 'mur-slide-toggle-group'}];
     var DIRECTIVES = [{'name': 'CancelableRouterLinkWithHrefDirective', 'selector': 'a[gorCancelableRouterLink]'},{'name': 'TippyDirective', 'selector': '[gorTippy]'},{'name': 'TruncateDirective', 'selector': '[gorTruncate]'}];
     var ACTUAL_COMPONENT = {'name': 'CardContainerComponent'};
 </script>

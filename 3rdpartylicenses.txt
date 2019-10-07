@@ -160,6 +160,8 @@ SOFTWARE.
 
 @gorilainvest/ui-toolkit/slide-toggle
 
+@gorilainvest/ui-toolkit/ui-scroll-container
+
 @ngrx/effects
 MIT
 
