@@ -1,0 +1,130 @@
+<gdk-card
+  title="Scroll Container"
+  subtitle="A container that listen to scroll events and behave to it."
+  [withoutOutput]="true"
+>
+  <mat-list role="list" class="inputs">
+    <mat-list-item role="listitem" class="activatedScrollEffect-config-container">
+      <mat-checkbox class="full-width" color="primary" [checked]="activateScrollEffect" (change)="activateScrollEffect = $event?.checked">Activate scroll effect?
+      </mat-checkbox>
+    </mat-list-item>
+    <mat-list-item role="listitem" class="initialHeight-config-container">
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Initial height"
+          [formControl]="initialHeightFormControl"
+        />
+        <mat-hint>The initial height of the container</mat-hint>
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem" class="initialWidth-config-container">
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Initial width"
+          [formControl]="initialWidthFormControl"
+        />
+        <mat-hint>The initial width of the container</mat-hint>
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem" class="scrolledHeight-config-container">
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Scrolled height"
+          [formControl]="scrolledHeightFormControl"
+        />
+        <mat-hint>The height of the container after scrolled down</mat-hint>
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem" class="scrolledWidth-config-container">
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Scrolled width"
+          [formControl]="scrolledWidthFormControl"
+        />
+        <mat-hint>The width of the container after scrolled down</mat-hint>
+      </mat-form-field>
+    </mat-list-item>
+  </mat-list>
+
+  <div class="widget" cdkScrollable>
+    <div class="dummy-container center">
+      <div class="dummy-content center">
+        Dummy container
+      </div>
+    </div>
+    <div class="dummy-container center">
+      <div class="dummy-content center">
+        Dummy container
+      </div>
+    </div>
+    <div class="dummy-container center">
+      <div class="dummy-content center">
+        Dummy container
+      </div>
+    </div>
+    <div class="dummy-container center">
+      <div class="dummy-content center">
+        Dummy container
+      </div>
+    </div>
+
+    <div class="center">
+      <gor-scroll-container
+        [activateScrollEffect]="activateScrollEffect"
+        [initialHeight]="initialHeightFormControl.value"
+        [initialWidth]="initialWidthFormControl.value"
+        [scrolledHeight]="scrolledHeightFormControl.value"
+        [scrolledWidth]="scrolledWidthFormControl.value"
+      >
+        <ng-container body>
+          <div class="dummy-container center">
+            <div class="dummy-content center">
+              Your content here
+            </div>
+          </div>
+        </ng-container>
+      </gor-scroll-container>
+    </div>
+
+    <div class="dummy-container center">
+      <div class="dummy-content center">
+        Dummy container
+      </div>
+    </div>
+    <div class="dummy-container center">
+      <div class="dummy-content center">
+        Dummy container
+      </div>
+    </div>
+    <div class="dummy-container center">
+      <div class="dummy-content center">
+        Dummy container
+      </div>
+    </div>
+    <div class="dummy-container center">
+      <div class="dummy-content center">
+        Dummy container
+      </div>
+    </div>
+  </div>
+
+  <pre class="code">
+<span>// module import</span>
+<span>import &#123; ScrollContainerModule &#125; from '@gorilainvest/ui-toolkit/dist/scroll-container';</span>
+<span></span>
+<span>// template.html</span>
+<span>&lt;gor-scroll-container</span>
+<span>  [activateScrollEffect]=&quot;{{activateScrollEffect}}&quot;</span>
+<span>  [initialHeight]=&quot;{{initialHeightFormControl.value}}&quot;</span>
+<span>  [initialWidth]=&quot;{{initialWidthFormControl.value}}&quot;</span>
+<span>  [scrolledHeight]=&quot;{{scrolledHeightFormControl.value}}&quot;</span>
+<span>  [scrolledWidth]=&quot;{{scrolledWidthFormControl.value}}&quot;&gt;</span>
+<span>&lt;/gor-scroll-container&gt;</span>
+<span></span>
+  </pre>
+</gdk-card>
+

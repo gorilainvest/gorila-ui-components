@@ -8,9 +8,15 @@ import { MatListModule } from "@angular/material/list";
 import { MatSelectModule } from "@angular/material/select";
 import { RouterModule } from "@angular/router";
 import { GdkModule } from "@gorilainvest/gdk";
-import { ButtonModule } from "@gorilainvest/ui-toolkit/button";
-import { CountdownButtonModule } from "@gorilainvest/ui-toolkit/countdown-button";
-import { LoadingModule } from "@gorilainvest/ui-toolkit/loading";
+
+
+
+import { ButtonModule } from '@gorilainvest/ui-toolkit/button';
+import { CountdownButtonModule } from '@gorilainvest/ui-toolkit/countdown-button';
+
+import { LoadingModule } from '@gorilainvest/ui-toolkit/loading';
+
+
 import { ButtonsIndicatorsComponent } from "./buttons-indicators/buttons-indicators.component";
 import { ButtonComponent } from "./ui/button/button.component";
 import { CountdownButtonComponent } from "./ui/countdown-button/countdown-button.component";
