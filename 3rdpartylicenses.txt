@@ -156,11 +156,11 @@ SOFTWARE.
 
 @gorilainvest/ui-toolkit/popup-confirm
 
+@gorilainvest/ui-toolkit/scroll-container
+
 @gorilainvest/ui-toolkit/section-title
 
 @gorilainvest/ui-toolkit/slide-toggle
-
-@gorilainvest/ui-toolkit/ui-scroll-container
 
 @ngrx/effects
 MIT
