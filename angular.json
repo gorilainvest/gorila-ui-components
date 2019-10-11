@@ -82,7 +82,9 @@
             "polyfills": "apps/widgets-system/src/polyfills.ts",
             "tsConfig": "apps/widgets-system/tsconfig.spec.json",
             "karmaConfig": "apps/widgets-system/karma.conf.js",
-            "styles": ["apps/widgets-system/src/styles.scss"],
+            "styles": [
+              "apps/widgets-system/src/styles.scss"
+            ],
             "scripts": [],
             "assets": [
               "apps/widgets-system/src/favicon.ico",
@@ -97,7 +99,10 @@
               "apps/widgets-system/tsconfig.app.json",
               "apps/widgets-system/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "**/*.json"]
+            "exclude": [
+              "**/node_modules/**",
+              "**/*.json"
+            ]
           }
         }
       }
@@ -123,21 +128,23 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/widgets-system-e2e/tsconfig.e2e.json",
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
     },
-    "ui-arrow-variation": {
-      "root": "libs/ui/arrow-variation",
-      "sourceRoot": "libs/ui/arrow-variation/src",
+    "arrow-variation": {
+      "root": "libs/ui-toolkit/arrow-variation",
+      "sourceRoot": "libs/ui-toolkit/arrow-variation/src",
       "projectType": "library",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "libs/ui/arrow-variation/tsconfig.lib.json",
-            "project": "libs/ui/arrow-variation/ng-package.json",
+            "tsConfig": "libs/ui-toolkit/arrow-variation/tsconfig.lib.json",
+            "project": "libs/ui-toolkit/arrow-variation/ng-package.json",
             "stylePreprocessorOptions": {
               "includePaths": ["libs/shared-styles"]
             }
@@ -147,18 +154,20 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/ui/arrow-variation/tsconfig.lib.json",
-              "libs/ui/arrow-variation/tsconfig.spec.json"
+              "libs/ui-toolkit/arrow-variation/tsconfig.lib.json",
+              "libs/ui-toolkit/arrow-variation/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "libs/ui/arrow-variation/src/test.ts",
-            "tsConfig": "libs/ui/arrow-variation/tsconfig.spec.json",
-            "karmaConfig": "libs/ui/arrow-variation/karma.conf.js"
+            "main": "libs/ui-toolkit/arrow-variation/src/test.ts",
+            "tsConfig": "libs/ui-toolkit/arrow-variation/tsconfig.spec.json",
+            "karmaConfig": "libs/ui-toolkit/arrow-variation/karma.conf.js"
           }
         }
       },
@@ -168,16 +177,16 @@
         }
       }
     },
-    "ui-button": {
-      "root": "libs/ui/button",
-      "sourceRoot": "libs/ui/button/src",
+    "button": {
+      "root": "libs/ui-toolkit/button",
+      "sourceRoot": "libs/ui-toolkit/button/src",
       "projectType": "library",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "libs/ui/button/tsconfig.lib.json",
-            "project": "libs/ui/button/ng-package.json",
+            "tsConfig": "libs/ui-toolkit/button/tsconfig.lib.json",
+            "project": "libs/ui-toolkit/button/ng-package.json",
             "stylePreprocessorOptions": {
               "includePaths": ["libs/shared-styles"]
             }
@@ -187,18 +196,20 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/ui/button/tsconfig.lib.json",
-              "libs/ui/button/tsconfig.spec.json"
+              "libs/ui-toolkit/button/tsconfig.lib.json",
+              "libs/ui-toolkit/button/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "libs/ui/button/src/test.ts",
-            "tsConfig": "libs/ui/button/tsconfig.spec.json",
-            "karmaConfig": "libs/ui/button/karma.conf.js"
+            "main": "libs/ui-toolkit/button/src/test.ts",
+            "tsConfig": "libs/ui-toolkit/button/tsconfig.spec.json",
+            "karmaConfig": "libs/ui-toolkit/button/karma.conf.js"
           }
         }
       },
@@ -208,16 +219,16 @@
         }
       }
     },
-    "ui-card-container": {
-      "root": "libs/ui/card-container",
-      "sourceRoot": "libs/ui/card-container/src",
+    "card-container": {
+      "root": "libs/ui-toolkit/card-container",
+      "sourceRoot": "libs/ui-toolkit/card-container/src",
       "projectType": "library",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "libs/ui/card-container/tsconfig.lib.json",
-            "project": "libs/ui/card-container/ng-package.json",
+            "tsConfig": "libs/ui-toolkit/card-container/tsconfig.lib.json",
+            "project": "libs/ui-toolkit/card-container/ng-package.json",
             "stylePreprocessorOptions": {
               "includePaths": ["libs/shared-styles"]
             }
@@ -227,18 +238,20 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/ui/card-container/tsconfig.lib.json",
-              "libs/ui/card-container/tsconfig.spec.json"
+              "libs/ui-toolkit/card-container/tsconfig.lib.json",
+              "libs/ui-toolkit/card-container/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "libs/ui/card-container/src/test.ts",
-            "tsConfig": "libs/ui/card-container/tsconfig.spec.json",
-            "karmaConfig": "libs/ui/card-container/karma.conf.js"
+            "main": "libs/ui-toolkit/card-container/src/test.ts",
+            "tsConfig": "libs/ui-toolkit/card-container/tsconfig.spec.json",
+            "karmaConfig": "libs/ui-toolkit/card-container/karma.conf.js"
           }
         }
       },
@@ -248,16 +261,16 @@
         }
       }
     },
-    "ui-countdown-button": {
-      "root": "libs/ui/countdown-button",
-      "sourceRoot": "libs/ui/countdown-button/src",
+    "countdown-button": {
+      "root": "libs/ui-toolkit/countdown-button",
+      "sourceRoot": "libs/ui-toolkit/countdown-button/src",
       "projectType": "library",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "libs/ui/countdown-button/tsconfig.lib.json",
-            "project": "libs/ui/countdown-button/ng-package.json",
+            "tsConfig": "libs/ui-toolkit/countdown-button/tsconfig.lib.json",
+            "project": "libs/ui-toolkit/countdown-button/ng-package.json",
             "stylePreprocessorOptions": {
               "includePaths": ["libs/shared-styles"]
             }
@@ -267,18 +280,20 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/ui/countdown-button/tsconfig.lib.json",
-              "libs/ui/countdown-button/tsconfig.spec.json"
+              "libs/ui-toolkit/countdown-button/tsconfig.lib.json",
+              "libs/ui-toolkit/countdown-button/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "libs/ui/countdown-button/src/test.ts",
-            "tsConfig": "libs/ui/countdown-button/tsconfig.spec.json",
-            "karmaConfig": "libs/ui/countdown-button/karma.conf.js"
+            "main": "libs/ui-toolkit/countdown-button/src/test.ts",
+            "tsConfig": "libs/ui-toolkit/countdown-button/tsconfig.spec.json",
+            "karmaConfig": "libs/ui-toolkit/countdown-button/karma.conf.js"
           }
         }
       },
@@ -288,16 +303,16 @@
         }
       }
     },
-    "ui-enhanced-title": {
-      "root": "libs/ui/enhanced-title",
-      "sourceRoot": "libs/ui/enhanced-title/src",
+    "enhanced-title": {
+      "root": "libs/ui-toolkit/enhanced-title",
+      "sourceRoot": "libs/ui-toolkit/enhanced-title/src",
       "projectType": "library",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "libs/ui/enhanced-title/tsconfig.lib.json",
-            "project": "libs/ui/enhanced-title/ng-package.json",
+            "tsConfig": "libs/ui-toolkit/enhanced-title/tsconfig.lib.json",
+            "project": "libs/ui-toolkit/enhanced-title/ng-package.json",
             "stylePreprocessorOptions": {
               "includePaths": ["libs/shared-styles"]
             }
@@ -307,18 +322,20 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/ui/enhanced-title/tsconfig.lib.json",
-              "libs/ui/enhanced-title/tsconfig.spec.json"
+              "libs/ui-toolkit/enhanced-title/tsconfig.lib.json",
+              "libs/ui-toolkit/enhanced-title/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "libs/ui/enhanced-title/src/test.ts",
-            "tsConfig": "libs/ui/enhanced-title/tsconfig.spec.json",
-            "karmaConfig": "libs/ui/enhanced-title/karma.conf.js"
+            "main": "libs/ui-toolkit/enhanced-title/src/test.ts",
+            "tsConfig": "libs/ui-toolkit/enhanced-title/tsconfig.spec.json",
+            "karmaConfig": "libs/ui-toolkit/enhanced-title/karma.conf.js"
           }
         }
       },
@@ -328,16 +345,16 @@
         }
       }
     },
-    "ui-loading": {
-      "root": "libs/ui/loading",
-      "sourceRoot": "libs/ui/loading/src",
+    "loading": {
+      "root": "libs/ui-toolkit/loading",
+      "sourceRoot": "libs/ui-toolkit/loading/src",
       "projectType": "library",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "libs/ui/loading/tsconfig.lib.json",
-            "project": "libs/ui/loading/ng-package.json",
+            "tsConfig": "libs/ui-toolkit/loading/tsconfig.lib.json",
+            "project": "libs/ui-toolkit/loading/ng-package.json",
             "stylePreprocessorOptions": {
               "includePaths": ["libs/shared-styles"]
             }
@@ -347,18 +364,20 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/ui/loading/tsconfig.lib.json",
-              "libs/ui/loading/tsconfig.spec.json"
+              "libs/ui-toolkit/loading/tsconfig.lib.json",
+              "libs/ui-toolkit/loading/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "libs/ui/loading/src/test.ts",
-            "tsConfig": "libs/ui/loading/tsconfig.spec.json",
-            "karmaConfig": "libs/ui/loading/karma.conf.js"
+            "main": "libs/ui-toolkit/loading/src/test.ts",
+            "tsConfig": "libs/ui-toolkit/loading/tsconfig.spec.json",
+            "karmaConfig": "libs/ui-toolkit/loading/karma.conf.js"
           }
         }
       },
@@ -368,16 +387,16 @@
         }
       }
     },
-    "ui-popup-confirm": {
-      "root": "libs/ui/popup-confirm",
-      "sourceRoot": "libs/ui/popup-confirm/src",
+    "popup-confirm": {
+      "root": "libs/ui-toolkit/popup-confirm",
+      "sourceRoot": "libs/ui-toolkit/popup-confirm/src",
       "projectType": "library",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "libs/ui/popup-confirm/tsconfig.lib.json",
-            "project": "libs/ui/popup-confirm/ng-package.json",
+            "tsConfig": "libs/ui-toolkit/popup-confirm/tsconfig.lib.json",
+            "project": "libs/ui-toolkit/popup-confirm/ng-package.json",
             "stylePreprocessorOptions": {
               "includePaths": ["libs/shared-styles"]
             }
@@ -387,18 +406,20 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/ui/popup-confirm/tsconfig.lib.json",
-              "libs/ui/popup-confirm/tsconfig.spec.json"
+              "libs/ui-toolkit/popup-confirm/tsconfig.lib.json",
+              "libs/ui-toolkit/popup-confirm/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "libs/ui/popup-confirm/src/test.ts",
-            "tsConfig": "libs/ui/popup-confirm/tsconfig.spec.json",
-            "karmaConfig": "libs/ui/popup-confirm/karma.conf.js"
+            "main": "libs/ui-toolkit/popup-confirm/src/test.ts",
+            "tsConfig": "libs/ui-toolkit/popup-confirm/tsconfig.spec.json",
+            "karmaConfig": "libs/ui-toolkit/popup-confirm/karma.conf.js"
           }
         }
       },
@@ -408,16 +429,16 @@
         }
       }
     },
-    "ui-section-title": {
-      "root": "libs/ui/section-title",
-      "sourceRoot": "libs/ui/section-title/src",
+    "section-title": {
+      "root": "libs/ui-toolkit/section-title",
+      "sourceRoot": "libs/ui-toolkit/section-title/src",
       "projectType": "library",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "libs/ui/section-title/tsconfig.lib.json",
-            "project": "libs/ui/section-title/ng-package.json",
+            "tsConfig": "libs/ui-toolkit/section-title/tsconfig.lib.json",
+            "project": "libs/ui-toolkit/section-title/ng-package.json",
             "stylePreprocessorOptions": {
               "includePaths": ["libs/shared-styles"]
             }
@@ -427,18 +448,20 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/ui/section-title/tsconfig.lib.json",
-              "libs/ui/section-title/tsconfig.spec.json"
+              "libs/ui-toolkit/section-title/tsconfig.lib.json",
+              "libs/ui-toolkit/section-title/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "libs/ui/section-title/src/test.ts",
-            "tsConfig": "libs/ui/section-title/tsconfig.spec.json",
-            "karmaConfig": "libs/ui/section-title/karma.conf.js"
+            "main": "libs/ui-toolkit/section-title/src/test.ts",
+            "tsConfig": "libs/ui-toolkit/section-title/tsconfig.spec.json",
+            "karmaConfig": "libs/ui-toolkit/section-title/karma.conf.js"
           }
         }
       },
@@ -448,16 +471,16 @@
         }
       }
     },
-    "ui-slide-toggle": {
-      "root": "libs/ui/slide-toggle",
-      "sourceRoot": "libs/ui/slide-toggle/src",
+    "slide-toggle": {
+      "root": "libs/ui-toolkit/slide-toggle",
+      "sourceRoot": "libs/ui-toolkit/slide-toggle/src",
       "projectType": "library",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "libs/ui/slide-toggle/tsconfig.lib.json",
-            "project": "libs/ui/slide-toggle/ng-package.json",
+            "tsConfig": "libs/ui-toolkit/slide-toggle/tsconfig.lib.json",
+            "project": "libs/ui-toolkit/slide-toggle/ng-package.json",
             "stylePreprocessorOptions": {
               "includePaths": ["libs/shared-styles"]
             }
@@ -466,19 +489,21 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "libs/ui/slide-toggle/src/test.ts",
-            "tsConfig": "libs/ui/slide-toggle/tsconfig.spec.json",
-            "karmaConfig": "libs/ui/slide-toggle/karma.conf.js"
+            "main": "libs/ui-toolkit/slide-toggle/src/test.ts",
+            "tsConfig": "libs/ui-toolkit/slide-toggle/tsconfig.spec.json",
+            "karmaConfig": "libs/ui-toolkit/slide-toggle/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/ui/slide-toggle/tsconfig.lib.json",
-              "libs/ui/slide-toggle/tsconfig.spec.json"
+              "libs/ui-toolkit/slide-toggle/tsconfig.lib.json",
+              "libs/ui-toolkit/slide-toggle/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       },
@@ -489,33 +514,35 @@
       }
     },
     "directives": {
-      "root": "libs/directives",
-      "sourceRoot": "libs/directives/src",
+      "root": "libs/ui-toolkit/directives",
+      "sourceRoot": "libs/ui-toolkit/directives/src",
       "projectType": "library",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "libs/directives/tsconfig.lib.json",
-            "project": "libs/directives/ng-package.json"
+            "tsConfig": "libs/ui-toolkit/directives/tsconfig.lib.json",
+            "project": "libs/ui-toolkit/directives/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "libs/directives/src/test.ts",
-            "tsConfig": "libs/directives/tsconfig.spec.json",
-            "karmaConfig": "libs/directives/karma.conf.js"
+            "main": "libs/ui-toolkit/directives/src/test.ts",
+            "tsConfig": "libs/ui-toolkit/directives/tsconfig.spec.json",
+            "karmaConfig": "libs/ui-toolkit/directives/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/directives/tsconfig.lib.json",
-              "libs/directives/tsconfig.spec.json"
+              "libs/ui-toolkit/directives/tsconfig.lib.json",
+              "libs/ui-toolkit/directives/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       },
@@ -538,7 +565,9 @@
               "libs/shell/buttons-indicators/tsconfig.lib.json",
               "libs/shell/buttons-indicators/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -565,7 +594,9 @@
               "libs/shell/controls/tsconfig.lib.json",
               "libs/shell/controls/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -592,7 +623,9 @@
               "libs/shell/layout/tsconfig.lib.json",
               "libs/shell/layout/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -619,7 +652,9 @@
               "libs/shell/popups-modals/tsconfig.lib.json",
               "libs/shell/popups-modals/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -646,7 +681,9 @@
               "libs/shell/presentational/tsconfig.lib.json",
               "libs/shell/presentational/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -673,7 +710,9 @@
               "libs/gdk/tsconfig.lib.json",
               "libs/gdk/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -686,6 +725,46 @@
         }
       },
       "schematics": {}
+    },
+    "scroll-container": {
+      "projectType": "library",
+      "root": "libs/ui-toolkit/scroll-container",
+      "sourceRoot": "libs/ui-toolkit/scroll-container/src",
+      "prefix": "gorilainvest",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/ui-toolkit/scroll-container/tsconfig.lib.json",
+            "project": "libs/ui-toolkit/scroll-container/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-toolkit/scroll-container/tsconfig.lib.json",
+              "libs/ui-toolkit/scroll-container/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/ui-toolkit/scroll-container/src/test.ts",
+            "tsConfig": "libs/ui-toolkit/scroll-container/tsconfig.spec.json",
+            "karmaConfig": "libs/ui-toolkit/scroll-container/karma.conf.js"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {
