@@ -3,6 +3,7 @@
 # compiled output
 dist/*
 !dist/index.js
+guides/assets/dep-graph.svg
 /documentation
 /tmp
 /out-tsc
