@@ -4,24 +4,26 @@ const path = require("path");
 module.exports = async ({ config }) => {
   config.plugins.push(new MiniCssExtractPlugin());
   config.module.rules.push({
-    test: /\.scss$/,
+    test: /.scss$/,
+
     use: [
       MiniCssExtractPlugin.loader,
-      "css-loader",
+      'css-loader',
       {
-        loader: "sass-loader",
+        loader: 'sass-loader',
         options: {
-          includePaths: ["node_modules", "libs/shared-styles"]
+          includePaths: ['node_modules', 'libs/shared-styles']
         }
       }
     ],
-    include: path.resolve(__dirname, "../")
+    include: path.resolve(__dirname, '../')
   });
 
   config.module.rules.push({
-    test: /\.ts$/,
+    test: /!(.spec).ts$/,
+
     exclude: /node_modules/,
-    loader: "ts-loader"
+    loader: 'ts-loader'
   });
 
   return config;
