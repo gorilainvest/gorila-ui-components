@@ -16,7 +16,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
         <nav>
             <ul class="list">
                 <li class="title">
-                    <a href="index.html" data-type="index-link">@gorilainvest/ui-toolkit documentation</a>
+                    <a href="index.html" data-type="index-link">
+                        <img alt="" class="img-responsive" data-type="compodoc-logo" data-src=images/logo_gorila.svg> 
+                    </a>
                 </li>
 
                 <li class="divider"></li>
@@ -50,7 +52,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#additional-pages"'
                             : 'data-target="#xs-additional-pages"' }>
                             <span class="icon ion-ios-book"></span>
-                            <span>Additional documentation</span>
+                            <span>Development Documentation</span>
                             <span class="icon ion-ios-arrow-down"></span>
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? 'id="additional-pages"' : 'id="xs-additional-pages"' }>
@@ -62,6 +64,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                                     <li class="link ">
                                         <a href="additional-documentation/dev-environment.html" data-type="entity-link" data-context-id="additional">Dev Environment</a>
+                                    </li>
+                                    <li class="link ">
+                                        <a href="additional-documentation/dependency-graph.html" data-type="entity-link" data-context-id="additional">Dependency Graph</a>
                                     </li>
                         </ul>
                     </li>
