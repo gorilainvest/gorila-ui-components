@@ -10,5 +10,9 @@
   {
     "title": "Dev Environment",
     "file": "./dev-environment.md"
+  },
+  {
+    "title": "Dependency Graph",
+    "file": "./dep-graph.md"
   }
 ]
