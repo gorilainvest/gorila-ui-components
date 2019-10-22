@@ -85,6 +85,11 @@
             "styles": [
               "apps/widgets-system/src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "libs/shared-styles"
+              ]
+            },
             "scripts": [],
             "assets": [
               "apps/widgets-system/src/favicon.ico",
