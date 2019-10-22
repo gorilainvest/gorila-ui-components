@@ -172,7 +172,12 @@
           "options": {
             "main": "libs/ui-toolkit/arrow-variation/src/test.ts",
             "tsConfig": "libs/ui-toolkit/arrow-variation/tsconfig.spec.json",
-            "karmaConfig": "libs/ui-toolkit/arrow-variation/karma.conf.js"
+            "karmaConfig": "libs/ui-toolkit/arrow-variation/karma.conf.js",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "libs/shared-styles"
+              ]
+            }
           }
         }
       },
@@ -214,7 +219,12 @@
           "options": {
             "main": "libs/ui-toolkit/button/src/test.ts",
             "tsConfig": "libs/ui-toolkit/button/tsconfig.spec.json",
-            "karmaConfig": "libs/ui-toolkit/button/karma.conf.js"
+            "karmaConfig": "libs/ui-toolkit/button/karma.conf.js",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "libs/shared-styles"
+              ]
+            }
           }
         }
       },
@@ -424,7 +434,12 @@
           "options": {
             "main": "libs/ui-toolkit/popup-confirm/src/test.ts",
             "tsConfig": "libs/ui-toolkit/popup-confirm/tsconfig.spec.json",
-            "karmaConfig": "libs/ui-toolkit/popup-confirm/karma.conf.js"
+            "karmaConfig": "libs/ui-toolkit/popup-confirm/karma.conf.js",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "libs/shared-styles"
+              ]
+            }
           }
         }
       },
