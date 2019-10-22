@@ -1,0 +1,14 @@
+{
+  "$schema": "./node_modules/@compodoc/compodoc/src/config/schema.json",
+  "tsconfig": "./tsconfig.compodoc.json",
+  "name": "Gorila UI Toolkit Documentation",
+  "assetsFolder": "./guides/assets",
+  "includes": "./guides",
+  "includesName": "Development Documentation",
+  "disablePrivate": true,
+  "disableProtected": true,
+  "disableInternal": true,
+  "customFavicon": "./apps/widgets-system/src/favicon.ico",
+  "customLogo": "./apps/widgets-system/src/assets/logo/logo_gorila.svg",
+  "theme": "material"
+}
