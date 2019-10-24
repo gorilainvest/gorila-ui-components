@@ -62,3 +62,4 @@ $gorila-app-stocks-theme: mat-light-theme($gorila-app-stocks-primary, $gorila-ap
 .asset-stocks-theme {
   @include angular-material-theme($gorila-app-stocks-theme);
 }
+

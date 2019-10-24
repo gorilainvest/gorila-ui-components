@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "types": ["node"]
+  },
+  "exclude": ["../apps/**/*", "../libs/**/*.spec.ts"],
+  "include": ["../libs/**/*"],
+  "files": ["./typings.d.ts"]
+}

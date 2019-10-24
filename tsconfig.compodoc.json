@@ -5,6 +5,7 @@
     "node_modules",
     "libs/shell/**/*.ts",
     "tmp",
+    "**/*.stories.ts",
     "**/environment*.ts",
     "**/test.ts"
   ]
