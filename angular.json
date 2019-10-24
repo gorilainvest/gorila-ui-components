@@ -308,7 +308,12 @@
           "options": {
             "main": "libs/ui-toolkit/countdown-button/src/test.ts",
             "tsConfig": "libs/ui-toolkit/countdown-button/tsconfig.spec.json",
-            "karmaConfig": "libs/ui-toolkit/countdown-button/karma.conf.js"
+            "karmaConfig": "libs/ui-toolkit/countdown-button/karma.conf.js",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "libs/shared-styles"
+              ]
+            }
           }
         }
       },
