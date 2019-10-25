@@ -21,7 +21,7 @@ module.exports = () => {
     },
     coverageIstanbulReporter: {
       dir: join(__dirname, "../../coverage"),
-      reports: ["html", "lcovonly", "text-summary"],
+      reports: ["html", "lcovonly", "text-summary", "json-summary"],
       fixWebpackSourcePaths: true
     },
     reporters: ["progress", "kjhtml"],

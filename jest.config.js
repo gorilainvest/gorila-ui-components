@@ -7,5 +7,5 @@ module.exports = {
   resolver: "@nrwl/jest/plugins/resolver",
   moduleFileExtensions: ["ts", "js", "html"],
   collectCoverage: true,
-  coverageReporters: ["html", "text-summary"]
+  coverageReporters: ["html", "json-summary", "text-summary"]
 };

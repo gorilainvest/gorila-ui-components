@@ -42,7 +42,8 @@
     "ghpages:storybook": "npm run build-storybook -- --output-dir dist/apps/widgets-system/storybook",
     "prepublishOnly": "npm run dep-graph && node scripts/build-all.js",
     "coverage": "cross-env ENABLE_COVERAGE=true node scripts/test-all.js",
-    "codacy-coverage": "cat coverage/**/*/lcov.info | codacy-coverage -p .",
+    "precodacy-coverage": "find coverage/libs -name lcov.info -exec echo -a {} \\; | xargs lcov -o coverage/lcov.info",
+    "codacy-coverage": "cat ./coverage/lcov.info | codacy-coverage",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -118,7 +119,7 @@
     "babel-loader": "^8.0.6",
     "codelyzer": "^5.0.1",
     "commitlint": "^7.5.2",
-    "cross-env": "^5.2.0",
+    "cross-env": "^5.2.1",
     "cypress": "^3.4.1",
     "dotenv": "6.2.0",
     "eslint": "^5.16.0",

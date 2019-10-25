@@ -10,7 +10,7 @@ module.exports = function(config) {
     ...baseConfig,
     coverageIstanbulReporter: {
       ...baseConfig.coverageIstanbulReporter,
-      dir: join(__dirname, '../../../coverage/libs/ui/countdown-button')
+      dir: join(__dirname, '../../../coverage/libs/ui-toolkit/countdown-button')
     }
   });
 };
