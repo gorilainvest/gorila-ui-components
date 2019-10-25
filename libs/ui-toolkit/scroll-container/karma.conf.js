@@ -10,7 +10,7 @@ module.exports = function(config) {
     ...baseConfig,
     coverageIstanbulReporter: {
       ...baseConfig.coverageIstanbulReporter,
-      dir: join(__dirname, '../../../coverage/libs/ui/scroll-container')
+      dir: join(__dirname, '../../../coverage/libs/ui-toolkit/scroll-container')
     }
   });
 };

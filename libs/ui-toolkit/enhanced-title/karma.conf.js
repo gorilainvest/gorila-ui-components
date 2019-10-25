@@ -10,7 +10,7 @@ module.exports = function(config) {
     ...baseConfig,
     coverageIstanbulReporter: {
       ...baseConfig.coverageIstanbulReporter,
-      dir: join(__dirname, '../../../coverage/libs/ui/enhanced-title')
+      dir: join(__dirname, '../../../coverage/libs/ui-toolkit/enhanced-title')
     }
   });
 };

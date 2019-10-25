@@ -10,7 +10,7 @@ module.exports = function(config) {
     ...baseConfig,
     coverageIstanbulReporter: {
       ...baseConfig.coverageIstanbulReporter,
-      dir: join(__dirname, '../../../coverage/libs/ui/arrow-variation')
+      dir: join(__dirname, '../../../coverage/libs/ui-toolkit/arrow-variation')
     }
   });
 };
