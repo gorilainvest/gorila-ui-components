@@ -25,9 +25,13 @@
               "apps/widgets-system/src/favicon.ico",
               "apps/widgets-system/src/assets"
             ],
-            "styles": ["apps/widgets-system/src/styles.scss"],
+            "styles": [
+              "apps/widgets-system/src/styles.scss"
+            ],
             "stylePreprocessorOptions": {
-              "includePaths": ["libs/shared-styles"]
+              "includePaths": [
+                "libs/shared-styles"
+              ]
             },
             "scripts": []
           },
@@ -151,7 +155,9 @@
             "tsConfig": "libs/ui-toolkit/arrow-variation/tsconfig.lib.json",
             "project": "libs/ui-toolkit/arrow-variation/ng-package.json",
             "stylePreprocessorOptions": {
-              "includePaths": ["libs/shared-styles"]
+              "includePaths": [
+                "libs/shared-styles"
+              ]
             }
           }
         },
@@ -198,7 +204,9 @@
             "tsConfig": "libs/ui-toolkit/button/tsconfig.lib.json",
             "project": "libs/ui-toolkit/button/ng-package.json",
             "stylePreprocessorOptions": {
-              "includePaths": ["libs/shared-styles"]
+              "includePaths": [
+                "libs/shared-styles"
+              ]
             }
           }
         },
@@ -245,7 +253,9 @@
             "tsConfig": "libs/ui-toolkit/card-container/tsconfig.lib.json",
             "project": "libs/ui-toolkit/card-container/ng-package.json",
             "stylePreprocessorOptions": {
-              "includePaths": ["libs/shared-styles"]
+              "includePaths": [
+                "libs/shared-styles"
+              ]
             }
           }
         },
@@ -287,7 +297,9 @@
             "tsConfig": "libs/ui-toolkit/countdown-button/tsconfig.lib.json",
             "project": "libs/ui-toolkit/countdown-button/ng-package.json",
             "stylePreprocessorOptions": {
-              "includePaths": ["libs/shared-styles"]
+              "includePaths": [
+                "libs/shared-styles"
+              ]
             }
           }
         },
@@ -334,7 +346,9 @@
             "tsConfig": "libs/ui-toolkit/enhanced-title/tsconfig.lib.json",
             "project": "libs/ui-toolkit/enhanced-title/ng-package.json",
             "stylePreprocessorOptions": {
-              "includePaths": ["libs/shared-styles"]
+              "includePaths": [
+                "libs/shared-styles"
+              ]
             }
           }
         },
@@ -376,7 +390,9 @@
             "tsConfig": "libs/ui-toolkit/loading/tsconfig.lib.json",
             "project": "libs/ui-toolkit/loading/ng-package.json",
             "stylePreprocessorOptions": {
-              "includePaths": ["libs/shared-styles"]
+              "includePaths": [
+                "libs/shared-styles"
+              ]
             }
           }
         },
@@ -418,7 +434,9 @@
             "tsConfig": "libs/ui-toolkit/popup-confirm/tsconfig.lib.json",
             "project": "libs/ui-toolkit/popup-confirm/ng-package.json",
             "stylePreprocessorOptions": {
-              "includePaths": ["libs/shared-styles"]
+              "includePaths": [
+                "libs/shared-styles"
+              ]
             }
           }
         },
@@ -465,7 +483,9 @@
             "tsConfig": "libs/ui-toolkit/section-title/tsconfig.lib.json",
             "project": "libs/ui-toolkit/section-title/ng-package.json",
             "stylePreprocessorOptions": {
-              "includePaths": ["libs/shared-styles"]
+              "includePaths": [
+                "libs/shared-styles"
+              ]
             }
           }
         },
@@ -507,7 +527,9 @@
             "tsConfig": "libs/ui-toolkit/slide-toggle/tsconfig.lib.json",
             "project": "libs/ui-toolkit/slide-toggle/ng-package.json",
             "stylePreprocessorOptions": {
-              "includePaths": ["libs/shared-styles"]
+              "includePaths": [
+                "libs/shared-styles"
+              ]
             }
           }
         },
@@ -782,6 +804,46 @@
             "main": "libs/ui-toolkit/scroll-container/src/test.ts",
             "tsConfig": "libs/ui-toolkit/scroll-container/tsconfig.spec.json",
             "karmaConfig": "libs/ui-toolkit/scroll-container/karma.conf.js"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "page-header": {
+      "projectType": "library",
+      "root": "libs/ui-toolkit/page-header",
+      "sourceRoot": "libs/ui-toolkit/page-header/src",
+      "prefix": "gorilainvest",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/ui-toolkit/page-header/tsconfig.lib.json",
+            "project": "libs/ui-toolkit/page-header/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-toolkit/page-header/tsconfig.lib.json",
+              "libs/ui-toolkit/page-header/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/ui-toolkit/page-header/src/test.ts",
+            "tsConfig": "libs/ui-toolkit/page-header/tsconfig.spec.json",
+            "karmaConfig": "libs/ui-toolkit/page-header/karma.conf.js"
           }
         }
       },

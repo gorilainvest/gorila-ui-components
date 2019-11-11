@@ -80,6 +80,9 @@
       "@gorilainvest/ui-toolkit/scroll-container": [
         "dist/scroll-container",
         "libs/ui-toolkit/scroll-container/src/index.ts"
+      ],
+      "@gorilainvest/ui-toolkit/page-header": [
+        "libs/ui-toolkit/page-header/src/index.ts"
       ]
     },
     "rootDir": "."
