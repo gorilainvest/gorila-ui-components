@@ -53,6 +53,15 @@
         "group:layout"
       ]
     },
+    "gor-data-formatter": {
+      "tags": [
+        "exportable",
+        "team:grodd",
+        "scope:shared",
+        "scope:ui",
+        "group:presentational"
+      ]
+    },
     "loading": {
       "tags": [
         "exportable",

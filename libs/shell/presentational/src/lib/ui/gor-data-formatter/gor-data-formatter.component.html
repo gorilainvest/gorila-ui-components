@@ -1,0 +1,71 @@
+<gdk-card
+  title="Arrow Variation"
+  subtitle="Triangle arrow for positive negative and zero variation"
+  withoutOutput="true"
+>
+  <mat-list role="list" class="inputs">
+    <mat-list-item role="listitem" class="data-type-container">
+      <mat-form-field class="full-width">
+        <mat-label>Data Type</mat-label>
+        <mat-select [formControl]="dataTypeFormControl" required>
+          <mat-option value="date">date</mat-option>
+          <mat-option value="number">number</mat-option>
+          <mat-option value="percentual">percentual</mat-option>
+          <mat-option value="currency">currency</mat-option>
+          <mat-option value="text">text</mat-option>
+          <mat-option value="custom">custom</mat-option>
+        </mat-select>
+        <mat-hint>The data Type</mat-hint>
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem" class="value-config-container">
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Value"
+          [formControl]="valueFormControl"
+          type="text"
+        />
+        <mat-hint>The raw value to be formatted</mat-hint>
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem" class="data-option-container" *ngIf="displayDataOption">
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Value"
+          [formControl]="dataOptionFormControl"
+          type="text"
+        />
+        <mat-hint>The raw value to be formatted</mat-hint>
+      </mat-form-field>
+    </mat-list-item>
+  </mat-list>
+
+  <div class="widget">
+    <gor-data-formatter
+      [value]="valueFormControl.value"
+      [dataType]="dataTypeFormControl.value"
+      [dataOption]="dataOptionFormControl.value"
+      [dataStyle]="dataStyleFormControl.value"
+    >
+    </gor-data-formatter>
+    <p>{{valueFormControl.value}}</p>
+  </div>
+
+  <pre class="code">
+<span>// module import</span>
+<span>import &#123; ArrowVariationComponentModule &#125; from '@gorilainvest/ui-toolkit/dist/arrow-variation';</span>
+<span></span>
+<span>// template.html</span>
+<span>
+  &lt;gor-data-formatter
+    [dataType]=&quot;{{dataTypeFormControl.value}}&quot;
+    [value]=&quot;{{valueFormControl.value}}&quot;
+  <ng-container *ngIf="displayDataOption">[dataOption]=&quot;{{dataOptionFormControl.value}}&quot; </ng-container>&gt;
+</span><span>&lt;/gor-data-formatter&gt;</span>
+<span></span>
+  </pre>
+</gdk-card>
+
+
