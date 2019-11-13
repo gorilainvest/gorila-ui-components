@@ -4,6 +4,7 @@ libs/ui/arrow-variation @denisokawa
 libs/ui/button @guilhermejcgois @oliveira-gust
 libs/ui/card-container @tigredonorte
 libs/ui/countdown-button @guilhermejcgois @oliveira-gust
+libs/ui/data-formatter @tigredonorte
 libs/ui/enhanced-title @tigredonorte
 libs/ui/loading @denisokawa
 libs/ui/popup-confirm @guilhermejcgois @oliveira-gust

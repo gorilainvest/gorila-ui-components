@@ -365,6 +365,53 @@
         }
       }
     },
+    "data-formatter": {
+      "root": "libs/ui-toolkit/data-formatter",
+      "sourceRoot": "libs/ui-toolkit/data-formatter/src",
+      "projectType": "library",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/ui-toolkit/data-formatter/tsconfig.lib.json",
+            "project": "libs/ui-toolkit/data-formatter/ng-package.json",
+            "stylePreprocessorOptions": {
+              "includePaths": ["libs/shared-styles"]
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-toolkit/data-formatter/tsconfig.lib.json",
+              "libs/ui-toolkit/data-formatter/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/ui-toolkit/data-formatter/src/test.ts",
+            "tsConfig": "libs/ui-toolkit/data-formatter/tsconfig.spec.json",
+            "karmaConfig": "libs/ui-toolkit/data-formatter/karma.conf.js",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "libs/shared-styles"
+              ]
+            }
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    },
     "loading": {
       "root": "libs/ui-toolkit/loading",
       "sourceRoot": "libs/ui-toolkit/loading/src",

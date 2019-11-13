@@ -1,0 +1,23 @@
+<div [ngSwitch]="dataType" [ngStyle]="dataStyle" class='item-value'>
+  <ng-container *ngSwitchCase="'date'">
+    {{(value | amUtc | amDateFormat: 'DD/MM/YYYY') || '-'}}
+  </ng-container>
+  <ng-container *ngSwitchCase="'number'">
+    {{value}}
+  </ng-container>
+  <ng-container *ngSwitchCase="'text'">
+    {{value}}
+  </ng-container>
+  <ng-container *ngSwitchCase="'currency'">
+    {{((value || '') | currency:'BRL':'symbol') || '-'}}
+  </ng-container>
+  <ng-container *ngSwitchCase="'percentual'">
+    {{value | percent: dataOption}}
+  </ng-container>
+  <ng-container *ngSwitchCase="'custom'">
+    {{value | gorCustom: dataOption}}
+  </ng-container>
+  <ng-container *ngSwitchDefault>
+    {{value || '-'}} {{ dataType }}
+  </ng-container>
+</div>
