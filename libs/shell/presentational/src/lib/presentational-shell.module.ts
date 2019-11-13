@@ -12,7 +12,13 @@ import { ArrowVariationModule } from '@gorilainvest/ui-toolkit/arrow-variation';
 
 
 
+
+
+
 import { DataFormatterModule } from '@gorilainvest/ui-toolkit/data-formatter';
+
+
+
 
 
 
@@ -22,7 +28,13 @@ import { ArrowVariationComponent } from './ui/arrow-variation/arrow-variation.co
 
 
 
+
+
+
 import { DataFormatterComponent } from './ui/data-formatter/data-formatter.component';
+
+
+
 
 
 
@@ -63,5 +75,8 @@ import { DataFormatterComponent } from './ui/data-formatter/data-formatter.compo
   exports: [ArrowVariationComponent, DataFormatterComponent]
 })
 export class PresentationalShellModule {}
+
+
+
 
 
