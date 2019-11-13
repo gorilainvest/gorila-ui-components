@@ -8,6 +8,8 @@ As a contributor, here are the guidelines we would like you to follow:
 - [Submission Guidelines](#submit-pr)
 - [Coding Rules](#rules)
 - [Commit Message Guidelines](#commit)
+- [Documenting](#documenting)
+- [Running](#running)
 
 ## <a name="issue"></a> Found an Issue?
 If you find a bug in the source code or a mistake in the documentation, you can help us by
@@ -231,3 +233,13 @@ A detailed explanation can be found in this [document][commit-message-format].
 [jsbin]: http://jsbin.com/
 [plunker]: http://plnkr.co/edit
 [bug-tracker]: https://github.com/gorilainvest/gorila-ui-components/issues
+
+## <a name="documenting"></a> Documenting
+
+To document your new code, just add comments using [compodoc syntax](https://compodoc.app/guides/comments.html). You also can check our existing components to understand how to do this.
+
+
+## <a name="running"></a> Running
+
+To run the application just use npm start command in the root directory.
+It runs the demo application wich uses all this library components.
