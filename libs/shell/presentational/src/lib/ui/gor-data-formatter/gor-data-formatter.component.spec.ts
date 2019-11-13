@@ -1,16 +1,16 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { GorDataFormatterModule } from '@gorilainvest/ui-toolkit/gor-data-formatter';
 
+import { PresentationalShellModule } from '../../presentational-shell.module';
 import { GorDataFormatterComponent } from './gor-data-formatter.component';
 
-describe('GorDataFormatterComponent', () => {
+describe('GorDataFormatterComponent (shell)', () => {
   let component: GorDataFormatterComponent;
   let fixture: ComponentFixture<GorDataFormatterComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [GorDataFormatterModule, NoopAnimationsModule]
+      imports: [PresentationalShellModule, NoopAnimationsModule]
     }).compileComponents();
   }));
 
