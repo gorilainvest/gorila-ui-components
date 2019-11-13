@@ -43,9 +43,9 @@
         "dist/enhanced-title",
         "libs/ui-toolkit/enhanced-title/src/index.ts"
       ],
-      "@gorilainvest/ui-toolkit/gor-data-formatter": [
+      "@gorilainvest/ui-toolkit/data-formatter": [
         "dist/gor-data-formatter",
-        "libs/ui-toolkit/gor-data-formatter/src/index.ts"
+        "libs/ui-toolkit/data-formatter/src/index.ts"
       ],
       "@gorilainvest/ui-toolkit/loading": [
         "dist/loading",

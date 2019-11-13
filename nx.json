@@ -44,6 +44,15 @@
         "group:buttons-indicators"
       ]
     },
+    "data-formatter": {
+      "tags": [
+        "exportable",
+        "team:grodd",
+        "scope:shared",
+        "scope:ui",
+        "group:presentational"
+      ]
+    },
     "enhanced-title": {
       "tags": [
         "exportable",
@@ -51,15 +60,6 @@
         "scope:shared",
         "scope:ui",
         "group:layout"
-      ]
-    },
-    "gor-data-formatter": {
-      "tags": [
-        "exportable",
-        "team:grodd",
-        "scope:shared",
-        "scope:ui",
-        "group:presentational"
       ]
     },
     "loading": {

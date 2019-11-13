@@ -9,11 +9,23 @@ import { MatSelectModule } from '@angular/material/select';
 import { RouterModule } from '@angular/router';
 import { GdkModule } from '@gorilainvest/gdk';
 import { ArrowVariationModule } from '@gorilainvest/ui-toolkit/arrow-variation';
-import { GorDataFormatterModule } from '@gorilainvest/ui-toolkit/gor-data-formatter';
+
+
+
+import { DataFormatterModule } from '@gorilainvest/ui-toolkit/data-formatter';
+
+
+
 
 import { PresentationalComponent } from './presentational/presentational.component';
 import { ArrowVariationComponent } from './ui/arrow-variation/arrow-variation.component';
-import { GorDataFormatterComponent } from './ui/gor-data-formatter/gor-data-formatter.component';
+
+
+
+import { DataFormatterComponent } from './ui/data-formatter/data-formatter.component';
+
+
+
 
 @NgModule({
   imports: [
@@ -27,7 +39,9 @@ import { GorDataFormatterComponent } from './ui/gor-data-formatter/gor-data-form
     MatSelectModule,
     GdkModule,
     ArrowVariationModule,
-    GorDataFormatterModule,
+
+    DataFormatterModule,
+
     RouterModule.forChild([
       {
         path: 'arrow-variation',
@@ -35,15 +49,19 @@ import { GorDataFormatterComponent } from './ui/gor-data-formatter/gor-data-form
         component: ArrowVariationComponent
       },
       {
-        path: 'gor-data-formatter',
+        path: 'data-formatter',
+
         pathMatch: 'full',
-        component: GorDataFormatterComponent
+
+        component: DataFormatterComponent
       },
       { path: '', pathMatch: 'full', component: PresentationalComponent }
     ])
   ],
 
-  declarations: [ArrowVariationComponent, PresentationalComponent, GorDataFormatterComponent],
-  exports: [ArrowVariationComponent, GorDataFormatterComponent]
+  declarations: [ArrowVariationComponent, PresentationalComponent, DataFormatterComponent],
+  exports: [ArrowVariationComponent, DataFormatterComponent]
 })
-export class PresentationalShellModule { }
+export class PresentationalShellModule {}
+
+

@@ -3,10 +3,10 @@ import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'gorilainvest-gor-data-formatter',
-  templateUrl: './gor-data-formatter.component.html',
-  styleUrls: ['./gor-data-formatter.component.scss']
+  templateUrl: './data-formatter.component.html',
+  styleUrls: ['./data-formatter.component.scss']
 })
-export class GorDataFormatterComponent implements OnInit {
+export class DataFormatterComponent implements OnInit {
   dataTypeFormControl = new FormControl('date');
   valueFormControl = new FormControl('2019-01-02');
   dataOptionFormControl = new FormControl('1.2-2');
