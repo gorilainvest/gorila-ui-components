@@ -153,6 +153,39 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
+                                <a href="modules/DataFormatterModule.html" data-type="entity-link">DataFormatterModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-DataFormatterModule-d584b0c08f6235e85b9c9ee24783faed"' : 'data-target="#xs-components-links-module-DataFormatterModule-d584b0c08f6235e85b9c9ee24783faed"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-DataFormatterModule-d584b0c08f6235e85b9c9ee24783faed"' :
+                                            'id="xs-components-links-module-DataFormatterModule-d584b0c08f6235e85b9c9ee24783faed"' }>
+                                            <li class="link">
+                                                <a href="components/DataFormatterComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">DataFormatterComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#pipes-links-module-DataFormatterModule-d584b0c08f6235e85b9c9ee24783faed"' : 'data-target="#xs-pipes-links-module-DataFormatterModule-d584b0c08f6235e85b9c9ee24783faed"' }>
+                                            <span class="icon ion-md-add"></span>
+                                            <span>Pipes</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="pipes-links-module-DataFormatterModule-d584b0c08f6235e85b9c9ee24783faed"' :
+                                            'id="xs-pipes-links-module-DataFormatterModule-d584b0c08f6235e85b9c9ee24783faed"' }>
+                                            <li class="link">
+                                                <a href="pipes/GorCustomPipe.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">GorCustomPipe</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
                                 <a href="modules/DirectivesModule.html" data-type="entity-link">DirectivesModule</a>
                                 <li class="chapter inner">
                                     <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?

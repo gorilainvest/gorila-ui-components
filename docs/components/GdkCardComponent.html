@@ -521,7 +521,20 @@ export class GdkCardComponent implements OnInit {
                 <p class="comment">
                     <code>./gdk-card.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">gdk-card .card-body__configurations {
+                <pre class="line-numbers"><code class="language-scss">gdk-card {
+  display: block;
+  height: 100%;
+  .mat-expansion-panel {
+    padding-bottom: 15px;
+  }
+
+  .mat-card {
+    height: calc(100% - 60px);
+    min-height: 400px;
+    overflow: auto;
+  }
+}
+gdk-card .card-body__configurations {
   width: 100%;
 }
 
@@ -531,7 +544,8 @@ gdk-card .mat-accordion {
 }
 
 gdk-card .mat-card-content {
-  height: 400px;
+  height: calc(100% - 60px);
+  min-height: 400px;
   .mat-card-title {
     font-size: 4rem;
   }
@@ -618,7 +632,7 @@ gdk-card .mat-grid-list &gt; div {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><mat-card>  <ng-container *ngIf="title; else noTitleTemplate">    <mat-card-title>{{ title }}</mat-card-title>    <mat-card-subtitle *ngIf="subtitle">{{ subtitle }}</mat-card-subtitle>    <mat-card-content>      <mat-grid-list cols="5" rowHeight="50%">        <mat-grid-tile colspan="1" rowSpan="2" class="left-aside">          <mat-accordion>            <mat-expansion-panel expanded>              <mat-expansion-panel-header>                <mat-panel-title> Inputs: </mat-panel-title>              </mat-expansion-panel-header>              <aside class="card-body__configurations">                <ng-content select="mat-list[role=\'list\'].inputs"></ng-content>                <ng-container *ngIf="withoutInput">                  <mat-list role="list">                    <mat-list-item role="listitem"                      >No inputs provided</mat-list-item                    >                  </mat-list>                </ng-container>              </aside>            </mat-expansion-panel>            <mat-expansion-panel>              <mat-expansion-panel-header>                <mat-panel-title> Outputs: </mat-panel-title>              </mat-expansion-panel-header>              <aside class="card-body__configurations">                <ng-content select="mat-list[role=\'list\'].outputs"></ng-content>                <ng-container *ngIf="withoutOutput">                  <mat-list role="list">                    <mat-list-item role="listitem"                      >No outputs provided</mat-list-item                    >                  </mat-list>                </ng-container>              </aside>            </mat-expansion-panel>          </mat-accordion>        </mat-grid-tile>        <mat-grid-tile colspan="3" rowSpan="1" class="visual">          <mat-grid-tile-header>            <h4 mat-line>              Visual result:            </h4>          </mat-grid-tile-header>          <ng-content select=".widget"></ng-content>        </mat-grid-tile>        <mat-grid-tile colspan="3" rowSpan="1" class="code">          <mat-grid-tile-header>The fun part:</mat-grid-tile-header>          <ng-content select="pre.code"></ng-content>        </mat-grid-tile>        <mat-grid-tile          *ngIf="summary"          colspan="1"          rowSpan="2"          class="right-aside"        >          <mat-grid-tile-header>            <h4 mat-line>              Summary:            </h4>          </mat-grid-tile-header>          <ng-content select="mat-list[role=\'list\'].summary"></ng-content>        </mat-grid-tile>      </mat-grid-list>    </mat-card-content>  </ng-container>  <ng-template #noTitleTemplate>    <mat-error><h1>Title is required!</h1></mat-error>  </ng-template></mat-card></div>'
-    var COMPONENTS = [{'name': 'ArrowVariationComponent', 'selector': 'mur-arrow-variation'},{'name': 'ButtonComponent', 'selector': 'mag-button'},{'name': 'CardContainerComponent', 'selector': 'gro-card-container'},{'name': 'CountdownButtonComponent', 'selector': 'mag-countdown-button'},{'name': 'EnhancedTitleComponent', 'selector': 'gro-enhanced-title'},{'name': 'GdkCardComponent', 'selector': 'gdk-card'},{'name': 'LoadingComponent', 'selector': 'mur-loading'},{'name': 'PopupConfirmComponent', 'selector': 'mag-popup-confirm'},{'name': 'ScrollContainerComponent', 'selector': 'gor-scroll-container'},{'name': 'SectionTitleComponent', 'selector': 'gro-section-title'},{'name': 'SlideToggleComponent', 'selector': 'mur-slide-toggle'},{'name': 'SlideToggleGroupComponent', 'selector': 'mur-slide-toggle-group'}];
+    var COMPONENTS = [{'name': 'ArrowVariationComponent', 'selector': 'mur-arrow-variation'},{'name': 'ButtonComponent', 'selector': 'mag-button'},{'name': 'CardContainerComponent', 'selector': 'gro-card-container'},{'name': 'CountdownButtonComponent', 'selector': 'mag-countdown-button'},{'name': 'DataFormatterComponent', 'selector': 'gor-data-formatter'},{'name': 'EnhancedTitleComponent', 'selector': 'gro-enhanced-title'},{'name': 'GdkCardComponent', 'selector': 'gdk-card'},{'name': 'LoadingComponent', 'selector': 'mur-loading'},{'name': 'PopupConfirmComponent', 'selector': 'mag-popup-confirm'},{'name': 'ScrollContainerComponent', 'selector': 'gor-scroll-container'},{'name': 'SectionTitleComponent', 'selector': 'gro-section-title'},{'name': 'SlideToggleComponent', 'selector': 'mur-slide-toggle'},{'name': 'SlideToggleGroupComponent', 'selector': 'mur-slide-toggle-group'}];
     var DIRECTIVES = [{'name': 'CancelableRouterLinkWithHrefDirective', 'selector': 'a[gorCancelableRouterLink]'},{'name': 'TippyDirective', 'selector': '[gorTippy]'},{'name': 'TruncateDirective', 'selector': '[gorTruncate]'}];
     var ACTUAL_COMPONENT = {'name': 'GdkCardComponent'};
 </script>
