@@ -9,35 +9,11 @@ import { MatSelectModule } from '@angular/material/select';
 import { RouterModule } from '@angular/router';
 import { GdkModule } from '@gorilainvest/gdk';
 import { ArrowVariationModule } from '@gorilainvest/ui-toolkit/arrow-variation';
-
-
-
-
-
-
 import { DataFormatterModule } from '@gorilainvest/ui-toolkit/data-formatter';
-
-
-
-
-
-
 
 import { PresentationalComponent } from './presentational/presentational.component';
 import { ArrowVariationComponent } from './ui/arrow-variation/arrow-variation.component';
-
-
-
-
-
-
 import { DataFormatterComponent } from './ui/data-formatter/data-formatter.component';
-
-
-
-
-
-
 
 @NgModule({
   imports: [
@@ -51,9 +27,7 @@ import { DataFormatterComponent } from './ui/data-formatter/data-formatter.compo
     MatSelectModule,
     GdkModule,
     ArrowVariationModule,
-
     DataFormatterModule,
-
     RouterModule.forChild([
       {
         path: 'arrow-variation',
@@ -62,21 +36,13 @@ import { DataFormatterComponent } from './ui/data-formatter/data-formatter.compo
       },
       {
         path: 'data-formatter',
-
         pathMatch: 'full',
-
         component: DataFormatterComponent
       },
       { path: '', pathMatch: 'full', component: PresentationalComponent }
     ])
   ],
-
   declarations: [ArrowVariationComponent, PresentationalComponent, DataFormatterComponent],
   exports: [ArrowVariationComponent, DataFormatterComponent]
 })
 export class PresentationalShellModule {}
-
-
-
-
-

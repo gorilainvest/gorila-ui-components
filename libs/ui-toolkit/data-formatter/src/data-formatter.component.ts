@@ -2,13 +2,11 @@ import { Component, Input } from '@angular/core';
 
 import { DataFormatterType } from './data-formatter.model';
 
-
 /**
  * Data formatter to avoid preoccupation with correct data display.
  * With this component you set an value input and the data type,
  * and it's displayed correctly.
  */
-
 @Component({
   selector: 'gor-data-formatter',
   templateUrl: './data-formatter.component.html',
@@ -21,7 +19,6 @@ export class DataFormatterComponent {
    *
    * @default null
    */
-
   @Input() public value: any;
 
   /**
@@ -30,7 +27,6 @@ export class DataFormatterComponent {
    * @default text
    * @see DataFormatterType
    */
-
   @Input() public dataType: DataFormatterType = 'text';
 
   /**
@@ -39,7 +35,6 @@ export class DataFormatterComponent {
    *
    * @default null
    */
-
   @Input() public dataOption: any = null;
 
   /**
@@ -48,6 +43,5 @@ export class DataFormatterComponent {
    *
    * @default empty
    */
-
   @Input() public dataStyle: any = {};
 }

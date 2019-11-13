@@ -14,11 +14,8 @@ export class DataFormatterComponent implements OnInit {
   displayDataOption = false;
   isCustom = false;
 
-  constructor() {
-    this.dataTypeFormControl.valueChanges.subscribe(data => this.checkType(data));
-  }
-
   public ngOnInit() {
+    this.dataTypeFormControl.valueChanges.subscribe(data => this.checkType(data));
     this.checkType(this.dataTypeFormControl.value);
   }
 
