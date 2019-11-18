@@ -266,6 +266,39 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
+                                <a href="modules/PageHeaderModule.html" data-type="entity-link">PageHeaderModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-PageHeaderModule-1503152f819164283e9c1bf49de1f7c4"' : 'data-target="#xs-components-links-module-PageHeaderModule-1503152f819164283e9c1bf49de1f7c4"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-PageHeaderModule-1503152f819164283e9c1bf49de1f7c4"' :
+                                            'id="xs-components-links-module-PageHeaderModule-1503152f819164283e9c1bf49de1f7c4"' }>
+                                            <li class="link">
+                                                <a href="components/PageHeaderComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">PageHeaderComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                <li class="chapter inner">
+                                    <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                        'data-target="#directives-links-module-PageHeaderModule-1503152f819164283e9c1bf49de1f7c4"' : 'data-target="#xs-directives-links-module-PageHeaderModule-1503152f819164283e9c1bf49de1f7c4"' }>
+                                        <span class="icon ion-md-code-working"></span>
+                                        <span>Directives</span>
+                                        <span class="icon ion-ios-arrow-down"></span>
+                                    </div>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="directives-links-module-PageHeaderModule-1503152f819164283e9c1bf49de1f7c4"' :
+                                        'id="xs-directives-links-module-PageHeaderModule-1503152f819164283e9c1bf49de1f7c4"' }>
+                                        <li class="link">
+                                            <a href="directives/PageHeaderBottomDirective.html"
+                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules">PageHeaderBottomDirective</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </li>
+                            <li class="link">
                                 <a href="modules/PopupConfirmModule.html" data-type="entity-link">PopupConfirmModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
