@@ -1,0 +1,14 @@
+<div class="grid-row-top">
+  <ng-content select="gro-enhanced-title"></ng-content>
+  <div class="content">
+    <span class="content__body">
+      <ng-content></ng-content>
+    </span>
+    <div class="content__icons">
+      <ng-content select="ui-icon"></ng-content>
+    </div>
+  </div>
+</div>
+<div class="grid-row-bottom" *ngIf="!!enableBottom">
+  <ng-content select="[gorPageHeaderBottom]"></ng-content>
+</div>
