@@ -7,6 +7,7 @@ libs/ui/countdown-button @guilhermejcgois @oliveira-gust
 libs/ui/data-formatter @tigredonorte
 libs/ui/enhanced-title @tigredonorte
 libs/ui/loading @denisokawa
+libs/ui/page-header @guilhermejcgois @oliveira-gust
 libs/ui/popup-confirm @guilhermejcgois @oliveira-gust
 libs/ui/section-title @tigredonorte
 libs/ui/slide-toggle @denisokawa
