@@ -21,16 +21,6 @@
  $host-shadow: 0 4px 10px 0 rgba(0, 0, 0, $host-shadow-opacity);
  $host-z-index: 198;
  
- .expandable-top-row .grid-row-top {
-   grid-template-columns: auto;
- 
-   height: auto;
- }
- 
- .content-without-margin .content {
-   margin-bottom: 0;
- }
- 
  gor-page-header {
    position: sticky;
    top: 0;
@@ -47,6 +37,16 @@
    box-shadow: $host-shadow;
  
    /* stylelint-disable selector-no-qualifying-type */
+   &.expandable-top-row .grid-row-top {
+    grid-template-columns: auto;
+  
+    height: auto;
+  }
+  
+  &.content-without-margin .content {
+    margin-bottom: 0;
+  }
+
    &.scrolled {
      background-color: $host-bg-color-scrolled;
    }
