@@ -1,3 +1,16 @@
+gdk-card {
+  display: block;
+  height: 100%;
+  .mat-expansion-panel {
+    padding-bottom: 15px;
+  }
+
+  .mat-card {
+    height: calc(100% - 60px);
+    min-height: 400px;
+    overflow: auto;
+  }
+}
 gdk-card .card-body__configurations {
   width: 100%;
 }
@@ -8,7 +21,8 @@ gdk-card .mat-accordion {
 }
 
 gdk-card .mat-card-content {
-  height: 400px;
+  height: calc(100% - 60px);
+  min-height: 400px;
   .mat-card-title {
     font-size: 4rem;
   }

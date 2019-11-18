@@ -2,6 +2,7 @@ export * from './dist/arrow-variation';
 export * from './dist/button';
 export * from './dist/card-container';
 export * from './dist/countdown-button';
+export * from './dist/data-formatter';
 export * from './dist/directives';
 export * from './dist/enhanced-title';
 export * from './dist/loading';

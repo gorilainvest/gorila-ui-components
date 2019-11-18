@@ -2,5 +2,5 @@
 .travis.yml
 **/*.json
 **/*.md
-**/*.html
 **/*.scss
+**/*.html
