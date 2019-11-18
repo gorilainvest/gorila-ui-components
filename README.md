@@ -9,6 +9,6 @@ This is the home for the Gorila team's components, built by developers for devel
 
 ### Getting Started
 
-See our [Getting Started Guide](./additional-documentation/getting-started.html) if you're building a project with ours widgets.
+See our [Getting Started Guide](./guides/getting-started.md) if you're building a project with ours widgets.
 
-If you'd like to contribute, you must follow our [contributing guidelines](./additional-documentation/contributing.html).
+If you'd like to contribute, you must follow our [contributing guidelines](./guides/contributing.md).
