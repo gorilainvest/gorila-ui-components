@@ -817,7 +817,7 @@
       "projectType": "library",
       "root": "libs/ui-toolkit/page-header",
       "sourceRoot": "libs/ui-toolkit/page-header/src",
-      "prefix": "gorilainvest",
+      "prefix": "gor",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
