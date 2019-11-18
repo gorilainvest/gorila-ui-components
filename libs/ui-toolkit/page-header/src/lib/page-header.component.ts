@@ -27,7 +27,6 @@ export class PageHeaderComponent implements OnDestroy, OnInit, Scrollable {
    *
    * @default true
    */
-
   @Input() public activateScrollEffect = true;
 
   /**
@@ -36,7 +35,6 @@ export class PageHeaderComponent implements OnDestroy, OnInit, Scrollable {
    *
    * @default 100
    */
-
   @Input() public departureOffset = 100;
 
   /**
@@ -44,7 +42,6 @@ export class PageHeaderComponent implements OnDestroy, OnInit, Scrollable {
    *
    * @default 'top'
    */
-
   @Input() public edge: 'top' | 'left' | 'right' | 'bottom' | 'start' | 'end' = 'top';
 
   /**
@@ -53,7 +50,6 @@ export class PageHeaderComponent implements OnDestroy, OnInit, Scrollable {
    *
    * @default 10
    */
-
   @Input() public returnOffset = 10;
 
   /**
@@ -61,7 +57,6 @@ export class PageHeaderComponent implements OnDestroy, OnInit, Scrollable {
    *
    * @default true
    */
-
   @Input() public enableBottom = true;
 
   @HostBinding('class.scrolled') public scrolled: boolean;
