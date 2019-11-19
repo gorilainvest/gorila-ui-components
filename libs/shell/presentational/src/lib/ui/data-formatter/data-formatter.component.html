@@ -54,18 +54,16 @@
   </div>
 
   <pre class="code">
-<span>// module import</span>
-<span>import &#123; ArrowVariationComponentModule &#125; from '@gorilainvest/ui-toolkit/dist/arrow-variation';</span>
-<span></span>
-<span>// template.html</span>
-<span>
-  &lt;gor-data-formatter
-    [dataType]=&quot;{{dataTypeFormControl.value}}&quot;
-    [value]=&quot;{{valueFormControl.value}}&quot;
-  <ng-container *ngIf="displayDataOption">[dataOption]=&quot;{{dataOptionFormControl.value}}&quot; </ng-container>&gt;
-</span><span>&lt;/gor-data-formatter&gt;</span>
-<span></span>
+    <span>// module import</span>
+    <span>import &#123; DataFormatterModule &#125; from '@gorilainvest/ui-toolkit/dist/data-formatter';</span>
+    <span></span>
+    <span>// template.html</span>
+
+    <span>&lt;data-formatter</span>
+    <span>  [dataType]=&quot;{{dataTypeFormControl.value}}&quot;</span>
+    <span>  [value]=&quot;{{valueFormControl.value}}&quot;</span>
+    <span>  <ng-container *ngIf="displayDataOption"> [dataOption]=&quot;{{dataOptionFormControl.value}}&quot;</ng-container>&gt;</span>
+    <span>&lt;/data-formatter&gt;</span>
+    <span></span>
   </pre>
 </gdk-card>
-
-
