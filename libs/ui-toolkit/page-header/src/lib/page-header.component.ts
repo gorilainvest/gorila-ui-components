@@ -22,12 +22,17 @@ import { Subscription } from 'rxjs';
   encapsulation: ViewEncapsulation.None
 })
 export class PageHeaderComponent implements OnDestroy, OnInit, Scrollable {
+
+  private _activateScrollEffect = true;
   /**
    * Indicates that the scroll effect must be activated.
    *
    * @default true
    */
-  @Input() public activateScrollEffect = true;
+  @Input() public set activateScrollEffect(activate) {
+    this._activateScrollEffect = !!activate;
+    setupScrollSubscription(this._activateScrollEffect, this, this.scrollDispatcher, this.onWindowScroll);
+  }
 
   /**
    * Indicates the distance from the edge (as measured in pixels)
@@ -52,12 +57,15 @@ export class PageHeaderComponent implements OnDestroy, OnInit, Scrollable {
    */
   @Input() public returnOffset = 10;
 
+  public _enableBottom = true;
   /**
    * Indicates that the bottom area of the page header will be displayed.
    *
    * @default true
    */
-  @Input() public enableBottom = true;
+  @Input() public set enableBottom(enable) {
+    this._enableBottom = !!enable;
+  }
 
   @HostBinding('class.scrolled') public scrolled: boolean;
 
@@ -72,7 +80,7 @@ export class PageHeaderComponent implements OnDestroy, OnInit, Scrollable {
   ) {}
 
   public ngOnInit() {
-    setupScrollSubscription(this.activateScrollEffect, this, this.scrollDispatcher, this.onWindowScroll);
+    setupScrollSubscription(this._activateScrollEffect, this, this.scrollDispatcher, this.onWindowScroll);
   }
 
   private onWindowScroll(event: CdkScrollable) {
