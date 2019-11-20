@@ -1,0 +1,39 @@
+<gdk-card
+  title="Page Header"
+  subtitle="A two-section header for pages"
+  [withoutOutput]="true"
+>
+  <mat-list role="list" class="inputs">
+    <mat-list-item role="listitem">
+      <mat-checkbox class="full-width" color="primary" [checked]="activateScrollEffect" (change)="activateScrollEffect = $event?.checked">Activate scroll effect?
+        </mat-checkbox>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+        <mat-checkbox class="full-width" color="primary" [checked]="enableBottom" (change)="enableBottom = $event?.checked">Enable bottom?
+        </mat-checkbox>
+    </mat-list-item>
+  </mat-list>
+  <div class="widget page-header-container" cdkScrollable>
+    <gor-page-header
+      [activateScrollEffect]="activateScrollEffect"
+      [enableBottom]="enableBottom">
+      <gro-enhanced-title [title]="'My'" [highlight]="'Page'"></gro-enhanced-title>
+      <ng-container gorPageHeaderBottom><div class="bottom-content">Your bottom content here!</div></ng-container>
+    </gor-page-header>
+    <div style="width: 100%; height: 500px;"></div>
+  </div>
+
+  <pre class="code">
+    <span>// module import</span>
+    <span>import &#123; PageHeaderModule &#125; from '@gorilainvest/ui-toolkit/dist/page-header';</span>
+    <span></span>
+    <span>// template.html</span>
+    <span>&lt;gor-page-header</span>
+    <span>  [activateScrollEffect]=&quot;{{activateScrollEffect}}&quot;</span>
+    <span>  [enableBottom]=&quot;{{enableBottom}}&quot;&gt;</span>
+    <span>    &lt;gro-enhanced-title [title]="'My'" [highlight]="'Page'"&gt;&lt;/gro-enhanced-title&gt;</span>
+    <span>    &lt;ng-container gorPageHeaderBottom&gt;Your bottom content here!&lt;/ng-container&gt;</span>
+    <span>&lt;/gor-page-header&gt;</span>
+    <span></span>
+  </pre>
+</gdk-card>
