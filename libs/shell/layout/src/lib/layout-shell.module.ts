@@ -14,8 +14,8 @@ import { GdkModule } from "@gorilainvest/gdk";
 import { CardContainerModule } from '@gorilainvest/ui-toolkit/card-container';
 import { EnhancedTitleModule } from '@gorilainvest/ui-toolkit/enhanced-title';
 import { ScrollContainerModule } from '@gorilainvest/ui-toolkit/scroll-container';
-
 import { SectionTitleModule } from '@gorilainvest/ui-toolkit/section-title';
+import { PageHeaderModule } from '@gorilainvest/ui-toolkit/page-header';
 
 
 import { LayoutComponent } from "./layout/layout.component";
@@ -23,6 +23,7 @@ import { CardContainerComponent } from "./ui/card-container/card-container.compo
 import { EnhancedTitleComponent } from "./ui/enhanced-title/enhanced-title.component";
 import { ScrollContainerComponent } from './ui/scroll-container/scroll-container.component';
 import { SectionTitleComponent } from "./ui/section-title/section-title.component";
+import { PageHeaderComponent } from "./ui/page-header/page-header.component";
 import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
@@ -41,6 +42,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     EnhancedTitleModule,
     ScrollContainerModule,
     SectionTitleModule,
+    PageHeaderModule,
     RouterModule.forChild([
       {
         path: "card-container",
@@ -62,6 +64,11 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
         pathMatch: "full",
         component: SectionTitleComponent
       },
+      {
+        path: "page-header",
+        pathMatch: "full",
+        component: PageHeaderComponent
+      },
       { path: "", pathMatch: "full", component: LayoutComponent }
     ])
   ],
@@ -70,7 +77,8 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     EnhancedTitleComponent,
     ScrollContainerComponent,
     SectionTitleComponent,
-    LayoutComponent
+    LayoutComponent,
+    PageHeaderComponent
   ]
 })
 export class LayoutShellModule {}
