@@ -52,26 +52,26 @@
     </mat-list-item>
   </mat-list>
 
-  <mur-loading
+  <gor-loading
     class="widget"
     [message]="messageFormControl.value"
     [size]="sizeFormControl.value"
     [stopLoading]="stop"
     [thickness]="thicknessFormControl.value"
   >
-  </mur-loading>
+  </gor-loading>
 
   <pre class="code">
 <span>// module import</span>
 <span>import &#123; LoadingModule &#125; from '@gorilainvest/ui-toolkit/dist/loading';</span>
 <span></span>
 <span>// template.html</span>
-<span>&lt;mur-loading</span>
+<span>&lt;gor-loading</span>
 <span>  [stopLoading]=&quot;{{stop}}&quot;</span>
 <span>  [message]=&quot;{{messageFormControl.value}}&quot;&gt;</span>
 <span>  [size]=&quot;{{sizeFormControl.value}}&quot;&gt;</span>
 <span>  [thickness]=&quot;{{thicknessFormControl.value}}&quot;&gt;</span>
-<span>&lt;/mur-loading&gt;</span>
+<span>&lt;/gor-loading&gt;</span>
 <span></span>
   </pre>
 </gdk-card>

@@ -7,7 +7,7 @@ import { PopupConfirmModel } from './popup-confirm.model';
  * A popup confirmation component with customizable content and actions.
  */
 @Component({
-  selector: 'mag-popup-confirm',
+  selector: 'gor-popup-confirm, mag-popup-confirm',
   templateUrl: './popup-confirm.component.html',
   styleUrls: ['./popup-confirm.component.scss'],
   encapsulation: ViewEncapsulation.None

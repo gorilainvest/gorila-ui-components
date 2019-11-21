@@ -7,7 +7,7 @@ import { FormControl } from "@angular/forms";
   styleUrls: ["./button.component.scss"]
 })
 export class ButtonComponent implements OnInit {
-  contentFormControl = new FormControl("Magilla's button");
+  contentFormControl = new FormControl("Gorila's button");
   typeFormControl = new FormControl("green");
 
   constructor() {}

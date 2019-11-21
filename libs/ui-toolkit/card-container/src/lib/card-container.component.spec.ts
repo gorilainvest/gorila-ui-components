@@ -40,7 +40,7 @@ describe('CardContainerComponent', () => {
 
     fixture.detectChanges();
 
-    const title = fixture.debugElement.query(By.css('gro-section-title')).nativeElement.textContent.trim();
+    const title = fixture.debugElement.query(By.css('gor-section-title')).nativeElement.textContent.trim();
 
     expect(title).toEqual('Title');
   });

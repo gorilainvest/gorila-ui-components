@@ -4,7 +4,7 @@ import { Component, Input } from '@angular/core';
  * Standardize section titles  in the Gorila App.
  */
 @Component({
-  selector: 'gro-section-title',
+  selector: 'gor-section-title, gro-section-title',
   templateUrl: './section-title.component.html',
   styleUrls: ['./section-title.component.scss']
 })

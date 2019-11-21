@@ -5,7 +5,7 @@ import { ToggleData } from './slide-toggle.model';
  * The component that represent a group of toggles.
  */
 @Component({
-  selector: 'mur-slide-toggle-group',
+  selector: 'gor-slide-toggle-group, mur-slide-toggle-group',
   templateUrl: './slide-toggle-group.component.html',
   styleUrls: ['./slide-toggle-group.component.scss']
 })
