@@ -11,7 +11,7 @@ export declare type ButtonType = 'green' | 'gray';
  * Pre-styled button that can hold anything
  */
 @Component({
-  selector: 'mag-button',
+  selector: 'gor-button, mag-button',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })

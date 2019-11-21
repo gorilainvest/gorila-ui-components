@@ -5,12 +5,11 @@ import { Component, Input } from '@angular/core';
  * This comment can receive child components too.
  */
 @Component({
-  selector: 'gro-enhanced-title',
+  selector: 'gor-enhanced-title, gro-enhanced-title',
   templateUrl: './enhanced-title.component.html',
   styleUrls: ['./enhanced-title.component.scss']
 })
 export class EnhancedTitleComponent {
-
   /**
    * The title to be displayed.
    */

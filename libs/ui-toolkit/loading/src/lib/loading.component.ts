@@ -4,7 +4,7 @@ import { Component, Input } from '@angular/core';
  * A simple customizable loading component.
  */
 @Component({
-  selector: "mur-loading",
+  selector: "gor-loading, mur-loading",
   templateUrl: "./loading.component.html",
   styleUrls: ["./loading.component.scss"]
 })

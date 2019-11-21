@@ -5,7 +5,7 @@ import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
  * A card container for your widgets with a colored top bar (gradient).
  */
 @Component({
-  selector: 'gro-card-container',
+  selector: 'gor-card-container, gro-card-container',
   templateUrl: './card-container.component.html',
   styleUrls: ['./card-container.component.scss']
 })
