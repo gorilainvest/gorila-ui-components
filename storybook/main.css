@@ -93,15 +93,15 @@ section-title, .section-title {
   /* stylelint-disable selector-max-compound-selectors */
   /* stylelint-enable selector-max-compound-selectors */
 }
-:host gro-section-title {
+:host gor-section-title {
   display: block;
   height: 25px;
   padding: 2px 8px;
 }
-:host ::ng-deep gro-section-title .content-container {
+:host ::ng-deep gor-section-title .content-container {
   position: relative;
 }
-:host gro-section-title .card-subtitle {
+:host gor-section-title .card-subtitle {
   position: absolute;
   top: 0;
   right: 0;

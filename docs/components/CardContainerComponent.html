@@ -99,7 +99,7 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>gro-card-container</code></td>
+                <td class="col-md-9"><code>gor-card-container, gro-card-container</code></td>
             </tr>
 
             <tr>
@@ -511,7 +511,7 @@ import { DomSanitizer, SafeStyle } from &#x27;@angular/platform-browser&#x27;;
  * A card container for your widgets with a colored top bar (gradient).
  */
 @Component({
-  selector: &#x27;gro-card-container&#x27;,
+  selector: &#x27;gor-card-container, gro-card-container&#x27;,
   templateUrl: &#x27;./card-container.component.html&#x27;,
   styleUrls: [&#x27;./card-container.component.scss&#x27;]
 })
@@ -572,11 +572,11 @@ export class CardContainerComponent implements OnChanges {
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div *ngIf&#x3D;&quot;cssClass||gradientBgColor&quot; class&#x3D;&quot;card-top&quot; [ngClass]&#x3D;&quot;cssClass&quot; [style.background]&#x3D;&quot;gradientBgColor&quot;&gt;&lt;/div&gt;
 &lt;div class&#x3D;&quot;card-title&quot; *ngIf&#x3D;&quot;title&quot;&gt;
-  &lt;gro-section-title [title]&#x3D;&quot;title&quot;&gt;
+  &lt;gor-section-title [title]&#x3D;&quot;title&quot;&gt;
     &lt;ng-content select&#x3D;&quot;[header]&quot;&gt;&lt;/ng-content&gt;
 
     &lt;span class&#x3D;&quot;card-subtitle&quot; *ngIf&#x3D;&quot;subtitle&quot;&gt;{{subtitle}}&lt;/span&gt;
-  &lt;/gro-section-title&gt;
+  &lt;/gor-section-title&gt;
 &lt;/div&gt;
 &lt;div class&#x3D;&quot;card-container&quot;&gt;
   &lt;div class&#x3D;&#x27;card-content&#x27;&gt;
@@ -605,7 +605,7 @@ export class CardContainerComponent implements OnChanges {
 
   background: #fff;
 
-  gro-section-title {
+  gor-section-title {
     display: block;
 
     height: $sectionTitleHeight;
@@ -613,12 +613,12 @@ export class CardContainerComponent implements OnChanges {
   }
 
   /* stylelint-disable selector-max-compound-selectors */
-  ::ng-deep gro-section-title .content-container {
+  ::ng-deep gor-section-title .content-container {
     position: relative;
   }
   /* stylelint-enable selector-max-compound-selectors */
 
-  gro-section-title .card-subtitle {
+  gor-section-title .card-subtitle {
     position: absolute;
     top: 0;
     right: 0;
@@ -693,8 +693,8 @@ export class CardContainerComponent implements OnChanges {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div *ngIf="cssClass||gradientBgColor" class="card-top" [ngClass]="cssClass" [style.background]="gradientBgColor"></div><div class="card-title" *ngIf="title">  <gro-section-title [title]="title">    <ng-content select="[header]"></ng-content>    <span class="card-subtitle" *ngIf="subtitle">{{subtitle}}</span>  </gro-section-title></div><div class="card-container">  <div class=\'card-content\'>    <ng-content select="[body]"></ng-content>  </div></div></div>'
-    var COMPONENTS = [{'name': 'ArrowVariationComponent', 'selector': 'mur-arrow-variation'},{'name': 'ButtonComponent', 'selector': 'mag-button'},{'name': 'CardContainerComponent', 'selector': 'gro-card-container'},{'name': 'CountdownButtonComponent', 'selector': 'mag-countdown-button'},{'name': 'DataFormatterComponent', 'selector': 'gor-data-formatter'},{'name': 'EnhancedTitleComponent', 'selector': 'gro-enhanced-title'},{'name': 'GdkCardComponent', 'selector': 'gdk-card'},{'name': 'LoadingComponent', 'selector': 'mur-loading'},{'name': 'PageHeaderComponent', 'selector': 'gor-page-header'},{'name': 'PopupConfirmComponent', 'selector': 'mag-popup-confirm'},{'name': 'ScrollContainerComponent', 'selector': 'gor-scroll-container'},{'name': 'SectionTitleComponent', 'selector': 'gro-section-title'},{'name': 'SlideToggleComponent', 'selector': 'mur-slide-toggle'},{'name': 'SlideToggleGroupComponent', 'selector': 'mur-slide-toggle-group'}];
+        var COMPONENT_TEMPLATE = '<div><div *ngIf="cssClass||gradientBgColor" class="card-top" [ngClass]="cssClass" [style.background]="gradientBgColor"></div><div class="card-title" *ngIf="title">  <gor-section-title [title]="title">    <ng-content select="[header]"></ng-content>    <span class="card-subtitle" *ngIf="subtitle">{{subtitle}}</span>  </gor-section-title></div><div class="card-container">  <div class=\'card-content\'>    <ng-content select="[body]"></ng-content>  </div></div></div>'
+    var COMPONENTS = [{'name': 'ArrowVariationComponent', 'selector': 'gor-arrow-variation, mur-arrow-variation'},{'name': 'ButtonComponent', 'selector': 'gor-button, mag-button'},{'name': 'CardContainerComponent', 'selector': 'gor-card-container, gro-card-container'},{'name': 'CountdownButtonComponent', 'selector': 'gor-countdown-button, mag-countdown-button'},{'name': 'DataFormatterComponent', 'selector': 'gor-data-formatter'},{'name': 'EnhancedTitleComponent', 'selector': 'gor-enhanced-title, gro-enhanced-title'},{'name': 'GdkCardComponent', 'selector': 'gdk-card'},{'name': 'LoadingComponent', 'selector': 'gor-loading, mur-loading'},{'name': 'PageHeaderComponent', 'selector': 'gor-page-header'},{'name': 'PopupConfirmComponent', 'selector': 'gor-popup-confirm, mag-popup-confirm'},{'name': 'ScrollContainerComponent', 'selector': 'gor-scroll-container'},{'name': 'SectionTitleComponent', 'selector': 'gor-section-title, gro-section-title'},{'name': 'SlideToggleComponent', 'selector': 'gor-slide-toggle, mur-slide-toggle'},{'name': 'SlideToggleGroupComponent', 'selector': 'gor-slide-toggle-group, mur-slide-toggle-group'}];
     var DIRECTIVES = [{'name': 'CancelableRouterLinkWithHrefDirective', 'selector': 'a[gorCancelableRouterLink]'},{'name': 'PageHeaderBottomDirective', 'selector': '[gorPageHeaderBottom]'},{'name': 'TippyDirective', 'selector': '[gorTippy]'},{'name': 'TruncateDirective', 'selector': '[gorTruncate]'}];
     var ACTUAL_COMPONENT = {'name': 'CardContainerComponent'};
 </script>
