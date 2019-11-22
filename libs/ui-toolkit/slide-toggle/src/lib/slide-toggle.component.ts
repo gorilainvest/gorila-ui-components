@@ -5,7 +5,7 @@ import { Component, Output, EventEmitter, Input } from '@angular/core';
  * The component that represent a single toggle.
  */
 @Component({
-  selector: 'mur-slide-toggle',
+  selector: 'gor-slide-toggle, mur-slide-toggle',
   templateUrl: './slide-toggle.component.html',
   styleUrls: ['./slide-toggle.component.scss']
 })

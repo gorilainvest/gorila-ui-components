@@ -13,7 +13,7 @@ $sectionTitleHeight: 25px;
 
   background: #fff;
 
-  gro-section-title {
+  gor-section-title {
     display: block;
 
     height: $sectionTitleHeight;
@@ -21,12 +21,12 @@ $sectionTitleHeight: 25px;
   }
 
   /* stylelint-disable selector-max-compound-selectors */
-  ::ng-deep gro-section-title .content-container {
+  ::ng-deep gor-section-title .content-container {
     position: relative;
   }
   /* stylelint-enable selector-max-compound-selectors */
 
-  gro-section-title .card-subtitle {
+  gor-section-title .card-subtitle {
     position: absolute;
     top: 0;
     right: 0;

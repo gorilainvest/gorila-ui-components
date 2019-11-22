@@ -12,7 +12,7 @@ export enum PATH_ARROW {
  * Triangle arrow for positive negative and zero values.
  */
 @Component({
-  selector: 'mur-arrow-variation',
+  selector: 'gor-arrow-variation, mur-arrow-variation',
   templateUrl: './arrow-variation.component.html',
   styleUrls: ['./arrow-variation.component.scss']
 })

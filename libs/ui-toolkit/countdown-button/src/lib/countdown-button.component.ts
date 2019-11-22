@@ -15,17 +15,17 @@ import { map, takeUntil, takeWhile, tap } from 'rxjs/operators';
  * A button that disable itself progressively until reset.
  */
 @Component({
-  selector: 'mag-countdown-button',
+  selector: 'gor-countdown-button, mag-countdown-button',
   template: `
     <ng-container *ngIf="(counter$ | async); else actionTemplate">
-      <mag-button btnType="gray" type="button" [disabled]="true">{{
+      <gor-button btnType="gray" type="button" [disabled]="true">{{
         counterText
-      }}</mag-button>
+      }}</gor-button>
     </ng-container>
     <ng-template #actionTemplate>
-      <mag-button btnType="green" type="button" (click)="dispatchAction()">{{
+      <gor-button btnType="green" type="button" (click)="dispatchAction()">{{
         actionText
-      }}</mag-button>
+      }}</gor-button>
     </ng-template>
   `,
   styles: [':host { display: flex; justify-content: center; width: 100%; }'],

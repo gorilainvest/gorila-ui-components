@@ -93,6 +93,7 @@
      padding: 6px;
    }
  
+   gor-enhanced-title,
    gro-enhanced-title {
      display: flex;
      align-items: center;
@@ -101,6 +102,7 @@
    }
  
    /* stylelint-disable selector-max-compound-selectors */
+   gor-enhanced-title,
    gro-enhanced-title h1 .highlight {
      text-transform: capitalize !important;
    }
@@ -112,6 +114,7 @@
      grid-template-rows: $host-top-row-height;
      padding: $host-padding-mobile;
  
+     gor-enhanced-title,
      gro-enhanced-title {
        display: flex !important;
  

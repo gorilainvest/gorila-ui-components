@@ -40,7 +40,7 @@ const styles = [
     justify-content: center;
 }
 `,
-  `gro-card-container {
+  `gor-card-container {
     background: #fff;
     display: block;
     width: 300px;
@@ -57,25 +57,25 @@ storiesOf('Card Container', module)
   .add('non-editable without subtitle and top bar', () => ({
     styles,
     template: `
-        <gro-card-container title="This is a sample">
+        <gor-card-container title="This is a sample">
             ${content}
-        </gro-card-container>
+        </gor-card-container>
         `
   }))
   .add('non-editable without subtitle', () => ({
     styles,
     template: `
-        <gro-card-container title="This is a sample" colorInit="#10c0c6" colorEnd="#4dde90">
+        <gor-card-container title="This is a sample" colorInit="#10c0c6" colorEnd="#4dde90">
             ${content}
-        </gro-card-container>
+        </gor-card-container>
         `
   }))
   .add('non-editable', () => ({
     styles,
     template: `
-        <gro-card-container title="This is a sample" colorInit="#10c0c6" colorEnd="#4dde90" subtitle="with a subtitle">
+        <gor-card-container title="This is a sample" colorInit="#10c0c6" colorEnd="#4dde90" subtitle="with a subtitle">
             ${content}
-        </gro-card-container>
+        </gor-card-container>
         `
   }))
   .add('editable', () => ({
@@ -87,8 +87,8 @@ storiesOf('Card Container', module)
     },
     styles,
     template: `
-        <gro-card-container [title]="title" [colorInit]="colorInit" [colorEnd]="colorEnd" [subtitle]="subtitle">
+        <gor-card-container [title]="title" [colorInit]="colorInit" [colorEnd]="colorEnd" [subtitle]="subtitle">
             ${content}
-        </gro-card-container>
+        </gor-card-container>
         `
   }));

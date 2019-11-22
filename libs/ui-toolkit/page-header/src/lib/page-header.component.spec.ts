@@ -11,7 +11,7 @@ import { PageHeaderComponent } from './page-header.component';
   template: `
     <div id="div-container" cdkScrollable style="width: 300px; height: 200px; overflow: scroll">
       <gor-page-header>
-        <gro-enhanced-title [title]="'My'" [highlight]="'Test'"></gro-enhanced-title>
+        <gor-enhanced-title [title]="'My'" [highlight]="'Test'"></gor-enhanced-title>
         <ng-container gorPageHeaderBottom><div>Header Filters</div></ng-container>
       </gor-page-header>
       <div style="width: 300px; height: 500px;"></div>
