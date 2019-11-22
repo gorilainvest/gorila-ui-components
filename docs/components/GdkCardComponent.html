@@ -543,6 +543,19 @@ gdk-card .mat-accordion {
   overflow-y: auto;
 }
 
+gdk-card mat-form-field {
+  .mat-form-field {
+    &amp;-underline {
+      position: static;
+    }
+
+    &amp;-subscript-wrapper {
+      position: static;
+      max-width: 180px;
+    }
+  }
+}
+
 gdk-card .mat-card-content {
   height: calc(100% - 60px);
   min-height: 400px;
@@ -552,7 +565,7 @@ gdk-card .mat-card-content {
   .mat-list[role&#x3D;&#x27;list&#x27;] {
     display: grid;
     grid-row-gap: 10px;
-    grid-auto-rows: 60px;
+    grid-auto-rows: auto;
   }
 }
 
