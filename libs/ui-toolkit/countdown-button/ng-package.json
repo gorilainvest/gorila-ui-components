@@ -5,6 +5,7 @@
     "entryFile": "src/index.ts",
     "umdModuleIds": {
       "@gorilainvest/ui-toolkit/button": "@gorilainvest/ui-toolkit/dist/button"
-    }
+    },
+    "styleIncludePaths": [ "../../shared-styles" ]
   }
 }
