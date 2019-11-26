@@ -1,6 +1,6 @@
 {
   "$schema": "../../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../../dist/libs/ui-toolkit/page-header",
+  "dest": "../../../dist/page-header",
   "lib": {
     "entryFile": "src/index.ts",
     "styleIncludePaths": [ "../../shared-styles" ]

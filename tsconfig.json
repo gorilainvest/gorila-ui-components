@@ -86,6 +86,7 @@
         "libs/ui-toolkit/scroll-container/src/index.ts"
       ],
       "@gorilainvest/ui-toolkit/page-header": [
+        "dist/page-header",
         "libs/ui-toolkit/page-header/src/index.ts"
       ]
     },
