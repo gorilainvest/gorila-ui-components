@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+
 
 /**
  * Displays an icon.
@@ -6,14 +7,16 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'gor-ui-icon',
   templateUrl: './ui-icon.component.html',
-  styleUrls: ['./ui-icon.component.scss']
+
+  styleUrls: ['./ui-icon.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UiIconComponent {
-
   /**
    * The color modifier for the icon path.
    */
-  @Input() public set color (data: string) {
+
+  @Input() public set color(data: string) {
     this._color = data;
     this.updatePath();
   }
@@ -21,8 +24,27 @@ export class UiIconComponent {
   /**
    * The icon modifier for the icon path.
    */
-  @Input() public set icon (data: string) {
+
+  @Input() public set icon(data: string) {
     this._icon = data;
+    this.updatePath();
+  }
+
+  /**
+   * Base prefix for the icon path.
+   */
+  @Input() public set pathPrefix(data: string) {
+    this._pathPrefix = data;
+    this.updatePath();
+  }
+
+  /**
+   * Icon's image file format.
+   *
+   * @default svg
+   */
+  @Input() public set imgFormat(data: string) {
+    this._imgFormat = data;
     this.updatePath();
   }
 
@@ -33,31 +55,21 @@ export class UiIconComponent {
 
   /**
    * Height of the img element.
-   * 
+
+   *
+
    * @default 100%
    */
   @Input() public height = '100%';
 
   /**
    * Width of the img element.
-   * 
+
+   *
+
    * @default 100%
    */
   @Input() public width = '100%';
-
-  /**
-   * Base prefix for the icon path.
-   * 
-   * @default /assets/img/
-   */
-  @Input() public pathPrefix = '/assets/img/';
-
-  /**
-   * Icon's image file format.
-   * 
-   * @default .svg
-   */
-  @Input() public imgFormat = '.svg';
 
   /**
    * The path for the icon's image file.
@@ -75,11 +87,26 @@ export class UiIconComponent {
   private _icon = '';
 
   /**
+   * Stores data of path prefix for the icon path.
+   *
+   * @default '/assets/img/'
+   */
+  private _pathPrefix = '/assets/img/';
+
+  /**
+   * Stores image format for the icon path.
+   *
+   * @default 'svg'
+   */
+  private _imgFormat = 'svg';
+
+  /**
    * Builds the icon path.
    * Concatenates base prefix with icon modifier, color modifier and image format.
    */
   public updatePath() {
-    this.path = this.pathPrefix + `${this._icon + ((!!this._color) ? '_' + this._color : '')}` + this.imgFormat;
-  }
 
+    this.path = this._pathPrefix + `${this._icon + (!!this._color ? '_' + this._color : '')}.` + this._imgFormat;
+
+  }
 }

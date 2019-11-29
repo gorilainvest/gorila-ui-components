@@ -5,11 +5,11 @@ import { CommonModule } from '@angular/common';
 import { UiIconComponent } from './ui-icon.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
+  imports: [CommonModule, RouterModule],
+
   declarations: [UiIconComponent],
   exports: [UiIconComponent]
 })
-export class UiIconModule { }
+export class UiIconModule {}
+
+
