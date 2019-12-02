@@ -255,8 +255,14 @@
 <path fill="none" stroke="#757575" d="M1123.0337,-144.5708C1137.8671,-134.9492 1156.4578,-122.8903 1172.3883,-112.557"/>
 <polygon fill="#757575" stroke="#757575" points="1174.4393,-115.3986 1180.9242,-107.0202 1170.6299,-109.5258 1174.4393,-115.3986"/>
 </g>
-<!-- widgets&#45;system -->
+<!-- ui&#45;icon -->
 <g id="node20" class="node">
+<title>ui&#45;icon</title>
+<ellipse fill="#efefef" stroke="#000000" cx="902.1637" cy="-306" rx="39.4409" ry="18"/>
+<text text-anchor="middle" x="902.1637" y="-301.8" font-family="Arial" font-size="14.00" fill="#000000">ui&#45;icon</text>
+</g>
+<!-- widgets&#45;system -->
+<g id="node21" class="node">
 <title>widgets&#45;system</title>
 <polygon fill="none" stroke="#000000" points="709.6106,-252 596.7168,-252 596.7168,-216 709.6106,-216 709.6106,-252"/>
 <text text-anchor="middle" x="653.1637" y="-229.8" font-family="Arial" font-size="14.00" fill="#000000">widgets&#45;system</text>
@@ -292,7 +298,7 @@
 <polygon fill="#757575" stroke="#757575" points="1014.4894,-178.8204 1023.7984,-173.7614 1013.3664,-171.9111 1014.4894,-178.8204"/>
 </g>
 <!-- widgets&#45;system&#45;e2e -->
-<g id="node21" class="node">
+<g id="node22" class="node">
 <title>widgets&#45;system&#45;e2e</title>
 <polygon fill="none" stroke="#000000" points="723.6189,-324 582.7086,-324 582.7086,-288 723.6189,-288 723.6189,-324"/>
 <text text-anchor="middle" x="653.1637" y="-301.8" font-family="Arial" font-size="14.00" fill="#000000">widgets&#45;system&#45;e2e</text>
