@@ -45,7 +45,7 @@ export class UiIconComponent {
   }
 
   /**
-   * SCSS class for the img element.
+   * CSS class for the img element.
    */
   @Input() public imgClass = '';
 
