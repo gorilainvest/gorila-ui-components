@@ -146,6 +146,12 @@
         "group:layout"
       ]
     },
+    "pipes": {
+      "tags": [
+        "exportable",
+        "scope:shared"
+      ]
+    },
     "ui-icon": {
       "tags": [
         "exportable",
