@@ -146,7 +146,7 @@
         "group:layout"
       ]
     },
-    "ui-icon": {
+    "icon": {
       "tags": [
         "exportable",
         "team:magilla",

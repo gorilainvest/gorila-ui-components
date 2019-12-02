@@ -1,14 +1,14 @@
 import { async, TestBed } from '@angular/core/testing';
-import { UiIconModule } from './ui-icon.module';
+import { IconModule } from './icon.module';
 
-describe('UiIconModule', () => {
+describe('IconModule', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [UiIconModule]
+      imports: [IconModule]
     }).compileComponents();
   }));
 
   it('should create', () => {
-    expect(UiIconModule).toBeDefined();
+    expect(IconModule).toBeDefined();
   });
 });
