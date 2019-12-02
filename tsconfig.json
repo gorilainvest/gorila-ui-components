@@ -76,14 +76,11 @@
       "@gorilainvest/ui-toolkit/page-header": [
         "libs/ui-toolkit/page-header/src/index.ts"
       ],
-      "pipes": [
-        "dist/pipes"
-      ],
-      "pipes/*": [
-        "dist/pipes/*"
-      ],
       "@gorilainvest/ui-toolkit/pipes": [
         "libs/ui-toolkit/pipes/src/index.ts"
+      ],
+      "@gorilainvest/ui-toolkit/ui-icon": [
+        "libs/ui-toolkit/ui-icon/src/index.ts"
       ]
     },
     "rootDir": "."
