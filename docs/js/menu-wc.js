@@ -299,6 +299,28 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 </li>
                             </li>
                             <li class="link">
+                                <a href="modules/PipesModule.html" data-type="entity-link">PipesModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#pipes-links-module-PipesModule-b3757f3fdf3e9a379a5fd771b78ca075"' : 'data-target="#xs-pipes-links-module-PipesModule-b3757f3fdf3e9a379a5fd771b78ca075"' }>
+                                            <span class="icon ion-md-add"></span>
+                                            <span>Pipes</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="pipes-links-module-PipesModule-b3757f3fdf3e9a379a5fd771b78ca075"' :
+                                            'id="xs-pipes-links-module-PipesModule-b3757f3fdf3e9a379a5fd771b78ca075"' }>
+                                            <li class="link">
+                                                <a href="pipes/BigCurrencyPipe.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">BigCurrencyPipe</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="pipes/CssClassPipe.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">CssClassPipe</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
                                 <a href="modules/PopupConfirmModule.html" data-type="entity-link">PopupConfirmModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
@@ -448,6 +470,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         <ul class="links collapse " ${ isNormalMode ? 'id="miscellaneous-links"' : 'id="xs-miscellaneous-links"' }>
                             <li class="link">
                                 <a href="miscellaneous/enumerations.html" data-type="entity-link">Enums</a>
+                            </li>
+                            <li class="link">
+                                <a href="miscellaneous/functions.html" data-type="entity-link">Functions</a>
                             </li>
                             <li class="link">
                                 <a href="miscellaneous/typealiases.html" data-type="entity-link">Type aliases</a>
