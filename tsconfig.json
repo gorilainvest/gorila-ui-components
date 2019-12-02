@@ -88,6 +88,10 @@
       "@gorilainvest/ui-toolkit/page-header": [
         "dist/page-header",
         "libs/ui-toolkit/page-header/src/index.ts"
+      ],
+      "@gorilainvest/ui-toolkit/ui-icon": [
+        "dist/ui-icon",
+        "libs/ui-toolkit/ui-icon/src/index.ts"
       ]
     },
     "rootDir": "."
