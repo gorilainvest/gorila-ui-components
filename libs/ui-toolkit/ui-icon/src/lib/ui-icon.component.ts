@@ -1,13 +1,11 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
-
 /**
  * Displays an icon.
  */
 @Component({
   selector: 'gor-ui-icon',
   templateUrl: './ui-icon.component.html',
-
   styleUrls: ['./ui-icon.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
@@ -15,7 +13,6 @@ export class UiIconComponent {
   /**
    * The color modifier for the icon path.
    */
-
   @Input() public set color(data: string) {
     this._color = data;
     this.updatePath();
@@ -24,7 +21,6 @@ export class UiIconComponent {
   /**
    * The icon modifier for the icon path.
    */
-
   @Input() public set icon(data: string) {
     this._icon = data;
     this.updatePath();
@@ -55,18 +51,14 @@ export class UiIconComponent {
 
   /**
    * Height of the img element.
-
    *
-
    * @default 100%
    */
   @Input() public height = '100%';
 
   /**
    * Width of the img element.
-
    *
-
    * @default 100%
    */
   @Input() public width = '100%';
@@ -105,8 +97,6 @@ export class UiIconComponent {
    * Concatenates base prefix with icon modifier, color modifier and image format.
    */
   public updatePath() {
-
     this.path = this._pathPrefix + `${this._icon + (!!this._color ? '_' + this._color : '')}.` + this._imgFormat;
-
   }
 }

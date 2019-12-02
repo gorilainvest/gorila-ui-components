@@ -11,5 +11,3 @@ import { UiIconComponent } from './ui-icon.component';
   exports: [UiIconComponent]
 })
 export class UiIconModule {}
-
-
