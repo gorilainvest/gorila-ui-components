@@ -4,12 +4,12 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
  * Displays an icon.
  */
 @Component({
-  selector: 'gor-ui-icon',
-  templateUrl: './ui-icon.component.html',
-  styleUrls: ['./ui-icon.component.scss'],
+  selector: 'gor-icon',
+  templateUrl: './icon.component.html',
+  styleUrls: ['./icon.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class UiIconComponent {
+export class IconComponent {
   /**
    * The color modifier for the icon path.
    */

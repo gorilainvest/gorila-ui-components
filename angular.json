@@ -938,25 +938,25 @@
       },
       "schematics": {}
     },
-    "ui-icon": {
+    "icon": {
       "projectType": "library",
-      "root": "libs/ui-toolkit/ui-icon",
-      "sourceRoot": "libs/ui-toolkit/ui-icon/src",
+      "root": "libs/ui-toolkit/icon",
+      "sourceRoot": "libs/ui-toolkit/icon/src",
       "prefix": "gor",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "libs/ui-toolkit/ui-icon/tsconfig.lib.json",
-            "project": "libs/ui-toolkit/ui-icon/ng-package.json"
+            "tsConfig": "libs/ui-toolkit/icon/tsconfig.lib.json",
+            "project": "libs/ui-toolkit/icon/ng-package.json"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/ui-toolkit/ui-icon/tsconfig.lib.json",
-              "libs/ui-toolkit/ui-icon/tsconfig.spec.json"
+              "libs/ui-toolkit/icon/tsconfig.lib.json",
+              "libs/ui-toolkit/icon/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -966,9 +966,9 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "libs/ui-toolkit/ui-icon/src/test.ts",
-            "tsConfig": "libs/ui-toolkit/ui-icon/tsconfig.spec.json",
-            "karmaConfig": "libs/ui-toolkit/ui-icon/karma.conf.js"
+            "main": "libs/ui-toolkit/icon/src/test.ts",
+            "tsConfig": "libs/ui-toolkit/icon/tsconfig.spec.json",
+            "karmaConfig": "libs/ui-toolkit/icon/karma.conf.js"
           }
         }
       },

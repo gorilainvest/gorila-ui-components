@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
-import { UiIconComponent } from './ui-icon.component';
+import { IconComponent } from './icon.component';
 
 @NgModule({
   imports: [CommonModule, RouterModule],
 
-  declarations: [UiIconComponent],
-  exports: [UiIconComponent]
+  declarations: [IconComponent],
+  exports: [IconComponent]
 })
-export class UiIconModule {}
+export class IconModule {}

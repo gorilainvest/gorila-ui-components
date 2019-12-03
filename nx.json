@@ -152,7 +152,7 @@
         "scope:shared"
       ]
     },
-    "ui-icon": {
+    "icon": {
       "tags": [
         "exportable",
         "team:magilla",
