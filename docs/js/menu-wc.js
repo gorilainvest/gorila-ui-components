@@ -248,6 +248,24 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
+                                <a href="modules/IconModule.html" data-type="entity-link">IconModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-IconModule-cc742024bd13c3e8d48d94766f155bd5"' : 'data-target="#xs-components-links-module-IconModule-cc742024bd13c3e8d48d94766f155bd5"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-IconModule-cc742024bd13c3e8d48d94766f155bd5"' :
+                                            'id="xs-components-links-module-IconModule-cc742024bd13c3e8d48d94766f155bd5"' }>
+                                            <li class="link">
+                                                <a href="components/IconComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">IconComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
                                 <a href="modules/LoadingModule.html" data-type="entity-link">LoadingModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
@@ -392,24 +410,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                             <li class="link">
                                                 <a href="components/SlideToggleGroupComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SlideToggleGroupComponent</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                            </li>
-                            <li class="link">
-                                <a href="modules/UiIconModule.html" data-type="entity-link">UiIconModule</a>
-                                    <li class="chapter inner">
-                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-UiIconModule-a3a76f206f443cd3715313d542df1929"' : 'data-target="#xs-components-links-module-UiIconModule-a3a76f206f443cd3715313d542df1929"' }>
-                                            <span class="icon ion-md-cog"></span>
-                                            <span>Components</span>
-                                            <span class="icon ion-ios-arrow-down"></span>
-                                        </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-UiIconModule-a3a76f206f443cd3715313d542df1929"' :
-                                            'id="xs-components-links-module-UiIconModule-a3a76f206f443cd3715313d542df1929"' }>
-                                            <li class="link">
-                                                <a href="components/UiIconComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">UiIconComponent</a>
                                             </li>
                                         </ul>
                                     </li>

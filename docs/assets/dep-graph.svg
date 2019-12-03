@@ -135,8 +135,14 @@
 <ellipse fill="#efefef" stroke="#000000" cx="719.1637" cy="-18" rx="71.8589" ry="18"/>
 <text text-anchor="middle" x="719.1637" y="-13.8" font-family="Arial" font-size="14.00" fill="#000000">enhanced&#45;title</text>
 </g>
-<!-- layout&#45;shell -->
+<!-- icon -->
 <g id="node14" class="node">
+<title>icon</title>
+<ellipse fill="#efefef" stroke="#000000" cx="892.1637" cy="-306" rx="28.991" ry="18"/>
+<text text-anchor="middle" x="892.1637" y="-301.8" font-family="Arial" font-size="14.00" fill="#000000">icon</text>
+</g>
+<!-- layout&#45;shell -->
+<g id="node15" class="node">
 <title>layout&#45;shell</title>
 <ellipse fill="#efefef" stroke="#000000" cx="812.1637" cy="-162" rx="59.7244" ry="18"/>
 <text text-anchor="middle" x="812.1637" y="-157.8" font-family="Arial" font-size="14.00" fill="#000000">layout&#45;shell</text>
@@ -166,7 +172,7 @@
 <polygon fill="#757575" stroke="#757575" points="723.0225,-45.7988 718.9854,-36.0033 716.0328,-46.1784 723.0225,-45.7988"/>
 </g>
 <!-- scroll&#45;container -->
-<g id="node15" class="node">
+<g id="node16" class="node">
 <title>scroll&#45;container</title>
 <ellipse fill="#efefef" stroke="#000000" cx="888.1637" cy="-18" rx="76.4768" ry="18"/>
 <text text-anchor="middle" x="888.1637" y="-13.8" font-family="Arial" font-size="14.00" fill="#000000">scroll&#45;container</text>
@@ -178,7 +184,7 @@
 <polygon fill="#757575" stroke="#757575" points="897.5623,-45.3665 892.5109,-36.0534 890.652,-46.4839 897.5623,-45.3665"/>
 </g>
 <!-- page&#45;header -->
-<g id="node16" class="node">
+<g id="node17" class="node">
 <title>page&#45;header</title>
 <ellipse fill="#efefef" stroke="#000000" cx="812.1637" cy="-90" rx="65.5623" ry="18"/>
 <text text-anchor="middle" x="812.1637" y="-85.8" font-family="Arial" font-size="14.00" fill="#000000">page&#45;header</text>
@@ -202,19 +208,19 @@
 <polygon fill="#757575" stroke="#757575" points="864.8198,-44.9366 869.6723,-35.5182 860.0056,-39.8549 864.8198,-44.9366"/>
 </g>
 <!-- pipes -->
-<g id="node17" class="node">
+<g id="node18" class="node">
 <title>pipes</title>
-<ellipse fill="#efefef" stroke="#000000" cx="897.1637" cy="-306" rx="34.2259" ry="18"/>
-<text text-anchor="middle" x="897.1637" y="-301.8" font-family="Arial" font-size="14.00" fill="#000000">pipes</text>
+<ellipse fill="#efefef" stroke="#000000" cx="973.1637" cy="-306" rx="34.2259" ry="18"/>
+<text text-anchor="middle" x="973.1637" y="-301.8" font-family="Arial" font-size="14.00" fill="#000000">pipes</text>
 </g>
 <!-- popup&#45;confirm -->
-<g id="node18" class="node">
+<g id="node19" class="node">
 <title>popup&#45;confirm</title>
 <ellipse fill="#efefef" stroke="#000000" cx="407.1637" cy="-90" rx="72.9857" ry="18"/>
 <text text-anchor="middle" x="407.1637" y="-85.8" font-family="Arial" font-size="14.00" fill="#000000">popup&#45;confirm</text>
 </g>
 <!-- popups&#45;modals&#45;shell -->
-<g id="node19" class="node">
+<g id="node20" class="node">
 <title>popups&#45;modals&#45;shell</title>
 <ellipse fill="#efefef" stroke="#000000" cx="462.1637" cy="-162" rx="100.2129" ry="18"/>
 <text text-anchor="middle" x="462.1637" y="-157.8" font-family="Arial" font-size="14.00" fill="#000000">popups&#45;modals&#45;shell</text>
@@ -238,7 +244,7 @@
 <polygon fill="#757575" stroke="#757575" points="429.6994,-113.7355 420.8476,-107.9134 424.1367,-117.9848 429.6994,-113.7355"/>
 </g>
 <!-- presentational&#45;shell -->
-<g id="node20" class="node">
+<g id="node21" class="node">
 <title>presentational&#45;shell</title>
 <ellipse fill="#efefef" stroke="#000000" cx="1096.1637" cy="-162" rx="94.9903" ry="18"/>
 <text text-anchor="middle" x="1096.1637" y="-157.8" font-family="Arial" font-size="14.00" fill="#000000">presentational&#45;shell</text>
@@ -260,12 +266,6 @@
 <title>presentational&#45;shell&#45;&gt;data&#45;formatter</title>
 <path fill="none" stroke="#757575" d="M1123.0337,-144.5708C1137.8671,-134.9492 1156.4578,-122.8903 1172.3883,-112.557"/>
 <polygon fill="#757575" stroke="#757575" points="1174.4393,-115.3986 1180.9242,-107.0202 1170.6299,-109.5258 1174.4393,-115.3986"/>
-</g>
-<!-- ui&#45;icon -->
-<g id="node21" class="node">
-<title>ui&#45;icon</title>
-<ellipse fill="#efefef" stroke="#000000" cx="989.1637" cy="-306" rx="39.4409" ry="18"/>
-<text text-anchor="middle" x="989.1637" y="-301.8" font-family="Arial" font-size="14.00" fill="#000000">ui&#45;icon</text>
 </g>
 <!-- widgets&#45;system -->
 <g id="node22" class="node">

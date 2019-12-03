@@ -21,44 +21,44 @@
 <polygon fill="#fb8072" stroke="transparent" points="406,-10 406,-30 426,-30 426,-10 406,-10"/>
 <text text-anchor="start" x="429.7258" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Exports</text>
 <g id="clust1" class="cluster">
-<title>cluster_UiIconModule</title>
-<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="170,-70 170,-268 326,-268 326,-70 170,-70"/>
+<title>cluster_IconModule</title>
+<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="177,-70 177,-268 319,-268 319,-70 177,-70"/>
 </g>
 <g id="clust2" class="cluster">
-<title>cluster_UiIconModule_declarations</title>
-<polygon fill="none" stroke="#000000" points="180,-78 180,-130 316,-130 316,-78 180,-78"/>
+<title>cluster_IconModule_declarations</title>
+<polygon fill="none" stroke="#000000" points="187,-78 187,-130 309,-130 309,-78 187,-78"/>
 </g>
 <g id="clust5" class="cluster">
-<title>cluster_UiIconModule_exports</title>
-<polygon fill="none" stroke="#000000" points="178,-208 178,-260 318,-260 318,-208 178,-208"/>
+<title>cluster_IconModule_exports</title>
+<polygon fill="none" stroke="#000000" points="185,-208 185,-260 311,-260 311,-208 185,-208"/>
 </g>
-<!-- UiIconComponent -->
+<!-- IconComponent -->
 <g id="node1" class="node">
-<title>UiIconComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="308.205,-122 187.795,-122 187.795,-86 308.205,-86 308.205,-122"/>
-<text text-anchor="middle" x="248" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">UiIconComponent</text>
+<title>IconComponent</title>
+<polygon fill="#ffffb3" stroke="#000000" points="301.2078,-122 194.7922,-122 194.7922,-86 301.2078,-86 301.2078,-122"/>
+<text text-anchor="middle" x="248" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">IconComponent</text>
 </g>
-<!-- UiIconModule -->
+<!-- IconModule -->
 <g id="node2" class="node">
-<title>UiIconModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="297.4231,-187 294.4231,-191 273.4231,-191 270.4231,-187 198.5769,-187 198.5769,-151 297.4231,-151 297.4231,-187"/>
-<text text-anchor="middle" x="248" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">UiIconModule</text>
+<title>IconModule</title>
+<polygon fill="#8dd3c7" stroke="#000000" points="290.4261,-187 287.4261,-191 266.4261,-191 263.4261,-187 205.5739,-187 205.5739,-151 290.4261,-151 290.4261,-187"/>
+<text text-anchor="middle" x="248" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">IconModule</text>
 </g>
-<!-- UiIconComponent&#45;&gt;UiIconModule -->
+<!-- IconComponent&#45;&gt;IconModule -->
 <g id="edge1" class="edge">
-<title>UiIconComponent&#45;&gt;UiIconModule</title>
+<title>IconComponent&#45;&gt;IconModule</title>
 <path fill="none" stroke="#000000" d="M248,-122.1061C248,-122.1061 248,-140.991 248,-140.991"/>
 <polygon fill="#000000" stroke="#000000" points="244.5001,-140.9909 248,-150.991 251.5001,-140.991 244.5001,-140.9909"/>
 </g>
-<!-- UiIconComponent  -->
+<!-- IconComponent  -->
 <g id="node3" class="node">
-<title>UiIconComponent </title>
-<polygon fill="#fb8072" stroke="#000000" points="309.7052,-252 186.2948,-252 186.2948,-216 309.7052,-216 309.7052,-252"/>
-<text text-anchor="middle" x="248" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">UiIconComponent </text>
+<title>IconComponent </title>
+<polygon fill="#fb8072" stroke="#000000" points="302.708,-252 193.292,-252 193.292,-216 302.708,-216 302.708,-252"/>
+<text text-anchor="middle" x="248" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">IconComponent </text>
 </g>
-<!-- UiIconModule&#45;&gt;UiIconComponent  -->
+<!-- IconModule&#45;&gt;IconComponent  -->
 <g id="edge2" class="edge">
-<title>UiIconModule&#45;&gt;UiIconComponent </title>
+<title>IconModule&#45;&gt;IconComponent </title>
 <path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M248,-187.1061C248,-187.1061 248,-205.991 248,-205.991"/>
 <polygon fill="#000000" stroke="#000000" points="244.5001,-205.9909 248,-215.991 251.5001,-205.991 244.5001,-205.9909"/>
 </g>
