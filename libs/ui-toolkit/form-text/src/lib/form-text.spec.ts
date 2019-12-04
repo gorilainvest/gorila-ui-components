@@ -1,14 +1,14 @@
 import { async, TestBed } from '@angular/core/testing';
-import { FormTextModule } from './form-text.module';
+import { FormTextComponent } from './form-text.component';
 
-describe('FormTextModule', () => {
+describe('FormTextComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [FormTextModule]
+      imports: [FormTextComponent]
     }).compileComponents();
   }));
 
   it('should create', () => {
-    expect(FormTextModule).toBeDefined();
+    expect(FormTextComponent).toBeDefined();
   });
 });
