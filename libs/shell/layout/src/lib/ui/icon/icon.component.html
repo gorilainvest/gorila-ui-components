@@ -1,0 +1,69 @@
+<gdk-card
+  title="Icon"
+  subtitle="A customizable icon"
+  [withoutOutput]="true"
+>
+  <mat-list role="list" class="inputs">
+    <mat-list-item role="listitem">
+      <mat-form-field>
+        <mat-label>Icon</mat-label>
+        <mat-select [formControl]="icon" required>
+          <mat-option value="arrow_down">Arrow Down</mat-option>
+          <mat-option value="buy_circle">Buy Circle</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <mat-form-field>
+        <mat-label>Color</mat-label>
+        <mat-select [formControl]="color" required>
+          <mat-option value="black">Black</mat-option>
+          <mat-option value="white">White</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <mat-form-field>
+        <mat-label>Height</mat-label>
+        <input
+          matInput
+          [formControl]="height"
+        />
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <mat-form-field>
+        <mat-label>Width</mat-label>
+        <input
+          matInput
+          [formControl]="width"
+        />
+      </mat-form-field>
+    </mat-list-item>
+  </mat-list>
+  <div class="widget">
+    <gor-icon
+      [color]="color.value"
+      [icon]="icon.value"
+      [pathPrefix]="pathPrefix"
+      [imgFormat]="imgFormat"
+      [imgClass]="imgClass"
+      [height]="height.value"
+      [width]="width.value"></gor-icon>
+  </div>
+
+  <pre class="code">
+    <span>// module import</span>
+    <span>import &#123; IconModule &#125; from '@gorilainvest/ui-toolkit/dist/icon';</span>
+    <span></span>
+    <span>// template.html</span>
+    <span>&lt;gor-icon</span>
+    <span>  [color]=&quot;{{color.value}}&quot;</span>
+    <span>  [icon]=&quot;{{icon.value}}&quot;&gt;</span>
+    <span>  [pathPrefix]=&quot;{{pathPrefix}}&quot;&gt;</span>
+    <span>  [height]=&quot;{{height.value}}&quot;</span>
+    <span>  [width]=&quot;{{width.value}}&quot;</span>
+    <span>&lt;/gor-icon&gt;</span>
+    <span></span>
+  </pre>
+</gdk-card>
