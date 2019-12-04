@@ -160,6 +160,15 @@
         "scope:ui",
         "group:layout"
       ]
+    },
+    "form-text": {
+      "tags": [
+        "exportable",
+        "team:murphy",
+        "scope:shared",
+        "scope:ui",
+        "group:controls"
+      ]
     }
   }
 }
