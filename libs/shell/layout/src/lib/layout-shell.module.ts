@@ -9,17 +9,16 @@ import { MatSelectModule } from "@angular/material/select";
 import { RouterModule } from "@angular/router";
 import { GdkModule } from "@gorilainvest/gdk";
 
-
-
 import { CardContainerModule } from '@gorilainvest/ui-toolkit/card-container';
+import { CurrencyDisplayModule } from '@gorilainvest/ui-toolkit/currency-display';
 import { EnhancedTitleModule } from '@gorilainvest/ui-toolkit/enhanced-title';
 import { ScrollContainerModule } from '@gorilainvest/ui-toolkit/scroll-container';
 import { SectionTitleModule } from '@gorilainvest/ui-toolkit/section-title';
 import { PageHeaderModule } from '@gorilainvest/ui-toolkit/page-header';
 
-
 import { LayoutComponent } from "./layout/layout.component";
 import { CardContainerComponent } from "./ui/card-container/card-container.component";
+import { CurrencyDisplayComponent } from './ui/currency-display/currency-display.component';
 import { EnhancedTitleComponent } from "./ui/enhanced-title/enhanced-title.component";
 import { ScrollContainerComponent } from './ui/scroll-container/scroll-container.component';
 import { SectionTitleComponent } from "./ui/section-title/section-title.component";
@@ -39,6 +38,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     ScrollingModule,
     GdkModule,
     CardContainerModule,
+    CurrencyDisplayModule,
     EnhancedTitleModule,
     ScrollContainerModule,
     SectionTitleModule,
@@ -48,6 +48,11 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
         path: "card-container",
         pathMatch: "full",
         component: CardContainerComponent
+      },
+      {
+        path: "currency-display",
+        pathMatch: "full",
+        component: CurrencyDisplayComponent
       },
       {
         path: "enhanced-title",
@@ -78,7 +83,8 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     ScrollContainerComponent,
     SectionTitleComponent,
     LayoutComponent,
-    PageHeaderComponent
+    PageHeaderComponent,
+    CurrencyDisplayComponent
   ]
 })
 export class LayoutShellModule {}
