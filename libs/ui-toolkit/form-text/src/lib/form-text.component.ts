@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 /**
- * Text input for form
+ * Text input for forms
  */
 @Component({
   selector: 'gor-form-text',
@@ -17,11 +17,10 @@ export class FormTextComponent {
 
   /**
    * Determine if charactere count should be displayed
-   * 
+   *
    * @default false
    */
   @Input() public displayCount = false;
-
 
   /**
    * Text to display as a hint of input
@@ -42,14 +41,14 @@ export class FormTextComponent {
 
   /**
    * Determine if input can be resized
-   * 
+   *
    * @default true
    */
   @Input() public resizable = true;
 
   /**
    * Number of rows of input
-   * 
+   *
    * @default 3
    */
   @Input() public rows = 3;
@@ -58,5 +57,4 @@ export class FormTextComponent {
    * Empty constructor.
    */
   constructor() {}
-
 }

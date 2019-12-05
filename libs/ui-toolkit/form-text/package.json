@@ -1,5 +1,5 @@
 {
-  "name": "@gorilainvest/ui-toolkit-form-text",
+  "name": "@gorilainvest/ui-toolkit/form-text",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^8.0.0",
