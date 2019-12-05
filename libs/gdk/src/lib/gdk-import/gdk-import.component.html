@@ -1,0 +1,12 @@
+<pre>
+  <span>// module import</span>
+  <span>import &#123; {{moduleTitle}}Module &#125; from '@gorilainvest/ui-toolkit/dist/{{moduleNameStr}}';</span>
+  <span></span>
+  <span>// template.html</span>
+  <span>&lt;{{prefix}}-{{moduleNameStr}}<ng-container *ngIf="!keys || !keys.length; else displayParameters">&gt;&lt;/{{prefix}}-{{moduleNameStr}}&gt;</ng-container></span>
+  <span></span>
+</pre>
+
+<ng-template #displayParameters>
+  <ng-container *ngFor="let key of keys"> [{{key}}]=&quot;'{{values[key] || ''}}'&quot;</ng-container>&gt;&lt;/{{prefix}}-{{moduleNameStr}}&gt;
+<ng-template>

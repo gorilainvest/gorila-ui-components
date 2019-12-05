@@ -4,6 +4,7 @@ import { CurrencyDisplayComponent } from './currency-display.component';
 
 @NgModule({
   declarations: [CurrencyDisplayComponent],
+  exports: [CurrencyDisplayComponent],
   imports: [
     CommonModule
   ]

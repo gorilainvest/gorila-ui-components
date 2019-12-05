@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'gor-currency-display',
+  selector: 'gro-currency-display',
   templateUrl: './currency-display.component.html',
   styleUrls: ['./currency-display.component.scss']
 })
