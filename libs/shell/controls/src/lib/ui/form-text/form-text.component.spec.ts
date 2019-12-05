@@ -1,10 +1,10 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-import { NoopAnimationsModule } from "@angular/platform-browser/animations";
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-import { ControlsShellModule } from "../../controls-shell.module";
-import { FormTextComponent } from "./form-text.component";
+import { ControlsShellModule } from '../../controls-shell.module';
+import { FormTextComponent } from './form-text.component';
 
-describe("FormTextComponent", () => {
+describe('FormTextComponent', () => {
   let component: FormTextComponent;
   let fixture: ComponentFixture<FormTextComponent>;
 
@@ -20,8 +20,9 @@ describe("FormTextComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });
+
 

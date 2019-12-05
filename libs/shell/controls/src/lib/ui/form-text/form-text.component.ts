@@ -1,10 +1,10 @@
-import { Component, OnInit } from "@angular/core";
-import { FormControl } from "@angular/forms";
+import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
-  selector: "gorilainvest-form-text",
-  templateUrl: "./form-text.component.html",
-  styleUrls: ["./form-text.component.scss"]
+  selector: 'gorilainvest-form-text',
+  templateUrl: './form-text.component.html',
+  styleUrls: ['./form-text.component.scss']
 })
 export class FormTextComponent implements OnInit {
   public control = new FormControl();
@@ -21,4 +21,5 @@ export class FormTextComponent implements OnInit {
 
   ngOnInit() {}
 }
+
 
