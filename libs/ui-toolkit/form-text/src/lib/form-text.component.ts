@@ -54,6 +54,13 @@ export class FormTextComponent {
   @Input() public rows = 3;
 
   /**
+   * Determine if input is disabled
+   */
+  @Input() public set disabled(disable: boolean) {
+    disable ? this.control.disable() : this.control.enable();
+  }
+
+  /**
    * Empty constructor.
    */
   constructor() {}

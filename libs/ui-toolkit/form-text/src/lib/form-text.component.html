@@ -4,7 +4,7 @@
     [placeholder]="placeholder"
     [formControl]="control"
     [maxLength]="maxLength"
-    rows="1">
+    [rows]="rows">
   </textarea>
   <mat-hint *ngIf="displayCount" align="end">{{ control.value?.length || 0 }}/{{ maxLength }}</mat-hint>
 </mat-form-field>
