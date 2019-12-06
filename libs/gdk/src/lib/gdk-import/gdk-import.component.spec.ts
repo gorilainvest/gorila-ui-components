@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { GdkModule } from "../gdk.module";
 import { GdkImportComponent } from './gdk-import.component';
 
 describe('GdkImportComponent', () => {
@@ -8,7 +9,7 @@ describe('GdkImportComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GdkImportComponent ]
+      imports: [GdkModule]
     })
     .compileComponents();
   }));
