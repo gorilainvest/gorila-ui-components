@@ -154,6 +154,8 @@ SOFTWARE.
 
 @gorilainvest/ui-toolkit/enhanced-title
 
+@gorilainvest/ui-toolkit/icon
+
 @gorilainvest/ui-toolkit/loading
 
 @gorilainvest/ui-toolkit/page-header
