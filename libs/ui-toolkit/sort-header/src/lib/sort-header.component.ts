@@ -40,8 +40,14 @@ export class SortHeaderComponent extends MatSortHeader {
   // tslint:disable-next-line
   @Input('gor-sort-header') public id: string;
 
+  /**
+   * Enables/disables component.
+   */
   @Input() public disabled: boolean;
 
+  /**
+   * Defines whether to display the white arrow or the default arrow.
+   */
   @Input() public arrowWhite: boolean;
 
   @HostBinding('attr.aria-sort') public ariaSort = this._getAriaSortAttribute();
