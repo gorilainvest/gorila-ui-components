@@ -11,11 +11,7 @@ describe('SortHeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        CommonModule,
-        MatSortModule,
-        IconModule
-      ],
+      imports: [CommonModule, MatSortModule, IconModule],
       declarations: [SortHeaderComponent]
     }).compileComponents();
   }));

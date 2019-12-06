@@ -29,7 +29,7 @@ interface MatSortHeaderColumnDef {
     matSortAnimations.rightPointer,
     matSortAnimations.arrowOpacity,
     matSortAnimations.arrowPosition,
-    matSortAnimations.allowChildren,
+    matSortAnimations.allowChildren
   ]
 })
 export class SortHeaderComponent extends MatSortHeader {
@@ -37,7 +37,7 @@ export class SortHeaderComponent extends MatSortHeader {
    * ID of this sort header. If used within the context of a CdkColumnDef, this will default to
    * the column's name.
    */
-   // tslint:disable-next-line
+  // tslint:disable-next-line
   @Input('gor-sort-header') public id: string;
 
   @Input() public disabled: boolean;
