@@ -1,0 +1,91 @@
+// Get from Angular Material2 repository
+// https://github.com/angular/components/blob/master/src/material/sort/sort-header.scss
+
+$mat-sort-header-arrow-margin: 6px;
+$mat-sort-header-arrow-container-size: 12px;
+$mat-sort-header-arrow-stem-size: 10px;
+$mat-sort-header-arrow-pointer-length: 6px;
+$mat-sort-header-arrow-thickness: 2px;
+$mat-sort-header-arrow-hint-opacity: 0.38;
+
+.mat-sort-header-container {
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+
+  .mat-sort-header-disabled & {
+    cursor: default;
+  }
+}
+
+.mat-sort-header-position-before {
+  flex-direction: row-reverse;
+}
+
+.mat-sort-header-button {
+  display: flex;
+  align-items: center;
+
+  padding: 0;
+
+  color: currentColor;
+  font: inherit;
+
+  background: 0 0;
+
+  border: 0;
+  outline: 0;
+
+  cursor: inherit;
+
+  // The `outline: 0` from above works on all browsers, however Firefox also
+  // adds a special `focus-inner` which we have to disable explicitly. See:
+  // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#Firefox
+  &::-moz-focus-inner {
+    border: 0;
+  }
+}
+
+.mat-sort-header-arrow {
+  position: relative;
+
+  display: flex;
+
+  width: $mat-sort-header-arrow-container-size;
+  min-width: $mat-sort-header-arrow-container-size;
+  height: $mat-sort-header-arrow-container-size;
+
+  // Start off at 0 since the arrow may become visible while parent are animating.
+  // This will be overwritten when the arrow animations kick in. See #11819.
+  opacity: 0;
+
+  &,
+  [dir='rtl'] .mat-sort-header-position-before & {
+    margin: 0 0 0 $mat-sort-header-arrow-margin;
+  }
+
+  .mat-sort-header-position-before &,
+  [dir='rtl'] & {
+    margin: 0 $mat-sort-header-arrow-margin 0 0;
+  }
+}
+
+// Own style
+.mat-sort-header-arrow {
+  margin-bottom: 3px !important;
+
+  &,
+  [dir='rtl'] .mat-sort-header-position-before & {
+    margin: 0;
+  }
+
+  .mat-sort-header-position-before &,
+  [dir='rtl'] & {
+    margin: 0;
+  }
+}
+
+.mat-sort-header-container {
+  align-items: flex-end;
+}
