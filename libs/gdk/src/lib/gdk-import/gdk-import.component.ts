@@ -22,6 +22,6 @@ export class GdkImportComponent {
   @Input() public set form(form: FormGroup) {
     this.keys = keys(form.controls);
     this.values = form.value;
-    form.valueChanges.subscribe(data => console.log('@@##', data));
+    form.valueChanges.subscribe(data => this.values = data);
   }
 }

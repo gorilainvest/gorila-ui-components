@@ -3,10 +3,29 @@
   <span>import &#123; {{moduleTitle}}Module &#125; from '@gorilainvest/ui-toolkit/dist/{{moduleNameStr}}';</span>
   <span></span>
   <span>// template.html</span>
-  <span>&lt;{{prefix}}-{{moduleNameStr}}<ng-container *ngIf="!keys || !keys.length; else displayParameters">&gt;&lt;/{{prefix}}-{{moduleNameStr}}&gt;</ng-container></span>
+  <ng-container *ngIf="!!keys&&keys.length>0;else withoutParameters">
+    <ng-container *ngTemplateOutlet="withParameters"></ng-container>
+  </ng-container>
   <span></span>
 </pre>
 
+<ng-template #withoutParameters>
+  <span style='margin: 0'>
+    <ng-container *ngTemplateOutlet="openTag"></ng-container>
+    <ng-container *ngTemplateOutlet="closeTag"></ng-container>
+  </span>
+</ng-template>
+<ng-template #withParameters>
+  <span style='margin: 0'>
+    <ng-container *ngTemplateOutlet="openTag"></ng-container>
+  </span>
+  <ng-container *ngTemplateOutlet="displayParameters"></ng-container>
+  <span style='margin: 0'>
+    <ng-container *ngTemplateOutlet="closeTag"></ng-container>
+  </span>
+</ng-template>
+<ng-template #openTag>&lt;{{prefix}}-{{moduleNameStr}}</ng-template>
+<ng-template #closeTag>&gt;&lt;/{{prefix}}-{{moduleNameStr}}&gt;</ng-template>
 <ng-template #displayParameters>
-  <ng-container *ngFor="let key of keys"> [{{key}}]=&quot;'{{values[key] || ''}}'&quot;</ng-container>&gt;&lt;/{{prefix}}-{{moduleNameStr}}&gt;
+  <span *ngFor="let key of keys" style='margin: 0'> [{{key}}]=&quot;'{{values[key]}}'&quot;</span>
 <ng-template>

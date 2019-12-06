@@ -8,6 +8,10 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class CurrencyDisplayComponent {
   public form = new FormGroup({
-    'test': new FormControl('abc')
+    'value': new FormControl(10.01022),
+    'currencyCode': new FormControl('BRL'),
+    'symbolDisplay': new FormControl('symbol'),
+    'digitInfo': new FormControl('1.0-3'),
+    'hideNegative': new FormControl(false),
   });
 }
