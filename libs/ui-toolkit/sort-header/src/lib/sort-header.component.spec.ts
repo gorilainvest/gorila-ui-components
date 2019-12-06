@@ -56,7 +56,7 @@ class TestHostComponent {
   public disabled = false;
 }
 
-fdescribe('SortHeaderComponent', () => {
+describe('SortHeaderComponent', () => {
   let component: TestHostComponent;
   let fixture: ComponentFixture<TestHostComponent>;
 
