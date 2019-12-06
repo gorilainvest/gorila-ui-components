@@ -79,26 +79,26 @@ describe('SortHeaderComponent', () => {
   });
 
   it('should display arrow, if enabled', () => {
-    const arrow = fixture.debugElement.query(By.css('ui-icon'));
+    const arrow = fixture.debugElement.query(By.css('gor-icon'));
     expect(arrow).toBeTruthy();
   });
 
   it('should not display arrow, if disabled', () => {
     component.disabled = true;
     fixture.detectChanges();
-    const arrow = fixture.debugElement.query(By.css('ui-icon'));
+    const arrow = fixture.debugElement.query(By.css('gor-icon'));
     expect(arrow).toBeFalsy();
   });
 
   it('should display white arrow if arrowWhite input is true', () => {
-    const arrow = fixture.debugElement.query(By.css('ui-icon'));
+    const arrow = fixture.debugElement.query(By.css('gor-icon'));
     expect(arrow.attributes.icon).toEqual('arrow_up_white');
   });
 
   it('should display black arrow if arrowWhite input is false', () => {
     component.arrowWhite = false;
     fixture.detectChanges();
-    const arrow = fixture.debugElement.query(By.css('ui-icon'));
+    const arrow = fixture.debugElement.query(By.css('gor-icon'));
     expect(arrow.attributes.icon).toEqual('arrow_up');
   });
 });

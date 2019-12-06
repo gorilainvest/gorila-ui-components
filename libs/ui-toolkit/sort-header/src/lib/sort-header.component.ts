@@ -17,7 +17,8 @@ interface MatSortHeaderColumnDef {
 }
 
 @Component({
-  selector: 'gor-sort-header',
+  // tslint:disable-next-line: component-selector
+  selector: '[gor-sort-header]',
   exportAs: 'gorSortHeader',
   templateUrl: './sort-header.component.html',
   styleUrls: ['./sort-header.component.scss'],
