@@ -418,6 +418,24 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         </ul>
                                     </li>
                             </li>
+                            <li class="link">
+                                <a href="modules/SortHeaderModule.html" data-type="entity-link">SortHeaderModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-SortHeaderModule-3cad3ebe5014b088f84aa667fef6e13a"' : 'data-target="#xs-components-links-module-SortHeaderModule-3cad3ebe5014b088f84aa667fef6e13a"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SortHeaderModule-3cad3ebe5014b088f84aa667fef6e13a"' :
+                                            'id="xs-components-links-module-SortHeaderModule-3cad3ebe5014b088f84aa667fef6e13a"' }>
+                                            <li class="link">
+                                                <a href="components/SortHeaderComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SortHeaderComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
                 </ul>
                 </li>
                     <li class="chapter">
@@ -443,6 +461,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         <ul class="links collapse " ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
                             <li class="link">
                                 <a href="interfaces/HTMLTippyProps.html" data-type="entity-link">HTMLTippyProps</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/MatSortHeaderColumnDef.html" data-type="entity-link">MatSortHeaderColumnDef</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/PopupConfirmAction.html" data-type="entity-link">PopupConfirmAction</a>
