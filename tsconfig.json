@@ -80,8 +80,10 @@
         "libs/ui-toolkit/pipes/src/index.ts"
       ],
       "@gorilainvest/ui-toolkit/icon": [
-        "dist/icon",
         "libs/ui-toolkit/icon/src/index.ts"
+      ],
+      "@gorilainvest/ui-toolkit/sort-header": [
+        "libs/ui-toolkit/sort-header/src/index.ts"
       ]
     },
     "rootDir": "."
