@@ -1,0 +1,6 @@
+<div class="header-container" [ngClass]="cssClass">
+  <h1>
+    {{ title }} <span class="highlight" *ngIf="highlight">{{ highlight }}</span>
+    <ng-content></ng-content>
+  </h1>
+</div>

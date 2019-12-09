@@ -79,6 +79,9 @@
       "@gorilainvest/ui-toolkit/pipes": [
         "libs/ui-toolkit/pipes/src/index.ts"
       ],
+      "@gorilainvest/ui-toolkit/popover": [
+        "libs/ui-toolkit/popover/src/index.ts"
+      ],
       "@gorilainvest/ui-toolkit/icon": [
         "dist/icon",
         "libs/ui-toolkit/icon/src/index.ts"

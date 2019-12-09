@@ -1,5 +1,5 @@
-import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatFormFieldModule } from "@angular/material/form-field";
@@ -8,16 +8,12 @@ import { MatListModule } from "@angular/material/list";
 import { MatSelectModule } from "@angular/material/select";
 import { RouterModule } from "@angular/router";
 import { GdkModule } from "@gorilainvest/gdk";
-
-
-
-import { CountdownButtonModule } from '@gorilainvest/ui-toolkit/countdown-button';
-
-import { PopupConfirmModule } from '@gorilainvest/ui-toolkit/popup-confirm';
-
+import { CountdownButtonModule } from "@gorilainvest/ui-toolkit/countdown-button";
+import { PopupConfirmModule } from "@gorilainvest/ui-toolkit/popup-confirm";
 
 import { PopupsModalsComponent } from "./popups-modals/popups-modals.component";
 import { PopupConfirmComponent } from "./ui/popup-confirm/popup-confirm.component";
+import { PopoverComponent } from "./ui/popover/popover.component";
 
 @NgModule({
   imports: [
@@ -38,9 +34,14 @@ import { PopupConfirmComponent } from "./ui/popup-confirm/popup-confirm.componen
         pathMatch: "full",
         component: PopupConfirmComponent
       },
+      {
+        path: "popover",
+        pathMatch: "full",
+        component: PopoverComponent
+      },
       { path: "", pathMatch: "full", component: PopupsModalsComponent }
     ])
   ],
-  declarations: [PopupConfirmComponent, PopupsModalsComponent]
+  declarations: [PopupConfirmComponent, PopoverComponent, PopupsModalsComponent]
 })
 export class PopupsModalsShellModule {}
