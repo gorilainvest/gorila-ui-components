@@ -60,8 +60,4 @@ export class FormTextComponent {
     disable ? this.control.disable() : this.control.enable();
   }
 
-  /**
-   * Empty constructor.
-   */
-  constructor() {}
 }
