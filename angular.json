@@ -472,6 +472,50 @@
         }
       }
     },
+    "popover": {
+      "root": "libs/ui-toolkit/popover",
+      "sourceRoot": "libs/ui-toolkit/popover/src",
+      "projectType": "library",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/ui-toolkit/popover/tsconfig.lib.json",
+            "project": "libs/ui-toolkit/popover/ng-package.json",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "libs/shared-styles"
+              ]
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-toolkit/popover/tsconfig.lib.json",
+              "libs/ui-toolkit/popover/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/ui-toolkit/popover/src/test.ts",
+            "tsConfig": "libs/ui-toolkit/popover/tsconfig.spec.json",
+            "karmaConfig": "libs/ui-toolkit/popover/karma.conf.js"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    },
     "popup-confirm": {
       "root": "libs/ui-toolkit/popup-confirm",
       "sourceRoot": "libs/ui-toolkit/popup-confirm/src",
