@@ -1,33 +1,7 @@
 :host {
-  display: block;
+  height: 100%;
   width: 100%;
-}
-
-.header-container {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  padding-left: 1px;
-  margin-bottom: 10px;
-  position: relative;
-
-  h1 {
-    font-weight: lighter;
-    margin: 0;
-    text-transform: capitalize;
-    span {
-      font-weight: normal;
-      text-transform: lowercase;
-    }
-  }
-
-  a {
-    margin-left: 10px;
-
-    color: #2d2d2d;
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-decoration: underline;
-    text-align: left;
-  }
+};
+.popover {
+  display: initial;
 }

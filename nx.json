@@ -86,7 +86,7 @@
         "team:grodd",
         "scope:shared",
         "scope:ui",
-        "group:popus-modals"
+        "group:popups-modals"
       ]
     },
     "section-title": {

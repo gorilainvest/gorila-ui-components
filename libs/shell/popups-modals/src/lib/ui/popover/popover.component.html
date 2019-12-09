@@ -1,1 +1,78 @@
-pover component works
+<gdk-card
+  title="Currency Display"
+  subtitle="Display currency based on local currency configuration"
+  [withoutOutput]="true"
+>
+  <mat-list role="list" class="inputs">
+    <form [formGroup]="form">
+      <mat-list-item role="listitem">
+        <mat-form-field class="full-width">
+          <mat-label>Height</mat-label>
+          <input matInput required type="text" placeholder="Height" formControlName="height"/>
+          <mat-hint>The popover height</mat-hint>
+        </mat-form-field>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <mat-form-field class="full-width">
+          <mat-label>Width</mat-label>
+          <input matInput required type="text" placeholder="Width" formControlName="width"/>
+          <mat-hint>The popover width</mat-hint>
+        </mat-form-field>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <mat-form-field class="full-width">
+          <mat-label>backdropClass</mat-label>
+          <input matInput required type="text" placeholder="BackdropClass" formControlName="backdropClass"/>
+          <mat-hint>The popover BackdropClass</mat-hint>
+        </mat-form-field>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <div>
+          <mat-checkbox class="full-width" color="primary" formControlName="isAboveTemplate">
+            Is Above Template
+          </mat-checkbox>
+        </div>
+      </mat-list-item>
+    </form>
+  </mat-list>
+  <div class="widget page-header-container" cdkScrollable>
+    <button (click)="showPopover()">Show Popover</button>
+    <!-- <popover></popover> -->
+    <div style="width: 100%; height: 500px;"></div>
+  </div>
+  <gdk-import class="code" moduleName="popover">
+    <span class='no-margin'>// file.html </span>
+    <span class='no-margin'>&#60;button (click)="openPopover()"&#62; Show Popover &#60;/button&#62;</span>
+    <span class='no-margin'></span>
+    <span class='no-margin'>// file.ts </span>
+    <span class='no-margin'>// importing </span>
+    <span class='no-margin'>import &#123; PopoverRef, PopoverService &#125; from '@gorilainvest/ui-toolkit/popover';</span>
+    <span class='no-margin'></span>
+    <span class='no-margin'>// instantiation</span>
+    <span class='no-margin'>@ViewChild('targetTemplateItem', &#123; static: true &#125;) public refTemplate: TemplateRef</span>
+    <span class='no-margin'>private popoverRef: PopoverRef; </span>
+    <span class='no-margin'>public constructor(protected popper: PopoverService) &#123;&#125;</span>
+    <span class='no-margin'></span>
+    <span class='no-margin'>using popover</span>
+    <span class='no-margin'>public openPopover = () => &#123;</span>
+    <span class='no-margin'>&#09; this.popoverRef = this.popper.open(&#123; </span>
+    <span class='no-margin'>&#09; &#09; &#09; content: this.refTemplate,</span>
+    <span class='no-margin'>&#09; &#09; &#09; origin: this.refTemplate.elementRef.nativeElement,</span>
+    <span class='no-margin'>&#09; &#09; &#09; height: "{{this.form.get('height').value}}",</span>
+    <span class='no-margin'>&#09; &#09; &#09; width: "{{this.form.get('width').value}}",</span>
+    <span class='no-margin'>&#09; &#09; &#09; backdropClass: "{{this.form.get('backdropClass').value}}",</span>
+    <span class='no-margin'>&#09; &#09; &#09; isAboveTemplate: {{this.form.get('isAboveTemplate').value}}</span>
+    <span class='no-margin'>&#09; &#125;);</span>
+    <span class='no-margin'>&#125;</span>
+  </gdk-import>
+</gdk-card>
+
+
+<ng-template #targetTemplateItem
+  cdkConnectedOverlay
+  cdkConnectedOverlayLockPosition
+  cdkConnectedOverlayHasBackdrop
+  [cdkConnectedOverlayBackdropClass]="form.get('backdropClass').value"
+>
+  I'm the template displayed for popover
+</ng-template>

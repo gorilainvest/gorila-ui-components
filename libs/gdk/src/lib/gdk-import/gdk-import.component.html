@@ -1,11 +1,14 @@
 <pre>
   <span>// module import</span>
   <span>import &#123; {{moduleTitle}}Module &#125; from '@gorilainvest/ui-toolkit/dist/{{moduleNameStr}}';</span>
-  <span></span>
-  <span>// template.html</span>
-  <ng-container *ngIf="!!keys&&keys.length>0;else withoutParameters">
-    <ng-container *ngTemplateOutlet="withParameters"></ng-container>
+  <ng-container *ngIf="!!prefix">
+    <span></span>
+    <span>// template.html</span>
+    <ng-container *ngIf="!!keys&&keys.length>0;else withoutParameters">
+      <ng-container *ngTemplateOutlet="withParameters"></ng-container>
+    </ng-container>
   </ng-container>
+  <ng-content></ng-content>
   <span></span>
 </pre>
 
