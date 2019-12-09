@@ -27,7 +27,7 @@ export class PopoverComponent {
       origin: this.refTemplate.elementRef.nativeElement,
       height: this.form.get('height').value,
       width: this.form.get('width').value,
-      backdropClass: this.form.get('width').value,
+      backdropClass: this.form.get('backdropClass').value,
       isAboveTemplate: this.form.get('isAboveTemplate').value
     });
   }
