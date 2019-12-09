@@ -10,22 +10,22 @@
 </pre>
 
 <ng-template #withoutParameters>
-  <span style='margin: 0'>
+  <span class='no-margin'>
     <ng-container *ngTemplateOutlet="openTag"></ng-container>
     <ng-container *ngTemplateOutlet="closeTag"></ng-container>
   </span>
 </ng-template>
 <ng-template #withParameters>
-  <span style='margin: 0'>
+  <span class='no-margin'>
     <ng-container *ngTemplateOutlet="openTag"></ng-container>
   </span>
   <ng-container *ngTemplateOutlet="displayParameters"></ng-container>
-  <span style='margin: 0'>
+  <span class='no-margin'>
     <ng-container *ngTemplateOutlet="closeTag"></ng-container>
   </span>
 </ng-template>
 <ng-template #openTag>&lt;{{prefix}}-{{moduleNameStr}}</ng-template>
 <ng-template #closeTag>&gt;&lt;/{{prefix}}-{{moduleNameStr}}&gt;</ng-template>
 <ng-template #displayParameters>
-  <span *ngFor="let key of keys" style='margin: 0'> [{{key}}]=&quot;'{{values[key]}}'&quot;</span>
+  <span *ngFor="let key of keys" class='no-margin'> [{{key}}]=&quot;'{{values[key]}}'&quot;</span>
 <ng-template>
