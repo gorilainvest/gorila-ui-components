@@ -233,16 +233,20 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/GdkModule.html" data-type="entity-link">GdkModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-GdkModule-bc452db10e9716acd37bfacde2bcba90"' : 'data-target="#xs-components-links-module-GdkModule-bc452db10e9716acd37bfacde2bcba90"' }>
+                                            'data-target="#components-links-module-GdkModule-64e323fb110e71bee7cbc68332703474"' : 'data-target="#xs-components-links-module-GdkModule-64e323fb110e71bee7cbc68332703474"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-GdkModule-bc452db10e9716acd37bfacde2bcba90"' :
-                                            'id="xs-components-links-module-GdkModule-bc452db10e9716acd37bfacde2bcba90"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-GdkModule-64e323fb110e71bee7cbc68332703474"' :
+                                            'id="xs-components-links-module-GdkModule-64e323fb110e71bee7cbc68332703474"' }>
                                             <li class="link">
                                                 <a href="components/GdkCardComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">GdkCardComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/GdkImportComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">GdkImportComponent</a>
                                             </li>
                                         </ul>
                                     </li>

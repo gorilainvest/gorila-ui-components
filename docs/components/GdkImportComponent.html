@@ -36,7 +36,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>ArrowVariationComponent</li>
+  <li>GdkImportComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -62,16 +62,9 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>libs/ui-toolkit/arrow-variation/src/lib/arrow-variation.component.ts</code>
+    <code>libs/gdk/src/lib/gdk-import/gdk-import.component.ts</code>
 </p>
 
-    <p class="comment">
-        <h3>Description</h3>
-    </p>
-    <p class="comment">
-        <p>Triangle arrow for positive negative and zero values.</p>
-
-    </p>
 
 
 
@@ -93,19 +86,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>gor-arrow-variation, mur-arrow-variation</code></td>
+                <td class="col-md-9"><code>gdk-import</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./arrow-variation.component.scss</code></td>
+                <td class="col-md-9"><code>./gdk-import.component.scss</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./arrow-variation.component.html</code></td>
+                <td class="col-md-9"><code>./gdk-import.component.html</code></td>
             </tr>
 
 
@@ -133,35 +126,24 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#arrowColor">arrowColor</a>
+                                <a href="#keys">keys</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#arrowDirection">arrowDirection</a>
+                                <a href="#moduleNameStr">moduleNameStr</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#isZero">isZero</a>
+                                <a href="#moduleTitle">moduleTitle</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#values">values</a>
                             </li>
                         </ul>
                     </td>
                 </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Methods</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                    <span class="modifier">Public</span>
-                                <a href="#updateArrow">updateArrow</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -172,10 +154,13 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#size">size</a>
+                                <a href="#form">form</a>
                             </li>
                             <li>
-                                <a href="#value">value</a>
+                                <a href="#moduleName">moduleName</a>
+                            </li>
+                            <li>
+                                <a href="#prefix">prefix</a>
                             </li>
                         </ul>
                     </td>
@@ -193,7 +178,10 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                    <a href="#value">value</a>
+                                    <a href="#moduleName">moduleName</a>
+                                </li>
+                                <li>
+                                    <a href="#form">form</a>
                                 </li>
                             </ul>
                         </td>
@@ -202,30 +190,6 @@
     </table>
 </section>
 
-    <section>
-    <h3 id="constructor">Constructor</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-<code>constructor()</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">libs/ui-toolkit/arrow-variation/src/lib/arrow-variation.component.ts:57</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                            <div class="io-description"><p>Empty constructor.</p>
-</div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-</section>
 
     <section>
     <h3 id="inputs">Inputs</h3>
@@ -233,34 +197,20 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="size"></a>
-                        <b>size</b>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>    <code>&quot;sm&quot; | &quot;md&quot; | &quot;lg&quot;</code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>&#x27;sm&#x27;</code>
+                        <a name="form"></a>
+                        <b>form</b>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">libs/ui-toolkit/arrow-variation/src/lib/arrow-variation.component.ts:28</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">libs/gdk/src/lib/gdk-import/gdk-import.component.ts:39</a></div>
                             </td>
                         </tr>
                 <tr>
                     <td class="col-md-4">
-                        <div class="io-description"><p>The size of the arrow, can be:</p>
-<ul>
-<li>sm: small (6px)</li>
-<li>md: medium (12px)</li>
-<li>lg: large (18px)</li>
-</ul>
+                        <div class="io-description"><p>A form group where the keys are the component input names and
+the values are the component input values.
+(see currency-display into shell/layout/src/lib/ui folder)</p>
 </div>
                     </td>
                 </tr>
@@ -270,18 +220,46 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="value"></a>
-                        <b>value</b>
+                        <a name="moduleName"></a>
+                        <b>moduleName</b>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">libs/ui-toolkit/arrow-variation/src/lib/arrow-variation.component.ts:35</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">libs/gdk/src/lib/gdk-import/gdk-import.component.ts:19</a></div>
                             </td>
                         </tr>
                 <tr>
                     <td class="col-md-4">
-                        <div class="io-description"><p>Sets the image source and the flag to hide arrow</p>
+                        <div class="io-description"><p>The name of module separeted by hyphen without module prefix
+E.G. CardContainerModule send card-container as input but not gorilainvest-card-container.
+the prefix you must sent in the prefix input</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="prefix"></a>
+                        <b>prefix</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">libs/gdk/src/lib/gdk-import/gdk-import.component.ts:28</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The prefix input. Can be gorilainvest, gro, gor, etc</p>
 </div>
                     </td>
                 </tr>
@@ -291,91 +269,7 @@
 
 
 
-    <section>
-    
-    <h3 id="methods">
-        Methods
-    </h3>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="updateArrow"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            updateArrow
-                        </b>
-                        <a href="#updateArrow"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>updateArrow(n: number | "")</code>
-                </td>
-            </tr>
 
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="69"
-                            class="link-to-prism">libs/ui-toolkit/arrow-variation/src/lib/arrow-variation.component.ts:69</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Check if the value is positive, negative or zero</p>
-</div>
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>n</td>
-                                    <td>
-                                            <code>number | &quot;&quot;</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>number to check</p>
-
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</section>
     <section>
     
         <h3 id="inputs">
@@ -385,12 +279,45 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="arrowColor"></a>
+                        <a name="keys"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            arrowColor</b>
-                            <a href="#arrowColor"><span class="icon ion-ios-link"></span></a>
+                            keys</b>
+                            <a href="#keys"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>string[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">libs/gdk/src/lib/gdk-import/gdk-import.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="moduleNameStr"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            moduleNameStr</b>
+                            <a href="#moduleNameStr"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
@@ -400,18 +327,17 @@
 
                         </td>
                     </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
+                        </td>
+                    </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">libs/ui-toolkit/arrow-variation/src/lib/arrow-variation.component.ts:42</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">libs/gdk/src/lib/gdk-import/gdk-import.component.ts:11</a></div>
                             </td>
                         </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Color of arrow in hex value</p>
-</div>
-                    </td>
-                </tr>
 
             </tbody>
         </table>
@@ -419,38 +345,32 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="arrowDirection"></a>
+                        <a name="moduleTitle"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            arrowDirection</b>
-                            <a href="#arrowDirection"><span class="icon ion-ios-link"></span></a>
+                            moduleTitle</b>
+                            <a href="#moduleTitle"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#PATH_ARROW" target="_self" >PATH_ARROW</a></code>
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>PATH_ARROW.UP</code>
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">libs/ui-toolkit/arrow-variation/src/lib/arrow-variation.component.ts:50</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">libs/gdk/src/lib/gdk-import/gdk-import.component.ts:12</a></div>
                             </td>
                         </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Direction of arrow</p>
-</div>
-                    </td>
-                </tr>
 
             </tbody>
         </table>
@@ -458,32 +378,32 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="isZero"></a>
+                        <a name="values"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            isZero</b>
-                            <a href="#isZero"><span class="icon ion-ios-link"></span></a>
+                            values</b>
+                            <a href="#values"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>true</code>
+                            <i>Type : </i>    <code>literal type</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{}</code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">libs/ui-toolkit/arrow-variation/src/lib/arrow-variation.component.ts:57</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">libs/gdk/src/lib/gdk-import/gdk-import.component.ts:31</a></div>
                             </td>
                         </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Determine if arrow should be hidden</p>
-</div>
-                    </td>
-                </tr>
 
             </tbody>
         </table>
@@ -497,25 +417,27 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="value"></a>
-                        <span class="name"><b>value</b><a href="#value"><span class="icon ion-ios-link"></span></a></span>
+                        <a name="moduleName"></a>
+                        <span class="name"><b>moduleName</b><a href="#moduleName"><span class="icon ion-ios-link"></span></a></span>
                     </td>
                 </tr>
 
 
                 <tr>
                     <td class="col-md-4">
-                        <span class="accessor"><b>set</b><code>value(n)</code></span>
+                        <span class="accessor"><b>set</b><code>moduleName(moduleName)</code></span>
                     </td>
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">libs/ui-toolkit/arrow-variation/src/lib/arrow-variation.component.ts:35</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">libs/gdk/src/lib/gdk-import/gdk-import.component.ts:19</a></div>
                                 </td>
                             </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-description"><p>Sets the image source and the flag to hide arrow</p>
+                                <div class="io-description"><p>The name of module separeted by hyphen without module prefix
+E.G. CardContainerModule send card-container as input but not gorilainvest-card-container.
+the prefix you must sent in the prefix input</p>
 </div>
 
                                 <div class="io-description">
@@ -529,7 +451,66 @@
                                             </thead>
                                             <tbody>
                                                     <tr>
-                                                            <td>n</td>
+                                                            <td>moduleName</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="form"></a>
+                        <span class="name"><b>form</b><a href="#form"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>form(form)</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">libs/gdk/src/lib/gdk-import/gdk-import.component.ts:39</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>A form group where the keys are the component input names and
+the values are the component input values.
+(see currency-display into shell/layout/src/lib/ui folder)</p>
+</div>
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>form</td>
                                                     
                                                     
                                                         <td>
@@ -556,128 +537,97 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input } from &#x27;@angular/core&#x27;;
+import { FormGroup } from &#x27;@angular/forms&#x27;;
+import { keys } from &#x27;ramda&#x27;;
 
-/**
- * SVG paths to draw arrow pointing up and down
- */
-export enum PATH_ARROW {
-  UP &#x3D; &#x27;M2 22h20L12 2z&#x27;,
-  DOWN &#x3D; &#x27;M2 2h20L12 22z&#x27;
-}
-
-/**
- * Triangle arrow for positive negative and zero values.
- */
 @Component({
-  selector: &#x27;gor-arrow-variation, mur-arrow-variation&#x27;,
-  templateUrl: &#x27;./arrow-variation.component.html&#x27;,
-  styleUrls: [&#x27;./arrow-variation.component.scss&#x27;]
+  selector: &#x27;gdk-import&#x27;,
+  templateUrl: &#x27;./gdk-import.component.html&#x27;,
+  styleUrls: [&#x27;./gdk-import.component.scss&#x27;]
 })
-export class ArrowVariationComponent {
-  /**
-   * The size of the arrow, can be:
-   * - sm: small (6px)
-   * - md: medium (12px)
-   * - lg: large (18px)
-   *
-   * @default &#x27;sm&#x27;
-   */
-  @Input() public size: &#x27;sm&#x27; | &#x27;md&#x27; | &#x27;lg&#x27; &#x3D; &#x27;sm&#x27;;
+export class GdkImportComponent {
+  public moduleNameStr &#x3D; &#x27;&#x27;;
+  public moduleTitle &#x3D; &#x27;&#x27;;
 
   /**
-   * Sets the image source and the flag to hide arrow
-   *
-   * @param n
+   * The name of module separeted by hyphen without module prefix
+   * E.G. CardContainerModule send card-container as input but not gorilainvest-card-container.
+   * the prefix you must sent in the prefix input
    */
-  @Input() set value(n: number | &#x27;&#x27;) {
-    this.updateArrow(n);
-  };
+  @Input() public set moduleName(moduleName) {
+    this.moduleNameStr &#x3D; moduleName;
+    this.moduleTitle &#x3D; moduleName.split(&#x27;-&#x27;).map((name: string) &#x3D;&gt; name.charAt(0).toUpperCase() + name.slice(1)).join(&#x27;&#x27;);
+  }
+
 
   /**
-   * Color of arrow in hex value
+   * The prefix input. Can be gorilainvest, gro, gor, etc
    */
-  public arrowColor: string;
+  @Input() public prefix &#x3D; &#x27;&#x27;;
+
+  public keys: string[] &#x3D; [];
+  public values: {[s: string]: any} &#x3D; {};
+
 
   /**
-   * Direction of arrow
-   *
-   * @default PATH_ARROW.UP
-   * @see PATH_ARROW
+   * A form group where the keys are the component input names and
+   * the values are the component input values.
+   * (see currency-display into shell/layout/src/lib/ui folder)
    */
-  public arrowDirection: PATH_ARROW &#x3D; PATH_ARROW.UP;
-
-  /**
-   * Determine if arrow should be hidden
-   *
-   * @default true
-   */
-  public isZero &#x3D; true;
-
-  /**
-   * Empty constructor.
-   */
-  constructor() {}
-
-  /**
-   * Check if the value is positive, negative or zero
-   *
-   * @param n number to check
-   */
-  public updateArrow(n: number | &#x27;&#x27;) {
-    this.isZero &#x3D; !n;
-    this.arrowColor &#x3D; n &gt; 0 ? &#x27;#75B629&#x27; : &#x27;#EF2E2E&#x27;;
-    this.arrowDirection &#x3D; n &gt; 0 ? PATH_ARROW.UP : PATH_ARROW.DOWN;
+  @Input() public set form(form: FormGroup) {
+    this.keys &#x3D; keys(form.controls);
+    this.values &#x3D; form.value;
+    form.valueChanges.subscribe(data &#x3D;&gt; this.values &#x3D; data);
   }
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div id&#x3D;&quot;emptyDiv&quot; *ngIf&#x3D;&quot;isZero&quot; class&#x3D;&quot;arrow-variation zero&quot; [ngClass]&#x3D;&quot;size&quot;&gt;&lt;/div&gt;
-&lt;div *ngIf&#x3D;&quot;!isZero&quot; class&#x3D;&quot;arrow&quot; [ngClass]&#x3D;&quot;size&quot;&gt;
-  &lt;svg width&#x3D;&quot;100%&quot; height&#x3D;&quot;100%&quot; viewBox&#x3D;&quot;0 0 24 24&quot; style&#x3D;&quot;display: block&quot;&gt;
-    &lt;path [attr.fill]&#x3D;&quot;arrowColor&quot; [attr.d]&#x3D;&quot;arrowDirection&quot; /&gt;
-  &lt;/svg&gt;
-&lt;/div&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;pre&gt;
+  &lt;span&gt;// module import&lt;/span&gt;
+  &lt;span&gt;import &amp;#123; {{moduleTitle}}Module &amp;#125; from &#x27;@gorilainvest/ui-toolkit/dist/{{moduleNameStr}}&#x27;;&lt;/span&gt;
+  &lt;span&gt;&lt;/span&gt;
+  &lt;span&gt;// template.html&lt;/span&gt;
+  &lt;ng-container *ngIf&#x3D;&quot;!!keys&amp;&amp;keys.length&gt;0;else withoutParameters&quot;&gt;
+    &lt;ng-container *ngTemplateOutlet&#x3D;&quot;withParameters&quot;&gt;&lt;/ng-container&gt;
+  &lt;/ng-container&gt;
+  &lt;span&gt;&lt;/span&gt;
+&lt;/pre&gt;
+
+&lt;ng-template #withoutParameters&gt;
+  &lt;span class&#x3D;&#x27;no-margin&#x27;&gt;
+    &lt;ng-container *ngTemplateOutlet&#x3D;&quot;openTag&quot;&gt;&lt;/ng-container&gt;
+    &lt;ng-container *ngTemplateOutlet&#x3D;&quot;closeTag&quot;&gt;&lt;/ng-container&gt;
+  &lt;/span&gt;
+&lt;/ng-template&gt;
+&lt;ng-template #withParameters&gt;
+  &lt;span class&#x3D;&#x27;no-margin&#x27;&gt;
+    &lt;ng-container *ngTemplateOutlet&#x3D;&quot;openTag&quot;&gt;&lt;/ng-container&gt;
+  &lt;/span&gt;
+  &lt;ng-container *ngTemplateOutlet&#x3D;&quot;displayParameters&quot;&gt;&lt;/ng-container&gt;
+  &lt;span class&#x3D;&#x27;no-margin&#x27;&gt;
+    &lt;ng-container *ngTemplateOutlet&#x3D;&quot;closeTag&quot;&gt;&lt;/ng-container&gt;
+  &lt;/span&gt;
+&lt;/ng-template&gt;
+&lt;ng-template #openTag&gt;&amp;lt;{{prefix}}-{{moduleNameStr}}&lt;/ng-template&gt;
+&lt;ng-template #closeTag&gt;&amp;gt;&amp;lt;/{{prefix}}-{{moduleNameStr}}&amp;gt;&lt;/ng-template&gt;
+&lt;ng-template #displayParameters&gt;
+  &lt;span *ngFor&#x3D;&quot;let key of keys&quot; class&#x3D;&#x27;no-margin&#x27;&gt; [{{key}}]&#x3D;&amp;quot;&#x27;{{values[key]}}&#x27;&amp;quot;&lt;/span&gt;
+&lt;ng-template&gt;
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./arrow-variation.component.scss</code>
+                    <code>./gdk-import.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">$sm-size: 6px;
-$md-size: 12px;
-$lg-size: 18px;
-
-:host{
-  display: block;
-  margin: 0 6px;
+                <pre class="line-numbers"><code class="language-scss">:host {
+  overflow: hidden;
 }
 
-.arrow-variation {
-  width: 0;
-  height: 0;
-}
-
-.arrow {
-  object-fit: contain;
-}
-
-.arrow,
-.zero {
-  &amp;.lg {
-    width: $lg-size;
-    height: $lg-size;
-  }
-  &amp;.md {
-    width: $md-size;
-    height: $md-size;
-  }
-  &amp;.sm {
-    width: $sm-size;
-    height: $sm-size;
-  }
+.no-margin {
+  margin: 0;
 }
 </code></pre>
     </div>
@@ -707,10 +657,10 @@ $lg-size: 18px;
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div id="emptyDiv" *ngIf="isZero" class="arrow-variation zero" [ngClass]="size"></div><div *ngIf="!isZero" class="arrow" [ngClass]="size">  <svg width="100%" height="100%" viewBox="0 0 24 24" style="display: block">    <path [attr.fill]="arrowColor" [attr.d]="arrowDirection" />  </svg></div></div>'
+        var COMPONENT_TEMPLATE = '<div><pre>  <span>// module import</span>  <span>import &#123; {{moduleTitle}}Module &#125; from \'@gorilainvest/ui-toolkit/dist/{{moduleNameStr}}\';</span>  <span></span>  <span>// template.html</span>  <ng-container *ngIf="!!keys&&keys.length>0;else withoutParameters">    <ng-container *ngTemplateOutlet="withParameters"></ng-container>  </ng-container>  <span></span></pre><ng-template #withoutParameters>  <span class=\'no-margin\'>    <ng-container *ngTemplateOutlet="openTag"></ng-container>    <ng-container *ngTemplateOutlet="closeTag"></ng-container>  </span></ng-template><ng-template #withParameters>  <span class=\'no-margin\'>    <ng-container *ngTemplateOutlet="openTag"></ng-container>  </span>  <ng-container *ngTemplateOutlet="displayParameters"></ng-container>  <span class=\'no-margin\'>    <ng-container *ngTemplateOutlet="closeTag"></ng-container>  </span></ng-template><ng-template #openTag>&lt;{{prefix}}-{{moduleNameStr}}</ng-template><ng-template #closeTag>&gt;&lt;/{{prefix}}-{{moduleNameStr}}&gt;</ng-template><ng-template #displayParameters>  <span *ngFor="let key of keys" class=\'no-margin\'> [{{key}}]=&quot;\'{{values[key]}}\'&quot;</span><ng-template></div>'
     var COMPONENTS = [{'name': 'ArrowVariationComponent', 'selector': 'gor-arrow-variation, mur-arrow-variation'},{'name': 'ButtonComponent', 'selector': 'gor-button, mag-button'},{'name': 'CardContainerComponent', 'selector': 'gor-card-container, gro-card-container'},{'name': 'CountdownButtonComponent', 'selector': 'gor-countdown-button, mag-countdown-button'},{'name': 'DataFormatterComponent', 'selector': 'gor-data-formatter'},{'name': 'EnhancedTitleComponent', 'selector': 'gor-enhanced-title, gro-enhanced-title'},{'name': 'GdkCardComponent', 'selector': 'gdk-card'},{'name': 'GdkImportComponent', 'selector': 'gdk-import'},{'name': 'IconComponent', 'selector': 'gor-icon'},{'name': 'LoadingComponent', 'selector': 'gor-loading, mur-loading'},{'name': 'PageHeaderComponent', 'selector': 'gor-page-header'},{'name': 'PopupConfirmComponent', 'selector': 'gor-popup-confirm, mag-popup-confirm'},{'name': 'ScrollContainerComponent', 'selector': 'gor-scroll-container'},{'name': 'SectionTitleComponent', 'selector': 'gor-section-title, gro-section-title'},{'name': 'SlideToggleComponent', 'selector': 'gor-slide-toggle, mur-slide-toggle'},{'name': 'SlideToggleGroupComponent', 'selector': 'gor-slide-toggle-group, mur-slide-toggle-group'}];
     var DIRECTIVES = [{'name': 'CancelableRouterLinkWithHrefDirective', 'selector': 'a[gorCancelableRouterLink]'},{'name': 'PageHeaderBottomDirective', 'selector': '[gorPageHeaderBottom]'},{'name': 'TippyDirective', 'selector': '[gorTippy]'},{'name': 'TruncateDirective', 'selector': '[gorTruncate]'}];
-    var ACTUAL_COMPONENT = {'name': 'ArrowVariationComponent'};
+    var ACTUAL_COMPONENT = {'name': 'GdkImportComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -745,7 +695,7 @@ $lg-size: 18px;
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'ArrowVariationComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'GdkImportComponent.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>
