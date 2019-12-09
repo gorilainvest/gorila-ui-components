@@ -5,6 +5,7 @@ import { CssClassPipe } from './css-class.pipe';
 
 @NgModule({
   imports: [CommonModule],
+  providers: [BigCurrencyPipe, CssClassPipe],
   declarations: [BigCurrencyPipe, CssClassPipe],
   exports: [BigCurrencyPipe, CssClassPipe]
 })
