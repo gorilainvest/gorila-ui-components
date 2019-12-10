@@ -44,6 +44,15 @@
         "group:buttons-indicators"
       ]
     },
+    "currency-display": {
+      "tags": [
+        "exportable",
+        "team:grodd",
+        "scope:shared",
+        "scope:ui",
+        "group:layout"
+      ]
+    },
     "data-formatter": {
       "tags": [
         "exportable",

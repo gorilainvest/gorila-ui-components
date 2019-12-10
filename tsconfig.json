@@ -34,6 +34,9 @@
       "@gorilainvest/ui-toolkit/countdown-button": [
         "libs/ui-toolkit/countdown-button/src/index.ts"
       ],
+      "@gorilainvest/ui-toolkit/currency-display": [
+        "libs/ui-toolkit/currency-display/src/index.ts"
+      ],
       "@gorilainvest/ui-toolkit/enhanced-title": [
         "libs/ui-toolkit/enhanced-title/src/index.ts"
       ],

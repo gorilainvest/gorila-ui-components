@@ -10,6 +10,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { RouterModule } from '@angular/router';
 import { GdkModule } from '@gorilainvest/gdk';
 import { CardContainerModule } from '@gorilainvest/ui-toolkit/card-container';
+import { CurrencyDisplayModule } from '@gorilainvest/ui-toolkit/currency-display';
 import { EnhancedTitleModule } from '@gorilainvest/ui-toolkit/enhanced-title';
 import { IconModule } from '@gorilainvest/ui-toolkit/icon';
 import { PageHeaderModule } from '@gorilainvest/ui-toolkit/page-header';
@@ -18,6 +19,7 @@ import { SectionTitleModule } from '@gorilainvest/ui-toolkit/section-title';
 
 import { LayoutComponent } from './layout/layout.component';
 import { CardContainerComponent } from './ui/card-container/card-container.component';
+import { CurrencyDisplayComponent } from './ui/currency-display/currency-display.component';
 import { EnhancedTitleComponent } from './ui/enhanced-title/enhanced-title.component';
 import { IconComponent } from './ui/icon/icon.component';
 import { PageHeaderComponent } from './ui/page-header/page-header.component';
@@ -28,7 +30,6 @@ import { SectionTitleComponent } from './ui/section-title/section-title.componen
   imports: [
     CommonModule,
     FormsModule,
-    IconModule,
     ReactiveFormsModule,
     MatCheckboxModule,
     MatFormFieldModule,
@@ -38,7 +39,9 @@ import { SectionTitleComponent } from './ui/section-title/section-title.componen
     ScrollingModule,
     GdkModule,
     CardContainerModule,
+    CurrencyDisplayModule,
     EnhancedTitleModule,
+    IconModule,
     ScrollContainerModule,
     SectionTitleModule,
     PageHeaderModule,
@@ -49,9 +52,19 @@ import { SectionTitleComponent } from './ui/section-title/section-title.componen
         component: CardContainerComponent
       },
       {
+        path: 'currency-display',
+        pathMatch: 'full',
+        component: CurrencyDisplayComponent
+      },
+      {
         path: 'enhanced-title',
         pathMatch: 'full',
         component: EnhancedTitleComponent
+      },
+      {
+        path: 'icon',
+        pathMatch: 'full',
+        component: IconComponent
       },
       {
         path: 'scroll-container',
@@ -68,22 +81,18 @@ import { SectionTitleComponent } from './ui/section-title/section-title.componen
         pathMatch: 'full',
         component: PageHeaderComponent
       },
-      {
-        path: 'icon',
-        pathMatch: 'full',
-        component: IconComponent
-      },
       { path: '', pathMatch: 'full', component: LayoutComponent }
     ])
   ],
   declarations: [
     CardContainerComponent,
+    CurrencyDisplayComponent,
     EnhancedTitleComponent,
     IconComponent,
-    ScrollContainerComponent,
-    SectionTitleComponent,
     LayoutComponent,
-    PageHeaderComponent
+    PageHeaderComponent,
+    ScrollContainerComponent,
+    SectionTitleComponent
   ]
 })
-export class LayoutShellModule {}
+export class LayoutShellModule { }
