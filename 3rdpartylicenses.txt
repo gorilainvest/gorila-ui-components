@@ -142,6 +142,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
+@gorilainvest/ui-toolkit-pipes
+
 @gorilainvest/ui-toolkit/arrow-variation
 
 @gorilainvest/ui-toolkit/button
@@ -149,6 +151,8 @@ SOFTWARE.
 @gorilainvest/ui-toolkit/card-container
 
 @gorilainvest/ui-toolkit/countdown-button
+
+@gorilainvest/ui-toolkit/currency-display
 
 @gorilainvest/ui-toolkit/data-formatter
 

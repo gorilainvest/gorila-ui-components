@@ -153,6 +153,24 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
+                                <a href="modules/CurrencyDisplayModule.html" data-type="entity-link">CurrencyDisplayModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-CurrencyDisplayModule-07cebdf76568479046bc9c283e61319c"' : 'data-target="#xs-components-links-module-CurrencyDisplayModule-07cebdf76568479046bc9c283e61319c"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-CurrencyDisplayModule-07cebdf76568479046bc9c283e61319c"' :
+                                            'id="xs-components-links-module-CurrencyDisplayModule-07cebdf76568479046bc9c283e61319c"' }>
+                                            <li class="link">
+                                                <a href="components/CurrencyDisplayComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">CurrencyDisplayComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
                                 <a href="modules/DataFormatterModule.html" data-type="entity-link">DataFormatterModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
@@ -324,13 +342,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/PipesModule.html" data-type="entity-link">PipesModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#pipes-links-module-PipesModule-b3757f3fdf3e9a379a5fd771b78ca075"' : 'data-target="#xs-pipes-links-module-PipesModule-b3757f3fdf3e9a379a5fd771b78ca075"' }>
+                                            'data-target="#pipes-links-module-PipesModule-56251b4d88f4b80ebe7cea119bc72362"' : 'data-target="#xs-pipes-links-module-PipesModule-56251b4d88f4b80ebe7cea119bc72362"' }>
                                             <span class="icon ion-md-add"></span>
                                             <span>Pipes</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="pipes-links-module-PipesModule-b3757f3fdf3e9a379a5fd771b78ca075"' :
-                                            'id="xs-pipes-links-module-PipesModule-b3757f3fdf3e9a379a5fd771b78ca075"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="pipes-links-module-PipesModule-56251b4d88f4b80ebe7cea119bc72362"' :
+                                            'id="xs-pipes-links-module-PipesModule-56251b4d88f4b80ebe7cea119bc72362"' }>
                                             <li class="link">
                                                 <a href="pipes/BigCurrencyPipe.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">BigCurrencyPipe</a>
@@ -459,6 +477,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             <span class="icon ion-ios-arrow-down"></span>
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
+                            <li class="link">
+                                <a href="interfaces/CurrencyStyle.html" data-type="entity-link">CurrencyStyle</a>
+                            </li>
                             <li class="link">
                                 <a href="interfaces/HTMLTippyProps.html" data-type="entity-link">HTMLTippyProps</a>
                             </li>
