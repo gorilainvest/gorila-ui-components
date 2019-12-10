@@ -248,6 +248,24 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
+                                <a href="modules/FormTextModule.html" data-type="entity-link">FormTextModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-FormTextModule-ba70c74c7379057277d4762ec4f726e8"' : 'data-target="#xs-components-links-module-FormTextModule-ba70c74c7379057277d4762ec4f726e8"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-FormTextModule-ba70c74c7379057277d4762ec4f726e8"' :
+                                            'id="xs-components-links-module-FormTextModule-ba70c74c7379057277d4762ec4f726e8"' }>
+                                            <li class="link">
+                                                <a href="components/FormTextComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">FormTextComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
                                 <a href="modules/GdkModule.html" data-type="entity-link">GdkModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?

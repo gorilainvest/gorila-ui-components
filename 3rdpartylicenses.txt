@@ -158,6 +158,8 @@ SOFTWARE.
 
 @gorilainvest/ui-toolkit/enhanced-title
 
+@gorilainvest/ui-toolkit/form-text
+
 @gorilainvest/ui-toolkit/icon
 
 @gorilainvest/ui-toolkit/loading
