@@ -1,29 +1,29 @@
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { MatCheckboxModule } from "@angular/material/checkbox";
-import { MatFormFieldModule } from "@angular/material/form-field";
-import { MatInputModule } from "@angular/material/input";
-import { MatListModule } from "@angular/material/list";
-import { MatSelectModule } from "@angular/material/select";
-import { RouterModule } from "@angular/router";
-import { GdkModule } from "@gorilainvest/gdk";
-
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { MatSelectModule } from '@angular/material/select';
+import { RouterModule } from '@angular/router';
+import { GdkModule } from '@gorilainvest/gdk';
 import { CardContainerModule } from '@gorilainvest/ui-toolkit/card-container';
 import { CurrencyDisplayModule } from '@gorilainvest/ui-toolkit/currency-display';
 import { EnhancedTitleModule } from '@gorilainvest/ui-toolkit/enhanced-title';
+import { PageHeaderModule } from '@gorilainvest/ui-toolkit/page-header';
 import { ScrollContainerModule } from '@gorilainvest/ui-toolkit/scroll-container';
 import { SectionTitleModule } from '@gorilainvest/ui-toolkit/section-title';
-import { PageHeaderModule } from '@gorilainvest/ui-toolkit/page-header';
 
-import { LayoutComponent } from "./layout/layout.component";
-import { CardContainerComponent } from "./ui/card-container/card-container.component";
+import { LayoutComponent } from './layout/layout.component';
+import { CardContainerComponent } from './ui/card-container/card-container.component';
 import { CurrencyDisplayComponent } from './ui/currency-display/currency-display.component';
-import { EnhancedTitleComponent } from "./ui/enhanced-title/enhanced-title.component";
+import { EnhancedTitleComponent } from './ui/enhanced-title/enhanced-title.component';
+import { IconComponent } from './ui/icon/icon.component';
+import { PageHeaderComponent } from './ui/page-header/page-header.component';
 import { ScrollContainerComponent } from './ui/scroll-container/scroll-container.component';
-import { SectionTitleComponent } from "./ui/section-title/section-title.component";
-import { PageHeaderComponent } from "./ui/page-header/page-header.component";
-import { ScrollingModule } from '@angular/cdk/scrolling';
+import { SectionTitleComponent } from './ui/section-title/section-title.component';
 
 @NgModule({
   imports: [
@@ -60,6 +60,11 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
         component: EnhancedTitleComponent
       },
       {
+        path: "icon",
+        pathMatch: "full",
+        component: IconComponent
+      },
+      {
         path: "scroll-container",
         pathMatch: "full",
         component: ScrollContainerComponent
@@ -79,12 +84,13 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
   ],
   declarations: [
     CardContainerComponent,
+    CurrencyDisplayComponent,
     EnhancedTitleComponent,
-    ScrollContainerComponent,
-    SectionTitleComponent,
+    IconComponent,
     LayoutComponent,
     PageHeaderComponent,
-    CurrencyDisplayComponent
+    ScrollContainerComponent,
+    SectionTitleComponent
   ]
 })
-export class LayoutShellModule {}
+export class LayoutShellModule { }
