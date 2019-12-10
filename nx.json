@@ -169,6 +169,15 @@
         "scope:ui",
         "group:layout"
       ]
+    },
+    "sort-header": {
+      "tags": [
+        "exportable",
+        "team:magilla",
+        "scope:shared",
+        "scope:ui",
+        "group:layout"
+      ]
     }
   }
 }

@@ -1,0 +1,41 @@
+<div class="mat-sort-header-container"
+     [class.mat-sort-header-sorted]="_isSorted()"
+     [class.mat-sort-header-position-before]="arrowPosition == 'before'">
+  <button class="mat-sort-header-button" type="button"
+          [attr.disabled]="_isDisabled() || null"
+          [attr.aria-label]="_intl.sortButtonLabel(id)"
+          (focus)="_setIndicatorHintVisible(true)"
+          (blur)="_setIndicatorHintVisible(false)">
+    <ng-content></ng-content>
+  </button>
+
+  <!-- Disable animations while a current animation is running -->
+  <div class="mat-sort-header-arrow"
+       *ngIf="_renderArrow()"
+       [@arrowOpacity]="_getArrowViewState()"
+       [@arrowPosition]="_getArrowViewState()"
+       [@allowChildren]="_getArrowDirectionState()"
+       (@arrowPosition.start)="_disableViewStateAnimation = true"
+       (@arrowPosition.done)="_disableViewStateAnimation = false">
+    <ng-container *ngIf="arrowWhite; else nonWhiteTplt">
+      <ng-container *ngIf="_arrowDirection=='asc'">
+        <gor-icon icon="arrow_up_white">
+        </gor-icon>
+      </ng-container>
+      <ng-container *ngIf="_arrowDirection=='desc'">
+        <gor-icon icon="arrow_down_white">
+        </gor-icon>
+      </ng-container>
+    </ng-container>
+    <ng-template #nonWhiteTplt>
+      <ng-container *ngIf="_arrowDirection=='asc'">
+        <gor-icon icon="arrow_up">
+        </gor-icon>
+      </ng-container>
+      <ng-container *ngIf="_arrowDirection=='desc'">
+        <gor-icon icon="arrow_down">
+        </gor-icon>
+      </ng-container>
+    </ng-template>
+  </div>
+</div>
