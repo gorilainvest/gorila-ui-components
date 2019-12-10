@@ -9,14 +9,16 @@ import { MatSelectModule } from "@angular/material/select";
 import { RouterModule } from "@angular/router";
 import { GdkModule } from "@gorilainvest/gdk";
 
-
-
-
 import { SlideToggleModule } from '@gorilainvest/ui-toolkit/slide-toggle';
+
+import { FormTextModule } from '@gorilainvest/ui-toolkit/form-text';
 
 
 import { ControlsComponent } from "./controls/controls.component";
 import { SlideToggleComponent } from "./ui/slide-toggle/slide-toggle.component";
+
+import { FormTextComponent } from './ui/form-text/form-text.component';
+
 
 @NgModule({
   imports: [
@@ -28,17 +30,28 @@ import { SlideToggleComponent } from "./ui/slide-toggle/slide-toggle.component";
     MatInputModule,
     MatListModule,
     MatSelectModule,
+
+    FormTextModule,
+
     GdkModule,
     SlideToggleModule,
     RouterModule.forChild([
       {
-        path: "slide-toggle",
-        pathMatch: "full",
+        path: 'slide-toggle',
+        pathMatch: 'full',
         component: SlideToggleComponent
       },
-      { path: "", pathMatch: "full", component: ControlsComponent }
+
+      {
+        path: 'form-text',
+        pathMatch: 'full',
+        component: FormTextComponent
+      },
+
+      { path: '', pathMatch: 'full', component: ControlsComponent }
     ])
   ],
-  declarations: [SlideToggleComponent, ControlsComponent]
+
+  declarations: [SlideToggleComponent, FormTextComponent, ControlsComponent]
 })
 export class ControlsShellModule {}
