@@ -44,6 +44,15 @@
         "group:buttons-indicators"
       ]
     },
+    "currency-display": {
+      "tags": [
+        "exportable",
+        "team:grodd",
+        "scope:shared",
+        "scope:ui",
+        "group:layout"
+      ]
+    },
     "data-formatter": {
       "tags": [
         "exportable",
@@ -168,6 +177,15 @@
         "scope:shared",
         "scope:ui",
         "group:controls"
+      ]
+    },
+    "sort-header": {
+      "tags": [
+        "exportable",
+        "team:magilla",
+        "scope:shared",
+        "scope:ui",
+        "group:layout"
       ]
     }
   }

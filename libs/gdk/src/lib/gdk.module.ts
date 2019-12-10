@@ -8,6 +8,7 @@ import { MatListModule } from "@angular/material/list";
 import { MatSelectModule } from "@angular/material/select";
 import { GdkCardComponent } from "./gdk-card/gdk-card.component";
 import { MatCommonModule } from '@angular/material/core';
+import { GdkImportComponent } from './gdk-import/gdk-import.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,7 @@ import { MatCommonModule } from '@angular/material/core';
     MatListModule,
     MatSelectModule
   ],
-  declarations: [GdkCardComponent],
-  exports: [GdkCardComponent]
+  declarations: [GdkCardComponent, GdkImportComponent],
+  exports: [GdkCardComponent, GdkImportComponent]
 })
 export class GdkModule {}
