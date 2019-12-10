@@ -12,6 +12,7 @@ import { GdkModule } from '@gorilainvest/gdk';
 import { CardContainerModule } from '@gorilainvest/ui-toolkit/card-container';
 import { CurrencyDisplayModule } from '@gorilainvest/ui-toolkit/currency-display';
 import { EnhancedTitleModule } from '@gorilainvest/ui-toolkit/enhanced-title';
+import { IconModule } from '@gorilainvest/ui-toolkit/icon';
 import { PageHeaderModule } from '@gorilainvest/ui-toolkit/page-header';
 import { ScrollContainerModule } from '@gorilainvest/ui-toolkit/scroll-container';
 import { SectionTitleModule } from '@gorilainvest/ui-toolkit/section-title';
@@ -40,46 +41,47 @@ import { SectionTitleComponent } from './ui/section-title/section-title.componen
     CardContainerModule,
     CurrencyDisplayModule,
     EnhancedTitleModule,
+    IconModule,
     ScrollContainerModule,
     SectionTitleModule,
     PageHeaderModule,
     RouterModule.forChild([
       {
-        path: "card-container",
-        pathMatch: "full",
+        path: 'card-container',
+        pathMatch: 'full',
         component: CardContainerComponent
       },
       {
-        path: "currency-display",
-        pathMatch: "full",
+        path: 'currency-display',
+        pathMatch: 'full',
         component: CurrencyDisplayComponent
       },
       {
-        path: "enhanced-title",
-        pathMatch: "full",
+        path: 'enhanced-title',
+        pathMatch: 'full',
         component: EnhancedTitleComponent
       },
       {
-        path: "icon",
-        pathMatch: "full",
+        path: 'icon',
+        pathMatch: 'full',
         component: IconComponent
       },
       {
-        path: "scroll-container",
-        pathMatch: "full",
+        path: 'scroll-container',
+        pathMatch: 'full',
         component: ScrollContainerComponent
       },
       {
-        path: "section-title",
-        pathMatch: "full",
+        path: 'section-title',
+        pathMatch: 'full',
         component: SectionTitleComponent
       },
       {
-        path: "page-header",
-        pathMatch: "full",
+        path: 'page-header',
+        pathMatch: 'full',
         component: PageHeaderComponent
       },
-      { path: "", pathMatch: "full", component: LayoutComponent }
+      { path: '', pathMatch: 'full', component: LayoutComponent }
     ])
   ],
   declarations: [
