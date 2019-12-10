@@ -1,7 +1,10 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 
 import { PopoverContent, PopoverRef } from './popover-ref';
-
+/**
+ * @class PopoverComponent
+ * This component is used to display data inside a popover
+ */
 @Component({
   selector: 'gor-popover',
   templateUrl: './popover.component.html',

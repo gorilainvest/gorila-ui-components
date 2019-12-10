@@ -6,6 +6,10 @@ import { POPOVER_POSITIONS } from './popover-positions';
 import { PopoverContent, PopoverRef } from './popover-ref';
 import { PopoverComponent } from './popover.component';
 
+/**
+ * @interface PopoverParams
+ * Available parameters to popover displaying
+ */
 export interface PopoverParams<T> {
   origin: HTMLElement;
   content: PopoverContent;
@@ -17,6 +21,10 @@ export interface PopoverParams<T> {
   isAboveTemplate?: boolean;
 };
 
+/**
+ * @class PopoverService
+ * This class is used to call PopoverComponent and display data inside of him
+ */
 @Injectable({
   providedIn: 'root'
 })
@@ -24,6 +32,13 @@ export class PopoverService {
 
   public constructor(private overlay: Overlay, private injector: Injector) { }
 
+  /**
+   * @method open
+   * This method opens the new popover based on PopoverParams
+   *
+   * @param {PopoverParams} [popoverParams]
+   * @returns {PopoverRef}
+   */
   public open<T>({ origin, content, data, width, height, hasBackdrop, backdropClass, isAboveTemplate }: PopoverParams<T>): PopoverRef<T> {
     const overlayRef = this.overlay.create(this.getOverlayConfig({origin, width, height, hasBackdrop, backdropClass, isAboveTemplate}));
     const popoverRef = new PopoverRef<T>(overlayRef, content, data);
