@@ -379,6 +379,39 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
+                                <a href="modules/PopoverModule.html" data-type="entity-link">PopoverModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-PopoverModule-dceddd25b1c5979c18291b4646ff72f3"' : 'data-target="#xs-components-links-module-PopoverModule-dceddd25b1c5979c18291b4646ff72f3"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-PopoverModule-dceddd25b1c5979c18291b4646ff72f3"' :
+                                            'id="xs-components-links-module-PopoverModule-dceddd25b1c5979c18291b4646ff72f3"' }>
+                                            <li class="link">
+                                                <a href="components/PopoverComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">PopoverComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                <li class="chapter inner">
+                                    <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                        'data-target="#injectables-links-module-PopoverModule-dceddd25b1c5979c18291b4646ff72f3"' : 'data-target="#xs-injectables-links-module-PopoverModule-dceddd25b1c5979c18291b4646ff72f3"' }>
+                                        <span class="icon ion-md-arrow-round-down"></span>
+                                        <span>Injectables</span>
+                                        <span class="icon ion-ios-arrow-down"></span>
+                                    </div>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-PopoverModule-dceddd25b1c5979c18291b4646ff72f3"' :
+                                        'id="xs-injectables-links-module-PopoverModule-dceddd25b1c5979c18291b4646ff72f3"' }>
+                                        <li class="link">
+                                            <a href="injectables/PopoverService.html"
+                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>PopoverService</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </li>
+                            <li class="link">
                                 <a href="modules/PopupConfirmModule.html" data-type="entity-link">PopupConfirmModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
@@ -483,6 +516,18 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? 'id="classes-links"' : 'id="xs-classes-links"' }>
                             <li class="link">
+                                <a href="classes/PopoverRef.html" data-type="entity-link">PopoverRef</a>
+                            </li>
+                            <li class="link">
+                                <a href="classes/PopoverStringContent.html" data-type="entity-link">PopoverStringContent</a>
+                            </li>
+                            <li class="link">
+                                <a href="classes/PopoverTemplateContent.html" data-type="entity-link">PopoverTemplateContent</a>
+                            </li>
+                            <li class="link">
+                                <a href="classes/TemplateStub.html" data-type="entity-link">TemplateStub</a>
+                            </li>
+                            <li class="link">
                                 <a href="classes/TippyHelper.html" data-type="entity-link">TippyHelper</a>
                             </li>
                         </ul>
@@ -503,6 +548,12 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/MatSortHeaderColumnDef.html" data-type="entity-link">MatSortHeaderColumnDef</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/PopoverCloseEvent.html" data-type="entity-link">PopoverCloseEvent</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/PopoverParams.html" data-type="entity-link">PopoverParams</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/PopupConfirmAction.html" data-type="entity-link">PopupConfirmAction</a>

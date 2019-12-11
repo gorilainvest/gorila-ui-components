@@ -166,6 +166,8 @@ SOFTWARE.
 
 @gorilainvest/ui-toolkit/page-header
 
+@gorilainvest/ui-toolkit/popover
+
 @gorilainvest/ui-toolkit/popup-confirm
 
 @gorilainvest/ui-toolkit/scroll-container
