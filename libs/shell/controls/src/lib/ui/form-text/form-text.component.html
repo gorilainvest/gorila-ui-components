@@ -1,0 +1,103 @@
+<gdk-card
+  title="Form Text"
+  subtitle="Wrapper for angular material form text"
+  [withoutOutput]="true"
+>
+  <mat-list role="list" class="inputs">
+    <mat-list-item role="listitem" class="checked-config-container">
+      <mat-checkbox
+        class="full-width"
+        color="primary"
+        [(ngModel)]="displayCount"
+      >Display characteres count
+      </mat-checkbox>
+    </mat-list-item>
+    <mat-list-item role="listitem" class="resize-config-container">
+      <mat-checkbox
+        class="full-width"
+        color="primary"
+        [(ngModel)]="resizable"
+      >Allow input resize
+      </mat-checkbox>
+    </mat-list-item>
+    <mat-list-item role="listitem" class="placeholder-config-container">
+      <mat-form-field class="full-width">
+        <input matInput
+          placeholder="Placeholder"
+          [(ngModel)]="placeholder"
+        />
+        <mat-hint>The placeholder text</mat-hint>
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem" class="hint-config-container">
+      <mat-form-field class="full-width">
+        <input matInput
+          placeholder="Hint"
+          [(ngModel)]="hint"
+        />
+        <mat-hint>The hint text</mat-hint>
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem" class="max-char-config-container">
+      <mat-form-field class="full-width">
+        <input matInput
+          type="number"
+          placeholder="Max charactere"
+          min="1"
+          [(ngModel)]="maxLength"
+        />
+        <mat-hint>The maximum number of characteres</mat-hint>
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem" class="rows-config-container">
+      <mat-form-field class="full-width">
+        <input matInput
+          type="number"
+          placeholder="Rows"
+          min="1"
+          [(ngModel)]="rows"
+        />
+        <mat-hint>The number of rows for input</mat-hint>
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem" class="disabled-config-container">
+      <mat-checkbox
+        class="full-width"
+        color="primary"
+        [(ngModel)]="disabled"
+      >Disable me!
+      </mat-checkbox>
+    </mat-list-item>
+  </mat-list>
+
+  <gor-form-text
+    class="widget"
+    [control]="control"
+    [disabled]="disabled"
+    [displayCount]="displayCount"
+    [hint]="hint"
+    [maxLength]="maxLength"
+    [placeholder]="placeholder"
+    [resizable]="resizable"
+    [rows]="rows"
+  >
+  </gor-form-text>
+
+  <pre class="code">
+<span>// module import</span>
+<span>import &#123; FormTextModule &#125; from '@gorilainvest/ui-toolkit/dist/form-text';</span>
+<span></span>
+<span>// template.html</span>
+<span>&lt;gor-form-text</span>
+<span>  [control]="control"</span>
+<span>  [disabled]=&quot;{{disabled}}&quot;</span>
+<span>  [displayCount]=&quot;{{displayCount}}&quot;</span>
+<span>  [hint]=&quot;{{hint}}&quot;</span>
+<span>  [maxLength]=&quot;{{maxLength}}&quot;</span>
+<span>  [placeholder]=&quot;{{placeholder}}&quot;</span>
+<span>  [resizable]=&quot;{{resizable}}&quot;</span>
+<span>  [rows]=&quot;{{rows}}&quot;&gt;</span>
+<span>&lt;/gor-form-text&gt;</span>
+<span></span>
+  </pre>
+</gdk-card>
