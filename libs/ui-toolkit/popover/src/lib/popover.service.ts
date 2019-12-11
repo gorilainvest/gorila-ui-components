@@ -49,11 +49,19 @@ export class PopoverService {
     return popoverRef;
   }
 
+  /**
+   * @method createInjector
+   * This method createates a new Portal injector based on popover
+   */
   private createInjector(popoverRef: PopoverRef, injector: Injector) {
     const tokens = new WeakMap([[PopoverRef, popoverRef]]);
     return new PortalInjector(injector, tokens);
   }
 
+  /**
+   * @method getOverlayConfig
+   * This returns the overlay config
+   */
   private getOverlayConfig({ origin, width, height, hasBackdrop, backdropClass, isAboveTemplate }): OverlayConfig {
     return new OverlayConfig({
       width,
@@ -65,6 +73,10 @@ export class PopoverService {
     });
   }
 
+  /**
+   * @method getOverlayPosition
+   * This returns the overley position object
+   */
   private getOverlayPosition(origin: HTMLElement, isAboveTemplate: boolean): PositionStrategy {
     const positionStrategy = this.overlay.position()
       .flexibleConnectedTo(origin)
@@ -75,6 +87,10 @@ export class PopoverService {
     return positionStrategy;
   }
 
+  /**
+   * @method getPositions
+   * This method returns the popover relative position coordinates
+   */
   private getPositions(isAboveTemplate: boolean): ConnectionPositionPair[] {
     const pos = isAboveTemplate ? 'above' : 'below';
     return [...POPOVER_POSITIONS[pos]];

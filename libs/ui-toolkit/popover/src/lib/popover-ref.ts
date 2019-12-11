@@ -26,10 +26,18 @@ export class PopoverRef<T = any> {
    overlay.backdropClick().subscribe(() => this._close('backdropClick', data));
  }
 
+/**
+ * @method close
+ * close the popup manually
+ */
  public close(data?: T) {
    this._close('close', data);
  }
 
+/**
+ * @method _close
+ * close the popup
+ */
  private _close(type, data) {
    this.overlay.dispose();
    this.afterClosed.next({

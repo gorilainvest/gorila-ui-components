@@ -11,8 +11,29 @@ import { PopoverContent, PopoverRef } from './popover-ref';
   styleUrls: ['./popover.component.scss']
 })
 export class PopoverComponent implements OnInit {
+
+  /**
+   * The popover content element
+   *
+   * @default null
+   * @see PopoverContent
+   */
   public content: PopoverContent;
+
+  /**
+   * The context object
+   *
+   * this object contains the popover's close method
+   */
   public context: any;
+
+  /**
+   * The renderMethod
+   *
+   * can be template, component or text
+   * it will be defined based on content data that is sent
+   * to popover
+   */
   public renderMethod: 'template' | 'component' | 'text' = 'component';
 
   public constructor(private popoverRef: PopoverRef) { }

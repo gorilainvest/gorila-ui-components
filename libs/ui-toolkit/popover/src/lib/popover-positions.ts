@@ -1,5 +1,8 @@
 import { ConnectionPositionPair } from '@angular/cdk/overlay';
 
+/**
+ * coordinates to positioning the popover above
+ */
 const topAbove: ConnectionPositionPair = {
   originX: 'center',
   originY: 'top',
@@ -7,6 +10,9 @@ const topAbove: ConnectionPositionPair = {
   overlayY: 'top',
 };
 
+/**
+ * coordinates to positioning the popover below
+ */
 const topBelow: ConnectionPositionPair = {
   originX: 'center',
   originY: 'top',
@@ -14,6 +20,9 @@ const topBelow: ConnectionPositionPair = {
   overlayY: 'bottom',
 };
 
+/**
+ * coordinates to positioning the popover right and above
+ */
 const rightAbove: ConnectionPositionPair = {
   originX: 'end',
   originY: 'top',
@@ -21,6 +30,9 @@ const rightAbove: ConnectionPositionPair = {
   overlayY: 'top',
 };
 
+/**
+ * coordinates to positioning the popover right and below
+ */
 const rightBelow: ConnectionPositionPair = {
   originX: 'end',
   originY: 'center',
@@ -28,6 +40,9 @@ const rightBelow: ConnectionPositionPair = {
   overlayY: 'center',
 };
 
+/**
+ * coordinates to positioning the popover bottom and above
+ */
 const bottomAbove: ConnectionPositionPair = {
   originX: 'center',
   originY: 'top',
@@ -35,6 +50,9 @@ const bottomAbove: ConnectionPositionPair = {
   overlayY: 'top',
 };
 
+/**
+ * coordinates to positioning the popover bottom and below
+ */
 const bottomBelow: ConnectionPositionPair = {
   originX: 'center',
   originY: 'bottom',
@@ -42,6 +60,9 @@ const bottomBelow: ConnectionPositionPair = {
   overlayY: 'top',
 };
 
+/**
+ * coordinates to positioning the popover left and above
+ */
 const leftAbove: ConnectionPositionPair = {
   originX: 'start',
   originY: 'top',
@@ -49,6 +70,9 @@ const leftAbove: ConnectionPositionPair = {
   overlayY: 'top',
 };
 
+/**
+ * coordinates to positioning the popover left and below
+ */
 const leftBelow: ConnectionPositionPair = {
   originX: 'start',
   originY: 'center',
@@ -56,6 +80,9 @@ const leftBelow: ConnectionPositionPair = {
   overlayY: 'center',
 };
 
+/**
+ * coordinates to positioning the popover above
+ */
 export const POPOVER_POSITIONS_ABOVE_TEMPLATE: ConnectionPositionPair[] = [
   bottomAbove,
   leftAbove,
@@ -63,6 +90,9 @@ export const POPOVER_POSITIONS_ABOVE_TEMPLATE: ConnectionPositionPair[] = [
   topAbove
 ];
 
+/**
+ * coordinates to positioning the popover below
+ */
 export const POPOVER_POSITIONS_BELOW_TEMPLATE: ConnectionPositionPair[] = [
   bottomBelow,
   leftBelow,
@@ -70,6 +100,9 @@ export const POPOVER_POSITIONS_BELOW_TEMPLATE: ConnectionPositionPair[] = [
   topBelow
 ];
 
+/**
+ * a object with popover positioning data
+ */
 export const POPOVER_POSITIONS = {
   above: POPOVER_POSITIONS_ABOVE_TEMPLATE,
   below: POPOVER_POSITIONS_BELOW_TEMPLATE
