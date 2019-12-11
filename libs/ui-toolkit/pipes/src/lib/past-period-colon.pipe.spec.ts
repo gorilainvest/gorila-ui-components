@@ -1,13 +1,18 @@
+import { TranslateService } from '@ngx-translate/core';
 import * as moment from 'moment';
 
 import { PastPeriodColonPipe } from './past-period-colon.pipe';
+
+export class TranslateServiceStub {
+  public instant = (str) => str
+}
 
 describe('PastPeriodColonPipe', () => {
   const format = 'MMM/YYYY';
   let pipe: PastPeriodColonPipe;
 
   beforeEach(() => {
-    pipe = new PastPeriodColonPipe((str, data) => str);
+    pipe = new PastPeriodColonPipe(new TranslateServiceStub() as TranslateService);
   });
 
   describe('without base date', () => {
@@ -19,7 +24,7 @@ describe('PastPeriodColonPipe', () => {
     });
 
     it('should only translate input and print today for non \'last\' labels', () => {
-      const expected = 'current: Mai/2015';
+      const expected = 'current: May/2015';
 
       const transformed = pipe.transform('current', format);
 
@@ -34,8 +39,8 @@ describe('PastPeriodColonPipe', () => {
       expect(transformed).toBe(expected);
     });
 
-    it('should transform lastyear to \'12 last: Mai/2014\'', () => {
-      const expected = 'last @n months: Mai/2014';
+    it('should transform lastyear to \'12 last: May/2014\'', () => {
+      const expected = 'last @n months: May/2014';
 
       const transformed = pipe.transform('lastyear', format);
 
@@ -45,23 +50,23 @@ describe('PastPeriodColonPipe', () => {
 
   describe('with base date', () => {
     it('should only translate input and print passed base date (\'2018-08-08\') for non \'last\' labels', () => {
-      const expected = 'current: Ago/2018';
+      const expected = 'current: Aug/2018';
 
       const transformed = pipe.transform('current', format, '2018-08-08');
 
       expect(transformed).toBe(expected);
     });
 
-    it('should transform last6months based on passed base date (\'2018-08-08\') to \'6 last: Fev/2018\'', () => {
-      const expected = 'last @n months: Fev/2018';
+    it('should transform last6months based on passed base date (\'2018-08-08\') to \'6 last: Feb/2018\'', () => {
+      const expected = 'last @n months: Feb/2018';
 
       const transformed = pipe.transform('last6months', format, '2018-08-08');
 
       expect(transformed).toBe(expected);
     });
 
-    it('should transform lastyear based on passed base date (\'2018-08-08\') to \'12 last: Ago/2017\'', () => {
-      const expected = 'last @n months: Ago/2017';
+    it('should transform lastyear based on passed base date (\'2018-08-08\') to \'12 last: Aug/2017\'', () => {
+      const expected = 'last @n months: Aug/2017';
 
       const transformed = pipe.transform('lastyear', format, '2018-08-08');
 

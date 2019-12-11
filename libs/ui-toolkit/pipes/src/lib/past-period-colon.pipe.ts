@@ -1,18 +1,19 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { utc } from 'moment';
 
 @Pipe({
   name: 'pastPeriodColon'
 })
 export class PastPeriodColonPipe implements PipeTransform {
-  constructor(private translateFn: (str: string, extra?: any) => string) {}
+  constructor(private translate: TranslateService) {}
 
   public transform(value: string, format?: string, current?: string): string {
     let preColonStr = '';
     let postColonStr = '';
 
     if (!value.startsWith('last')) {
-      preColonStr = this.translateFn(value);
+      preColonStr = this.translate.instant(value);
       postColonStr = utc(current).format(format);
     } else {
       const lastSplit = value.split('last');
@@ -36,9 +37,9 @@ export class PastPeriodColonPipe implements PipeTransform {
       }
 
       if (period === 'year' && n === 1) {
-        preColonStr = this.translateFn('last @n months', { n: 12 });
+        preColonStr = this.translate.instant('last @n months', { n: 12 });
       } else {
-        preColonStr = this.translateFn(`last @n ${period}`, { n });
+        preColonStr = this.translate.instant(`last @n ${period}`, { n });
       }
     }
 
