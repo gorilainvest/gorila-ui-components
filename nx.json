@@ -89,6 +89,15 @@
         "group:popups-modals"
       ]
     },
+    "popover": {
+      "tags": [
+        "exportable",
+        "team:grodd",
+        "scope:shared",
+        "scope:ui",
+        "group:popups-modals"
+      ]
+    },
     "section-title": {
       "tags": [
         "exportable",

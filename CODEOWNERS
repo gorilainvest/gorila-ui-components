@@ -11,6 +11,7 @@ libs/ui/icon @oliveira-gust
 libs/ui/loading @denisokawa
 libs/ui/page-header @guilhermejcgois @oliveira-gust
 libs/ui/popup-confirm @guilhermejcgois @oliveira-gust
+libs/ui/popover @tigredonorte
 libs/ui/section-title @tigredonorte
 libs/ui/slide-toggle @denisokawa
 libs/ui/sort-header @oliveira-gust

@@ -225,7 +225,7 @@ The rest of the commit message is then used for this.
 A detailed explanation can be found in this [document][commit-message-format].
 
 [commit-message-format]: https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/preview
-[dev-doc]: ./dev-environment.md
+[dev-doc]: ./additional-documentation/dev-environment.html
 [github]: https://github.org/gorilainvest/gorila-ui-components/
 [github-pr]: https://github.org/gorilainvest/gorila-ui-components/pull-requests/
 [style-guide]: https://angular.io/guide/styleguide
