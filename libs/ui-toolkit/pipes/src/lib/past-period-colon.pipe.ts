@@ -2,6 +2,18 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { utc } from 'moment';
 
+/**
+ * @class PastPeriodColonPipe
+ *
+ * Transform the string containing current or lastXMonths into readable format (see examples)
+ *
+ * Examples:
+ * 1) "current" | pastPeriodColon: "MM/YYYY": "2019-12-24"  => current: 12/2019
+ * 2) "last6Months" | pastPeriodColon: "MM/YYYY": "2019-12-24" => last 6 months: 06/2019
+ * 3) "lastYear" | pastPeriodColon: "MM/YYYY": "2019-12-24" => last 12 months: 12/2018
+ * 4) "lastYear" | pastPeriodColon: "YYYY-MM-DD": "2019-12-24" => last 12 months: 2018-12-24
+ *
+ */
 @Pipe({
   name: 'pastPeriodColon'
 })
