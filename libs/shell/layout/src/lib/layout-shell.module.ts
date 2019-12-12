@@ -7,6 +7,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
 import { RouterModule } from '@angular/router';
 import { GdkModule } from '@gorilainvest/gdk';
 import { CardContainerModule } from '@gorilainvest/ui-toolkit/card-container';
@@ -38,6 +40,8 @@ import { SortHeaderComponent } from './ui/sort-header/sort-header.component';
     MatInputModule,
     MatListModule,
     MatSelectModule,
+    MatSortModule,
+    MatTableModule,
     ScrollingModule,
     GdkModule,
     CardContainerModule,
@@ -100,7 +104,8 @@ import { SortHeaderComponent } from './ui/sort-header/sort-header.component';
     LayoutComponent,
     PageHeaderComponent,
     ScrollContainerComponent,
-    SectionTitleComponent
+    SectionTitleComponent,
+    SortHeaderComponent
   ]
 })
 export class LayoutShellModule { }
