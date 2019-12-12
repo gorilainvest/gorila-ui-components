@@ -19,7 +19,7 @@ import { ArrowVariationComponent } from './ui/arrow-variation/arrow-variation.co
 import { DataFormatterComponent } from './ui/data-formatter/data-formatter.component';
 import { PipesComponent } from './ui/pipes';
 
-class TranslateServiceStub {
+export class TranslateServicePresentational {
   public instant = (str) => str;
 }
 
@@ -58,7 +58,7 @@ class TranslateServiceStub {
     ])
   ],
   providers: [
-    { provide: TranslateService, useClass: TranslateServiceStub }
+    { provide: TranslateService, useClass: TranslateServicePresentational }
   ],
   declarations: [ArrowVariationComponent, PresentationalComponent, DataFormatterComponent, PipesComponent],
   exports: [ArrowVariationComponent, DataFormatterComponent, PipesComponent]
