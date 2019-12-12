@@ -16,6 +16,7 @@ import { IconModule } from '@gorilainvest/ui-toolkit/icon';
 import { PageHeaderModule } from '@gorilainvest/ui-toolkit/page-header';
 import { ScrollContainerModule } from '@gorilainvest/ui-toolkit/scroll-container';
 import { SectionTitleModule } from '@gorilainvest/ui-toolkit/section-title';
+import { SortHeaderModule } from '@gorilainvest/ui-toolkit/sort-header';
 
 import { LayoutComponent } from './layout/layout.component';
 import { CardContainerComponent } from './ui/card-container/card-container.component';
@@ -25,6 +26,7 @@ import { IconComponent } from './ui/icon/icon.component';
 import { PageHeaderComponent } from './ui/page-header/page-header.component';
 import { ScrollContainerComponent } from './ui/scroll-container/scroll-container.component';
 import { SectionTitleComponent } from './ui/section-title/section-title.component';
+import { SortHeaderComponent } from './ui/sort-header/sort-header.component';
 
 @NgModule({
   imports: [
@@ -45,6 +47,7 @@ import { SectionTitleComponent } from './ui/section-title/section-title.componen
     ScrollContainerModule,
     SectionTitleModule,
     PageHeaderModule,
+    SortHeaderModule,
     RouterModule.forChild([
       {
         path: 'card-container',
@@ -80,6 +83,11 @@ import { SectionTitleComponent } from './ui/section-title/section-title.componen
         path: 'page-header',
         pathMatch: 'full',
         component: PageHeaderComponent
+      },
+      {
+        path: 'sort-header',
+        pathMatch: 'full',
+        component: SortHeaderComponent
       },
       { path: '', pathMatch: 'full', component: LayoutComponent }
     ])
