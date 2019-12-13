@@ -1,5 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
+import { PresentationalShellModule } from '../../presentational-shell.module';
 import { PipesComponent } from './pipes.component';
 
 describe('PipesComponent', () => {
@@ -8,7 +10,7 @@ describe('PipesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PipesComponent ]
+      imports: [PresentationalShellModule, NoopAnimationsModule]
     })
     .compileComponents();
   }));
