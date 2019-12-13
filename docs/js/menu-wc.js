@@ -360,13 +360,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/PipesModule.html" data-type="entity-link">PipesModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#pipes-links-module-PipesModule-56251b4d88f4b80ebe7cea119bc72362"' : 'data-target="#xs-pipes-links-module-PipesModule-56251b4d88f4b80ebe7cea119bc72362"' }>
+                                            'data-target="#pipes-links-module-PipesModule-a9c05a354d54e3065f778e1273581cb8"' : 'data-target="#xs-pipes-links-module-PipesModule-a9c05a354d54e3065f778e1273581cb8"' }>
                                             <span class="icon ion-md-add"></span>
                                             <span>Pipes</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="pipes-links-module-PipesModule-56251b4d88f4b80ebe7cea119bc72362"' :
-                                            'id="xs-pipes-links-module-PipesModule-56251b4d88f4b80ebe7cea119bc72362"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="pipes-links-module-PipesModule-a9c05a354d54e3065f778e1273581cb8"' :
+                                            'id="xs-pipes-links-module-PipesModule-a9c05a354d54e3065f778e1273581cb8"' }>
                                             <li class="link">
                                                 <a href="pipes/BigCurrencyPipe.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">BigCurrencyPipe</a>
@@ -374,6 +374,10 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                             <li class="link">
                                                 <a href="pipes/CssClassPipe.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">CssClassPipe</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="pipes/PastPeriodColonPipe.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">PastPeriodColonPipe</a>
                                             </li>
                                         </ul>
                                     </li>

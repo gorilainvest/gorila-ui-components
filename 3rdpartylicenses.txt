@@ -185,6 +185,9 @@ MIT
 @ngrx/store
 MIT
 
+@ngx-translate/core
+MIT
+
 @nrwl/angular
 MIT
 (The MIT License)
