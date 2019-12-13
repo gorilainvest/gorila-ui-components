@@ -167,7 +167,8 @@
     "pipes": {
       "tags": [
         "exportable",
-        "scope:shared"
+        "scope:shared",
+        "group:presentational"
       ]
     },
     "icon": {

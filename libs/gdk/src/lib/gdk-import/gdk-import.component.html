@@ -1,34 +1,34 @@
 <pre>
   <span>// module import</span>
   <span>import &#123; {{moduleTitle}}Module &#125; from '@gorilainvest/ui-toolkit/dist/{{moduleNameStr}}';</span>
+  <span></span>
   <ng-container *ngIf="!!prefix">
-    <span></span>
     <span>// template.html</span>
     <ng-container *ngIf="!!keys&&keys.length>0;else withoutParameters">
       <ng-container *ngTemplateOutlet="withParameters"></ng-container>
     </ng-container>
-  </ng-container>
+    </ng-container>
   <ng-content></ng-content>
   <span></span>
 </pre>
 
 <ng-template #withoutParameters>
-  <span class='no-margin'>
+  <span>
     <ng-container *ngTemplateOutlet="openTag"></ng-container>
     <ng-container *ngTemplateOutlet="closeTag"></ng-container>
   </span>
 </ng-template>
 <ng-template #withParameters>
-  <span class='no-margin'>
+  <span>
     <ng-container *ngTemplateOutlet="openTag"></ng-container>
   </span>
   <ng-container *ngTemplateOutlet="displayParameters"></ng-container>
-  <span class='no-margin'>
+  <span>
     <ng-container *ngTemplateOutlet="closeTag"></ng-container>
   </span>
 </ng-template>
 <ng-template #openTag>&lt;{{prefix}}-{{moduleNameStr}}</ng-template>
 <ng-template #closeTag>&gt;&lt;/{{prefix}}-{{moduleNameStr}}&gt;</ng-template>
 <ng-template #displayParameters>
-  <span *ngFor="let key of keys" class='no-margin'> [{{key}}]=&quot;'{{values[key]}}'&quot;</span>
+  <span *ngFor="let key of keys"> [{{key}}]=&quot;'{{values[key]}}'&quot;</span>
 <ng-template>
