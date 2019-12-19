@@ -7,6 +7,7 @@ export * from './dist/data-formatter';
 export * from './dist/directives';
 export * from './dist/enhanced-title';
 export * from './dist/loading';
+export * from './dist/pipes';
 export * from './dist/popup-confirm';
 export * from './dist/section-title';
 export * from './dist/slide-toggle';

@@ -86,8 +86,8 @@ export function getDigits(value: number): string {
 /**
  * Verify if a variable is a number
  *
- * @param {string} a variable to be checked
- * @returns {boolean} true if is number, false otherwise
+ * @param string a variable to be checked
+ * @returns boolean true if is number, false otherwise
  */
 export function isNumber(num: any): boolean {
   return !isNaN(num) && (!!(num || num === 0));

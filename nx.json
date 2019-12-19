@@ -44,15 +44,6 @@
         "group:buttons-indicators"
       ]
     },
-    "currency-display": {
-      "tags": [
-        "exportable",
-        "team:grodd",
-        "scope:shared",
-        "scope:ui",
-        "group:layout"
-      ]
-    },
     "data-formatter": {
       "tags": [
         "exportable",
@@ -167,6 +158,8 @@
     "pipes": {
       "tags": [
         "exportable",
+        "team:grodd",
+        "scope:ui",
         "scope:shared",
         "group:presentational"
       ]
@@ -193,6 +186,15 @@
       "tags": [
         "exportable",
         "team:magilla",
+        "scope:shared",
+        "scope:ui",
+        "group:layout"
+      ]
+    },
+    "currency-display": {
+      "tags": [
+        "exportable",
+        "team:grodd",
         "scope:shared",
         "scope:ui",
         "group:layout"
