@@ -3,7 +3,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { utc } from 'moment';
 
 /**
- * @class PastPeriodColonPipe
+ * PastPeriodColonPipe
  *
  * Transform the string containing current or lastXMonths into readable format (see examples)
  *

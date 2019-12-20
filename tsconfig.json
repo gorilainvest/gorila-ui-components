@@ -20,78 +20,103 @@
     "baseUrl": ".",
     "paths": {
       "@gorilainvest/ui-toolkit/directives": [
+        "dist/directives",
         "libs/ui-toolkit/directives/src/index.ts"
       ],
       "@gorilainvest/ui-toolkit/arrow-variation": [
+        "dist/arrow-variation",
         "libs/ui-toolkit/arrow-variation/src/index.ts"
       ],
       "@gorilainvest/ui-toolkit/button": [
+        "dist/button",
         "libs/ui-toolkit/button/src/index.ts"
       ],
       "@gorilainvest/ui-toolkit/card-container": [
+        "dist/card-container",
         "libs/ui-toolkit/card-container/src/index.ts"
       ],
       "@gorilainvest/ui-toolkit/countdown-button": [
+        "dist/countdown-button",
         "libs/ui-toolkit/countdown-button/src/index.ts"
       ],
       "@gorilainvest/ui-toolkit/currency-display": [
+        "dist/currency-display",
         "libs/ui-toolkit/currency-display/src/index.ts"
       ],
       "@gorilainvest/ui-toolkit/enhanced-title": [
+        "dist/enhanced-title",
         "libs/ui-toolkit/enhanced-title/src/index.ts"
       ],
       "@gorilainvest/ui-toolkit/data-formatter": [
+        "dist/data-formatter",
         "libs/ui-toolkit/data-formatter/src/index.ts"
       ],
       "@gorilainvest/ui-toolkit/loading": [
+        "dist/loading",
         "libs/ui-toolkit/loading/src/index.ts"
       ],
       "@gorilainvest/ui-toolkit/popup-confirm": [
+        "dist/popup-confirm",
         "libs/ui-toolkit/popup-confirm/src/index.ts"
       ],
       "@gorilainvest/ui-toolkit/section-title": [
+        "dist/section-title",
         "libs/ui-toolkit/section-title/src/index.ts"
       ],
       "@gorilainvest/ui-toolkit/slide-toggle": [
+        "dist/slide-toggle",
         "libs/ui-toolkit/slide-toggle/src/index.ts"
       ],
       "@gorilainvest/shell/buttons-indicators": [
+        "dist/buttons-indicators",
         "libs/shell/buttons-indicators/src/index.ts"
       ],
       "@gorilainvest/shell/controls": [
+        "dist/controls",
         "libs/shell/controls/src/index.ts"
       ],
       "@gorilainvest/shell/layout": [
+        "dist/layout",
         "libs/shell/layout/src/index.ts"
       ],
       "@gorilainvest/shell/popups-modals": [
+        "dist/popups-modals",
         "libs/shell/popups-modals/src/index.ts"
       ],
       "@gorilainvest/shell/presentational": [
+        "dist/presentational",
         "libs/shell/presentational/src/index.ts"
       ],
       "@gorilainvest/gdk": [
+        "dist/gdk",
         "libs/gdk/src/index.ts"
       ],
       "@gorilainvest/ui-toolkit/scroll-container": [
+        "dist/scroll-container",
         "libs/ui-toolkit/scroll-container/src/index.ts"
       ],
       "@gorilainvest/ui-toolkit/page-header": [
+        "dist/page-header",
         "libs/ui-toolkit/page-header/src/index.ts"
       ],
       "@gorilainvest/ui-toolkit/pipes": [
+        "dist/pipes",
         "libs/ui-toolkit/pipes/src/index.ts"
       ],
       "@gorilainvest/ui-toolkit/popover": [
+        "dist/popover",
         "libs/ui-toolkit/popover/src/index.ts"
       ],
       "@gorilainvest/ui-toolkit/icon": [
+        "dist/icon",
         "libs/ui-toolkit/icon/src/index.ts"
       ],
       "@gorilainvest/ui-toolkit/form-text": [
+        "dist/form-text",
         "libs/ui-toolkit/form-text/src/index.ts"
       ],
       "@gorilainvest/ui-toolkit/sort-header": [
+        "dist/sort-header",
         "libs/ui-toolkit/sort-header/src/index.ts"
       ]
     },
