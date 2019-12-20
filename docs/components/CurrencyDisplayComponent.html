@@ -65,6 +65,14 @@
     <code>libs/ui-toolkit/currency-display/src/lib/currency-display.component.ts</code>
 </p>
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>CurrencyDisplayComponent
+This component is used to format a number into currency format</p>
+
+    </p>
 
 
     <p class="comment">
@@ -558,7 +566,7 @@
 import { BigCurrencyPipe, SymbolDisplay } from &#x27;@gorilainvest/ui-toolkit/pipes&#x27;;
 
 /**
- * @class CurrencyDisplayComponent
+ * CurrencyDisplayComponent
  * This component is used to format a number into currency format
  *
  * @example &lt;gro-currency-display value&#x3D;&quot;5.00&quot;&gt;&lt;/gro-currency-display&gt; will display: US$ 5
@@ -571,24 +579,24 @@ import { BigCurrencyPipe, SymbolDisplay } from &#x27;@gorilainvest/ui-toolkit/pi
 export class CurrencyDisplayComponent implements OnInit, OnChanges {
 
   /**
-   * @param {number} value A decimal number to be formatted as a currency number
+   * @param number value A decimal number to be formatted as a currency number
    */
   @Input() public value &#x3D; 0;
 
   /**
-   * @param {string} [currencyCode] A string containing a ISO 4217 code. Check:
+   * @param string [currencyCode] A string containing a ISO 4217 code. Check:
    * https://en.wikipedia.org/wiki/ISO_4217
    */
   @Input() public currencyCode &#x3D; &#x27;USD&#x27;;
 
   /**
-   * @param {SymbolDisplay} [symbolDisplay] The format of displayed currency symbol.
+   * @param SymbolDisplay [symbolDisplay] The format of displayed currency symbol.
    * Check SymbolDisplay to see the available options
    */
   @Input() public symbolDisplay: SymbolDisplay &#x3D; &#x27;symbol&#x27;;
 
   /**
-   * @param {string} [digitInfo] A string containing 3 numbers separeted by hyphen
+   * @param string [digitInfo] A string containing 3 numbers separeted by hyphen
    * Use the following format: x-y-z.
    * X&#x3D;minIntegerDigits;
    * Y&#x3D;minFractionDigits;
@@ -602,13 +610,13 @@ export class CurrencyDisplayComponent implements OnInit, OnChanges {
   @Input() public digitInfo &#x3D; &#x27;1.0-3&#x27;;
 
   /**
-   * @param {Object.&lt;string, string&gt;} [currencyClass] currencyClass is ngClass input
+   * @param Object.&lt;string, string&gt; [currencyClass] currencyClass is ngClass input
    * check https://angular.io/api/common/NgClass
    */
   @Input() public currencyClass &#x3D; {};
 
   /**
-   * @param {boolean} [hideNegative] If it&#x27;s setted as true the negative
+   * @param boolean [hideNegative] If it&#x27;s setted as true the negative
    * symbol will not be displayed for negative numbers
    */
   @Input() public hideNegative &#x3D; false;

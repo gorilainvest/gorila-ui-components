@@ -65,6 +65,14 @@
             <code>libs/ui-toolkit/popover/src/lib/popover.service.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>PopoverParams
+Available parameters to popover displaying</p>
+
+            </p>
 
 
         <section>
@@ -390,7 +398,7 @@ import { PopoverContent, PopoverRef } from &#x27;./popover-ref&#x27;;
 import { PopoverComponent } from &#x27;./popover.component&#x27;;
 
 /**
- * @interface PopoverParams
+ * PopoverParams
  * Available parameters to popover displaying
  */
 export interface PopoverParams&lt;T&gt; {
@@ -405,7 +413,7 @@ export interface PopoverParams&lt;T&gt; {
 };
 
 /**
- * @class PopoverService
+ * PopoverService
  * This class is used to call PopoverComponent and display data inside of him
  */
 @Injectable({
@@ -419,8 +427,8 @@ export class PopoverService {
    * @method open
    * This method opens the new popover based on PopoverParams
    *
-   * @param {PopoverParams} [popoverParams]
-   * @returns {PopoverRef}
+   * @param PopoverParams [popoverParams]
+   * @returns PopoverRef
    */
   public open&lt;T&gt;({ origin, content, data, width, height, hasBackdrop, backdropClass, isAboveTemplate }: PopoverParams&lt;T&gt;): PopoverRef&lt;T&gt; {
     const overlayRef &#x3D; this.overlay.create(this.getOverlayConfig({origin, width, height, hasBackdrop, backdropClass, isAboveTemplate}));

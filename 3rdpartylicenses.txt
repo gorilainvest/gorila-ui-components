@@ -142,8 +142,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-@gorilainvest/ui-toolkit-pipes
-
 @gorilainvest/ui-toolkit/arrow-variation
 
 @gorilainvest/ui-toolkit/button
@@ -165,6 +163,8 @@ SOFTWARE.
 @gorilainvest/ui-toolkit/loading
 
 @gorilainvest/ui-toolkit/page-header
+
+@gorilainvest/ui-toolkit/pipes
 
 @gorilainvest/ui-toolkit/popover
 

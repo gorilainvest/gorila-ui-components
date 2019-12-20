@@ -64,14 +64,17 @@
             <code>libs/ui-toolkit/popover/src/lib/popover-ref.ts</code>
         </p>
 
-
-
-
             <p class="comment">
-                <h3>Example</h3>
+                <h3>Description</h3>
             </p>
-            <div class="io-description">
-            </div>
+            <p class="comment">
+                <p>PopoverRef
+A class used to close popover if backdrop is clicked or if the caller calls close method</p>
+
+            </p>
+
+
+
 
             <section>
     <h3 id="index">Index</h3>
@@ -411,7 +414,7 @@
 import { OverlayRef } from &#x27;@angular/cdk/overlay&#x27;;
 import { Subject } from &#x27;rxjs&#x27;;
 /**
- * @interface PopoverCloseEvent
+ * PopoverCloseEvent
  */
 export interface PopoverCloseEvent&lt;T&gt; {
  type: &#x27;backdropClick&#x27; | &#x27;close&#x27;;
@@ -424,7 +427,7 @@ export interface PopoverCloseEvent&lt;T&gt; {
 export type PopoverContent &#x3D; TemplateRef&lt;any&gt; | Type&lt;any&gt; | string;
 
 /**
- * @class PopoverRef
+ * PopoverRef
  * A class used to close popover if backdrop is clicked or if the caller calls close method
  */
 export class PopoverRef&lt;T &#x3D; any&gt; {

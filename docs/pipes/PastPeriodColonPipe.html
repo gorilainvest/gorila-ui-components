@@ -64,12 +64,20 @@
             <code>libs/ui-toolkit/pipes/src/lib/past-period-colon.pipe.ts</code>
         </p>
 
-
             <p class="comment">
-                <h3>Example</h3>
+                <h3>Description</h3>
             </p>
-            <div class="io-description">
-            </div>
+            <p class="comment">
+                <p>PastPeriodColonPipe</p>
+<p>Transform the string containing current or lastXMonths into readable format (see examples)</p>
+<p>Examples:</p>
+<p>1) &quot;current&quot; | pastPeriodColon: &quot;MM/YYYY&quot;: &quot;2019-12-24&quot;  =&gt; current: 12/2019
+2) &quot;last6Months&quot; | pastPeriodColon: &quot;MM/YYYY&quot;: &quot;2019-12-24&quot; =&gt; last 6 months: 06/2019
+3) &quot;lastYear&quot; | pastPeriodColon: &quot;MM/YYYY&quot;: &quot;2019-12-24&quot; =&gt; last 12 months: 12/2018
+4) &quot;lastYear&quot; | pastPeriodColon: &quot;YYYY-MM-DD&quot;: &quot;2019-12-24&quot; =&gt; last 12 months: 2018-12-24</p>
+
+            </p>
+
 
         <section>
             <h3>Metadata</h3>
@@ -195,7 +203,7 @@ import { TranslateService } from &#x27;@ngx-translate/core&#x27;;
 import { utc } from &#x27;moment&#x27;;
 
 /**
- * @class PastPeriodColonPipe
+ * PastPeriodColonPipe
  *
  * Transform the string containing current or lastXMonths into readable format (see examples)
  *
