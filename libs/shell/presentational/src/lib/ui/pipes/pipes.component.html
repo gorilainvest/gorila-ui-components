@@ -1,0 +1,122 @@
+<gdk-card
+  title="Currency Display"
+  subtitle="Display currency based on local currency configuration"
+  [withoutOutput]="true"
+>
+  <mat-list role="list" class="inputs">
+    <mat-list-item role="listitem" class="type-config-container">
+      <mat-form-field class="full-width">
+        <mat-label>Pipes</mat-label>
+        <mat-select [formControl]="pipeFormControl" required>
+          <mat-option value="pastPeriodColon">pastPeriodColon</mat-option>
+          <mat-option value="cssClass">cssClass</mat-option>
+          <mat-option value="bigCurrency">bigCurrency</mat-option>
+        </mat-select>
+        <mat-hint>Select the pipe that you want see</mat-hint>
+      </mat-form-field>
+    </mat-list-item>
+    <div [ngSwitch]="pipeFormControl.value">
+      <ng-container *ngSwitchCase="'pastPeriodColon'">
+        <form [formGroup]="form['pastPeriodColon']">
+          <mat-list-item role="listitem">
+            <mat-form-field class="full-width">
+              <mat-label>date</mat-label>
+              <input matInput required type="date" placeholder="date" formControlName="date"/>
+              <mat-hint>The past period date</mat-hint>
+            </mat-form-field>
+          </mat-list-item>
+          <mat-list-item role="listitem" class="type-config-container">
+            <mat-form-field class="full-width">
+              <mat-label>Label</mat-label>
+              <mat-select formControlName="label" required>
+                <mat-option value="current">current</mat-option>
+                <mat-option value="last6Months">last6Months</mat-option>
+                <mat-option value="lastYear">lastYear</mat-option>
+              </mat-select>
+              <mat-hint>The label is based on your translation file</mat-hint>
+            </mat-form-field>
+          </mat-list-item>
+          <mat-list-item role="listitem" class="type-config-container">
+            <mat-form-field class="full-width">
+              <mat-label>Format</mat-label>
+              <mat-select formControlName="format" required>
+                <mat-option value="MM/YYYY">MM/YYYY</mat-option>
+                <mat-option value="YYYY-MM-DD">YYYY-MM-DD</mat-option>
+              </mat-select>
+              <mat-hint>You can put any date format. Here You have only two options</mat-hint>
+            </mat-form-field>
+          </mat-list-item>
+        </form>
+      </ng-container>
+      <ng-container *ngSwitchCase="'bigCurrency'">
+        <form [formGroup]="form['bigCurrency']">
+          <mat-list-item role="listitem">
+            <mat-form-field class="full-width">
+              <mat-label>currency</mat-label>
+              <input matInput required type="number" placeholder="currency" formControlName="currency"/>
+            </mat-form-field>
+          </mat-list-item>
+          <mat-list-item role="listitem" class="type-config-container">
+            <mat-form-field class="full-width">
+              <mat-label>Currency code</mat-label>
+              <mat-select formControlName="currencyCode" required>
+                <mat-option value="USD">USD</mat-option>
+                <mat-option value="BRL">BRL</mat-option>
+                <mat-option value="EUR">EUR</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </mat-list-item>
+          <mat-list-item role="listitem" class="type-config-container">
+            <mat-form-field class="full-width">
+              <mat-label>Symbol Display</mat-label>
+              <mat-select formControlName="symbolDisplay" required>
+                <mat-option value="code">Code</mat-option>
+                <mat-option value="symbol">Symbol</mat-option>
+                <mat-option value="symbol-narrow">Symbol narrow</mat-option>
+              </mat-select>
+              <mat-hint>The symbol's format</mat-hint>
+            </mat-form-field>
+          </mat-list-item>
+        </form>
+      </ng-container>
+      <ng-container *ngSwitchCase="'cssClass'">
+        <form [formGroup]="form['cssClass']">
+          <mat-list-item role="listitem">
+            <mat-form-field class="full-width">
+              <mat-label>text input</mat-label>
+              <input matInput required type="text" placeholder="text input" formControlName="textInput"/>
+            </mat-form-field>
+          </mat-list-item>
+        </form>
+      </ng-container>
+    </div>
+  </mat-list>
+  <div class="widget page-header-container" cdkScrollable>
+    <div [ngSwitch]="pipeFormControl.value">
+      <ng-container *ngSwitchCase="'pastPeriodColon'">
+        {{form['pastPeriodColon'].get('label').value | pastPeriodColon: form['pastPeriodColon'].get('format').value: form['pastPeriodColon'].get('date').value}}
+      </ng-container>
+      <ng-container *ngSwitchCase="'cssClass'">
+        {{form['cssClass'].get('textInput').value | cssClass}}
+      </ng-container>
+      <ng-container *ngSwitchCase="'bigCurrency'">
+        {{form['bigCurrency'].get('currency').value | bigCurrency:form['bigCurrency'].get('currencyCode').value: form['bigCurrency'].get('symbolDisplay').type}}
+      </ng-container>
+    </div>
+  </div>
+
+  <gdk-import class="code" moduleName="pipes">
+    <span>// html </span>
+    <ng-container [ngSwitch]="pipeFormControl.value">
+      <span *ngSwitchCase="'pastPeriodColon'">
+        "{{form['pastPeriodColon'].get('label').value}}" | pastPeriodColon: "{{form['pastPeriodColon'].get('format').value}}": "{{form['pastPeriodColon'].get('date').value}}"
+      </span>
+      <span *ngSwitchCase="'cssClass'">
+        "{{form['cssClass'].get('textInput').value}}" | cssClass
+      </span>
+      <span *ngSwitchCase="'bigCurrency'">
+        "{{form['bigCurrency'].get('currency').value}}" | bigCurrency: "{{form['bigCurrency'].get('currencyCode').value}}": "{{form['bigCurrency'].get('symbolDisplay').value}}"
+      </span>
+    </ng-container>
+  </gdk-import>
+</gdk-card>

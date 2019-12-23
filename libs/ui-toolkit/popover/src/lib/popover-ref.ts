@@ -2,7 +2,7 @@ import { TemplateRef, Type } from '@angular/core';
 import { OverlayRef } from '@angular/cdk/overlay';
 import { Subject } from 'rxjs';
 /**
- * @interface PopoverCloseEvent
+ * PopoverCloseEvent
  */
 export interface PopoverCloseEvent<T> {
  type: 'backdropClick' | 'close';
@@ -15,7 +15,7 @@ export interface PopoverCloseEvent<T> {
 export type PopoverContent = TemplateRef<any> | Type<any> | string;
 
 /**
- * @class PopoverRef
+ * PopoverRef
  * A class used to close popover if backdrop is clicked or if the caller calls close method
  */
 export class PopoverRef<T = any> {

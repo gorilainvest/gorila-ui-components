@@ -1,11 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { keys } from 'ramda';
 
 @Component({
   selector: 'gdk-import',
   templateUrl: './gdk-import.component.html',
-  styleUrls: ['./gdk-import.component.scss']
+  styleUrls: ['./gdk-import.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class GdkImportComponent {
   public moduleNameStr = '';
