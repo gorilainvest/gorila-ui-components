@@ -109,6 +109,8 @@ THE SOFTWARE.
 
 @angular/material/sidenav
 
+@angular/material/table
+
 @angular/material/toolbar
 
 @angular/platform-browser
@@ -175,6 +177,8 @@ SOFTWARE.
 @gorilainvest/ui-toolkit/section-title
 
 @gorilainvest/ui-toolkit/slide-toggle
+
+@gorilainvest/ui-toolkit/sort-header
 
 @ngrx/effects
 MIT
