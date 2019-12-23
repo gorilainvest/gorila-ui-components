@@ -7,6 +7,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
 import { RouterModule } from '@angular/router';
 import { GdkModule } from '@gorilainvest/gdk';
 import { CardContainerModule } from '@gorilainvest/ui-toolkit/card-container';
@@ -16,6 +18,7 @@ import { IconModule } from '@gorilainvest/ui-toolkit/icon';
 import { PageHeaderModule } from '@gorilainvest/ui-toolkit/page-header';
 import { ScrollContainerModule } from '@gorilainvest/ui-toolkit/scroll-container';
 import { SectionTitleModule } from '@gorilainvest/ui-toolkit/section-title';
+import { SortHeaderModule } from '@gorilainvest/ui-toolkit/sort-header';
 
 import { LayoutComponent } from './layout/layout.component';
 import { CardContainerComponent } from './ui/card-container/card-container.component';
@@ -25,6 +28,7 @@ import { IconComponent } from './ui/icon/icon.component';
 import { PageHeaderComponent } from './ui/page-header/page-header.component';
 import { ScrollContainerComponent } from './ui/scroll-container/scroll-container.component';
 import { SectionTitleComponent } from './ui/section-title/section-title.component';
+import { SortHeaderComponent } from './ui/sort-header/sort-header.component';
 
 @NgModule({
   imports: [
@@ -36,6 +40,8 @@ import { SectionTitleComponent } from './ui/section-title/section-title.componen
     MatInputModule,
     MatListModule,
     MatSelectModule,
+    MatSortModule,
+    MatTableModule,
     ScrollingModule,
     GdkModule,
     CardContainerModule,
@@ -45,6 +51,7 @@ import { SectionTitleComponent } from './ui/section-title/section-title.componen
     ScrollContainerModule,
     SectionTitleModule,
     PageHeaderModule,
+    SortHeaderModule,
     RouterModule.forChild([
       {
         path: 'card-container',
@@ -81,6 +88,11 @@ import { SectionTitleComponent } from './ui/section-title/section-title.componen
         pathMatch: 'full',
         component: PageHeaderComponent
       },
+      {
+        path: 'sort-header',
+        pathMatch: 'full',
+        component: SortHeaderComponent
+      },
       { path: '', pathMatch: 'full', component: LayoutComponent }
     ])
   ],
@@ -92,7 +104,8 @@ import { SectionTitleComponent } from './ui/section-title/section-title.componen
     LayoutComponent,
     PageHeaderComponent,
     ScrollContainerComponent,
-    SectionTitleComponent
+    SectionTitleComponent,
+    SortHeaderComponent
   ]
 })
 export class LayoutShellModule { }
