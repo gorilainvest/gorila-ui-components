@@ -153,24 +153,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
-                                <a href="modules/CurrencyDisplayModule.html" data-type="entity-link">CurrencyDisplayModule</a>
-                                    <li class="chapter inner">
-                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-CurrencyDisplayModule-07cebdf76568479046bc9c283e61319c"' : 'data-target="#xs-components-links-module-CurrencyDisplayModule-07cebdf76568479046bc9c283e61319c"' }>
-                                            <span class="icon ion-md-cog"></span>
-                                            <span>Components</span>
-                                            <span class="icon ion-ios-arrow-down"></span>
-                                        </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-CurrencyDisplayModule-07cebdf76568479046bc9c283e61319c"' :
-                                            'id="xs-components-links-module-CurrencyDisplayModule-07cebdf76568479046bc9c283e61319c"' }>
-                                            <li class="link">
-                                                <a href="components/CurrencyDisplayComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">CurrencyDisplayComponent</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                            </li>
-                            <li class="link">
                                 <a href="modules/DataFormatterModule.html" data-type="entity-link">DataFormatterModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
@@ -248,59 +230,19 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
-                                <a href="modules/FormTextModule.html" data-type="entity-link">FormTextModule</a>
-                                    <li class="chapter inner">
-                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-FormTextModule-ba70c74c7379057277d4762ec4f726e8"' : 'data-target="#xs-components-links-module-FormTextModule-ba70c74c7379057277d4762ec4f726e8"' }>
-                                            <span class="icon ion-md-cog"></span>
-                                            <span>Components</span>
-                                            <span class="icon ion-ios-arrow-down"></span>
-                                        </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-FormTextModule-ba70c74c7379057277d4762ec4f726e8"' :
-                                            'id="xs-components-links-module-FormTextModule-ba70c74c7379057277d4762ec4f726e8"' }>
-                                            <li class="link">
-                                                <a href="components/FormTextComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">FormTextComponent</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                            </li>
-                            <li class="link">
                                 <a href="modules/GdkModule.html" data-type="entity-link">GdkModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-GdkModule-64e323fb110e71bee7cbc68332703474"' : 'data-target="#xs-components-links-module-GdkModule-64e323fb110e71bee7cbc68332703474"' }>
+                                            'data-target="#components-links-module-GdkModule-bc452db10e9716acd37bfacde2bcba90"' : 'data-target="#xs-components-links-module-GdkModule-bc452db10e9716acd37bfacde2bcba90"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-GdkModule-64e323fb110e71bee7cbc68332703474"' :
-                                            'id="xs-components-links-module-GdkModule-64e323fb110e71bee7cbc68332703474"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-GdkModule-bc452db10e9716acd37bfacde2bcba90"' :
+                                            'id="xs-components-links-module-GdkModule-bc452db10e9716acd37bfacde2bcba90"' }>
                                             <li class="link">
                                                 <a href="components/GdkCardComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">GdkCardComponent</a>
-                                            </li>
-                                            <li class="link">
-                                                <a href="components/GdkImportComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">GdkImportComponent</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                            </li>
-                            <li class="link">
-                                <a href="modules/IconModule.html" data-type="entity-link">IconModule</a>
-                                    <li class="chapter inner">
-                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-IconModule-cc742024bd13c3e8d48d94766f155bd5"' : 'data-target="#xs-components-links-module-IconModule-cc742024bd13c3e8d48d94766f155bd5"' }>
-                                            <span class="icon ion-md-cog"></span>
-                                            <span>Components</span>
-                                            <span class="icon ion-ios-arrow-down"></span>
-                                        </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-IconModule-cc742024bd13c3e8d48d94766f155bd5"' :
-                                            'id="xs-components-links-module-IconModule-cc742024bd13c3e8d48d94766f155bd5"' }>
-                                            <li class="link">
-                                                <a href="components/IconComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">IconComponent</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -352,65 +294,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         <li class="link">
                                             <a href="directives/PageHeaderBottomDirective.html"
                                                 data-type="entity-link" data-context="sub-entity" data-context-id="modules">PageHeaderBottomDirective</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </li>
-                            <li class="link">
-                                <a href="modules/PipesModule.html" data-type="entity-link">PipesModule</a>
-                                    <li class="chapter inner">
-                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#pipes-links-module-PipesModule-a9c05a354d54e3065f778e1273581cb8"' : 'data-target="#xs-pipes-links-module-PipesModule-a9c05a354d54e3065f778e1273581cb8"' }>
-                                            <span class="icon ion-md-add"></span>
-                                            <span>Pipes</span>
-                                            <span class="icon ion-ios-arrow-down"></span>
-                                        </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="pipes-links-module-PipesModule-a9c05a354d54e3065f778e1273581cb8"' :
-                                            'id="xs-pipes-links-module-PipesModule-a9c05a354d54e3065f778e1273581cb8"' }>
-                                            <li class="link">
-                                                <a href="pipes/BigCurrencyPipe.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">BigCurrencyPipe</a>
-                                            </li>
-                                            <li class="link">
-                                                <a href="pipes/CssClassPipe.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">CssClassPipe</a>
-                                            </li>
-                                            <li class="link">
-                                                <a href="pipes/PastPeriodColonPipe.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">PastPeriodColonPipe</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                            </li>
-                            <li class="link">
-                                <a href="modules/PopoverModule.html" data-type="entity-link">PopoverModule</a>
-                                    <li class="chapter inner">
-                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-PopoverModule-dceddd25b1c5979c18291b4646ff72f3"' : 'data-target="#xs-components-links-module-PopoverModule-dceddd25b1c5979c18291b4646ff72f3"' }>
-                                            <span class="icon ion-md-cog"></span>
-                                            <span>Components</span>
-                                            <span class="icon ion-ios-arrow-down"></span>
-                                        </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-PopoverModule-dceddd25b1c5979c18291b4646ff72f3"' :
-                                            'id="xs-components-links-module-PopoverModule-dceddd25b1c5979c18291b4646ff72f3"' }>
-                                            <li class="link">
-                                                <a href="components/PopoverComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">PopoverComponent</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                <li class="chapter inner">
-                                    <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                        'data-target="#injectables-links-module-PopoverModule-dceddd25b1c5979c18291b4646ff72f3"' : 'data-target="#xs-injectables-links-module-PopoverModule-dceddd25b1c5979c18291b4646ff72f3"' }>
-                                        <span class="icon ion-md-arrow-round-down"></span>
-                                        <span>Injectables</span>
-                                        <span class="icon ion-ios-arrow-down"></span>
-                                    </div>
-                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-PopoverModule-dceddd25b1c5979c18291b4646ff72f3"' :
-                                        'id="xs-injectables-links-module-PopoverModule-dceddd25b1c5979c18291b4646ff72f3"' }>
-                                        <li class="link">
-                                            <a href="injectables/PopoverService.html"
-                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>PopoverService</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -491,24 +374,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         </ul>
                                     </li>
                             </li>
-                            <li class="link">
-                                <a href="modules/SortHeaderModule.html" data-type="entity-link">SortHeaderModule</a>
-                                    <li class="chapter inner">
-                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SortHeaderModule-3cad3ebe5014b088f84aa667fef6e13a"' : 'data-target="#xs-components-links-module-SortHeaderModule-3cad3ebe5014b088f84aa667fef6e13a"' }>
-                                            <span class="icon ion-md-cog"></span>
-                                            <span>Components</span>
-                                            <span class="icon ion-ios-arrow-down"></span>
-                                        </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SortHeaderModule-3cad3ebe5014b088f84aa667fef6e13a"' :
-                                            'id="xs-components-links-module-SortHeaderModule-3cad3ebe5014b088f84aa667fef6e13a"' }>
-                                            <li class="link">
-                                                <a href="components/SortHeaderComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SortHeaderComponent</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                            </li>
                 </ul>
                 </li>
                     <li class="chapter">
@@ -519,18 +384,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             <span class="icon ion-ios-arrow-down"></span>
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? 'id="classes-links"' : 'id="xs-classes-links"' }>
-                            <li class="link">
-                                <a href="classes/PopoverRef.html" data-type="entity-link">PopoverRef</a>
-                            </li>
-                            <li class="link">
-                                <a href="classes/PopoverStringContent.html" data-type="entity-link">PopoverStringContent</a>
-                            </li>
-                            <li class="link">
-                                <a href="classes/PopoverTemplateContent.html" data-type="entity-link">PopoverTemplateContent</a>
-                            </li>
-                            <li class="link">
-                                <a href="classes/TemplateStub.html" data-type="entity-link">TemplateStub</a>
-                            </li>
                             <li class="link">
                                 <a href="classes/TippyHelper.html" data-type="entity-link">TippyHelper</a>
                             </li>
@@ -545,19 +398,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
                             <li class="link">
-                                <a href="interfaces/CurrencyStyle.html" data-type="entity-link">CurrencyStyle</a>
-                            </li>
-                            <li class="link">
                                 <a href="interfaces/HTMLTippyProps.html" data-type="entity-link">HTMLTippyProps</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/MatSortHeaderColumnDef.html" data-type="entity-link">MatSortHeaderColumnDef</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/PopoverCloseEvent.html" data-type="entity-link">PopoverCloseEvent</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/PopoverParams.html" data-type="entity-link">PopoverParams</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/PopupConfirmAction.html" data-type="entity-link">PopupConfirmAction</a>
@@ -589,9 +430,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         <ul class="links collapse " ${ isNormalMode ? 'id="miscellaneous-links"' : 'id="xs-miscellaneous-links"' }>
                             <li class="link">
                                 <a href="miscellaneous/enumerations.html" data-type="entity-link">Enums</a>
-                            </li>
-                            <li class="link">
-                                <a href="miscellaneous/functions.html" data-type="entity-link">Functions</a>
                             </li>
                             <li class="link">
                                 <a href="miscellaneous/typealiases.html" data-type="entity-link">Type aliases</a>

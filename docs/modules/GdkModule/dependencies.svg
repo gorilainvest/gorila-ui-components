@@ -22,69 +22,45 @@
 <text text-anchor="start" x="429.7258" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Exports</text>
 <g id="clust1" class="cluster">
 <title>cluster_GdkModule</title>
-<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="81,-70 81,-268 415,-268 415,-70 81,-70"/>
+<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="164,-70 164,-268 332,-268 332,-70 164,-70"/>
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_GdkModule_declarations</title>
-<polygon fill="none" stroke="#000000" points="93,-78 93,-130 403,-130 403,-78 93,-78"/>
+<polygon fill="none" stroke="#000000" points="174,-78 174,-130 322,-130 322,-78 174,-78"/>
 </g>
-<g id="clust6" class="cluster">
+<g id="clust5" class="cluster">
 <title>cluster_GdkModule_exports</title>
-<polygon fill="none" stroke="#000000" points="89,-208 89,-260 407,-260 407,-208 89,-208"/>
+<polygon fill="none" stroke="#000000" points="172,-208 172,-260 324,-260 324,-208 172,-208"/>
 </g>
 <!-- GdkCardComponent -->
 <g id="node1" class="node">
 <title>GdkCardComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="395.1513,-122 262.8487,-122 262.8487,-86 395.1513,-86 395.1513,-122"/>
-<text text-anchor="middle" x="329" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">GdkCardComponent</text>
+<polygon fill="#ffffb3" stroke="#000000" points="314.1513,-122 181.8487,-122 181.8487,-86 314.1513,-86 314.1513,-122"/>
+<text text-anchor="middle" x="248" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">GdkCardComponent</text>
 </g>
 <!-- GdkModule -->
-<g id="node3" class="node">
+<g id="node2" class="node">
 <title>GdkModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="215.6571,-187 212.6571,-191 191.6571,-191 188.6571,-187 132.3429,-187 132.3429,-151 215.6571,-151 215.6571,-187"/>
-<text text-anchor="middle" x="174" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">GdkModule</text>
+<polygon fill="#8dd3c7" stroke="#000000" points="289.6571,-187 286.6571,-191 265.6571,-191 262.6571,-187 206.3429,-187 206.3429,-151 289.6571,-151 289.6571,-187"/>
+<text text-anchor="middle" x="248" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">GdkModule</text>
 </g>
 <!-- GdkCardComponent&#45;&gt;GdkModule -->
 <g id="edge1" class="edge">
 <title>GdkCardComponent&#45;&gt;GdkModule</title>
-<path fill="none" stroke="#000000" d="M351.1918,-122.0225C351.1918,-139.3734 351.1918,-163 351.1918,-163 351.1918,-163 225.992,-163 225.992,-163"/>
-<polygon fill="#000000" stroke="#000000" points="225.992,-159.5001 215.992,-163 225.9919,-166.5001 225.992,-159.5001"/>
-</g>
-<!-- GdkImportComponent -->
-<g id="node2" class="node">
-<title>GdkImportComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="244.5421,-122 101.4579,-122 101.4579,-86 244.5421,-86 244.5421,-122"/>
-<text text-anchor="middle" x="173" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">GdkImportComponent</text>
-</g>
-<!-- GdkImportComponent&#45;&gt;GdkModule -->
-<g id="edge2" class="edge">
-<title>GdkImportComponent&#45;&gt;GdkModule</title>
-<path fill="none" stroke="#000000" d="M174,-122.1061C174,-122.1061 174,-140.991 174,-140.991"/>
-<polygon fill="#000000" stroke="#000000" points="170.5001,-140.9909 174,-150.991 177.5001,-140.991 170.5001,-140.9909"/>
+<path fill="none" stroke="#000000" d="M248,-122.1061C248,-122.1061 248,-140.991 248,-140.991"/>
+<polygon fill="#000000" stroke="#000000" points="244.5001,-140.9909 248,-150.991 251.5001,-140.991 244.5001,-140.9909"/>
 </g>
 <!-- GdkCardComponent  -->
-<g id="node4" class="node">
+<g id="node3" class="node">
 <title>GdkCardComponent </title>
-<polygon fill="#fb8072" stroke="#000000" points="399.1509,-252 262.8491,-252 262.8491,-216 399.1509,-216 399.1509,-252"/>
-<text text-anchor="middle" x="331" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">GdkCardComponent </text>
+<polygon fill="#fb8072" stroke="#000000" points="316.1509,-252 179.8491,-252 179.8491,-216 316.1509,-216 316.1509,-252"/>
+<text text-anchor="middle" x="248" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">GdkCardComponent </text>
 </g>
 <!-- GdkModule&#45;&gt;GdkCardComponent  -->
-<g id="edge3" class="edge">
+<g id="edge2" class="edge">
 <title>GdkModule&#45;&gt;GdkCardComponent </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M215.7354,-175C254.757,-175 307.0582,-175 307.0582,-175 307.0582,-175 307.0582,-205.9775 307.0582,-205.9775"/>
-<polygon fill="#000000" stroke="#000000" points="303.5583,-205.9774 307.0582,-215.9775 310.5583,-205.9775 303.5583,-205.9774"/>
-</g>
-<!-- GdkImportComponent  -->
-<g id="node5" class="node">
-<title>GdkImportComponent </title>
-<polygon fill="#fb8072" stroke="#000000" points="244.5414,-252 97.4586,-252 97.4586,-216 244.5414,-216 244.5414,-252"/>
-<text text-anchor="middle" x="171" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">GdkImportComponent </text>
-</g>
-<!-- GdkModule&#45;&gt;GdkImportComponent  -->
-<g id="edge4" class="edge">
-<title>GdkModule&#45;&gt;GdkImportComponent </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M174,-187.1061C174,-187.1061 174,-205.991 174,-205.991"/>
-<polygon fill="#000000" stroke="#000000" points="170.5001,-205.9909 174,-215.991 177.5001,-205.991 170.5001,-205.9909"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M248,-187.1061C248,-187.1061 248,-205.991 248,-205.991"/>
+<polygon fill="#000000" stroke="#000000" points="244.5001,-205.9909 248,-215.991 251.5001,-205.991 244.5001,-205.9909"/>
 </g>
 </g>
 </svg>

@@ -109,8 +109,6 @@ THE SOFTWARE.
 
 @angular/material/sidenav
 
-@angular/material/table
-
 @angular/material/toolbar
 
 @angular/platform-browser
@@ -152,23 +150,13 @@ SOFTWARE.
 
 @gorilainvest/ui-toolkit/countdown-button
 
-@gorilainvest/ui-toolkit/currency-display
-
 @gorilainvest/ui-toolkit/data-formatter
 
 @gorilainvest/ui-toolkit/enhanced-title
 
-@gorilainvest/ui-toolkit/form-text
-
-@gorilainvest/ui-toolkit/icon
-
 @gorilainvest/ui-toolkit/loading
 
 @gorilainvest/ui-toolkit/page-header
-
-@gorilainvest/ui-toolkit/pipes
-
-@gorilainvest/ui-toolkit/popover
 
 @gorilainvest/ui-toolkit/popup-confirm
 
@@ -178,8 +166,6 @@ SOFTWARE.
 
 @gorilainvest/ui-toolkit/slide-toggle
 
-@gorilainvest/ui-toolkit/sort-header
-
 @ngrx/effects
 MIT
 
@@ -187,9 +173,6 @@ MIT
 MIT
 
 @ngrx/store
-MIT
-
-@ngx-translate/core
 MIT
 
 @nrwl/angular
