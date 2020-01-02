@@ -6,6 +6,7 @@ libs/ui/card-container @tigredonorte
 libs/ui/currency-display @tigredonorte
 libs/ui/countdown-button @guilhermejcgois @oliveira-gust
 libs/ui/data-formatter @tigredonorte
+libs/ui/enhanced-header @oliveira-gust
 libs/ui/enhanced-title @tigredonorte
 libs/ui/icon @oliveira-gust
 libs/ui/loading @denisokawa
@@ -15,3 +16,4 @@ libs/ui/popover @tigredonorte
 libs/ui/section-title @tigredonorte
 libs/ui/slide-toggle @denisokawa
 libs/ui/sort-header @oliveira-gust
+libs/ui/tooltip @oliveira-gust

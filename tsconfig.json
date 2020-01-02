@@ -93,6 +93,12 @@
       ],
       "@gorilainvest/ui-toolkit/sort-header": [
         "libs/ui-toolkit/sort-header/src/index.ts"
+      ],
+      "@gorilainvest/ui-toolkit/enhanced-header": [
+        "libs/ui-toolkit/enhanced-header/src/index.ts"
+      ],
+      "@gorilainvest/ui-toolkit/tooltip": [
+        "libs/ui-toolkit/tooltip/src/index.ts"
       ]
     },
     "rootDir": "."

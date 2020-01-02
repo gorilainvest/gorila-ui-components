@@ -196,6 +196,24 @@
         "scope:ui",
         "group:layout"
       ]
+    },
+    "enhanced-header": {
+      "tags": [
+        "exportable",
+        "team:magilla",
+        "scope:shared",
+        "scope:ui",
+        "group:layout"
+      ]
+    },
+    "tooltip": {
+      "tags": [
+        "exportable",
+        "team:magilla",
+        "scope:shared",
+        "scope:ui",
+        "group:layout"
+      ]
     }
   }
 }
