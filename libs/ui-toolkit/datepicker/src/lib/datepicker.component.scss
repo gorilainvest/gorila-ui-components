@@ -6,6 +6,11 @@ gor-datepicker {
 
   width: 265px;
   height: 315px;
+
+  @media screen and (max-width: 1024px) {
+    width: 100vw;
+    height: 100vh;
+  }
 }
 
 gor-datepicker .mat-calendar {
@@ -51,6 +56,7 @@ gor-datepicker .mat-calendar-body-disabled .mat-calendar-body {
 
 gor-datepicker .datepicker {
   &__body {
+    flex: 1;
     display: flex;
 
     border-bottom: solid 1px $backgroundDefault;
@@ -65,6 +71,7 @@ gor-datepicker .datepicker {
   &__footer {
     height: 89px;
     display: flex;
+    align-items: center;
     justify-content: flex-end;
     padding: 16px 20px 14px 20px;
   }
