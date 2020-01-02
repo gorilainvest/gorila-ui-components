@@ -94,6 +94,7 @@
     "@angular/cli": "^8.3.20",
     "@angular/compiler-cli": "^8.2.3",
     "@angular/language-service": "^8.2.3",
+    "@angular/material-moment-adapter": "^8.2.3",
     "@babel/core": "^7.6.0",
     "@commitlint/cli": "^7.5.2",
     "@commitlint/config-conventional": "^7.5.0",
