@@ -7,7 +7,7 @@ const RIGHT_ARROW_D = 'M2.849 9.688a.349.349 0 0 1-.246-.596L6.704 5 2.602.908a.
 /**
  * Default header for calendar of GorDatepicker.
  *
- * @extends MatCalendarHeader
+ * @see MatCalendarHeader
  */
 @Component({
   selector: 'gor-calendar-header',

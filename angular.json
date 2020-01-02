@@ -1156,12 +1156,7 @@
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
             "tsConfig": "libs/ui-toolkit/datepicker/tsconfig.lib.json",
-            "project": "libs/ui-toolkit/datepicker/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles"
-              ]
-            }
+            "project": "libs/ui-toolkit/datepicker/ng-package.json"
           }
         },
         "lint": {
