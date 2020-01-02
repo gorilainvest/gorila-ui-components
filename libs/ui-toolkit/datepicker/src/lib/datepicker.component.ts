@@ -1,8 +1,8 @@
 import { Component, AfterViewInit, Input, HostBinding, ViewEncapsulation, ViewChild, ComponentRef } from '@angular/core';
-import { CalendarHeaderComponent } from './calendar-header.component';
-import { ComponentType, CdkPortalOutlet } from '@angular/cdk/portal';
+import { ComponentType } from '@angular/cdk/portal';
+import { MatCalendar, MatCalendarView } from '@angular/material/datepicker';
 import { Moment, utc } from 'moment';
-import { MatCalendar } from '@angular/material/datepicker';
+import { CalendarHeaderComponent } from './calendar-header.component';
 
 export const SELECTOR = 'gor-datepicker';
 
@@ -24,6 +24,8 @@ export class DatepickerComponent implements AfterViewInit {
   @Input() public headerComponentRef: ComponentType<any> = CalendarHeaderComponent;
   @Input() public maxDate: Moment = utc();
   @Input() public minDate: Moment = utc().subtract(5, 'years');
+  @Input() public startAt: Moment = utc();
+  @Input() public startView: MatCalendarView = 'month';
 
   @HostBinding('class') public hostClass = SELECTOR;
 
