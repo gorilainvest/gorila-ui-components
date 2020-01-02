@@ -1,0 +1,6 @@
+<gor-enhanced-title [title]="title" [highlight]="highlight" cssClass='align-center'></gor-enhanced-title>
+<div class='text' *ngIf="description">
+  {{description}}
+  <div class='secondTextBlock' *ngIf="description2">{{description2}}</div>
+  <gor-tooltip [tooltipText]="'data encrypt message' | translate" orientation='right'></gor-tooltip>
+</div>
