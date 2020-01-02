@@ -16,7 +16,10 @@ gor-datepicker {
 gor-datepicker .mat-calendar {
   flex: 1;
 
-  &-body tr[aria-hidden="true"]:first-of-type,
+  &-body tr[aria-hidden="true"] {
+    display: none;
+  }
+
   &-body-label {
     visibility: hidden;
   }
