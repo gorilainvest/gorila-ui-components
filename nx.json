@@ -199,6 +199,14 @@
         "scope:ui",
         "group:layout"
       ]
+    },
+    "datepicker": {
+      "tags": [
+        "team:ape",
+        "exportable",
+        "scope:ui",
+        "group:control"
+      ]
     }
   }
 }

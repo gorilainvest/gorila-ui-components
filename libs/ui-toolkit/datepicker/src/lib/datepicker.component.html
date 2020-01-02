@@ -1,0 +1,15 @@
+<div class="datepicker__body">
+  <div class="datepicker__calendar">
+    <mat-calendar
+      [headerComponent]="headerComponentRef"
+      [maxDate]="maxDate"
+      [minDate]="minDate"
+      [selected]="selectedDate"
+      (selectedChange)="dateChanged($event)"
+    ></mat-calendar>
+  </div>
+  <div class="datepicker__list"></div>
+</div>
+<div class="datepicker__footer">
+  <gor-button btnType="green">{{applyText}}</gor-button>
+</div>
