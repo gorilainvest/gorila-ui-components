@@ -30,6 +30,10 @@ gor-datepicker .mat-calendar {
 
   &-body-selected {
     color: $white;
+
+    &.mat-calendar-body-today {
+      box-shadow: none;
+    }
   }
 
   &-next-button,
