@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, Input, HostBinding, ViewEncapsulation, ViewChild } from '@angular/core';
+import { Component, AfterViewInit, Input, HostBinding, ViewEncapsulation, ViewChild, ElementRef, Inject, forwardRef } from '@angular/core';
 import { ComponentType } from '@angular/cdk/portal';
 import { MatCalendar, MatCalendarView, MatDatepicker, MatDatepickerContent } from '@angular/material/datepicker';
 import { CalendarHeaderComponent } from './calendar-header.component';
@@ -60,6 +60,12 @@ export class DatepickerContentComponent<D> extends MatDatepickerContent<D> imple
 
   @HostBinding('class') public hostClass = SELECTOR;
 
+  constructor(
+    elementRef: ElementRef
+  ) {
+    super(elementRef);
+  }
+
   /**
    * The selected date stored for internal use.
    */
@@ -75,6 +81,6 @@ export class DatepickerContentComponent<D> extends MatDatepickerContent<D> imple
    * @param newDate
    */
   public dateChanged(newDate: D | null) {
-    this.selectedDate = newDate;
+    this.datepicker.select(this.selectedDate = newDate);
   }
 }
