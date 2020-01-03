@@ -19,7 +19,7 @@ export class DatepickerToggleComponent<D> extends MatDatepickerToggle<D> {
   /**
    * Set readonly tabIndex for toggle component.
    */
-  @HostBinding('attr.tabindex') public readonly tabIndex= '-1';
+  @HostBinding('attr.tabindex') public readonly tabIndex = -1;
   
   /**
    * Set a css class equal to component selector.
