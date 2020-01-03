@@ -3,6 +3,7 @@ import { ComponentType } from '@angular/cdk/portal';
 import { MatCalendar, MatCalendarView, MatDatepicker, MatDatepickerContent } from '@angular/material/datepicker';
 import { CalendarHeaderComponent } from './calendar-header.component';
 
+/** @ignore */
 export const SELECTOR = 'gor-datepicker-content';
 
 /**
