@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { MatTableModule } from '@angular/material';
-import { MatSortModule } from '@angular/material/sort';
+import { MatTableDataSource, MatTableModule } from '@angular/material';
+import { MatSort, MatSortModule } from '@angular/material/sort';
 import { By } from '@angular/platform-browser';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { IconModule } from '@gorilainvest/ui-toolkit/icon';
@@ -13,7 +13,7 @@ import { SortHeaderComponent } from './sort-header.component';
   selector: 'gor-test-container',
   template: `
     <div>
-      <mat-table #table [dataSource]="gorilas" matSort matSortActive="date" matSortDirection="asc" matSortDisableClear>
+      <mat-table #table [dataSource]="dataSource" matSort matSortActive="date" matSortDirection="asc" matSortDisableClear>
         <ng-container *ngFor="let matColumnDataDef of matColumnDataDefs; let idx = index">
           <ng-container [matColumnDef]="matColumnDataDef.id">
             <mat-header-cell *matHeaderCellDef gor-sort-header [arrowWhite]="arrowWhite" [disabled]="disabled">
@@ -54,6 +54,12 @@ class TestHostComponent {
   public displayedColumns = ['name', 'age'];
   public arrowWhite = true;
   public disabled = false;
+  public dataSource = new MatTableDataSource<{name: string; age:number}>(this.gorilas);
+  public sort: MatSort;
+  @ViewChild(MatSort, { static: false }) set matSort(ms: MatSort) {
+    this.sort = ms;
+    this.dataSource.sort = this.sort;
+  }
 }
 
 describe('SortHeaderComponent', () => {
@@ -78,16 +84,22 @@ describe('SortHeaderComponent', () => {
     expect(sortHeader).toBeTruthy();
   });
 
-  it('should display arrow, if enabled', () => {
-    const arrow = fixture.debugElement.query(By.css('gor-icon'));
-    expect(arrow).toBeTruthy();
+  it('should sort table, if enabled', () => {
+    fixture.debugElement.query(By.css('mat-header-cell')).nativeElement.click();
+    fixture.debugElement.query(By.css('mat-header-cell')).nativeElement.click();
+    fixture.detectChanges();
+    const firstName = fixture.debugElement.query(By.css('mat-cell')).nativeElement.textContent.trim();
+    expect(firstName).toEqual('Magilla');
   });
 
-  it('should not display arrow, if disabled', () => {
+  it('should not sort table, if disabled', () => {
     component.disabled = true;
     fixture.detectChanges();
-    const arrow = fixture.debugElement.query(By.css('gor-icon'));
-    expect(arrow).toBeFalsy();
+    fixture.debugElement.query(By.css('mat-header-cell')).nativeElement.click();
+    fixture.debugElement.query(By.css('mat-header-cell')).nativeElement.click();
+    fixture.detectChanges();
+    const firstName = fixture.debugElement.query(By.css('mat-cell')).nativeElement.textContent.trim();
+    expect(firstName).toEqual('Koko');
   });
 
   it('should display white arrow if arrowWhite input is true', () => {
