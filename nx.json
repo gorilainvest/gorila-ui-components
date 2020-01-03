@@ -205,7 +205,7 @@
         "team:ape",
         "exportable",
         "scope:ui",
-        "group:control"
+        "group:controls"
       ]
     }
   }

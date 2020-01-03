@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from '@gorilainvest/ui-toolkit/button';
 import { DatepickerComponent } from './datepicker.component';
+import { DatepickerContentComponent } from './datepicker-content.component';
 import { CalendarHeaderComponent } from './calendar-header.component';
 
 export const MODULE_METADATA = {
@@ -17,10 +18,17 @@ export const MODULE_METADATA = {
   ],
   declarations: [
     DatepickerComponent,
+    DatepickerContentComponent,
     CalendarHeaderComponent
   ],
-  exports: [DatepickerComponent],
-  entryComponents: [CalendarHeaderComponent]
+  exports: [
+    DatepickerComponent,
+    DatepickerContentComponent
+  ],
+  entryComponents: [
+    CalendarHeaderComponent,
+    DatepickerContentComponent
+  ]
 };
 
 @NgModule(MODULE_METADATA)

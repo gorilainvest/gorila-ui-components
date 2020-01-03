@@ -1,6 +1,6 @@
 @import "_colors";
 
-gor-datepicker {
+gor-datepicker-content {
   display: flex;
   flex-direction: column;
 
@@ -13,7 +13,7 @@ gor-datepicker {
   }
 }
 
-gor-datepicker .mat-calendar {
+gor-datepicker-content .mat-calendar {
   flex: 1;
 
   &-body tr[aria-hidden="true"] {
@@ -55,13 +55,13 @@ gor-datepicker .mat-calendar {
   }
 }
 
-gor-datepicker .mat-calendar-body-disabled .mat-calendar-body {
+gor-datepicker-content .mat-calendar-body-disabled .mat-calendar-body {
   &-cell-content {
     color: $textTernary;
   }
 }
 
-gor-datepicker .datepicker {
+gor-datepicker-content .datepicker {
   &__body {
     flex: 1;
     display: flex;
