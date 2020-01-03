@@ -5,7 +5,7 @@ gor-datepicker-content {
   flex-direction: column;
 
   width: 265px;
-  height: 315px;
+  min-height: 327px;
 
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.15);
 
@@ -16,7 +16,7 @@ gor-datepicker-content {
 }
 
 gor-datepicker-content .mat-calendar {
-  flex: 1;
+  margin: 15px 15px 0;
 
   &-body tr[aria-hidden="true"] {
     display: none;
@@ -73,12 +73,10 @@ gor-datepicker-content .datepicker {
 
   &__calendar {
     flex: 1;
-    padding-left: 5px;
-    padding-right: 5px;
   }
 
   &__footer {
-    height: 89px;
+    max-height: 89px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
