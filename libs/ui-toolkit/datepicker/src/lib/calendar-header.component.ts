@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
-import { MatCalendarHeader } from '@angular/material/datepicker';
+import { Component, Input, Inject, forwardRef, Optional, ChangeDetectorRef } from '@angular/core';
+import { MatCalendarHeader, MatDatepickerIntl, MatCalendar } from '@angular/material/datepicker';
+import { DateAdapter, MAT_DATE_FORMATS, MatDateFormats } from '@angular/material/core';
 
 const LEFT_ARROW_D = 'M7.2 9.688a.348.348 0 0 1-.247-.102l-4.35-4.34a.349.349 0 0 1 0-.493L6.952.414a.349.349 0 1 1 .492.494L3.342 5l4.103 4.092a.349.349 0 0 1-.246.595';
 const RIGHT_ARROW_D = 'M2.849 9.688a.349.349 0 0 1-.246-.596L6.704 5 2.602.908a.349.349 0 1 1 .493-.494l4.35 4.34a.349.349 0 0 1 0 .493l-4.35 4.339a.348.348 0 0 1-.246.101';
@@ -46,4 +47,13 @@ export class CalendarHeaderComponent<D> extends MatCalendarHeader<D> {
    * @default "#888e8e"
    */
   @Input() public colorCtrls = '#888E8E';
+
+   constructor(
+    _intl: MatDatepickerIntl,
+    @Inject(forwardRef(() => MatCalendar)) calendar: MatCalendar<D>,
+    @Optional() _dateAdapter: DateAdapter<D>,
+    @Optional() @Inject(MAT_DATE_FORMATS) _dateFormats: MatDateFormats,
+    changeDetectorRef: ChangeDetectorRef) {
+      super(_intl, calendar, _dateAdapter, _dateFormats, changeDetectorRef);
+  }
 }
