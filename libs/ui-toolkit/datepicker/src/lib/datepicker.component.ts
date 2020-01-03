@@ -21,21 +21,25 @@ export const SELECTOR = 'gor-datepicker';
 })
 export class DatepickerComponent<D> extends MatDatepicker<D> {
 
-  private getPrivateMember(p: string) {
+  private callPrivateMember<R>(p: string, ...args: any[]): R {
     const m = this[p];
 
-    if (!m) {
+    if (p in this) {
+      return this[p].call(this, ...args);
+    }
+
+    console.error(`Can't call inexistent ${p} private member MatDatepicker!`);
+  }
+
+  private getPrivateMember(p: string, allowFalsy = false) {
+    if (!(p in this) && !allowFalsy) {
       console.error(`Member ${p} doesn't exist in MatDatepicker!`);
     }
 
-    return m;
+    return this[p];
   }
 
   private setValueToPrivateMember(p: string, v: any) {
-    if (!this[p]) {
-      console.error(`Member ${p} doesn't exist in MatDatepicker!`);
-    }
-
     this[p] = v;
   }
 
@@ -43,7 +47,7 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
   open(): void {
     const _document = this.getPrivateMember('_document');
 
-    if (this.getPrivateMember('_opened') || this.disabled) {
+    if (this.getPrivateMember('_opened', true) || this.disabled) {
       return;
     }
     if (!this._datepickerInput) {
@@ -67,7 +71,7 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
     // open at a time, however since we reset the variables in async handlers some overlays
     // may slip through if the user opens and closes multiple times in quick succession (e.g.
     // by holding down the enter key).
-    if (this.getPrivateMember('_dialogRef')) {
+    if (this.getPrivateMember('_dialogRef', true)) {
       this.getPrivateMember('_dialogRef').close();
     }
 
@@ -89,7 +93,7 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
 
   /** Open the calendar as a popup. */
   private openAsPopup() {
-    if (!this.getPrivateMember('_calendarPortal')) {
+    if (!this.getPrivateMember('_calendarPortal', true)) {
       this.setValueToPrivateMember(
         '_calendarPortal',
         new ComponentPortal<DatepickerContentComponent<D>>(
@@ -100,7 +104,7 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
     }
 
     if (!this._popupRef) {
-      this.getPrivateMember('_createPopup')();
+      this.callPrivateMember('_createPopup');
     }
 
     if (!this._popupRef.hasAttached()) {
@@ -109,7 +113,7 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
         this._popupRef.attach(this.getPrivateMember('_calendarPortal'))
       );
       this.getPrivateMember('_popupComponentRef').instance.datepicker = this;
-      this.getPrivateMember('_setColor')();
+      this.callPrivateMember('_setColor');
 
       // Update the position once the calendar has rendered.
       this.getPrivateMember('_ngZone')
