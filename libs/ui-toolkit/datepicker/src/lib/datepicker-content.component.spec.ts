@@ -1,46 +1,39 @@
-import { DatepickerModule } from './datepicker.module';
+import { DebugElement } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { utc } from 'moment';
+import { DateAdapter } from '@angular/material/core';
+import { MatMomentDateModule, MomentDateAdapter } from '@angular/material-moment-adapter';
+import { By } from '@angular/platform-browser';
+import { ButtonModule } from '@gorilainvest/ui-toolkit/button';
+import { Moment, utc } from 'moment';
 
 import { DatepickerContentComponent } from './datepicker-content.component';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import { MatDatepickerModule, MatCalendar } from '@angular/material/datepicker';
+import { CalendarHeaderComponent } from './calendar-header.component';
+import { DatepickerModule } from './datepicker.module';
 
 describe('DatepickerContentComponent', () => {
-  let component: DatepickerContentComponent;
-  let fixture: ComponentFixture<DatepickerContentComponent>;
+  let component: DatepickerContentComponent<Moment>;
+  let fixture: ComponentFixture<DatepickerContentComponent<Moment>>;
   let de: DebugElement;
   const getText = (dEl: DebugElement): string => dEl.nativeElement.textContent.trim();
   const today = utc();
 
   const beforeEachFn = () => {
-    fixture = TestBed.createComponent(DatepickerContentComponent);
+    fixture = TestBed.createComponent(DatepickerContentComponent) as ComponentFixture<DatepickerContentComponent<Moment>>;
     component = fixture.componentInstance;
     de = fixture.debugElement;
   };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ DatepickerModule ]
-    })
-    .compileComponents();
+      imports: [DatepickerModule],
+      providers: [MatCalendar]
+    }).compileComponents();
   }));
 
   describe('start properties specs', () => {
 
     beforeEach(beforeEachFn);
-
-    it('should start with today active and selected by default', () => {
-      fixture.detectChanges();
-
-      const activeDay = de.query(By.css('.mat-calendar-body-active'));
-      const selectedDay = de.query(By.css('.mat-calendar-body-selected'));
-      const periodButton = de.query(By.css('.mat-calendar-period-button'));
-
-      expect(getText(periodButton)).toBe(today.format('MMM YYYY').toUpperCase());
-      expect(getText(activeDay)).toBe(getText(selectedDay));
-      expect(getText(activeDay)).toBe(today.date().toString());
-    });
 
     it('should start with 2019-09-09 active if startAt prop is "2019-09-09"', () => {
       component.startAt = utc('2019-09-09');

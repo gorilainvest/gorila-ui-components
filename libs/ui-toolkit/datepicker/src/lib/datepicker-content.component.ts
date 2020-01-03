@@ -1,6 +1,6 @@
 import { Component, AfterViewInit, Input, HostBinding, ViewEncapsulation, ViewChild } from '@angular/core';
 import { ComponentType } from '@angular/cdk/portal';
-import { MatCalendar, MatCalendarView, MatDatepicker } from '@angular/material/datepicker';
+import { MatCalendar, MatCalendarView, MatDatepicker, MatDatepickerContent } from '@angular/material/datepicker';
 import { CalendarHeaderComponent } from './calendar-header.component';
 
 export const SELECTOR = 'gor-datepicker-content';
@@ -16,8 +16,8 @@ export const SELECTOR = 'gor-datepicker-content';
   styleUrls: ['./datepicker-content.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class DatepickerContentComponent<D> extends MatDatepicker<D> implements AfterViewInit {
-  @ViewChild(MatCalendar, { static: true }) _calendar: MatCalendar<D>;
+export class DatepickerContentComponent<D> extends MatDatepickerContent<D> implements AfterViewInit {
+  @ViewChild(MatCalendar, { static: false }) _calendar: MatCalendar<D>;
 
   @HostBinding('style.background-color') @Input() bgColor = 'white';
 
