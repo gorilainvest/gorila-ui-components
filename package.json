@@ -1,6 +1,6 @@
 {
   "name": "@gorilainvest/ui-toolkit",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "files": [
     "dist"
   ],
@@ -71,6 +71,7 @@
     "@ngrx/effects": "7.2.0",
     "@ngrx/router-store": "7.2.0",
     "@ngrx/store": "7.2.0",
+    "@ngx-translate/core": "11.0.1",
     "@nrwl/angular": "8.0.0",
     "codacy-coverage": "^3.4.0",
     "core-js": "^2.5.4",
@@ -90,7 +91,7 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.0",
     "@angular-devkit/build-ng-packagr": "~0.803.0",
-    "@angular/cli": "~8.3.0",
+    "@angular/cli": "^8.3.20",
     "@angular/compiler-cli": "^8.2.3",
     "@angular/language-service": "^8.2.3",
     "@babel/core": "^7.6.0",

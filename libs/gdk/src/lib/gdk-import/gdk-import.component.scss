@@ -1,0 +1,13 @@
+:host {
+  overflow: hidden;
+}
+
+gdk-import pre {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-direction: column;
+  span:not(:first-child) {
+    margin-top: 0;
+  }
+}

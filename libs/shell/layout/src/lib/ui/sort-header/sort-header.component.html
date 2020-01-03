@@ -1,0 +1,42 @@
+<gdk-card
+title="Sort Header"
+subtitle="A header for tables"
+[withoutOutput]="true">
+
+  <mat-list role="list" class="inputs">
+    <form [formGroup]="form">
+      <mat-list-item role="listitem">
+        <mat-checkbox
+          color="primary"
+          formControlName="disabled">Disabled</mat-checkbox>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <mat-checkbox
+          color="primary"
+          formControlName="whiteArrow">White Arrow</mat-checkbox>
+      </mat-list-item>
+    </form>
+  </mat-list>
+
+  <div class="widget">
+    <div>
+      <mat-table #table [dataSource]="dataSource" matSort matSortActive="name" matSortDirection="asc" matSortDisableClear [ngClass]="{'dark': form.get('whiteArrow').value}">
+        <ng-container *ngFor="let matColumnDataDef of matColumnDataDefs; let idx = index">
+          <ng-container [matColumnDef]="matColumnDataDef.id">
+            <mat-header-cell *matHeaderCellDef gor-sort-header [arrowWhite]="form.get('whiteArrow').value" [disabled]="form.get('disabled').value">
+              <span>{{ matColumnDataDef.headerText }}</span>
+            </mat-header-cell>
+            <mat-cell *matCellDef="let gorila">
+              <span>{{ gorila[matColumnDataDef.id] }}</span>
+            </mat-cell>
+          </ng-container>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+      </mat-table>
+    </div>
+  </div>
+
+  <gdk-import class="code" moduleName="sort-header" [form]="form" prefix='gor'></gdk-import>
+
+</gdk-card>

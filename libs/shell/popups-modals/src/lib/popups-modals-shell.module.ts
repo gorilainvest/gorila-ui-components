@@ -1,23 +1,21 @@
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { MatCheckboxModule } from "@angular/material/checkbox";
-import { MatFormFieldModule } from "@angular/material/form-field";
-import { MatInputModule } from "@angular/material/input";
-import { MatListModule } from "@angular/material/list";
-import { MatSelectModule } from "@angular/material/select";
-import { RouterModule } from "@angular/router";
-import { GdkModule } from "@gorilainvest/gdk";
-
-
-
+import { OverlayModule } from '@angular/cdk/overlay';
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { MatSelectModule } from '@angular/material/select';
+import { RouterModule } from '@angular/router';
+import { GdkModule } from '@gorilainvest/gdk';
 import { CountdownButtonModule } from '@gorilainvest/ui-toolkit/countdown-button';
-
+import { PopoverModule } from '@gorilainvest/ui-toolkit/popover';
 import { PopupConfirmModule } from '@gorilainvest/ui-toolkit/popup-confirm';
 
-
-import { PopupsModalsComponent } from "./popups-modals/popups-modals.component";
-import { PopupConfirmComponent } from "./ui/popup-confirm/popup-confirm.component";
+import { PopupsModalsComponent } from './popups-modals/popups-modals.component';
+import { PopoverComponent } from './ui/popover/popover.component';
+import { PopupConfirmComponent } from './ui/popup-confirm/popup-confirm.component';
 
 @NgModule({
   imports: [
@@ -31,6 +29,8 @@ import { PopupConfirmComponent } from "./ui/popup-confirm/popup-confirm.componen
     MatSelectModule,
     GdkModule,
     CountdownButtonModule,
+    OverlayModule,
+    PopoverModule,
     PopupConfirmModule,
     RouterModule.forChild([
       {
@@ -38,9 +38,14 @@ import { PopupConfirmComponent } from "./ui/popup-confirm/popup-confirm.componen
         pathMatch: "full",
         component: PopupConfirmComponent
       },
+      {
+        path: "popover",
+        pathMatch: "full",
+        component: PopoverComponent
+      },
       { path: "", pathMatch: "full", component: PopupsModalsComponent }
     ])
   ],
-  declarations: [PopupConfirmComponent, PopupsModalsComponent]
+  declarations: [PopupConfirmComponent, PopoverComponent, PopupsModalsComponent]
 })
 export class PopupsModalsShellModule {}

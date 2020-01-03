@@ -1,0 +1,18 @@
+span {
+  width: 100px;
+  text-align: center;
+}
+
+.dark {
+  background-color: #11c0c5;
+
+  mat-cell,
+  mat-header-cell {
+    color: #fff;
+  }
+
+  mat-row,
+  mat-header-row {
+    border-bottom-color: #fff;
+  }
+}

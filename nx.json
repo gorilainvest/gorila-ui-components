@@ -80,6 +80,15 @@
         "group:popups-modals"
       ]
     },
+    "popover": {
+      "tags": [
+        "exportable",
+        "team:grodd",
+        "scope:shared",
+        "scope:ui",
+        "group:popups-modals"
+      ]
+    },
     "section-title": {
       "tags": [
         "exportable",
@@ -141,6 +150,51 @@
       "tags": [
         "exportable",
         "team:magilla",
+        "scope:shared",
+        "scope:ui",
+        "group:layout"
+      ]
+    },
+    "pipes": {
+      "tags": [
+        "exportable",
+        "team:grodd",
+        "scope:ui",
+        "scope:shared",
+        "group:presentational"
+      ]
+    },
+    "icon": {
+      "tags": [
+        "exportable",
+        "team:magilla",
+        "scope:shared",
+        "scope:ui",
+        "group:layout"
+      ]
+    },
+    "form-text": {
+      "tags": [
+        "exportable",
+        "team:murphy",
+        "scope:shared",
+        "scope:ui",
+        "group:controls"
+      ]
+    },
+    "sort-header": {
+      "tags": [
+        "exportable",
+        "team:magilla",
+        "scope:shared",
+        "scope:ui",
+        "group:layout"
+      ]
+    },
+    "currency-display": {
+      "tags": [
+        "exportable",
+        "team:grodd",
         "scope:shared",
         "scope:ui",
         "group:layout"
