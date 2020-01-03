@@ -6,16 +6,16 @@ storiesOf('Datepicker', module)
   .addDecorator(moduleMetadata(MODULE_METADATA))
   .add('starting in month view', () => ({
     template: `
-    <gor-datepicker startView='month'></gor-datepicker>
+    <gor-datepicker-content startView='month'></gor-datepicker-content>
     `
   }))
   .add('starting in multi-year view', () => ({
     template: `
-    <gor-datepicker startView='multi-year'></gor-datepicker>
+    <gor-datepicker-content startView='multi-year'></gor-datepicker-content>
     `
   }))
   .add('starting in year view', () => ({
     template: `
-    <gor-datepicker startView='year'></gor-datepicker>
+    <gor-datepicker-content startView='year'></gor-datepicker-content>
     `
   }));

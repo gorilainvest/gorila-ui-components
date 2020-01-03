@@ -2,19 +2,19 @@ import { DatepickerModule } from './datepicker.module';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { utc } from 'moment';
 
-import { DatepickerComponent } from './datepicker.component';
+import { DatepickerContentComponent } from './datepicker-content.component';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-describe('DatepickerComponent', () => {
-  let component: DatepickerComponent;
-  let fixture: ComponentFixture<DatepickerComponent>;
+describe('DatepickerContentComponent', () => {
+  let component: DatepickerContentComponent;
+  let fixture: ComponentFixture<DatepickerContentComponent>;
   let de: DebugElement;
   const getText = (dEl: DebugElement): string => dEl.nativeElement.textContent.trim();
   const today = utc();
 
   const beforeEachFn = () => {
-    fixture = TestBed.createComponent(DatepickerComponent);
+    fixture = TestBed.createComponent(DatepickerContentComponent);
     component = fixture.componentInstance;
     de = fixture.debugElement;
   };
