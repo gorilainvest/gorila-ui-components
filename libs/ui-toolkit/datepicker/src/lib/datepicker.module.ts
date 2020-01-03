@@ -1,3 +1,4 @@
+import { DatepickerToggleComponent } from './datepicker-toggle.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDatepickerModule,MatMonthView } from '@angular/material/datepicker';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
@@ -19,11 +20,13 @@ export const MODULE_METADATA = {
   declarations: [
     DatepickerComponent,
     DatepickerContentComponent,
+    DatepickerToggleComponent,
     CalendarHeaderComponent
   ],
   exports: [
     DatepickerComponent,
-    DatepickerContentComponent
+    DatepickerContentComponent,
+    DatepickerToggleComponent
   ],
   entryComponents: [
     CalendarHeaderComponent,

@@ -88,6 +88,8 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
       .afterClosed()
       .subscribe(() => this.close());
     this.getPrivateMember('_dialogRef').componentInstance.datepicker = this;
+    this.getPrivateMember('_dialogRef').componentInstance.startAt = this.startAt;
+    this.getPrivateMember('_dialogRef').componentInstance.startView = this.startView || 'month';
     this.getPrivateMember('_setColor')();
   }
 
@@ -113,6 +115,8 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
         this._popupRef.attach(this.getPrivateMember('_calendarPortal'))
       );
       this.getPrivateMember('_popupComponentRef').instance.datepicker = this;
+      this.getPrivateMember('_popupComponentRef').instance.startAt = this.startAt;
+      this.getPrivateMember('_popupComponentRef').instance.startView = this.startView || 'month';
       this.callPrivateMember('_setColor');
 
       // Update the position once the calendar has rendered.
