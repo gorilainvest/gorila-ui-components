@@ -1,0 +1,51 @@
+<gdk-card
+  title="Datepicker"
+  subtitle="Based on material datepicker"
+  [withoutOutput]="true">
+  <mat-list role="list" class="inputs">
+    <form [formGroup]="form">
+      <mat-list-item role="listitem">
+        <mat-form-field class="full-width">
+          <mat-label>Start at Date</mat-label>
+          <input matInput type="date" placeholder="The active date" formControlName="startAt" value={{startAtInputDefault}} />
+          <mat-hint>The datepicker active date on opening</mat-hint>
+        </mat-form-field>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <mat-form-field class="full-width">
+          <mat-label>Start View</mat-label>
+          <mat-select formControlName="startView" required>
+            <mat-option value="month">Month</mat-option>
+            <mat-option value="multi-year">Multi Year</mat-option>
+            <mat-option value="year">Year</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </mat-list-item>
+    </form>
+  </mat-list>
+  <div class="widget page-header-container" cdkScrollable>
+    <mat-form-field>
+      <input matInput [matDatepicker]='gdp' placeholder="Choose a date">
+      <gor-datepicker-toggle matSuffix [for]="gdp"></gor-datepicker-toggle>
+      <gor-datepicker #gdp
+        [startAt]="form.get('startAt').valueChanges|async"
+        [startView]="form.get('startView').valueChanges|async"
+      ></gor-datepicker>
+    </mat-form-field>
+  </div>
+  <pre class="code">
+<span>// module import</span>
+<span>import &#123; DatepickerModule &#125; from '@gorilainvest/ui-toolkit/dist/datepicker';</span>
+<span></span>
+<span>// template.html</span>
+<span>&lt;mat-form-field&gt;</span>
+<span>  &lt;input matInput [matDatepicker]='gdp' placeholder="Choose a date"&gt;</span>
+<span>  &lt;gor-datepicker-toggle matSuffix [for]="gdp"&gt;&lt;/gor-datepicker-toggle&gt;</span>
+<span>  &lt;gor-datepicker #gdp</span>
+<span>    [startAt]="{{(form.get('startAt').valueChanges|async) || initialValues.startAt}}"</span>
+<span>    [startView]="{{(form.get('startView').valueChanges|async) || initialValues.startView}}"</span>
+<span>  &gt;&lt;/gor-datepicker&gt;</span>
+<span>&lt;/mat-form-field&gt;</span>
+<span></span>
+  </pre>
+</gdk-card>

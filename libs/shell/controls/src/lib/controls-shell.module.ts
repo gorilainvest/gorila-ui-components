@@ -8,17 +8,15 @@ import { MatListModule } from "@angular/material/list";
 import { MatSelectModule } from "@angular/material/select";
 import { RouterModule } from "@angular/router";
 import { GdkModule } from "@gorilainvest/gdk";
-
+import { DatepickerModule } from '@gorilainvest/ui-toolkit/datepicker';
+import { FormTextModule } from '@gorilainvest/ui-toolkit/form-text';
 import { SlideToggleModule } from '@gorilainvest/ui-toolkit/slide-toggle';
 
-import { FormTextModule } from '@gorilainvest/ui-toolkit/form-text';
-
-
 import { ControlsComponent } from "./controls/controls.component";
-import { SlideToggleComponent } from "./ui/slide-toggle/slide-toggle.component";
-
+import { DatepickerComponent } from './ui/datepicker/datepicker.component';
 import { FormTextComponent } from './ui/form-text/form-text.component';
-
+import { SlideToggleComponent } from "./ui/slide-toggle/slide-toggle.component";
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 @NgModule({
   imports: [
@@ -26,14 +24,14 @@ import { FormTextComponent } from './ui/form-text/form-text.component';
     FormsModule,
     ReactiveFormsModule,
     MatCheckboxModule,
+    MatDatepickerModule,
     MatFormFieldModule,
     MatInputModule,
     MatListModule,
     MatSelectModule,
-
     FormTextModule,
-
     GdkModule,
+    DatepickerModule,
     SlideToggleModule,
     RouterModule.forChild([
       {
@@ -41,17 +39,19 @@ import { FormTextComponent } from './ui/form-text/form-text.component';
         pathMatch: 'full',
         component: SlideToggleComponent
       },
-
       {
         path: 'form-text',
         pathMatch: 'full',
         component: FormTextComponent
       },
-
+      {
+        path: 'datepicker',
+        pathMatch: 'full',
+        component: DatepickerComponent
+      },
       { path: '', pathMatch: 'full', component: ControlsComponent }
     ])
   ],
-
-  declarations: [SlideToggleComponent, FormTextComponent, ControlsComponent]
+  declarations: [SlideToggleComponent, FormTextComponent, DatepickerComponent, ControlsComponent]
 })
 export class ControlsShellModule {}
