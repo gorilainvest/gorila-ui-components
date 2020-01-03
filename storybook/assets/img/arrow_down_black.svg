@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>04E7198B-C785-4711-AB0F-4208A7F85ACE</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M13.0893398,18.925 L15.4840097,16.5303301 C15.776903,16.2374369 16.2517767,16.2374369 16.5446699,16.5303301 C16.8375631,16.8232233 16.8375631,17.298097 16.5446699,17.5909903 L12.9803301,21.1553301 C12.8166136,21.3190465 12.5960393,21.3912516 12.3821699,21.3719452 C12.1683006,21.3912516 11.9477262,21.3190465 11.7840097,21.1553301 L8.21966991,17.5909903 C7.9267767,17.298097 7.9267767,16.8232233 8.21966991,16.5303301 C8.51256313,16.2374369 8.98743687,16.2374369 9.28033009,16.5303301 L11.5893398,18.8393398 L11.5893398,2.75 C11.5893398,2.33578644 11.9251263,2 12.3393398,2 C12.7535534,2 13.0893398,2.33578644 13.0893398,2.75 L13.0893398,18.925 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons-/-Component-/-Arrow-Down">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Arrow-Down" fill="#D8D8D8" fill-rule="nonzero" xlink:href="#path-1"></use>
+            <g id="Color-/-Gray-/-Extra-Dark" mask="url(#mask-2)" fill="#2D2D2D">
+                <rect id="Icon-Color-/-Gray" x="0" y="0" width="24" height="24"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
