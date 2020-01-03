@@ -1,10 +1,11 @@
-import { DatepickerContentComponent } from './datepicker-content.component';
-import { Component, AfterViewInit, Input, HostBinding, ViewEncapsulation, ViewChild, ChangeDetectionStrategy } from '@angular/core';
-import { ComponentType, ComponentPortal } from '@angular/cdk/portal';
-import { MatCalendar, MatCalendarView, MatDatepicker } from '@angular/material/datepicker';
-import { CalendarHeaderComponent } from './calendar-header.component';
+import { ComponentPortal } from '@angular/cdk/portal';
+import { Component, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
+import { MatDatepicker } from '@angular/material/datepicker';
 import { take } from 'rxjs/operators';
 
+import { DatepickerContentComponent } from './datepicker-content.component';
+
+/** @ignore */
 export const SELECTOR = 'gor-datepicker';
 
 /**

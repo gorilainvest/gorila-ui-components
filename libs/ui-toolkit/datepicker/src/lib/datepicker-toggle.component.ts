@@ -1,6 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy, HostBinding, HostListener } from '@angular/core';
 import { MatDatepickerToggle } from '@angular/material/datepicker';
 
+/** @ignore */
 export const SELECTOR = 'gor-datepicker-toggle';
 
 /**

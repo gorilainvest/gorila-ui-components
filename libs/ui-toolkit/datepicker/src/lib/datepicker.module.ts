@@ -9,6 +9,7 @@ import { DatepickerComponent } from './datepicker.component';
 import { DatepickerContentComponent } from './datepicker-content.component';
 import { CalendarHeaderComponent } from './calendar-header.component';
 
+/** @ignore */
 export const MODULE_METADATA = {
   imports: [
     CommonModule,
