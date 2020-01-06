@@ -118,6 +118,10 @@
       "@gorilainvest/ui-toolkit/sort-header": [
         "dist/sort-header",
         "libs/ui-toolkit/sort-header/src/index.ts"
+      ],
+      "@gorilainvest/ui-toolkit/tooltip": [
+        "dist/tooltip",
+        "libs/ui-toolkit/tooltip/src/index.ts"
       ]
     },
     "rootDir": "."

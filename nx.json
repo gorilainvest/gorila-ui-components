@@ -199,6 +199,15 @@
         "scope:ui",
         "group:layout"
       ]
+    },
+    "tooltip": {
+      "tags": [
+        "exportable",
+        "team:ape",
+        "scope:shared",
+        "scope:ui",
+        "group:layout"
+      ]
     }
   }
 }
