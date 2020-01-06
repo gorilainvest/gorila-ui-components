@@ -1,14 +1,10 @@
 import { DebugElement } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { DateAdapter } from '@angular/material/core';
-import { MatMomentDateModule, MomentDateAdapter } from '@angular/material-moment-adapter';
 import { By } from '@angular/platform-browser';
-import { ButtonModule } from '@gorilainvest/ui-toolkit/button';
 import { Moment, utc } from 'moment';
 
 import { DatepickerContentComponent } from './datepicker-content.component';
-import { MatDatepickerModule, MatCalendar } from '@angular/material/datepicker';
-import { CalendarHeaderComponent } from './calendar-header.component';
+import { MatCalendar } from '@angular/material/datepicker';
 import { DatepickerModule } from './datepicker.module';
 
 describe('DatepickerContentComponent', () => {

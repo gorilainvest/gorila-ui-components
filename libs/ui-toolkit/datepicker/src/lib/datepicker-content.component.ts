@@ -83,6 +83,7 @@ export class DatepickerContentComponent<D> extends MatDatepickerContent<D> imple
    */
   public dateChanged(newDate: D | null) {
     this.selectedDate = newDate
+    /* istanbul ignore if */
     if (this.datepicker) {
       this.datepicker.select(newDate);
     }

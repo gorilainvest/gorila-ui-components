@@ -21,18 +21,17 @@ export const SELECTOR = 'gor-datepicker';
   encapsulation: ViewEncapsulation.None
 })
 export class DatepickerComponent<D> extends MatDatepicker<D> {
-
   private callPrivateMember<R>(p: string, ...args: any[]): R {
-    const m = this[p];
-
+    /* istanbul ignore else */
     if (p in this) {
       return this[p].call(this, ...args);
+    } else {
+      console.error(`Can't call inexistent ${p} private member MatDatepicker!`);
     }
-
-    console.error(`Can't call inexistent ${p} private member MatDatepicker!`);
   }
 
   private getPrivateMember(p: string, allowFalsy = false) {
+    /* istanbul ignore next */
     if (!(p in this) && !allowFalsy) {
       console.error(`Member ${p} doesn't exist in MatDatepicker!`);
     }
@@ -51,6 +50,7 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
     if (this.getPrivateMember('_opened', true) || this.disabled) {
       return;
     }
+    /* istanbul ignore if */
     if (!this._datepickerInput) {
       throw Error('Attempted to open an MatDatepicker with no associated input.');
     }
@@ -79,7 +79,7 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
     this.setValueToPrivateMember(
       '_dialogRef',
       _dialog.open<DatepickerContentComponent<D>>(DatepickerContentComponent, {
-        direction: _dir ? _dir.value : 'ltr',
+        direction: /* istanbul ignore next */ _dir ? _dir.value : 'ltr',
         viewContainerRef: this.getPrivateMember('_viewContainerRef'),
         panelClass: 'mat-datepicker-dialog'
       })
@@ -87,15 +87,17 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
 
     this.getPrivateMember('_dialogRef')
       .afterClosed()
-      .subscribe(() => this.close());
+      .subscribe(/* istanbul ignore next */ () => this.close());
     this.getPrivateMember('_dialogRef').componentInstance.datepicker = this;
     this.getPrivateMember('_dialogRef').componentInstance.startAt = this.startAt;
     this.getPrivateMember('_dialogRef').componentInstance.startView = this.startView || 'month';
-    this.getPrivateMember('_setColor')();
+    this.callPrivateMember('_setColor');
   }
 
+  /* istanbul ignore next */
   /** Open the calendar as a popup. */
   private openAsPopup() {
+    /* istanbul ignore if */
     if (!this.getPrivateMember('_calendarPortal', true)) {
       this.setValueToPrivateMember(
         '_calendarPortal',
@@ -106,10 +108,12 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
       );
     }
 
+    /* istanbul ignore if */
     if (!this._popupRef) {
       this.callPrivateMember('_createPopup');
     }
 
+    /* istanbul ignore if */
     if (!this._popupRef.hasAttached()) {
       this.setValueToPrivateMember(
         '_popupComponentRef',
@@ -117,6 +121,7 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
       );
       this.getPrivateMember('_popupComponentRef').instance.datepicker = this;
       this.getPrivateMember('_popupComponentRef').instance.startAt = this.startAt;
+      /* istanbul ignore next */
       this.getPrivateMember('_popupComponentRef').instance.startView = this.startView || 'month';
       this.callPrivateMember('_setColor');
 
