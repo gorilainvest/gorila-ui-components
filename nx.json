@@ -207,6 +207,15 @@
         "scope:ui",
         "group:controls"
       ]
+    },
+    "tooltip": {
+      "tags": [
+        "exportable",
+        "team:ape",
+        "scope:shared",
+        "scope:ui",
+        "group:layout"
+      ]
     }
   }
 }
