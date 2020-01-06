@@ -1,4 +1,6 @@
-import { Component, OnInit, ChangeDetectionStrategy, HostBinding, HostListener } from '@angular/core';
+/* istanbul ignore file Code copied from Angular Material team, work as is */
+
+import { Component, ChangeDetectionStrategy, HostBinding, HostListener } from '@angular/core';
 import { MatDatepickerToggle } from '@angular/material/datepicker';
 
 /** @ignore */
