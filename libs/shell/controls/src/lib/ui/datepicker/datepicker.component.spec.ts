@@ -2,11 +2,11 @@ import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 
 import { ControlsShellModule } from "../../controls-shell.module";
-import { SlideToggleComponent } from "./slide-toggle.component";
+import { DatepickerComponent } from "./datepicker.component";
 
-describe("SlideToggleComponent", () => {
-  let component: SlideToggleComponent;
-  let fixture: ComponentFixture<SlideToggleComponent>;
+describe("DatepickerComponent", () => {
+  let component: DatepickerComponent;
+  let fixture: ComponentFixture<DatepickerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -15,7 +15,7 @@ describe("SlideToggleComponent", () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SlideToggleComponent);
+    fixture = TestBed.createComponent(DatepickerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
