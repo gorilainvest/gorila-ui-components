@@ -19,6 +19,7 @@ import { PageHeaderModule } from '@gorilainvest/ui-toolkit/page-header';
 import { ScrollContainerModule } from '@gorilainvest/ui-toolkit/scroll-container';
 import { SectionTitleModule } from '@gorilainvest/ui-toolkit/section-title';
 import { SortHeaderModule } from '@gorilainvest/ui-toolkit/sort-header';
+import { TooltipModule } from '@gorilainvest/ui-toolkit/tooltip';
 
 import { LayoutComponent } from './layout/layout.component';
 import { CardContainerComponent } from './ui/card-container/card-container.component';
@@ -29,6 +30,7 @@ import { PageHeaderComponent } from './ui/page-header/page-header.component';
 import { ScrollContainerComponent } from './ui/scroll-container/scroll-container.component';
 import { SectionTitleComponent } from './ui/section-title/section-title.component';
 import { SortHeaderComponent } from './ui/sort-header/sort-header.component';
+import { TooltipComponent } from './ui/tooltip/tooltip.component';
 
 @NgModule({
   imports: [
@@ -52,6 +54,7 @@ import { SortHeaderComponent } from './ui/sort-header/sort-header.component';
     SectionTitleModule,
     PageHeaderModule,
     SortHeaderModule,
+    TooltipModule,
     RouterModule.forChild([
       {
         path: 'card-container',
@@ -93,6 +96,11 @@ import { SortHeaderComponent } from './ui/sort-header/sort-header.component';
         pathMatch: 'full',
         component: SortHeaderComponent
       },
+      {
+        path: 'tooltip',
+        pathMatch: 'full',
+        component: TooltipComponent
+      },
       { path: '', pathMatch: 'full', component: LayoutComponent }
     ])
   ],
@@ -105,7 +113,8 @@ import { SortHeaderComponent } from './ui/sort-header/sort-header.component';
     PageHeaderComponent,
     ScrollContainerComponent,
     SectionTitleComponent,
-    SortHeaderComponent
+    SortHeaderComponent,
+    TooltipComponent
   ]
 })
 export class LayoutShellModule { }
