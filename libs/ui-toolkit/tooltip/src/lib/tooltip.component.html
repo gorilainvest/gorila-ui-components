@@ -1,5 +1,5 @@
 <span [matTooltip]="tooltipText" [matTooltipPosition]="orientation" [matTooltipClass]="cssClass" >
-  <img *ngIf="showIcon; else content" src="/assets/img/icon_Information.svg" >
+  <img alt="Information icon" *ngIf="showIcon; else content" src="/assets/img/icon_Information.svg" >
   <ng-template #content>
     <ng-content></ng-content>
   </ng-template>
