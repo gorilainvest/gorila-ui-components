@@ -118,6 +118,9 @@
       "@gorilainvest/ui-toolkit/sort-header": [
         "dist/sort-header",
         "libs/ui-toolkit/sort-header/src/index.ts"
+      ],
+      "@gorilainvest/ui-toolkit/datepicker": [
+        "libs/ui-toolkit/datepicker/src/index.ts"
       ]
     },
     "rootDir": "."
