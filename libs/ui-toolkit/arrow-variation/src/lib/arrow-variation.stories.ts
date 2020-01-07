@@ -1,109 +1,65 @@
-import { storiesOf } from '@storybook/angular';
+import { storiesOf, moduleMetadata } from '@storybook/angular';
 import { ArrowVariationComponent } from './arrow-variation.component';
 
-const conf = { centered: { disable: true } };
+const conf = { centered: { disable: false } };
+const arrowDivStyle = `
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+const containerStyle = `
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+`;
 
-storiesOf('Arrow Variation small', module)
+storiesOf('Arrow Variation', module)
+  .addDecorator(
+    moduleMetadata({
+      declarations: [ArrowVariationComponent]
+    })
+  )
   .add(
-    'with negative value',
+    'sizes with positive values',
     () => ({
-      component: ArrowVariationComponent,
-      props: {
-        size: 'sm',
-        value: -1
-      }
+      template: `
+      <div style="${containerStyle}">
+        <div style="${arrowDivStyle}">
+          <gor-arrow-variation size='sm' [value]="1"></gor-arrow-variation>
+          Smaill
+        </div>
+        <div style="${arrowDivStyle}">
+          <gor-arrow-variation size='md' [value]="1"></gor-arrow-variation>
+          Medium
+        </div>
+        <div style="${arrowDivStyle}">
+          <gor-arrow-variation size='lg' [value]="1"></gor-arrow-variation>
+          Large
+        </div>
+      </div>
+    `
     }),
     conf
   )
   .add(
-    'with zero value',
+    'sizes with negative values',
     () => ({
-      component: ArrowVariationComponent,
-      props: {
-        size: 'sm',
-        value: 0
-      }
-    }),
-    conf
-  )
-  .add(
-    'with positive value',
-    () => ({
-      component: ArrowVariationComponent,
-      props: {
-        size: 'sm',
-        value: 1
-      }
-    }),
-    conf
-  );
-
-storiesOf('Arrow Variation medium', module)
-  .add(
-    'with negative value',
-    () => ({
-      component: ArrowVariationComponent,
-      props: {
-        size: 'md',
-        value: -1
-      }
-    }),
-    conf
-  )
-  .add(
-    'with zero value',
-    () => ({
-      component: ArrowVariationComponent,
-      props: {
-        size: 'md',
-        value: 0
-      }
-    }),
-    conf
-  )
-  .add(
-    'with positive value',
-    () => ({
-      component: ArrowVariationComponent,
-      props: {
-        size: 'md',
-        value: 1
-      }
-    }),
-    conf
-  );
-
-storiesOf('Arrow Variation large', module)
-  .add(
-    'with negative value',
-    () => ({
-      component: ArrowVariationComponent,
-      props: {
-        size: 'lg',
-        value: -1
-      }
-    }),
-    conf
-  )
-  .add(
-    'with zero value',
-    () => ({
-      component: ArrowVariationComponent,
-      props: {
-        size: 'lg',
-        value: 0
-      }
-    }),
-    conf
-  )
-  .add(
-    'with positive value',
-    () => ({
-      component: ArrowVariationComponent,
-      props: {
-        size: 'lg',
-        value: 1
-      }
+      template: `
+      <div style="${containerStyle}">
+        <div style="${arrowDivStyle}">
+          <gor-arrow-variation size='sm' [value]="-1"></gor-arrow-variation>
+          Small
+        </div>
+        <div style="${arrowDivStyle}">
+          <gor-arrow-variation size='md' [value]="-1"></gor-arrow-variation>
+          Medium
+        </div>
+        <div style="${arrowDivStyle}">
+          <gor-arrow-variation size='lg' [value]="-1"></gor-arrow-variation>
+          Large
+        </div>
+      </div>
+    `
     }),
     conf
   );

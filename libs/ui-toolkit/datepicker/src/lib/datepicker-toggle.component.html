@@ -1,0 +1,24 @@
+<button
+  #button
+  mat-icon-button
+  type="button"
+  [attr.aria-haspopup]="datepicker ? 'dialog' : null"
+  [attr.aria-label]="_intl.openCalendarLabel"
+  [attr.tabindex]="disabled ? -1 : tabIndex"
+  [disabled]="disabled"
+  [disableRipple]="disableRipple"
+  (click)="_open($event)">
+
+  <svg
+    *ngIf="!_customIcon"
+    class="mat-datepicker-toggle-default-icon"
+    viewBox="0 0 12 12"
+    width="12px"
+    height="12px"
+    fill="currentColor"
+    focusable="false">
+    <path fill="#FFF" fill-rule="evenodd" d="M1.632 10.594a2745.395 2745.395 0 0 0-.01-6.439h8.667v6.439H1.632zm1.155-9.006v.874a.328.328 0 1 0 .656 0v-.874h4.958v.874a.328.328 0 1 0 .656 0v-.874h1.232v1.91H1.62a498.387 498.387 0 0 0-.012-1.828l-.002-.082h1.182zm7.83-.657h-1.56V.328a.328.328 0 1 0-.656 0v.603H3.443V.328a.328.328 0 1 0-.656 0v.603H1.266a.328.328 0 0 0-.324.384c.025.415.034 5.946.034 9.607 0 .181.147.328.328.328h9.313a.328.328 0 0 0 .329-.328V1.259a.328.328 0 0 0-.329-.328z"/>
+  </svg>
+
+  <ng-content select="[matDatepickerToggleIcon]"></ng-content>
+</button>
