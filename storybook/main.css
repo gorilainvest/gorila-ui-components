@@ -136,6 +136,110 @@ section-title, .section-title {
 
 /* stylelint-enable property-no-unknown */
 /* stylelint-enable property-no-vendor-prefix */
+.mat-form-field-appearance-legacy .mat-form-field-prefix .mat-datepicker-toggle-default-icon,
+.mat-form-field-appearance-legacy .mat-form-field-suffix .mat-datepicker-toggle-default-icon {
+  width: 1em;
+}
+
+.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-datepicker-toggle-default-icon,
+.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-datepicker-toggle-default-icon {
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+}
+.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button .mat-datepicker-toggle-default-icon,
+.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button .mat-datepicker-toggle-default-icon {
+  margin: auto;
+}
+
+.mat-icon-button {
+  background-color: #10c0c6;
+}
+gor-calendar-header {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+gor-calendar-header button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: normal;
+}
+gor-calendar-header button:hover {
+  box-shadow: none !important;
+}
+gor-calendar-header .mat-calendar-previous-button,
+gor-calendar-header .mat-calendar-next-button {
+  background: none !important;
+  border: none;
+  box-shadow: none;
+}
+gor-datepicker-content {
+  display: flex;
+  flex-direction: column;
+  width: 265px;
+  min-height: 327px;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+}
+@media screen and (max-width: 1024px) {
+  gor-datepicker-content {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+gor-datepicker-content .mat-calendar {
+  margin: 15px 15px 0;
+}
+gor-datepicker-content .mat-calendar-body tr[aria-hidden=true] {
+  display: none;
+}
+gor-datepicker-content .mat-calendar-body-label {
+  visibility: hidden;
+}
+gor-datepicker-content .mat-calendar-body-cell-content {
+  color: #2d2d2d;
+}
+gor-datepicker-content .mat-calendar-body-selected {
+  color: #ffffff;
+}
+gor-datepicker-content .mat-calendar-body-selected.mat-calendar-body-today {
+  box-shadow: none;
+}
+gor-datepicker-content .mat-calendar-next-button, gor-datepicker-content .mat-calendar-previous-button {
+  cursor: pointer;
+}
+gor-datepicker-content .mat-calendar-table-header-divider {
+  display: none;
+}
+gor-datepicker-content .mat-calendar-table-header th {
+  color: #888e8e;
+}
+gor-datepicker-content .mat-calendar-body-cell-content, gor-datepicker-content .mat-calendar-table-header th {
+  font-size: 12px;
+}
+
+gor-datepicker-content .mat-calendar-body-disabled .mat-calendar-body-cell-content {
+  color: #cacbcc;
+}
+
+gor-datepicker-content .datepicker__body {
+  flex: 1;
+  display: flex;
+  border-bottom: solid 1px #f1f1f1;
+}
+gor-datepicker-content .datepicker__calendar {
+  flex: 1;
+}
+gor-datepicker-content .datepicker__footer {
+  max-height: 89px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 16px 20px 14px 20px;
+}
 /* You can add global styles to this file, and also import other style files */
 html,
 body {

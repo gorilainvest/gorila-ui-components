@@ -1,0 +1,452 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Gorila UI Toolkit Documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Gorila UI Toolkit Documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>DatepickerComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>libs/ui-toolkit/datepicker/src/lib/datepicker.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Component responsible for managing the datepicker popup/dialog.</p>
+
+    </p>
+
+    <p class="comment">
+        <h3>Extends</h3>
+    </p>
+    <p class="comment">
+            <code>MatDatepicker</code>
+    </p>
+
+
+    <p class="comment">
+        <h3>Example</h3>
+    </p>
+    <div class="io-description">
+    </div>
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.OnPush</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">encapsulation</td>
+                <td class="col-md-9"><code>ViewEncapsulation.None</code></td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">exportAs</td>
+                <td class="col-md-9"><code>gorDatepicker</code></td>
+            </tr>
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>SELECTOR</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#open">open</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="open"></a>
+                    <span class="name">
+                        <b>
+                            open
+                        </b>
+                        <a href="#open"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>open()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">libs/ui-toolkit/datepicker/src/lib/datepicker.component.ts:47</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Open the calendar. </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ComponentPortal } from &#x27;@angular/cdk/portal&#x27;;
+import { Component, ViewEncapsulation, ChangeDetectionStrategy } from &#x27;@angular/core&#x27;;
+import { MatDatepicker } from &#x27;@angular/material/datepicker&#x27;;
+import { take } from &#x27;rxjs/operators&#x27;;
+
+import { DatepickerContentComponent } from &#x27;./datepicker-content.component&#x27;;
+
+/** @ignore */
+export const SELECTOR &#x3D; &#x27;gor-datepicker&#x27;;
+
+/**
+ * Component responsible for managing the datepicker popup/dialog.
+ *
+ * @link https://github.com/angular/components/blob/master/src/material/datepicker/datepicker.ts
+ */
+@Component({
+  selector: SELECTOR,
+  template: &#x27;&#x27;,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  exportAs: &#x27;gorDatepicker&#x27;,
+  encapsulation: ViewEncapsulation.None
+})
+export class DatepickerComponent&lt;D&gt; extends MatDatepicker&lt;D&gt; {
+  private callPrivateMember&lt;R&gt;(p: string, ...args: any[]): R {
+    /* istanbul ignore else */
+    if (p in this) {
+      return this[p].call(this, ...args);
+    } else {
+      console.error(&#x60;Can&#x27;t call inexistent ${p} private member MatDatepicker!&#x60;);
+    }
+  }
+
+  private getPrivateMember(p: string, allowFalsy &#x3D; false) {
+    /* istanbul ignore next */
+    if (!(p in this) &amp;&amp; !allowFalsy) {
+      console.error(&#x60;Member ${p} doesn&#x27;t exist in MatDatepicker!&#x60;);
+    }
+
+    return this[p];
+  }
+
+  private setValueToPrivateMember(p: string, v: any) {
+    this[p] &#x3D; v;
+  }
+
+  /** Open the calendar. */
+  open(): void {
+    const _document &#x3D; this.getPrivateMember(&#x27;_document&#x27;);
+
+    if (this.getPrivateMember(&#x27;_opened&#x27;, true) || this.disabled) {
+      return;
+    }
+    /* istanbul ignore if */
+    if (!this._datepickerInput) {
+      throw Error(&#x27;Attempted to open an MatDatepicker with no associated input.&#x27;);
+    }
+    if (_document) {
+      this.setValueToPrivateMember(&#x27;_focusedElementBeforeOpen&#x27;, _document.activeElement);
+    }
+
+    this.touchUi ? this.openAsDialog() : this.openAsPopup();
+    this.setValueToPrivateMember(&#x27;_opened&#x27;, true);
+    this.openedStream.emit();
+  }
+
+  /** Open the calendar as a dialog. */
+  private openAsDialog() {
+    const _dialog &#x3D; this.getPrivateMember(&#x27;_dialog&#x27;);
+    const _dir &#x3D; this.getPrivateMember(&#x27;_dir&#x27;);
+
+    // Usually this would be handled by &#x60;open&#x60; which ensures that we can only have one overlay
+    // open at a time, however since we reset the variables in async handlers some overlays
+    // may slip through if the user opens and closes multiple times in quick succession (e.g.
+    // by holding down the enter key).
+    if (this.getPrivateMember(&#x27;_dialogRef&#x27;, true)) {
+      this.getPrivateMember(&#x27;_dialogRef&#x27;).close();
+    }
+
+    this.setValueToPrivateMember(
+      &#x27;_dialogRef&#x27;,
+      _dialog.open&lt;DatepickerContentComponent&lt;D&gt;&gt;(DatepickerContentComponent, {
+        direction: /* istanbul ignore next */ _dir ? _dir.value : &#x27;ltr&#x27;,
+        viewContainerRef: this.getPrivateMember(&#x27;_viewContainerRef&#x27;),
+        panelClass: &#x27;mat-datepicker-dialog&#x27;
+      })
+    );
+
+    this.getPrivateMember(&#x27;_dialogRef&#x27;)
+      .afterClosed()
+      .subscribe(/* istanbul ignore next */ () &#x3D;&gt; this.close());
+    this.getPrivateMember(&#x27;_dialogRef&#x27;).componentInstance.datepicker &#x3D; this;
+    this.getPrivateMember(&#x27;_dialogRef&#x27;).componentInstance.startAt &#x3D; this.startAt;
+    this.getPrivateMember(&#x27;_dialogRef&#x27;).componentInstance.startView &#x3D; this.startView || &#x27;month&#x27;;
+    this.callPrivateMember(&#x27;_setColor&#x27;);
+  }
+
+  /* istanbul ignore next */
+  /** Open the calendar as a popup. */
+  private openAsPopup() {
+    /* istanbul ignore if */
+    if (!this.getPrivateMember(&#x27;_calendarPortal&#x27;, true)) {
+      this.setValueToPrivateMember(
+        &#x27;_calendarPortal&#x27;,
+        new ComponentPortal&lt;DatepickerContentComponent&lt;D&gt;&gt;(
+          DatepickerContentComponent,
+          this.getPrivateMember(&#x27;_viewContainerRef&#x27;)
+        )
+      );
+    }
+
+    /* istanbul ignore if */
+    if (!this._popupRef) {
+      this.callPrivateMember(&#x27;_createPopup&#x27;);
+    }
+
+    /* istanbul ignore if */
+    if (!this._popupRef.hasAttached()) {
+      this.setValueToPrivateMember(
+        &#x27;_popupComponentRef&#x27;,
+        this._popupRef.attach(this.getPrivateMember(&#x27;_calendarPortal&#x27;))
+      );
+      this.getPrivateMember(&#x27;_popupComponentRef&#x27;).instance.datepicker &#x3D; this;
+      this.getPrivateMember(&#x27;_popupComponentRef&#x27;).instance.startAt &#x3D; this.startAt;
+      /* istanbul ignore next */
+      this.getPrivateMember(&#x27;_popupComponentRef&#x27;).instance.startView &#x3D; this.startView || &#x27;month&#x27;;
+      this.callPrivateMember(&#x27;_setColor&#x27;);
+
+      // Update the position once the calendar has rendered.
+      this.getPrivateMember(&#x27;_ngZone&#x27;)
+        .onStable.asObservable()
+        .pipe(take(1))
+        .subscribe(() &#x3D;&gt; {
+          this._popupRef.updatePosition();
+        });
+    }
+  }
+}
+</code></pre>
+    </div>
+
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div></div>'
+    var COMPONENTS = [{'name': 'ArrowVariationComponent', 'selector': 'gor-arrow-variation, mur-arrow-variation'},{'name': 'ButtonComponent', 'selector': 'gor-button, mag-button'},{'name': 'CalendarHeaderComponent', 'selector': 'gor-calendar-header'},{'name': 'CardContainerComponent', 'selector': 'gor-card-container, gro-card-container'},{'name': 'CountdownButtonComponent', 'selector': 'gor-countdown-button, mag-countdown-button'},{'name': 'CurrencyDisplayComponent', 'selector': 'gro-currency-display'},{'name': 'DataFormatterComponent', 'selector': 'gor-data-formatter'},{'name': 'DatepickerComponent', 'selector': 'SELECTOR'},{'name': 'DatepickerContentComponent', 'selector': 'SELECTOR'},{'name': 'DatepickerToggleComponent', 'selector': 'SELECTOR'},{'name': 'EnhancedTitleComponent', 'selector': 'gor-enhanced-title, gro-enhanced-title'},{'name': 'FormTextComponent', 'selector': 'gor-form-text'},{'name': 'GdkCardComponent', 'selector': 'gdk-card'},{'name': 'GdkImportComponent', 'selector': 'gdk-import'},{'name': 'IconComponent', 'selector': 'gor-icon'},{'name': 'LoadingComponent', 'selector': 'gor-loading, mur-loading'},{'name': 'PageHeaderComponent', 'selector': 'gor-page-header'},{'name': 'PopoverComponent', 'selector': 'gor-popover'},{'name': 'PopupConfirmComponent', 'selector': 'gor-popup-confirm, mag-popup-confirm'},{'name': 'ScrollContainerComponent', 'selector': 'gor-scroll-container'},{'name': 'SectionTitleComponent', 'selector': 'gor-section-title, gro-section-title'},{'name': 'SlideToggleComponent', 'selector': 'gor-slide-toggle, mur-slide-toggle'},{'name': 'SlideToggleGroupComponent', 'selector': 'gor-slide-toggle-group, mur-slide-toggle-group'},{'name': 'SortHeaderComponent', 'selector': '[gor-sort-header]'}];
+    var DIRECTIVES = [{'name': 'CancelableRouterLinkWithHrefDirective', 'selector': 'a[gorCancelableRouterLink]'},{'name': 'PageHeaderBottomDirective', 'selector': '[gorPageHeaderBottom]'},{'name': 'TippyDirective', 'selector': '[gorTippy]'},{'name': 'TruncateDirective', 'selector': '[gorTruncate]'}];
+    var ACTUAL_COMPONENT = {'name': 'DatepickerComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'DatepickerComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

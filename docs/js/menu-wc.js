@@ -204,6 +204,36 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
+                                <a href="modules/DatepickerModule.html" data-type="entity-link">DatepickerModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-DatepickerModule-0a55976396e8801bfb08d1028a1b9a6f"' : 'data-target="#xs-components-links-module-DatepickerModule-0a55976396e8801bfb08d1028a1b9a6f"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-DatepickerModule-0a55976396e8801bfb08d1028a1b9a6f"' :
+                                            'id="xs-components-links-module-DatepickerModule-0a55976396e8801bfb08d1028a1b9a6f"' }>
+                                            <li class="link">
+                                                <a href="components/CalendarHeaderComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">CalendarHeaderComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/DatepickerComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">DatepickerComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/DatepickerContentComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">DatepickerContentComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/DatepickerToggleComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">DatepickerToggleComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
                                 <a href="modules/DirectivesModule.html" data-type="entity-link">DirectivesModule</a>
                                 <li class="chapter inner">
                                     <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
