@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 export type OrientationType = 'above' | 'below' | 'left' | 'right' | 'before' | 'after';
 
@@ -7,18 +7,23 @@ export type OrientationType = 'above' | 'below' | 'left' | 'right' | 'before' | 
   templateUrl: './tooltip.component.html',
   styleUrls: ['./tooltip.component.scss']
 })
-export class TooltipComponent implements OnChanges {
+export class TooltipComponent {
   /**
    * Text to be displayed in the tooltip.
    */
   @Input() public tooltipText = '';
 
+  public _orientation = 'right';
   /**
    * Tooltip position.
    *
    * @default right
    */
-  @Input() public orientation: OrientationType = 'right';
+  @Input() public set orientation (orientation: OrientationType) {
+    this._orientation = ['above', 'below', 'left', 'right', 'before', 'after'].indexOf(orientation) === -1 ?
+      'right' : orientation;
+    this.cssClass = this._orientation ? `tooltip-arrow-${this._orientation}` : '';
+  }
 
   /**
    * Controls whether information icon is displayed or not.
@@ -28,14 +33,4 @@ export class TooltipComponent implements OnChanges {
   @Input() public showIcon = true;
 
   public cssClass = '';
-
-  public ngOnChanges(data) {
-    // Update tooltip css class according to changes in orientation.
-    if (data['orientation']) {
-      if (['above', 'below', 'left', 'right', 'before', 'after'].indexOf(this.orientation) === -1) {
-        this.orientation = 'right';
-      }
-      this.cssClass = this.orientation ? `tooltip-arrow-${this.orientation}` : '';
-    }
-  }
 }
