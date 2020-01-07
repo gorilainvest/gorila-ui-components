@@ -1,3 +1,5 @@
+import '!style-loader!css-loader!sass-loader!../libs/shared-styles/_globals.scss';
+
 import { addDecorator, addParameters, configure } from '@storybook/angular';
 import { centered } from '@storybook/addon-centered/angular';
 import { withA11y } from '@storybook/addon-a11y';

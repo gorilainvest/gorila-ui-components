@@ -21,7 +21,6 @@ module.exports = async ({ config }) => {
 
   config.module.rules.push({
     test: /!(.spec).ts$/,
-
     exclude: /node_modules/,
     loader: 'ts-loader'
   });
