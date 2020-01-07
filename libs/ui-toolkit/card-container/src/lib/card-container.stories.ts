@@ -44,6 +44,7 @@ const styles = [
     background: #fff;
     display: block;
     width: 300px;
+    margin: 10px;
 }`
 ];
 
@@ -54,25 +55,15 @@ const modMetadata = moduleMetadata({
 storiesOf('Card Container', module)
   .addDecorator(modMetadata)
   .addDecorator(withKnobs)
-  .add('non-editable without subtitle and top bar', () => ({
+  .add('non-editable', () => ({
     styles,
     template: `
         <gor-card-container title="This is a sample">
             ${content}
         </gor-card-container>
-        `
-  }))
-  .add('non-editable without subtitle', () => ({
-    styles,
-    template: `
         <gor-card-container title="This is a sample" colorInit="#10c0c6" colorEnd="#4dde90">
             ${content}
         </gor-card-container>
-        `
-  }))
-  .add('non-editable', () => ({
-    styles,
-    template: `
         <gor-card-container title="This is a sample" colorInit="#10c0c6" colorEnd="#4dde90" subtitle="with a subtitle">
             ${content}
         </gor-card-container>
