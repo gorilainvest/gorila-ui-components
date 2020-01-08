@@ -200,6 +200,15 @@
         "group:layout"
       ]
     },
+    "enhanced-header": {
+      "tags": [
+        "exportable",
+        "team:ape",
+        "scope:shared",
+        "scope:ui",
+        "group:layout"
+      ]
+    },
     "datepicker": {
       "tags": [
         "team:ape",
