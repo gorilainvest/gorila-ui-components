@@ -5,6 +5,11 @@
   ],
   "rules": {
     "arrow-return-shorthand": true,
+    "ban": [
+      true,
+      ["fit"],
+      ["fdescribe"]
+    ],
     "callable-types": true,
     "class-name": true,
     "deprecation": {
