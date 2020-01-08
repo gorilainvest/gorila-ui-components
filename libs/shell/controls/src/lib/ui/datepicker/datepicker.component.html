@@ -6,6 +6,20 @@
     <form [formGroup]="form">
       <mat-list-item role="listitem">
         <mat-form-field class="full-width">
+          <mat-label>Max Date</mat-label>
+          <input matInput type="date" placeholder="The max date" formControlName="maxDate" value={{maxDateInputDefault}} />
+          <mat-hint>The datepicker max selectable date</mat-hint>
+        </mat-form-field>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <mat-form-field class="full-width">
+          <mat-label>Min Date</mat-label>
+          <input matInput type="date" placeholder="The min date" formControlName="minDate" value={{minDateInputDefault}} />
+          <mat-hint>The datepicker min selectable date</mat-hint>
+        </mat-form-field>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <mat-form-field class="full-width">
           <mat-label>Start at Date</mat-label>
           <input matInput type="date" placeholder="The active date" formControlName="startAt" value={{startAtInputDefault}} />
           <mat-hint>The datepicker active date on opening</mat-hint>
@@ -28,8 +42,11 @@
       <input matInput [matDatepicker]='gdp' placeholder="Choose a date">
       <gor-datepicker-toggle matSuffix [for]="gdp"></gor-datepicker-toggle>
       <gor-datepicker #gdp
-        [startAt]="form.get('startAt').valueChanges|async"
-        [startView]="form.get('startView').valueChanges|async"
+        [applyText]="(form.get('applyText').valueChanges|async) || initialValues.applyText"
+        [maxDate]="(form.get('maxDate').valueChanges|async) || initialValues.maxDate"
+        [minDate]="(form.get('minDate').valueChanges|async) || initialValues.minDate"
+        [startAt]="(form.get('startAt').valueChanges|async) || initialValues.startAt"
+        [startView]="(form.get('startView').valueChanges|async) || initialValues.startView"
       ></gor-datepicker>
     </mat-form-field>
   </div>
@@ -42,6 +59,9 @@
 <span>  &lt;input matInput [matDatepicker]='gdp' placeholder="Choose a date"&gt;</span>
 <span>  &lt;gor-datepicker-toggle matSuffix [for]="gdp"&gt;&lt;/gor-datepicker-toggle&gt;</span>
 <span>  &lt;gor-datepicker #gdp</span>
+<span>    [applyText]="{{(form.get('applyText').valueChanges|async) || initialValues.applyText}}"</span>
+<span>    [minDate]="{{(form.get('minDate').valueChanges|async) || initialValues.minDate}}"</span>
+<span>    [maxDate]="{{(form.get('maxDate').valueChanges|async) || initialValues.maxDate}}"</span>
 <span>    [startAt]="{{(form.get('startAt').valueChanges|async) || initialValues.startAt}}"</span>
 <span>    [startView]="{{(form.get('startView').valueChanges|async) || initialValues.startView}}"</span>
 <span>  &gt;&lt;/gor-datepicker&gt;</span>
