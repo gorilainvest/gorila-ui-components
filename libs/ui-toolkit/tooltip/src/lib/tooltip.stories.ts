@@ -12,7 +12,6 @@ storiesOf('Tooltip', module)
       declarations: [TooltipComponent]
     })
   )
-  .addDecorator(withKnobs)
   .add(
     'default',
     () => ({
