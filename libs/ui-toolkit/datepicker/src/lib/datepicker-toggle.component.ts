@@ -1,7 +1,9 @@
 /* istanbul ignore file Code copied from Angular Material team, work as is */
 
-import { Component, ChangeDetectionStrategy, HostBinding, HostListener } from '@angular/core';
+import { Component, ChangeDetectionStrategy, HostBinding, HostListener, OnDestroy, OnInit, Input } from '@angular/core';
 import { MatDatepickerToggle } from '@angular/material/datepicker';
+import { untilDestroyed } from 'ngx-take-until-destroy';
+import { combineLatest } from 'rxjs';
 
 /** @ignore */
 export const SELECTOR = 'gor-datepicker-toggle';
@@ -18,7 +20,12 @@ export const SELECTOR = 'gor-datepicker-toggle';
   exportAs: 'gorDatepickerToggle',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class DatepickerToggleComponent<D> extends MatDatepickerToggle<D> {
+export class DatepickerToggleComponent<D> extends MatDatepickerToggle<D> implements OnDestroy, OnInit {
+  /**
+   * Indicates that the toggle must continue to be active on date selected.
+   */
+  @Input() public activeOnSelect = false;
+
   /**
    * Set readonly tabIndex for toggle component.
    */
@@ -32,7 +39,7 @@ export class DatepickerToggleComponent<D> extends MatDatepickerToggle<D> {
   /**
    * Indicates if associated datepicker is active.
    */
-  @HostBinding('class.mat-datepicker-toggle-active') public readonly active = this.datepicker && this.datepicker.opened;
+  @HostBinding('class.mat-datepicker-toggle-active') public active = this.datepicker && this.datepicker.opened;
 
   /**
    * Indicates if current datepicker color palette is accent.
@@ -49,5 +56,35 @@ export class DatepickerToggleComponent<D> extends MatDatepickerToggle<D> {
    */
   @HostListener('focus') public setFocus() {
     this._button.focus();
+  }
+
+  public ngOnInit() {
+    this.datepicker.openedStream.pipe(untilDestroyed(this)).subscribe(() => this.active = true);
+    combineLatest([
+      this.datepicker.closedStream,
+      this.datepicker._selectedChanged
+    ]).pipe(untilDestroyed(this)).subscribe(([_, selected]) => {
+      if (!this.activeOnSelect) {
+        this.active = false;
+        return;
+      }
+
+      try {
+        const startAt = this.datepicker.startAt;
+        if ('format' in selected && 'format' in startAt) {
+          this.active = selected['format']() === startAt['format']();
+        } else {
+          this.active = selected.toString() === startAt.toString();
+        }
+      } catch (e) {
+        console.error(e);
+        this.active = false;
+      }
+    });
+    
+  }
+
+  public ngOnDestroy() {
+    super.ngOnDestroy();
   }
 }

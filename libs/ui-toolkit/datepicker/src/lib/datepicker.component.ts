@@ -58,8 +58,20 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
     this[p] = v;
   }
 
+  public cloneStartAt() {
+    if (!this.startAt) {
+      return this.startAt;
+    }
+    
+    return typeof this.startAt['clone'] === 'function'
+      ? this.startAt['clone']()
+      : typeof this.startAt === 'object'
+      ? Object.assign({}, this.startAt)
+      : this.startAt;
+  }
+
   /** Open the calendar. */
-  open(): void {
+  public open(): void {
     const _document = this.getPrivateMember('_document');
 
     if (this.getPrivateMember('_opened', true) || this.disabled) {
@@ -105,7 +117,7 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
       .subscribe(/* istanbul ignore next */ () => this.close());
     this.getPrivateMember('_dialogRef').componentInstance.datepicker = this;
     this.getPrivateMember('_dialogRef').componentInstance.applyText = this.applyText || 'Apply';
-    this.getPrivateMember('_dialogRef').componentInstance.startAt = this.startAt;
+    this.getPrivateMember('_dialogRef').componentInstance.startAt = this.cloneStartAt();
     this.getPrivateMember('_dialogRef').componentInstance.minDate = this.minDate;
     this.getPrivateMember('_dialogRef').componentInstance.maxDate = this.maxDate;
     this.getPrivateMember('_dialogRef').componentInstance.startView = this.startView || 'month';
@@ -138,7 +150,7 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
         this._popupRef.attach(this.getPrivateMember('_calendarPortal'))
       );
       this.getPrivateMember('_popupComponentRef').instance.datepicker = this;
-      this.getPrivateMember('_popupComponentRef').instance.startAt = this.startAt;
+      this.getPrivateMember('_popupComponentRef').instance.startAt = this.cloneStartAt();
       this.getPrivateMember('_popupComponentRef').instance.maxDate = this.maxDate;
       this.getPrivateMember('_popupComponentRef').instance.minDate = this.minDate;
       /* istanbul ignore next */
