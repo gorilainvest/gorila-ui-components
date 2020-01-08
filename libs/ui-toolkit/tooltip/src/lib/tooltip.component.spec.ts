@@ -4,7 +4,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { TooltipComponent } from './tooltip.component';
 import { By } from '@angular/platform-browser';
 
-fdescribe('TooltipComponent', () => {
+describe('TooltipComponent', () => {
   let component: TooltipComponent;
   let fixture: ComponentFixture<TooltipComponent>;
 
