@@ -30,8 +30,8 @@
   &:hover {
     background-image: linear-gradient(45deg, $GorilaDefault, $GorilaSecondary);
   }
-  
-  &.active {
-    background: $GorilaDefault;
-  }
+}
+
+:host.mat-datepicker-toggle-active .mat-icon-button {
+  background: $GorilaDefault;
 }

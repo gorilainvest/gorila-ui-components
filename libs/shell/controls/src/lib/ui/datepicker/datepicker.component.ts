@@ -8,8 +8,12 @@ import { localeData, utc } from 'moment';
   styleUrls: ['./datepicker.component.scss']
 })
 export class DatepickerComponent {
-  public maxDateInputDefault = utc().add(1, 'week').format('YYYY-MM-DD');
-  public minDateInputDefault = utc().subtract(1, 'week').format('YYYY-MM-DD');
+  public maxDateInputDefault = utc()
+    .add(1, 'week')
+    .format('YYYY-MM-DD');
+  public minDateInputDefault = utc()
+    .subtract(1, 'week')
+    .format('YYYY-MM-DD');
   public startAtInputDefault = utc().format('YYYY-MM-DD');
 
   public initialValues = {
@@ -21,6 +25,7 @@ export class DatepickerComponent {
   };
 
   public form = new FormGroup({
+    activeOnSelect: new FormControl(false),
     applyText: new FormControl(this.initialValues.applyText),
     maxDate: new FormControl(this.initialValues.maxDate),
     minDate: new FormControl(this.initialValues.minDate),

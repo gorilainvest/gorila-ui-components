@@ -4,6 +4,14 @@
   [withoutOutput]="true">
   <mat-list role="list" class="inputs">
     <form [formGroup]="form">
+      <mat-list-item role="listitem" class="checked-config-container">
+        <mat-checkbox
+          class="full-width"
+          color="primary"
+          formControlName="activeOnSelect"
+          >Toggle active on date select</mat-checkbox
+        >
+      </mat-list-item>
       <mat-list-item role="listitem">
         <mat-form-field class="full-width">
           <mat-label>Max Date</mat-label>
@@ -40,7 +48,9 @@
   <div class="widget page-header-container" cdkScrollable>
     <mat-form-field>
       <input matInput [matDatepicker]='gdp' placeholder="Choose a date">
-      <gor-datepicker-toggle matSuffix [for]="gdp"></gor-datepicker-toggle>
+      <gor-datepicker-toggle matSuffix
+        [activeOnSelect]="form.get('activeOnSelect').valueChanges|async" 
+        [for]="gdp"></gor-datepicker-toggle>
       <gor-datepicker #gdp
         [applyText]="(form.get('applyText').valueChanges|async) || initialValues.applyText"
         [maxDate]="(form.get('maxDate').valueChanges|async) || initialValues.maxDate"
