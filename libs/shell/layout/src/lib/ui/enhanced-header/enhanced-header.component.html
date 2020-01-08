@@ -1,0 +1,56 @@
+<gdk-card
+  title="Enhanced Header"
+  subtitle="A header a with highlighted section"
+  [withoutOutput]="true"
+>
+  <mat-list role="list" class="inputs">
+    <mat-list-item role="listitem">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="title" [formControl]="title" />
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="highlight" [formControl]="highlight" />
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="description" [formControl]="description" />
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="description2" [formControl]="description2" />
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="tooltipText" [formControl]="tooltipText" />
+      </mat-form-field>
+    </mat-list-item>
+  </mat-list>
+  <div class="widget">
+    <gor-enhanced-header
+      [title]="title.value"
+      [highlight]="highlight.value"
+      [description]="description.value"
+      [description2]="description2.value"
+      [tooltipText]="tooltipText.value"></gor-enhanced-header>
+  </div>
+
+  <pre class="code">
+    <span>// module import</span>
+    <span>import &#123; EnhancedHeaderModule &#125; from '@gorilainvest/ui-toolkit/dist/enhanced-header';</span>
+    <span></span>
+    <span>// template.html</span>
+    <span>&lt;gor-enhanced-header</span>
+    <span>  [title]=&quot;{{title.value}}&quot;</span>
+    <span>  [highlight]=&quot;{{highlight.value}}&quot;</span>
+    <span>  [description]=&quot;{{description.value}}&quot;</span>
+    <span>  [description2]=&quot;{{description2.value}}&quot;</span>
+    <span>  [tooltipText]=&quot;{{tooltipText.value}}&quot;</span>
+    <span>&lt;/gor-enhanced-header&gt;</span>
+    <span></span>
+  </pre>
+</gdk-card>
