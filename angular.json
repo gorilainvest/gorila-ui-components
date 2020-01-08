@@ -892,6 +892,13 @@
       "sourceRoot": "libs/gdk/src",
       "prefix": "gorilainvest",
       "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/gdk/tsconfig.lib.json",
+            "project": "libs/gdk/ng-package.json"
+          }
+        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
@@ -1188,6 +1195,46 @@
       "schematics": {
         "@nrwl/angular:component": {
           "style": "scss"
+        }
+      }
+    },
+    "tooltip": {
+      "projectType": "library",
+      "root": "libs/ui-toolkit/tooltip",
+      "sourceRoot": "libs/ui-toolkit/tooltip/src",
+      "prefix": "gor",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/ui-toolkit/tooltip/tsconfig.lib.json",
+            "project": "libs/ui-toolkit/tooltip/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-toolkit/tooltip/tsconfig.lib.json",
+              "libs/ui-toolkit/tooltip/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/ui-toolkit/tooltip/src/test.ts",
+            "tsConfig": "libs/ui-toolkit/tooltip/tsconfig.spec.json",
+            "karmaConfig": "libs/ui-toolkit/tooltip/karma.conf.js"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
         }
       }
     }

@@ -15,3 +15,4 @@ libs/ui/popover @tigredonorte
 libs/ui/section-title @tigredonorte
 libs/ui/slide-toggle @denisokawa
 libs/ui/sort-header @oliveira-gust
+libs/ui/tooltip @oliveira-gust
