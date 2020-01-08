@@ -45,7 +45,7 @@ describe('EnhancedHeaderComponent', () => {
     expect(secondaryDescription).toEqual('Secondary description');
   });
 
-  it('should have a tooltip', () => {
+  it('should have a tooltip when tooltipText is truthy', () => {
     const tooltip = fixture.debugElement.query(By.css('tooltip')).nativeElement;
     expect(tooltip).toBeTruthy();
   });
