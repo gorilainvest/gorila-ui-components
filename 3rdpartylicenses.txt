@@ -142,6 +142,8 @@ THE SOFTWARE.
 
 @angular/material/toolbar
 
+@angular/material/tooltip
+
 @angular/platform-browser
 MIT
 
@@ -210,6 +212,8 @@ SOFTWARE.
 @gorilainvest/ui-toolkit/slide-toggle
 
 @gorilainvest/ui-toolkit/sort-header
+
+@gorilainvest/ui-toolkit/tooltip
 
 @ngrx/effects
 MIT

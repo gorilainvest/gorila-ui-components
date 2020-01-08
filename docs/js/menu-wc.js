@@ -539,6 +539,24 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         </ul>
                                     </li>
                             </li>
+                            <li class="link">
+                                <a href="modules/TooltipModule.html" data-type="entity-link">TooltipModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-TooltipModule-23680c8ec491cd83258fe50bcd6d7762"' : 'data-target="#xs-components-links-module-TooltipModule-23680c8ec491cd83258fe50bcd6d7762"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-TooltipModule-23680c8ec491cd83258fe50bcd6d7762"' :
+                                            'id="xs-components-links-module-TooltipModule-23680c8ec491cd83258fe50bcd6d7762"' }>
+                                            <li class="link">
+                                                <a href="components/TooltipComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">TooltipComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
                 </ul>
                 </li>
                     <li class="chapter">
