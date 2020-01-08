@@ -5,6 +5,7 @@ export * from './dist/countdown-button';
 export * from './dist/currency-display';
 export * from './dist/data-formatter';
 export * from './dist/directives';
+export * from './dist/enhanced-header';
 export * from './dist/enhanced-title';
 export * from './dist/form-text';
 export * from './dist/icon';
