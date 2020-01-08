@@ -1,0 +1,11 @@
+{
+  "name": "@gorilainvest/gdk",
+  "version": "0.0.1",
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^8.0.0",
+    "@angular/core": "^8.0.0"
+  }
+}
