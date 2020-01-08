@@ -892,6 +892,13 @@
       "sourceRoot": "libs/gdk/src",
       "prefix": "gorilainvest",
       "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/gdk/tsconfig.lib.json",
+            "project": "libs/gdk/ng-package.json"
+          }
+        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
