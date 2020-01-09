@@ -9,6 +9,7 @@ export * from './dist/enhanced-header';
 export * from './dist/enhanced-title';
 export * from './dist/form-text';
 export * from './dist/icon';
+export * from './dist/letterhead';
 export * from './dist/loading';
 export * from './dist/page-header';
 export * from './dist/pipes';
