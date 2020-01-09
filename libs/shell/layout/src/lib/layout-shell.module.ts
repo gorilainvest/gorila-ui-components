@@ -21,6 +21,7 @@ import { ScrollContainerModule } from '@gorilainvest/ui-toolkit/scroll-container
 import { SectionTitleModule } from '@gorilainvest/ui-toolkit/section-title';
 import { SortHeaderModule } from '@gorilainvest/ui-toolkit/sort-header';
 import { TooltipModule } from '@gorilainvest/ui-toolkit/tooltip';
+import { LetterheadModule } from '@gorilainvest/ui-toolkit/letterhead';
 
 import { LayoutComponent } from './layout/layout.component';
 import { CardContainerComponent } from './ui/card-container/card-container.component';
@@ -33,6 +34,7 @@ import { ScrollContainerComponent } from './ui/scroll-container/scroll-container
 import { SectionTitleComponent } from './ui/section-title/section-title.component';
 import { SortHeaderComponent } from './ui/sort-header/sort-header.component';
 import { TooltipComponent } from './ui/tooltip/tooltip.component';
+import { LetterheadComponent } from './ui/letterhead/letterhead.component';
 
 @NgModule({
   imports: [
@@ -53,6 +55,7 @@ import { TooltipComponent } from './ui/tooltip/tooltip.component';
     EnhancedHeaderModule,
     EnhancedTitleModule,
     IconModule,
+    LetterheadModule,
     ScrollContainerModule,
     SectionTitleModule,
     PageHeaderModule,
@@ -109,6 +112,11 @@ import { TooltipComponent } from './ui/tooltip/tooltip.component';
         pathMatch: 'full',
         component: TooltipComponent
       },
+      {
+        path: 'letterhead',
+        pathMatch: 'full',
+        component: LetterheadComponent
+      },
       { path: '', pathMatch: 'full', component: LayoutComponent }
     ])
   ],
@@ -119,6 +127,7 @@ import { TooltipComponent } from './ui/tooltip/tooltip.component';
     EnhancedTitleComponent,
     IconComponent,
     LayoutComponent,
+    LetterheadComponent,
     PageHeaderComponent,
     ScrollContainerComponent,
     SectionTitleComponent,
