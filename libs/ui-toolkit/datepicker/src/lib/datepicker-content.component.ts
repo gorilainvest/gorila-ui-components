@@ -37,12 +37,12 @@ export class DatepickerContentComponent<D> extends MatDatepickerContent<D> imple
   @Input() public headerComponentRef: ComponentType<any> = CalendarHeaderComponent;
 
   /**
-   * The maximun range date to be selected.
+   * The maximum range date to be selected.
    */
   @Input() public maxDate: D;
 
   /**
-   * The minimun range date to be selected.
+   * The minimum range date to be selected.
    */
   @Input() public minDate: D;
 
