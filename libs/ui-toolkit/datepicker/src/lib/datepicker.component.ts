@@ -1,5 +1,5 @@
 import { ComponentPortal } from '@angular/cdk/portal';
-import { Component, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input } from '@angular/core';
 import { MatDatepicker } from '@angular/material/datepicker';
 import { take } from 'rxjs/operators';
 
@@ -21,6 +21,21 @@ export const SELECTOR = 'gor-datepicker';
   encapsulation: ViewEncapsulation.None
 })
 export class DatepickerComponent<D> extends MatDatepicker<D> {
+  /**
+   * The text to main button of datepicker
+   */
+  @Input() public applyText: string;
+
+  /**
+   * The maximum range date to be selected.
+   */
+  @Input() public maxDate: D;
+
+  /**
+   * The minimum range date to be selected.
+   */
+  @Input() public minDate: D;
+
   private callPrivateMember<R>(p: string, ...args: any[]): R {
     /* istanbul ignore else */
     if (p in this) {
@@ -43,8 +58,20 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
     this[p] = v;
   }
 
+  private cloneStartAt() {
+    if (!this.startAt) {
+      return this.startAt;
+    }
+
+    return typeof this.startAt['clone'] === 'function'
+      ? this.startAt['clone']()
+      : typeof this.startAt === 'object'
+      ? Object.assign({}, this.startAt)
+      : this.startAt;
+  }
+
   /** Open the calendar. */
-  open(): void {
+  public open(): void {
     const _document = this.getPrivateMember('_document');
 
     if (this.getPrivateMember('_opened', true) || this.disabled) {
@@ -89,7 +116,10 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
       .afterClosed()
       .subscribe(/* istanbul ignore next */ () => this.close());
     this.getPrivateMember('_dialogRef').componentInstance.datepicker = this;
-    this.getPrivateMember('_dialogRef').componentInstance.startAt = this.startAt;
+    this.getPrivateMember('_dialogRef').componentInstance.applyText = this.applyText || 'Apply';
+    this.getPrivateMember('_dialogRef').componentInstance.startAt = this.cloneStartAt();
+    this.getPrivateMember('_dialogRef').componentInstance.minDate = this.minDate;
+    this.getPrivateMember('_dialogRef').componentInstance.maxDate = this.maxDate;
     this.getPrivateMember('_dialogRef').componentInstance.startView = this.startView || 'month';
     this.callPrivateMember('_setColor');
   }
@@ -120,9 +150,12 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
         this._popupRef.attach(this.getPrivateMember('_calendarPortal'))
       );
       this.getPrivateMember('_popupComponentRef').instance.datepicker = this;
-      this.getPrivateMember('_popupComponentRef').instance.startAt = this.startAt;
+      this.getPrivateMember('_popupComponentRef').instance.startAt = this.cloneStartAt();
+      this.getPrivateMember('_popupComponentRef').instance.maxDate = this.maxDate;
+      this.getPrivateMember('_popupComponentRef').instance.minDate = this.minDate;
       /* istanbul ignore next */
       this.getPrivateMember('_popupComponentRef').instance.startView = this.startView || 'month';
+      this.getPrivateMember('_popupComponentRef').instance.applyText = this.applyText || 'Apply';
       this.callPrivateMember('_setColor');
 
       // Update the position once the calendar has rendered.
