@@ -58,11 +58,11 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
     this[p] = v;
   }
 
-  public cloneStartAt() {
+  private cloneStartAt() {
     if (!this.startAt) {
       return this.startAt;
     }
-    
+
     return typeof this.startAt['clone'] === 'function'
       ? this.startAt['clone']()
       : typeof this.startAt === 'object'
