@@ -1241,7 +1241,12 @@
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
             "tsConfig": "libs/ui-toolkit/enhanced-header/tsconfig.lib.json",
-            "project": "libs/ui-toolkit/enhanced-header/ng-package.json"
+            "project": "libs/ui-toolkit/enhanced-header/ng-package.json",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "libs/shared-styles"
+              ]
+            }
           }
         },
         "lint": {
@@ -1261,7 +1266,12 @@
           "options": {
             "main": "libs/ui-toolkit/enhanced-header/src/test.ts",
             "tsConfig": "libs/ui-toolkit/enhanced-header/tsconfig.spec.json",
-            "karmaConfig": "libs/ui-toolkit/enhanced-header/karma.conf.js"
+            "karmaConfig": "libs/ui-toolkit/enhanced-header/karma.conf.js",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "libs/shared-styles"
+              ]
+            }
           }
         }
       },
