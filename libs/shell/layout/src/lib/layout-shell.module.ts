@@ -13,6 +13,7 @@ import { RouterModule } from '@angular/router';
 import { GdkModule } from '@gorilainvest/gdk';
 import { CardContainerModule } from '@gorilainvest/ui-toolkit/card-container';
 import { CurrencyDisplayModule } from '@gorilainvest/ui-toolkit/currency-display';
+import { EnhancedHeaderModule } from '@gorilainvest/ui-toolkit/enhanced-header';
 import { EnhancedTitleModule } from '@gorilainvest/ui-toolkit/enhanced-title';
 import { IconModule } from '@gorilainvest/ui-toolkit/icon';
 import { PageHeaderModule } from '@gorilainvest/ui-toolkit/page-header';
@@ -24,6 +25,7 @@ import { TooltipModule } from '@gorilainvest/ui-toolkit/tooltip';
 import { LayoutComponent } from './layout/layout.component';
 import { CardContainerComponent } from './ui/card-container/card-container.component';
 import { CurrencyDisplayComponent } from './ui/currency-display/currency-display.component';
+import { EnhancedHeaderComponent } from './ui/enhanced-header/enhanced-header.component';
 import { EnhancedTitleComponent } from './ui/enhanced-title/enhanced-title.component';
 import { IconComponent } from './ui/icon/icon.component';
 import { PageHeaderComponent } from './ui/page-header/page-header.component';
@@ -48,6 +50,7 @@ import { TooltipComponent } from './ui/tooltip/tooltip.component';
     GdkModule,
     CardContainerModule,
     CurrencyDisplayModule,
+    EnhancedHeaderModule,
     EnhancedTitleModule,
     IconModule,
     ScrollContainerModule,
@@ -97,6 +100,11 @@ import { TooltipComponent } from './ui/tooltip/tooltip.component';
         component: SortHeaderComponent
       },
       {
+        path: 'enhanced-header',
+        pathMatch: 'full',
+        component: EnhancedHeaderComponent
+      },
+      {
         path: 'tooltip',
         pathMatch: 'full',
         component: TooltipComponent
@@ -107,6 +115,7 @@ import { TooltipComponent } from './ui/tooltip/tooltip.component';
   declarations: [
     CardContainerComponent,
     CurrencyDisplayComponent,
+    EnhancedHeaderComponent,
     EnhancedTitleComponent,
     IconComponent,
     LayoutComponent,

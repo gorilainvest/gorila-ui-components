@@ -1,0 +1,6 @@
+<gro-enhanced-title [title]="title" [highlight]="highlight" cssClass='align-center'></gro-enhanced-title>
+<div class='text' *ngIf="description">
+  {{description}}
+  <div class='secondTextBlock' *ngIf="description2">{{description2}}</div>
+  <gor-tooltip *ngIf="tooltipText" [tooltipText]="tooltipText" orientation='right'></gor-tooltip>
+</div>
