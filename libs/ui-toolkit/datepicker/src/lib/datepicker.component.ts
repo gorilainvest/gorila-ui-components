@@ -27,12 +27,12 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
   @Input() public applyText: string;
 
   /**
-   * The maximun range date to be selected.
+   * The maximum range date to be selected.
    */
   @Input() public maxDate: D;
 
   /**
-   * The minimun range date to be selected.
+   * The minimum range date to be selected.
    */
   @Input() public minDate: D;
 
