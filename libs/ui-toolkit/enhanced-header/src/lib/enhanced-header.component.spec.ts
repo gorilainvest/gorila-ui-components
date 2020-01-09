@@ -46,7 +46,9 @@ describe('EnhancedHeaderComponent', () => {
   });
 
   it('should have a tooltip when tooltipText is truthy', () => {
-    const tooltip = fixture.debugElement.query(By.css('tooltip')).nativeElement;
+    component.tooltipText = 'Tooltip text';
+    fixture.detectChanges();
+    const tooltip = fixture.debugElement.query(By.css('gor-tooltip')).nativeElement;
     expect(tooltip).toBeTruthy();
   });
 });
