@@ -20,6 +20,9 @@ export class LetterheadComponent {
   @Input() public footerLeftSub: string;
   @Input() public footerMiddleMain: string;
   @Input() public footerMiddleSub: string;
+  @Input() public landingPageUrl = '';
+  @Input() public printLogoUrl = '';
+  @Input() public displayLogoUrl = '';
 
   @Output() public iconClick = new EventEmitter<string>();
 
