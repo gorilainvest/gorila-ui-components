@@ -8,7 +8,7 @@
         <img *ngIf="!_isPrinting" class="icon" src="/assets/img/icon_{{iconName}}.svg" (click)="onSelectIcon(iconName)">
       </div>
     </div>
-    <div *ngIf="!!_rightMain" class="right main">
+    <div *ngIf="!!_rightMain || !!_rightMainWithLabel" class="right main">
         <span *ngIf="displayDefaultTemplate; else labelTemplate" >{{ _rightMain }}</span>
     </div>
     <div class="right sub">{{ rightSub }}</div>
