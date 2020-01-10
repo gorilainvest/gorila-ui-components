@@ -6,7 +6,9 @@
     [rightMain]="headerRightMain"
     [rightSub]="headerRightSub"
     (iconClick)="onIconClick($event)">
-    <ng-content select="[gorLogo]"></ng-content>
+    <div gorLogo>
+      <ng-content select="[gorLogo]"></ng-content>
+    </div>
     <ng-content select="[letterheadSubheader]" subheader></ng-content>
   </gor-letterhead-header>
   <ng-content select="[letterheadBody]"></ng-content>
