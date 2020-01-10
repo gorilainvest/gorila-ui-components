@@ -16,6 +16,9 @@ export class LetterheadComponent {
   public footerLeftSub = new FormControl('Footer sub');
   public footerMiddleMain = new FormControl('Footer middle main');
   public footerMiddleSub = new FormControl('Footer middle sub');
+  public landingPageUrl = new FormControl('gorila.com.br');
+  public displayLogoUrl = new FormControl('assets/logo/logo_gorila.svg');
+  public printLogoUrl = new FormControl('assets/logo/logo_gorila.svg');
 
   public onIconClick(event) {
     this.iconClicked = event;

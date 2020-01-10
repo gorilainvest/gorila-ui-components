@@ -37,6 +37,11 @@
         <input matInput placeholder="Footer Middle Sub" [formControl]="footerMiddleSub" />
       </mat-form-field>
     </mat-list-item>
+    <mat-list-item role="listitem">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Landing Page URL" [formControl]="landingPageUrl" />
+      </mat-form-field>
+    </mat-list-item>
   </mat-list>
 
   <mat-list role="list" class="outputs">
@@ -55,6 +60,9 @@
       [footerLeftSub]="footerLeftSub.value"
       [footerMiddleMain]="footerMiddleMain.value"
       [footerMiddleSub]="footerMiddleSub.value"
+      [landingPageUrl]="landingPageUrl.value"
+      [printLogoUrl]="printLogoUrl.value"
+      [displayLogoUrl]="displayLogoUrl.value"
       (iconClick)="onIconClick($event)">
       <div gorLogo style="width: 300px; height: 100px;">
         <img src="assets/logo/logo_gorila.svg">
@@ -72,13 +80,21 @@
     <span>&lt;gor-letterhead</span>
     <span>  [isPrinting]=&quot;{{isPrinting}}&quot;</span>
     <span>  [headerIconList]=&quot;['{{iconList[0].toString()}}', '{{iconList[1].toString()}}']&quot;</span>
-    <span>  [headerRightMain]=&quot;{{headerRightMain.value}}&quot;</span>
-    <span>  [headerRightSub]=&quot;{{headerRightSub.value}}&quot;</span>
-    <span>  [footerLeftMain]=&quot;{{footerLeftMain.value}}&quot;</span>
-    <span>  [footerLeftSub]=&quot;{{footerLeftSub.value}}&quot;</span>
-    <span>  [footerMiddleMain]=&quot;{{footerMiddleMain.value}}&quot;</span>
-    <span>  [footerMiddleSub]=&quot;{{footerMiddleSub.value}}&quot;</span>
+    <span>  [headerRightMain]=&quot;'{{headerRightMain.value}}'&quot;</span>
+    <span>  [headerRightSub]=&quot;'{{headerRightSub.value}}'&quot;</span>
+    <span>  [footerLeftMain]=&quot;'{{footerLeftMain.value}}'&quot;</span>
+    <span>  [footerLeftSub]=&quot;'{{footerLeftSub.value}}'&quot;</span>
+    <span>  [footerMiddleMain]=&quot;'{{footerMiddleMain.value}}'&quot;</span>
+    <span>  [footerMiddleSub]=&quot;'{{footerMiddleSub.value}}'&quot;</span>
+    <span>  [landingPageUrl]=&quot;'{{landingPageUrl.value}}'&quot;</span>
+    <span>  [printLogoUrl]=&quot;'{{printLogoUrl.value}}'&quot;</span>
+    <span>  [displayLogoUrl]=&quot;'{{displayLogoUrl.value}}'&quot;</span>
     <span>  (iconClick)=&quot;onIconClick($event)&quot;</span>
+    <span>  &lt;div gorLogo style="width:300px; height: 100px;"&gt;</span>
+    <span>    &lt;img src="assets/logo/logo_gorila.svg"&gt;</span>
+    <span>  &lt;/div&gt;</span>
+    <span>  &lt;section letterheadSubheader style="text-align: center;"&gt;This is the subheader section&lt;/section&gt;</span>
+    <span>  &lt;section letterheadBody style="text-align: center;"&gt;This is the body section&lt;/section&gt;</span>
     <span>&lt;/gor-letterhead&gt;</span>
     <span></span>
   </pre>
