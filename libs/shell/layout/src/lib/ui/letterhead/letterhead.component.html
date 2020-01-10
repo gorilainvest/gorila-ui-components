@@ -9,7 +9,12 @@
     </mat-list-item>
     <mat-list-item role="listitem">
       <mat-form-field class="full-width">
-        <input matInput placeholder="Main Header" [formControl]="headerRightMain" />
+        <input matInput placeholder="Header Label" [formControl]="headerLabel" />
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Header Main Text" [formControl]="headerMain" />
       </mat-form-field>
     </mat-list-item>
     <mat-list-item role="listitem">
@@ -54,7 +59,7 @@
     <gor-letterhead
       [isPrinting]="isPrinting"
       [headerIconList]="iconList"
-      [headerRightMain]="headerRightMain.value"
+      [headerRightMain]="headerLabel.value ? { label: headerLabel.value, value: headerMain.value } : headerMain.value"
       [headerRightSub]="headerRightSub.value"
       [footerLeftMain]="footerLeftMain.value"
       [footerLeftSub]="footerLeftSub.value"
@@ -80,7 +85,7 @@
     <span>&lt;gor-letterhead</span>
     <span>  [isPrinting]=&quot;{{isPrinting}}&quot;</span>
     <span>  [headerIconList]=&quot;['{{iconList[0].toString()}}', '{{iconList[1].toString()}}']&quot;</span>
-    <span>  [headerRightMain]=&quot;'{{headerRightMain.value}}'&quot;</span>
+    <span *ngIf="!headerLabel.value; else objectTemplate">  [headerRightMain]=&quot;'{{headerMain.value}}'&quot;</span>
     <span>  [headerRightSub]=&quot;'{{headerRightSub.value}}'&quot;</span>
     <span>  [footerLeftMain]=&quot;'{{footerLeftMain.value}}'&quot;</span>
     <span>  [footerLeftSub]=&quot;'{{footerLeftSub.value}}'&quot;</span>
@@ -97,5 +102,9 @@
     <span>  &lt;section letterheadBody style="text-align: center;"&gt;This is the body section&lt;/section&gt;</span>
     <span>&lt;/gor-letterhead&gt;</span>
     <span></span>
+
+    <ng-template #objectTemplate>
+      <span>  [headerRightMain]=&quot;&#123; label: '{{headerLabel.value}}', value: '{{headerMain.value}}' &#125;&quot;</span>
+    </ng-template>
   </pre>
 </gdk-card>

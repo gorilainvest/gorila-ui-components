@@ -10,7 +10,8 @@ export class LetterheadComponent {
   public iconList = ['print', 'Information'];
   public iconClicked = '';
   public isPrinting = false;
-  public headerRightMain = new FormControl('Main Header');
+  public headerLabel = new FormControl('Label: ');
+  public headerMain = new FormControl('Main Header');
   public headerRightSub = new FormControl('Right Subheader');
   public footerLeftMain = new FormControl('Footer main');
   public footerLeftSub = new FormControl('Footer sub');
