@@ -18,6 +18,7 @@ storiesOf('Letterhead', module)
       template: `
       <div style="width: 1200px; heigth: 300px; background-color: #fff; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);">
         <gor-letterhead
+          tabindex="0"
           [headerRightMain]="headerRightMain"
           [headerRightSub]="headerRightSub"
           [footerLeftMain]="footerLeftMain"
@@ -54,6 +55,7 @@ storiesOf('Letterhead', module)
       template: `
       <div style="width: 1200px; heigth: 300px; background-color: #fff; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);">
         <gor-letterhead
+          tabindex="0"
           [headerRightMain]="headerRightMain"
           [headerRightSub]="headerRightSub"
           [footerLeftMain]="footerLeftMain"
