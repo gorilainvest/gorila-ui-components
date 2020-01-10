@@ -1,5 +1,5 @@
 {
-  "name": "@gorilainvest/ui-toolkit-datepicker",
+  "name": "@gorilainvest/ui-toolkit/datepicker",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^8.0.0",
