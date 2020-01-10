@@ -64,7 +64,7 @@ storiesOf('Letterhead', module)
           [printLogoUrl]="'http://gorilainvest.com.br/assets/img/logo.svg'"
           [displayLogoUrl]="'http://gorilainvest.com.br/assets/img/logo.svg'">
           <div gorLogo style="width: 300px; height: 100px;">
-            <img src="http://gorilainvest.com.br/assets/img/logo.svg">
+            <img alt="Logo" src="http://gorilainvest.com.br/assets/img/logo.svg">
           </div>
           <section letterheadSubheader style="text-align: center;">This is the subheader section</section>
           <section letterheadBody style="text-align: center;">This is the body section</section>
