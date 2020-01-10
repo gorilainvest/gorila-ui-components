@@ -5,7 +5,7 @@
     </div>
     <div class="icon-wrapper">
       <div *ngFor="let iconName of iconList">
-        <img *ngIf="!_isPrinting" class="icon" src="/assets/img/icon_{{iconName}}.svg" (click)="onSelectIcon(iconName)">
+        <img alt="Header logo" *ngIf="!_isPrinting" class="icon" src="/assets/img/icon_{{iconName}}.svg" (click)="onSelectIcon(iconName)">
       </div>
     </div>
     <div *ngIf="!!_rightMain || !!_rightMainWithLabel" class="right main">
