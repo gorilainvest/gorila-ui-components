@@ -1,0 +1,24 @@
+{
+  "name": "@gorilainvest/gdk",
+  "version": "0.0.1",
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^8.0.0",
+    "@angular/core": "^8.0.0"
+  },
+  "main": "bundles/gorilainvest-gdk.umd.js",
+  "module": "fesm5/gorilainvest-gdk.js",
+  "es2015": "fesm2015/gorilainvest-gdk.js",
+  "esm5": "esm5/gorilainvest-gdk.js",
+  "esm2015": "esm2015/gorilainvest-gdk.js",
+  "fesm5": "fesm5/gorilainvest-gdk.js",
+  "fesm2015": "fesm2015/gorilainvest-gdk.js",
+  "typings": "gorilainvest-gdk.d.ts",
+  "metadata": "gorilainvest-gdk.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}
