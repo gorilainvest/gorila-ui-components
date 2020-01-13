@@ -260,6 +260,24 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 </li>
                             </li>
                             <li class="link">
+                                <a href="modules/EnhancedHeaderModule.html" data-type="entity-link">EnhancedHeaderModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-EnhancedHeaderModule-ec8512cba1b0b7e48dac1088b741c34c"' : 'data-target="#xs-components-links-module-EnhancedHeaderModule-ec8512cba1b0b7e48dac1088b741c34c"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-EnhancedHeaderModule-ec8512cba1b0b7e48dac1088b741c34c"' :
+                                            'id="xs-components-links-module-EnhancedHeaderModule-ec8512cba1b0b7e48dac1088b741c34c"' }>
+                                            <li class="link">
+                                                <a href="components/EnhancedHeaderComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">EnhancedHeaderComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
                                 <a href="modules/EnhancedTitleModule.html" data-type="entity-link">EnhancedTitleModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?

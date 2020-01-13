@@ -150,6 +150,8 @@ MIT
 @angular/router
 MIT
 
+@gorilainvest/gdk
+
 @gorilainvest/ui-toolkit
 MIT
 MIT License
@@ -175,8 +177,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-@gorilainvest/ui-toolkit-datepicker
-
 @gorilainvest/ui-toolkit/arrow-variation
 
 @gorilainvest/ui-toolkit/button
@@ -188,6 +188,10 @@ SOFTWARE.
 @gorilainvest/ui-toolkit/currency-display
 
 @gorilainvest/ui-toolkit/data-formatter
+
+@gorilainvest/ui-toolkit/datepicker
+
+@gorilainvest/ui-toolkit/enhanced-header
 
 @gorilainvest/ui-toolkit/enhanced-title
 
