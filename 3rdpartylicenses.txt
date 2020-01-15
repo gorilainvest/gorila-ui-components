@@ -199,6 +199,8 @@ SOFTWARE.
 
 @gorilainvest/ui-toolkit/icon
 
+@gorilainvest/ui-toolkit/letterhead
+
 @gorilainvest/ui-toolkit/loading
 
 @gorilainvest/ui-toolkit/page-header

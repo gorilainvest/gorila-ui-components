@@ -354,6 +354,32 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
+                                <a href="modules/LetterheadModule.html" data-type="entity-link">LetterheadModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-LetterheadModule-6695749a98bc4fbe985620c0ed43ca9c"' : 'data-target="#xs-components-links-module-LetterheadModule-6695749a98bc4fbe985620c0ed43ca9c"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-LetterheadModule-6695749a98bc4fbe985620c0ed43ca9c"' :
+                                            'id="xs-components-links-module-LetterheadModule-6695749a98bc4fbe985620c0ed43ca9c"' }>
+                                            <li class="link">
+                                                <a href="components/LetterheadComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">LetterheadComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/LetterheadFooterComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">LetterheadFooterComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/LetterheadHeaderComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">LetterheadHeaderComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
                                 <a href="modules/LoadingModule.html" data-type="entity-link">LoadingModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?

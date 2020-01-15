@@ -1,0 +1,1028 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Gorila UI Toolkit Documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Gorila UI Toolkit Documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>LetterheadHeaderComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>libs/ui-toolkit/letterhead/src/lib/header/header.component.ts</code>
+</p>
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.OnPush</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>gor-letterhead-header</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./header.component.scss,<br>./print.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./header.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#_isPrinting">_isPrinting</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#_rightMain">_rightMain</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#_rightMainWithLabel">_rightMainWithLabel</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#displayDefaultTemplate">displayDefaultTemplate</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onSelectIcon">onSelectIcon</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#headerId">headerId</a>
+                            </li>
+                            <li>
+                                <a href="#iconList">iconList</a>
+                            </li>
+                            <li>
+                                <a href="#isPrinting">isPrinting</a>
+                            </li>
+                            <li>
+                                <a href="#rightMain">rightMain</a>
+                            </li>
+                            <li>
+                                <a href="#rightSub">rightSub</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#iconClick">iconClick</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#isPrinting">isPrinting</a>
+                                </li>
+                                <li>
+                                    <a href="#rightMain">rightMain</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="headerId"></a>
+                        <b>headerId</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">libs/ui-toolkit/letterhead/src/lib/header/header.component.ts:49</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Identifies page in DOM.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="iconList"></a>
+                        <b>iconList</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">libs/ui-toolkit/letterhead/src/lib/header/header.component.ts:23</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>List of icons to be displayed above page header.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isPrinting"></a>
+                        <b>isPrinting</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">libs/ui-toolkit/letterhead/src/lib/header/header.component.ts:16</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Indicates whether to render the version for display
+  on screen or the version for printing.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="rightMain"></a>
+                        <b>rightMain</b>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">libs/ui-toolkit/letterhead/src/lib/header/header.component.ts:32</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The main header of the page. Can be a simple string or
+and object containing a label and a value.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="rightSub"></a>
+                        <b>rightSub</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">libs/ui-toolkit/letterhead/src/lib/header/header.component.ts:44</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The subheader of the page.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="iconClick"></a>
+                        <b>iconClick</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">libs/ui-toolkit/letterhead/src/lib/header/header.component.ts:54</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The name of the icon clicked.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSelectIcon"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            onSelectIcon
+                        </b>
+                        <a href="#onSelectIcon"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onSelectIcon(iconName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="60"
+                            class="link-to-prism">libs/ui-toolkit/letterhead/src/lib/header/header.component.ts:60</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Emits a string containing the name of the icon clicked.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>iconName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the name of the icon clicked</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_isPrinting"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            _isPrinting</b>
+                            <a href="#_isPrinting"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">libs/ui-toolkit/letterhead/src/lib/header/header.component.ts:11</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_rightMain"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            _rightMain</b>
+                            <a href="#_rightMain"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">libs/ui-toolkit/letterhead/src/lib/header/header.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_rightMainWithLabel"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            _rightMainWithLabel</b>
+                            <a href="#_rightMainWithLabel"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{ label: &#x27;&#x27;, value: &#x27;&#x27; }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">libs/ui-toolkit/letterhead/src/lib/header/header.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="displayDefaultTemplate"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            displayDefaultTemplate</b>
+                            <a href="#displayDefaultTemplate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">libs/ui-toolkit/letterhead/src/lib/header/header.component.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isPrinting"></a>
+                        <span class="name"><b>isPrinting</b><a href="#isPrinting"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>isPrinting(isPrinting: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">libs/ui-toolkit/letterhead/src/lib/header/header.component.ts:16</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Indicates whether to render the version for display
+  on screen or the version for printing.</p>
+</div>
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                        <td>Type</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>isPrinting</td>
+                                                    
+                                                            <td>
+                                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                                            </td>
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="rightMain"></a>
+                        <span class="name"><b>rightMain</b><a href="#rightMain"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>rightMain(value)</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">libs/ui-toolkit/letterhead/src/lib/header/header.component.ts:32</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>The main header of the page. Can be a simple string or
+and object containing a label and a value.</p>
+</div>
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>value</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ChangeDetectionStrategy, Component, EventEmitter, HostBinding, Input, Output } from &#x27;@angular/core&#x27;;
+
+@Component({
+  selector: &#x27;gor-letterhead-header&#x27;,
+  templateUrl: &#x27;./header.component.html&#x27;,
+  styleUrls: [&#x27;./header.component.scss&#x27;, &#x27;./print.scss&#x27;],
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class LetterheadHeaderComponent {
+
+  public _isPrinting: boolean;
+  /**
+   * Indicates whether to render the version for display
+   *  on screen or the version for printing.
+   */
+  @Input() set isPrinting(isPrinting: boolean) {
+    this._isPrinting &#x3D; isPrinting;
+  }
+
+  /**
+   * List of icons to be displayed above page header.
+   */
+  @Input() public iconList: string[] &#x3D; [];
+
+  public _rightMain &#x3D; &#x27;&#x27;;
+  public _rightMainWithLabel &#x3D; { label: &#x27;&#x27;, value: &#x27;&#x27; };
+  public displayDefaultTemplate &#x3D; true;
+  /**
+   * The main header of the page. Can be a simple string or
+   * and object containing a label and a value.
+   */
+  @Input() public set rightMain (value) {
+    this.displayDefaultTemplate &#x3D; typeof(value) &#x3D;&#x3D;&#x3D; &#x27;string&#x27;;
+    if (this.displayDefaultTemplate) {
+      this._rightMain &#x3D; value;
+    } else {
+      this._rightMainWithLabel &#x3D; value;
+    }
+  };
+
+  /**
+   * The subheader of the page.
+   */
+  @Input() public rightSub: string;
+
+  /**
+   * Identifies page in DOM.
+   */
+  @HostBinding(&#x27;id&#x27;) @Input() public headerId: string;
+
+  /**
+   * The name of the icon clicked.
+   */
+  @Output() public iconClick &#x3D; new EventEmitter&lt;string&gt;();
+
+  /**
+   * Emits a string containing the name of the icon clicked.
+   * @param iconName the name of the icon clicked
+   */
+  public onSelectIcon(iconName: string) {
+    this.iconClick.emit(iconName);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;section class&#x3D;&quot;letterhead-header&quot;&gt;
+  &lt;div class&#x3D;&quot;header-wrapper&quot;&gt;
+    &lt;div class&#x3D;&quot;logo-wrapper&quot;&gt;
+      &lt;ng-content select&#x3D;&quot;[gorLogo]&quot;&gt;&lt;/ng-content&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;icon-wrapper&quot;&gt;
+      &lt;div *ngFor&#x3D;&quot;let iconName of iconList&quot;&gt;
+        &lt;img alt&#x3D;&quot;Header logo&quot; *ngIf&#x3D;&quot;!_isPrinting&quot; class&#x3D;&quot;icon&quot; src&#x3D;&quot;/assets/img/icon_{{iconName}}.svg&quot; (click)&#x3D;&quot;onSelectIcon(iconName)&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div *ngIf&#x3D;&quot;!!_rightMain || !!_rightMainWithLabel&quot; class&#x3D;&quot;right main&quot;&gt;
+        &lt;span *ngIf&#x3D;&quot;displayDefaultTemplate; else labelTemplate&quot; &gt;{{ _rightMain }}&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;right sub&quot;&gt;{{ rightSub }}&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;subheader-wrapper&quot;&gt;
+    &lt;ng-content&gt;&lt;/ng-content&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;ng-template #labelTemplate&gt;
+  &lt;span id&#x3D;&quot;right-main-label&quot;&gt;{{ _rightMainWithLabel.label }}&lt;/span&gt;
+  &lt;span&gt;{{ _rightMainWithLabel.value }}&lt;/span&gt;
+&lt;/ng-template&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./header.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &#x27;_colors&#x27;;
+$page-padding: 60px;
+
+.letterhead-header {
+  .header-wrapper {
+    display: grid;
+    grid-template-areas: &#x27;logo icons&#x27;
+      &#x27;logo main&#x27;
+      &#x27;. sub&#x27;;
+    grid-template-rows: auto 38px 28px;
+    grid-template-columns: 1fr 1fr;
+
+    padding: 70px $page-padding 30px;
+  }
+
+  .subheader-wrapper:not(:empty) {
+    padding-bottom: 30px;
+  }
+
+  .logo-wrapper {
+    grid-area: logo;
+
+    align-self: flex-end;
+    width: 300px;
+    height: 100px;
+  }
+
+  .icon-wrapper {
+    display: flex;
+    grid-area: icons;
+
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .icon-wrapper .icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+
+    cursor: pointer;
+
+    opacity: 0.5;
+  }
+
+  .right {
+    color: $body;
+
+    font-family: Lato;
+    font-style: normal;
+    font-stretch: normal;
+
+    letter-spacing: normal;
+    text-align: right;
+  }
+
+  .right.main {
+    grid-area: main;
+
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 1.36;
+  }
+
+  #right-main-label {
+    color: $textSecondary;
+    font-weight: normal;
+  }
+
+  .right.sub {
+    grid-area: sub;
+
+    font-size: 18px;
+    line-height: 1.56;
+  }
+}
+</code></pre>
+                <p class="comment">
+                    <code>./print.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@media print {
+  .letterhead-header {
+    .icon-wrapper .icon {
+      display: none;
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><section class="letterhead-header">  <div class="header-wrapper">    <div class="logo-wrapper">      <ng-content select="[gorLogo]"></ng-content>    </div>    <div class="icon-wrapper">      <div *ngFor="let iconName of iconList">        <img alt="Header logo" *ngIf="!_isPrinting" class="icon" src="/assets/img/icon_{{iconName}}.svg" (click)="onSelectIcon(iconName)">      </div>    </div>    <div *ngIf="!!_rightMain || !!_rightMainWithLabel" class="right main">        <span *ngIf="displayDefaultTemplate; else labelTemplate" >{{ _rightMain }}</span>    </div>    <div class="right sub">{{ rightSub }}</div>  </div>  <div class="subheader-wrapper">    <ng-content></ng-content>  </div></section><ng-template #labelTemplate>  <span id="right-main-label">{{ _rightMainWithLabel.label }}</span>  <span>{{ _rightMainWithLabel.value }}</span></ng-template></div>'
+    var COMPONENTS = [{'name': 'ArrowVariationComponent', 'selector': 'gor-arrow-variation, mur-arrow-variation'},{'name': 'ButtonComponent', 'selector': 'gor-button, mag-button'},{'name': 'CalendarHeaderComponent', 'selector': 'gor-calendar-header'},{'name': 'CardContainerComponent', 'selector': 'gor-card-container, gro-card-container'},{'name': 'CountdownButtonComponent', 'selector': 'gor-countdown-button, mag-countdown-button'},{'name': 'CurrencyDisplayComponent', 'selector': 'gro-currency-display'},{'name': 'DataFormatterComponent', 'selector': 'gor-data-formatter'},{'name': 'DatepickerComponent', 'selector': 'SELECTOR'},{'name': 'DatepickerContentComponent', 'selector': 'SELECTOR'},{'name': 'DatepickerToggleComponent', 'selector': 'SELECTOR'},{'name': 'EnhancedHeaderComponent', 'selector': 'gor-enhanced-header'},{'name': 'EnhancedTitleComponent', 'selector': 'gor-enhanced-title, gro-enhanced-title'},{'name': 'FormTextComponent', 'selector': 'gor-form-text'},{'name': 'GdkCardComponent', 'selector': 'gdk-card'},{'name': 'GdkImportComponent', 'selector': 'gdk-import'},{'name': 'IconComponent', 'selector': 'gor-icon'},{'name': 'LetterheadComponent', 'selector': 'gor-letterhead'},{'name': 'LetterheadFooterComponent', 'selector': 'gor-letterhead-footer'},{'name': 'LetterheadHeaderComponent', 'selector': 'gor-letterhead-header'},{'name': 'LoadingComponent', 'selector': 'gor-loading, mur-loading'},{'name': 'PageHeaderComponent', 'selector': 'gor-page-header'},{'name': 'PopoverComponent', 'selector': 'gor-popover'},{'name': 'PopupConfirmComponent', 'selector': 'gor-popup-confirm, mag-popup-confirm'},{'name': 'ScrollContainerComponent', 'selector': 'gor-scroll-container'},{'name': 'SectionTitleComponent', 'selector': 'gor-section-title, gro-section-title'},{'name': 'SlideToggleComponent', 'selector': 'gor-slide-toggle, mur-slide-toggle'},{'name': 'SlideToggleGroupComponent', 'selector': 'gor-slide-toggle-group, mur-slide-toggle-group'},{'name': 'SortHeaderComponent', 'selector': '[gor-sort-header]'},{'name': 'TooltipComponent', 'selector': 'gor-tooltip'}];
+    var DIRECTIVES = [{'name': 'CancelableRouterLinkWithHrefDirective', 'selector': 'a[gorCancelableRouterLink]'},{'name': 'PageHeaderBottomDirective', 'selector': '[gorPageHeaderBottom]'},{'name': 'TippyDirective', 'selector': '[gorTippy]'},{'name': 'TruncateDirective', 'selector': '[gorTruncate]'}];
+    var ACTUAL_COMPONENT = {'name': 'LetterheadHeaderComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'LetterheadHeaderComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

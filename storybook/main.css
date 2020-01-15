@@ -307,6 +307,154 @@ enhanced-title {
   height: 15px;
   vertical-align: top;
 }
+:host {
+  display: block;
+  background: #fff;
+}
+
+.letterhead-footer {
+  display: grid;
+  grid-template-areas: "ltop mtop rtop" "lbot mbot rbot";
+  grid-template-columns: repeat(3, 1fr);
+  margin: 120px 60px 0;
+  padding-top: 30px;
+  padding-bottom: 92px;
+  color: #888e8e;
+  font-size: 14px;
+  line-height: 1.43;
+  border-top: solid 1px #979797;
+}
+.letterhead-footer > * {
+  align-self: flex-end;
+}
+.letterhead-footer .left {
+  justify-self: flex-start;
+  line-height: 1.45;
+}
+.letterhead-footer .left.main {
+  grid-area: ltop;
+  color: #2d2d2d;
+  font-weight: 800;
+  font-size: 22px;
+}
+.letterhead-footer .left.sub {
+  grid-area: lbot;
+  color: #888e8e;
+  font-size: 18px;
+}
+.letterhead-footer .middle {
+  justify-self: center;
+  text-align: center;
+}
+.letterhead-footer .middle.main {
+  grid-area: mtop;
+}
+.letterhead-footer .middle.sub {
+  grid-area: mbot;
+}
+.letterhead-footer .gorila-wrapper {
+  justify-self: flex-end;
+  text-align: right;
+}
+.letterhead-footer .gorila-wrapper.main {
+  grid-area: rtop;
+}
+.letterhead-footer .gorila-wrapper.sub {
+  grid-area: rbot;
+  font-size: 18px;
+  line-height: 1.56;
+}
+.letterhead-footer span {
+  margin-right: 7px;
+  vertical-align: bottom;
+}
+.letterhead-footer object,
+.letterhead-footer img {
+  width: 99px;
+  height: 32px;
+  object-fit: contain;
+}
+.letterhead-header .header-wrapper {
+  display: grid;
+  grid-template-areas: "logo icons" "logo main" ". sub";
+  grid-template-rows: auto 38px 28px;
+  grid-template-columns: 1fr 1fr;
+  padding: 70px 60px 30px;
+}
+.letterhead-header .subheader-wrapper:not(:empty) {
+  padding-bottom: 30px;
+}
+.letterhead-header .logo-wrapper {
+  grid-area: logo;
+  align-self: flex-end;
+  width: 300px;
+  height: 100px;
+}
+.letterhead-header .icon-wrapper {
+  display: flex;
+  grid-area: icons;
+  align-items: center;
+  justify-content: flex-end;
+}
+.letterhead-header .icon-wrapper .icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.letterhead-header .right {
+  color: #2d2d2d;
+  font-family: Lato;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: right;
+}
+.letterhead-header .right.main {
+  grid-area: main;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 1.36;
+}
+.letterhead-header #right-main-label {
+  color: #888e8e;
+  font-weight: normal;
+}
+.letterhead-header .right.sub {
+  grid-area: sub;
+  font-size: 18px;
+  line-height: 1.56;
+}
+@media print {
+  .letterhead-header .icon-wrapper .icon {
+    display: none;
+  }
+}
+.letterhead-page {
+  width: inherit;
+  height: inherit;
+  margin: inherit;
+  padding: 0 !important;
+}
+
+.no-box {
+  box-shadow: none !important;
+}
+
+:host.full-body,
+:host.full-body .letterhead-page {
+  display: flex;
+  flex-direction: column;
+  /* stylelint-disable selector-max-compound-selectors */
+  /* stylelint-enable selector-max-compound-selectors */
+}
+:host.full-body > ::ng-deep *:nth-child(2),
+:host.full-body .letterhead-page > ::ng-deep *:nth-child(2) {
+  display: flex !important;
+  flex: 1;
+  flex-direction: column;
+}
 /* You can add global styles to this file, and also import other style files */
 html,
 body {
