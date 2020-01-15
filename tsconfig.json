@@ -123,6 +123,10 @@
         "dist/enhanced-header",
         "libs/ui-toolkit/enhanced-header/src/index.ts"
       ],
+      "@gorilainvest/ui-toolkit/letterhead": [
+        "dist/letterhead",
+        "libs/ui-toolkit/letterhead/src/index.ts"
+      ],
       "@gorilainvest/ui-toolkit/tooltip": [
         "dist/tooltip",
         "libs/ui-toolkit/tooltip/src/index.ts"

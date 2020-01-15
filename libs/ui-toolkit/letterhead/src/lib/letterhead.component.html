@@ -1,0 +1,25 @@
+<main class="letterhead-page preview" [ngClass]="{'no-box': !!_isPrinting}">
+  <gor-letterhead-header
+    [isPrinting]="isPrinting"
+    [headerId]="headerId"
+    [iconList]="headerIconList"
+    [rightMain]="headerRightMain"
+    [rightSub]="headerRightSub"
+    (iconClick)="onIconClick($event)">
+    <div gorLogo>
+      <ng-content select="[gorLogo]"></ng-content>
+    </div>
+    <ng-content select="[letterheadSubheader]" subheader></ng-content>
+  </gor-letterhead-header>
+  <ng-content select="[letterheadBody]"></ng-content>
+  <gor-letterhead-footer
+    [isPrinting]="isPrinting"
+    [leftMain]="footerLeftMain"
+    [leftSub]="footerLeftSub"
+    [middleMain]="footerMiddleMain"
+    [middleSub]="footerMiddleSub"
+    [landingPageUrl]="landingPageUrl"
+    [printLogoUrl]="printLogoUrl"
+    [displayLogoUrl]="displayLogoUrl">
+  </gor-letterhead-footer>
+</main>

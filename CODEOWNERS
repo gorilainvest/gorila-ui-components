@@ -9,6 +9,7 @@ libs/ui/data-formatter @tigredonorte
 libs/ui/enhanced-header @oliveira-gust
 libs/ui/enhanced-title @tigredonorte
 libs/ui/icon @oliveira-gust
+libs/ui/letterhead @denisokawa @oliveira-gust
 libs/ui/loading @denisokawa
 libs/ui/page-header @guilhermejcgois @oliveira-gust
 libs/ui/popup-confirm @guilhermejcgois @oliveira-gust

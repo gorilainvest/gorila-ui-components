@@ -1,0 +1,24 @@
+.letterhead-page {
+  width: inherit;
+  height: inherit;
+  margin: inherit;
+  padding: 0 !important;
+}
+
+.no-box {
+  box-shadow: none !important;
+}
+
+:host.full-body,
+:host.full-body .letterhead-page {
+  display: flex;
+  flex-direction: column;
+  
+  /* stylelint-disable selector-max-compound-selectors */
+  > ::ng-deep *:nth-child(2) {
+    display: flex !important;
+    flex: 1;
+    flex-direction: column;
+  }
+  /* stylelint-enable selector-max-compound-selectors */
+}

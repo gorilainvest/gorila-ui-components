@@ -1,0 +1,24 @@
+<section class="letterhead-header">
+  <div class="header-wrapper">
+    <div class="logo-wrapper">
+      <ng-content select="[gorLogo]"></ng-content>
+    </div>
+    <div class="icon-wrapper">
+      <div *ngFor="let iconName of iconList">
+        <img alt="Header logo" *ngIf="!_isPrinting" class="icon" src="/assets/img/icon_{{iconName}}.svg" (click)="onSelectIcon(iconName)">
+      </div>
+    </div>
+    <div *ngIf="!!_rightMain || !!_rightMainWithLabel" class="right main">
+        <span *ngIf="displayDefaultTemplate; else labelTemplate" >{{ _rightMain }}</span>
+    </div>
+    <div class="right sub">{{ rightSub }}</div>
+  </div>
+  <div class="subheader-wrapper">
+    <ng-content></ng-content>
+  </div>
+</section>
+
+<ng-template #labelTemplate>
+  <span id="right-main-label">{{ _rightMainWithLabel.label }}</span>
+  <span>{{ _rightMainWithLabel.value }}</span>
+</ng-template>

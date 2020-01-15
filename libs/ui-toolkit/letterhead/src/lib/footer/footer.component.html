@@ -1,0 +1,11 @@
+<section class="letterhead-footer">
+  <div *ngIf="leftMain" class="left main">{{ leftMain }}</div>
+  <div *ngIf="leftSub" class="left sub">{{ leftSub }}</div>
+  <div *ngIf="middleMain" class="middle main">{{ middleMain }}</div>
+  <div *ngIf="middleSub" class="middle sub">{{ middleSub }}</div>
+  <div class="gorila-wrapper main">
+    <span>powered by</span>
+    <img [src]="logoUrl" alt="Footer logo" *ngIf="!!logoUrl">
+  </div>
+  <div class="gorila-wrapper sub">{{ landingPageUrl }}</div>
+</section>
