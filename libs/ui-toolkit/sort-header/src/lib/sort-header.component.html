@@ -19,21 +19,21 @@
        (@arrowPosition.done)="_disableViewStateAnimation = false">
     <ng-container *ngIf="arrowWhite; else nonWhiteTplt">
       <ng-container *ngIf="_arrowDirection=='asc'">
-        <gor-icon icon="arrow_up_white">
+        <gor-icon [width]="'10px'" [height]="'10px'" icon="arrow_up_white">
         </gor-icon>
       </ng-container>
       <ng-container *ngIf="_arrowDirection=='desc'">
-        <gor-icon icon="arrow_down_white">
+        <gor-icon [width]="'10px'" [height]="'10px'" icon="arrow_down_white">
         </gor-icon>
       </ng-container>
     </ng-container>
     <ng-template #nonWhiteTplt>
       <ng-container *ngIf="_arrowDirection=='asc'">
-        <gor-icon icon="arrow_up">
+        <gor-icon [width]="'10px'" [height]="'10px'" icon="arrow_up">
         </gor-icon>
       </ng-container>
       <ng-container *ngIf="_arrowDirection=='desc'">
-        <gor-icon icon="arrow_down">
+        <gor-icon [width]="'10px'" [height]="'10px'" icon="arrow_down_black">
         </gor-icon>
       </ng-container>
     </ng-template>

@@ -1,5 +1,6 @@
 // Get from Angular Material2 repository
 // https://github.com/angular/components/blob/master/src/material/sort/sort-header.scss
+@import "_colors";
 
 $mat-sort-header-arrow-margin: 6px;
 $mat-sort-header-arrow-container-size: 12px;
@@ -11,11 +12,19 @@ $mat-sort-header-arrow-hint-opacity: 0.38;
 .mat-sort-header-container {
   display: flex;
   align-items: center;
+  align-self: flex-end;
+  margin-bottom: 4px;
+
+  color: $text-gray;
 
   cursor: pointer;
 
   .mat-sort-header-disabled & {
     cursor: default;
+  }
+
+  &.mat-sort-header-sorted {
+    color: $body;
   }
 }
 
@@ -29,8 +38,15 @@ $mat-sort-header-arrow-hint-opacity: 0.38;
 
   padding: 0;
 
-  color: currentColor;
-  font: inherit;
+  color: inherit;
+  font-family: Lato;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1.4;
+  text-transform: uppercase;
+  text-align: left;
+
+  white-space: pre;
 
   background: 0 0;
 
@@ -73,7 +89,7 @@ $mat-sort-header-arrow-hint-opacity: 0.38;
 
 // Own style
 .mat-sort-header-arrow {
-  margin-bottom: 3px !important;
+  margin-bottom: 1px !important;
 
   &,
   [dir='rtl'] .mat-sort-header-position-before & {
