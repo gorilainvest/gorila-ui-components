@@ -3,7 +3,7 @@
 @import "_colors";
 
 $mat-sort-header-arrow-margin: 6px;
-$mat-sort-header-arrow-container-size: 12px;
+$mat-sort-header-arrow-container-size: 10px;
 $mat-sort-header-arrow-stem-size: 10px;
 $mat-sort-header-arrow-pointer-length: 6px;
 $mat-sort-header-arrow-thickness: 2px;
@@ -36,6 +36,8 @@ $mat-sort-header-arrow-hint-opacity: 0.38;
   display: flex;
   align-items: center;
 
+  height: fit-content;
+
   padding: 0;
 
   color: inherit;
@@ -50,9 +52,6 @@ $mat-sort-header-arrow-hint-opacity: 0.38;
 
   background: 0 0;
 
-  border: 0;
-  outline: 0;
-
   cursor: inherit;
 
   // The `outline: 0` from above works on all browsers, however Firefox also
@@ -61,6 +60,13 @@ $mat-sort-header-arrow-hint-opacity: 0.38;
   &::-moz-focus-inner {
     border: 0;
   }
+}
+
+.mat-sort-header-button,
+.mat-sort-header-button:hover {
+  border: 0;
+  outline: 0;
+  box-shadow: none !important;
 }
 
 .mat-sort-header-arrow {
@@ -89,7 +95,7 @@ $mat-sort-header-arrow-hint-opacity: 0.38;
 
 // Own style
 .mat-sort-header-arrow {
-  margin-bottom: 1px !important;
+  margin-bottom: 3px !important;
 
   &,
   [dir='rtl'] .mat-sort-header-position-before & {
