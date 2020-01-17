@@ -1123,7 +1123,12 @@
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
             "tsConfig": "libs/ui-toolkit/sort-header/tsconfig.lib.json",
-            "project": "libs/ui-toolkit/sort-header/ng-package.json"
+            "project": "libs/ui-toolkit/sort-header/ng-package.json",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "libs/shared-styles"
+              ]
+            }
           }
         },
         "lint": {
@@ -1143,7 +1148,12 @@
           "options": {
             "main": "libs/ui-toolkit/sort-header/src/test.ts",
             "tsConfig": "libs/ui-toolkit/sort-header/tsconfig.spec.json",
-            "karmaConfig": "libs/ui-toolkit/sort-header/karma.conf.js"
+            "karmaConfig": "libs/ui-toolkit/sort-header/karma.conf.js",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "libs/shared-styles"
+              ]
+            }
           }
         }
       },
@@ -1184,6 +1194,56 @@
             "main": "libs/ui-toolkit/datepicker/src/test.ts",
             "tsConfig": "libs/ui-toolkit/datepicker/tsconfig.spec.json",
             "karmaConfig": "libs/ui-toolkit/datepicker/karma.conf.js",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "libs/shared-styles"
+              ]
+            }
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "letterhead": {
+      "projectType": "library",
+      "root": "libs/ui-toolkit/letterhead",
+      "sourceRoot": "libs/ui-toolkit/letterhead/src",
+      "prefix": "gor",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/ui-toolkit/letterhead/tsconfig.lib.json",
+            "project": "libs/ui-toolkit/letterhead/ng-package.json",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "libs/shared-styles"
+              ]
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-toolkit/letterhead/tsconfig.lib.json",
+              "libs/ui-toolkit/letterhead/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/ui-toolkit/letterhead/src/test.ts",
+            "tsConfig": "libs/ui-toolkit/letterhead/tsconfig.spec.json",
+            "karmaConfig": "libs/ui-toolkit/letterhead/karma.conf.js",
             "stylePreprocessorOptions": {
               "includePaths": [
                 "libs/shared-styles"

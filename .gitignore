@@ -2,6 +2,7 @@
 
 # compiled output
 dist/*
+libs/gdk/dist/*
 !dist/index.js
 guides/assets/dep-graph.svg
 /documentation

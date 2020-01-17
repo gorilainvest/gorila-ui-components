@@ -1,0 +1,95 @@
+@import '_colors';
+$page-footer-height: 152px;
+$page-padding: 60px;
+
+:host {
+  display: block;
+
+  background: #fff;
+}
+
+.letterhead-footer {
+  display: grid;
+  grid-template-areas: 'ltop mtop rtop'
+    'lbot mbot rbot';
+  grid-template-columns: repeat(3, 1fr);
+  margin: 2*$page-padding $page-padding 0;
+  padding-top: 30px;
+  padding-bottom: $page-footer-height - 60px;
+
+  color: $text-gray;
+
+  font-size: 14px;
+  line-height: 1.43;
+
+  border-top: solid 1px #979797;
+
+  > * {
+    align-self: flex-end;
+  }
+
+  .left {
+    justify-self: flex-start;
+
+    line-height: 1.45;
+  }
+
+  .left.main {
+    grid-area: ltop;
+
+    color: $body;
+    font-weight: 800;
+    font-size: 22px;
+  }
+
+  .left.sub {
+    grid-area: lbot;
+
+    color: $text-gray;
+    font-size: 18px;
+  }
+
+  .middle {
+    justify-self: center;
+
+    text-align: center;
+  }
+
+  .middle.main {
+    grid-area: mtop;
+  }
+
+  .middle.sub {
+    grid-area: mbot;
+  }
+
+  .gorila-wrapper {
+    justify-self: flex-end;
+
+    text-align: right;
+  }
+
+  .gorila-wrapper.main {
+    grid-area: rtop;
+  }
+
+  .gorila-wrapper.sub {
+    grid-area: rbot;
+
+    font-size: 18px;
+    line-height: 1.56;
+  }
+
+  span {
+    margin-right: 7px;
+
+    vertical-align: bottom;
+  }
+
+  object,
+  img {
+    width: 99px;
+    height: 32px;
+    object-fit: contain;
+  }
+}

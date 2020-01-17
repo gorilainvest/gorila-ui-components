@@ -200,6 +200,15 @@
         "group:layout"
       ]
     },
+    "letterhead": {
+      "tags": [
+        "exportable",
+        "team:ape",
+        "scope:shared",
+        "scope:ui",
+        "group:layout"
+      ]
+    },
     "enhanced-header": {
       "tags": [
         "exportable",

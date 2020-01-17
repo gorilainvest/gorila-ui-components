@@ -24,7 +24,7 @@ subtitle="A header for tables"
         <ng-container *ngFor="let matColumnDataDef of matColumnDataDefs; let idx = index">
           <ng-container [matColumnDef]="matColumnDataDef.id">
             <mat-header-cell *matHeaderCellDef gor-sort-header [arrowWhite]="form.get('whiteArrow').value" [disabled]="form.get('disabled').value">
-              <span>{{ matColumnDataDef.headerText }}</span>
+              {{ matColumnDataDef.headerText }}
             </mat-header-cell>
             <mat-cell *matCellDef="let gorila">
               <span>{{ gorila[matColumnDataDef.id] }}</span>

@@ -1,10 +1,10 @@
-span {
+mat-cell span {
   width: 100px;
-  text-align: center;
+  text-align: left;
 }
 
 .dark {
-  background-color: #11c0c5;
+  background-color: #4cf4f8;
 
   mat-cell,
   mat-header-cell {

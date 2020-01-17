@@ -1,0 +1,110 @@
+<gdk-card
+  title="Letterhead"
+  subtitle="A letterhead page"
+  [withoutOutput]="false">
+  <mat-list role="list" class="inputs">
+    <mat-list-item role="listitem" class="activatedScrollEffect-config-container">
+      <mat-checkbox class="full-width" color="primary" [checked]="isPrinting" (change)="isPrinting = $event?.checked">Printing?
+      </mat-checkbox>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Header Label" [formControl]="headerLabel" />
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Header Main Text" [formControl]="headerMain" />
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Right Subheader" [formControl]="headerRightSub" />
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Footer Main" [formControl]="footerLeftMain" />
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Footer Sub" [formControl]="footerLeftSub" />
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Footer Middle Main" [formControl]="footerMiddleMain" />
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Footer Middle Sub" [formControl]="footerMiddleSub" />
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Landing Page URL" [formControl]="landingPageUrl" />
+      </mat-form-field>
+    </mat-list-item>
+  </mat-list>
+
+  <mat-list role="list" class="outputs">
+    <mat-list-item role="listitem">
+      Icon Clicked: {{iconClicked}}
+    </mat-list-item>
+  </mat-list>
+
+  <div class="widget" style="width: 100%; height: 252px; overflow-y: scroll;">
+    <gor-letterhead
+      [isPrinting]="isPrinting"
+      [headerIconList]="iconList"
+      [headerRightMain]="headerLabel.value ? { label: headerLabel.value, value: headerMain.value } : headerMain.value"
+      [headerRightSub]="headerRightSub.value"
+      [footerLeftMain]="footerLeftMain.value"
+      [footerLeftSub]="footerLeftSub.value"
+      [footerMiddleMain]="footerMiddleMain.value"
+      [footerMiddleSub]="footerMiddleSub.value"
+      [landingPageUrl]="landingPageUrl.value"
+      [printLogoUrl]="printLogoUrl.value"
+      [displayLogoUrl]="displayLogoUrl.value"
+      (iconClick)="onIconClick($event)">
+      <div gorLogo style="width: 300px; height: 100px;">
+        <img src="assets/logo/logo_gorila.svg">
+      </div>
+      <section letterheadSubheader style="text-align: center;">This is the subheader section</section>
+      <section letterheadBody style="text-align: center;">This is the body section</section>
+    </gor-letterhead>
+  </div>
+
+  <pre class="code">
+    <span>// module import</span>
+    <span>import &#123; LetterheadModule &#125; from '@gorilainvest/ui-toolkit/dist/letterhead';</span>
+    <span></span>
+    <span>// template.html</span>
+    <span>&lt;gor-letterhead</span>
+    <span>  [isPrinting]=&quot;{{isPrinting}}&quot;</span>
+    <span>  [headerIconList]=&quot;['{{iconList[0].toString()}}', '{{iconList[1].toString()}}']&quot;</span>
+    <span *ngIf="!headerLabel.value; else objectTemplate">  [headerRightMain]=&quot;'{{headerMain.value}}'&quot;</span>
+    <span>  [headerRightSub]=&quot;'{{headerRightSub.value}}'&quot;</span>
+    <span>  [footerLeftMain]=&quot;'{{footerLeftMain.value}}'&quot;</span>
+    <span>  [footerLeftSub]=&quot;'{{footerLeftSub.value}}'&quot;</span>
+    <span>  [footerMiddleMain]=&quot;'{{footerMiddleMain.value}}'&quot;</span>
+    <span>  [footerMiddleSub]=&quot;'{{footerMiddleSub.value}}'&quot;</span>
+    <span>  [landingPageUrl]=&quot;'{{landingPageUrl.value}}'&quot;</span>
+    <span>  [printLogoUrl]=&quot;'{{printLogoUrl.value}}'&quot;</span>
+    <span>  [displayLogoUrl]=&quot;'{{displayLogoUrl.value}}'&quot;</span>
+    <span>  (iconClick)=&quot;onIconClick($event)&quot;</span>
+    <span>  &lt;div gorLogo style="width:300px; height: 100px;"&gt;</span>
+    <span>    &lt;img src="assets/logo/logo_gorila.svg"&gt;</span>
+    <span>  &lt;/div&gt;</span>
+    <span>  &lt;section letterheadSubheader style="text-align: center;"&gt;This is the subheader section&lt;/section&gt;</span>
+    <span>  &lt;section letterheadBody style="text-align: center;"&gt;This is the body section&lt;/section&gt;</span>
+    <span>&lt;/gor-letterhead&gt;</span>
+    <span></span>
+
+    <ng-template #objectTemplate>
+      <span>  [headerRightMain]=&quot;&#123; label: '{{headerLabel.value}}', value: '{{headerMain.value}}' &#125;&quot;</span>
+    </ng-template>
+  </pre>
+</gdk-card>
