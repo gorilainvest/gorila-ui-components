@@ -24,6 +24,17 @@
         <mat-hint>The toggle color</mat-hint>
       </mat-form-field>
     </mat-list-item>
+    <mat-list-item role="listitem" class="color-config-container">
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          type="color"
+          placeholder="Unchecked Color"
+          [formControl]="uncheckedColorFormControl"
+        />
+        <mat-hint>The toggle unchecked color</mat-hint>
+      </mat-form-field>
+    </mat-list-item>
     <mat-list-item role="listitem" class="disabled-config-container">
       <mat-checkbox
         class="full-width"
@@ -50,6 +61,7 @@
     class="widget"
     [checked]="checked"
     [color]="colorFormControl.value"
+    [uncheckedColor]="uncheckedColorFormControl.value"
     [disabled]="disabled"
     [title]="titleFormControl.value"
     (toggleChange)="checked = $event"
@@ -64,6 +76,7 @@
 <span>&lt;gor-slide-toggle</span>
 <span>  [checked]=&quot;{{checked}}&quot;</span>
 <span>  [color]=&quot;{{colorFormControl.value}}&quot;</span>
+<span>  [uncheckedColor]=&quot;{{uncheckedColorFormControl.value}}&quot;</span>
 <span>  [disabled]=&quot;{{disabled}}&quot;</span>
 <span>  [title]=&quot;{{titleFormControl.value}}&quot;&gt;</span>
 <span>&lt;/gor-slide-toggle&gt;</span>

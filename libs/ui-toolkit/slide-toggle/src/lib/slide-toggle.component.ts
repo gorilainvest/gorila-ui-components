@@ -22,6 +22,12 @@ export class SlideToggleComponent {
   @Input() public color = '';
 
   /**
+   * The toggle color when unchecked.
+   */
+  @Input() public uncheckedColor = '';
+  
+  /**
+ 
    * The toggle disable state.
    */
   @Input() public disabled = false;

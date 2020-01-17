@@ -1,7 +1,7 @@
 <div class="toggle" [ngClass]="{ disabled: disabled }">
   <label class="switch">
     <input type="checkbox" [checked]="checked" (change)="changeChecked()" />
-    <span class="slider round" [style.backgroundColor]="checked ? color : ''">
+    <span class="slider round" [style.backgroundColor]="checked ? color : uncheckedColor">
       <span class="slider-before" [ngClass]="{ active: checked }"></span>
     </span>
   </label>

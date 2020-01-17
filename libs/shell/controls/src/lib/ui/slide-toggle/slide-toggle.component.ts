@@ -9,6 +9,7 @@ import { FormControl } from "@angular/forms";
 export class SlideToggleComponent implements OnInit {
   checked = true;
   colorFormControl = new FormControl("#08B25A");
+  uncheckedColorFormControl = new FormControl("#000000")
   disabled = false;
   titleFormControl = new FormControl("click me");
 
