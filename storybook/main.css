@@ -455,6 +455,81 @@ enhanced-title {
   flex: 1;
   flex-direction: column;
 }
+
+.mat-sort-header-container {
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+  margin-bottom: 4px;
+  color: #888e8e;
+  cursor: pointer;
+}
+.mat-sort-header-disabled .mat-sort-header-container {
+  cursor: default;
+}
+.mat-sort-header-container.mat-sort-header-sorted {
+  color: #2d2d2d;
+}
+
+.mat-sort-header-position-before {
+  flex-direction: row-reverse;
+}
+
+.mat-sort-header-button {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  padding: 0;
+  color: inherit;
+  font-family: Lato;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1.4;
+  text-transform: uppercase;
+  text-align: left;
+  white-space: pre;
+  background: 0 0;
+  cursor: inherit;
+}
+.mat-sort-header-button::-moz-focus-inner {
+  border: 0;
+}
+
+.mat-sort-header-button,
+.mat-sort-header-button:hover {
+  border: 0;
+  outline: 0;
+  box-shadow: none !important;
+}
+
+.mat-sort-header-arrow {
+  position: relative;
+  display: flex;
+  width: 10px;
+  min-width: 10px;
+  height: 10px;
+  opacity: 0;
+}
+.mat-sort-header-arrow, [dir=rtl] .mat-sort-header-position-before .mat-sort-header-arrow {
+  margin: 0 0 0 6px;
+}
+.mat-sort-header-position-before .mat-sort-header-arrow, [dir=rtl] .mat-sort-header-arrow {
+  margin: 0 6px 0 0;
+}
+
+.mat-sort-header-arrow {
+  margin-bottom: 3px !important;
+}
+.mat-sort-header-arrow, [dir=rtl] .mat-sort-header-position-before .mat-sort-header-arrow {
+  margin: 0;
+}
+.mat-sort-header-position-before .mat-sort-header-arrow, [dir=rtl] .mat-sort-header-arrow {
+  margin: 0;
+}
+
+.mat-sort-header-container {
+  align-items: flex-end;
+}
 /* You can add global styles to this file, and also import other style files */
 html,
 body {
