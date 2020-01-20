@@ -15,16 +15,24 @@ $mat-sort-header-arrow-hint-opacity: 0.38;
   align-self: flex-end;
   margin-bottom: 4px;
 
-  color: $text-gray;
-
   cursor: pointer;
 
   .mat-sort-header-disabled & {
     cursor: default;
   }
 
+  color: $text-gray;
+
   &.mat-sort-header-sorted {
     color: $body;
+  }
+
+  &.dark {
+    color: map-get($neutral-colors, 'ligher');
+  }
+
+  &.dark.mat-sort-header-sorted {
+    color: map-get($neutral-colors, 'lightest');
   }
 }
 

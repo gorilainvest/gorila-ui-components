@@ -1,10 +1,12 @@
+@import "_colors";
+
 mat-cell span {
   width: 100px;
   text-align: left;
 }
 
 .dark {
-  background-color: #4cf4f8;
+  background-color: $textSecondary;
 
   mat-cell,
   mat-header-cell {
