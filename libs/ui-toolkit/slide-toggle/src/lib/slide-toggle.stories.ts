@@ -31,7 +31,7 @@ storiesOf('slide-toggle', module)
         {
           cod: '3',
           checked: false,
-          title: 'UNCHEKED COLOR',
+          title: 'UNCHECKED COLOR',
           color: '',
           uncheckedColor: '#456888'
         }
@@ -40,14 +40,12 @@ storiesOf('slide-toggle', module)
       const labels = ['title'];
 
       return {
-
-      template: `
-          <gor-slide-toggle-group
-              [data]='${JSON.stringify(data)}'
-              [labels]='${JSON.stringify(labels)}'
-          >
-          </gor-slide-toggle-group>
-    `
+        template:
+          `<gor-slide-toggle-group
+            [data]='${JSON.stringify(data)}'
+            [labels]='${JSON.stringify(labels)}'>
+          </gor-slide-toggle-group>`
+        
       }
     }
   )
@@ -56,20 +54,20 @@ storiesOf('slide-toggle', module)
     'editable', 
     () => ({
       props: {
-          cod: text('cod','1'),
-          checked: boolean('checked', true),
-          title: text('title', 'SLIDE-TOGGLE'),
-          color: text('color', '#10c0c6'),
-          uncheckedColor: text('uncheckedColor', '#456888'),
+        cod: text('cod','1'),
+        checked: boolean('checked', true),
+        title: text('title', 'SLIDE-TOGGLE'),
+        color: text('color', '#10c0c6'),
+        uncheckedColor: text('uncheckedColor', '#456888'),
       },
-      template: `
-          <gor-slide-toggle
+      template:
+        `<gor-slide-toggle
           [id]='cod'
           [checked]='checked'
           [color]='color'
           [uncheckedColor]='uncheckedColor'
           [title]='title'>
-          </gor-slide-toggle>
-            `
+          </gor-slide-toggle>`
+          
       })
     );
