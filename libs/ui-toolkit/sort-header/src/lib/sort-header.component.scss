@@ -28,11 +28,11 @@ $mat-sort-header-arrow-hint-opacity: 0.38;
   }
 
   &.dark {
-    color: rgb(240, 240, 240);
+    color: $ligher;
   }
 
   &.dark.mat-sort-header-sorted {
-    color: rgb(250, 250, 250);
+    color: $lightest;
   }
 }
 
