@@ -45,11 +45,9 @@ storiesOf('slide-toggle', module)
             [data]='${JSON.stringify(data)}'
             [labels]='${JSON.stringify(labels)}'>
           </gor-slide-toggle-group>`
-        
       }
     }
   )
-
 .add(
     'editable', 
     () => ({
@@ -68,6 +66,5 @@ storiesOf('slide-toggle', module)
           [uncheckedColor]='uncheckedColor'
           [title]='title'>
           </gor-slide-toggle>`
-          
       })
     );

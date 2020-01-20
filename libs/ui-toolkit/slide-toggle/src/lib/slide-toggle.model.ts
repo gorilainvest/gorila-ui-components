@@ -24,9 +24,7 @@ export interface ToggleData {
   color?: string;
 
   /**
-
    * The custom color for the toggle when unchecked.
-
    * @Optional
    */
   uncheckedColor?: string;
