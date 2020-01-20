@@ -461,14 +461,20 @@ enhanced-title {
   align-items: center;
   align-self: flex-end;
   margin-bottom: 4px;
-  color: #888e8e;
   cursor: pointer;
+  color: #888e8e;
 }
 .mat-sort-header-disabled .mat-sort-header-container {
   cursor: default;
 }
 .mat-sort-header-container.mat-sort-header-sorted {
   color: #2d2d2d;
+}
+.mat-sort-header-container.dark {
+  color: #f0f0f0;
+}
+.mat-sort-header-container.dark.mat-sort-header-sorted {
+  color: #fff;
 }
 
 .mat-sort-header-position-before {
