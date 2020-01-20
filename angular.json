@@ -1204,7 +1204,7 @@
       },
       "schematics": {
         "@nrwl/angular:component": {
-          "style": "scss"
+          "styleext": "scss"
         }
       }
     },
