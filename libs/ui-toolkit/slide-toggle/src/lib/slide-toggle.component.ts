@@ -27,17 +27,14 @@ export class SlideToggleComponent {
   @Input() public uncheckedColor = '';
   
   /**
- 
    * The toggle disable state.
    */
   @Input() public disabled = false;
-
 
   /**
    * The toggle identifier.
    */
   @Input() public id: string;
-
 
   /**
    * The toggle text.
@@ -48,7 +45,6 @@ export class SlideToggleComponent {
    * Event indicanting the check state change. Usually when the user click it.
    */
   @Output() public toggleChange: EventEmitter<boolean> = new EventEmitter<boolean>();
-
 
   /**
    * public changeChecked - called when the toggle button is clicked

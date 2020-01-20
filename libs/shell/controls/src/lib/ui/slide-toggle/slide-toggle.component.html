@@ -10,8 +10,8 @@
         color="primary"
         [checked]="checked"
         (change)="checked = $event?.checked"
-        >Check me!</mat-checkbox
-      >
+        >Check me!
+      </mat-checkbox>
     </mat-list-item>
     <mat-list-item role="listitem" class="color-config-container">
       <mat-form-field class="full-width">
@@ -19,8 +19,7 @@
           matInput
           type="color"
           placeholder="Color"
-          [formControl]="colorFormControl"
-        />
+          [formControl]="colorFormControl"/>
         <mat-hint>The toggle color</mat-hint>
       </mat-form-field>
     </mat-list-item>
@@ -30,8 +29,7 @@
           matInput
           type="color"
           placeholder="Unchecked Color"
-          [formControl]="uncheckedColorFormControl"
-        />
+          [formControl]="uncheckedColorFormControl"/>
         <mat-hint>The toggle unchecked color</mat-hint>
       </mat-form-field>
     </mat-list-item>
@@ -41,8 +39,8 @@
         color="primary"
         [checked]="disabled"
         (change)="disabled = $event?.checked"
-        >Disable me!</mat-checkbox
-      >
+        >Disable me!
+      </mat-checkbox>
     </mat-list-item>
     <mat-list-item role="listitem" class="title-config-container">
       <mat-form-field class="full-width">
@@ -50,8 +48,7 @@
           matInput
           placeholder="Title"
           [formControl]="titleFormControl"
-          maxlength="20"
-        />
+          maxlength="20"/>
         <mat-hint>The toggle title</mat-hint>
       </mat-form-field>
     </mat-list-item>
@@ -64,8 +61,7 @@
     [uncheckedColor]="uncheckedColorFormControl.value"
     [disabled]="disabled"
     [title]="titleFormControl.value"
-    (toggleChange)="checked = $event"
-  >
+    (toggleChange)="checked = $event">
   </gor-slide-toggle>
 
   <pre class="code">
