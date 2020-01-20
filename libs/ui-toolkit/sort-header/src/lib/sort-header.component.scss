@@ -28,11 +28,11 @@ $mat-sort-header-arrow-hint-opacity: 0.38;
   }
 
   &.dark {
-    color: $ligher;
+    color: map-get($neutral-colors, 'ligher');
   }
 
   &.dark.mat-sort-header-sorted {
-    color: $lightest;
+    color: map-get($neutral-colors, 'lightest');
   }
 }
 
