@@ -4,7 +4,7 @@ import { SlideToggleGroupComponent } from './slide-toggle-group.component';
 import { ToggleData } from './slide-toggle.model';
 import { text, withKnobs, boolean } from '@storybook/addon-knobs';
 
-storiesOf('slide-toggle', module)
+storiesOf('SlideToggle', module)
   .addDecorator(
     moduleMetadata({
         declarations: [SlideToggleComponent, SlideToggleGroupComponent]
@@ -17,7 +17,7 @@ storiesOf('slide-toggle', module)
         const data: Array<ToggleData> = [{
           cod: '1',
           checked: true,
-          title: 'ACTIVATE COLORS',
+          title: 'ACTIVATE COLOR',
           color: '#10c0c6',
           uncheckedColor: ''
         },
