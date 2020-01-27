@@ -218,6 +218,14 @@
         "group:layout"
       ]
     },
+    "datepicker": {
+      "tags": [
+        "team:ape",
+        "exportable",
+        "scope:ui",
+        "group:controls"
+      ]
+    },
     "tooltip": {
       "tags": [
         "exportable",
@@ -225,14 +233,6 @@
         "scope:shared",
         "scope:ui",
         "group:layout"
-      ]
-    },
-    "datepicker": {
-      "tags": [
-        "team:ape",
-        "exportable",
-        "scope:ui",
-        "group:controls"
       ]
     }
   }

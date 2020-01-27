@@ -27,6 +27,8 @@ $body: #2d2d2d;
 $text-gray: $textSecondary;
 $background-default: $backgroundDefault;
 
+$neutral-colors: ( darkest: #000, darker: #2d2d2d, dark: #555b5b, normal: #888e8e, light: #d6d4d5, ligher: #f0f0f0, lightest: #fff);
+
 // generate in http://mcg.mbitson.com/ with #11c0c5
 $mat-gorila-primary: (
   50 : #e2f7f8,
