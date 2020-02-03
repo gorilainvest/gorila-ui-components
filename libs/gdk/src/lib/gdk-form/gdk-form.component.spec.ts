@@ -8,9 +8,8 @@ describe('GdkFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GdkFormComponent ]
-    })
-    .compileComponents();
+      declarations: [GdkFormComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

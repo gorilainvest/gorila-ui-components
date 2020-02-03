@@ -7,7 +7,6 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./gdk-form.component.scss']
 })
 export class GdkFormComponent {
-
   public form: FormGroup;
   public model_: any[] = [];
   public displayModel: any[] = [];
@@ -36,7 +35,7 @@ export class GdkFormComponent {
   private initForm(formData: any[]) {
     const form = {};
     formData.forEach(element => {
-      form[element.controlName] = new FormControl(element.value, element.validadors || [])
+      form[element.controlName] = new FormControl(element.value, element.validadors || []);
     });
     return new FormGroup(form);
   }

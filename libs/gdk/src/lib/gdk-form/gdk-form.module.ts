@@ -25,4 +25,4 @@ import { GdkFormComponent } from './gdk-form.component';
     GdkJsonInputModule
   ]
 })
-export class GdkFormModule { }
+export class GdkFormModule {}
