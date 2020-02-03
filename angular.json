@@ -1078,6 +1078,46 @@
         }
       }
     },
+    "info-box": {
+      "projectType": "library",
+      "root": "libs/ui-toolkit/info-box",
+      "sourceRoot": "libs/ui-toolkit/info-box/src",
+      "prefix": "gor",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/ui-toolkit/info-box/tsconfig.lib.json",
+            "project": "libs/ui-toolkit/info-box/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-toolkit/info-box/tsconfig.lib.json",
+              "libs/ui-toolkit/info-box/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/ui-toolkit/info-box/src/test.ts",
+            "tsConfig": "libs/ui-toolkit/info-box/tsconfig.spec.json",
+            "karmaConfig": "libs/ui-toolkit/info-box/karma.conf.js"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
     "form-text": {
       "projectType": "library",
       "root": "libs/ui-toolkit/form-text",

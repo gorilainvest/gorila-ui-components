@@ -51,6 +51,10 @@
         "dist/data-formatter",
         "libs/ui-toolkit/data-formatter/src/index.ts"
       ],
+      "@gorilainvest/ui-toolkit/info-box": [
+        "dist/info-box",
+        "libs/ui-toolkit/info-box/src/index.ts"
+      ],
       "@gorilainvest/ui-toolkit/loading": [
         "dist/loading",
         "libs/ui-toolkit/loading/src/index.ts"

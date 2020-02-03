@@ -1,0 +1,18 @@
+<gdk-card
+  title="Arrow Variation"
+  subtitle="Triangle arrow for positive negative and zero variation"
+  [withoutOutput]="true"
+>
+  <mat-list role="list" class="inputs">
+  </mat-list>
+
+  <div class="widget">
+    <gor-info-box [infoList]="form.get('infoList').value"></gor-info-box>
+  </div>
+
+  <pre class="code">
+    <gdk-import class="code" moduleName="currency-display" [form]="form" prefix='gro'></gdk-import>
+  </pre>
+</gdk-card>
+
+

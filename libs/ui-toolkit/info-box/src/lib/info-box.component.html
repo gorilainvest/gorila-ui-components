@@ -1,0 +1,25 @@
+<div class="info-box-container" [ngClass]="_class">
+  <ng-container *ngFor="let info of _infoList">
+    <div class="info-div">
+      <div *ngIf="info.title" class="info-title">{{info.title}}</div>
+      <div *ngIf="info.value" class="info-value">
+        <mur-arrow-variation *ngIf="!!info.arrow" size="lg" [value]="info.value" class="info-arrow"></mur-arrow-variation>
+        <gro-currency-display [ngClass]="{'report-smaller': !!info.smallerValue}"
+        [value]="info.value" [currencyCode]="'BRL'"
+        [symbolDisplay]="'symbol'" [digitInfo]="'1.2-2'"
+        [currencyClass]="'currency'" [hideNegative]="!!info.arrow"
+        ></gro-currency-display>
+      </div>
+      <div *ngIf="info.volatility && info.sharpe" class="info-vol-sharpe">
+        {{info.volatility|percent:'1.2-2'}}<div id="vol-sharpe-bar"></div>{{info.sharpe|number:'1.2-2'}}
+      </div>
+      <div *ngIf="info.dateValue" class="info-date">{{info.dateValue}}</div>
+      <div *ngIf="info.longDateValue" class="info-long-date">
+        <span>{{info.longDateValue.begin}}</span>
+        <span id="date-join">{{info.longDateValue.dateJoin}}</span><br>
+        <span>{{info.longDateValue.end}}</span>
+      </div>
+      <div *ngIf="info.subtitle" class="info-subtitle">{{info.subtitle}}</div>
+    </div>
+  </ng-container>
+</div>

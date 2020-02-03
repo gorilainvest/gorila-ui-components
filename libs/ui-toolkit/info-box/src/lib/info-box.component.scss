@@ -1,0 +1,108 @@
+$textSecondary: #888e8e;
+$body: #2d2d2d;
+
+:host {
+  display: block;
+}
+
+.info-box-container {
+
+  height: 100%;
+
+  .info-div {
+    position: relative;
+    top: 25px;
+
+    font-weight: normal;
+    font-family: Lato;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: center;
+  }
+
+  /* stylelint-disable selector-max-compound-selectors */
+  /* stylelint-disable selector-no-qualifying-type */
+  .info-div .info-value gro-currency-display ::ng-deep div span.currency-text-symbol {
+    padding-right: 5px;
+
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .info-div .info-value gro-currency-display.report-smaller ::ng-deep div span.currency-text-symbol {
+    font-weight: normal;
+    font-size: 14px;
+  }
+
+  .info-div .info-value gro-currency-display.report-smaller ::ng-deep div span.currency-text-value {
+    font-size: 22px;
+  }
+  /* stylelint-enable selector-no-qualifying-type */
+  /* stylelint-enable selector-max-compound-selectors */
+
+  #vol-sharpe-bar {
+    margin-right: 10px;
+    margin-left: 11px;
+
+    border-right: 1px dashed #000;
+  }
+
+  .info-div .info-date,
+  .info-div .info-subtitle {
+    position: relative;
+    top: -15px;
+  }
+
+  .info-div .info-long-date {
+    position: relative;
+    top: -10px;
+
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 1.45;
+  }
+
+  #date-join {
+    font-weight: normal;
+  }
+
+  .info-div .info-title,
+  .info-div .info-subtitle {
+    color: $textSecondary;
+    font-size: 18px;
+    line-height: 1.56;
+  }
+
+  .info-div .info-date,
+  .info-div .info-value,
+  .info-div .info-vol-sharpe {
+    display: inline-flex;
+
+    color: $body;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 1.36;
+  }
+}
+
+.info-box-container.multi-info {
+  display: flex;
+  justify-content: space-between;
+
+  margin-right: 50px;
+  margin-left: 50px;
+
+  transform: translate(0, -10%);
+
+  .info-value {
+    position: relative;
+    top: -5px;
+  }
+}
+
+.info-arrow {
+  align-self: flex-end;
+  padding-bottom: 4px;
+}
