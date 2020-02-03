@@ -1,0 +1,27 @@
+<form [formGroup]="form">
+  <ng-container *ngFor="let field of displayModel">
+    <mat-list-item>
+      <mat-form-field class="full-width">
+        <mat-label>{{ field.title }}</mat-label>
+
+        <div [ngSwitch]="field.type">
+          <mat-select [formControlName]="field.controlName" *ngSwitchCase="'options'">
+            <mat-option
+              *ngFor="let item of field.optionList"
+              [value]="item.key"
+            >{{ item.title }}</mat-option>
+          </mat-select>
+          <input *ngSwitchCase="'input'"
+          matInput
+          [formControlName]="field.controlName"
+          [type]="field.inputType"
+          />
+          <gdk-json-input matInput [formControlName]="field.controlName" *ngSwitchCase="'json'"></gdk-json-input>
+        </div>
+
+        <mat-hint>{{ field.description }}</mat-hint>
+      </mat-form-field>
+
+    </mat-list-item>
+  </ng-container>
+</form>

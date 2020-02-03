@@ -9,6 +9,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
 
 import { GdkCardComponent } from './gdk-card/gdk-card.component';
+import { GdkFormComponent } from './gdk-form/gdk-form.component';
+import { GdkFormModule } from './gdk-form/gdk-form.module';
 import { GdkImportComponent } from './gdk-import/gdk-import.component';
 import { GdkJsonInputComponent } from './gdk-json-input/gdk-json-input.component';
 import { GdkJsonInputModule } from './gdk-json-input/gdk-json-input.module';
@@ -23,9 +25,10 @@ import { GdkJsonInputModule } from './gdk-json-input/gdk-json-input.module';
     MatInputModule,
     MatListModule,
     MatSelectModule,
-    GdkJsonInputModule
+    GdkJsonInputModule,
+    GdkFormModule
   ],
   declarations: [GdkCardComponent, GdkImportComponent],
-  exports: [GdkCardComponent, GdkImportComponent, GdkJsonInputComponent]
+  exports: [GdkCardComponent, GdkImportComponent, GdkJsonInputComponent, GdkFormComponent]
 })
 export class GdkModule {}
