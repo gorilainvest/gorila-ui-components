@@ -1,5 +1,5 @@
-import { Component, forwardRef, OnDestroy, Output } from '@angular/core';
-import { FormControl, NG_VALIDATORS, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Component, forwardRef, OnDestroy, Output, OnChanges } from '@angular/core';
+import { FormControl, NG_VALIDATORS, NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 import { MatFormFieldControl } from '@angular/material/form-field';
 import { EventEmitter } from 'events';
 import { Subject } from 'rxjs';
@@ -14,7 +14,12 @@ import { Subject } from 'rxjs';
     { provide: MatFormFieldControl, useExisting: GdkJsonInputComponent }
   ]
 })
-export class GdkJsonInputComponent extends MatFormFieldControl<any> implements OnDestroy {
+export class GdkJsonInputComponent extends MatFormFieldControl<any> implements ControlValueAccessor, OnDestroy {
+
+  /**
+   * It returns the jsonString of json data
+   * <gdk-json-input (valueChanged)="data=$event"></gdk-json-input>
+   */
   @Output() valueChanged = new EventEmitter();
   public jsonString: string;
   public stateChanges = new Subject<void>();
@@ -49,12 +54,17 @@ export class GdkJsonInputComponent extends MatFormFieldControl<any> implements O
   public onChange(event) {
     const newValue = event.target.value;
     try {
-      this.data = JSON.parse(newValue);
+      if (this.jsonString === newValue) {
+        return;
+      }
+      this.jsonString = newValue;
+      const data = JSON.parse(newValue);
+      this.data = data;
       this.parseError = false;
+      this.propagateChange(this.data);
     } catch (ex) {
       this.parseError = true;
     }
-    this.propagateChange(this.data);
   }
 
   public propagateChange = (_: any) => {};
