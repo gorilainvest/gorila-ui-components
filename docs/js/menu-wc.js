@@ -314,16 +314,34 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
-                                <a href="modules/GdkModule.html" data-type="entity-link">GdkModule</a>
+                                <a href="modules/GdkJsonInputModule.html" data-type="entity-link">GdkJsonInputModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-GdkModule-64e323fb110e71bee7cbc68332703474"' : 'data-target="#xs-components-links-module-GdkModule-64e323fb110e71bee7cbc68332703474"' }>
+                                            'data-target="#components-links-module-GdkJsonInputModule-8442697ecc19cca5c67bef3d081a0390"' : 'data-target="#xs-components-links-module-GdkJsonInputModule-8442697ecc19cca5c67bef3d081a0390"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-GdkModule-64e323fb110e71bee7cbc68332703474"' :
-                                            'id="xs-components-links-module-GdkModule-64e323fb110e71bee7cbc68332703474"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-GdkJsonInputModule-8442697ecc19cca5c67bef3d081a0390"' :
+                                            'id="xs-components-links-module-GdkJsonInputModule-8442697ecc19cca5c67bef3d081a0390"' }>
+                                            <li class="link">
+                                                <a href="components/GdkJsonInputComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">GdkJsonInputComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/GdkModule.html" data-type="entity-link">GdkModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-GdkModule-c2d8ff904ccf1300ad7609a1d9b12089"' : 'data-target="#xs-components-links-module-GdkModule-c2d8ff904ccf1300ad7609a1d9b12089"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-GdkModule-c2d8ff904ccf1300ad7609a1d9b12089"' :
+                                            'id="xs-components-links-module-GdkModule-c2d8ff904ccf1300ad7609a1d9b12089"' }>
                                             <li class="link">
                                                 <a href="components/GdkCardComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">GdkCardComponent</a>
@@ -331,6 +349,10 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                             <li class="link">
                                                 <a href="components/GdkImportComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">GdkImportComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/GdkJsonInputComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">GdkJsonInputComponent</a>
                                             </li>
                                         </ul>
                                     </li>
