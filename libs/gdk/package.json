@@ -1,9 +1,15 @@
 {
   "name": "@gorilainvest/gdk",
-  "version": "0.0.2",
+  "version": "0.0.2-alpha.5",
   "files": [
-    "dist"
+    "dist",
+    "index.ts"
   ],
+  "scripts": {
+    "test": "ng test gdk",
+    "build": "ng build gdk",
+    "prepublishOnly": "npm run build"
+  },
   "peerDependencies": {
     "@angular/common": "^8.0.0",
     "@angular/core": "^8.0.0"

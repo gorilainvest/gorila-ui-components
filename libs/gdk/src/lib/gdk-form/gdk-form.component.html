@@ -1,4 +1,4 @@
-<form [formGroup]="form">
+<form [formGroup]="form" *ngIf="model">
   <ng-container *ngFor="let field of displayModel">
     <mat-list-item>
       <mat-form-field class="full-width">
