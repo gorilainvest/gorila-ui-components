@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material';
 import { By } from '@angular/platform-browser';
 import { UiSimpleModalComponent } from './ui-simple-modal.component';
+import { PipesModule } from '@gorilainvest/ui-toolkit/pipes';
 
 describe('UiSimpleModalComponent', () => {
   let component: UiSimpleModalComponent;
@@ -9,7 +10,7 @@ describe('UiSimpleModalComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [MatDialogModule],
+      imports: [MatDialogModule,  PipesModule],
       declarations: [UiSimpleModalComponent],
       providers: [
         { provide: MatDialogRef, useValue: {} },
@@ -44,12 +45,12 @@ describe('UiSimpleModalComponent', () => {
   });
 
   it('should display primary button if data has yesText', () => {
-    const primaryButton = fixture.debugElement.query(By.css('button.btn-action.btn-action--primary')).nativeElement;
+    const primaryButton = fixture.debugElement.query(By.css('.green')).nativeElement;
     expect(primaryButton).toBeTruthy();
   });
 
   it('should display secondary button if data has noText', () => {
-    const secondaryButton = fixture.debugElement.query(By.css('button.btn-action.btn-action--secondary')).nativeElement;
+    const secondaryButton = fixture.debugElement.query(By.css('.gray')).nativeElement;
     expect(secondaryButton).toBeTruthy();
   });
 

@@ -38,7 +38,7 @@ describe('UiLoadingModalComponent', () => {
   });
 
   it('should display loading modal title', () => {
-    const title = fixture.debugElement.query(By.css('h3')).nativeElement.textContent.trim();
+    const title = fixture.debugElement.query(By.css('span')).nativeElement.textContent.trim();
     expect(title).toEqual('Loading Modal Title');
   });
 
