@@ -23,27 +23,28 @@ export class TesteComponent implements OnChanges, OnInit {
   @Input() public titleText = 'Title';
   @Input() public bodyImage = '/assets/img/comming-soon.svg';
   @Input() public socialMedia = true;
-  @Input() public socialMediaArray: SocialMediaArray[] = [{
-      img:"/assets/img/facebook.svg",
-      URL:"https://www.facebook.com/GorilaInvest/",
-      id:"Facebook"
+  @Input() public socialMediaArray: SocialMediaArray[] = [
+    {
+      img: '/assets/img/facebook.svg',
+      URL: 'https://www.facebook.com/GorilaInvest/',
+      id: 'Facebook'
     },
     {
-      img:"/assets/img/instagram.svg",
-      URL:"https://www.instagram.com/gorilainvest",
-      id:"Instagram"
-
+      img: '/assets/img/instagram.svg',
+      URL: 'https://www.instagram.com/gorilainvest',
+      id: 'Instagram'
     },
     {
-      img:"/assets/img/twitter.svg",
-      URL:"https://twitter.com/gorilainvest",
-      id:"Twitter"
+      img: '/assets/img/twitter.svg',
+      URL: 'https://twitter.com/gorilainvest',
+      id: 'Twitter'
     },
     {
-      img:"/assets/img/linked-in.svg",
-      URL:"https://www.linkedin.com/company/gorila",
-      id:"Linked-in"
-    }]
+      img: '/assets/img/linked-in.svg',
+      URL: 'https://www.linkedin.com/company/gorila',
+      id: 'Linked-in'
+    }
+  ];
 
   @Input() public yesText = 'Primary Button';
   @Input() public noText = 'Secundary Button';
@@ -128,28 +129,30 @@ storiesOf('simple modal', module)
       titleText: text('titleText', 'Title'),
       bodyImage: text('bodyImage', '/assets/img/comming-soon.svg'),
       socialMedia: boolean('socialMedia', true),
-      socialMediaArray: object('socialMediaArray', [{
-        img:"/assets/img/facebook.svg",
-        URL:"https://www.facebook.com/GorilaInvest/",
-        id:"Facebook"
-      },
-      {
-        img:"/assets/img/instagram.svg",
-        URL:"https://www.instagram.com/gorilainvest",
-        id:"Instagram"
-  
-      },
-      {
-        img:"/assets/img/twitter.svg",
-        URL:"https://twitter.com/gorilainvest",
-        id:"Twitter"
-      },
-      {
-        img:"/assets/img/linked-in.svg",
-        URL:"https://www.linkedin.com/company/gorila",
-        id:"Linked-in"
-      }]),
-        yesText: text('yesText', 'Primary Button'),
-        noText: text('noText', 'Secundary Button')
-      }
+      socialMediaArray: object('socialMediaArray', [
+        {
+          img: '/assets/img/facebook.svg',
+          URL: 'https://www.facebook.com/GorilaInvest/',
+          id: 'Facebook'
+        },
+        {
+          img: '/assets/img/instagram.svg',
+          URL: 'https://www.instagram.com/gorilainvest',
+          id: 'Instagram'
+        },
+        {
+          img: '/assets/img/twitter.svg',
+          URL: 'https://twitter.com/gorilainvest',
+          id: 'Twitter'
+        },
+        {
+          img: '/assets/img/linked-in.svg',
+          URL: 'https://www.linkedin.com/company/gorila',
+          id: 'Linked-in'
+        }
+      ]),
+      yesText: text('yesText', 'Primary Button'),
+      noText: text('noText', 'Secundary Button')
+    }
   }));
+

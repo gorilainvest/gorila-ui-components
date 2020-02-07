@@ -3,7 +3,7 @@ export interface UiSimpleModalData {
   bodyHtml?: string;
   bodyImage?: string;
   socialMedia?: boolean;
-  socialMediaArray?: SocialMediaArray[]; 
+  socialMediaArray?: SocialMediaArray[];
   noText?: string;
   titleText: string;
   yesText?: string;
