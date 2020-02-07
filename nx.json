@@ -234,6 +234,14 @@
         "scope:ui",
         "group:controls"
       ]
+    },
+    "modals": {
+      "tags": [
+        "team:ape",
+        "exportable",
+        "scope:ui",
+        "group:layout"
+      ]
     }
   }
 }
