@@ -1,0 +1,5 @@
+<div class="content-container">
+  <mur-loading [size]="45" [thickness]="8"></mur-loading>
+  <span [innerHtml]="data?.titleText"></span>
+  <p *ngIf="!!data?.bodyText" [innerHtml]="data.bodyText"></p>
+</div>
