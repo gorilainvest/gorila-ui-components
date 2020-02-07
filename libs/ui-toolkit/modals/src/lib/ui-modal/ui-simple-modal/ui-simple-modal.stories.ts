@@ -21,8 +21,23 @@ export class TesteComponent implements OnChanges, OnInit {
   @Input() public width = '500px';
   @Input() public bodyText = 'Body content';
   @Input() public titleText = 'Title';
+   /**
+   * Indicates if image should be rendered and which image.
+   *
+   * @default '/assets/img/comming-soon.svg'
+   */
   @Input() public bodyImage = '/assets/img/comming-soon.svg';
+   /**
+   * Indicates that the modal should display social media buttons.
+   *
+   * @default true
+   */
   @Input() public socialMedia = true;
+   /**
+   * Indicates which button should be rendered, relative to the image and URL.
+   *
+   * 
+   */
   @Input() public socialMediaArray: SocialMediaArray[] = [
     {
       img: '/assets/img/facebook.svg',
