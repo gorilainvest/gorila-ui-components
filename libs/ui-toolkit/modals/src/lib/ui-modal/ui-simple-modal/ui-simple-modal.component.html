@@ -1,0 +1,24 @@
+<div class="icon-container">
+  <img class="icon-close" src="/assets/img/close.svg" (click)="closeDialog()"/>
+</div>
+<header mat-dialog-title>
+  <h2 [innerHtml]="data?.titleText"></h2>
+</header>
+<section mat-dialog-content>
+  <img *ngIf="!!data.bodyImage" class="mat-dialog-content-image" [src]="data?.bodyImage">
+  <p *ngIf="!!data?.bodyText" class="mat-dialog-content-question" [innerHtml]="data?.bodyText"></p>
+  <div *ngIf="!!data?.bodyHtml" class="confirmation-body" [innerHtml]="data.bodyHtml | keepHtml"></div>
+  <ng-container *ngIf="data.socialMedia">
+    <div class="mat-dialog-content-social">
+      <a #social.id *ngFor="let social of data.socialMediaArray" [href]="social.URL" target="_blank"><img [src]="social.img"></a>
+    </div>
+</ng-container>
+</section>
+<footer mat-dialog-actions>
+  <ng-container *ngIf="data?.yesText">
+    <button class="green" mat-button [mat-dialog-close]="true" [innerHtml]="data?.yesText"></button>
+  </ng-container>
+  <ng-container *ngIf="data?.noText">
+    <button class="gray" mat-button [mat-dialog-close]="false" [innerHtml]="data?.noText"></button>
+  </ng-container>
+</footer>

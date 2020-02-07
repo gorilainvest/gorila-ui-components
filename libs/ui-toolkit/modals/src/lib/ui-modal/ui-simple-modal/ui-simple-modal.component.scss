@@ -1,0 +1,124 @@
+@import "_colors";
+
+$dialog-padding: 24px;
+$padding-top: 40px;
+
+:host {
+  display: grid;
+  grid-template-rows: 0 auto 1fr 50px;
+  height: 100%;
+
+  padding: ($padding-top - $dialog-padding) (45px - $dialog-padding) (37px - $dialog-padding);
+}
+
+.mat-dialog-container {
+  overflow: unset !important;
+}
+
+.icon-container {
+  position: relative;
+}
+
+.icon-close {
+  position: absolute;
+  top: - $padding-top + 22px;
+  right: -10px;
+
+  width: 24px;
+  height: 24px;
+
+  cursor: pointer;
+
+  opacity: 0.5;
+}
+
+.mat-dialog-title h2,
+.mat-dialog-content p {
+  text-align: center;
+}
+
+.mat-dialog-content {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  color: #888e8e;
+  font-size: 16px;
+  line-height: 1.25;
+
+  text-align: center;
+
+  p {
+    width: 75%;
+  }
+}
+
+.mat-dialog-actions {
+  display: flex;
+  justify-content: space-evenly;
+
+  :focus,
+  :active {
+    outline: 0;
+  }
+}
+
+.mat-dialog-content-social {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* stylelint-disable selector-no-qualifying-type */
+header.mat-dialog-title {
+  margin: 10px 10px 0 10px;
+
+  h2 {
+    color: #10c0c6;
+    font-weight: 400;
+    font-size: 2.571rem;
+    font-family: Lato;
+    line-height: 1.1;
+  }
+}
+
+.mat-dialog-content-social a {
+  width: 38px;
+  height: 38px;
+
+  margin: 15px;
+
+  background-image: linear-gradient(45deg, $textSecondary, $textTernary);
+
+  border-radius: 50%;
+
+  img {
+    margin-top: 17%;
+  }
+
+  &.active {
+    background: $GorilaDefault;
+  }
+
+  &.disabled {
+    background-color: rgb(85, 91, 91);
+  }
+
+  &:hover {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+    
+  }
+
+  &:hover:not(.active) {
+    background-image: linear-gradient(225deg, $GorilaDefault, $GorilaSecondary);
+  }
+}
+
+.green {
+  background-image: linear-gradient(to right, $GorilaDefault, $GorilaSecondary, $GorilaDefault);
+}
+
+.gray {
+  background-image: linear-gradient(to right, $textSecondary, $textTernary, $textSecondary);
+}
+/* stylelint-enable selector-no-qualifying-type */
