@@ -1,43 +1,28 @@
 import { Component, Inject, Input, OnChanges, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { PipesModule } from '@gorilainvest/ui-toolkit/pipes';
-import { boolean, text, withKnobs, array, object } from '@storybook/addon-knobs';
+import { boolean, text, withKnobs, object } from '@storybook/addon-knobs';
 import { moduleMetadata, storiesOf } from '@storybook/angular';
 import { timer } from 'rxjs';
 
-import { UiSimpleModalData, SocialMediaArray } from './ui-simple-modal.data';
-import { UiSimpleModalComponent } from './ui-simple-modal.component';
-import { UiModalModule } from '../ui-modal.module';
+import { SimpleModalData, SocialMediaArray } from './simple-modal.data';
+import { SimpleModalComponent } from './simple-modal.component';
+import { UiModalModule } from '../modal.module';
 
 @Component({
   selector: 'gor-test',
   template: `
     test
   `,
-  styles: ['./ui-simple-modal.component.scss']
+  styles: ['./simple-modal.component.scss']
 })
-export class TesteComponent implements OnChanges, OnInit {
+export class TestComponent implements OnChanges, OnInit {
   @Input() public height = '400px';
   @Input() public width = '500px';
   @Input() public bodyText = 'Body content';
   @Input() public titleText = 'Title';
-   /**
-   * Indicates if image should be rendered and which image.
-   *
-   * @default '/assets/img/comming-soon.svg'
-   */
   @Input() public bodyImage = '/assets/img/comming-soon.svg';
-   /**
-   * Indicates that the modal should display social media buttons.
-   *
-   * @default true
-   */
   @Input() public socialMedia = true;
-   /**
-   * Indicates which button should be rendered, relative to the image and URL.
-   *
-   * 
-   */
   @Input() public socialMediaArray: SocialMediaArray[] = [
     {
       img: '/assets/img/facebook.svg',
@@ -60,7 +45,6 @@ export class TesteComponent implements OnChanges, OnInit {
       id: 'Linked-in'
     }
   ];
-
   @Input() public yesText = 'Primary Button';
   @Input() public noText = 'Secundary Button';
 
@@ -78,11 +62,11 @@ export class TesteComponent implements OnChanges, OnInit {
     }
   };
 
-  public dialogRef: MatDialogRef<UiSimpleModalComponent>;
-  constructor(public dialog: MatDialog, @Inject(MAT_DIALOG_DATA) public data: UiSimpleModalData) {}
+  public dialogRef: MatDialogRef<SimpleModalComponent>;
+  constructor(public dialog: MatDialog, @Inject(MAT_DIALOG_DATA) private data: SimpleModalData) {}
 
   public ngOnInit() {
-    this.dialog.open(UiSimpleModalComponent, this.matDialogProps);
+    this.dialog.open(SimpleModalComponent, this.matDialogProps);
   }
 
   public ngOnChanges() {
@@ -103,7 +87,7 @@ export class TesteComponent implements OnChanges, OnInit {
       this.dialogRef.close();
     }
     timer(200).subscribe(() => {
-      this.dialogRef = this.dialog.open(UiSimpleModalComponent, this.matDialogProps);
+      this.dialogRef = this.dialog.open(SimpleModalComponent, this.matDialogProps);
     });
   }
 }
@@ -116,7 +100,7 @@ storiesOf('simple modal', module)
         { provide: MAT_DIALOG_DATA, useValue: [] }
       ],
       imports: [UiModalModule, PipesModule, MatDialogModule],
-      declarations: [TesteComponent]
+      declarations: [TestComponent]
     })
   )
   .addDecorator(withKnobs)

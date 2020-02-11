@@ -1,5 +1,5 @@
 import { storiesOf, moduleMetadata } from '@storybook/angular';
-import { UiLoadingModalComponent, UiSimpleModalData, UiModalModule } from '../../..';
+import { LoadingModalComponent, SimpleModalData, UiModalModule } from '../../..';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import { Component, Inject, Input, OnChanges, OnInit } from '@angular/core';
 import { MatDialogRef, MatDialog, MAT_DIALOG_DATA, MatDialogModule } from '@angular/material';
@@ -12,13 +12,12 @@ import { PipesModule } from '@gorilainvest/ui-toolkit/pipes';
   `,
   styles: ['./ui-simple-modal.component.scss']
 })
-export class TesteComponent implements OnChanges, OnInit {
+export class TestComponent implements OnChanges, OnInit {
   constructor(
-    public dialogRef: MatDialogRef<TesteComponent>,
+    public dialogRef: MatDialogRef<TestComponent>,
     public dialog: MatDialog,
-    @Inject(MAT_DIALOG_DATA) public data: UiSimpleModalData
+    @Inject(MAT_DIALOG_DATA) public data: SimpleModalData
   ) {}
-
   @Input() public height = '300px';
   @Input() public width = '500px';
   @Input() public bodyText = 'Body content';
@@ -34,9 +33,13 @@ export class TesteComponent implements OnChanges, OnInit {
   };
 
   public ngOnInit() {
-    this.dialog.open(UiLoadingModalComponent, this.matDialogProps);
+    this.dialog.open(LoadingModalComponent, this.matDialogProps);
   }
-
+  /**
+   * Indicates when have any change in knobs interface, it will trigger this function to render a new modal with the setted values.
+   * It is done closing the old modal and oppening a new one.
+   * 
+   */
   public ngOnChanges() {
     this.matDialogProps = {
       height: this.height,
@@ -47,7 +50,7 @@ export class TesteComponent implements OnChanges, OnInit {
       }
     };
     this.dialog.closeAll();
-    this.dialog.open(UiLoadingModalComponent, this.matDialogProps);
+    this.dialog.open(LoadingModalComponent, this.matDialogProps);
   }
 }
 
@@ -59,7 +62,7 @@ storiesOf('loading modal', module)
         { provide: MAT_DIALOG_DATA, useValue: [] }
       ],
       imports: [UiModalModule, PipesModule, MatDialogModule],
-      declarations: [TesteComponent]
+      declarations: [TestComponent]
     })
   )
   .addDecorator(withKnobs)

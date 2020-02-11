@@ -43,7 +43,7 @@ $padding-top: 40px;
   align-items: center;
   justify-content: space-evenly;
 
-  color: #888e8e;
+  color: $textSecondary;
   font-size: 16px;
   line-height: 1.25;
 
@@ -74,7 +74,7 @@ header.mat-dialog-title {
   margin: 10px 10px 0 10px;
 
   h2 {
-    color: #10c0c6;
+    color: $GorilaDefault;
     font-weight: 400;
     font-size: 2.571rem;
     font-family: Lato;

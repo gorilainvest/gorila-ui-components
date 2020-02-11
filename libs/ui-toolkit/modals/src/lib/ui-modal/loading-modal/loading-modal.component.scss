@@ -22,7 +22,7 @@ p {
 }
 
 span {
-  color: #10c0c6 !important;
+  color: $GorilaDefault !important;
   font-weight: 400 !important;
   font-size: 24px !important;
 }
@@ -30,7 +30,7 @@ span {
 p {
   margin-top: 5px;
 
-  color: #888e8e;
+  color: $textSecondary;
   font-weight: 300;
   font-size: 18px;
 }

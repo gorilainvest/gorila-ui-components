@@ -1,4 +1,7 @@
-export interface UiSimpleModalData {
+/**
+ * Indicates interface for properties used in modal.
+ */
+export interface SimpleModalData {
   bodyText?: string;
   bodyHtml?: string;
   bodyImage?: string;
@@ -9,6 +12,9 @@ export interface UiSimpleModalData {
   yesText?: string;
 }
 
+/**
+ * Indicates specific interface for each button in modal.
+ */
 export interface SocialMediaArray {
   id: string;
   URL: string;

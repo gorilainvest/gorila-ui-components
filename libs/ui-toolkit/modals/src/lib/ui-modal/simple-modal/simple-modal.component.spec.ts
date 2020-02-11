@@ -1,17 +1,17 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material';
 import { By } from '@angular/platform-browser';
-import { UiSimpleModalComponent } from './ui-simple-modal.component';
+import { SimpleModalComponent } from './simple-modal.component';
 import { PipesModule } from '@gorilainvest/ui-toolkit/pipes';
 
-describe('UiSimpleModalComponent', () => {
-  let component: UiSimpleModalComponent;
-  let fixture: ComponentFixture<UiSimpleModalComponent>;
+describe('SimpleModalComponent', () => {
+  let component: SimpleModalComponent;
+  let fixture: ComponentFixture<SimpleModalComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [MatDialogModule,  PipesModule],
-      declarations: [UiSimpleModalComponent],
+      declarations: [SimpleModalComponent],
       providers: [
         { provide: MatDialogRef, useValue: {} },
         { provide: MAT_DIALOG_DATA, useValue: [] }
@@ -20,7 +20,7 @@ describe('UiSimpleModalComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UiSimpleModalComponent);
+    fixture = TestBed.createComponent(SimpleModalComponent);
     component = fixture.componentInstance;
     component.data.titleText = 'Simple Modal Title';
     component.data.bodyText = 'Simple Modal Body Text';

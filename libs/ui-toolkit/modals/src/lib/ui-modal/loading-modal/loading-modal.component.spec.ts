@@ -2,17 +2,17 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { LoadingModule } from '@gorilainvest/ui-toolkit/loading';
 
-import { UiLoadingModalComponent } from './ui-loading-modal.component';
+import { LoadingModalComponent } from './loading-modal.component';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 describe('UiLoadingModalComponent', () => {
-  let component: UiLoadingModalComponent;
-  let fixture: ComponentFixture<UiLoadingModalComponent>;
+  let component: LoadingModalComponent;
+  let fixture: ComponentFixture<LoadingModalComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [LoadingModule],
-      declarations: [UiLoadingModalComponent],
+      declarations: [LoadingModalComponent],
       providers: [
         { provide: MatDialogRef, useValue: {} },
         { provide: MAT_DIALOG_DATA, useValue: [] }
@@ -21,7 +21,7 @@ describe('UiLoadingModalComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UiLoadingModalComponent);
+    fixture = TestBed.createComponent(LoadingModalComponent);
     component = fixture.componentInstance;
     component.data.titleText = 'Loading Modal Title';
     component.data.bodyText = 'Loading Modal Body Text';
@@ -33,7 +33,7 @@ describe('UiLoadingModalComponent', () => {
   });
 
   it('should display the spinner', () => {
-    const spinner = fixture.debugElement.query(By.css('mur-loading')).nativeElement;
+    const spinner = fixture.debugElement.query(By.css('gor-loading')).nativeElement;
     expect(spinner).toBeTruthy();
   });
 
