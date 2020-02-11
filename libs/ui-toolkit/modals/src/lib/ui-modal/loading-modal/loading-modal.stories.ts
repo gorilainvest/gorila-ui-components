@@ -10,7 +10,7 @@ import { PipesModule } from '@gorilainvest/ui-toolkit/pipes';
   template: `
     gor-test
   `,
-  styles: ['./ui-simple-modal.component.scss']
+  styles: ['./simple-modal.component.scss']
 })
 export class TestComponent implements OnChanges, OnInit {
   constructor(
@@ -38,7 +38,6 @@ export class TestComponent implements OnChanges, OnInit {
   /**
    * Indicates when have any change in knobs interface, it will trigger this function to render a new modal with the setted values.
    * It is done closing the old modal and oppening a new one.
-   * 
    */
   public ngOnChanges() {
     this.matDialogProps = {

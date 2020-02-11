@@ -4,6 +4,7 @@ import { LoadingModule } from '@gorilainvest/ui-toolkit/loading';
 
 import { LoadingModalComponent } from './loading-modal.component';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { PipesModule } from 'dist/pipes/public_api';
 
 describe('UiLoadingModalComponent', () => {
   let component: LoadingModalComponent;
@@ -11,7 +12,7 @@ describe('UiLoadingModalComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [LoadingModule],
+      imports: [LoadingModule, PipesModule],
       declarations: [LoadingModalComponent],
       providers: [
         { provide: MatDialogRef, useValue: {} },
