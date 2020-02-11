@@ -8,7 +8,7 @@ import { SimpleModalComponent } from '../simple-modal/simple-modal.component';
   styleUrls: ['./loading-modal.component.scss']
 })
 export class LoadingModalComponent extends SimpleModalComponent {
-   /**
+  /**
    * Indicates default values for loading modal
    */
   @Input() public height = '400px';

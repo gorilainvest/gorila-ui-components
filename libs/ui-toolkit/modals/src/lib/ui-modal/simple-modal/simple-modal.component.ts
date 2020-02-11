@@ -10,21 +10,30 @@ import { SimpleModalData, SocialMediaArray } from './simple-modal.data';
 export class SimpleModalComponent {
   constructor(
     public dialogRef: MatDialogRef<SimpleModalComponent>,
-  /**
-   * Inject needed interface SimpleModalData.
-   */
+      /**
+       * Inject needed interface SimpleModalData.
+       */
     @Inject(MAT_DIALOG_DATA) public data: SimpleModalData
   ) {}
 
   /**
-   * Indicates default values for simple modal
+   * Indicates default values of height and width for simple modal, also the general content of the modal.
    */
   @Input() public height = '400px';
   @Input() public width = '500px';
   @Input() public bodyText = 'Body content';
   @Input() public titleText = 'Title';
+   /**
+   * Indicates default values for simple modal in this case specifically it is a the modal image.
+   */
   @Input() public bodyImage = '/assets/img/comming-soon.svg';
+  /**
+   * Indicates if social media icon should be displayed.
+   */
   @Input() public socialMedia = true;
+   /**
+   * Indicates which social media icon with URL and image should be displayed in modal.
+   */
   @Input() public socialMediaArray: SocialMediaArray[] = [
     {
       img: '/assets/img/facebook.svg',

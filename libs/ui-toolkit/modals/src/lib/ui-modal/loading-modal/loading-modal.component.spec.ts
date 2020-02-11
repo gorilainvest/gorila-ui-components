@@ -4,7 +4,7 @@ import { LoadingModule } from '@gorilainvest/ui-toolkit/loading';
 
 import { LoadingModalComponent } from './loading-modal.component';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { PipesModule } from 'dist/pipes/public_api';
+import { PipesModule } from '@gorilainvest/ui-toolkit/pipes';
 
 describe('UiLoadingModalComponent', () => {
   let component: LoadingModalComponent;
