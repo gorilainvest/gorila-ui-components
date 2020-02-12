@@ -11,46 +11,43 @@ export class SimpleModalComponent {
   constructor(
     public dialogRef: MatDialogRef<SimpleModalComponent>,
 
-  /**
+   /**
    * Inject needed interface SimpleModalData.
    */
-
     @Inject(MAT_DIALOG_DATA) public data: SimpleModalData
   ) {}
 
-  /**
-
+   /**
    * Indicates default height value for modal.
-
    */
   @Input() public height = '400px';
 
- /**
+   /**
    * Indicates default width value for modal.
    */
-
   @Input() public width = '500px';
 
- /**
+   /**
    * Indicates default body text for modal.
    */
-
   @Input() public bodyText = 'Body content';
 
- /**
+   /**
    * Indicates default title text for modal.
    */
-
   @Input() public titleText = 'Title';
- /**
+
+   /**
    * Indicates default values for simple modal in this case specifically it is a the modal image.
    */
   @Input() public bodyImage = '/assets/img/comming-soon.svg';
-  /**
+
+   /**
    * Indicates if social media icon should be displayed.
    */
   @Input() public socialMedia = true;
- /**
+  
+   /**
    * Indicates which social media icon with URL and image should be displayed in modal.
    */
   @Input() public socialMediaArray: SocialMediaArray[] = [
@@ -75,9 +72,15 @@ export class SimpleModalComponent {
       id: 'Linked-in'
     }
   ];
+   /**
+   * Indicates if primary button should be displayed and which text it should have.
+   */
   @Input() public yesText = 'Primary Button';
+   /**
+   * Indicates if secundary button should be displayed and which text it should have.
+   */
   @Input() public noText = 'Secundary Button';
-  /**
+   /**
    * Function which close modal.
    */
   public closeDialog() {

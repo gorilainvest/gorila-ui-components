@@ -7,7 +7,7 @@ import { timer } from 'rxjs';
 
 import { SimpleModalData, SocialMediaArray } from './simple-modal.data';
 import { SimpleModalComponent } from './simple-modal.component';
-import { UiModalModule } from '../modal.module';
+import { ModalModule } from '../modal.module';
 
 @Component({
   selector: 'gor-test',
@@ -99,7 +99,7 @@ storiesOf('simple modal', module)
         { provide: MatDialogRef, useValue: {} },
         { provide: MAT_DIALOG_DATA, useValue: [] }
       ],
-      imports: [UiModalModule, PipesModule, MatDialogModule],
+      imports: [ModalModule, PipesModule, MatDialogModule],
       declarations: [TestComponent]
     })
   )

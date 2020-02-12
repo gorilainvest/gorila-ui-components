@@ -14,4 +14,4 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   exports: [SimpleModalComponent, LoadingModalComponent],
   entryComponents: [SimpleModalComponent, LoadingModalComponent]
 })
-export class UiModalModule {}
+export class ModalModule {}

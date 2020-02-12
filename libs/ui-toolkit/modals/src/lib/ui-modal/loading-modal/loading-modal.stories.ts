@@ -1,5 +1,5 @@
 import { storiesOf, moduleMetadata } from '@storybook/angular';
-import { LoadingModalComponent, SimpleModalData, UiModalModule } from '../../..';
+import { LoadingModalComponent, SimpleModalData, ModalModule } from '../../..';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import { Component, Inject, Input, OnChanges, OnInit } from '@angular/core';
 import { MatDialogRef, MatDialog, MAT_DIALOG_DATA, MatDialogModule } from '@angular/material';
@@ -35,10 +35,7 @@ export class TestComponent implements OnChanges, OnInit {
   public ngOnInit() {
     this.dialog.open(LoadingModalComponent, this.matDialogProps);
   }
-  /**
-   * Indicates when have any change in knobs interface, it will trigger this function to render a new modal with the setted values.
-   * It is done closing the old modal and oppening a new one.
-   */
+
   public ngOnChanges() {
     this.matDialogProps = {
       height: this.height,
@@ -60,7 +57,7 @@ storiesOf('loading modal', module)
         { provide: MatDialogRef, useValue: {} },
         { provide: MAT_DIALOG_DATA, useValue: [] }
       ],
-      imports: [UiModalModule, PipesModule, MatDialogModule],
+      imports: [ModalModule, PipesModule, MatDialogModule],
       declarations: [TestComponent]
     })
   )
