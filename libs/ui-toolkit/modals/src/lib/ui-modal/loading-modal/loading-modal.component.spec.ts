@@ -6,7 +6,7 @@ import { LoadingModalComponent } from './loading-modal.component';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { PipesModule } from '@gorilainvest/ui-toolkit/pipes';
 
-describe('UiLoadingModalComponent', () => {
+describe('LoadingModalComponent', () => {
   let component: LoadingModalComponent;
   let fixture: ComponentFixture<LoadingModalComponent>;
 
@@ -24,8 +24,8 @@ describe('UiLoadingModalComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(LoadingModalComponent);
     component = fixture.componentInstance;
-    component.data.titleText = 'Loading Modal Title';
-    component.data.bodyText = 'Loading Modal Body Text';
+    component.data.titleText = 'Title';
+    component.data.bodyText = 'Body content';
     fixture.detectChanges();
   });
 
@@ -40,11 +40,11 @@ describe('UiLoadingModalComponent', () => {
 
   it('should display loading modal title', () => {
     const title = fixture.debugElement.query(By.css('span')).nativeElement.textContent.trim();
-    expect(title).toEqual('Loading Modal Title');
+    expect(title).toEqual('Title');
   });
 
   it('should display loading modal body text if data has bodyText', () => {
     const text = fixture.debugElement.query(By.css('p')).nativeElement.textContent.trim();
-    expect(text).toEqual('Loading Modal Body Text');
+    expect(text).toEqual('Body content');
   });
 });

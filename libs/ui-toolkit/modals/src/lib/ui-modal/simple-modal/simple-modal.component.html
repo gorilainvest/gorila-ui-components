@@ -7,7 +7,6 @@
 <section mat-dialog-content>
   <img *ngIf="!!data.bodyImage" class="mat-dialog-content-image" [src]="data?.bodyImage">
   <p *ngIf="!!data?.bodyText" class="mat-dialog-content-question" [innerHtml]="data?.bodyText"></p>
-  <div *ngIf="!!data?.bodyHtml" class="confirmation-body" [innerHtml]="data.bodyHtml | keepHtml"></div>
   <ng-container *ngIf="data.socialMedia">
     <div class="mat-dialog-content-social">
       <a #social.id *ngFor="let social of data.socialMediaArray" [href]="social.URL" target="_blank"><img [src]="social.img"></a>
