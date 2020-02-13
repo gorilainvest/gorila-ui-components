@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, Input, OnChanges, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'gor-checkbox',
@@ -36,6 +36,12 @@ export class CheckboxComponent implements OnInit, OnChanges {
    */
   public classes = '';
 
+  /**
+   * Checkbox value, emitted when user clicks checkbox.
+   */
+  private _value = false;
+  @Output() public value = new EventEmitter<boolean>();
+
   public ngOnInit() {
     this.updateClasses();
   }
@@ -44,6 +50,17 @@ export class CheckboxComponent implements OnInit, OnChanges {
     this.updateClasses();
   }
 
+  /**
+   * Emits checkbox value to parent component.
+   */
+  public emitValue() {
+    this._value = !this._value;
+    this.value.emit(this._value);
+  }
+
+  /**
+   * Updates checkbox classes.
+   */
   private updateClasses() {
     this.classes = this.size + ' ' + this.labelCapitalization;
   }
