@@ -1,0 +1,88 @@
+@import "_colors";
+
+gor-checkbox {
+  .mat-checkbox-checked .mat-checkbox-background,
+  .mat-checkbox-indeterminate .mat-checkbox-background {
+    background-image: linear-gradient(to right, $GorilaDefault, $GorilaSecondary);
+  }
+
+  .mat-checkbox-layout {
+    margin-top: 5px;
+  }
+
+  .mat-checkbox-frame,
+  .mat-checkbox-background {
+    border-radius: 8px;
+  }
+
+  mat-checkbox.sm {
+    .mat-checkbox-inner-container {
+      margin-right: 0;
+    }
+
+    .mat-checkbox-label {
+      font-size: 10px;
+      padding-bottom: 3px;
+    }
+
+    .mat-checkbox-frame,
+    .mat-checkbox-background {
+      width: 12px;
+      height: 12px;
+      border-radius: 6px;
+    }
+  }
+
+  mat-checkbox.md {
+    .mat-checkbox-inner-container {
+      margin-right: 4px;
+    }
+
+    .mat-checkbox-label {
+      font-size: 12px;
+      padding-bottom: 3px;
+    }
+
+    .mat-checkbox-frame,
+    .mat-checkbox-background {
+      width: 14px;
+      height: 14px;
+      border-radius: 7px;
+    }
+  }
+
+  mat-checkbox.lg {
+    .mat-checkbox-label {
+      font-size: 14px;
+    }
+
+    .mat-checkbox-frame,
+    .mat-checkbox-background {
+      width: 16px;
+      height: 16px;
+      border-radius: 8px;
+    }
+
+    .mat-checkbox-layout {
+      margin-top: 5px;
+    }
+  }
+
+  mat-checkbox.up {
+    .mat-checkbox-label{
+      text-transform: uppercase;
+    }
+  }
+
+  mat-checkbox.lo {
+    .mat-checkbox-label{
+      text-transform: lowercase;
+    }
+  }
+
+  mat-checkbox.cp {
+    .mat-checkbox-label{
+      text-transform: capitalize;
+    }
+  }
+}

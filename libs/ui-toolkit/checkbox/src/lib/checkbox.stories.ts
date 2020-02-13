@@ -1,15 +1,21 @@
 import { storiesOf, moduleMetadata } from '@storybook/angular';
-import { CheckboxComponent } from './checkbox.component';
+import { CheckboxModule } from './checkbox.module';
 
 storiesOf('Checkbox', module)
   .addDecorator(
     moduleMetadata({
-      declarations: [CheckboxComponent]
+      imports: [CheckboxModule]
     })
   )
   .add(
     'playground',
     () => ({
-      template: `<gor-checkbox></gor-checkbox>`
+      template: `
+      <div style="display: flex; flex-direction: column;">
+        <gor-checkbox [size]="'sm'" [labelCapitalization]="'lo'"></gor-checkbox>
+        <gor-checkbox [size]="'md'" [labelCapitalization]="'cp'"></gor-checkbox>
+        <gor-checkbox [size]="'lg'" [labelCapitalization]="'up'"></gor-checkbox>
+      </div>
+      `
     })
   )
