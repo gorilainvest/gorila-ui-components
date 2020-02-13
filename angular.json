@@ -286,6 +286,50 @@
         }
       }
     },
+    "checkbox": {
+      "root": "libs/ui-toolkit/checkbox",
+      "sourceRoot": "libs/ui-toolkit/checkbox/src",
+      "projectType": "library",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/ui-toolkit/checkbox/tsconfig.lib.json",
+            "project": "libs/ui-toolkit/checkbox/ng-package.json",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "libs/shared-styles"
+              ]
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-toolkit/checkbox/tsconfig.lib.json",
+              "libs/ui-toolkit/checkbox/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/ui-toolkit/checkbox/src/test.ts",
+            "tsConfig": "libs/ui-toolkit/checkbox/tsconfig.spec.json",
+            "karmaConfig": "libs/ui-toolkit/checkbox/karma.conf.js"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    },
     "countdown-button": {
       "root": "libs/ui-toolkit/countdown-button",
       "sourceRoot": "libs/ui-toolkit/countdown-button/src",

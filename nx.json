@@ -35,6 +35,15 @@
         "group:layout"
       ]
     },
+    "checkbox": {
+      "tags": [
+        "exportable",
+        "team:ape",
+        "scope:shared",
+        "scope:ui",
+        "group:controls"
+      ]
+    },
     "countdown-button": {
       "tags": [
         "exportable",

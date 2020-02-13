@@ -35,6 +35,10 @@
         "dist/card-container",
         "libs/ui-toolkit/card-container/src/index.ts"
       ],
+      "@gorilainvest/ui-toolkit/checkbox": [
+        "dist/checkbox",
+        "libs/ui-toolkit/checkbox/src/index.ts"
+      ],
       "@gorilainvest/ui-toolkit/countdown-button": [
         "dist/countdown-button",
         "libs/ui-toolkit/countdown-button/src/index.ts"
