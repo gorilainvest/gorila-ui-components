@@ -30,6 +30,10 @@ export class CheckboxComponent implements OnInit, OnChanges {
    */
   @Input() public size: 'sm' | 'md' | 'lg' = 'sm';
 
+  /**
+   * Classes added to the mat-checkbox component.
+   * A string build from the inputs size and labelCapitalization.
+   */
   public classes = '';
 
   public ngOnInit() {
