@@ -4,7 +4,7 @@ import { Component, EventEmitter, Input, OnChanges, OnInit, Output, ViewEncapsul
  * Interface for event emitted by CheckboxComponent
  */
 interface CheckboxEvent {
-  checkboxId: string | number;
+  id: string | number;
   value: boolean;
 }
 
@@ -53,17 +53,23 @@ export class CheckboxComponent implements OnInit, OnChanges {
   @Input() public textColor: 'dark' | 'light' = 'dark';
 
   /**
-   * Classes added to the mat-checkbox component.
-   * A string build from the inputs size and labelCapitalization.
+   * Controls the state of the checkbox.
    */
-  public classes = '';
+  public _checked = false;
+  @Input() public set checked (value: any) {
+    this._checked = !!value;
+  }
 
   /**
    * Emits an event when user clicks checkbox.
    */
   @Output() public event = new EventEmitter<CheckboxEvent>();
 
-  private value = false;
+  /**
+   * Classes added to the mat-checkbox component.
+   * A string build from the inputs size and labelCapitalization.
+   */
+  public classes = '';
 
   public ngOnInit() {
     this.updateClasses();
@@ -77,10 +83,9 @@ export class CheckboxComponent implements OnInit, OnChanges {
    * Emits checkbox event to parent component.
    */
   public emitValue() {
-    this.value = !this.value;
     this.event.emit({
-      checkboxId: this.id,
-      value: this.value
+      id: this.id,
+      value: this._checked
     });
   }
 
