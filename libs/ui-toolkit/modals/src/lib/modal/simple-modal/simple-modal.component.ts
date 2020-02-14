@@ -8,44 +8,49 @@ import { SimpleModalData, SocialMediaArray } from './simple-modal.data';
   styleUrls: ['./simple-modal.component.scss']
 })
 export class SimpleModalComponent {
-  constructor(
-    public dialogRef: MatDialogRef<SimpleModalComponent>,
-
    /**
    * Inject needed interface SimpleModalData.
    */
+  constructor(
+    public dialogRef: MatDialogRef<SimpleModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: SimpleModalData
   ) {}
 
    /**
    * Indicates default height value for modal.
+   * @default '400px'
    */
   @Input() public height = '400px';
 
    /**
    * Indicates default width value for modal.
+   * @default '500px'
    */
   @Input() public width = '500px';
 
    /**
    * Indicates default body text for modal.
+   * @default 'Body content'
    */
   @Input() public bodyText = 'Body content';
 
    /**
    * Indicates default title text for modal.
+   * @default 'Title'
    */
   @Input() public titleText = 'Title';
 
    /**
    * Indicates default values for simple modal in this case specifically it is a the modal image.
+   * @default '/assets/img/comming-soon.svg'
    */
   @Input() public bodyImage = '/assets/img/comming-soon.svg';
 
    /**
    * Indicates if social media icon should be displayed.
+   * @default false
    */
-  @Input() public socialMedia = true;
+  @Input() public socialMedia = false;
   
    /**
    * Indicates which social media icon with URL and image should be displayed in modal.
@@ -74,10 +79,12 @@ export class SimpleModalComponent {
   ];
    /**
    * Indicates if primary button should be displayed and which text it should have.
+   * @default 'Primary Button'
    */
   @Input() public yesText = 'Primary Button';
    /**
    * Indicates if secundary button should be displayed and which text it should have.
+   * @default 'Secundary Button'
    */
   @Input() public noText = 'Secundary Button';
    /**

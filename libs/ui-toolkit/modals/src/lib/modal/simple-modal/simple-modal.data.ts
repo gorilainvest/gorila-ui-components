@@ -13,7 +13,7 @@ export interface SimpleModalData {
 }
 
 /**
- * Indicates specific interface for each button in modal.
+ * Indicates specific interface for each button social media icon/link.
  */
 export interface SocialMediaArray {
   id: string;

@@ -1,10 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import { By } from '@angular/platform-browser';
 import { LoadingModule } from '@gorilainvest/ui-toolkit/loading';
+import { PipesModule } from '@gorilainvest/ui-toolkit/pipes';
 
 import { LoadingModalComponent } from './loading-modal.component';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { PipesModule } from '@gorilainvest/ui-toolkit/pipes';
 
 describe('LoadingModalComponent', () => {
   let component: LoadingModalComponent;

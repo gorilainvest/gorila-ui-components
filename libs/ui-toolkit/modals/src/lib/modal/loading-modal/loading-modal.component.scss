@@ -14,7 +14,7 @@
 div,
 h3,
 p {
-  text-align: center !important;
+  text-align: center;
 }
 
 .content-container {
@@ -22,9 +22,9 @@ p {
 }
 
 span {
-  color: $GorilaDefault !important;
-  font-weight: 400 !important;
-  font-size: 24px !important;
+  color: $GorilaDefault;
+  font-weight: 400;
+  font-size: 24px;
 }
 
 p {

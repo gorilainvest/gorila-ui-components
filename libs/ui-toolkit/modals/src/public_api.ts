@@ -1,4 +1,4 @@
-export * from './lib/ui-modal/modal.module';
+export * from './lib/modal/modal.module';
 
-export * from './lib/ui-modal/simple-modal/simple-modal.component';
-export * from './lib/ui-modal/loading-modal/loading-modal.component';
+export * from './lib/modal/simple-modal/simple-modal.component';
+export * from './lib/modal/loading-modal/loading-modal.component';

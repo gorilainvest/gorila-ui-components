@@ -9,6 +9,29 @@ import { SimpleModalData, SocialMediaArray } from './simple-modal.data';
 import { SimpleModalComponent } from './simple-modal.component';
 import { ModalModule } from '../modal.module';
 
+const socialMediaMock = [
+  {
+    img: '/assets/img/facebook.svg',
+    URL: 'https://www.facebook.com/GorilaInvest/',
+    id: 'Facebook'
+  },
+  {
+    img: '/assets/img/instagram.svg',
+    URL: 'https://www.instagram.com/gorilainvest',
+    id: 'Instagram'
+  },
+  {
+    img: '/assets/img/twitter.svg',
+    URL: 'https://twitter.com/gorilainvest',
+    id: 'Twitter'
+  },
+  {
+    img: '/assets/img/linked-in.svg',
+    URL: 'https://www.linkedin.com/company/gorila',
+    id: 'Linked-in'
+  }
+];
+
 @Component({
   selector: 'gor-test',
   template: `
@@ -16,6 +39,7 @@ import { ModalModule } from '../modal.module';
   `,
   styles: ['./simple-modal.component.scss']
 })
+
 export class TestComponent implements OnChanges, OnInit {
   @Input() public height = '400px';
   @Input() public width = '500px';
@@ -23,28 +47,7 @@ export class TestComponent implements OnChanges, OnInit {
   @Input() public titleText = 'Title';
   @Input() public bodyImage = '/assets/img/comming-soon.svg';
   @Input() public socialMedia = true;
-  @Input() public socialMediaArray: SocialMediaArray[] = [
-    {
-      img: '/assets/img/facebook.svg',
-      URL: 'https://www.facebook.com/GorilaInvest/',
-      id: 'Facebook'
-    },
-    {
-      img: '/assets/img/instagram.svg',
-      URL: 'https://www.instagram.com/gorilainvest',
-      id: 'Instagram'
-    },
-    {
-      img: '/assets/img/twitter.svg',
-      URL: 'https://twitter.com/gorilainvest',
-      id: 'Twitter'
-    },
-    {
-      img: '/assets/img/linked-in.svg',
-      URL: 'https://www.linkedin.com/company/gorila',
-      id: 'Linked-in'
-    }
-  ];
+  @Input() public socialMediaArray: SocialMediaArray[] = socialMediaMock;
   @Input() public yesText = 'Primary Button';
   @Input() public noText = 'Secundary Button';
 
@@ -128,28 +131,7 @@ storiesOf('simple modal', module)
       titleText: text('titleText', 'Title'),
       bodyImage: text('bodyImage', '/assets/img/comming-soon.svg'),
       socialMedia: boolean('socialMedia', true),
-      socialMediaArray: object('socialMediaArray', [
-        {
-          img: '/assets/img/facebook.svg',
-          URL: 'https://www.facebook.com/GorilaInvest/',
-          id: 'Facebook'
-        },
-        {
-          img: '/assets/img/instagram.svg',
-          URL: 'https://www.instagram.com/gorilainvest',
-          id: 'Instagram'
-        },
-        {
-          img: '/assets/img/twitter.svg',
-          URL: 'https://twitter.com/gorilainvest',
-          id: 'Twitter'
-        },
-        {
-          img: '/assets/img/linked-in.svg',
-          URL: 'https://www.linkedin.com/company/gorila',
-          id: 'Linked-in'
-        }
-      ]),
+      socialMediaArray: object('socialMediaArray', socialMediaMock),
       yesText: text('yesText', 'Primary Button'),
       noText: text('noText', 'Secundary Button')
     }

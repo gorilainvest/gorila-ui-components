@@ -1,16 +1,16 @@
-import { storiesOf, moduleMetadata } from '@storybook/angular';
-import { LoadingModalComponent, SimpleModalData, ModalModule } from '../../..';
-import { withKnobs, text } from '@storybook/addon-knobs';
 import { Component, Inject, Input, OnChanges, OnInit } from '@angular/core';
-import { MatDialogRef, MatDialog, MAT_DIALOG_DATA, MatDialogModule } from '@angular/material';
+import { MAT_DIALOG_DATA, MatDialog, MatDialogModule, MatDialogRef } from '@angular/material';
 import { PipesModule } from '@gorilainvest/ui-toolkit/pipes';
+import { text, withKnobs } from '@storybook/addon-knobs';
+import { moduleMetadata, storiesOf } from '@storybook/angular';
+
+import { LoadingModalComponent, ModalModule, SimpleModalData } from '../../..';
 
 @Component({
   selector: 'gor-test',
   template: `
     gor-test
-  `,
-  styles: ['./simple-modal.component.scss']
+  `
 })
 export class TestComponent implements OnChanges, OnInit {
   constructor(

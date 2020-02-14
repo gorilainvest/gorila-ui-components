@@ -2,12 +2,16 @@ import { SecurityContext } from '@angular/core';
 import { async, TestBed } from '@angular/core/testing';
 import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 
-import { EscapeHtmlPipe } from './keep-html.pipe';
-import { DomSanitizerStub } from '../dom-sanitizer.stub';
+import { GorKeepHtmlPipe } from './keep-html.pipe';
 
-describe('EscapeHtmlPipe', () => {
+export class DomSanitizerStub {
+  public sanitize = (_, data) => data;
+  public bypassSecurityTrustHtml = data => data;
+}
+
+describe('GorKeepHtmlPipe', () => {
   let domSanitizer: DomSanitizer;
-  let pipe: EscapeHtmlPipe;
+  let pipe: GorKeepHtmlPipe;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -18,12 +22,12 @@ describe('EscapeHtmlPipe', () => {
   }));
 
   it('create an instance', () => {
-    pipe = new EscapeHtmlPipe(domSanitizer);
+    pipe = new GorKeepHtmlPipe(domSanitizer);
     expect(pipe).toBeTruthy();
   });
 
   it('should bypass security and trust the given value to be safe HTML', () => {
-    pipe = new EscapeHtmlPipe(domSanitizer);
+    pipe = new GorKeepHtmlPipe(domSanitizer);
     const safeContent = pipe.transform("<script>alert('Should be trusted!')</script>");
     const sanitized_str = domSanitizer.sanitize(SecurityContext.HTML, safeContent);
     expect(sanitized_str).toBe("<script>alert('Should be trusted!')</script>");
