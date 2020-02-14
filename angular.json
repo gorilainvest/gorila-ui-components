@@ -320,7 +320,12 @@
           "options": {
             "main": "libs/ui-toolkit/checkbox/src/test.ts",
             "tsConfig": "libs/ui-toolkit/checkbox/tsconfig.spec.json",
-            "karmaConfig": "libs/ui-toolkit/checkbox/karma.conf.js"
+            "karmaConfig": "libs/ui-toolkit/checkbox/karma.conf.js",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "libs/shared-styles"
+              ]
+            }
           }
         }
       },
