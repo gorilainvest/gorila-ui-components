@@ -12,9 +12,10 @@ storiesOf('Checkbox', module)
     () => ({
       template: `
       <div style="display: flex; flex-direction: column;">
-        <gor-checkbox [size]="'sm'" [labelCapitalization]="'lo'"></gor-checkbox>
-        <gor-checkbox [size]="'md'" [labelCapitalization]="'cp'"></gor-checkbox>
-        <gor-checkbox [size]="'lg'" [labelCapitalization]="'up'"></gor-checkbox>
+        <gor-checkbox [size]="'sm'" [labelTransform]="'lo'"></gor-checkbox>
+        <gor-checkbox [size]="'md'" [labelTransform]="'cp'"></gor-checkbox>
+        <gor-checkbox [size]="'lg'" [labelTransform]="'up'"></gor-checkbox>
+        <gor-checkbox [size]="'lg'" [labelTransform]="'no'" [label]="'LaBeL'"></gor-checkbox>
       </div>
       `
     })

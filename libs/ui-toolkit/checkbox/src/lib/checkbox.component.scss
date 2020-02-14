@@ -85,4 +85,10 @@ gor-checkbox {
       text-transform: capitalize;
     }
   }
+
+  mat-checkbox.no {
+    .mat-checkbox-label{
+      text-transform: none;
+    }
+  }
 }

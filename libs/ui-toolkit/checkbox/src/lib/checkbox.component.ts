@@ -13,12 +13,13 @@ export class CheckboxComponent implements OnInit, OnChanges {
   @Input() public label = 'Label';
 
   /**
-   * Label capitalization
+   * Label text transform
    * - up: uppercase
    * - lo: lowercase
    * - cp: capitalize
+   * - no: none
    */
-  @Input() public labelCapitalization: 'up' | 'lo' | 'cp' = 'up';
+  @Input() public labelTransform: 'up' | 'lo' | 'cp' | 'no' = 'up';
 
   /**
    * Checkbox size
@@ -62,6 +63,6 @@ export class CheckboxComponent implements OnInit, OnChanges {
    * Updates checkbox classes.
    */
   private updateClasses() {
-    this.classes = this.size + ' ' + this.labelCapitalization;
+    this.classes = this.size + ' ' + this.labelTransform;
   }
 }
