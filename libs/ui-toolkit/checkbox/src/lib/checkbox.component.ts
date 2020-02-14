@@ -1,5 +1,13 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, ViewEncapsulation } from '@angular/core';
 
+/**
+ * Interface for event emitted by CheckboxComponent
+ */
+interface CheckboxEvent {
+  checkboxId: string | number;
+  value: boolean;
+}
+
 @Component({
   selector: 'gor-checkbox',
   templateUrl: './checkbox.component.html',
@@ -7,6 +15,12 @@ import { Component, EventEmitter, Input, OnChanges, OnInit, Output, ViewEncapsul
   encapsulation: ViewEncapsulation.None
 })
 export class CheckboxComponent implements OnInit, OnChanges {
+  /**
+   * An id to identify the checkbox. Emitted together with the
+   * checkbox value when user clicks the checkbox.
+   */
+  @Input() public id: string | number = 0;
+
   /**
    * Checkbox label
    */
@@ -45,10 +59,11 @@ export class CheckboxComponent implements OnInit, OnChanges {
   public classes = '';
 
   /**
-   * Checkbox value, emitted when user clicks checkbox.
+   * Emits an event when user clicks checkbox.
    */
-  private _value = false;
-  @Output() public value = new EventEmitter<boolean>();
+  @Output() public event = new EventEmitter<CheckboxEvent>();
+
+  private value = false;
 
   public ngOnInit() {
     this.updateClasses();
@@ -59,11 +74,14 @@ export class CheckboxComponent implements OnInit, OnChanges {
   }
 
   /**
-   * Emits checkbox value to parent component.
+   * Emits checkbox event to parent component.
    */
   public emitValue() {
-    this._value = !this._value;
-    this.value.emit(this._value);
+    this.value = !this.value;
+    this.event.emit({
+      checkboxId: this.id,
+      value: this.value
+    });
   }
 
   /**
