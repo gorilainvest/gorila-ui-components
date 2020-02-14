@@ -32,6 +32,13 @@ export class CheckboxComponent implements OnInit, OnChanges {
   @Input() public size: 'sm' | 'md' | 'lg' = 'sm';
 
   /**
+   * Text color
+   * - dark: #2d2d2d ($body)
+   * - light: #888e8e ($textSecondary)
+   */
+  @Input() public textColor: 'dark' | 'light' = 'dark';
+
+  /**
    * Classes added to the mat-checkbox component.
    * A string build from the inputs size and labelCapitalization.
    */
@@ -63,6 +70,6 @@ export class CheckboxComponent implements OnInit, OnChanges {
    * Updates checkbox classes.
    */
   private updateClasses() {
-    this.classes = this.size + ' ' + this.labelTransform;
+    this.classes = this.size + ' ' + this.labelTransform + ' ' + this.textColor;
   }
 }

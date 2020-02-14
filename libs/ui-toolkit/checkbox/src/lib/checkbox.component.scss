@@ -69,26 +69,38 @@ gor-checkbox {
   }
 
   mat-checkbox.up {
-    .mat-checkbox-label{
+    .mat-checkbox-label {
       text-transform: uppercase;
     }
   }
 
   mat-checkbox.lo {
-    .mat-checkbox-label{
+    .mat-checkbox-label {
       text-transform: lowercase;
     }
   }
 
   mat-checkbox.cp {
-    .mat-checkbox-label{
+    .mat-checkbox-label {
       text-transform: capitalize;
     }
   }
 
   mat-checkbox.no {
-    .mat-checkbox-label{
+    .mat-checkbox-label {
       text-transform: none;
+    }
+  }
+
+  mat-checkbox.dark {
+    .mat-checkbox-label {
+      color: $body;
+    }
+  }
+
+  mat-checkbox.light {
+    .mat-checkbox-label {
+      color: $textSecondary;
     }
   }
 }
