@@ -3,7 +3,7 @@ import { Component, EventEmitter, Input, OnChanges, OnInit, Output, ViewEncapsul
 /**
  * Interface for event emitted by CheckboxComponent
  */
-interface CheckboxEvent {
+export interface CheckboxEvent {
   id: string | number;
   value: boolean;
 }
