@@ -18,6 +18,7 @@ export class CheckboxComponent implements OnInit, OnChanges {
   /**
    * An id to identify the checkbox. Emitted together with the
    * checkbox value when user clicks the checkbox.
+   * @default 0
    */
   @Input() public id: string | number = 0;
 
@@ -32,6 +33,7 @@ export class CheckboxComponent implements OnInit, OnChanges {
    * - lo: lowercase
    * - cp: capitalize
    * - no: none
+   * @default up
    */
   @Input() public labelTransform: 'up' | 'lo' | 'cp' | 'no' = 'up';
 
@@ -49,6 +51,7 @@ export class CheckboxComponent implements OnInit, OnChanges {
    * Text color
    * - dark: #2d2d2d ($body)
    * - light: #888e8e ($textSecondary)
+   * @default dark
    */
   @Input() public textColor: 'dark' | 'light' = 'dark';
 
@@ -61,6 +64,7 @@ export class CheckboxComponent implements OnInit, OnChanges {
    * - yellow: #fcbd1f
    * - pink: #ed4581
    * - gradient: from #10c0c6 to #4dde90
+   * @default gradient
    */
   @Input() public backgroundColor: 'red' | 'darkblue' | 'blue' | 'lightblue' | 'yellow' | 'pink' | 'gradient' = 'gradient';
 
