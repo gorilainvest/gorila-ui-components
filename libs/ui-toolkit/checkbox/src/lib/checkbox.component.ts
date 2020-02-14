@@ -24,6 +24,7 @@ export class CheckboxComponent implements OnInit, OnChanges {
 
   /**
    * Checkbox label
+   * @default label
    */
   @Input() public label = 'Label';
 
