@@ -53,6 +53,11 @@ export class CheckboxComponent implements OnInit, OnChanges {
   @Input() public textColor: 'dark' | 'light' = 'dark';
 
   /**
+   * Checkbox background color when active
+   */
+  @Input() public backgroundColor: 'red' | 'darkblue' | 'blue' | 'lightblue' | 'yellow' | 'pink' | 'gradient' = 'gradient';
+
+  /**
    * Controls the state of the checkbox.
    */
   public _checked = false;
@@ -62,6 +67,7 @@ export class CheckboxComponent implements OnInit, OnChanges {
 
   /**
    * Emits an event when user clicks checkbox.
+   * Event contains the id and value of the checkbox.
    */
   @Output() public event = new EventEmitter<CheckboxEvent>();
 
@@ -93,6 +99,12 @@ export class CheckboxComponent implements OnInit, OnChanges {
    * Updates checkbox classes.
    */
   private updateClasses() {
-    this.classes = this.size + ' ' + this.labelTransform + ' ' + this.textColor;
+    const cssInputs = [
+      this.size,
+      this.labelTransform,
+      this.backgroundColor,
+      this.textColor
+    ]
+    this.classes = cssInputs.join(' ');
   }
 }

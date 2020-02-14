@@ -1,19 +1,6 @@
 @import "_colors";
 
 gor-checkbox {
-  .mat-checkbox-checked .mat-checkbox-background,
-  .mat-checkbox-indeterminate .mat-checkbox-background {
-    background-image: linear-gradient(to right, $GorilaDefault, $GorilaSecondary);
-  }
-
-  .mat-checkbox-layout {
-    margin-top: 5px;
-  }
-
-  .mat-checkbox-frame,
-  .mat-checkbox-background {
-    border-radius: 8px;
-  }
 
   mat-checkbox.sm {
     .mat-checkbox-inner-container {
@@ -101,6 +88,55 @@ gor-checkbox {
   mat-checkbox.light {
     .mat-checkbox-label {
       color: $textSecondary;
+    }
+  }
+
+  mat-checkbox.gradient {
+    &.mat-checkbox-checked .mat-checkbox-background,
+    &.mat-checkbox-indeterminate .mat-checkbox-background {
+      background-image: linear-gradient(to right, $GorilaDefault, $GorilaSecondary) !important;
+    }
+  }
+
+  mat-checkbox.darkblue {
+    &.mat-checkbox-checked .mat-checkbox-background,
+    &.mat-checkbox-indeterminate .mat-checkbox-background {
+      background-color: $CaixaDefault;
+    }
+  }
+
+  mat-checkbox.blue {
+    &.mat-checkbox-checked .mat-checkbox-background,
+    &.mat-checkbox-indeterminate .mat-checkbox-background {
+      background-color: $RendaFixaDefault;
+    }
+  }
+
+  mat-checkbox.lightblue {
+    &.mat-checkbox-checked .mat-checkbox-background,
+    &.mat-checkbox-indeterminate .mat-checkbox-background {
+      background-color: $MultimercadoDefault;
+    }
+  }
+
+  mat-checkbox.pink {
+    &.mat-checkbox-checked .mat-checkbox-background,
+    &.mat-checkbox-indeterminate .mat-checkbox-background {
+      background-color: $RendaVariavelDefault;
+    }
+  }
+
+  mat-checkbox.yellow {
+    &.mat-checkbox-checked .mat-checkbox-background,
+    &.mat-checkbox-indeterminate .mat-checkbox-background {
+      background-color: $MoedasDefault;
+    }
+  }
+
+  mat-checkbox.red {
+    &.mat-checkbox-checked .mat-checkbox-background,
+    &.mat-checkbox-indeterminate .mat-checkbox-background {
+      background-color: $TangibleDefault;
     }
   }
 }
