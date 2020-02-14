@@ -85,3 +85,21 @@ storiesOf('Checkbox', module)
       template: `<gor-checkbox [textColor]="'light'" [size]="'lg'"></gor-checkbox>`
     })
   )
+  .add(
+    'small',
+    () => ({
+      template: `<gor-checkbox [size]="'sm'"></gor-checkbox>`
+    })
+  )
+  .add(
+    'medium',
+    () => ({
+      template: `<gor-checkbox [size]="'md'"></gor-checkbox>`
+    })
+  )
+  .add(
+    'large',
+    () => ({
+      template: `<gor-checkbox [size]="'lg'"></gor-checkbox>`
+    })
+  )
