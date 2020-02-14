@@ -54,6 +54,13 @@ export class CheckboxComponent implements OnInit, OnChanges {
 
   /**
    * Checkbox background color when active
+   * - red: #df5e3d
+   * - darkblue: #314a61
+   * - blue: #815ae8
+   * - lightblue: #0dd6f4
+   * - yellow: #fcbd1f
+   * - pink: #ed4581
+   * - gradient: from #10c0c6 to #4dde90
    */
   @Input() public backgroundColor: 'red' | 'darkblue' | 'blue' | 'lightblue' | 'yellow' | 'pink' | 'gradient' = 'gradient';
 
