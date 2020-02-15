@@ -115,12 +115,11 @@ export class CheckboxComponent implements OnInit, OnChanges {
    * Updates checkbox classes.
    */
   private updateClasses() {
-    const cssInputs = [
+    this.classes = [
       this.size,
       this.labelTransform,
       this.backgroundColor,
       this.textColor
-    ]
-    this.classes = cssInputs.join(' ');
+    ].join(' ');
   }
 }
