@@ -94,7 +94,7 @@ gor-checkbox {
   mat-checkbox.gradient {
     &.mat-checkbox-checked .mat-checkbox-background,
     &.mat-checkbox-indeterminate .mat-checkbox-background {
-      background-image: linear-gradient(to right, $GorilaDefault, $GorilaSecondary) !important;
+      background-image: linear-gradient(to right, $GorilaDefault, $GorilaSecondary);
     }
   }
 
