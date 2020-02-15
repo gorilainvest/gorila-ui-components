@@ -23,13 +23,13 @@ export class CheckboxComponent implements OnInit, OnChanges {
   @Input() public id: string | number = 0;
 
   /**
-   * Checkbox label
+   * Checkbox label.
    * @default label
    */
   @Input() public label = 'Label';
 
   /**
-   * Label text transform
+   * Label text transform.
    * - up: uppercase
    * - lo: lowercase
    * - cp: capitalize
@@ -39,7 +39,7 @@ export class CheckboxComponent implements OnInit, OnChanges {
   @Input() public labelTransform: 'up' | 'lo' | 'cp' | 'no' = 'up';
 
   /**
-   * Checkbox size
+   * Checkbox size.
    * - sm: small (12px)
    * - md: medium (14px)
    * - lg: large (16px)
@@ -49,7 +49,7 @@ export class CheckboxComponent implements OnInit, OnChanges {
   @Input() public size: 'sm' | 'md' | 'lg' = 'sm';
 
   /**
-   * Text color
+   * Text color.
    * - dark: #2d2d2d ($body)
    * - light: #888e8e ($textSecondary)
    * @default dark
@@ -57,7 +57,7 @@ export class CheckboxComponent implements OnInit, OnChanges {
   @Input() public textColor: 'dark' | 'light' = 'dark';
 
   /**
-   * Checkbox background color when active
+   * Checkbox background color when active.
    * - red: #df5e3d
    * - darkblue: #314a61
    * - blue: #815ae8
@@ -85,7 +85,11 @@ export class CheckboxComponent implements OnInit, OnChanges {
 
   /**
    * Classes added to the mat-checkbox component.
-   * A string build from the inputs size and labelCapitalization.
+   * A string build from the css inputs:
+   * - size
+   * - labelTransform
+   * - textColor
+   * - backgroundColor
    */
   public classes = '';
 
