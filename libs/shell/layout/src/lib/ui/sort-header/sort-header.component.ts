@@ -25,7 +25,7 @@ export class SortHeaderComponent {
   public matColumnDataDefs = [
     {
       id: 'name',
-      headerText: 'Name'
+      headerText: `Super \nDuper Gorila`
     },
     {
       id: 'age',
