@@ -1,0 +1,846 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Gorila UI Toolkit Documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Gorila UI Toolkit Documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>LoadingModalComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>libs/ui-toolkit/modals/src/lib/modal/loading-modal/loading-modal.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Extends</h3>
+    </p>
+    <p class="comment">
+                <code><a href="../components/SimpleModalComponent.html" target="_self" >SimpleModalComponent</a></code>
+    </p>
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>gor-loading-modal</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./loading-modal.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./loading-modal.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#data">data</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dialogRef">dialogRef</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#closeDialog">closeDialog</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#bodyImage">bodyImage</a>
+                            </li>
+                            <li>
+                                <a href="#bodyText">bodyText</a>
+                            </li>
+                            <li>
+                                <a href="#height">height</a>
+                            </li>
+                            <li>
+                                <a href="#noText">noText</a>
+                            </li>
+                            <li>
+                                <a href="#socialMedia">socialMedia</a>
+                            </li>
+                            <li>
+                                <a href="#socialMediaArray">socialMediaArray</a>
+                            </li>
+                            <li>
+                                <a href="#titleText">titleText</a>
+                            </li>
+                            <li>
+                                <a href="#width">width</a>
+                            </li>
+                            <li>
+                                <a href="#yesText">yesText</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="bodyImage"></a>
+                        <b>bodyImage</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;/assets/img/comming-soon.svg&#x27;</code>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4" colspan="2">
+                                    <div class="io-line">Inherited from         <code><a href="../components/SimpleModalComponent.html" target="_self" >SimpleModalComponent</a></code>
+</div>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in         <code><a href="../components/SimpleModalComponent.html#source" target="_self" >SimpleModalComponent:47</a></code>
+</div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Indicates default values for simple modal in this case specifically it is a the modal image.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="bodyText"></a>
+                        <b>bodyText</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;Body content&#x27;</code>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4" colspan="2">
+                                    <div class="io-line">Inherited from         <code><a href="../components/SimpleModalComponent.html" target="_self" >SimpleModalComponent</a></code>
+</div>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in         <code><a href="../components/SimpleModalComponent.html#source" target="_self" >SimpleModalComponent:35</a></code>
+</div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Indicates default body text for modal.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="height"></a>
+                        <b>height</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;400px&#x27;</code>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4" colspan="2">
+                                    <div class="io-line">Inherited from         <code><a href="../components/SimpleModalComponent.html" target="_self" >SimpleModalComponent</a></code>
+</div>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in         <code><a href="../components/SimpleModalComponent.html#source" target="_self" >SimpleModalComponent:23</a></code>
+</div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Indicates default height value for modal.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="noText"></a>
+                        <b>noText</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;Secundary Button&#x27;</code>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4" colspan="2">
+                                    <div class="io-line">Inherited from         <code><a href="../components/SimpleModalComponent.html" target="_self" >SimpleModalComponent</a></code>
+</div>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in         <code><a href="../components/SimpleModalComponent.html#source" target="_self" >SimpleModalComponent:89</a></code>
+</div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Indicates if secundary button should be displayed and which text it should have.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="socialMedia"></a>
+                        <b>socialMedia</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4" colspan="2">
+                                    <div class="io-line">Inherited from         <code><a href="../components/SimpleModalComponent.html" target="_self" >SimpleModalComponent</a></code>
+</div>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in         <code><a href="../components/SimpleModalComponent.html#source" target="_self" >SimpleModalComponent:53</a></code>
+</div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Indicates if social media icon should be displayed.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="socialMediaArray"></a>
+                        <b>socialMediaArray</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/SocialMediaArray.html" target="_self" >SocialMediaArray[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {
+      img: &#x27;/assets/img/facebook.svg&#x27;,
+      URL: &#x27;https://www.facebook.com/GorilaInvest/&#x27;,
+      id: &#x27;Facebook&#x27;
+    },
+    {
+      img: &#x27;/assets/img/instagram.svg&#x27;,
+      URL: &#x27;https://www.instagram.com/gorilainvest&#x27;,
+      id: &#x27;Instagram&#x27;
+    },
+    {
+      img: &#x27;/assets/img/twitter.svg&#x27;,
+      URL: &#x27;https://twitter.com/gorilainvest&#x27;,
+      id: &#x27;Twitter&#x27;
+    },
+    {
+      img: &#x27;/assets/img/linked-in.svg&#x27;,
+      URL: &#x27;https://www.linkedin.com/company/gorila&#x27;,
+      id: &#x27;Linked-in&#x27;
+    }
+  ]</code>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4" colspan="2">
+                                    <div class="io-line">Inherited from         <code><a href="../components/SimpleModalComponent.html" target="_self" >SimpleModalComponent</a></code>
+</div>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in         <code><a href="../components/SimpleModalComponent.html#source" target="_self" >SimpleModalComponent:58</a></code>
+</div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Indicates which social media icon with URL and image should be displayed in modal.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="titleText"></a>
+                        <b>titleText</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;Title&#x27;</code>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4" colspan="2">
+                                    <div class="io-line">Inherited from         <code><a href="../components/SimpleModalComponent.html" target="_self" >SimpleModalComponent</a></code>
+</div>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in         <code><a href="../components/SimpleModalComponent.html#source" target="_self" >SimpleModalComponent:41</a></code>
+</div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Indicates default title text for modal.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="width"></a>
+                        <b>width</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;500px&#x27;</code>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4" colspan="2">
+                                    <div class="io-line">Inherited from         <code><a href="../components/SimpleModalComponent.html" target="_self" >SimpleModalComponent</a></code>
+</div>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in         <code><a href="../components/SimpleModalComponent.html#source" target="_self" >SimpleModalComponent:29</a></code>
+</div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Indicates default width value for modal.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="yesText"></a>
+                        <b>yesText</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;Primary Button&#x27;</code>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4" colspan="2">
+                                    <div class="io-line">Inherited from         <code><a href="../components/SimpleModalComponent.html" target="_self" >SimpleModalComponent</a></code>
+</div>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in         <code><a href="../components/SimpleModalComponent.html#source" target="_self" >SimpleModalComponent:84</a></code>
+</div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Indicates if primary button should be displayed and which text it should have.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="closeDialog"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            closeDialog
+                        </b>
+                        <a href="#closeDialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>closeDialog()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Inherited from         <code><a href="../components/SimpleModalComponent.html" target="_self" >SimpleModalComponent</a></code>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-line">Defined in         <code><a href="../components/SimpleModalComponent.html#source" target="_self" >SimpleModalComponent:93</a></code>
+</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Function which close modal.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="data"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            data</b>
+                            <a href="#data"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/SimpleModalData.html" target="_self" >SimpleModalData</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @Inject(MAT_DIALOG_DATA)<br />
+                            </code>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Inherited from         <code><a href="../components/SimpleModalComponent.html" target="_self" >SimpleModalComponent</a></code>
+</div>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in         <code><a href="../components/SimpleModalComponent.html#source" target="_self" >SimpleModalComponent:16</a></code>
+</div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dialogRef"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            dialogRef</b>
+                            <a href="#dialogRef"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../components/SimpleModalComponent.html" target="_self" >MatDialogRef&lt;SimpleModalComponent&gt;</a></code>
+
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Inherited from         <code><a href="../components/SimpleModalComponent.html" target="_self" >SimpleModalComponent</a></code>
+</div>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in         <code><a href="../components/SimpleModalComponent.html#source" target="_self" >SimpleModalComponent:15</a></code>
+</div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+
+import { SimpleModalComponent } from &#x27;../simple-modal/simple-modal.component&#x27;;
+
+@Component({
+  selector: &#x27;gor-loading-modal&#x27;,
+  templateUrl: &#x27;./loading-modal.component.html&#x27;,
+  styleUrls: [&#x27;./loading-modal.component.scss&#x27;]
+})
+export class LoadingModalComponent extends SimpleModalComponent {}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;content-container&quot;&gt;
+  &lt;gor-loading [size]&#x3D;&quot;45&quot; [thickness]&#x3D;&quot;8&quot;&gt;&lt;/gor-loading&gt;
+  &lt;span [innerHtml]&#x3D;&quot;data?.titleText | gorKeepHtml&quot;&gt;&lt;/span&gt;
+  &lt;p *ngIf&#x3D;&quot;!!data?.bodyText&quot; [innerHtml]&#x3D;&quot;data.bodyText | gorKeepHtml&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./loading-modal.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;_colors&quot;;
+
+:host {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  height: 100%;
+
+  gor-loading {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+div,
+h3,
+p {
+  text-align: center;
+}
+
+.content-container {
+  margin-top: 60px;
+}
+
+span {
+  color: $GorilaDefault;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+p {
+  margin-top: 5px;
+
+  color: $textSecondary;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.green, .gray {
+  height: 36px;
+  border-radius: 18px;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="content-container">  <gor-loading [size]="45" [thickness]="8"></gor-loading>  <span [innerHtml]="data?.titleText | gorKeepHtml"></span>  <p *ngIf="!!data?.bodyText" [innerHtml]="data.bodyText | gorKeepHtml"></p></div></div>'
+    var COMPONENTS = [{'name': 'ArrowVariationComponent', 'selector': 'gor-arrow-variation, mur-arrow-variation'},{'name': 'ButtonComponent', 'selector': 'gor-button, mag-button'},{'name': 'CalendarHeaderComponent', 'selector': 'gor-calendar-header'},{'name': 'CardContainerComponent', 'selector': 'gor-card-container, gro-card-container'},{'name': 'CountdownButtonComponent', 'selector': 'gor-countdown-button, mag-countdown-button'},{'name': 'CurrencyDisplayComponent', 'selector': 'gro-currency-display'},{'name': 'DataFormatterComponent', 'selector': 'gor-data-formatter'},{'name': 'DatepickerComponent', 'selector': 'SELECTOR'},{'name': 'DatepickerContentComponent', 'selector': 'SELECTOR'},{'name': 'DatepickerToggleComponent', 'selector': 'SELECTOR'},{'name': 'EnhancedHeaderComponent', 'selector': 'gor-enhanced-header'},{'name': 'EnhancedTitleComponent', 'selector': 'gor-enhanced-title, gro-enhanced-title'},{'name': 'FormTextComponent', 'selector': 'gor-form-text'},{'name': 'GdkCardComponent', 'selector': 'gdk-card'},{'name': 'GdkImportComponent', 'selector': 'gdk-import'},{'name': 'GdkJsonInputComponent', 'selector': 'gdk-json-input'},{'name': 'IconComponent', 'selector': 'gor-icon'},{'name': 'LetterheadComponent', 'selector': 'gor-letterhead'},{'name': 'LetterheadFooterComponent', 'selector': 'gor-letterhead-footer'},{'name': 'LetterheadHeaderComponent', 'selector': 'gor-letterhead-header'},{'name': 'LoadingComponent', 'selector': 'gor-loading, mur-loading'},{'name': 'LoadingModalComponent', 'selector': 'gor-loading-modal'},{'name': 'PageHeaderComponent', 'selector': 'gor-page-header'},{'name': 'PopoverComponent', 'selector': 'gor-popover'},{'name': 'PopupConfirmComponent', 'selector': 'gor-popup-confirm, mag-popup-confirm'},{'name': 'ScrollContainerComponent', 'selector': 'gor-scroll-container'},{'name': 'SectionTitleComponent', 'selector': 'gor-section-title, gro-section-title'},{'name': 'SimpleModalComponent', 'selector': 'gor-simple-modal'},{'name': 'SlideToggleComponent', 'selector': 'gor-slide-toggle, mur-slide-toggle'},{'name': 'SlideToggleGroupComponent', 'selector': 'gor-slide-toggle-group, mur-slide-toggle-group'},{'name': 'SortHeaderComponent', 'selector': '[gor-sort-header]'},{'name': 'TooltipComponent', 'selector': 'gor-tooltip'}];
+    var DIRECTIVES = [{'name': 'CancelableRouterLinkWithHrefDirective', 'selector': 'a[gorCancelableRouterLink]'},{'name': 'PageHeaderBottomDirective', 'selector': '[gorPageHeaderBottom]'},{'name': 'TippyDirective', 'selector': '[gorTippy]'},{'name': 'TruncateDirective', 'selector': '[gorTruncate]'}];
+    var ACTUAL_COMPONENT = {'name': 'LoadingModalComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'LoadingModalComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

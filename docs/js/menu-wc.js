@@ -420,6 +420,28 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
+                                <a href="modules/ModalModule.html" data-type="entity-link">ModalModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-ModalModule-8395295777dc57fbf8f56603bd0ede29"' : 'data-target="#xs-components-links-module-ModalModule-8395295777dc57fbf8f56603bd0ede29"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ModalModule-8395295777dc57fbf8f56603bd0ede29"' :
+                                            'id="xs-components-links-module-ModalModule-8395295777dc57fbf8f56603bd0ede29"' }>
+                                            <li class="link">
+                                                <a href="components/LoadingModalComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">LoadingModalComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/SimpleModalComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SimpleModalComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
                                 <a href="modules/PageHeaderModule.html" data-type="entity-link">PageHeaderModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
@@ -456,13 +478,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/PipesModule.html" data-type="entity-link">PipesModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#pipes-links-module-PipesModule-a9c05a354d54e3065f778e1273581cb8"' : 'data-target="#xs-pipes-links-module-PipesModule-a9c05a354d54e3065f778e1273581cb8"' }>
+                                            'data-target="#pipes-links-module-PipesModule-84c743cd24a223def517947de881b34f"' : 'data-target="#xs-pipes-links-module-PipesModule-84c743cd24a223def517947de881b34f"' }>
                                             <span class="icon ion-md-add"></span>
                                             <span>Pipes</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="pipes-links-module-PipesModule-a9c05a354d54e3065f778e1273581cb8"' :
-                                            'id="xs-pipes-links-module-PipesModule-a9c05a354d54e3065f778e1273581cb8"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="pipes-links-module-PipesModule-84c743cd24a223def517947de881b34f"' :
+                                            'id="xs-pipes-links-module-PipesModule-84c743cd24a223def517947de881b34f"' }>
                                             <li class="link">
                                                 <a href="pipes/BigCurrencyPipe.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">BigCurrencyPipe</a>
@@ -470,6 +492,10 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                             <li class="link">
                                                 <a href="pipes/CssClassPipe.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">CssClassPipe</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="pipes/KeepHtmlPipe.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">KeepHtmlPipe</a>
                                             </li>
                                             <li class="link">
                                                 <a href="pipes/PastPeriodColonPipe.html"
@@ -687,6 +713,12 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/ScrollInfo.html" data-type="entity-link">ScrollInfo</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/SimpleModalData.html" data-type="entity-link">SimpleModalData</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/SocialMediaArray.html" data-type="entity-link">SocialMediaArray</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/ToggleData.html" data-type="entity-link">ToggleData</a>
