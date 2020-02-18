@@ -234,6 +234,14 @@
         "scope:ui",
         "group:layout"
       ]
+    },
+    "modals": {
+      "tags": [
+        "team:ape",
+        "exportable",
+        "scope:ui",
+        "group:layout"
+      ]
     }
   }
 }
