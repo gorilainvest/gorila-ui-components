@@ -27,30 +27,33 @@ script:
 before_deploy:
 - npm install @angular/cli
 deploy:
-  - provider: releases
-    skip_cleanup: true
-    draft: true
-    api_key:
-      secure: RCBZB0kCro2GSWLqB23Gn0dzya2DEUm5UsVn5QtLLG/fG/xraJk1i5H0pInIjBFqxgD2lNL+1mehRiN1om3ZKRfSu1PE/+KTixGR4qrKF3UQfie4nuRo5408eJyIHrdX33NCyDEdXJBbK1fpsqakVfuSoKMPzgM38JGXGkSTVgQBPJKE4IxAKjy1gMTllyVt/P/hgmB34MjdECBmAvV60Fg6LNBDcMOHBJF99GgC/YEixHa3hLSlJJLSn+eLK6NxRuYwJBfrOzFxeyjZ3mMQkWEb12P71HZoRyffn1kX7Hh0ggBQRkm6Fobqx6TNhqYSzNvFhTO1KkzYcEZDPl5xOJZxNX+UOUbFG4VEcdS1Mopd4zeELUoBs1G/qFsnYQ2g//vyrxRUHzza0/0p0jdraezScS1ZkqkbxIfdknRtD660rNNZ9RyCGL80+krynX0nzx9WQ56cnOVKt8yipLv66TzkvnlJ+VOXssNi14vC5YAfKm27staKaEdkkCWzCOLiPq7anPPPzdh5LSb2xvKxsrpUkRyrjQhfI8En8KIEX/3hzf2izn/h3SXpdWhtXWK2NhNWPY21TsQfMT7xS37CFrHKwadEN9f2NwsDdHU9Nx5Tdt0rET+cBFaLfhwBGdRX0M6cg6cNb++BWnoiWNNJ6/4J/XThhoj4gT/XRxA74Po=
-    file_glob: true
-    file: 'gorilainvest-ui-toolkit-*.tgz'
-    on:
-      tag: true
-      repo: gorilainvest/gorila-ui-components
-  - provider:      npm
-    skip_cleanup:  true
-    email:         it@gorilainvest.com.br
-    api_key:
-      secure:      aMSe0CyVVQwOILizVyI04SaNvP7yu+rY0LrKH6YtSc0gS4/OB8Vj87ccAK6DKGyFUVXJEwvPcEy4ZCEfyIWs+A3uXr26fwcbp1po0TB0DfDJb7g2ik4dlBqZPxxrIbYASfewDpk5TPMudpCUYrTOyXjhT8owmMqQ4acCaAuSsnnUv5XTQvtKe2vP4gq45kq2oYDPG34WqCMKN3FPYF4xBNj7zD27j1MmAW5LxyTBN5SW9q+/Cr/s5I8Ls/0nh9MmHnx2LyY8Z2lw0viFIMpYbsTO6lXCG10Zrvkd33DkmHroYNIhiDZwQZPd+nZyz6H5EuKp1dQP5CJHMsKWJy+SR90Jt0RGFLQ3RzpFmliRmGNakZYe0X4+LMxe7fvY8AOF3Timwz5VjRLljvrKrh7Vl7QDuSMq6dACtrYl0HWvuWtw2mcAkyg4uJSemjwUUTQj1LD6L3TV8lgb4Jcrzn5160RcWt4/WBV6UcbSYnGxW6JmNumJzgmwZ9UHUF1VhpQ4Yu8oRkUZsH+kEaUeRfstovNEvQpW9IXZIbyyEGgbz7vhqC0kHCwa7ZxF1QGMLksrQtL3D7Xe9PAm2Cpif3fvERuMmU7ozgOUuGE+lKfRfidvJSy+uvJaUypTnP1ybj6gkN7IvdVJRhzNXNiD1/sV4hvaU+EcQ+XjVrAED60JRyc=
-    on:
-      tags:        true
-      repo:        gorilainvest/gorila-ui-components
-  - provider:      pages
-    skip_cleanup:  true
-    github_token:  "$GITHUB_TOKEN"
-    local_dir:     dist/apps/widgets-system/
-    fqdn:          ui.gorilainvest.com.br
-    keep-history:  true
-    on:
-      branch:      master
-      repo:        gorilainvest/gorila-ui-components
+- provider: releases
+  skip_cleanup: true
+  draft: true
+  api_key:
+    secure: RCBZB0kCro2GSWLqB23Gn0dzya2DEUm5UsVn5QtLLG/fG/xraJk1i5H0pInIjBFqxgD2lNL+1mehRiN1om3ZKRfSu1PE/+KTixGR4qrKF3UQfie4nuRo5408eJyIHrdX33NCyDEdXJBbK1fpsqakVfuSoKMPzgM38JGXGkSTVgQBPJKE4IxAKjy1gMTllyVt/P/hgmB34MjdECBmAvV60Fg6LNBDcMOHBJF99GgC/YEixHa3hLSlJJLSn+eLK6NxRuYwJBfrOzFxeyjZ3mMQkWEb12P71HZoRyffn1kX7Hh0ggBQRkm6Fobqx6TNhqYSzNvFhTO1KkzYcEZDPl5xOJZxNX+UOUbFG4VEcdS1Mopd4zeELUoBs1G/qFsnYQ2g//vyrxRUHzza0/0p0jdraezScS1ZkqkbxIfdknRtD660rNNZ9RyCGL80+krynX0nzx9WQ56cnOVKt8yipLv66TzkvnlJ+VOXssNi14vC5YAfKm27staKaEdkkCWzCOLiPq7anPPPzdh5LSb2xvKxsrpUkRyrjQhfI8En8KIEX/3hzf2izn/h3SXpdWhtXWK2NhNWPY21TsQfMT7xS37CFrHKwadEN9f2NwsDdHU9Nx5Tdt0rET+cBFaLfhwBGdRX0M6cg6cNb++BWnoiWNNJ6/4J/XThhoj4gT/XRxA74Po=
+  file_glob: true
+  file: gorilainvest-ui-toolkit-*.tgz
+  on:
+    tag: true
+    repo: gorilainvest/gorila-ui-components
+- provider: npm
+  skip_cleanup: true
+  email: it@gorilainvest.com.br
+  api_key:
+    secure: aMSe0CyVVQwOILizVyI04SaNvP7yu+rY0LrKH6YtSc0gS4/OB8Vj87ccAK6DKGyFUVXJEwvPcEy4ZCEfyIWs+A3uXr26fwcbp1po0TB0DfDJb7g2ik4dlBqZPxxrIbYASfewDpk5TPMudpCUYrTOyXjhT8owmMqQ4acCaAuSsnnUv5XTQvtKe2vP4gq45kq2oYDPG34WqCMKN3FPYF4xBNj7zD27j1MmAW5LxyTBN5SW9q+/Cr/s5I8Ls/0nh9MmHnx2LyY8Z2lw0viFIMpYbsTO6lXCG10Zrvkd33DkmHroYNIhiDZwQZPd+nZyz6H5EuKp1dQP5CJHMsKWJy+SR90Jt0RGFLQ3RzpFmliRmGNakZYe0X4+LMxe7fvY8AOF3Timwz5VjRLljvrKrh7Vl7QDuSMq6dACtrYl0HWvuWtw2mcAkyg4uJSemjwUUTQj1LD6L3TV8lgb4Jcrzn5160RcWt4/WBV6UcbSYnGxW6JmNumJzgmwZ9UHUF1VhpQ4Yu8oRkUZsH+kEaUeRfstovNEvQpW9IXZIbyyEGgbz7vhqC0kHCwa7ZxF1QGMLksrQtL3D7Xe9PAm2Cpif3fvERuMmU7ozgOUuGE+lKfRfidvJSy+uvJaUypTnP1ybj6gkN7IvdVJRhzNXNiD1/sV4hvaU+EcQ+XjVrAED60JRyc=
+  on:
+    tags: true
+    repo: gorilainvest/gorila-ui-components
+- provider: pages
+  skip_cleanup: true
+  github_token: "$GITHUB_TOKEN"
+  local_dir: dist/apps/widgets-system/
+  fqdn: ui.gorilainvest.com.br
+  keep-history: true
+  on:
+    branch: master
+    repo: gorilainvest/gorila-ui-components
+notifications:
+  slack:
+    secure: H3iPOuvRAMa5mOnY+ul42OKxTnWKlQvP7UT3aUeHAMedj9X1/i8KtKtAw06O+yrVBj+2JomMR4bUB9yBwlx1ZaUTEFsxQbjqYNoUIy9e8d1Ir+GT9xf2Zfbl1Cy/Zy4mxR9udIY3MrOf6xFsFmjmJMStsRictvTsRYv1auwZJfhxN+CT853hie0gAGCEAWQT8Z4QfVsBeYHGLN80sMAWusPFNthFTWc/qdd9hvJldj+aJwuHUjE3op0MR61m+7+oxXFtyUqsmh7Q28A/i1D8pcOjOX1tFdCttkN5fxG1gGtshXOlLmlo30Kk1w8qkaPe3d4P0t3h/jm4SyWvVS62qCZe61repV0H17UqO98pv3qvK00rcnUUfzfIEcYV1qGMbroQg/vcyj+2arIueLzWy85hoAg+7KEyuLBjpAJqP9zZhr5O9znRyzfH7oQzf4jwqv8toKsmzUyEw910W/m1PVYcTw0Er1XyVus4CZDV7mNvBLV1cazaNZxUCQq6I/+FUUjasSafNj0SjzJV9j+hH2Lg6rfqBMavgnMaMM4dYkl9n/cuVKrG+eX37IfW1PsL69Y7lRXIBUvzSH5bt0zCeJ4Zo0k4Az1db81nvEnZqWUUKC4Gb+ojiJzsKu51/TX1aa+xJ527PLM0dzoRORo2kBUYGUhOKiTOshv3gPA1Q1o=
