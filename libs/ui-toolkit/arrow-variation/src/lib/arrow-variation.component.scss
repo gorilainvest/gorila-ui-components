@@ -14,10 +14,12 @@ $lg-size: 18px;
 
 .arrow {
   object-fit: contain;
+  display: flex;
 }
 
 .arrow,
 .zero {
+  display: flex;
   &.lg {
     width: $lg-size;
     height: $lg-size;
