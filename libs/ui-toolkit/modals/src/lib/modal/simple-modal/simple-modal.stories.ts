@@ -1,13 +1,14 @@
 import { Component, Inject, Input, OnChanges, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PipesModule } from '@gorilainvest/ui-toolkit/pipes';
-import { boolean, text, withKnobs, object } from '@storybook/addon-knobs';
+import { boolean, object, text, withKnobs } from '@storybook/addon-knobs';
 import { moduleMetadata, storiesOf } from '@storybook/angular';
 import { timer } from 'rxjs';
 
-import { SimpleModalData, SocialMediaArray } from './simple-modal.data';
-import { SimpleModalComponent } from './simple-modal.component';
 import { ModalModule } from '../modal.module';
+import { SimpleModalComponent } from './simple-modal.component';
+import { SimpleModalData, SocialMediaArray } from './simple-modal.data';
 
 const socialMediaMock = [
   {
@@ -102,7 +103,7 @@ storiesOf('simple modal', module)
         { provide: MatDialogRef, useValue: {} },
         { provide: MAT_DIALOG_DATA, useValue: [] }
       ],
-      imports: [ModalModule, PipesModule, MatDialogModule],
+      imports: [BrowserAnimationsModule, ModalModule, PipesModule, MatDialogModule],
       declarations: [TestComponent]
     })
   )
