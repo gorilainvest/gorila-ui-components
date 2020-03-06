@@ -72,10 +72,10 @@ export class ArrowVariationComponent {
    */
 
   public updateArrow(n: number | '') {
-     if (this.pdfPrint) {
-      this.arrowLink = n > 0 ? '/assets/img/positive.png' : '/assets/img/negative.png'
-    }
 
+    if (this.pdfPrint) {
+       this.arrowLink = n > 0 ? '/assets/img/positive.png' : '/assets/img/negative.png';
+}
     this.isZero = !n;
     this.arrowColor = n > 0 ? '#75B629' : '#EF2E2E';
     this.arrowDirection = n > 0 ? PATH_ARROW.UP : PATH_ARROW.DOWN;
