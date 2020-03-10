@@ -25,7 +25,7 @@ describe('ArrowVariationComponent', () => {
 
   describe('positive values', () => {
     it('arrow direction must be `up`', () => {
-      component.updateArrow(2019);
+      component.updateArrow();
       fixture.detectChanges();
 
       const arrow = fixture.debugElement.query(By.css('path')).nativeElement;
@@ -38,7 +38,7 @@ describe('ArrowVariationComponent', () => {
 
   describe('negative values', () => {
     it('arrow direction must be `down`', () => {
-      component.updateArrow(-2019);
+      component.updateArrow();
       fixture.detectChanges();
 
       const arrow = fixture.debugElement.query(By.css('path')).nativeElement;
@@ -51,7 +51,7 @@ describe('ArrowVariationComponent', () => {
 
   describe('zero values', () => {
     it('arrow must not be displayed', () => {
-      component.updateArrow(0);
+      component.updateArrow();
       fixture.detectChanges();
 
       const emptyDiv = fixture.debugElement.query(By.css('#emptyDiv'));
