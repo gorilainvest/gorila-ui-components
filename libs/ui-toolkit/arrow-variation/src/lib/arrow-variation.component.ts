@@ -17,20 +17,17 @@ export enum PATH_ARROW {
   styleUrls: ['./arrow-variation.component.scss']
 })
 export class ArrowVariationComponent {
+
   private _printing: boolean;
 
-  @Input() set printing(printing: boolean)    {
+  @Input() set printing(printing: boolean){
     this._printing = printing;
-    this.updateArrow();;;;
+    this.updateArrow()
   }
 
- get pdfPrintValue() {
-   
-   
-   
-    return this._printing;;;  }
- ;
-  }
+   get pdfPrintValue() { return this._printing }
+
+
   /**
    * The size of the arrow, can be:
    * - sm: small (6px)
@@ -50,21 +47,11 @@ export class ArrowVariationComponent {
   private _value: number | '';
 
   @Input() set value(n: number | '') {
-
-    this._value = n;;;;;
+    this._value = n
     this.updateArrow();
-
   }
-
-  get nValue() {
-
-
-         
-    return this._value;
- ;
- ;
- ;
-  }
+  
+  get value() { return this._value }
 
   public arrowLink: string;
 
@@ -99,15 +86,15 @@ export class ArrowVariationComponent {
 
   public updateArrow() {
     this.isZero = !this._value;
-    if    (this._value > 0) {
-      this.arrowColor = '#75B629';;;;
+    if(this._value > 0) {
+      this.arrowColor = '#75B629'
       this.arrowDirection = PATH_ARROW.UP;
       if (this._printing) {
         this.arrowLink = '/assets/img/positive.png';
       }
-      return;;;;
-  
-    if    (this._printing) {
+      return;
+    } 
+    if(this._printing) {
       this.arrowLink = '/assets/img/negative.png';
     }
     this.arrowColor = '#EF2E2E';
