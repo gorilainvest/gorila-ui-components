@@ -25,7 +25,7 @@ export class ArrowVariationComponent {
     this.updateArrow()
   }
 
-   get pdfPrintValue() { return this._printing }
+   get printing() { return this._printing }
 
 
   /**
