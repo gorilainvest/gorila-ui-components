@@ -25,9 +25,10 @@ describe('ArrowVariationComponent', () => {
 
   describe('positive values', () => {
     it('arrow direction must be `up`', () => {
+      component.value = 2010;
       component.updateArrow();
       fixture.detectChanges();
-
+      
       const arrow = fixture.debugElement.query(By.css('path')).nativeElement;
       const color = arrow.getAttribute('fill');
       const path = arrow.getAttribute('d');
@@ -38,6 +39,7 @@ describe('ArrowVariationComponent', () => {
 
   describe('negative values', () => {
     it('arrow direction must be `down`', () => {
+      component.value = -2020;
       component.updateArrow();
       fixture.detectChanges();
 
