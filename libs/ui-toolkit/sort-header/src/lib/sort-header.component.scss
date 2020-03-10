@@ -1,8 +1,9 @@
 // Get from Angular Material2 repository
 // https://github.com/angular/components/blob/master/src/material/sort/sort-header.scss
+@import "_colors";
 
 $mat-sort-header-arrow-margin: 6px;
-$mat-sort-header-arrow-container-size: 12px;
+$mat-sort-header-arrow-container-size: 10px;
 $mat-sort-header-arrow-stem-size: 10px;
 $mat-sort-header-arrow-pointer-length: 6px;
 $mat-sort-header-arrow-thickness: 2px;
@@ -11,11 +12,27 @@ $mat-sort-header-arrow-hint-opacity: 0.38;
 .mat-sort-header-container {
   display: flex;
   align-items: center;
+  align-self: flex-end;
+  margin-bottom: 4px;
 
   cursor: pointer;
 
   .mat-sort-header-disabled & {
     cursor: default;
+  }
+
+  color: $text-gray;
+
+  &.mat-sort-header-sorted {
+    color: $body;
+  }
+
+  &.dark {
+    color: map-get($neutral-colors, 'ligher');
+  }
+
+  &.dark.mat-sort-header-sorted {
+    color: map-get($neutral-colors, 'lightest');
   }
 }
 
@@ -27,15 +44,21 @@ $mat-sort-header-arrow-hint-opacity: 0.38;
   display: flex;
   align-items: center;
 
+  height: fit-content;
+
   padding: 0;
 
-  color: currentColor;
-  font: inherit;
+  color: inherit;
+  font-family: Lato;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1.4;
+  text-transform: uppercase;
+  text-align: left;
+
+  white-space: pre;
 
   background: 0 0;
-
-  border: 0;
-  outline: 0;
 
   cursor: inherit;
 
@@ -45,6 +68,13 @@ $mat-sort-header-arrow-hint-opacity: 0.38;
   &::-moz-focus-inner {
     border: 0;
   }
+}
+
+.mat-sort-header-button,
+.mat-sort-header-button:hover {
+  border: 0;
+  outline: 0;
+  box-shadow: none !important;
 }
 
 .mat-sort-header-arrow {

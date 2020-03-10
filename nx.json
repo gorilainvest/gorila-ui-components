@@ -218,6 +218,14 @@
         "group:layout"
       ]
     },
+    "datepicker": {
+      "tags": [
+        "team:ape",
+        "exportable",
+        "scope:ui",
+        "group:controls"
+      ]
+    },
     "tooltip": {
       "tags": [
         "exportable",
@@ -227,12 +235,12 @@
         "group:layout"
       ]
     },
-    "datepicker": {
+    "modals": {
       "tags": [
         "team:ape",
         "exportable",
         "scope:ui",
-        "group:controls"
+        "group:layout"
       ]
     }
   }

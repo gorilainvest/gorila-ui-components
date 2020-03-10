@@ -1,0 +1,5 @@
+<div class="content-container">
+  <gor-loading [size]="45" [thickness]="8"></gor-loading>
+  <span [innerHtml]="data?.titleText | gorKeepHtml"></span>
+  <p *ngIf="!!data?.bodyText" [innerHtml]="data.bodyText | gorKeepHtml"></p>
+</div>

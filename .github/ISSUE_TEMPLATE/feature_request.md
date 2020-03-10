@@ -18,3 +18,12 @@ A clear and concise description of any alternative solutions or features you've 
 
 **Additional context**
 Add any other context or screenshots about the feature request here.
+
+**QUESTION FOR GORILA TEAM**
+**Is a new or old component?**
+
+[ ] new component [ ] old component
+
+**Is this component used by more than 2 projects?**
+
+[ ] yes [ ] no
