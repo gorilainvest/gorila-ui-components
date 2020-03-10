@@ -17,6 +17,17 @@ export enum PATH_ARROW {
   styleUrls: ['./arrow-variation.component.scss']
 })
 export class ArrowVariationComponent {
+
+  private _printing: boolean;
+
+  @Input() set printing(printing: boolean){
+    this._printing = printing;
+    this.updateArrow()
+  }
+
+   get printing() { return this._printing }
+
+
   /**
    * The size of the arrow, can be:
    * - sm: small (6px)
@@ -32,9 +43,17 @@ export class ArrowVariationComponent {
    *
    * @param n
    */
+
+  private _value: number | '';
+
   @Input() set value(n: number | '') {
-    this.updateArrow(n);
-  };
+    this._value = n
+    this.updateArrow();
+  }
+  
+  get value() { return this._value }
+
+  public arrowLink: string;
 
   /**
    * Color of arrow in hex value
@@ -63,12 +82,22 @@ export class ArrowVariationComponent {
 
   /**
    * Check if the value is positive, negative or zero
-   *
-   * @param n number to check
    */
-  public updateArrow(n: number | '') {
-    this.isZero = !n;
-    this.arrowColor = n > 0 ? '#75B629' : '#EF2E2E';
-    this.arrowDirection = n > 0 ? PATH_ARROW.UP : PATH_ARROW.DOWN;
+
+  public updateArrow() {
+    this.isZero = !this._value;
+    if(this._value > 0) {
+      this.arrowColor = '#75B629'
+      this.arrowDirection = PATH_ARROW.UP;
+      if (this._printing) {
+        this.arrowLink = '/assets/img/positive.png';
+      }
+      return;
+    } 
+    if(this._printing) {
+      this.arrowLink = '/assets/img/negative.png';
+    }
+    this.arrowColor = '#EF2E2E';
+    this.arrowDirection = PATH_ARROW.DOWN;
   }
 }

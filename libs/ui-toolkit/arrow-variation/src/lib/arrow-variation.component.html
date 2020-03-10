@@ -1,6 +1,11 @@
 <div id="emptyDiv" *ngIf="isZero" class="arrow-variation zero" [ngClass]="size"></div>
 <div *ngIf="!isZero" class="arrow" [ngClass]="size">
-  <svg width="100%" height="100%" viewBox="0 0 24 24" style="display: block">
-    <path [attr.fill]="arrowColor" [attr.d]="arrowDirection" />
-  </svg>
+  <ng-container *ngIf="_printing; else svgTemplate">
+    <img [src]="arrowLink" width="100%" height="100%">
+  </ng-container>
+  <ng-template #svgTemplate>
+    <svg width="100%" height="100%" viewBox="0 0 24 24" style="display: block">
+      <path [attr.fill]="arrowColor" [attr.d]="arrowDirection" />
+    </svg>
+  </ng-template>
 </div>

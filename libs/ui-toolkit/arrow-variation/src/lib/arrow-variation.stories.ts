@@ -25,15 +25,15 @@ storiesOf('Arrow Variation', module)
       template: `
       <div style="${containerStyle}">
         <div style="${arrowDivStyle}">
-          <gor-arrow-variation size='sm' [value]="1"></gor-arrow-variation>
-          Smaill
+          <gor-arrow-variation size='sm' [value]="1" [printing]="false"></gor-arrow-variation>
+          Small
         </div>
         <div style="${arrowDivStyle}">
-          <gor-arrow-variation size='md' [value]="1"></gor-arrow-variation>
+          <gor-arrow-variation size='md' [value]="1" [printing]="false"></gor-arrow-variation>
           Medium
         </div>
         <div style="${arrowDivStyle}">
-          <gor-arrow-variation size='lg' [value]="1"></gor-arrow-variation>
+          <gor-arrow-variation size='lg' [value]="1" [printing]="false"></gor-arrow-variation>
           Large
         </div>
       </div>
@@ -47,15 +47,15 @@ storiesOf('Arrow Variation', module)
       template: `
       <div style="${containerStyle}">
         <div style="${arrowDivStyle}">
-          <gor-arrow-variation size='sm' [value]="-1"></gor-arrow-variation>
+          <gor-arrow-variation size='sm' [value]="-1" [printing]="true"></gor-arrow-variation>
           Small
         </div>
         <div style="${arrowDivStyle}">
-          <gor-arrow-variation size='md' [value]="-1"></gor-arrow-variation>
+          <gor-arrow-variation size='md' [value]="-1" [printing]="false"></gor-arrow-variation>
           Medium
         </div>
         <div style="${arrowDivStyle}">
-          <gor-arrow-variation size='lg' [value]="-1"></gor-arrow-variation>
+          <gor-arrow-variation size='lg' [value]="-1" [printing]="false"></gor-arrow-variation>
           Large
         </div>
       </div>
