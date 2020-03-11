@@ -68,6 +68,7 @@
     "@angular/platform-browser": "^8.2.3",
     "@angular/platform-browser-dynamic": "^8.2.3",
     "@angular/router": "^8.2.3",
+    "@gorilainvest/styles": "0.0.2",
     "@ngrx/effects": "7.2.0",
     "@ngrx/router-store": "7.2.0",
     "@ngrx/store": "7.2.0",
