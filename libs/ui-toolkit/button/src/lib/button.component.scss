@@ -1,4 +1,4 @@
-@import "_colors";
+@import '@gorilainvest/styles/scss/_colors';
 
 
 button {
@@ -7,7 +7,7 @@ button {
   border: none;
   border-radius: 12.5px;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
-  color: #ffffff;
+  color: $white;
   font-size: 14px;
   height: 25px;
   padding: 4px 18px;
@@ -16,20 +16,26 @@ button {
 
   &:hover {
    background-position: 100%;
-   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3) !important;
+   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   }
 }
 
 button:disabled {
-  background-color: #cacbcc;
+  color: $dark-gray;
+  background-color: $very-light-gray;
   background-image: none;
   cursor: not-allowed;
+  box-shadow: none;
+
+  &:hover {
+    box-shadow: none;
+  }
 }
 
 .green {
-  background-image: linear-gradient(to right, $GorilaDefault, $GorilaSecondary, $GorilaDefault);
+  background-image: linear-gradient(to right, $gorila-primary, $gorila-secondary, $gorila-primary);
 }
 
 .gray {
-  background-image: linear-gradient(to right, $textSecondary, $textTernary, $textSecondary);
+  background-image: linear-gradient(to right, $dark-gray, $medium-gray, $dark-gray);
 }
