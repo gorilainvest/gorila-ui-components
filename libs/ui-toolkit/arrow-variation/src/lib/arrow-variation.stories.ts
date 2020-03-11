@@ -33,7 +33,7 @@ storiesOf('Arrow Variation', module)
           Medium
         </div>
         <div style="${arrowDivStyle}">
-          <gor-arrow-variation size='lg' [value]="1" [printing]="false"></gor-arrow-variation>
+          <gor-arrow-variation size='lg' [value]="1" [printing]="true"></gor-arrow-variation>
           Large
         </div>
       </div>
@@ -55,7 +55,7 @@ storiesOf('Arrow Variation', module)
           Medium
         </div>
         <div style="${arrowDivStyle}">
-          <gor-arrow-variation size='lg' [value]="-1" [printing]="false"></gor-arrow-variation>
+          <gor-arrow-variation size='lg' [value]="-1" [printing]="true"></gor-arrow-variation>
           Large
         </div>
       </div>

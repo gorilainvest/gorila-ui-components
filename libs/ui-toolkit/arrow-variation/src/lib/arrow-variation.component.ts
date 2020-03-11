@@ -85,16 +85,16 @@ export class ArrowVariationComponent {
    */
 
   public updateArrow() {
-    this.isZero = !this._value;
-    if(this._value > 0) {
+    this.isZero = !this.value;
+    if(this.value > 0) {
       this.arrowColor = '#75B629'
       this.arrowDirection = PATH_ARROW.UP;
-      if (this._printing) {
+      if (this.printing) {
         this.arrowLink = '/assets/img/positive.png';
       }
       return;
     } 
-    if(this._printing) {
+    if(this.printing) {
       this.arrowLink = '/assets/img/negative.png';
     }
     this.arrowColor = '#EF2E2E';
