@@ -18,7 +18,7 @@ export enum PATH_ARROW {
 })
 export class ArrowVariationComponent {
 
-  private _printing: boolean;
+  public _printing: boolean;
 
   @Input() set printing(printing: boolean){
     this._printing = printing;
