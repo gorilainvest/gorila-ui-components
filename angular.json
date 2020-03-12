@@ -205,7 +205,7 @@
             "project": "libs/ui-toolkit/button/ng-package.json",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "node_modules/@gorilainvest/styles/scss"
+                "node_modules"
               ]
             }
           }
@@ -230,7 +230,7 @@
             "karmaConfig": "libs/ui-toolkit/button/karma.conf.js",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "node_modules/@gorilainvest/styles/scss"
+                "node_modules"
               ]
             }
           }
