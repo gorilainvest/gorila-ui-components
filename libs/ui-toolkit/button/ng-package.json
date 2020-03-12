@@ -3,6 +3,6 @@
   "dest": "../../../dist/button",
   "lib": {
     "entryFile": "src/index.ts",
-    "styleIncludePaths": [ "../../shared-styles" ]
+    "styleIncludePaths": [ "../../../node_modules/@gorilainvest/styles/scss" ]
   }
 }
