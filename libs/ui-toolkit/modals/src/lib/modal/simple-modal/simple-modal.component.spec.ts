@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { PipesModule } from '@gorilainvest/ui-toolkit/pipes';
 
 import { SimpleModalComponent } from './simple-modal.component';
+import { ButtonModule } from '@gorilainvest/ui-toolkit/button';
 
 describe('SimpleModalComponent', () => {
   let component: SimpleModalComponent;
@@ -11,7 +12,7 @@ describe('SimpleModalComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [MatDialogModule,  PipesModule],
+      imports: [MatDialogModule,  PipesModule, ButtonModule],
       declarations: [SimpleModalComponent],
       providers: [
         { provide: MatDialogRef, useValue: {} },
