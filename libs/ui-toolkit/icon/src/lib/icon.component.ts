@@ -31,20 +31,11 @@ export class IconComponent {
   }
 
   /**
-   * Secondary option for icon base URL/path.
-   */
-  @Input() public set secondaryBase(data: string) {
-    this.imageError = false;
-    this._secondaryBase = data;
-    this.updatePath();
-  }
-
-  /**
    * The folder modifier for the icon path.
    */
   @Input() public set iconFolder(data: string) {
     this.imageError = false;
-    this._iconFolder = data + '/';
+    this._iconFolder = this.validateFolderName(data);
     this.updatePath();
   }
 
@@ -102,7 +93,7 @@ export class IconComponent {
    *
    * @default '/assets/img/'
    */
-  private _secondaryBase = '/assets/img/';
+  private secondaryBase = '/assets/img/';
 
   /**
    * Stores data of folder modifier for the icon path.
@@ -135,7 +126,7 @@ export class IconComponent {
    * Concatenates base URL/path with icon folder, modifier, color modifier and image format.
    */
   public updatePath() {
-    let prefix = this.imageError ? this._secondaryBase : this.iconBaseSRC;
+    let prefix = this.imageError ? this.secondaryBase : this.iconBaseSRC;
     if (this._iconFolder) {
       prefix = prefix + this._iconFolder;
     }
@@ -149,5 +140,20 @@ export class IconComponent {
   public onImageError() {
     this.imageError = true;
     this.updatePath();
+  }
+
+  /**
+   * Validates and formats icon folder name.
+   */
+  private validateFolderName(data) {
+    if (!data || typeof data !== 'string') { return ''; }
+    let folderName = data;
+    if (data[0] === '/') {
+      folderName = folderName.slice(1);
+    }
+    if (data[data.length - 1] !== '/') {
+      folderName = folderName + '/';
+    }
+    return folderName;
   }
 }
