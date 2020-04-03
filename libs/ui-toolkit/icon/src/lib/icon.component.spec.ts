@@ -27,7 +27,7 @@ describe('IconComponent', () => {
   });
 
   it('should build the icon path using pathPrefix, icon modifier, color modifier and image format.', () => {
-    const path = '/assets/img/email_black.png';
+    const path = 'https://s3.amazonaws.com/gorila-images/app/email_black.png';
     component.color = 'black';
     component.icon = 'email';
     component.imgFormat = 'png';
