@@ -1,10 +1,10 @@
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
-import { IconModule } from '@gorilainvest/ui-toolkit/icon';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ICON_BASE_SRC, IconModule } from '@gorilainvest/ui-toolkit/icon';
 import { moduleMetadata, storiesOf } from '@storybook/angular';
 
 import { SortHeaderComponent } from './sort-header.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const matColumnDataDefs = [
   {
@@ -41,6 +41,9 @@ storiesOf('SortHeader', module)
         IconModule,
         MatSortModule,
         MatTableModule],
+      providers: [
+        { provide: ICON_BASE_SRC, useValue: 'https://s3.amazonaws.com/gorila-images/app/' }
+      ]
     })
   )
   .add(
