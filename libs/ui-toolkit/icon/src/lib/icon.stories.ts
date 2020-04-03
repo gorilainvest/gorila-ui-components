@@ -20,7 +20,6 @@ storiesOf('Icon', module)
       template: `
       <div>
         <gor-icon
-          [secondaryBase]="secondaryBase"
           [iconFolder]="iconFolder"
           [icon]="icon"
           [color]="color"
@@ -29,7 +28,6 @@ storiesOf('Icon', module)
       </div>
       `,
       props: {
-        secondaryBase: text('secondaryBase', '/assets/img/'),
         iconFolder: text('iconFolder', 'Chevrons'),
         icon: text('icon', 'Up'),
         color: text('color', ''),
