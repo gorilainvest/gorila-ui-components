@@ -1,10 +1,15 @@
 import { async, TestBed } from '@angular/core/testing';
+import { ICON_BASE_SRC } from '@gorilainvest/ui-toolkit/icon';
+
 import { SortHeaderModule } from './sort-header.module';
 
 describe('SortHeaderModule', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [SortHeaderModule]
+      imports: [SortHeaderModule],
+      providers: [
+        { provide: ICON_BASE_SRC, useValue: 'https://s3.amazonaws.com/gorila-images/app/' }
+      ]
     }).compileComponents();
   }));
 
