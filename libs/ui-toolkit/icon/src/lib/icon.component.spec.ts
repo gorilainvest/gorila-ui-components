@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { IconComponent } from './icon.component';
+import { ICON_BASE_SRC } from './token';
 
 describe('IconComponent', () => {
   let component: IconComponent;
@@ -8,7 +9,10 @@ describe('IconComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [IconComponent]
+      declarations: [IconComponent],
+      providers: [
+        { provide: ICON_BASE_SRC, useValue: 'https://s3.amazonaws.com/gorila-images/app/' }
+      ]
     }).compileComponents();
   }));
 
