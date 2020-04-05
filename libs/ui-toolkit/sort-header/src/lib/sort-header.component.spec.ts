@@ -5,7 +5,7 @@ import { MatTableDataSource, MatTableModule } from '@angular/material';
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { By } from '@angular/platform-browser';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { IconModule } from '@gorilainvest/ui-toolkit/icon';
+import { ICON_BASE_SRC, IconModule } from '@gorilainvest/ui-toolkit/icon';
 
 import { SortHeaderComponent } from './sort-header.component';
 
@@ -69,7 +69,10 @@ describe('SortHeaderComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [CommonModule, MatSortModule, MatTableModule, NoopAnimationsModule, IconModule],
-      declarations: [SortHeaderComponent, TestHostComponent]
+      declarations: [SortHeaderComponent, TestHostComponent],
+      providers: [
+        { provide: ICON_BASE_SRC, useValue: 'https://s3.amazonaws.com/gorila-images/app/' }
+      ]
     }).compileComponents();
   }));
 

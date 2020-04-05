@@ -1,5 +1,6 @@
 import { Component, Inject, Input, OnChanges, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialog, MatDialogModule, MatDialogRef } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PipesModule } from '@gorilainvest/ui-toolkit/pipes';
 import { text, withKnobs } from '@storybook/addon-knobs';
 import { moduleMetadata, storiesOf } from '@storybook/angular';
@@ -57,7 +58,7 @@ storiesOf('loading modal', module)
         { provide: MatDialogRef, useValue: {} },
         { provide: MAT_DIALOG_DATA, useValue: [] }
       ],
-      imports: [ModalModule, PipesModule, MatDialogModule],
+      imports: [BrowserAnimationsModule, ModalModule, PipesModule, MatDialogModule],
       declarations: [TestComponent]
     })
   )

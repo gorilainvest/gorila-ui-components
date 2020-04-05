@@ -28,7 +28,6 @@ import { CardContainerComponent } from './ui/card-container/card-container.compo
 import { CurrencyDisplayComponent } from './ui/currency-display/currency-display.component';
 import { EnhancedHeaderComponent } from './ui/enhanced-header/enhanced-header.component';
 import { EnhancedTitleComponent } from './ui/enhanced-title/enhanced-title.component';
-import { IconComponent } from './ui/icon/icon.component';
 import { PageHeaderComponent } from './ui/page-header/page-header.component';
 import { ScrollContainerComponent } from './ui/scroll-container/scroll-container.component';
 import { SectionTitleComponent } from './ui/section-title/section-title.component';
@@ -78,11 +77,6 @@ import { LetterheadComponent } from './ui/letterhead/letterhead.component';
         component: EnhancedTitleComponent
       },
       {
-        path: 'icon',
-        pathMatch: 'full',
-        component: IconComponent
-      },
-      {
         path: 'scroll-container',
         pathMatch: 'full',
         component: ScrollContainerComponent
@@ -125,7 +119,6 @@ import { LetterheadComponent } from './ui/letterhead/letterhead.component';
     CurrencyDisplayComponent,
     EnhancedHeaderComponent,
     EnhancedTitleComponent,
-    IconComponent,
     LayoutComponent,
     LetterheadComponent,
     PageHeaderComponent,
