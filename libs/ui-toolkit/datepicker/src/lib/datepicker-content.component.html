@@ -7,6 +7,8 @@
       [startAt]="startAt"
       [startView]="startView"
       [selected]="selectedDate"
+      (yearSelected)="yearSelected($event)"
+      (monthSelected)="monthSelected($event)"
       (selectedChange)="dateChanged($event)"
     ></mat-calendar>
   </div>

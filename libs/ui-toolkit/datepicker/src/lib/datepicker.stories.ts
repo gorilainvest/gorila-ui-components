@@ -1,5 +1,5 @@
-import { storiesOf, moduleMetadata } from '@storybook/angular';
-import { localeData, utc } from 'moment';
+import { moduleMetadata, storiesOf } from '@storybook/angular';
+import { utc } from 'moment';
 
 import { MODULE_METADATA } from './datepicker.module';
 
@@ -30,5 +30,15 @@ storiesOf('Datepicker', module)
   .add('min date set to today', () => ({
     template: `
     <gor-datepicker-content minDate='${today}'></gor-datepicker-content>
+    `
+  }))
+  .add('starting in year-month selection', () => ({
+    template: `
+    <gor-datepicker-content mode='year-month'></gor-datepicker-content>
+    `
+  }))
+  .add('starting in year-only selection', () => ({
+    template: `
+    <gor-datepicker-content mode='year-only'></gor-datepicker-content>
     `
   }));

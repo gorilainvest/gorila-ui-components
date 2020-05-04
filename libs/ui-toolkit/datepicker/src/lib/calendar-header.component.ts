@@ -1,6 +1,6 @@
-import { Component, Input, Inject, forwardRef, Optional, ChangeDetectorRef, ViewEncapsulation } from '@angular/core';
-import { MatCalendarHeader, MatDatepickerIntl, MatCalendar } from '@angular/material/datepicker';
+import { ChangeDetectorRef, Component, forwardRef, Inject, Input, Optional, ViewEncapsulation } from '@angular/core';
 import { DateAdapter, MAT_DATE_FORMATS, MatDateFormats } from '@angular/material/core';
+import { MatCalendar, MatCalendarHeader, MatDatepickerIntl } from '@angular/material/datepicker';
 
 /**
  * Default header for calendar of GorDatepicker.
@@ -28,12 +28,46 @@ export class CalendarHeaderComponent<D> extends MatCalendarHeader<D> {
    */
   @Input() public colorCtrls = '#888E8E';
 
-   constructor(
+  constructor(
     _intl: MatDatepickerIntl,
     @Inject(forwardRef(() => MatCalendar)) calendar: MatCalendar<D>,
     @Optional() _dateAdapter: DateAdapter<D>,
     @Optional() @Inject(MAT_DATE_FORMATS) _dateFormats: MatDateFormats,
-    changeDetectorRef: ChangeDetectorRef) {
-      super(_intl, calendar, _dateAdapter, _dateFormats, changeDetectorRef);
+    changeDetectorRef: ChangeDetectorRef
+  ) {
+    super(_intl, calendar, _dateAdapter, _dateFormats, changeDetectorRef);
   }
+}
+
+/**
+ * Default header for calendar of GorDatepicker.
+ *
+ * @see MatCalendarHeader
+ */
+@Component({
+  selector: 'gor-calendar-header-year-month',
+  templateUrl: './calendar-header.component.html',
+  styleUrls: ['./calendar-header.component.scss'],
+  encapsulation: ViewEncapsulation.None
+})
+export class YearMonthHeaderComponent<D> extends CalendarHeaderComponent<D> {
+  public currentPeriodClicked = (): void => {
+    this.calendar.currentView = this.calendar.currentView === 'multi-year' ? 'year' : 'multi-year';
+  };
+}
+/**
+ * Default header for calendar of GorDatepicker.
+ *
+ * @see MatCalendarHeader
+ */
+@Component({
+  selector: 'gor-calendar-header-year-only',
+  templateUrl: './calendar-header.component.html',
+  styleUrls: ['./calendar-header.component.scss'],
+  encapsulation: ViewEncapsulation.None
+})
+export class YearOnlyHeaderComponent<D> extends CalendarHeaderComponent<D> {
+  public currentPeriodClicked = (): void => {
+    this.calendar.currentView = 'multi-year';
+  };
 }
