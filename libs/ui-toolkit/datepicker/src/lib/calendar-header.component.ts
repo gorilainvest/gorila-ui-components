@@ -1,6 +1,10 @@
-import { ChangeDetectorRef, Component, forwardRef, Inject, Input, Optional, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectorRef, Component, forwardRef, Inject, Input, Optional, ViewEncapsulation, OnInit, OnDestroy } from '@angular/core';
 import { DateAdapter, MAT_DATE_FORMATS, MatDateFormats } from '@angular/material/core';
 import { MatCalendar, MatCalendarHeader, MatDatepickerIntl } from '@angular/material/datepicker';
+
+import { DatepickerModeService } from './datepicker-mode.service';
+import { untilDestroyed } from 'ngx-take-until-destroy';
+import { DatePickerMode } from './datepicker.model';
 
 /**
  * Default header for calendar of GorDatepicker.
@@ -13,7 +17,7 @@ import { MatCalendar, MatCalendarHeader, MatDatepickerIntl } from '@angular/mate
   styleUrls: ['./calendar-header.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class CalendarHeaderComponent<D> extends MatCalendarHeader<D> {
+export class CalendarHeaderComponent<D> extends MatCalendarHeader<D> implements OnInit, OnDestroy {
   /**
    * A valid text color for period button.
    *
@@ -28,46 +32,43 @@ export class CalendarHeaderComponent<D> extends MatCalendarHeader<D> {
    */
   @Input() public colorCtrls = '#888E8E';
 
+  /**
+   * A flag to chose the behavior of datepicker header
+   * If it's set year-only, then the header can't be changed
+   * If it's set year-month, then the hader can toggle between year and multi-year view
+   * If it's set all, then the default behavior will be chosen
+   *
+   * @default "all"
+   */
+  @Input() public mode: DatePickerMode = 'all';
+
   constructor(
     _intl: MatDatepickerIntl,
     @Inject(forwardRef(() => MatCalendar)) calendar: MatCalendar<D>,
     @Optional() _dateAdapter: DateAdapter<D>,
     @Optional() @Inject(MAT_DATE_FORMATS) _dateFormats: MatDateFormats,
-    changeDetectorRef: ChangeDetectorRef
+    changeDetectorRef: ChangeDetectorRef,
+    private modeService: DatepickerModeService
   ) {
     super(_intl, calendar, _dateAdapter, _dateFormats, changeDetectorRef);
   }
-}
 
-/**
- * Default header for calendar of GorDatepicker.
- *
- * @see MatCalendarHeader
- */
-@Component({
-  selector: 'gor-calendar-header-year-month',
-  templateUrl: './calendar-header.component.html',
-  styleUrls: ['./calendar-header.component.scss'],
-  encapsulation: ViewEncapsulation.None
-})
-export class YearMonthHeaderComponent<D> extends CalendarHeaderComponent<D> {
+  public ngOnInit() {
+    this.modeService.listen().pipe(untilDestroyed(this)).subscribe((mode: DatePickerMode) => this.mode = mode);
+  }
+
   public currentPeriodClicked = (): void => {
-    this.calendar.currentView = this.calendar.currentView === 'multi-year' ? 'year' : 'multi-year';
+    if (this.mode === 'year-only') {
+      this.calendar.currentView = 'multi-year';
+      return;
+    }
+
+    if (this.mode === 'year-month') {
+      this.calendar.currentView = this.calendar.currentView === 'multi-year' ? 'year' : 'multi-year';
+      return;
+    }
+    super.currentPeriodClicked();
   };
-}
-/**
- * Default header for calendar of GorDatepicker.
- *
- * @see MatCalendarHeader
- */
-@Component({
-  selector: 'gor-calendar-header-year-only',
-  templateUrl: './calendar-header.component.html',
-  styleUrls: ['./calendar-header.component.scss'],
-  encapsulation: ViewEncapsulation.None
-})
-export class YearOnlyHeaderComponent<D> extends CalendarHeaderComponent<D> {
-  public currentPeriodClicked = (): void => {
-    this.calendar.currentView = 'multi-year';
-  };
+
+  public ngOnDestroy() {}
 }

@@ -3,12 +3,13 @@ import { AfterViewInit, Component, ElementRef, HostBinding, Input, ViewChild, Vi
 import { MatCalendar, MatCalendarView, MatDatepickerContent } from '@angular/material/datepicker';
 import { Moment } from 'moment';
 
-import { CalendarHeaderComponent, YearMonthHeaderComponent, YearOnlyHeaderComponent } from './calendar-header.component';
+import { CalendarHeaderComponent } from './calendar-header.component';
+import { DatepickerModeService } from './datepicker-mode.service';
 import { DatePickerMode } from './datepicker.model';
 
 const mapMode = {
-  'year-month': { view: 'multi-year', header: YearMonthHeaderComponent},
-  'year-only': { view: 'multi-year', header: YearOnlyHeaderComponent}
+  'year-month': { view: 'multi-year'},
+  'year-only': { view: 'multi-year'}
 };
 
 /** @ignore */
@@ -47,12 +48,8 @@ export class DatepickerContentComponent<D> extends MatDatepickerContent<D> imple
     this._mode = mode;
     if (!!mapMode[mode]) {
       this.startView = mapMode[mode].view;
-      this.headerComponentRef = mapMode[mode].header;
     }
-    if (!!this._calendar) {
-      this._calendar.headerComponent['mode'] = mode;
-    }
-
+    this.modeService.setMode(mode);
 
   };
   public get mode(): DatePickerMode {
@@ -92,7 +89,8 @@ export class DatepickerContentComponent<D> extends MatDatepickerContent<D> imple
   @HostBinding('class') public hostClass = SELECTOR;
 
   constructor(
-    elementRef: ElementRef
+    elementRef: ElementRef,
+    private modeService: DatepickerModeService
   ) {
     super(elementRef);
   }
