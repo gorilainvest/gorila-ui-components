@@ -30,7 +30,8 @@ export const MODULE_METADATA = {
   exports: [
     DatepickerComponent,
     DatepickerContentComponent,
-    DatepickerToggleComponent
+    DatepickerToggleComponent,
+    CalendarHeaderComponent
   ],
   entryComponents: [
     CalendarHeaderComponent,

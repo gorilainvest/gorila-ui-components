@@ -100,22 +100,19 @@ export class DatepickerContentComponent<D> extends MatDatepickerContent<D> imple
    */
   public selectedDate: D | null = null;
 
+  public canChangeView = (view: MatCalendarView, mode: DatePickerMode) => (
+    mode === 'all' ||
+    (mode === 'year-month' && view === 'year')
+  ) ? true : false
+
   public ngAfterViewInit() {
     this._calendar._goToDateInView = (date: D, view: MatCalendarView) => {
       this._calendar.activeDate = date;
-      if (this.mode === 'year-only') {
-        return;
+      if (!!this.canChangeView(view, this.mode)) {
+        this._calendar.currentView = view;
       }
-      if (this.mode === 'year-month') {
-        if (view === 'year') {
-          this._calendar.currentView = view;
-        }
-        return;
-      }
-      this._calendar.currentView = view;
     };
     this._calendar.focusActiveCell();
-    document.getElementsByName('gor-calendar-header')['mode'] = this.mode;
   }
 
   /**
