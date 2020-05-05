@@ -33,7 +33,7 @@ export class CalendarHeaderComponent<D> extends MatCalendarHeader<D> implements 
   @Input() public colorCtrls = '#888E8E';
 
   /**
-   * A flag to chose the behavior of datepicker header
+   * A flag to choose the behavior of datepicker header
    * If it's set year-only, then the header can't be changed
    * If it's set year-month, then the hader can toggle between year and multi-year view
    * If it's set all, then the default behavior will be chosen

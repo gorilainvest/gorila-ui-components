@@ -39,7 +39,9 @@ export class DatepickerContentComponent<D> extends MatDatepickerContent<D> imple
   @Input() public applyText = 'Apply';
 
   /**
-   * The text to main button of datepicker
+   * Datepicker mode change the component behavior
+   * blocking which view modes will be used in calendar's
+   * view transition
    *
    * @default "all"
    */
