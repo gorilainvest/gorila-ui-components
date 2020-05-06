@@ -1,6 +1,9 @@
 {
   "name": "@gorilainvest/ui-toolkit/datepicker",
   "version": "0.0.1",
+  "scripts": {
+    "test": "ng t datepicker --watch"
+  },
   "peerDependencies": {
     "@angular/common": "^8.0.0",
     "@angular/core": "^8.0.0"

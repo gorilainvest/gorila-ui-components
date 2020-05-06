@@ -1,14 +1,14 @@
-import { ComponentFixture, TestBed, async } from '@angular/core/testing';
+import { OverlayRef } from '@angular/cdk/overlay';
+import { ElementRef } from '@angular/core';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { DateAdapter, MAT_DATE_FORMATS } from '@angular/material/core';
+import { MatDatepickerInput } from '@angular/material/datepicker';
+import { MatDialogContainer, MatDialogRef } from '@angular/material/dialog';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { Moment, utc } from 'moment';
+import { Moment } from 'moment';
 
 import { DatepickerComponent } from './datepicker.component';
 import { DatepickerModule } from './datepicker.module';
-import { MatDatepickerInput, MatDatepickerModule, MatDatepicker, MatCalendar } from '@angular/material/datepicker';
-import { Component, ElementRef } from '@angular/core';
-import { DateAdapter, MAT_DATE_FORMATS } from '@angular/material/core';
-import { MatDialogRef, MatDialogContainer } from '@angular/material/dialog';
-import { OverlayRef } from '@angular/cdk/overlay';
 
 describe('DatepickerComponent', () => {
   let component: DatepickerComponent<Moment>;

@@ -1,10 +1,10 @@
 import { DebugElement } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatCalendar } from '@angular/material/datepicker';
 import { By } from '@angular/platform-browser';
 import { Moment, utc } from 'moment';
 
 import { DatepickerContentComponent } from './datepicker-content.component';
-import { MatCalendar } from '@angular/material/datepicker';
 import { DatepickerModule } from './datepicker.module';
 
 describe('DatepickerContentComponent', () => {
@@ -159,6 +159,64 @@ describe('DatepickerContentComponent', () => {
       const isDisabled = firstMonthDay.classes['mat-calendar-body-disabled'];
 
       expect(isDisabled).toBeTruthy();
+    });
+  });
+
+  describe('mode tests', () => {
+
+    beforeEach(beforeEachFn);
+
+    describe('testing input changing', () => {
+      it('should not change startView when mode=all', () => {
+        component.mode = 'all';
+        fixture.detectChanges();
+        expect(component.startView).toEqual('month');
+      });
+      it('should change startView to multi-year when mode=year-month', () => {
+        component.mode = 'year-month';
+        fixture.detectChanges();
+        expect(component.startView).toEqual('multi-year');
+      });
+      it('should change startView to multi-year when mode=year-only', () => {
+        component.mode = 'year-only';
+        fixture.detectChanges();
+        expect(component.startView).toEqual('multi-year');
+      });
+
+    });
+
+    describe('testing view changing', () => {
+      it('should return false when mode=year-only', () => {
+        const view = component.canChangeView('multi-year', 'year-only');
+        fixture.detectChanges();
+        expect(view).toBeFalsy();
+      });
+      it('should return false when mode=year-month and view!=year', () => {
+        const view = component.canChangeView('multi-year', 'year-month');
+        fixture.detectChanges();
+        expect(view).toBeFalsy();
+      });
+      it('should return true when mode=year-month and view=year', () => {
+        const view = component.canChangeView('year', 'year-month');
+        fixture.detectChanges();
+        expect(view).toBeTruthy();
+      });
+
+      it('should return true when mode=all and view=year', () => {
+        const view = component.canChangeView('year', 'all');
+        fixture.detectChanges();
+        expect(view).toBeTruthy();
+      });
+      it('should return true when mode=all and view=month', () => {
+        const view = component.canChangeView('month', 'all');
+        fixture.detectChanges();
+        expect(view).toBeTruthy();
+      });
+      it('should return true when mode=all and view=multi-year', () => {
+        const view = component.canChangeView('multi-year', 'all');
+        fixture.detectChanges();
+        expect(view).toBeTruthy();
+      });
     });
   });
 });

@@ -3,18 +3,18 @@ gor-calendar-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
     button {
         display: flex;
         flex-direction: column;
         justify-content: center;
         font-weight: normal;
-    
+
         &:hover {
             box-shadow: none !important;
         }
     }
-    
+
     .mat-calendar-previous-button,
     .mat-calendar-next-button {
         background: none !important;
