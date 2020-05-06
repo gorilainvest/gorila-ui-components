@@ -58,16 +58,18 @@ export class CalendarHeaderComponent<D> extends MatCalendarHeader<D> implements 
   }
 
   public currentPeriodClicked = (): void => {
-    if (this.mode === 'year-only') {
-      this.calendar.currentView = 'multi-year';
-      return;
-    }
+    switch (this.mode) {
+      case 'year-only':
+        this.calendar.currentView = 'multi-year';
+        break;
+      case 'year-month':
+        this.calendar.currentView = this.calendar.currentView === 'multi-year' ? 'year' : 'multi-year';
+        break;
 
-    if (this.mode === 'year-month') {
-      this.calendar.currentView = this.calendar.currentView === 'multi-year' ? 'year' : 'multi-year';
-      return;
+      default:
+        super.currentPeriodClicked();
+        break;
     }
-    super.currentPeriodClicked();
   };
 
   public ngOnDestroy() {}

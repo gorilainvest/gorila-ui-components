@@ -105,7 +105,7 @@ export class DatepickerContentComponent<D> extends MatDatepickerContent<D> imple
   public canChangeView = (view: MatCalendarView, mode: DatePickerMode) => (
     mode === 'all' ||
     (mode === 'year-month' && view === 'year')
-  ) ? true : false
+  )
 
   public ngAfterViewInit() {
     this._calendar._goToDateInView = (date: D, view: MatCalendarView) => {

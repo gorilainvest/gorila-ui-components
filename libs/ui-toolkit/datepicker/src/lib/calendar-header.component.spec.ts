@@ -9,12 +9,12 @@ import { CalendarHeaderComponent } from './calendar-header.component';
 import { DatepickerModule } from './datepicker.module';
 
 class ChangeDetector implements ChangeDetectorRef {
-  markForCheck() {}
+  static __NG_ELEMENT_ID__: () => ChangeDetectorRef = () => null;
+  public markForCheck() {}
   public detach(){}
   public detectChanges(){}
   public checkNoChanges(){}
   public reattach() {}
-  static __NG_ELEMENT_ID__: () => ChangeDetectorRef = () => null;
 }
 
 describe('CalendarHeaderComponent', () => {
