@@ -30,7 +30,7 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
    *
    * @default "all"
    */
-  @Input() public mode: DatePickerMode = 'all';
+  @Input() public mode: DatePickerMode;
 
   /**
    * The text to main button of datepicker
