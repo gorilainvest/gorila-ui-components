@@ -49,10 +49,9 @@ export class DatepickerContentComponent<D> extends MatDatepickerContent<D> imple
   @Input() public set mode(mode: DatePickerMode) {
     this._mode = mode;
     if (!!mapMode[mode]) {
-      this.startView = mapMode[mode].view;
+      this._startView = mapMode[mode].view;
     }
     this.modeService.setMode(mode);
-
   };
   public get mode(): DatePickerMode {
     return this._mode;
@@ -86,7 +85,15 @@ export class DatepickerContentComponent<D> extends MatDatepickerContent<D> imple
    * @default "month"
    * @see MatCalendarView
    */
-  @Input() public startView: MatCalendarView = 'month';
+  private _startView: MatCalendarView = 'month';
+  @Input() public set startView(startView: MatCalendarView) {
+    if (this.mode === 'all') {
+      this._startView = startView;
+    }
+  };
+  public get startView(): MatCalendarView {
+    return this._startView;
+  }
 
   @HostBinding('class') public hostClass = SELECTOR;
 
