@@ -1,12 +1,14 @@
 import { moduleMetadata, storiesOf } from '@storybook/angular';
-import { utc } from 'moment';
+import { localeData, utc } from 'moment';
 
+import { text, withKnobs, select, date } from '@storybook/addon-knobs';
 import { MODULE_METADATA } from './datepicker.module';
 
 const today = utc().format('YYYY-MM-DD');
 
-storiesOf('Datepicker', module)
+storiesOf('DatepickerContent', module)
   .addDecorator(moduleMetadata(MODULE_METADATA))
+  .addDecorator(withKnobs)
   .add('starting in month view', () => ({
     template: `
     <gor-datepicker-content startView='month'></gor-datepicker-content>
@@ -40,5 +42,61 @@ storiesOf('Datepicker', module)
   .add('starting in year-only selection', () => ({
     template: `
     <gor-datepicker-content mode='year-only'></gor-datepicker-content>
+    `
+  }))
+  .add('playground', () => ({
+    template: `
+    <gor-datepicker-content mode='year-only'></gor-datepicker-content>
+    `,
+    props: {
+      applyText: text('applyText', 'Apply'),
+      mode: select('mode', ['all', 'year-only', 'year'], 'year-only'),
+      maxDate: date('maxDate', new Date('2025-01-01')),
+      minDate: date('minDate', new Date('2015-01-01')),
+      startAt: date('startAt'),
+      startView: select('startView', ['multi-year', 'month', 'year'], 'month'),
+    },
+  }));
+
+
+storiesOf('Datepicker', module)
+  .addDecorator(moduleMetadata(MODULE_METADATA))
+  .add('starting in year-only selection', () => ({
+    template: `
+    <input matInput [matDatepicker]='gdp' placeholder="Choose a date">
+    <gor-datepicker-toggle matSuffix
+      [activeOnSelect]="false"
+      [for]="gdp"></gor-datepicker-toggle>
+    <gor-datepicker #gdp
+      maxDate="2020-05-15"
+      minDate="2019-05-02"
+      mode='year-only'
+    ></gor-datepicker>
+    `
+  }))
+  .add('starting in year-month selection', () => ({
+    template: `
+    <input matInput [matDatepicker]='gdp' placeholder="Choose a date">
+    <gor-datepicker-toggle matSuffix
+      [activeOnSelect]="false"
+      [for]="gdp"></gor-datepicker-toggle>
+    <gor-datepicker #gdp
+      maxDate="2020-05-15"
+      minDate="2019-05-02"
+      mode='year-month'
+    ></gor-datepicker>
+    `
+  }))
+  .add('starting in all selection', () => ({
+    template: `
+    <input matInput [matDatepicker]='gdp' placeholder="Choose a date">
+    <gor-datepicker-toggle matSuffix
+      [activeOnSelect]="false"
+      [for]="gdp"></gor-datepicker-toggle>
+    <gor-datepicker #gdp
+      maxDate="2020-05-15"
+      minDate="2019-05-02"
+      mode='all'
+    ></gor-datepicker>
     `
   }));

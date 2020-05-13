@@ -1,9 +1,10 @@
 import { ComponentPortal } from '@angular/cdk/portal';
-import { Component, ViewEncapsulation, ChangeDetectionStrategy, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
 import { MatDatepicker } from '@angular/material/datepicker';
 import { take } from 'rxjs/operators';
 
 import { DatepickerContentComponent } from './datepicker-content.component';
+import { DatePickerMode } from './datepicker.model';
 
 /** @ignore */
 export const SELECTOR = 'gor-datepicker';
@@ -21,6 +22,16 @@ export const SELECTOR = 'gor-datepicker';
   encapsulation: ViewEncapsulation.None
 })
 export class DatepickerComponent<D> extends MatDatepicker<D> {
+
+  /**
+   * Datepicker mode change the component behavior
+   * blocking which view modes will be used in calendar's
+   * view transition
+   *
+   * @default "all"
+   */
+  @Input() public mode: DatePickerMode = 'all';
+
   /**
    * The text to main button of datepicker
    */
@@ -116,6 +127,7 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
       .afterClosed()
       .subscribe(/* istanbul ignore next */ () => this.close());
     this.getPrivateMember('_dialogRef').componentInstance.datepicker = this;
+    this.getPrivateMember('_dialogRef').componentInstance.mode = this.mode || 'all';
     this.getPrivateMember('_dialogRef').componentInstance.applyText = this.applyText || 'Apply';
     this.getPrivateMember('_dialogRef').componentInstance.startAt = this.cloneStartAt();
     this.getPrivateMember('_dialogRef').componentInstance.minDate = this.minDate;
@@ -151,6 +163,7 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
       );
       this.getPrivateMember('_popupComponentRef').instance.datepicker = this;
       this.getPrivateMember('_popupComponentRef').instance.startAt = this.cloneStartAt();
+      this.getPrivateMember('_popupComponentRef').instance.mode = this.mode || 'all';
       this.getPrivateMember('_popupComponentRef').instance.maxDate = this.maxDate;
       this.getPrivateMember('_popupComponentRef').instance.minDate = this.minDate;
       /* istanbul ignore next */
