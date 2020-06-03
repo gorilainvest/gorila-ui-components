@@ -1,4 +1,4 @@
-<div [ngSwitch]="dataType" [ngStyle]="dataStyle" class='item-value'>
+<div [ngSwitch]="dataType" [ngStyle]="dataStyle" [ngClass]="formatterClass">
   <ng-container *ngSwitchCase="'date'">
     {{(value | amUtc | amDateFormat: 'DD/MM/YYYY') || '-'}}
   </ng-container>
