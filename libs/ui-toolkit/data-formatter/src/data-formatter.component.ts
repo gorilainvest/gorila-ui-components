@@ -49,9 +49,7 @@ export class DataFormatterComponent {
    * This parameter is used to set custom class in the data-formatter container.
    * Use the same pattern used in ng-class
    *
-   * The default value is 'item-value'
-   *
-   * @default empty
+   * @default item-value
    */
   @Input() public formatterClass = 'item-value';
 
