@@ -7,7 +7,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./letterhead.component.scss']
 })
 export class LetterheadComponent {
-  public iconList = ['print', 'Information'];
+  public iconList = [{name: 'PDF', folder: 'Platform/Export'}];
   public iconClicked = '';
   public isPrinting = false;
   public headerLabel = new FormControl('Label: ');

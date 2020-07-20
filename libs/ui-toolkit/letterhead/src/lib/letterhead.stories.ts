@@ -1,6 +1,9 @@
 import { object, text, withKnobs } from '@storybook/addon-knobs';
 import { moduleMetadata, storiesOf } from '@storybook/angular';
 
+import { DirectivesModule } from '@gorilainvest/ui-toolkit/directives';
+import { ICON_BASE_SRC, IconModule } from '@gorilainvest/ui-toolkit/icon';
+
 import { LetterheadFooterComponent } from './footer/footer.component';
 import { LetterheadHeaderComponent } from './header/header.component';
 import { LetterheadComponent } from './letterhead.component';
@@ -8,7 +11,9 @@ import { LetterheadComponent } from './letterhead.component';
 storiesOf('Letterhead', module)
   .addDecorator(
     moduleMetadata({
-      declarations: [LetterheadComponent, LetterheadFooterComponent, LetterheadHeaderComponent]
+      imports: [DirectivesModule, IconModule],
+      declarations: [LetterheadComponent, LetterheadFooterComponent, LetterheadHeaderComponent],
+      providers: [{ provide: ICON_BASE_SRC, useValue: 'https://s3.amazonaws.com/gorila-images/app/' }]
     })
   )
   .addDecorator(withKnobs)
@@ -20,6 +25,7 @@ storiesOf('Letterhead', module)
         <gor-letterhead
           tabindex="0"
           [headerRightMain]="headerRightMain"
+          [headerIconList]="headerIconList"
           [headerRightSub]="headerRightSub"
           [footerLeftMain]="footerLeftMain"
           [footerLeftSub]="footerLeftSub"
@@ -38,7 +44,7 @@ storiesOf('Letterhead', module)
       `,
       props: {
         isPrinting: false,
-        headerIconList: [],
+        headerIconList: [{name: 'PDF', folder: 'Platform/Export', tooltipText: 'Baixar PDF', tooltipOrientation: 'top'}],
         headerRightMain: text('headerRightMain', 'Main header'),
         headerRightSub: text('headerRightSub', 'Right subheader'),
         footerLeftMain: text('footerLeftMain', 'Footer main'),

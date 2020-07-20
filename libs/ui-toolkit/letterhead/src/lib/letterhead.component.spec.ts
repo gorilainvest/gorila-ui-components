@@ -1,5 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { DirectivesModule } from '@gorilainvest/ui-toolkit/directives';
+import { ICON_BASE_SRC, IconModule } from '@gorilainvest/ui-toolkit/icon';
 import { LetterheadComponent } from './letterhead.component';
 import { LetterheadFooterComponent } from './footer/footer.component';
 import { LetterheadHeaderComponent } from './header/header.component';
@@ -10,14 +12,13 @@ describe('LetterheadComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [RouterTestingModule, IconModule, DirectivesModule],
       declarations: [
         LetterheadComponent,
         LetterheadFooterComponent,
         LetterheadHeaderComponent,
       ],
-      imports: [
-        RouterTestingModule
-      ]
+      providers: [{ provide: ICON_BASE_SRC, useValue: 'https://s3.amazonaws.com/gorila-images/app/' }]
     })
     .compileComponents();
   }));

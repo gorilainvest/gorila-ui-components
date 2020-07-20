@@ -2,6 +2,8 @@ import { ChangeDetectionStrategy } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
+import { DirectivesModule } from '@gorilainvest/ui-toolkit/directives';
+import { ICON_BASE_SRC, IconModule } from '@gorilainvest/ui-toolkit/icon';
 
 import { LetterheadHeaderComponent } from './header.component';
 
@@ -15,8 +17,11 @@ describe('LetterheadHeaderComponent', () => {
         LetterheadHeaderComponent
       ],
       imports: [
-        RouterTestingModule
-      ]
+        RouterTestingModule,
+        IconModule,
+        DirectivesModule
+      ],
+      providers: [{ provide: ICON_BASE_SRC, useValue: 'https://s3.amazonaws.com/gorila-images/app/' }]
     }).overrideComponent(LetterheadHeaderComponent, { set: {
       changeDetection: ChangeDetectionStrategy.Default
     }})
@@ -34,7 +39,7 @@ describe('LetterheadHeaderComponent', () => {
   });
 
   describe('Test view', () => {
-    const iconsList = ['print', 'lixo'];
+    const iconsList = [{ name: 'PDF', folder: 'Platform/Export' }];
     const testMain = 'Main Input Text';
     const testSub = 'Sub Input Text';
 
@@ -51,11 +56,11 @@ describe('LetterheadHeaderComponent', () => {
       expect(icons.length).toBe(iconsList.length);
     });
 
-    it(`should emit '${iconsList[0]}' value when click on ${iconsList[0]} icon`, () => {
+    it(`should emit '${iconsList[0].name}' value when click on ${iconsList[0].name} icon`, () => {
       spyOn(component.iconClick, 'emit');
       const icons = fixture.debugElement.queryAll(By.css('.icon'));
       icons[0].nativeElement.click();
-      expect(component.iconClick.emit).toHaveBeenCalledWith(iconsList[0]);
+      expect(component.iconClick.emit).toHaveBeenCalledWith(iconsList[0].name);
     });
 
     it(`it should display ${testMain} for right main text`, () => {
