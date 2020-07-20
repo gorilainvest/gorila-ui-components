@@ -15,7 +15,8 @@ import { CardContainerModule } from '@gorilainvest/ui-toolkit/card-container';
 import { CurrencyDisplayModule } from '@gorilainvest/ui-toolkit/currency-display';
 import { EnhancedHeaderModule } from '@gorilainvest/ui-toolkit/enhanced-header';
 import { EnhancedTitleModule } from '@gorilainvest/ui-toolkit/enhanced-title';
-import { IconModule } from '@gorilainvest/ui-toolkit/icon';
+import { ICON_BASE_SRC, IconModule } from '@gorilainvest/ui-toolkit/icon';
+import { DirectivesModule } from '@gorilainvest/ui-toolkit/directives';
 import { PageHeaderModule } from '@gorilainvest/ui-toolkit/page-header';
 import { ScrollContainerModule } from '@gorilainvest/ui-toolkit/scroll-container';
 import { SectionTitleModule } from '@gorilainvest/ui-toolkit/section-title';
@@ -60,6 +61,7 @@ import { LetterheadComponent } from './ui/letterhead/letterhead.component';
     PageHeaderModule,
     SortHeaderModule,
     TooltipModule,
+    DirectivesModule,
     RouterModule.forChild([
       {
         path: 'card-container',
@@ -114,6 +116,7 @@ import { LetterheadComponent } from './ui/letterhead/letterhead.component';
       { path: '', pathMatch: 'full', component: LayoutComponent }
     ])
   ],
+  providers: [{ provide: ICON_BASE_SRC, useValue: 'https://s3.amazonaws.com/gorila-images/app/' }],
   declarations: [
     CardContainerComponent,
     CurrencyDisplayComponent,

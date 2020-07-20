@@ -4,8 +4,13 @@
       <ng-content select="[gorLogo]"></ng-content>
     </div>
     <div class="icon-wrapper">
-      <div *ngFor="let iconName of iconList">
-        <img alt="Header logo" *ngIf="!_isPrinting" class="icon" src="/assets/img/icon_{{iconName}}.svg" (click)="onSelectIcon(iconName)">
+      <div *ngFor="let icon of iconList" class="iconList">
+        <div *ngIf="icon.tooltipText;else noTooltipTemplate" gorTippy [tippyOptions]="{ content: icon.tooltipText , placement: icon.tooltipOrientation }">
+          <gor-icon tabindex="0" *ngIf="!_isPrinting" [iconFolder]="icon.folder" class="icon" [icon]="icon.name" [height]="'32px'" [width]="'32px'"  (click)="onSelectIcon(icon.name)"></gor-icon>
+        </div>  
+        <ng-template #noTooltipTemplate>
+          <gor-icon tabindex="0" *ngIf="!_isPrinting" [iconFolder]="icon.folder" class="icon" [icon]="icon.name" [height]="'32px'" [width]="'32px'"  (click)="onSelectIcon(icon.name)"></gor-icon>
+        </ng-template>
       </div>
     </div>
     <div *ngIf="!!_rightMain || !!_rightMainWithLabel" class="right main">

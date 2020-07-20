@@ -33,14 +33,18 @@ $page-padding: 60px;
     justify-content: flex-end;
   }
 
-  .icon-wrapper .icon {
-    width: 24px;
-    height: 24px;
-    margin-left: 10px;
+  .iconList {
+    margin-left: 15px;
+  }
+
+  .icon {
+    display: flex;
+    grid-area: icons;
+
+    align-items: center;
+    justify-content: flex-end;
 
     cursor: pointer;
-
-    opacity: 0.5;
   }
 
   .right {

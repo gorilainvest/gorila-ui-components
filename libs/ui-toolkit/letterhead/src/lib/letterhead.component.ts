@@ -23,7 +23,12 @@ export class LetterheadComponent {
   /**
    * List of icons to be displayed above page header.
    */
-  @Input() public headerIconList: string[] = [];
+  @Input() public headerIconList: {
+    name: string;
+    folder: string;
+    tooltipText?: string;
+    tooltipOrientation?: string;
+  }[] = [];
 
   /**
    * Identifies page in DOM.

@@ -84,7 +84,7 @@
     <span>// template.html</span>
     <span>&lt;gor-letterhead</span>
     <span>  [isPrinting]=&quot;{{isPrinting}}&quot;</span>
-    <span>  [headerIconList]=&quot;['{{iconList[0].toString()}}', '{{iconList[1].toString()}}']&quot;</span>
+    <span>  [headerIconList]=[&#123; name: '{{iconList[0].name}}', folder: '{{iconList[0].folder}}' &#125;]</span>
     <span *ngIf="!headerLabel.value; else objectTemplate">  [headerRightMain]=&quot;'{{headerMain.value}}'&quot;</span>
     <span>  [headerRightSub]=&quot;'{{headerRightSub.value}}'&quot;</span>
     <span>  [footerLeftMain]=&quot;'{{footerLeftMain.value}}'&quot;</span>
