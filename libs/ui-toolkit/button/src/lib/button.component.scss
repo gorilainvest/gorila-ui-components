@@ -21,7 +21,7 @@ button {
 
 button:disabled {
   color: $dark-gray;
-  background-color: $very-light-gray;
+  background-color: $disabled-button;
   background-image: none;
   cursor: not-allowed;
   box-shadow: none;
@@ -32,9 +32,9 @@ button:disabled {
 }
 
 .green {
-  background-image: linear-gradient(to right, $gorila-primary, $gorila-secondary, $gorila-primary);
+  background-color: $primary-button;
 }
 
 .gray {
-  background-image: linear-gradient(to right, $dark-gray, $medium-gray, $dark-gray);
+  background-color: $secondary-button;
 }
