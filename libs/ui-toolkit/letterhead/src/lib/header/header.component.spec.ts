@@ -39,7 +39,9 @@ describe('LetterheadHeaderComponent', () => {
   });
 
   describe('Test view', () => {
-    const iconsList = [{ name: 'PDF', folder: 'Platform/Export' }];
+
+    const iconsList = [{ name: 'PDF', folder: 'Platform/Export', tooltipText: 'PDF', tooltipOrientation: 'top' }];
+
     const testMain = 'Main Input Text';
     const testSub = 'Sub Input Text';
 
@@ -55,6 +57,20 @@ describe('LetterheadHeaderComponent', () => {
       const icons = fixture.debugElement.queryAll(By.css('.icon'));
       expect(icons.length).toBe(iconsList.length);
     });
+
+
+    it('should display icon tooltip when tooltipText is truthy', () => {
+      const tooltip = fixture.debugElement.query(By.css('[gortippy]'));
+      expect(tooltip).toBeTruthy();
+    });
+
+    it('shouldnt display icon tooltip when tooltipText is false', () => {
+      component.iconList = [{ name: 'PDF', folder: 'Platform/Export' }];
+      fixture.detectChanges();
+      const tooltip = fixture.debugElement.query(By.css('[gortippy]'));
+      expect(tooltip).toBeNull();
+    });
+
 
     it(`should emit '${iconsList[0].name}' value when click on ${iconsList[0].name} icon`, () => {
       spyOn(component.iconClick, 'emit');
