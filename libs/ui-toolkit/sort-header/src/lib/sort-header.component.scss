@@ -1,6 +1,6 @@
 // Get from Angular Material2 repository
 // https://github.com/angular/components/blob/master/src/material/sort/sort-header.scss
-@import "_colors";
+@import "~@gorilainvest/styles/scss/colors";
 
 $mat-sort-header-arrow-margin: 6px;
 $mat-sort-header-arrow-container-size: 10px;
@@ -21,10 +21,10 @@ $mat-sort-header-arrow-hint-opacity: 0.38;
     cursor: default;
   }
 
-  color: $text-gray;
+  color: $dark-gray;
 
   &.mat-sort-header-sorted {
-    color: $body;
+    color: $extra-dark-gray;
   }
 
   &.dark {

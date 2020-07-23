@@ -1,4 +1,4 @@
-@import "_colors";
+@import "~@gorilainvest/styles/scss/colors";
 
 $dialog-padding: 24px;
 $padding-top: 40px;
@@ -43,7 +43,7 @@ $padding-top: 40px;
   align-items: center;
   justify-content: space-evenly;
 
-  color: $textSecondary;
+  color: $dark-gray;
   font-size: 16px;
   line-height: 1.25;
 
@@ -74,7 +74,7 @@ header.mat-dialog-title {
   margin: 10px 10px 0 10px;
 
   h2 {
-    color: $GorilaDefault;
+    color: $gorila-primary;
     font-weight: 400;
     font-size: 2.571rem;
     font-family: Lato;
@@ -88,7 +88,7 @@ header.mat-dialog-title {
 
   margin: 15px;
 
-  background-image: linear-gradient(45deg, $textSecondary, $textTernary);
+  background-image: linear-gradient(45deg, $dark-gray, $medium-gray);
 
   border-radius: 50%;
 
@@ -97,7 +97,7 @@ header.mat-dialog-title {
   }
 
   &.active {
-    background: $GorilaDefault;
+    background: $gorila-primary;
   }
 
   &.disabled {
@@ -110,7 +110,7 @@ header.mat-dialog-title {
   }
 
   &:hover:not(.active) {
-    background-image: linear-gradient(225deg, $GorilaDefault, $GorilaSecondary);
+    background-image: linear-gradient(225deg, $gorila-primary, $gorila-secondary);
   }
 }
 

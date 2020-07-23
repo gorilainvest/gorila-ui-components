@@ -1,4 +1,4 @@
-@import "_colors";
+@import "~@gorilainvest/styles/scss/colors";
 
 :host {
   display: grid;
@@ -22,7 +22,7 @@ p {
 }
 
 span {
-  color: $GorilaDefault;
+  color: $gorila-primary;
   font-weight: 400;
   font-size: 24px;
 }
@@ -30,7 +30,7 @@ span {
 p {
   margin-top: 5px;
 
-  color: $textSecondary;
+  color: $dark-gray;
   font-weight: 300;
   font-size: 18px;
 }

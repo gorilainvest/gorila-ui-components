@@ -1,4 +1,4 @@
-@import "_colors";
+@import "~@gorilainvest/styles/scss/colors";
 
 mat-cell span {
   width: 100px;
@@ -6,7 +6,7 @@ mat-cell span {
 }
 
 .dark {
-  background-color: $textSecondary;
+  background-color: $dark-gray;
 
   mat-cell,
   mat-header-cell {
