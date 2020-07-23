@@ -44,7 +44,7 @@ storiesOf('Letterhead', module)
       `,
       props: {
         isPrinting: false,
-        headerIconList: [{name: 'PDF', folder: 'Platform/Export', tooltipText: 'Baixar PDF', tooltipOrientation: 'top'}],
+        headerIconList: object('headerIconList', [{name: 'PDF', folder: 'Platform/Export', tooltipText: 'Baixar PDF', tooltipOrientation: 'top'}]),
         headerRightMain: text('headerRightMain', 'Main header'),
         headerRightSub: text('headerRightSub', 'Right subheader'),
         footerLeftMain: text('footerLeftMain', 'Footer main'),
