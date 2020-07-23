@@ -30,7 +30,8 @@
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "libs/shared-styles"
+                "libs/shared-styles",
+                "node_modules"
               ]
             },
             "scripts": []
@@ -91,7 +92,8 @@
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "libs/shared-styles"
+                "libs/shared-styles",
+                "node_modules"
               ]
             },
             "scripts": [],
@@ -156,7 +158,8 @@
             "project": "libs/ui-toolkit/arrow-variation/ng-package.json",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "libs/shared-styles"
+                "libs/shared-styles",
+                "node_modules"
               ]
             }
           }
@@ -181,7 +184,8 @@
             "karmaConfig": "libs/ui-toolkit/arrow-variation/karma.conf.js",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "libs/shared-styles"
+                "libs/shared-styles",
+                "node_modules"
               ]
             }
           }
@@ -254,7 +258,8 @@
             "project": "libs/ui-toolkit/card-container/ng-package.json",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "libs/shared-styles"
+                "libs/shared-styles",
+                "node_modules"
               ]
             }
           }
@@ -298,7 +303,8 @@
             "project": "libs/ui-toolkit/countdown-button/ng-package.json",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "libs/shared-styles"
+                "libs/shared-styles",
+                "node_modules"
               ]
             }
           }
@@ -323,7 +329,8 @@
             "karmaConfig": "libs/ui-toolkit/countdown-button/karma.conf.js",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "libs/shared-styles"
+                "libs/shared-styles",
+                "node_modules"
               ]
             }
           }
@@ -347,7 +354,8 @@
             "project": "libs/ui-toolkit/currency-display/ng-package.json",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "libs/shared-styles"
+                "libs/shared-styles",
+                "node_modules"
               ]
             }
           }
@@ -372,7 +380,8 @@
             "karmaConfig": "libs/ui-toolkit/currency-display/karma.conf.js",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "libs/shared-styles"
+                "libs/shared-styles",
+                "node_modules"
               ]
             }
           }
@@ -396,7 +405,8 @@
             "project": "libs/ui-toolkit/enhanced-title/ng-package.json",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "libs/shared-styles"
+                "libs/shared-styles",
+                "node_modules"
               ]
             }
           }
@@ -440,7 +450,8 @@
             "project": "libs/ui-toolkit/data-formatter/ng-package.json",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "libs/shared-styles"
+                "libs/shared-styles",
+                "node_modules"
               ]
             }
           }
@@ -465,7 +476,8 @@
             "karmaConfig": "libs/ui-toolkit/data-formatter/karma.conf.js",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "libs/shared-styles"
+                "libs/shared-styles",
+                "node_modules"
               ]
             }
           }
@@ -489,7 +501,8 @@
             "project": "libs/ui-toolkit/loading/ng-package.json",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "libs/shared-styles"
+                "libs/shared-styles",
+                "node_modules"
               ]
             }
           }
@@ -533,7 +546,8 @@
             "project": "libs/ui-toolkit/popover/ng-package.json",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "libs/shared-styles"
+                "libs/shared-styles",
+                "node_modules"
               ]
             }
           }
@@ -577,7 +591,8 @@
             "project": "libs/ui-toolkit/popup-confirm/ng-package.json",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "libs/shared-styles"
+                "libs/shared-styles",
+                "node_modules"
               ]
             }
           }
@@ -602,7 +617,8 @@
             "karmaConfig": "libs/ui-toolkit/popup-confirm/karma.conf.js",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "libs/shared-styles"
+                "libs/shared-styles",
+                "node_modules"
               ]
             }
           }
@@ -626,7 +642,8 @@
             "project": "libs/ui-toolkit/section-title/ng-package.json",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "libs/shared-styles"
+                "libs/shared-styles",
+                "node_modules"
               ]
             }
           }
@@ -670,7 +687,8 @@
             "project": "libs/ui-toolkit/slide-toggle/ng-package.json",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "libs/shared-styles"
+                "libs/shared-styles",
+                "node_modules"
               ]
             }
           }
@@ -1126,7 +1144,8 @@
             "project": "libs/ui-toolkit/sort-header/ng-package.json",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "libs/shared-styles"
+                "libs/shared-styles",
+                "node_modules"
               ]
             }
           }
@@ -1151,7 +1170,8 @@
             "karmaConfig": "libs/ui-toolkit/sort-header/karma.conf.js",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "libs/shared-styles"
+                "libs/shared-styles",
+                "node_modules"
               ]
             }
           }
@@ -1196,7 +1216,8 @@
             "karmaConfig": "libs/ui-toolkit/datepicker/karma.conf.js",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "libs/shared-styles"
+                "libs/shared-styles",
+                "node_modules"
               ]
             }
           }
@@ -1221,7 +1242,8 @@
             "project": "libs/ui-toolkit/letterhead/ng-package.json",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "libs/shared-styles"
+                "libs/shared-styles",
+                "node_modules"
               ]
             }
           }
@@ -1246,7 +1268,8 @@
             "karmaConfig": "libs/ui-toolkit/letterhead/karma.conf.js",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "libs/shared-styles"
+                "libs/shared-styles",
+                "node_modules"
               ]
             }
           }
@@ -1311,7 +1334,8 @@
             "project": "libs/ui-toolkit/enhanced-header/ng-package.json",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "libs/shared-styles"
+                "libs/shared-styles",
+                "node_modules"
               ]
             }
           }
@@ -1336,7 +1360,8 @@
             "karmaConfig": "libs/ui-toolkit/enhanced-header/karma.conf.js",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "libs/shared-styles"
+                "libs/shared-styles",
+                "node_modules"
               ]
             }
           }
@@ -1361,7 +1386,8 @@
             "project": "libs/ui-toolkit/modals/ng-package.json",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "libs/shared-styles"
+                "libs/shared-styles",
+                "node_modules"
               ]
             }
           }
@@ -1386,7 +1412,8 @@
             "karmaConfig": "libs/ui-toolkit/modals/karma.conf.js",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "libs/shared-styles"
+                "libs/shared-styles",
+                "node_modules"
               ]
             }
           }

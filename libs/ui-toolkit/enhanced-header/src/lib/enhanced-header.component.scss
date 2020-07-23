@@ -1,11 +1,11 @@
-@import "_colors";
+@import "~@gorilainvest/styles/scss/colors";
 
 .text {
   width: 100%;
 
   margin: 0 auto;
 
-  color: $textDefault;
+  color: map-get($neutral-colors, 'dark');
   font-size: 16px;
   font-family: Lato;
   line-height: 1.38;

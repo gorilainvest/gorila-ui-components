@@ -1,4 +1,4 @@
-@import '_colors';
+@import "~@gorilainvest/styles/scss/colors";
 $page-footer-height: 152px;
 $page-padding: 60px;
 
@@ -17,7 +17,7 @@ $page-padding: 60px;
   padding-top: 30px;
   padding-bottom: $page-footer-height - 60px;
 
-  color: $text-gray;
+  color: $dark-gray;
 
   font-size: 14px;
   line-height: 1.43;
@@ -37,7 +37,7 @@ $page-padding: 60px;
   .left.main {
     grid-area: ltop;
 
-    color: $body;
+    color: $extra-dark-gray;
     font-weight: 800;
     font-size: 22px;
   }
@@ -45,7 +45,7 @@ $page-padding: 60px;
   .left.sub {
     grid-area: lbot;
 
-    color: $text-gray;
+    color: $dark-gray;
     font-size: 18px;
   }
 

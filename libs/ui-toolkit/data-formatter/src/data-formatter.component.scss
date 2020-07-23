@@ -1,4 +1,4 @@
-@import "_colors";
+@import "~@gorilainvest/styles/scss/colors";
 
 :host {
   display: block;
@@ -7,7 +7,7 @@
 .item-value {
   display: block;
 
-  color: $body;
+  color: $extra-dark-gray;
   font-size: 16px;
   line-height: 1.5;
   text-transform: capitalize;

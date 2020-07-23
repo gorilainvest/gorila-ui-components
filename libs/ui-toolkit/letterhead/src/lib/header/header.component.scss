@@ -1,4 +1,4 @@
-@import '_colors';
+@import "~@gorilainvest/styles/scss/colors";
 $page-padding: 60px;
 
 .letterhead-header {
@@ -44,7 +44,7 @@ $page-padding: 60px;
   }
 
   .right {
-    color: $body;
+    color: $extra-dark-gray;
 
     font-family: Lato;
     font-style: normal;
@@ -63,7 +63,7 @@ $page-padding: 60px;
   }
 
   #right-main-label {
-    color: $textSecondary;
+    color: $dark-gray;
     font-weight: normal;
   }
 
