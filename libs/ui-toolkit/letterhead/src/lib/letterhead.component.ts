@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, HostBinding, Input, Output, EventEmitter } from '@angular/core';
+import { Icon } from './letterhead.model';
 
 @Component({
   selector: 'gor-letterhead',
@@ -23,7 +24,7 @@ export class LetterheadComponent {
   /**
    * List of icons to be displayed above page header.
    */
-  @Input() public headerIconList: string[] = [];
+  @Input() public headerIconList: Icon[] = [];
 
   /**
    * Identifies page in DOM.

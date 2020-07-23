@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, HostBinding, Input, Output } from '@angular/core';
+import { Icon } from '../letterhead.model';
 
 @Component({
   selector: 'gor-letterhead-header',
@@ -20,7 +21,7 @@ export class LetterheadHeaderComponent {
   /**
    * List of icons to be displayed above page header.
    */
-  @Input() public iconList: string[] = [];
+  @Input() public iconList: Icon[] = [];
 
   public _rightMain = '';
   public _rightMainWithLabel = { label: '', value: '' };
