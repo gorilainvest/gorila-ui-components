@@ -4,9 +4,12 @@
       <ng-content select="[gorLogo]"></ng-content>
     </div>
     <div class="icon-wrapper">
-      <div *ngFor="let iconName of iconList">
-        <img alt="Header logo" *ngIf="!_isPrinting" class="icon" src="/assets/img/icon_{{iconName}}.svg" (click)="onSelectIcon(iconName)">
-      </div>
+      <ng-container *ngIf="!_isPrinting">
+        <div *ngFor="let icon of _iconList">
+          <gor-icon *ngIf="!isIconString" class="icon" [iconFolder]="icon.iconFolder" [icon]="icon" width="24px" height="24px" (click)="onSelectIcon(icon)"></gor-icon>
+          <img *ngIf="isIconString" alt="Header logo" class="icon" src="/assets/img/icon_{{icon}}.svg" (click)="onSelectIcon(icon)">
+        </div>
+      </ng-container>
     </div>
     <div *ngIf="!!_rightMain || !!_rightMainWithLabel" class="right main">
         <span *ngIf="displayDefaultTemplate; else labelTemplate" >{{ _rightMain }}</span>

@@ -1,5 +1,15 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, HostBinding, Input, Output } from '@angular/core';
 
+export interface iconOptions {
+  color: string;
+  icon: string;
+  iconFolder: string;
+  imgFormat: string;
+  imgClass: string;
+  height: string;
+  width: string;
+};
+
 @Component({
   selector: 'gor-letterhead-header',
   templateUrl: './header.component.html',
@@ -20,7 +30,12 @@ export class LetterheadHeaderComponent {
   /**
    * List of icons to be displayed above page header.
    */
-  @Input() public iconList: string[] = [];
+  public _iconList: iconOptions[] | string[] = [];
+  public isIconString = true;
+  @Input() public set iconList(iconList: iconOptions[] | string[]) {
+    this.isIconString = typeof iconList[0] === 'string';
+    this._iconList = iconList;
+  }
 
   public _rightMain = '';
   public _rightMainWithLabel = { label: '', value: '' };
@@ -57,7 +72,7 @@ export class LetterheadHeaderComponent {
    * Emits a string containing the name of the icon clicked.
    * @param iconName the name of the icon clicked
    */
-  public onSelectIcon(iconName: string) {
+  public onSelectIcon(iconName: any) {
     this.iconClick.emit(iconName);
   }
 }

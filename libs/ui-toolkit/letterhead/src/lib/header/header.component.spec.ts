@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
+import { ICON_BASE_SRC, IconModule } from '@gorilainvest/ui-toolkit/icon';
 
 import { LetterheadHeaderComponent } from './header.component';
 
@@ -15,7 +16,11 @@ describe('LetterheadHeaderComponent', () => {
         LetterheadHeaderComponent
       ],
       imports: [
+        IconModule,
         RouterTestingModule
+      ],
+      providers: [
+        { provide: ICON_BASE_SRC, useValue: 'https://s3.amazonaws.com/gorila-images/app/' }
       ]
     }).overrideComponent(LetterheadHeaderComponent, { set: {
       changeDetection: ChangeDetectionStrategy.Default

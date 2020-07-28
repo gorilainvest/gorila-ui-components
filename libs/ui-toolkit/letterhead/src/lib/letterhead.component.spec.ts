@@ -1,8 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { LetterheadComponent } from './letterhead.component';
+import { ICON_BASE_SRC, IconModule } from '@gorilainvest/ui-toolkit/icon';
+
 import { LetterheadFooterComponent } from './footer/footer.component';
 import { LetterheadHeaderComponent } from './header/header.component';
+import { LetterheadComponent } from './letterhead.component';
 
 describe('LetterheadComponent', () => {
   let component: LetterheadComponent;
@@ -16,7 +18,11 @@ describe('LetterheadComponent', () => {
         LetterheadHeaderComponent,
       ],
       imports: [
+        IconModule,
         RouterTestingModule
+      ],
+      providers: [
+        { provide: ICON_BASE_SRC, useValue: 'https://s3.amazonaws.com/gorila-images/app/' }
       ]
     })
     .compileComponents();
