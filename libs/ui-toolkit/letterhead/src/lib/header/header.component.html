@@ -6,8 +6,10 @@
     <div class="icon-wrapper">
       <ng-container *ngIf="!_isPrinting">
         <div *ngFor="let icon of _iconList">
-          <gor-icon *ngIf="!isIconString" class="icon" [iconFolder]="icon.iconFolder" [icon]="icon" width="24px" height="24px" (click)="onSelectIcon(icon)"></gor-icon>
-          <img *ngIf="isIconString" alt="Header logo" class="icon" src="/assets/img/icon_{{icon}}.svg" (click)="onSelectIcon(icon)">
+          <gor-icon *ngIf="!isIconString; else imageTemplate" class="icon" [iconFolder]="icon.iconFolder" [icon]="icon" width="24px" height="24px" (click)="onSelectIcon(icon)"></gor-icon>
+          <ng-template #imageTemplate>
+            <img alt="Header logo" class="icon" src="/assets/img/icon_{{icon}}.svg" (click)="onSelectIcon(icon)">
+          </ng-template>
         </div>
       </ng-container>
     </div>
