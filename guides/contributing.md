@@ -151,7 +151,7 @@ To ensure consistency throughout the source code, keep these rules in mind as yo
 
 * All features or bug fixes **must be tested** by one or more specs (unit-tests).
 * All public API methods **must be documented**. (Details TBD).
-* Keep documentation coverage above 70%. (#documenting).
+* Keep documentation coverage above 70%. (Details about [documentation](#documenting)).
 * We follow [Angular Style Guide][style-guide].
 
 ## <a name="commit"></a> Commit Message Guidelines
