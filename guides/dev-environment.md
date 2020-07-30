@@ -50,4 +50,4 @@ To run lint, run `npm run lint`.
 To update the documentation, run `npm run compodoc` and open [compodoc] in your browser
 
 
-[compodoc]: ./documentation/index.html
+[compodoc]: ../documentation/index.html
