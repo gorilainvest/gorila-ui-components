@@ -1,4 +1,23 @@
-# Developer guide: getting your environment set up
+# Developer guide
+
+### Folder Structure
+
+    .
+    ├── apps
+    ├── coverage                     # Code coverage folder
+    ├── documentation                # Compodoc documentation folder
+    ├── guides                       # Development documentation folder
+    ├── libs                                             	 
+    ├──── gdk                        # Utilities to create documentation pages (deprecated)
+    ├──── shared-styles
+    ├──── shell                      # Ui-toolkit library documentation folder (deprecated)
+    ├──── ui-toolkit                 # Ui-toolkit library codebase folder
+    ├── scripts
+    ├── tools
+    ├── ...
+    └── README.md
+
+### Getting your environment set up
 
 1. Make sure you have `node` installed with a version at _least_ 8.0.0 and `yarn` with a version
    of at least 1.10.0. We recommend using `nvm` to manage your node versions.
@@ -25,3 +44,10 @@ and rebuild. The browser should refresh automatically when changes are made.
 To run unit tests, run `npm run test`.
 To run the e2e tests, run `npm run e2e`.
 To run lint, run `npm run lint`.
+
+### Running documentation
+
+To update the documentation, run `npm run compodoc` and open [compodoc] in your browser
+
+
+[compodoc]: ./documentation/index.html
