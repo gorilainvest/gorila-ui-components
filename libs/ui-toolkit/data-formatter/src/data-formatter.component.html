@@ -1,6 +1,8 @@
 <div [ngSwitch]="dataType" [ngStyle]="dataStyle" [ngClass]="formatterClass">
   <ng-container *ngSwitchCase="'date'">
-    {{(value | amUtc | amDateFormat: 'DD/MM/YYYY') || '-'}}
+    <ng-container *ngIf="(value !== null) && (value !== undefined)">
+      {{(value | amUtc | amDateFormat: 'DD/MM/YYYY') || '-'}}
+    </ng-container>
   </ng-container>
   <ng-container *ngSwitchCase="'number'">
     {{value}}
