@@ -8,7 +8,7 @@
     {{value}}
   </ng-container>
   <ng-container *ngSwitchCase="'text'">
-    {{value}}
+    {{value | translate }}
   </ng-container>
   <ng-container *ngSwitchCase="'currency'">
     {{((value || '') | currency:'BRL':'symbol') || '-'}}
