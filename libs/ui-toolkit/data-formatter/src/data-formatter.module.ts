@@ -8,7 +8,7 @@ import { DataFormatterComponent } from './data-formatter.component';
 
 @NgModule({
   declarations: [DataFormatterComponent, GorCustomPipe],
-  imports: [CommonModule, MomentModule, TranslateModule.forChild()],
+  imports: [CommonModule, MomentModule, TranslateModule],
   providers: [GorCustomPipe],
   exports: [DataFormatterComponent, GorCustomPipe]
 })
