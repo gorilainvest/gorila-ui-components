@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { DataFormatterComponent } from './data-formatter.component';
 import { DataFormatterModule } from './data-formatter.module';
@@ -9,7 +10,7 @@ describe('DataFormatterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [DataFormatterModule]
+      imports: [DataFormatterModule, TranslateModule.forRoot()]
     }).compileComponents();
   }));
 
