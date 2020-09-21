@@ -90,8 +90,19 @@ storiesOf('Card Container', module)
         title="Title"
         colorInit="#10c0c6"
         colorEnd="#4dde90"
-        subtitle="Subtitle"
         contentTitle="Content Title"
+      >
+        ${content}
+      </gor-card-container>
+    `
+  }))
+  .add('without border', () => ({
+    styles,
+    template: `
+      <gor-card-container
+        title="Title"
+        contentTitle="Content Title"
+        [enableBorder]="false"
       >
         ${content}
       </gor-card-container>

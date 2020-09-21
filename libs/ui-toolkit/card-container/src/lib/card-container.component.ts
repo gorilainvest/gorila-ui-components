@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, HostBinding, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 
 /**
@@ -10,6 +10,11 @@ import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
   styleUrls: ['./card-container.component.scss']
 })
 export class CardContainerComponent implements OnChanges {
+  /**
+   * Controls whether cards has border.
+   */
+  @HostBinding('class.enable-border') @Input() public enableBorder = true;
+
   /**
    * The end color of the gradient in top bar.
    */
