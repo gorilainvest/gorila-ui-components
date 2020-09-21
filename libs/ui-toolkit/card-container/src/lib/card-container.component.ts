@@ -31,10 +31,20 @@ export class CardContainerComponent implements OnChanges {
   @Input() public title = '';
 
   /**
-
    * The subtitle for the card.
    */
   @Input() public subtitle = '';
+
+  /**
+   * The content's title, appears on a line above the content.
+   */
+  @Input() public contentTitle = '';
+
+  /**
+   * Used to style the content title.
+   */
+  @Input() public contentTitleClass: string | string[] = null;
+  @Input() public contentTitleStyle: { [cssProp: string]: string } = null;
 
   /**
 

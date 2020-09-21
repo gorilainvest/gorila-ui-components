@@ -78,8 +78,22 @@ storiesOf('Card Container', module)
     },
     styles,
     template: `
-        <gor-card-container [title]="title" [colorInit]="colorInit" [colorEnd]="colorEnd" [subtitle]="subtitle">
-            ${content}
-        </gor-card-container>
-        `
+      <gor-card-container [title]="title" [colorInit]="colorInit" [colorEnd]="colorEnd" [subtitle]="subtitle">
+        ${content}
+      </gor-card-container>
+    `
+  }))
+  .add('with content title', () => ({
+    styles,
+    template: `
+      <gor-card-container
+        title="Title"
+        colorInit="#10c0c6"
+        colorEnd="#4dde90"
+        subtitle="Subtitle"
+        contentTitle="Content Title"
+      >
+        ${content}
+      </gor-card-container>
+    `
   }));

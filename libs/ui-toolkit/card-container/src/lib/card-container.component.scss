@@ -1,5 +1,6 @@
-$sectionTitleHeight: 25px;
+@import "~@gorilainvest/styles/scss/colors";
 
+$sectionTitleHeight: 25px;
 
 :host {
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.13);
@@ -11,7 +12,7 @@ $sectionTitleHeight: 25px;
   height: 100%;
   overflow: hidden;
 
-  background: #fff;
+  background: $white;
 
   gor-section-title {
     display: block;
@@ -31,7 +32,7 @@ $sectionTitleHeight: 25px;
     top: 0;
     right: 0;
 
-    color: #888e8e;
+    color: $dark-gray;
     font-weight: normal;
     font-size: 12px;
     line-height: 1.33;
@@ -73,3 +74,11 @@ $sectionTitleHeight: 25px;
 /* stylelint-enable property-no-unknown */
 /* stylelint-enable property-no-vendor-prefix */
 
+.content-title {
+  display: block;
+  margin: 15px 0 5px;
+  color: $extra-dark-gray;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
