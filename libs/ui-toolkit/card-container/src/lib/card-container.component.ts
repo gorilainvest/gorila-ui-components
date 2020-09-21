@@ -11,6 +11,17 @@ import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 })
 export class CardContainerComponent implements OnChanges {
   /**
+   * Defines whether card displays content or not.
+   */
+  @Input() public emptyCard = false;
+
+  /**
+   * Size of empty container.
+   */
+  @Input() public emptyWidth = '50px';
+  @Input() public emptyHeight = '50px';
+
+  /**
    * Controls whether cards has border.
    */
   @HostBinding('class.enable-border') @Input() public enableBorder = true;

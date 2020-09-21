@@ -2,6 +2,11 @@
 
 $sectionTitleHeight: 25px;
 
+.empty-card {
+  display: block;
+  background-color: $base-background;
+}
+
 :host {
   display: flex;
   flex-direction: column;
@@ -12,7 +17,7 @@ $sectionTitleHeight: 25px;
 
   &.enable-border {
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.13);
-    background: $white;
+    background-color: $white;
   }
 
   gor-section-title {

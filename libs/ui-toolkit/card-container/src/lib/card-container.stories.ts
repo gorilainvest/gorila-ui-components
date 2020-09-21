@@ -17,35 +17,45 @@ const styles = [
   `
     ::ng-deep .card-container {
         padding: 0;
-    }`,
+    }
+  `,
   `
-.dummy-container {
-    background: #ccc;
-    height: calc(100% - 25px);
-    padding: 10px 0;
-}`,
+    .dummy-container {
+        background: #ccc;
+        height: calc(100% - 25px);
+        padding: 10px 0;
+    }
+  `,
   `
-.dummy-content {
-    border: 3px dashed #444;
-    border-radius: 10px;
-    color: #444;
-    height: 100%;
-    width: calc(100% - 20px);
-}`,
+    .dummy-content {
+        border: 3px dashed #444;
+        border-radius: 10px;
+        color: #444;
+        height: 100%;
+        width: calc(100% - 20px);
+    }
+  `,
   `
-.dummy-container,
-.dummy-content {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-`,
-  `gor-card-container {
-    background: #fff;
-    display: block;
-    width: 300px;
-    margin: 10px;
-}`
+    .dummy-container,
+    .dummy-content {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+  `,
+  `
+    gor-card-container {
+      background: #fff;
+      display: block;
+      width: 300px;
+      margin: 10px;
+    }
+  `,
+  `
+    ::ng-deep .empty-card {
+      background-color: red !important;
+    }
+  `
 ];
 
 const modMetadata = moduleMetadata({
@@ -103,6 +113,15 @@ storiesOf('Card Container', module)
         title="Title"
         contentTitle="Content Title"
         [enableBorder]="false"
+      >
+        ${content}
+      </gor-card-container>
+    `
+  }))
+  .add('empty', () => ({
+    template: `
+      <gor-card-container
+        [emptyCard]="true"
       >
         ${content}
       </gor-card-container>
