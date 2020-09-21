@@ -18,7 +18,7 @@ export class CardContainerComponent implements OnChanges {
   /**
    * Size of empty container.
    */
-  @Input() public emptyWidth = '50px';
+  @Input() public emptyWidth = '100%';
   @Input() public emptyHeight = '50px';
 
   /**

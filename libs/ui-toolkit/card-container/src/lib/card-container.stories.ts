@@ -119,6 +119,7 @@ storiesOf('Card Container', module)
     `
   }))
   .add('empty', () => ({
+    styles,
     template: `
       <gor-card-container
         [emptyCard]="true"
