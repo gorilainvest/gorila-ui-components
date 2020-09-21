@@ -1,13 +1,36 @@
-<div *ngIf="cssClass||gradientBgColor" class="card-top" [ngClass]="cssClass" [style.background]="gradientBgColor"></div>
-<div class="card-title" *ngIf="title">
-  <gor-section-title [title]="title">
-    <ng-content select="[header]"></ng-content>
-
-    <span class="card-subtitle" *ngIf="subtitle">{{subtitle}}</span>
-  </gor-section-title>
+<div
+  *ngIf="emptyCard; else withContent"
+  class="empty-card"
+  [style.width]="emptyWidth"
+  [style.height]="emptyHeight"
+>
 </div>
-<div class="card-container">
-  <div class='card-content'>
-    <ng-content select="[body]"></ng-content>
+<ng-template #withContent>
+  <div
+    *ngIf="cssClass||gradientBgColor"
+    class="card-top"
+    [ngClass]="cssClass"
+    [style.background]="gradientBgColor"
+  ></div>
+  <div class="card-title" *ngIf="title">
+    <gor-section-title [title]="title">
+      <ng-content select="[header]"></ng-content>
+      <span class="card-subtitle" *ngIf="subtitle">
+        {{subtitle}}
+      </span>
+    </gor-section-title>
   </div>
-</div>
+  <div class="card-container">
+    <div class="card-content">
+      <span
+        *ngIf="contentTitle"
+        class="content-title"
+        [ngClass]="contentTitleClass"
+        [ngStyle]="contentTitleStyle"
+      >
+        {{ contentTitle }}
+      </span>
+      <ng-content select="[body]"></ng-content>
+    </div>
+  </div>
+</ng-template>

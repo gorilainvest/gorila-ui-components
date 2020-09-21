@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, HostBinding, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 
 /**
@@ -10,6 +10,22 @@ import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
   styleUrls: ['./card-container.component.scss']
 })
 export class CardContainerComponent implements OnChanges {
+  /**
+   * Defines whether card displays content or not.
+   */
+  @Input() public emptyCard = false;
+
+  /**
+   * Size of empty container.
+   */
+  @Input() public emptyWidth = '100%';
+  @Input() public emptyHeight = '50px';
+
+  /**
+   * Controls whether cards has border.
+   */
+  @HostBinding('class.enable-border') @Input() public enableBorder = true;
+
   /**
    * The end color of the gradient in top bar.
    */
@@ -31,10 +47,20 @@ export class CardContainerComponent implements OnChanges {
   @Input() public title = '';
 
   /**
-
    * The subtitle for the card.
    */
   @Input() public subtitle = '';
+
+  /**
+   * The content's title, appears on a line above the content.
+   */
+  @Input() public contentTitle = '';
+
+  /**
+   * Used to style the content title.
+   */
+  @Input() public contentTitleClass: string | string[] = null;
+  @Input() public contentTitleStyle: { [cssProp: string]: string } = null;
 
   /**
 
