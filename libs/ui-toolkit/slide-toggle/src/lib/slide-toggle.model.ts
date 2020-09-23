@@ -22,6 +22,12 @@ export interface ToggleData {
 
 
   /**
+   * Indicates if the toggle is favorite.
+   */
+  favorite: boolean;
+
+
+  /**
    * The custom color for the toggle.
    * @Optional
    */
