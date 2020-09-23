@@ -20,7 +20,7 @@
       </span>
     </gor-section-title>
   </div>
-  <div class="card-container">
+  <div class="card-container" [ngClass]="{ 'card-container--with-title': !!contentTitle }">
     <div class="card-content">
       <span
         *ngIf="contentTitle"

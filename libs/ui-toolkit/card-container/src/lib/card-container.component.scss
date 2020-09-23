@@ -63,6 +63,17 @@ $sectionTitleHeight: 25px;
 
     padding-bottom: 8px;
   }
+
+  &--with-title {
+    display: flex;
+    width: auto;
+
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+  }
 }
 
 
