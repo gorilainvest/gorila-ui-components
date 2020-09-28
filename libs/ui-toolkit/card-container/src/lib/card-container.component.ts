@@ -22,12 +22,6 @@ export class CardContainerComponent implements OnChanges {
   @Input() public shadowType: ShadowType = ShadowType.CARD_CONTAINER;
 
   /**
-   * Size of empty container.
-   */
-  @Input() public emptyWidth = '100%';
-  @Input() public emptyHeight = '50px';
-
-  /**
    * Controls whether cards has border.
    */
   @HostBinding('class.enable-border') @Input() public enableBorder = true;
