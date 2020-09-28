@@ -118,11 +118,13 @@ storiesOf('Card Container', module)
       </gor-card-container>
     `
   }))
-  .add('empty', () => ({
+  .add('with shadow', () => ({
     styles,
     template: `
       <gor-card-container
-        [emptyCard]="true"
+        colorInit="#10c0c6"
+        colorEnd="#4dde90"
+        [displayShadow]="true"
       >
         ${content}
       </gor-card-container>
