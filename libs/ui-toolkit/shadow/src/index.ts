@@ -1,1 +1,1 @@
-export * from './lib/shadow.module';
+export * from './public_api';

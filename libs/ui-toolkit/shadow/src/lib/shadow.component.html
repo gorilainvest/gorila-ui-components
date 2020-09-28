@@ -1,0 +1,99 @@
+<ng-container *ngIf="displayShadow; else loaded">
+  <ng-container [ngSwitch]="shadowType">
+    <ng-container *ngSwitchCase="'header-shadow'">
+      <ng-container *ngTemplateOutlet="headerShadow"></ng-container>
+    </ng-container>
+    <ng-container *ngSwitchCase="'footer-shadow'">
+      <ng-container *ngTemplateOutlet="footerShadow"></ng-container>
+    </ng-container>
+    <ng-container *ngSwitchCase="'table-shadow'">
+      <ng-container *ngTemplateOutlet="tableShadow"></ng-container>
+    </ng-container>
+    <ng-container *ngSwitchCase="'graph-shadow'">
+      <ng-container *ngTemplateOutlet="graphShadow"></ng-container>
+    </ng-container>
+    <ng-container *ngSwitchCase="'card-container-shadow'">
+      <div class="card-container-shadow gor-shadow"></div>
+    </ng-container>
+    <ng-container *ngSwitchDefault>
+      <div class="gor-shadow default-shadow"></div>
+    </ng-container>
+  </ng-container>
+</ng-container>
+
+<ng-template #loaded>
+  <ng-content></ng-content>
+</ng-template>
+
+<ng-template #headerShadow>
+  <div class="header-shadow">
+    <div class="header-shadow__logo gor-shadow"></div>
+    <div class="header-shadow__info">
+      <div class="header-shadow__info-main gor-shadow"></div>
+      <div class="header-shadow__info-secondary gor-shadow"></div>
+      <div class="header-shadow__info-secondary gor-shadow"></div>
+    </div>
+  </div>
+  <div class="header-shadow__stripe gor-shadow"></div>
+</ng-template>
+
+<ng-template #footerShadow>
+  <div class="footer-shadow">
+    <div class="footer-shadow__disclaimer gor-shadow"></div>
+    <div class="footer-shadow__box">
+      <div class="footer-shadow__left">
+        <div class="footer-shadow__left-main gor-shadow"></div>
+        <div class="footer-shadow__left-secondary gor-shadow"></div>
+      </div>
+      <div class="footer-shadow__center">
+        <div class="footer-shadow__center-main gor-shadow"></div>
+        <div class="footer-shadow__center-secondary gor-shadow"></div>
+      </div>
+      <div class="footer-shadow__right">
+        <div class="footer-shadow__right-power gor-shadow"></div>
+        <div class="footer-shadow__right-logo gor-shadow"></div>
+        <div class="footer-shadow__right-website gor-shadow"></div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #tableShadow>
+  <div class="table-shadow">
+    <div class="table-shadow__title">
+      <div class="table-shadow__title-item gor-shadow"></div>
+      <div class="table-shadow__title-item gor-shadow"></div>
+    </div>
+    <div class="table-shadow__header">
+      <div
+        *ngFor="let i of 6 | fill"
+        class="table-shadow__header-item gor-shadow"
+      ></div>
+    </div>
+    <div
+      *ngFor="let i of 3 | fill"
+      class="table-shadow__line gor-shadow"
+    ></div>
+  </div>
+</ng-template>
+
+<ng-template #graphShadow>
+  <div class="graph-shadow">
+    <div class="graph-shadow__title">
+      <div class="graph-shadow__title-item gor-shadow"></div>
+      <div class="graph-shadow__title-item gor-shadow"></div>
+    </div>
+    <div class="graph-shadow__view gor-shadow">
+      <div
+        *ngFor="let i of 7 | fill"
+        class="graph-shadow__bar gor-shadow"
+      ></div>
+    </div>
+    <div class="graph-shadow__label-container">
+      <div
+        *ngFor="let i of 7 | fill"
+        class="graph-shadow__label gor-shadow"
+      ></div>
+    </div>
+  </div>
+</ng-template>
