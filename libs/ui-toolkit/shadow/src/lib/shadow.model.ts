@@ -1,3 +1,6 @@
+/**
+ * Available shadow types.
+ */
 export enum ShadowType {
   DEFAULT = 'default-shadow',
   HEADER = 'header-shadow',
@@ -7,6 +10,9 @@ export enum ShadowType {
   CARD_CONTAINER = 'card-container-shadow',
 };
 
+/**
+ * Returns an array containing possible shadow type values.
+ */
 export const getShadowTypes = () => {
   const types = [];
   for (const type of Object.keys(ShadowType)) {

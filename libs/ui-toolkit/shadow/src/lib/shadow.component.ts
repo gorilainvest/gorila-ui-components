@@ -9,8 +9,12 @@ import { ShadowType } from './shadow.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ShadowComponent {
-  // When false, component displays its content.
+  /**
+   * When false, component displays its content.
+   */
   @Input() public displayShadow = false;
-  // Defines which shadow template is displayed.
+  /**
+   * Defines which shadow template is displayed.
+   */
   @Input() public shadowType: ShadowType = ShadowType.DEFAULT;
 }
