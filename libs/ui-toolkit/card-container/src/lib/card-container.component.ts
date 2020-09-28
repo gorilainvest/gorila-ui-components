@@ -1,5 +1,6 @@
 import { Component, HostBinding, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
+import { ShadowType } from '@gorilainvest/ui-toolkit/shadow';
 
 /**
  * A card container for your widgets with a colored top bar (gradient).
@@ -11,15 +12,14 @@ import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 })
 export class CardContainerComponent implements OnChanges {
   /**
-   * Defines whether card displays content or not.
+   * When false, component displays content.
    */
-  @Input() public emptyCard = false;
+  @Input() public displayShadow = false;
 
   /**
-   * Size of empty container.
+   * Defines which type of shadow will be displayed.
    */
-  @Input() public emptyWidth = '100%';
-  @Input() public emptyHeight = '50px';
+  @Input() public shadowType: ShadowType = ShadowType.CARD_CONTAINER;
 
   /**
    * Controls whether cards has border.

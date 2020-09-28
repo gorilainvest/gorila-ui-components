@@ -1,19 +1,20 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 import { SectionTitleModule } from '@gorilainvest/ui-toolkit/section-title';
+import { ShadowModule } from '@gorilainvest/ui-toolkit/shadow';
 
 import { CardContainerComponent } from './card-container.component';
-import { By } from '@angular/platform-browser';
 
 describe('CardContainerComponent', () => {
   let component: CardContainerComponent;
   let fixture: ComponentFixture<CardContainerComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async() => {
+    await TestBed.configureTestingModule({
       declarations: [CardContainerComponent],
-      imports: [SectionTitleModule]
+      imports: [SectionTitleModule, ShadowModule]
     }).compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(CardContainerComponent);
@@ -27,21 +28,22 @@ describe('CardContainerComponent', () => {
 
   it('should display the colored upper ribbon', () => {
     component.cssClass = 'asset-gradient';
-
     fixture.detectChanges();
-
     const upperRibbon = fixture.debugElement.query(By.css('.card-top.asset-gradient')).nativeElement;
-
     expect(upperRibbon).toBeTruthy();
   });
 
   it('should display the title', () => {
     component.title = 'Title';
-
     fixture.detectChanges();
-
     const title = fixture.debugElement.query(By.css('gor-section-title')).nativeElement.textContent.trim();
-
     expect(title).toEqual('Title');
+  });
+
+  it('should display the shadow if displayShadow is true', () => {
+    component.displayShadow = true;
+    fixture.detectChanges();
+    const shadow = fixture.debugElement.query(By.css('gor-shadow')).nativeElement;
+    expect(shadow).toBeTruthy();
   });
 });

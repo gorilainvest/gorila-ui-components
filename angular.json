@@ -1424,6 +1424,56 @@
           "styleext": "scss"
         }
       }
+    },
+    "shadow": {
+      "projectType": "library",
+      "root": "libs/ui-toolkit/shadow",
+      "sourceRoot": "libs/ui-toolkit/shadow/src",
+      "prefix": "gor",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/ui-toolkit/shadow/tsconfig.lib.json",
+            "project": "libs/ui-toolkit/shadow/ng-package.json",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "libs/shared-styles"
+              ]
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-toolkit/shadow/tsconfig.lib.json",
+              "libs/ui-toolkit/shadow/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/ui-toolkit/shadow/src/test.ts",
+            "tsConfig": "libs/ui-toolkit/shadow/tsconfig.spec.json",
+            "karmaConfig": "libs/ui-toolkit/shadow/karma.conf.js",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "libs/shared-styles"
+              ]
+            }
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

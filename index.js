@@ -17,6 +17,7 @@ export * from './dist/popover';
 export * from './dist/popup-confirm';
 export * from './dist/scroll-container';
 export * from './dist/section-title';
+export * from './dist/shadow';
 export * from './dist/slide-toggle';
 export * from './dist/sort-header';
 export * from './dist/tooltip';
