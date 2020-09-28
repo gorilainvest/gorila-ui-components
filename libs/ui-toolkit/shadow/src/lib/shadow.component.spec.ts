@@ -45,14 +45,14 @@ describe('ShadowComponent', () => {
   });
 
   it('should display the content if displayShadow is false', () => {
+    host.displayShadow = false;
+    fixture.detectChanges();
     const content = fixture.debugElement.query(By.css('.shadow-content')).nativeElement.textContent.trim();
     expect(content).toEqual(host.content);
   });
 
   it('should not display the content if displayShadow is true', () => {
-    host.displayShadow = false;
-    fixture.detectChanges();
-    const content = fixture.debugElement.query(By.css('.shadow-content')).nativeElement.textContent.trim();
+    const content = fixture.debugElement.query(By.css('.shadow-content'));
     expect(content).toBeFalsy();
   });
 
