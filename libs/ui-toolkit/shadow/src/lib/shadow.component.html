@@ -83,17 +83,19 @@
       <div class="graph-shadow__title-item gor-shadow"></div>
       <div class="graph-shadow__title-item gor-shadow"></div>
     </div>
-    <div class="graph-shadow__view gor-shadow">
-      <div
-        *ngFor="let i of 7 | fill"
-        class="graph-shadow__bar gor-shadow"
-      ></div>
-    </div>
-    <div class="graph-shadow__label-container">
-      <div
-        *ngFor="let i of 7 | fill"
-        class="graph-shadow__label gor-shadow"
-      ></div>
+    <div class="graph-shadow__view-container">
+      <div class="graph-shadow__view gor-shadow">
+        <div
+          *ngFor="let i of 7 | fill"
+          class="graph-shadow__bar gor-shadow"
+        ></div>
+      </div>
+      <div class="graph-shadow__label-container">
+        <div
+          *ngFor="let i of 7 | fill"
+          class="graph-shadow__label gor-shadow"
+        ></div>
+      </div>
     </div>
   </div>
 </ng-template>
