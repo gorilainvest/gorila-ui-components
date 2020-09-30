@@ -70,10 +70,12 @@
         class="table-shadow__header-item gor-shadow"
       ></div>
     </div>
-    <div
-      *ngFor="let i of 3 | fill"
-      class="table-shadow__line gor-shadow"
-    ></div>
+    <div class="table-shadow__line-container">
+      <div
+        *ngFor="let i of 3 | fill"
+        class="table-shadow__line gor-shadow"
+      ></div>
+    </div>
   </div>
 </ng-template>
 
