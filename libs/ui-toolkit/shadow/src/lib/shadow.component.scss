@@ -26,6 +26,9 @@ $color-shadow: #b2c0c6;
 .gor-shadow {
   background-color: $color-shadow;
   border-radius: 100px;
+}
+
+.loading-shadow {
   animation: shadow-pulsate 2s infinite ease-in-out;
 }
 
