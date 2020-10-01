@@ -1,4 +1,8 @@
-<ng-container *ngIf="displayShadow; else loaded">
+<div
+  *ngIf="displayShadow; else loaded"
+  [ngClass]="{ 'loading-shadow': loading }"
+  class="shadow-container"
+>
   <ng-container [ngSwitch]="shadowType">
     <ng-container *ngSwitchCase="'header-shadow'">
       <ng-container *ngTemplateOutlet="headerShadow"></ng-container>
@@ -19,7 +23,7 @@
       <div class="gor-shadow default-shadow"></div>
     </ng-container>
   </ng-container>
-</ng-container>
+</div>
 
 <ng-template #loaded>
   <ng-content></ng-content>
@@ -70,10 +74,12 @@
         class="table-shadow__header-item gor-shadow"
       ></div>
     </div>
-    <div
-      *ngFor="let i of 3 | fill"
-      class="table-shadow__line gor-shadow"
-    ></div>
+    <div class="table-shadow__line-container">
+      <div
+        *ngFor="let i of 3 | fill"
+        class="table-shadow__line gor-shadow"
+      ></div>
+    </div>
   </div>
 </ng-template>
 
@@ -83,17 +89,19 @@
       <div class="graph-shadow__title-item gor-shadow"></div>
       <div class="graph-shadow__title-item gor-shadow"></div>
     </div>
-    <div class="graph-shadow__view gor-shadow">
-      <div
-        *ngFor="let i of 7 | fill"
-        class="graph-shadow__bar gor-shadow"
-      ></div>
-    </div>
-    <div class="graph-shadow__label-container">
-      <div
-        *ngFor="let i of 7 | fill"
-        class="graph-shadow__label gor-shadow"
-      ></div>
+    <div class="graph-shadow__view-container">
+      <div class="graph-shadow__view gor-shadow">
+        <div
+          *ngFor="let i of 7 | fill"
+          class="graph-shadow__bar gor-shadow"
+        ></div>
+      </div>
+      <div class="graph-shadow__label-container">
+        <div
+          *ngFor="let i of 7 | fill"
+          class="graph-shadow__label gor-shadow"
+        ></div>
+      </div>
     </div>
   </div>
 </ng-template>

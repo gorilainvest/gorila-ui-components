@@ -22,6 +22,11 @@ export class CardContainerComponent implements OnChanges {
   @Input() public shadowType: ShadowType = ShadowType.CARD_CONTAINER;
 
   /**
+   * When true, triggers animation in component shadow.
+   */
+  @Input() public loading = false;
+
+  /**
    * Controls whether cards has border.
    */
   @HostBinding('class.enable-border') @Input() public enableBorder = true;

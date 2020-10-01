@@ -17,6 +17,7 @@ import { ShadowModule } from './shadow.module';
       <gor-shadow
         [displayShadow]="displayShadow"
         [shadowType]="shadowType"
+        [loading]="loading"
       >
         CONTENT
       </gor-shadow>
@@ -27,6 +28,13 @@ import { ShadowModule } from './shadow.module';
       >
         display shadow
       </mat-checkbox>
+      <mat-checkbox
+        [(ngModel)]="loading"
+        [style.display]="'block'"
+        class="gorila-primary"
+      >
+        loading
+      </mat-checkbox>
       <mat-select [(value)]="shadowType" [style.width]="'200px'">
         <mat-option *ngFor="let type of types" [value]="type">{{ type }}</mat-option>
       </mat-select>
@@ -35,6 +43,7 @@ import { ShadowModule } from './shadow.module';
 })
 class HostComponent {
   public displayShadow = true;
+  public loading = false;
   public types = getShadowTypes();
   public shadowType: ShadowType = ShadowType.DEFAULT;
 }
