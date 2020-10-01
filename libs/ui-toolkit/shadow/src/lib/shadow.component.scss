@@ -11,6 +11,11 @@ $color-shadow: #b2c0c6;
   background-color: $white;
 }
 
+.shadow-container {
+  width: 100%;
+  height: 100%;
+}
+
 @keyframes shadow-pulsate {
   0% {
     opacity: 0.3;

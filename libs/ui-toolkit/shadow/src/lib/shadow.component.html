@@ -1,6 +1,7 @@
 <div
   *ngIf="displayShadow; else loaded"
   [ngClass]="{ 'loading-shadow': loading }"
+  class="shadow-container"
 >
   <ng-container [ngSwitch]="shadowType">
     <ng-container *ngSwitchCase="'header-shadow'">
