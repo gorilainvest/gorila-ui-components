@@ -78,6 +78,16 @@ export class LetterheadComponent {
   @Input() public displayLogoUrl = '';
 
   /**
+   * This flag informs if we should or not display shadown instead of header and footer
+   */
+  @Input() public displayShadow = false;
+
+  /**
+   * If displayShadow = true, loading flag determine if shadow is diplayed with animation or statically
+   */
+  @Input() public loading = false;
+
+  /**
    * The name of the icon clicked.
    */
   @Output() public iconClick = new EventEmitter<string>();

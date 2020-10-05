@@ -1,18 +1,13 @@
-import { object, text, withKnobs } from '@storybook/addon-knobs';
+import { ICON_BASE_SRC } from '@gorilainvest/ui-toolkit/icon';
+import { boolean, object, text, withKnobs } from '@storybook/addon-knobs';
 import { moduleMetadata, storiesOf } from '@storybook/angular';
 
-import { DirectivesModule } from '@gorilainvest/ui-toolkit/directives';
-import { ICON_BASE_SRC, IconModule } from '@gorilainvest/ui-toolkit/icon';
-
-import { LetterheadFooterComponent } from './footer/footer.component';
-import { LetterheadHeaderComponent } from './header/header.component';
-import { LetterheadComponent } from './letterhead.component';
+import { LetterheadModule } from './letterhead.module';
 
 storiesOf('Letterhead', module)
   .addDecorator(
     moduleMetadata({
-      imports: [DirectivesModule, IconModule],
-      declarations: [LetterheadComponent, LetterheadFooterComponent, LetterheadHeaderComponent],
+      imports: [LetterheadModule],
       providers: [{ provide: ICON_BASE_SRC, useValue: 'https://s3.amazonaws.com/gorila-images/app/' }]
     })
   )
@@ -32,6 +27,8 @@ storiesOf('Letterhead', module)
           [footerMiddleMain]="footerMiddleMain"
           [footerMiddleSub]="footerMiddleSub"
           [landingPageUrl]="landingPageUrl"
+          [loading]="loading"
+          [displayShadow]="displayShadow"
           [printLogoUrl]="'http://gorilainvest.com.br/assets/img/logo.svg'"
           [displayLogoUrl]="'http://gorilainvest.com.br/assets/img/logo.svg'">
           <div gorLogo style="width: 300px; height: 100px;">
@@ -52,6 +49,8 @@ storiesOf('Letterhead', module)
         footerMiddleMain: text('footerMiddleMain', 'Footer middle main'),
         footerMiddleSub: text('footerMiddleSub', 'Footer middle sub'),
         landingPageUrl: text('landingPageUrl', 'gorila.com.br'),
+        displayShadow: boolean('displayShadow', false),
+        loading: boolean('loading', false),
       }
     })
   )
@@ -69,6 +68,8 @@ storiesOf('Letterhead', module)
           [footerMiddleMain]="footerMiddleMain"
           [footerMiddleSub]="footerMiddleSub"
           [landingPageUrl]="landingPageUrl"
+          [loading]="loading"
+          [displayShadow]="displayShadow"
           [printLogoUrl]="'http://gorilainvest.com.br/assets/img/logo.svg'"
           [displayLogoUrl]="'http://gorilainvest.com.br/assets/img/logo.svg'">
           <div gorLogo style="width: 300px; height: 100px;">
@@ -87,6 +88,8 @@ storiesOf('Letterhead', module)
         footerMiddleMain: text('footerMiddleMain', 'Footer middle main'),
         footerMiddleSub: text('footerMiddleSub', 'Footer middle sub'),
         landingPageUrl: text('landingPageUrl', 'gorila.com.br'),
+        displayShadow: boolean('displayShadow', false),
+        loading: boolean('loading', false),
       }
     })
   )
