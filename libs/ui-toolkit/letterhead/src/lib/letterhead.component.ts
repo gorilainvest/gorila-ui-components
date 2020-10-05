@@ -78,7 +78,7 @@ export class LetterheadComponent {
   @Input() public displayLogoUrl = '';
 
   /**
-   * This flag informs if we should or not display shadown instead of header and footer
+   * This flag informs if we should or not display shadow instead of header and footer
    */
   @Input() public displayShadow = false;
 
