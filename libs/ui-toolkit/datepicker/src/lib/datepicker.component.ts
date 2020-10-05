@@ -3,8 +3,8 @@ import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@a
 import { MatDatepicker } from '@angular/material/datepicker';
 import { take } from 'rxjs/operators';
 
-import { DatepickerContentComponent } from './datepicker-content.component';
-import { DatePickerMode } from './datepicker.model';
+import { DatepickerContentComponent } from './datepicker-content/datepicker-content.component';
+import { DatePickerMode } from './model/datepicker.model';
 
 /** @ignore */
 export const SELECTOR = 'gor-datepicker';

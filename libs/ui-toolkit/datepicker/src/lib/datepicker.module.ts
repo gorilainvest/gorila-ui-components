@@ -5,11 +5,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { ButtonModule } from '@gorilainvest/ui-toolkit/button';
 
-import { CalendarHeaderComponent } from './calendar-header.component';
-import { DatepickerContentComponent } from './datepicker-content.component';
-import { DatepickerToggleComponent } from './datepicker-toggle.component';
+import { CalendarHeaderComponent } from './calendar-header/calendar-header.component';
+import { DatepickerContentComponent } from './datepicker-content/datepicker-content.component';
+import { DatepickerToggleComponent } from './datepicker-toggle/datepicker-toggle.component';
 import { DatepickerComponent } from './datepicker.component';
-import { DatepickerModeService } from './datepicker-mode.service';
+import { DatepickerModeService } from './service/datepicker-mode.service';
 
 /** @ignore */
 export const MODULE_METADATA = {
@@ -26,7 +26,9 @@ export const MODULE_METADATA = {
     DatepickerToggleComponent,
     CalendarHeaderComponent,
   ],
-  providers: [ DatepickerModeService ],
+  providers: [
+    DatepickerModeService,
+  ],
   exports: [
     DatepickerComponent,
     DatepickerContentComponent,

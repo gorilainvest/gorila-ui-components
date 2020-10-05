@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 
-import { DatePickerMode } from './datepicker.model';
+import { DatePickerMode } from '../model/datepicker.model';
 
 @Injectable()
 export class DatepickerModeService {
