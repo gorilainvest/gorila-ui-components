@@ -51,11 +51,6 @@ describe('ShadowComponent', () => {
     expect(content).toEqual(host.content);
   });
 
-  it('should not display the content if displayShadow is true', () => {
-    const content = fixture.debugElement.query(By.css('.shadow-content'));
-    expect(content).toBeFalsy();
-  });
-
   it('should display the shadow according to shadowType', () => {
     const types = getShadowTypes();
     types.forEach(type => {

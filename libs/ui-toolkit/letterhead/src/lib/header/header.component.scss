@@ -1,7 +1,12 @@
 @import "~@gorilainvest/styles/scss/colors";
 $page-padding: 60px;
 
+:host {
+  width: 100%;
+}
+
 .letterhead-header {
+  width: 100%;
   .header-wrapper {
     display: grid;
     grid-template-areas: 'logo icons'

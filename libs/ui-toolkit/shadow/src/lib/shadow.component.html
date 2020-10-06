@@ -1,8 +1,4 @@
-<div
-  *ngIf="displayShadow; else loaded"
-  [ngClass]="{ 'loading-shadow': loading }"
-  class="shadow-container"
->
+<ng-container *ngIf="displayShadow">
   <ng-container [ngSwitch]="shadowType">
     <ng-container *ngSwitchCase="'header-shadow'">
       <ng-container *ngTemplateOutlet="headerShadow"></ng-container>
@@ -23,11 +19,11 @@
       <div class="gor-shadow default-shadow"></div>
     </ng-container>
   </ng-container>
-</div>
+</ng-container>
 
-<ng-template #loaded>
+<div [ngClass]="{'content': !displayShadow}" [hidden]="displayShadow">
   <ng-content></ng-content>
-</ng-template>
+</div>
 
 <ng-template #headerShadow>
   <div class="header-shadow">
