@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular/core';
 
 import { ShadowType } from './shadow.model';
 
@@ -12,7 +12,7 @@ export class ShadowComponent {
   /**
    * When false, component displays its content.
    */
-  @Input() public displayShadow = false;
+  @HostBinding('class.shadow-container') @Input() public displayShadow = false;
 
   /**
    * Defines which shadow template is displayed.
@@ -22,5 +22,5 @@ export class ShadowComponent {
   /**
    * When true, triggers shadow animation.
    */
-  @Input() public loading = false;
+  @HostBinding('class.loading-shadow') @Input() public loading = false;
 }

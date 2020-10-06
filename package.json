@@ -40,6 +40,7 @@
     "ghpages": "npm run ghpages:compodoc && npm run ghpages:storybook",
     "ghpages:compodoc": "npm run compodoc -- --output dist/apps/widgets-system/docs",
     "ghpages:storybook": "npm run build-storybook -- --output-dir dist/apps/widgets-system/storybook",
+    "build-all": "npm run prepublishOnly",
     "prepublishOnly": "npm run dep-graph && node scripts/build-all.js",
     "coverage": "cross-env ENABLE_COVERAGE=true node scripts/test-all.js",
     "precodacy-coverage": "find coverage/libs -name lcov.info -exec echo -a {} \\; | xargs lcov -o coverage/lcov.info",

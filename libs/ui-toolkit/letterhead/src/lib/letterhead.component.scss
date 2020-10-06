@@ -13,7 +13,7 @@
 :host.full-body .letterhead-page {
   display: flex;
   flex-direction: column;
-  
+
   /* stylelint-disable selector-max-compound-selectors */
   > ::ng-deep *:nth-child(2) {
     display: flex !important;
@@ -21,4 +21,8 @@
     flex-direction: column;
   }
   /* stylelint-enable selector-max-compound-selectors */
+}
+
+gor-shadow {
+  height: auto;
 }
