@@ -4,8 +4,8 @@ import { MatCalendar } from '@angular/material/datepicker';
 import { By } from '@angular/platform-browser';
 import { Moment, utc } from 'moment';
 
+import { DatepickerModule } from '../datepicker.module';
 import { DatepickerContentComponent } from './datepicker-content.component';
-import { DatepickerModule } from './datepicker.module';
 
 describe('DatepickerContentComponent', () => {
   let component: DatepickerContentComponent<Moment>;

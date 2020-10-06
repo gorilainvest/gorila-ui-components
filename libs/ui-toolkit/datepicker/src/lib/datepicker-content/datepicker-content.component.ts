@@ -3,9 +3,9 @@ import { AfterViewInit, Component, ElementRef, HostBinding, Input, ViewChild, Vi
 import { MatCalendar, MatCalendarView, MatDatepickerContent } from '@angular/material/datepicker';
 import { Moment } from 'moment';
 
-import { CalendarHeaderComponent } from './calendar-header.component';
-import { DatepickerModeService } from './datepicker-mode.service';
-import { DatePickerMode } from './datepicker.model';
+import { CalendarHeaderComponent } from '../calendar-header/calendar-header.component';
+import { DatePickerMode } from '../model/datepicker.model';
+import { DatepickerModeService } from '../service/datepicker-mode.service';
 
 const mapMode = {
   'year-month': { view: 'multi-year'},

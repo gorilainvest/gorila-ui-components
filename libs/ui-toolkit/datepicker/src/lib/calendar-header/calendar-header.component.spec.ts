@@ -1,12 +1,11 @@
-import { CommonModule } from '@angular/common';
-import { DebugElement, ChangeDetectorRef } from '@angular/core';
+import { ChangeDetectorRef, DebugElement } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatCalendar } from '@angular/material/datepicker';
 import { Moment, utc } from 'moment';
 
+import { DatepickerModule } from '../datepicker.module';
 import { CalendarHeaderComponent } from './calendar-header.component';
-import { DatepickerModule } from './datepicker.module';
 
 class ChangeDetector implements ChangeDetectorRef {
   static __NG_ELEMENT_ID__: () => ChangeDetectorRef = () => null;

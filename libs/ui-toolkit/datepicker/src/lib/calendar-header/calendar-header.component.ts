@@ -1,10 +1,20 @@
-import { ChangeDetectorRef, Component, forwardRef, Inject, Input, Optional, ViewEncapsulation, OnInit, OnDestroy } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  forwardRef,
+  Inject,
+  Input,
+  OnDestroy,
+  OnInit,
+  Optional,
+  ViewEncapsulation,
+} from '@angular/core';
 import { DateAdapter, MAT_DATE_FORMATS, MatDateFormats } from '@angular/material/core';
 import { MatCalendar, MatCalendarHeader, MatDatepickerIntl } from '@angular/material/datepicker';
-
-import { DatepickerModeService } from './datepicker-mode.service';
 import { untilDestroyed } from 'ngx-take-until-destroy';
-import { DatePickerMode } from './datepicker.model';
+
+import { DatePickerMode } from '../model/datepicker.model';
+import { DatepickerModeService } from '../service/datepicker-mode.service';
 
 /**
  * Default header for calendar of GorDatepicker.

@@ -1,7 +1,7 @@
+import { date, select, text, withKnobs } from '@storybook/addon-knobs';
 import { moduleMetadata, storiesOf } from '@storybook/angular';
-import { localeData, utc } from 'moment';
+import { utc } from 'moment';
 
-import { text, withKnobs, select, date } from '@storybook/addon-knobs';
 import { MODULE_METADATA } from './datepicker.module';
 
 const today = utc().format('YYYY-MM-DD');
