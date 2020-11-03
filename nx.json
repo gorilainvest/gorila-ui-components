@@ -111,7 +111,10 @@
       "tags": []
     },
     "widgets-system-e2e": {
-      "tags": []
+      "tags": [],
+      "implicitDependencies": [
+        "widgets-system"
+      ]
     },
     "directives": {
       "tags": [
