@@ -1,48 +1,53 @@
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { date, select, text, withKnobs } from '@storybook/addon-knobs';
 import { moduleMetadata, storiesOf } from '@storybook/angular';
 import { utc } from 'moment';
 
-import { MODULE_METADATA } from './datepicker.module';
+import { DatepickerModule } from './datepicker.module';
 
 const today = utc().format('YYYY-MM-DD');
 
 storiesOf('DatepickerContent', module)
-  .addDecorator(moduleMetadata(MODULE_METADATA))
+  .addDecorator(
+    moduleMetadata({
+      imports: [DatepickerModule, MatDatepickerModule],
+    })
+  )
   .addDecorator(withKnobs)
   .add('starting in month view', () => ({
     template: `
     <gor-datepicker-content startView='month'></gor-datepicker-content>
-    `
+    `,
   }))
   .add('starting in multi-year view', () => ({
     template: `
     <gor-datepicker-content startView='multi-year'></gor-datepicker-content>
-    `
+    `,
   }))
   .add('starting in year view', () => ({
     template: `
     <gor-datepicker-content startView='year'></gor-datepicker-content>
-    `
+    `,
   }))
   .add('max date set to today', () => ({
     template: `
     <gor-datepicker-content maxDate='${today}'></gor-datepicker-content>
-    `
+    `,
   }))
   .add('min date set to today', () => ({
     template: `
     <gor-datepicker-content minDate='${today}'></gor-datepicker-content>
-    `
+    `,
   }))
   .add('starting in year-month selection', () => ({
     template: `
     <gor-datepicker-content mode='year-month'></gor-datepicker-content>
-    `
+    `,
   }))
   .add('starting in year-only selection', () => ({
     template: `
     <gor-datepicker-content mode='year-only'></gor-datepicker-content>
-    `
+    `,
   }))
   .add('playground', () => ({
     template: `
@@ -60,7 +65,11 @@ storiesOf('DatepickerContent', module)
 
 
 storiesOf('Datepicker', module)
-  .addDecorator(moduleMetadata(MODULE_METADATA))
+  .addDecorator(
+    moduleMetadata({
+      imports: [DatepickerModule, MatDatepickerModule],
+    })
+  )
   .add('starting in year-only selection', () => ({
     template: `
     <input matInput [matDatepicker]='gdp' placeholder="Choose a date">
@@ -72,7 +81,7 @@ storiesOf('Datepicker', module)
       minDate="2019-05-02"
       mode='year-only'
     ></gor-datepicker>
-    `
+    `,
   }))
   .add('starting in year-month selection', () => ({
     template: `
@@ -85,7 +94,7 @@ storiesOf('Datepicker', module)
       minDate="2019-05-02"
       mode='year-month'
     ></gor-datepicker>
-    `
+    `,
   }))
   .add('starting in all selection', () => ({
     template: `
@@ -98,5 +107,5 @@ storiesOf('Datepicker', module)
       minDate="2019-05-02"
       mode='all'
     ></gor-datepicker>
-    `
+    `,
   }));
