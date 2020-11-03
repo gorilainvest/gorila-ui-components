@@ -75,6 +75,7 @@
     "@ngrx/store": "7.2.0",
     "@ngx-translate/core": "11.0.1",
     "@nrwl/angular": "8.0.0",
+    "@nrwl/schematics": "^8.12.11",
     "codacy-coverage": "^3.4.0",
     "core-js": "^2.5.4",
     "ngx-moment": "^3.5.0",
