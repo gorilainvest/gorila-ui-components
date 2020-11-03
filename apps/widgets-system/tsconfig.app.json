@@ -4,9 +4,12 @@
     "outDir": "../../dist/out-tsc",
     "types": []
   },
-  "exclude": ["test.ts", "**/*.spec.ts", "**/*.stories.ts"],
+  "files": [
+    "src/main.ts",
+    "src/polyfills.ts"
+  ],
   "include": [
-    "**/*.ts",
+    "**/*.d.ts",
     "../../libs/shell/buttons-indicators-shell/src/index.ts",
     "../../libs/shell/controls-shell/src/index.ts",
     "../../libs/shell/layout-shell/src/index.ts",

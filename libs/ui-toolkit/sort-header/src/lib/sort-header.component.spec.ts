@@ -56,7 +56,7 @@ class TestHostComponent {
   public disabled = false;
   public dataSource = new MatTableDataSource<{name: string; age:number}>(this.gorilas);
   public sort: MatSort;
-  @ViewChild(MatSort, { static: false }) set matSort(ms: MatSort) {
+  @ViewChild(MatSort) set matSort(ms: MatSort) {
     this.sort = ms;
     this.dataSource.sort = this.sort;
   }

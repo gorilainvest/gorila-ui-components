@@ -40,7 +40,7 @@ export class SortHeaderComponent {
   });
 
   public sort: MatSort;
-  @ViewChild(MatSort, { static: false }) set matSort(ms: MatSort) {
+  @ViewChild(MatSort) set matSort(ms: MatSort) {
     this.sort = ms;
     this.dataSource.sort = this.sort;
   }

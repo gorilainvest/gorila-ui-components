@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { NgModule, Provider } from '@angular/core';
+import { NgModule, Provider, Injectable } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -19,6 +19,7 @@ import { ArrowVariationComponent } from './ui/arrow-variation/arrow-variation.co
 import { DataFormatterComponent } from './ui/data-formatter/data-formatter.component';
 import { PipesComponent } from './ui/pipes';
 
+@Injectable()
 export class TranslateServicePresentational {
   public instant = (str) => str;
 }

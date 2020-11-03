@@ -27,7 +27,7 @@ export const SELECTOR = 'gor-datepicker-content';
   encapsulation: ViewEncapsulation.None
 })
 export class DatepickerContentComponent<D> extends MatDatepickerContent<D> implements AfterViewInit {
-  @ViewChild(MatCalendar, { static: false }) calendarRef: ElementRef<MatCalendar<D>>;
+  @ViewChild(MatCalendar) calendarRef: ElementRef<MatCalendar<D>>;
 
   @HostBinding('style.background-color') @Input() bgColor = 'white';
 

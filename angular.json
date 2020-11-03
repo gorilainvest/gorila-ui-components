@@ -16,6 +16,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/apps/widgets-system",
             "index": "apps/widgets-system/src/index.html",
             "main": "apps/widgets-system/src/main.ts",
@@ -58,6 +59,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -142,7 +147,7 @@
             "tsConfig": "apps/widgets-system-e2e/tsconfig.e2e.json",
             "exclude": [
               "**/node_modules/**",
-              "!apps/widgets-system-e2e/**"
+              "!apps/widgets-system-e2e/**/*"
             ]
           }
         }
@@ -175,7 +180,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/ui-toolkit/arrow-variation/**"
+              "!libs/ui-toolkit/arrow-variation/**/*"
             ]
           }
         },
@@ -226,7 +231,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/ui-toolkit/button/**"
+              "!libs/ui-toolkit/button/**/*"
             ]
           }
         },
@@ -277,7 +282,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/ui-toolkit/card-container/**"
+              "!libs/ui-toolkit/card-container/**/*"
             ]
           }
         },
@@ -323,7 +328,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/ui-toolkit/countdown-button/**"
+              "!libs/ui-toolkit/countdown-button/**/*"
             ]
           }
         },
@@ -375,7 +380,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/ui-toolkit/currency-display/**"
+              "!libs/ui-toolkit/currency-display/**/*"
             ]
           }
         },
@@ -427,7 +432,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/ui-toolkit/enhanced-title/**"
+              "!libs/ui-toolkit/enhanced-title/**/*"
             ]
           }
         },
@@ -473,7 +478,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/ui-toolkit/data-formatter/**"
+              "!libs/ui-toolkit/data-formatter/**/*"
             ]
           }
         },
@@ -525,7 +530,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/ui-toolkit/loading/**"
+              "!libs/ui-toolkit/loading/**/*"
             ]
           }
         },
@@ -571,7 +576,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/ui-toolkit/popover/**"
+              "!libs/ui-toolkit/popover/**/*"
             ]
           }
         },
@@ -617,7 +622,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/ui-toolkit/popup-confirm/**"
+              "!libs/ui-toolkit/popup-confirm/**/*"
             ]
           }
         },
@@ -669,7 +674,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/ui-toolkit/section-title/**"
+              "!libs/ui-toolkit/section-title/**/*"
             ]
           }
         },
@@ -723,7 +728,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/ui-toolkit/slide-toggle/**"
+              "!libs/ui-toolkit/slide-toggle/**/*"
             ]
           }
         }
@@ -763,7 +768,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/ui-toolkit/directives/**"
+              "!libs/ui-toolkit/directives/**/*"
             ]
           }
         }
@@ -789,7 +794,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/shell/buttons-indicators/**"
+              "!libs/shell/buttons-indicators/**/*"
             ]
           }
         },
@@ -798,7 +803,8 @@
           "options": {
             "jestConfig": "libs/shell/buttons-indicators/jest.config.js",
             "tsConfig": "libs/shell/buttons-indicators/tsconfig.spec.json",
-            "setupFile": "libs/shell/buttons-indicators/src/test-setup.ts"
+            "setupFile": "libs/shell/buttons-indicators/src/test-setup.ts",
+            "passWithNoTests": true
           }
         }
       },
@@ -819,7 +825,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/shell/controls/**"
+              "!libs/shell/controls/**/*"
             ]
           }
         },
@@ -828,7 +834,8 @@
           "options": {
             "jestConfig": "libs/shell/controls/jest.config.js",
             "tsConfig": "libs/shell/controls/tsconfig.spec.json",
-            "setupFile": "libs/shell/controls/src/test-setup.ts"
+            "setupFile": "libs/shell/controls/src/test-setup.ts",
+            "passWithNoTests": true
           }
         }
       },
@@ -849,7 +856,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/shell/layout/**"
+              "!libs/shell/layout/**/*"
             ]
           }
         },
@@ -858,7 +865,8 @@
           "options": {
             "jestConfig": "libs/shell/layout/jest.config.js",
             "tsConfig": "libs/shell/layout/tsconfig.spec.json",
-            "setupFile": "libs/shell/layout/src/test-setup.ts"
+            "setupFile": "libs/shell/layout/src/test-setup.ts",
+            "passWithNoTests": true
           }
         }
       },
@@ -879,7 +887,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/shell/popups-modals/**"
+              "!libs/shell/popups-modals/**/*"
             ]
           }
         },
@@ -888,7 +896,8 @@
           "options": {
             "jestConfig": "libs/shell/popups-modals/jest.config.js",
             "tsConfig": "libs/shell/popups-modals/tsconfig.spec.json",
-            "setupFile": "libs/shell/popups-modals/src/test-setup.ts"
+            "setupFile": "libs/shell/popups-modals/src/test-setup.ts",
+            "passWithNoTests": true
           }
         }
       },
@@ -909,7 +918,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/shell/presentational/**"
+              "!libs/shell/presentational/**/*"
             ]
           }
         },
@@ -918,7 +927,8 @@
           "options": {
             "jestConfig": "libs/shell/presentational/jest.config.js",
             "tsConfig": "libs/shell/presentational/tsconfig.spec.json",
-            "setupFile": "libs/shell/presentational/src/test-setup.ts"
+            "setupFile": "libs/shell/presentational/src/test-setup.ts",
+            "passWithNoTests": true
           }
         }
       },
@@ -946,7 +956,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/gdk/**"
+              "!libs/gdk/**/*"
             ]
           }
         },
@@ -955,7 +965,8 @@
           "options": {
             "jestConfig": "libs/gdk/jest.config.js",
             "tsConfig": "libs/gdk/tsconfig.spec.json",
-            "setupFile": "libs/gdk/src/test-setup.ts"
+            "setupFile": "libs/gdk/src/test-setup.ts",
+            "passWithNoTests": true
           }
         }
       },
@@ -983,7 +994,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/ui-toolkit/scroll-container/**"
+              "!libs/ui-toolkit/scroll-container/**/*"
             ]
           }
         },
@@ -1024,7 +1035,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/ui-toolkit/page-header/**"
+              "!libs/ui-toolkit/page-header/**/*"
             ]
           }
         },
@@ -1065,7 +1076,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/ui-toolkit/pipes/**"
+              "!libs/ui-toolkit/pipes/**/*"
             ]
           }
         },
@@ -1102,7 +1113,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/ui-toolkit/icon/**"
+              "!libs/ui-toolkit/icon/**/*"
             ]
           }
         },
@@ -1143,7 +1154,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/ui-toolkit/form-text/**"
+              "!libs/ui-toolkit/form-text/**/*"
             ]
           }
         },
@@ -1185,7 +1196,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/ui-toolkit/sort-header/**"
+              "!libs/ui-toolkit/sort-header/**/*"
             ]
           }
         },
@@ -1232,7 +1243,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/ui-toolkit/datepicker/**"
+              "!libs/ui-toolkit/datepicker/**/*"
             ]
           }
         },
@@ -1285,7 +1296,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/ui-toolkit/letterhead/**"
+              "!libs/ui-toolkit/letterhead/**/*"
             ]
           }
         },
@@ -1332,7 +1343,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/ui-toolkit/tooltip/**"
+              "!libs/ui-toolkit/tooltip/**/*"
             ]
           }
         },
@@ -1379,7 +1390,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/ui-toolkit/enhanced-header/**"
+              "!libs/ui-toolkit/enhanced-header/**/*"
             ]
           }
         },
@@ -1432,7 +1443,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/ui-toolkit/modals/**"
+              "!libs/ui-toolkit/modals/**/*"
             ]
           }
         },
@@ -1484,7 +1495,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/ui-toolkit/shadow/**"
+              "!libs/ui-toolkit/shadow/**/*"
             ]
           }
         },
@@ -1515,7 +1526,8 @@
       "versionMismatch": false
     },
     "defaultCollection": "@nrwl/angular",
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "8244fa33-ca14-41a3-8822-ab53cad1dd64"
   },
   "schematics": {
     "@nrwl/schematics:application": {

@@ -11,8 +11,7 @@ import { DatepickerToggleComponent } from './datepicker-toggle/datepicker-toggle
 import { DatepickerComponent } from './datepicker.component';
 import { DatepickerModeService } from './service/datepicker-mode.service';
 
-/** @ignore */
-export const MODULE_METADATA = {
+@NgModule({
   imports: [
     CommonModule,
     ButtonModule,
@@ -39,7 +38,5 @@ export const MODULE_METADATA = {
     CalendarHeaderComponent,
     DatepickerContentComponent
   ]
-};
-
-@NgModule(MODULE_METADATA)
+})
 export class DatepickerModule {}
