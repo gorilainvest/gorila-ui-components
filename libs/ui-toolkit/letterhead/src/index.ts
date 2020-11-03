@@ -1,1 +1,1 @@
-export * from './lib/letterhead.module';
+export * from './public_api';

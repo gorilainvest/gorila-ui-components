@@ -5,20 +5,17 @@ import { MatDatepickerToggle } from '@angular/material/datepicker';
 import { untilDestroyed } from 'ngx-take-until-destroy';
 import { combineLatest } from 'rxjs';
 
-/** @ignore */
-export const SELECTOR = 'gor-datepicker-toggle';
-
 /**
  * Extends MatDatepickerToggle to insert our custom calendar icon.
- * 
+ *
  * @link https://github.com/angular/components/blob/master/src/material/datepicker/datepicker-toggle.ts
  */
 @Component({
-  selector: SELECTOR,
+  selector: 'gor-datepicker-toggle',
   templateUrl: './datepicker-toggle.component.html',
   styleUrls: ['./datepicker-toggle.component.scss'],
   exportAs: 'gorDatepickerToggle',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DatepickerToggleComponent<D> extends MatDatepickerToggle<D> implements OnDestroy, OnInit {
   /**
@@ -30,12 +27,12 @@ export class DatepickerToggleComponent<D> extends MatDatepickerToggle<D> impleme
    * Set readonly tabIndex for toggle component.
    */
   @HostBinding('attr.tabindex') public readonly tabIndex = -1;
-  
+
   /**
    * Set a css class equal to component selector.
    */
-  @HostBinding('class') public readonly hostClass = SELECTOR;
-  
+  @HostBinding('class') public readonly hostClass = 'gor-datepicker-toggle';
+
   /**
    * Indicates if associated datepicker is active.
    */
@@ -45,7 +42,7 @@ export class DatepickerToggleComponent<D> extends MatDatepickerToggle<D> impleme
    * Indicates if current datepicker color palette is accent.
    */
   @HostBinding('class.mat-accent') public readonly accentColor = this.datepicker && this.datepicker.color === 'accent';
-  
+
   /**
    * Indicates if current datepicker color palette is warn.
    */
@@ -59,29 +56,27 @@ export class DatepickerToggleComponent<D> extends MatDatepickerToggle<D> impleme
   }
 
   public ngOnInit() {
-    this.datepicker.openedStream.pipe(untilDestroyed(this)).subscribe(() => this.active = true);
-    combineLatest([
-      this.datepicker.closedStream,
-      this.datepicker._selectedChanged
-    ]).pipe(untilDestroyed(this)).subscribe(([_, selected]) => {
-      if (!this.activeOnSelect) {
-        this.active = false;
-        return;
-      }
-
-      try {
-        const startAt = this.datepicker.startAt;
-        if ('format' in selected && 'format' in startAt) {
-          this.active = selected['format']() === startAt['format']();
-        } else {
-          this.active = selected.toString() === startAt.toString();
+    this.datepicker.openedStream.pipe(untilDestroyed(this)).subscribe(() => (this.active = true));
+    combineLatest([this.datepicker.closedStream, this.datepicker._selectedChanged])
+      .pipe(untilDestroyed(this))
+      .subscribe(([_, selected]) => {
+        if (!this.activeOnSelect) {
+          this.active = false;
+          return;
         }
-      } catch (e) {
-        console.error(e);
-        this.active = false;
-      }
-    });
-    
+
+        try {
+          const startAt = this.datepicker.startAt;
+          if ('format' in selected && 'format' in startAt) {
+            this.active = selected['format']() === startAt['format']();
+          } else {
+            this.active = selected.toString() === startAt.toString();
+          }
+        } catch (e) {
+          console.error(e);
+          this.active = false;
+        }
+      });
   }
 
   public ngOnDestroy() {

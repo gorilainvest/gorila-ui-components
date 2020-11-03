@@ -1,2 +1,1 @@
-export * from './lib/icon.module';
-export * from './lib/token';
+export * from './public_api';

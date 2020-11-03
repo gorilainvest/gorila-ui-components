@@ -1,1 +1,1 @@
-export * from './lib/tooltip.module';
+export * from './public_api';

@@ -163,12 +163,6 @@
           "options": {
             "tsConfig": "libs/ui-toolkit/arrow-variation/tsconfig.lib.json",
             "project": "libs/ui-toolkit/arrow-variation/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            },
             "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
@@ -216,11 +210,6 @@
           "options": {
             "tsConfig": "libs/ui-toolkit/button/tsconfig.lib.json",
             "project": "libs/ui-toolkit/button/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "node_modules"
-              ]
-            },
             "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
@@ -267,12 +256,6 @@
           "options": {
             "tsConfig": "libs/ui-toolkit/card-container/tsconfig.lib.json",
             "project": "libs/ui-toolkit/card-container/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            },
             "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
@@ -314,12 +297,6 @@
           "options": {
             "tsConfig": "libs/ui-toolkit/countdown-button/tsconfig.lib.json",
             "project": "libs/ui-toolkit/countdown-button/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            },
             "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
@@ -367,12 +344,6 @@
           "options": {
             "tsConfig": "libs/ui-toolkit/currency-display/tsconfig.lib.json",
             "project": "libs/ui-toolkit/currency-display/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            },
             "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
@@ -420,12 +391,6 @@
           "options": {
             "tsConfig": "libs/ui-toolkit/enhanced-title/tsconfig.lib.json",
             "project": "libs/ui-toolkit/enhanced-title/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            },
             "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
@@ -467,12 +432,6 @@
           "options": {
             "tsConfig": "libs/ui-toolkit/data-formatter/tsconfig.lib.json",
             "project": "libs/ui-toolkit/data-formatter/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            },
             "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
@@ -520,12 +479,6 @@
           "options": {
             "tsConfig": "libs/ui-toolkit/loading/tsconfig.lib.json",
             "project": "libs/ui-toolkit/loading/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            },
             "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
@@ -567,12 +520,6 @@
           "options": {
             "tsConfig": "libs/ui-toolkit/popover/tsconfig.lib.json",
             "project": "libs/ui-toolkit/popover/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            },
             "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
@@ -614,12 +561,6 @@
           "options": {
             "tsConfig": "libs/ui-toolkit/popup-confirm/tsconfig.lib.json",
             "project": "libs/ui-toolkit/popup-confirm/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            },
             "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
@@ -667,12 +608,6 @@
           "options": {
             "tsConfig": "libs/ui-toolkit/section-title/tsconfig.lib.json",
             "project": "libs/ui-toolkit/section-title/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            },
             "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
@@ -714,12 +649,6 @@
           "options": {
             "tsConfig": "libs/ui-toolkit/slide-toggle/tsconfig.lib.json",
             "project": "libs/ui-toolkit/slide-toggle/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            },
             "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
@@ -1186,12 +1115,6 @@
           "options": {
             "tsConfig": "libs/ui-toolkit/sort-header/tsconfig.lib.json",
             "project": "libs/ui-toolkit/sort-header/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            },
             "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
@@ -1288,12 +1211,6 @@
           "options": {
             "tsConfig": "libs/ui-toolkit/letterhead/tsconfig.lib.json",
             "project": "libs/ui-toolkit/letterhead/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            },
             "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
@@ -1384,12 +1301,6 @@
           "options": {
             "tsConfig": "libs/ui-toolkit/enhanced-header/tsconfig.lib.json",
             "project": "libs/ui-toolkit/enhanced-header/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            },
             "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
@@ -1438,12 +1349,6 @@
           "options": {
             "tsConfig": "libs/ui-toolkit/modals/tsconfig.lib.json",
             "project": "libs/ui-toolkit/modals/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            },
             "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
@@ -1492,11 +1397,6 @@
           "options": {
             "tsConfig": "libs/ui-toolkit/shadow/tsconfig.lib.json",
             "project": "libs/ui-toolkit/shadow/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles"
-              ]
-            },
             "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
