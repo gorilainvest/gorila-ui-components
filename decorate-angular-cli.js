@@ -40,6 +40,7 @@ try {
  */
 const angularCLIInitPath = 'node_modules/@angular/cli/lib/cli/index.js';
 
+// eslint-disable-next-line valid-jsdoc
 /**
  * Patch index.js to warn you if you invoke the undecorated Angular CLI.
  */

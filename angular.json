@@ -168,7 +168,8 @@
                 "libs/shared-styles",
                 "node_modules"
               ]
-            }
+            },
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -219,7 +220,8 @@
               "includePaths": [
                 "node_modules"
               ]
-            }
+            },
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -270,7 +272,8 @@
                 "libs/shared-styles",
                 "node_modules"
               ]
-            }
+            },
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -316,7 +319,8 @@
                 "libs/shared-styles",
                 "node_modules"
               ]
-            }
+            },
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -368,7 +372,8 @@
                 "libs/shared-styles",
                 "node_modules"
               ]
-            }
+            },
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -420,7 +425,8 @@
                 "libs/shared-styles",
                 "node_modules"
               ]
-            }
+            },
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -466,7 +472,8 @@
                 "libs/shared-styles",
                 "node_modules"
               ]
-            }
+            },
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -518,7 +525,8 @@
                 "libs/shared-styles",
                 "node_modules"
               ]
-            }
+            },
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -564,7 +572,8 @@
                 "libs/shared-styles",
                 "node_modules"
               ]
-            }
+            },
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -610,7 +619,8 @@
                 "libs/shared-styles",
                 "node_modules"
               ]
-            }
+            },
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -662,7 +672,8 @@
                 "libs/shared-styles",
                 "node_modules"
               ]
-            }
+            },
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -708,7 +719,8 @@
                 "libs/shared-styles",
                 "node_modules"
               ]
-            }
+            },
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "test": {
@@ -748,7 +760,8 @@
           "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/directives/tsconfig.lib.json",
-            "project": "libs/ui-toolkit/directives/ng-package.json"
+            "project": "libs/ui-toolkit/directives/ng-package.json",
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "test": {
@@ -802,8 +815,6 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/shell/buttons-indicators/jest.config.js",
-            "tsConfig": "libs/shell/buttons-indicators/tsconfig.spec.json",
-            "setupFile": "libs/shell/buttons-indicators/src/test-setup.ts",
             "passWithNoTests": true
           }
         }
@@ -833,8 +844,6 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/shell/controls/jest.config.js",
-            "tsConfig": "libs/shell/controls/tsconfig.spec.json",
-            "setupFile": "libs/shell/controls/src/test-setup.ts",
             "passWithNoTests": true
           }
         }
@@ -864,8 +873,6 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/shell/layout/jest.config.js",
-            "tsConfig": "libs/shell/layout/tsconfig.spec.json",
-            "setupFile": "libs/shell/layout/src/test-setup.ts",
             "passWithNoTests": true
           }
         }
@@ -895,8 +902,6 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/shell/popups-modals/jest.config.js",
-            "tsConfig": "libs/shell/popups-modals/tsconfig.spec.json",
-            "setupFile": "libs/shell/popups-modals/src/test-setup.ts",
             "passWithNoTests": true
           }
         }
@@ -926,8 +931,6 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/shell/presentational/jest.config.js",
-            "tsConfig": "libs/shell/presentational/tsconfig.spec.json",
-            "setupFile": "libs/shell/presentational/src/test-setup.ts",
             "passWithNoTests": true
           }
         }
@@ -944,7 +947,8 @@
           "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/gdk/tsconfig.lib.json",
-            "project": "libs/gdk/ng-package.json"
+            "project": "libs/gdk/ng-package.json",
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -964,8 +968,6 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/gdk/jest.config.js",
-            "tsConfig": "libs/gdk/tsconfig.spec.json",
-            "setupFile": "libs/gdk/src/test-setup.ts",
             "passWithNoTests": true
           }
         }
@@ -982,7 +984,8 @@
           "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/scroll-container/tsconfig.lib.json",
-            "project": "libs/ui-toolkit/scroll-container/ng-package.json"
+            "project": "libs/ui-toolkit/scroll-container/ng-package.json",
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -1023,7 +1026,8 @@
           "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/page-header/tsconfig.lib.json",
-            "project": "libs/ui-toolkit/page-header/ng-package.json"
+            "project": "libs/ui-toolkit/page-header/ng-package.json",
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -1064,7 +1068,8 @@
           "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/pipes/tsconfig.lib.json",
-            "project": "libs/ui-toolkit/pipes/ng-package.json"
+            "project": "libs/ui-toolkit/pipes/ng-package.json",
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -1101,7 +1106,8 @@
           "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/icon/tsconfig.lib.json",
-            "project": "libs/ui-toolkit/icon/ng-package.json"
+            "project": "libs/ui-toolkit/icon/ng-package.json",
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -1142,7 +1148,8 @@
           "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/form-text/tsconfig.lib.json",
-            "project": "libs/ui-toolkit/form-text/ng-package.json"
+            "project": "libs/ui-toolkit/form-text/ng-package.json",
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -1184,7 +1191,8 @@
                 "libs/shared-styles",
                 "node_modules"
               ]
-            }
+            },
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -1231,7 +1239,8 @@
           "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/datepicker/tsconfig.lib.json",
-            "project": "libs/ui-toolkit/datepicker/ng-package.json"
+            "project": "libs/ui-toolkit/datepicker/ng-package.json",
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -1284,7 +1293,8 @@
                 "libs/shared-styles",
                 "node_modules"
               ]
-            }
+            },
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -1331,7 +1341,8 @@
           "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/tooltip/tsconfig.lib.json",
-            "project": "libs/ui-toolkit/tooltip/ng-package.json"
+            "project": "libs/ui-toolkit/tooltip/ng-package.json",
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -1378,7 +1389,8 @@
                 "libs/shared-styles",
                 "node_modules"
               ]
-            }
+            },
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -1431,7 +1443,8 @@
                 "libs/shared-styles",
                 "node_modules"
               ]
-            }
+            },
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -1483,7 +1496,8 @@
               "includePaths": [
                 "libs/shared-styles"
               ]
-            }
+            },
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {

@@ -37,6 +37,6 @@ export class CancelableRouterLinkWithHrefDirective extends RouterLinkWithHref {
   public onClick(button: number, ctrlKey: boolean, metaKey: boolean, shiftKey: boolean): boolean {
     return this.cancel
       ? false
-      : super.onClick(button, ctrlKey, metaKey, shiftKey);
+      : super.onClick(button, ctrlKey, metaKey, shiftKey, metaKey);
   }
 }

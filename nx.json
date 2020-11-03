@@ -3,9 +3,9 @@
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": "*",
-    "tsconfig.json": "*",
     "tslint.json": "*",
-    "nx.json": "*"
+    "nx.json": "*",
+    "tsconfig.base.json": "*"
   },
   "projects": {
     "arrow-variation": {
@@ -268,5 +268,8 @@
         ]
       }
     }
+  },
+  "affected": {
+    "defaultBase": "master"
   }
 }

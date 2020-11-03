@@ -137,7 +137,7 @@
       "@gorilainvest/ui-toolkit/shadow": [
         "dist/shadow",
         "libs/ui-toolkit/shadow/src/index.ts"
-      ],
+      ]
     },
     "rootDir": "."
   },
