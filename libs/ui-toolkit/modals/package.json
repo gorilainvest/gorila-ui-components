@@ -1,7 +1,4 @@
 {
   "name": "@gorilainvest/ui-toolkit-modals",
-  "version": "0.0.1",
-  "peerDependencies": {
-    "@gorilainvest/ui-toolkit": "^2.4.15"
-  }
+  "version": "0.0.1"
 }
