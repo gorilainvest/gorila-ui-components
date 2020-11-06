@@ -3,6 +3,9 @@
   "dest": "../../../dist/currency-display",
   "lib": {
     "entryFile": "src/index.ts",
+    "umdModuleIds": {
+      "@gorilainvest/ui-toolkit/pipes": "../../../dist/pipes"
+    },
     "styleIncludePaths": [ "../../shared-styles" ]
   }
 }

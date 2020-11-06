@@ -3,6 +3,11 @@
   "dest": "../../../dist/modals",
   "lib": {
     "entryFile": "src/index.ts",
+    "umdModuleIds": {
+      "@gorilainvest/ui-toolkit/loading": "../../../dist/loading",
+      "@gorilainvest/ui-toolkit/pipes": "../../../dist/pipes",
+      "@gorilainvest/ui-toolkit/button": "../../../dist/button"
+    },
     "styleIncludePaths": [ "../../shared-styles" ]
   }
 }

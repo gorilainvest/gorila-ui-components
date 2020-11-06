@@ -3,6 +3,10 @@
   "dest": "../../../dist/card-container",
   "lib": {
     "entryFile": "src/index.ts",
+    "umdModuleIds": {
+      "@gorilainvest/ui-toolkit/shadow": "../../../dist/shadow",
+      "@gorilainvest/ui-toolkit/section-title": "../../../dist/section-title"
+    },
     "styleIncludePaths": [ "../../shared-styles" ]
   }
 }
