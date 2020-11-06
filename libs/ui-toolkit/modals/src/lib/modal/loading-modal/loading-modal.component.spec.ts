@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { By } from '@angular/platform-browser';
 import { LoadingModule } from '@gorilainvest/ui-toolkit/loading';
 import { PipesModule } from '@gorilainvest/ui-toolkit/pipes';

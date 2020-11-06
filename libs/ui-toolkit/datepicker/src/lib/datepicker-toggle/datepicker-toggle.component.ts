@@ -17,7 +17,7 @@ import { combineLatest } from 'rxjs';
   exportAs: 'gorDatepickerToggle',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DatepickerToggleComponent<D> extends MatDatepickerToggle<D> implements OnDestroy, OnInit {
+export class DatepickerToggleComponent<D extends any> extends MatDatepickerToggle<D> implements OnDestroy, OnInit {
   /**
    * Indicates that the toggle must continue to be active on date selected.
    */
@@ -57,24 +57,17 @@ export class DatepickerToggleComponent<D> extends MatDatepickerToggle<D> impleme
 
   public ngOnInit() {
     this.datepicker.openedStream.pipe(untilDestroyed(this)).subscribe(() => (this.active = true));
-    combineLatest([this.datepicker.closedStream, this.datepicker._selectedChanged])
+    this.datepicker.closedStream
       .pipe(untilDestroyed(this))
-      .subscribe(([_, selected]) => {
-        if (!this.activeOnSelect) {
-          this.active = false;
-          return;
-        }
+      .subscribe({
+        next: (_) => {
+          /*
+           * Check Angular Material team implementation for isValid
+           *
+           * @see https://github.com/angular/components/blob/10.2.x/src/material/datepicker/date-selection-model.ts
+           */
 
-        try {
-          const startAt = this.datepicker.startAt;
-          if ('format' in selected && 'format' in startAt) {
-            this.active = selected['format']() === startAt['format']();
-          } else {
-            this.active = selected.toString() === startAt.toString();
-          }
-        } catch (e) {
-          console.error(e);
-          this.active = false;
+          this.active = this.datepicker['_model'].isValid();
         }
       });
   }

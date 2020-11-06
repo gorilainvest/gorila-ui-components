@@ -151,15 +151,15 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
     }
 
     /* istanbul ignore if */
-    if (!this._popupRef) {
+    if (!this.getPrivateMember('_popupRef')) {
       this.callPrivateMember('_createPopup');
     }
 
     /* istanbul ignore if */
-    if (!this._popupRef.hasAttached()) {
+    if (!this.getPrivateMember('_popupRef').hasAttached()) {
       this.setValueToPrivateMember(
         '_popupComponentRef',
-        this._popupRef.attach(this.getPrivateMember('_calendarPortal'))
+        this.getPrivateMember('_popupRef').attach(this.getPrivateMember('_calendarPortal'))
       );
       this.getPrivateMember('_popupComponentRef').instance.datepicker = this;
       this.getPrivateMember('_popupComponentRef').instance.startAt = this.cloneStartAt();
@@ -176,7 +176,7 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
         .onStable.asObservable()
         .pipe(take(1))
         .subscribe(() => {
-          this._popupRef.updatePosition();
+          this.getPrivateMember('_popupRef').updatePosition();
         });
     }
   }
