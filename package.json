@@ -80,6 +80,7 @@
     "@nrwl/schematics": "^8.12.11",
     "codacy-coverage": "^3.4.0",
     "core-js": "^2.5.4",
+    "moment": "2.19.3",
     "ngx-moment": "^3.5.0",
     "ngx-take-until-destroy": "^5.4.0",
     "popper.js": "1.14.6",

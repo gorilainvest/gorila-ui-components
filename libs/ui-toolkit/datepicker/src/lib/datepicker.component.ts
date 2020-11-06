@@ -133,7 +133,8 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
     this.getPrivateMember('_dialogRef').componentInstance.minDate = this.minDate;
     this.getPrivateMember('_dialogRef').componentInstance.maxDate = this.maxDate;
     this.getPrivateMember('_dialogRef').componentInstance.startView = this.startView || 'month';
-    this.callPrivateMember('_setColor');
+    this.getPrivateMember('_dialogRef').componentInstance.color = this.color;
+    // this.callPrivateMember('_setColor');
   }
 
   /* istanbul ignore next */
@@ -151,7 +152,7 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
     }
 
     /* istanbul ignore if */
-    if (!this.getPrivateMember('_popupRef')) {
+    if (!this.getPrivateMember('_popupRef', true)) {
       this.callPrivateMember('_createPopup');
     }
 
@@ -169,7 +170,8 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
       /* istanbul ignore next */
       this.getPrivateMember('_popupComponentRef').instance.startView = this.startView || 'month';
       this.getPrivateMember('_popupComponentRef').instance.applyText = this.applyText || 'Apply';
-      this.callPrivateMember('_setColor');
+      this.getPrivateMember('_popupComponentRef').instance.color = this.color;
+      // this.callPrivateMember('_setColor');
 
       // Update the position once the calendar has rendered.
       this.getPrivateMember('_ngZone')
