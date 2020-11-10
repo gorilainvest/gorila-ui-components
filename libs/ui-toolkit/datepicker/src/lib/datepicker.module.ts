@@ -4,7 +4,6 @@ import { MAT_MOMENT_DATE_FORMATS, MatMomentDateModule } from '@angular/material-
 import { MatButtonModule } from '@angular/material/button';
 import { DateAdapter, MAT_DATE_FORMATS } from '@angular/material/core';
 import { MAT_SINGLE_DATE_SELECTION_MODEL_PROVIDER, MatDatepickerModule } from '@angular/material/datepicker';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonModule } from '@gorilainvest/ui-toolkit/button';
 
 import { GorilaDatepickerAdapter } from './adapter/datepicker.adapter';
@@ -17,7 +16,6 @@ import { DatepickerModeService } from './service/datepicker-mode.service';
 @NgModule({
   imports: [
     CommonModule,
-    BrowserAnimationsModule,
     ButtonModule,
     MatButtonModule,
     MatDatepickerModule,

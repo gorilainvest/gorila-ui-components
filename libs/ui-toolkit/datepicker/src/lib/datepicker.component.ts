@@ -1,6 +1,6 @@
 import { ComponentPortal } from '@angular/cdk/portal';
 import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
-import { MatDatepicker } from '@angular/material/datepicker';
+import { ExtractDateTypeFromSelection, MatDatepicker } from '@angular/material/datepicker';
 import { take } from 'rxjs/operators';
 
 import { DatepickerContentComponent } from './datepicker-content/datepicker-content.component';

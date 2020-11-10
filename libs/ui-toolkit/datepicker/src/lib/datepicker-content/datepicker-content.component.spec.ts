@@ -1,10 +1,16 @@
 import { DebugElement } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { MatCalendar } from '@angular/material/datepicker';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { MAT_MOMENT_DATE_FORMATS } from '@angular/material-moment-adapter';
+import { DateAdapter, MAT_DATE_FORMATS } from '@angular/material/core';
+import { MAT_SINGLE_DATE_SELECTION_MODEL_PROVIDER } from '@angular/material/datepicker';
 import { By } from '@angular/platform-browser';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { Moment, utc } from 'moment';
 
+import { GorilaDatepickerAdapter } from '../adapter/datepicker.adapter';
+import { DatepickerComponent } from '../datepicker.component';
 import { DatepickerModule } from '../datepicker.module';
+import { DatepickerModeService } from '../service/datepicker-mode.service';
 import { DatepickerContentComponent } from './datepicker-content.component';
 
 describe('DatepickerContentComponent', () => {
@@ -18,12 +24,21 @@ describe('DatepickerContentComponent', () => {
     fixture = TestBed.createComponent(DatepickerContentComponent) as ComponentFixture<DatepickerContentComponent<Moment>>;
     component = fixture.componentInstance;
     de = fixture.debugElement;
+    const datepickerFixture = TestBed.createComponent(DatepickerComponent) as ComponentFixture<
+      DatepickerComponent<Moment>
+    >;
+    component.datepicker = datepickerFixture.componentInstance;
   };
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [DatepickerModule],
-      providers: [MatCalendar]
+      imports: [NoopAnimationsModule, DatepickerModule],
+      providers: [
+        DatepickerModeService,
+        MAT_SINGLE_DATE_SELECTION_MODEL_PROVIDER,
+        { provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS },
+        { provide: DateAdapter, useClass: GorilaDatepickerAdapter },
+      ],
     }).compileComponents();
   }));
 
@@ -38,7 +53,7 @@ describe('DatepickerContentComponent', () => {
       const activeDay = de.query(By.css('.mat-calendar-body-active'));
       const periodButton = de.query(By.css('.mat-calendar-period-button'));
 
-      expect(getText(periodButton)).toBe('SEP 2019');
+      expect(getText(periodButton)).toBe('09/09/2019');
       expect(getText(activeDay)).toBe(component.startAt.date().toString());
     });
 

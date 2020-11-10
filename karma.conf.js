@@ -29,7 +29,13 @@ module.exports = () => {
     colors: true,
     logLevel: constants.LOG_INFO,
     autoWatch: true,
-    browsers: ["Chrome"],
+    browsers: ['HeadlessChrome'],
+    customLaunchers: {
+        HeadlessChrome: {
+            base: 'ChromeHeadless',
+            flags: ['--no-sandbox']
+        }
+    },
     singleRun: true
   };
 };
