@@ -739,13 +739,6 @@
               "!libs/shell/buttons-indicators/**/*"
             ]
           }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/shell/buttons-indicators/jest.config.js",
-            "passWithNoTests": true
-          }
         }
       },
       "schematics": {}
@@ -767,13 +760,6 @@
               "**/node_modules/**",
               "!libs/shell/controls/**/*"
             ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/shell/controls/jest.config.js",
-            "passWithNoTests": true
           }
         }
       },
@@ -797,13 +783,6 @@
               "!libs/shell/layout/**/*"
             ]
           }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/shell/layout/jest.config.js",
-            "passWithNoTests": true
-          }
         }
       },
       "schematics": {}
@@ -826,13 +805,6 @@
               "!libs/shell/popups-modals/**/*"
             ]
           }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/shell/popups-modals/jest.config.js",
-            "passWithNoTests": true
-          }
         }
       },
       "schematics": {}
@@ -854,13 +826,6 @@
               "**/node_modules/**",
               "!libs/shell/presentational/**/*"
             ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/shell/presentational/jest.config.js",
-            "passWithNoTests": true
           }
         }
       },

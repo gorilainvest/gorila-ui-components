@@ -6,16 +6,13 @@ import { take } from 'rxjs/operators';
 import { DatepickerContentComponent } from './datepicker-content/datepicker-content.component';
 import { DatePickerMode } from './model/datepicker.model';
 
-/** @ignore */
-export const SELECTOR = 'gor-datepicker';
-
 /**
  * Component responsible for managing the datepicker popup/dialog.
  *
  * @link https://github.com/angular/components/blob/master/src/material/datepicker/datepicker.ts
  */
 @Component({
-  selector: SELECTOR,
+  selector: 'gor-datepicker',
   template: '',
   changeDetection: ChangeDetectionStrategy.OnPush,
   exportAs: 'gorDatepicker',
@@ -134,7 +131,6 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
     this.getPrivateMember('_dialogRef').componentInstance.maxDate = this.maxDate;
     this.getPrivateMember('_dialogRef').componentInstance.startView = this.startView || 'month';
     this.getPrivateMember('_dialogRef').componentInstance.color = this.color;
-    // this.callPrivateMember('_setColor');
   }
 
   /* istanbul ignore next */
@@ -171,7 +167,6 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
       this.getPrivateMember('_popupComponentRef').instance.startView = this.startView || 'month';
       this.getPrivateMember('_popupComponentRef').instance.applyText = this.applyText || 'Apply';
       this.getPrivateMember('_popupComponentRef').instance.color = this.color;
-      // this.callPrivateMember('_setColor');
 
       // Update the position once the calendar has rendered.
       this.getPrivateMember('_ngZone')

@@ -3,8 +3,7 @@
   "include": ["**/*.ts"],
   "compilerOptions": {
     "types": [
-      
-      "jasmine", 
+      "jasmine",
       "node"
     ]
   }
