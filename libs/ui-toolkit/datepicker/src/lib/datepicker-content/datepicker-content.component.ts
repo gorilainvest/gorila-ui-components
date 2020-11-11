@@ -1,18 +1,13 @@
-import { ComponentType } from '@angular/cdk/portal';
+import type { ComponentType } from '@angular/cdk/portal';
 import { AfterViewInit, Component, ElementRef, HostBinding, Input, ViewChild, ViewEncapsulation } from '@angular/core';
-import {
-  DateRange,
-  ExtractDateTypeFromSelection,
-  MatCalendar,
-  MatCalendarView,
-  MatDatepickerContent,
-} from '@angular/material/datepicker';
+import { ExtractDateTypeFromSelection, MatCalendar, MatDatepickerContent } from '@angular/material/datepicker';
 import { Moment } from 'moment';
 
 import { CalendarHeaderComponent } from '../calendar-header/calendar-header.component';
-import { DatePickerMode } from '../model/datepicker.model';
+import type { DatePickerMode } from '../model/datepicker.model';
 import { DatepickerModeService } from '../service/datepicker-mode.service';
 
+import type { MatCalendarView } from '@angular/material/datepicker';
 const mapMode = {
   'year-month': { view: 'multi-year'},
   'year-only': { view: 'multi-year'}

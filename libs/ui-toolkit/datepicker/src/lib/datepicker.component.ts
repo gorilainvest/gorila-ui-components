@@ -4,7 +4,7 @@ import { ExtractDateTypeFromSelection, MatDatepicker } from '@angular/material/d
 import { take } from 'rxjs/operators';
 
 import { DatepickerContentComponent } from './datepicker-content/datepicker-content.component';
-import { DatePickerMode } from './model/datepicker.model';
+import type { DatePickerMode } from './model/datepicker.model';
 
 /**
  * Component responsible for managing the datepicker popup/dialog.

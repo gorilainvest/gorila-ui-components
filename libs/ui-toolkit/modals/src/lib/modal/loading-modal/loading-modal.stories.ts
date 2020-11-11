@@ -5,7 +5,8 @@ import { PipesModule } from '@gorilainvest/ui-toolkit/pipes';
 import { text, withKnobs } from '@storybook/addon-knobs';
 import { moduleMetadata, storiesOf } from '@storybook/angular';
 
-import { LoadingModalComponent, ModalModule, SimpleModalData } from '../../..';
+import type { SimpleModalData } from '../../..';
+import { LoadingModalComponent, ModalModule } from '../../..';
 
 @Component({
   selector: 'gor-test',
