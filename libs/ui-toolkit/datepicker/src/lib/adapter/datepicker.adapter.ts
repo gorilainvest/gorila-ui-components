@@ -35,7 +35,7 @@ export class GorilaDatepickerAdapter extends MomentDateAdapter {
   public isValid(date: DateRange<Moment> | Moment): boolean {
     if (date instanceof DateRange) {
       const startIsValid = date.start && this.clone(date.start).isValid();
-      const endIsValid = date.end === null || this.clone(date.end).isValid();
+      const endIsValid = date.end === null || (date.end && this.clone(date.end).isValid())
       return startIsValid && endIsValid;
     }
     return this.clone(date).isValid();
