@@ -1,6 +1,27 @@
+// tslint:disable:no-host-metadata-property
 import type { ComponentType } from '@angular/cdk/portal';
-import { AfterViewInit, Component, ElementRef, HostBinding, Input, ViewChild, ViewEncapsulation } from '@angular/core';
-import { ExtractDateTypeFromSelection, MatCalendar, MatDatepickerContent } from '@angular/material/datepicker';
+import {
+  AfterViewInit,
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  HostBinding,
+  Inject,
+  Input,
+  Optional,
+  ViewChild,
+  ViewEncapsulation,
+} from '@angular/core';
+import { DateAdapter } from '@angular/material/core';
+import {
+  ExtractDateTypeFromSelection,
+  MatCalendar,
+  matDatepickerAnimations,
+  MatDatepickerContent,
+  MatDateRangeSelectionStrategy,
+  MatDateSelectionModel,
+  MAT_DATE_RANGE_SELECTION_STRATEGY,
+} from '@angular/material/datepicker';
 import { Moment } from 'moment';
 
 import { CalendarHeaderComponent } from '../calendar-header/calendar-header.component';
@@ -25,6 +46,13 @@ export const SELECTOR = 'gor-datepicker-content';
   selector: SELECTOR,
   templateUrl: './datepicker-content.component.html',
   styleUrls: ['./datepicker-content.component.scss'],
+  host: {
+    'class': 'mat-datepicker-content',
+    '[@transformPanel]': '_animationState',
+    '(@transformPanel.done)': '_animationDone.next()',
+    '[class.mat-datepicker-content-touch]': 'datepicker.touchUi',
+  },
+  animations: [matDatepickerAnimations.transformPanel, matDatepickerAnimations.fadeInCalendar],
   encapsulation: ViewEncapsulation.None,
 })
 export class DatepickerContentComponent<S, D = ExtractDateTypeFromSelection<S>>
@@ -100,8 +128,17 @@ export class DatepickerContentComponent<S, D = ExtractDateTypeFromSelection<S>>
 
   @HostBinding('class') public hostClass = SELECTOR;
 
-  constructor(elementRef: ElementRef, private modeService: DatepickerModeService) {
-    super(elementRef);
+  constructor(
+    elementRef: ElementRef,
+    private modeService: DatepickerModeService,
+    _changeDetectorRef?: ChangeDetectorRef,
+    _model?: MatDateSelectionModel<S, D>,
+    _dateAdapter?: DateAdapter<D>,
+    @Optional()
+    @Inject(MAT_DATE_RANGE_SELECTION_STRATEGY)
+    _rangeSelectionStrategy?: MatDateRangeSelectionStrategy<D>
+  ) {
+    super(elementRef, _changeDetectorRef, _model, _dateAdapter, _rangeSelectionStrategy);
   }
 
   /**

@@ -1,6 +1,6 @@
 import { ComponentPortal } from '@angular/cdk/portal';
 import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
-import { ExtractDateTypeFromSelection, MatDatepicker } from '@angular/material/datepicker';
+import { MatDatepicker } from '@angular/material/datepicker';
 import { take } from 'rxjs/operators';
 
 import { DatepickerContentComponent } from './datepicker-content/datepicker-content.component';
@@ -93,9 +93,23 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
       this.setValueToPrivateMember('_focusedElementBeforeOpen', _document.activeElement);
     }
 
-    this.touchUi ? this.openAsDialog() : this.openAsPopup();
+    this.touchUi ? this.openAsDialog() : this.callPrivateMember('openAsPopup');
     this.setValueToPrivateMember('_opened', true);
     this.openedStream.emit();
+  }
+
+  /** Forwards relevant values from the datepicker to the datepicker content inside the overlay. */
+  // @ts-ignore
+  protected _forwardContentValues(instance: DatepickerContentComponent<D, D>) {
+    // @ts-ignore
+    instance.datepicker = this;
+    instance.color = this.color;
+    instance.startAt = this.cloneStartAt();
+    instance.mode = this.mode || 'all';
+    instance.maxDate = this.maxDate;
+    instance.minDate = this.minDate;
+    instance.startView = this.startView || 'month';
+    instance.applyText = this.applyText || 'Apply';
   }
 
   /** Open the calendar as a dialog. */
@@ -123,58 +137,24 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
     this.getPrivateMember('_dialogRef')
       .afterClosed()
       .subscribe(/* istanbul ignore next */ () => this.close());
-    this.getPrivateMember('_dialogRef').componentInstance.datepicker = this;
-    this.getPrivateMember('_dialogRef').componentInstance.mode = this.mode || 'all';
-    this.getPrivateMember('_dialogRef').componentInstance.applyText = this.applyText || 'Apply';
-    this.getPrivateMember('_dialogRef').componentInstance.startAt = this.cloneStartAt();
-    this.getPrivateMember('_dialogRef').componentInstance.minDate = this.minDate;
-    this.getPrivateMember('_dialogRef').componentInstance.maxDate = this.maxDate;
-    this.getPrivateMember('_dialogRef').componentInstance.startView = this.startView || 'month';
-    this.getPrivateMember('_dialogRef').componentInstance.color = this.color;
+    this._forwardContentValues(this.getPrivateMember('_dialogRef'));
   }
 
-  /* istanbul ignore next */
-  /** Open the calendar as a popup. */
-  private openAsPopup() {
-    /* istanbul ignore if */
-    if (!this.getPrivateMember('_calendarPortal', true)) {
-      this.setValueToPrivateMember(
-        '_calendarPortal',
-        new ComponentPortal<DatepickerContentComponent<D>>(
-          DatepickerContentComponent,
-          this.getPrivateMember('_viewContainerRef')
-        )
-      );
-    }
+  private openAsPopup(): void {
+    const portal = new ComponentPortal<DatepickerContentComponent<D, D>>(DatepickerContentComponent,
+                                                                  this.getPrivateMember('_viewContainerRef'));
 
-    /* istanbul ignore if */
-    if (!this.getPrivateMember('_popupRef', true)) {
-      this.callPrivateMember('_createPopup');
-    }
+    this.callPrivateMember('_destroyPopup');
+    this.callPrivateMember('_createPopup');
+    const popupRef = this.getPrivateMember('_popupRef');
+    // tslint:disable-next-line
+    this.setValueToPrivateMember('_popupComponentRef', popupRef!.attach(portal));
+    this._forwardContentValues(this.getPrivateMember('_popupComponentRef').instance);
 
-    /* istanbul ignore if */
-    if (!this.getPrivateMember('_popupRef').hasAttached()) {
-      this.setValueToPrivateMember(
-        '_popupComponentRef',
-        this.getPrivateMember('_popupRef').attach(this.getPrivateMember('_calendarPortal'))
-      );
-      this.getPrivateMember('_popupComponentRef').instance.datepicker = this;
-      this.getPrivateMember('_popupComponentRef').instance.startAt = this.cloneStartAt();
-      this.getPrivateMember('_popupComponentRef').instance.mode = this.mode || 'all';
-      this.getPrivateMember('_popupComponentRef').instance.maxDate = this.maxDate;
-      this.getPrivateMember('_popupComponentRef').instance.minDate = this.minDate;
-      /* istanbul ignore next */
-      this.getPrivateMember('_popupComponentRef').instance.startView = this.startView || 'month';
-      this.getPrivateMember('_popupComponentRef').instance.applyText = this.applyText || 'Apply';
-      this.getPrivateMember('_popupComponentRef').instance.color = this.color;
-
-      // Update the position once the calendar has rendered.
-      this.getPrivateMember('_ngZone')
-        .onStable.asObservable()
-        .pipe(take(1))
-        .subscribe(() => {
-          this.getPrivateMember('_popupRef').updatePosition();
-        });
-    }
+    // Update the position once the calendar has rendered.
+    this.getPrivateMember('_ngZone').onStable.pipe(take(1)).subscribe(() => {
+      // tslint:disable-next-line
+      popupRef!.updatePosition();
+    });
   }
 }

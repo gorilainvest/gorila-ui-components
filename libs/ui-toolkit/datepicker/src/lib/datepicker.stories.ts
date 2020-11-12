@@ -1,4 +1,7 @@
+import { CommonModule } from '@angular/common';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { BrowserModule } from '@angular/platform-browser';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { date, select, text, withKnobs } from '@storybook/addon-knobs';
 import { moduleMetadata, storiesOf } from '@storybook/angular';
 import { utc } from 'moment';
@@ -67,7 +70,7 @@ storiesOf('DatepickerContent', module)
 storiesOf('Datepicker', module)
   .addDecorator(
     moduleMetadata({
-      imports: [DatepickerModule, MatDatepickerModule],
+      imports: [CommonModule, NoopAnimationsModule, DatepickerModule, MatDatepickerModule],
     })
   )
   .add('starting in year-only selection', () => ({
