@@ -16,7 +16,6 @@ script:
 - npm run build -- --prod
 - npm run coverage
 - npm run lint
-- npm run e2e
 - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then npm run compodoc:coverage; fi
 - if [ "$TRAVIS_PULL_REQUEST" = "false" -a "$TRAVIS_BRANCH" = "master" ]; then npm
   run codacy-coverage; fi

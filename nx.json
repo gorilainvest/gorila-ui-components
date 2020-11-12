@@ -110,12 +110,6 @@
     "widgets-system": {
       "tags": []
     },
-    "widgets-system-e2e": {
-      "tags": [],
-      "implicitDependencies": [
-        "widgets-system"
-      ]
-    },
     "directives": {
       "tags": [
         "exportable",
