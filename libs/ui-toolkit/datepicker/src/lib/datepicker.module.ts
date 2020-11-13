@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { MAT_MOMENT_DATE_FORMATS, MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatButtonModule } from '@angular/material/button';
 import { DateAdapter, MAT_DATE_FORMATS } from '@angular/material/core';
-import { MAT_SINGLE_DATE_SELECTION_MODEL_PROVIDER, MatDatepickerModule } from '@angular/material/datepicker';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { ButtonModule } from '@gorilainvest/ui-toolkit/button';
 
 import { GorilaDatepickerAdapter } from './adapter/datepicker.adapter';
@@ -24,7 +24,6 @@ import { DatepickerModeService } from './service/datepicker-mode.service';
   declarations: [DatepickerComponent, DatepickerContentComponent, DatepickerToggleComponent, CalendarHeaderComponent],
   providers: [
     DatepickerModeService,
-    MAT_SINGLE_DATE_SELECTION_MODEL_PROVIDER,
     { provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS },
     { provide: DateAdapter, useClass: GorilaDatepickerAdapter },
   ],

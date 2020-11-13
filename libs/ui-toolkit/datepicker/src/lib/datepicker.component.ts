@@ -1,6 +1,6 @@
 import { ComponentPortal } from '@angular/cdk/portal';
 import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
-import { MatDatepicker } from '@angular/material/datepicker';
+import { MatDatepicker, MAT_SINGLE_DATE_SELECTION_MODEL_PROVIDER } from '@angular/material/datepicker';
 import { take } from 'rxjs/operators';
 
 import { DatepickerContentComponent } from './datepicker-content/datepicker-content.component';
@@ -15,11 +15,11 @@ import type { DatePickerMode } from './model/datepicker.model';
   selector: 'gor-datepicker',
   template: '',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  exportAs: 'gorDatepicker',
-  encapsulation: ViewEncapsulation.None
+  exportAs: 'matDatepicker',
+  encapsulation: ViewEncapsulation.None,
+  providers: [MAT_SINGLE_DATE_SELECTION_MODEL_PROVIDER],
 })
 export class DatepickerComponent<D> extends MatDatepicker<D> {
-
   /**
    * Datepicker mode change the component behavior
    * blocking which view modes will be used in calendar's
@@ -130,7 +130,7 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
       _dialog.open<DatepickerContentComponent<D>>(DatepickerContentComponent, {
         direction: /* istanbul ignore next */ _dir ? _dir.value : 'ltr',
         viewContainerRef: this.getPrivateMember('_viewContainerRef'),
-        panelClass: 'mat-datepicker-dialog'
+        panelClass: 'mat-datepicker-dialog',
       })
     );
 
@@ -141,8 +141,10 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
   }
 
   private openAsPopup(): void {
-    const portal = new ComponentPortal<DatepickerContentComponent<D, D>>(DatepickerContentComponent,
-                                                                  this.getPrivateMember('_viewContainerRef'));
+    const portal = new ComponentPortal<DatepickerContentComponent<D, D>>(
+      DatepickerContentComponent,
+      this.getPrivateMember('_viewContainerRef')
+    );
 
     this.callPrivateMember('_destroyPopup');
     this.callPrivateMember('_createPopup');
@@ -152,9 +154,11 @@ export class DatepickerComponent<D> extends MatDatepicker<D> {
     this._forwardContentValues(this.getPrivateMember('_popupComponentRef').instance);
 
     // Update the position once the calendar has rendered.
-    this.getPrivateMember('_ngZone').onStable.pipe(take(1)).subscribe(() => {
-      // tslint:disable-next-line
-      popupRef!.updatePosition();
-    });
+    this.getPrivateMember('_ngZone')
+      .onStable.pipe(take(1))
+      .subscribe(() => {
+        // tslint:disable-next-line
+        popupRef!.updatePosition();
+      });
   }
 }
