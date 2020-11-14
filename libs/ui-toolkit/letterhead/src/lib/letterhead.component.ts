@@ -63,6 +63,11 @@ export class LetterheadComponent {
   @Input() public footerMiddleSub: string;
 
   /**
+   * Text to be displayed as footnote
+   */
+  @Input() public footnoteText: string;
+
+  /**
    * Landing page url, displayed in footer's right section.
    */
   @Input() public landingPageUrl = '';
