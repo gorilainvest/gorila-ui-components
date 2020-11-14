@@ -1,3 +1,6 @@
+<section class="letterhead-footnote">
+  <div *ngIf="footnoteText" class="letterhead-footnote-text">{{ footnoteText }}</div>
+</section>
 <section class="letterhead-footer">
   <div *ngIf="leftMain" class="left main">{{ leftMain }}</div>
   <div *ngIf="leftSub" class="left sub">{{ leftSub }}</div>
