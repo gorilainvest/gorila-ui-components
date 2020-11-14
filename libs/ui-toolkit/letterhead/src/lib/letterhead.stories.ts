@@ -43,6 +43,7 @@ storiesOf('Letterhead', module)
           [footerLeftSub]="footerLeftSub"
           [footerMiddleMain]="footerMiddleMain"
           [footerMiddleSub]="footerMiddleSub"
+          [footnoteText]="footnoteText"
           [landingPageUrl]="landingPageUrl"
           [loading]="loading"
           [displayShadow]="displayShadow"
@@ -70,6 +71,7 @@ storiesOf('Letterhead', module)
         footerLeftSub: text('footerLeftSub', 'Footer sub'),
         footerMiddleMain: text('footerMiddleMain', 'Footer middle main'),
         footerMiddleSub: text('footerMiddleSub', 'Footer middle sub'),
+        footnoteText: text('footnoteText', 'Text displayed as foot note'),
         landingPageUrl: text('landingPageUrl', 'gorila.com.br'),
         displayShadow: boolean('displayShadow', false),
         loading: boolean('loading', false),
@@ -89,6 +91,7 @@ storiesOf('Letterhead', module)
           [footerLeftSub]="footerLeftSub"
           [footerMiddleMain]="footerMiddleMain"
           [footerMiddleSub]="footerMiddleSub"
+          [footnoteText]="footnoteText"
           [landingPageUrl]="landingPageUrl"
           [loading]="loading"
           [displayShadow]="displayShadow"
@@ -109,6 +112,7 @@ storiesOf('Letterhead', module)
         footerLeftSub: text('footerLeftSub', 'Footer sub'),
         footerMiddleMain: text('footerMiddleMain', 'Footer middle main'),
         footerMiddleSub: text('footerMiddleSub', 'Footer middle sub'),
+        footnoteText: text('footnoteText', 'Text displayed as foot note'),
         landingPageUrl: text('landingPageUrl', 'gorila.com.br'),
         displayShadow: boolean('displayShadow', false),
         loading: boolean('loading', false),
