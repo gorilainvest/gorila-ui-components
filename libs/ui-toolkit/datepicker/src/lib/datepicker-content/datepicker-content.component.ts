@@ -1,5 +1,4 @@
 // tslint:disable:no-host-metadata-property
-import type { ComponentType } from '@angular/cdk/portal';
 import {
   AfterViewInit,
   ChangeDetectorRef,
@@ -15,20 +14,20 @@ import {
 import { DateAdapter } from '@angular/material/core';
 import {
   ExtractDateTypeFromSelection,
+  MAT_DATE_RANGE_SELECTION_STRATEGY,
   MatCalendar,
   matDatepickerAnimations,
   MatDatepickerContent,
-  MatDateRangeSelectionStrategy,
   MatDateSelectionModel,
-  MAT_DATE_RANGE_SELECTION_STRATEGY,
 } from '@angular/material/datepicker';
 import { Moment } from 'moment';
 
 import { CalendarHeaderComponent } from '../calendar-header/calendar-header.component';
-import type { DatePickerMode } from '../model/datepicker.model';
 import { DatepickerModeService } from '../service/datepicker-mode.service';
 
-import type { MatCalendarView } from '@angular/material/datepicker';
+import type { ComponentType } from '@angular/cdk/portal';
+import type { MatCalendarView, MatDateRangeSelectionStrategy } from '@angular/material/datepicker';
+import type { DatePickerMode } from '../model/datepicker.model';
 const mapMode = {
   'year-month': { view: 'multi-year'},
   'year-only': { view: 'multi-year'}
