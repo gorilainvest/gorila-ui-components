@@ -1,12 +1,33 @@
-import { ComponentType } from '@angular/cdk/portal';
-import { AfterViewInit, Component, ElementRef, HostBinding, Input, ViewChild, ViewEncapsulation } from '@angular/core';
-import { MatCalendar, MatCalendarView, MatDatepickerContent } from '@angular/material/datepicker';
+// tslint:disable:no-host-metadata-property
+import {
+  AfterViewInit,
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  HostBinding,
+  Inject,
+  Input,
+  Optional,
+  ViewChild,
+  ViewEncapsulation,
+} from '@angular/core';
+import { DateAdapter } from '@angular/material/core';
+import {
+  ExtractDateTypeFromSelection,
+  MAT_DATE_RANGE_SELECTION_STRATEGY,
+  MatCalendar,
+  matDatepickerAnimations,
+  MatDatepickerContent,
+  MatDateSelectionModel,
+} from '@angular/material/datepicker';
 import { Moment } from 'moment';
 
 import { CalendarHeaderComponent } from '../calendar-header/calendar-header.component';
-import { DatePickerMode } from '../model/datepicker.model';
 import { DatepickerModeService } from '../service/datepicker-mode.service';
 
+import type { ComponentType } from '@angular/cdk/portal';
+import type { MatCalendarView, MatDateRangeSelectionStrategy } from '@angular/material/datepicker';
+import type { DatePickerMode } from '../model/datepicker.model';
 const mapMode = {
   'year-month': { view: 'multi-year'},
   'year-only': { view: 'multi-year'}
@@ -24,10 +45,19 @@ export const SELECTOR = 'gor-datepicker-content';
   selector: SELECTOR,
   templateUrl: './datepicker-content.component.html',
   styleUrls: ['./datepicker-content.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  host: {
+    'class': 'mat-datepicker-content',
+    '[@transformPanel]': '_animationState',
+    '(@transformPanel.done)': '_animationDone.next()',
+    '[class.mat-datepicker-content-touch]': 'datepicker.touchUi',
+  },
+  animations: [matDatepickerAnimations.transformPanel, matDatepickerAnimations.fadeInCalendar],
+  encapsulation: ViewEncapsulation.None,
 })
-export class DatepickerContentComponent<D> extends MatDatepickerContent<D> implements AfterViewInit {
-  @ViewChild(MatCalendar, { static: false }) calendarRef: ElementRef<MatCalendar<D>>;
+export class DatepickerContentComponent<S, D = ExtractDateTypeFromSelection<S>>
+  extends MatDatepickerContent<S, D>
+  implements AfterViewInit {
+  @ViewChild(MatCalendar) calendarRef: ElementRef<MatCalendar<D>>;
 
   @HostBinding('style.background-color') @Input() bgColor = 'white';
 
@@ -52,7 +82,7 @@ export class DatepickerContentComponent<D> extends MatDatepickerContent<D> imple
       this._startView = mapMode[mode].view;
     }
     this.modeService.setMode(mode);
-  };
+  }
   public get mode(): DatePickerMode {
     return this._mode;
   }
@@ -90,7 +120,7 @@ export class DatepickerContentComponent<D> extends MatDatepickerContent<D> imple
     if (this.mode === 'all') {
       this._startView = startView;
     }
-  };
+  }
   public get startView(): MatCalendarView {
     return this._startView;
   }
@@ -99,9 +129,15 @@ export class DatepickerContentComponent<D> extends MatDatepickerContent<D> imple
 
   constructor(
     elementRef: ElementRef,
-    private modeService: DatepickerModeService
+    private modeService: DatepickerModeService,
+    _changeDetectorRef?: ChangeDetectorRef,
+    _model?: MatDateSelectionModel<S, D>,
+    _dateAdapter?: DateAdapter<D>,
+    @Optional()
+    @Inject(MAT_DATE_RANGE_SELECTION_STRATEGY)
+    _rangeSelectionStrategy?: MatDateRangeSelectionStrategy<D>
   ) {
-    super(elementRef);
+    super(elementRef, _changeDetectorRef, _model, _dateAdapter, _rangeSelectionStrategy);
   }
 
   /**
@@ -109,10 +145,8 @@ export class DatepickerContentComponent<D> extends MatDatepickerContent<D> imple
    */
   public selectedDate: D | null = null;
 
-  public canChangeView = (view: MatCalendarView, mode: DatePickerMode) => (
-    mode === 'all' ||
-    (mode === 'year-month' && view === 'year')
-  )
+  public canChangeView = (view: MatCalendarView, mode: DatePickerMode) =>
+    mode === 'all' || (mode === 'year-month' && view === 'year');
 
   public ngAfterViewInit() {
     this._calendar._goToDateInView = (date: D, view: MatCalendarView) => {
@@ -139,7 +173,7 @@ export class DatepickerContentComponent<D> extends MatDatepickerContent<D> imple
     if (this.mode === 'year-only') {
       return this.setSelectedDate(year);
     }
-  }
+  };
 
   public monthSelected(month: Moment) {
     if (this.mode === 'year-month') {
@@ -153,5 +187,4 @@ export class DatepickerContentComponent<D> extends MatDatepickerContent<D> imple
       this.datepicker.select(date);
     }
   }
-
 }

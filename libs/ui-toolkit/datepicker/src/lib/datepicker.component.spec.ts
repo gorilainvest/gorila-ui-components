@@ -1,23 +1,32 @@
 import { OverlayRef } from '@angular/cdk/overlay';
 import { ElementRef } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MAT_MOMENT_DATE_FORMATS } from '@angular/material-moment-adapter';
 import { DateAdapter, MAT_DATE_FORMATS } from '@angular/material/core';
-import { MatDatepickerInput } from '@angular/material/datepicker';
+import { MatDatepickerInput, MAT_SINGLE_DATE_SELECTION_MODEL_PROVIDER } from '@angular/material/datepicker';
 import { MatDialogContainer, MatDialogRef } from '@angular/material/dialog';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { Moment } from 'moment';
+import { GorilaDatepickerAdapter } from './adapter/datepicker.adapter';
 
 import { DatepickerComponent } from './datepicker.component';
 import { DatepickerModule } from './datepicker.module';
+import { DatepickerModeService } from './service/datepicker-mode.service';
 
 describe('DatepickerComponent', () => {
   let component: DatepickerComponent<Moment>;
   let fixture: ComponentFixture<DatepickerComponent<Moment>>;
   let datepickerInput: MatDatepickerInput<Moment>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [DatepickerModule, NoopAnimationsModule]
+      imports: [DatepickerModule, NoopAnimationsModule],
+      providers: [
+        DatepickerModeService,
+        MAT_SINGLE_DATE_SELECTION_MODEL_PROVIDER,
+        { provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS },
+        { provide: DateAdapter, useClass: GorilaDatepickerAdapter },
+      ],
     }).compileComponents();
   }));
 

@@ -4,7 +4,8 @@
   "lib": {
     "entryFile": "src/index.ts",
     "umdModuleIds": {
-      "@gorilainvest/ui-toolkit/button": "@gorilainvest/ui-toolkit/dist/button"
+      "@gorilainvest/ui-toolkit/button": "@gorilainvest/ui-toolkit/dist/button",
+      "ngx-take-until-destroy": "ngx-take-until-destroy"
     },
     "styleIncludePaths": [ "../../shared-styles" ]
   }

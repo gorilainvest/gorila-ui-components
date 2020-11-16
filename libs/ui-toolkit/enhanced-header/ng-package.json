@@ -3,6 +3,10 @@
   "dest": "../../../dist/enhanced-header",
   "lib": {
     "entryFile": "src/index.ts",
+    "umdModuleIds": {
+      "@gorilainvest/ui-toolkit/enhanced-title": "../../../dist/enhanced-title",
+      "@gorilainvest/ui-toolkit/tooltip": "../../../dist/tooltip"
+    },
     "styleIncludePaths": [ "../../shared-styles" ]
   }
 }

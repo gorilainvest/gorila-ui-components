@@ -16,6 +16,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/apps/widgets-system",
             "index": "apps/widgets-system/src/index.html",
             "main": "apps/widgets-system/src/main.ts",
@@ -58,6 +59,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -112,35 +117,8 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "**/*.json"
-            ]
-          }
-        }
-      }
-    },
-    "widgets-system-e2e": {
-      "root": "apps/widgets-system-e2e",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/widgets-system-e2e/cypress.json",
-            "tsConfig": "apps/widgets-system-e2e/tsconfig.e2e.json",
-            "devServerTarget": "widgets-system:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "widgets-system:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "apps/widgets-system-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
+              "**/*.json",
+              "!apps/widgets-system/**"
             ]
           }
         }
@@ -152,16 +130,11 @@
       "projectType": "library",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/arrow-variation/tsconfig.lib.json",
             "project": "libs/ui-toolkit/arrow-variation/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            }
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -172,7 +145,8 @@
               "libs/ui-toolkit/arrow-variation/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/ui-toolkit/arrow-variation/**/*"
             ]
           }
         },
@@ -203,15 +177,11 @@
       "projectType": "library",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/button/tsconfig.lib.json",
             "project": "libs/ui-toolkit/button/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "node_modules"
-              ]
-            }
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -222,7 +192,8 @@
               "libs/ui-toolkit/button/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/ui-toolkit/button/**/*"
             ]
           }
         },
@@ -252,16 +223,11 @@
       "projectType": "library",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/card-container/tsconfig.lib.json",
             "project": "libs/ui-toolkit/card-container/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            }
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -272,7 +238,8 @@
               "libs/ui-toolkit/card-container/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/ui-toolkit/card-container/**/*"
             ]
           }
         },
@@ -297,16 +264,11 @@
       "projectType": "library",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/countdown-button/tsconfig.lib.json",
             "project": "libs/ui-toolkit/countdown-button/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            }
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -317,7 +279,8 @@
               "libs/ui-toolkit/countdown-button/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/ui-toolkit/countdown-button/**/*"
             ]
           }
         },
@@ -348,16 +311,11 @@
       "projectType": "library",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/currency-display/tsconfig.lib.json",
             "project": "libs/ui-toolkit/currency-display/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            }
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -368,7 +326,8 @@
               "libs/ui-toolkit/currency-display/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/ui-toolkit/currency-display/**/*"
             ]
           }
         },
@@ -399,16 +358,11 @@
       "projectType": "library",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/enhanced-title/tsconfig.lib.json",
             "project": "libs/ui-toolkit/enhanced-title/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            }
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -419,7 +373,8 @@
               "libs/ui-toolkit/enhanced-title/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/ui-toolkit/enhanced-title/**/*"
             ]
           }
         },
@@ -444,16 +399,11 @@
       "projectType": "library",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/data-formatter/tsconfig.lib.json",
             "project": "libs/ui-toolkit/data-formatter/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            }
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -464,7 +414,8 @@
               "libs/ui-toolkit/data-formatter/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/ui-toolkit/data-formatter/**/*"
             ]
           }
         },
@@ -495,16 +446,11 @@
       "projectType": "library",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/loading/tsconfig.lib.json",
             "project": "libs/ui-toolkit/loading/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            }
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -515,7 +461,8 @@
               "libs/ui-toolkit/loading/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/ui-toolkit/loading/**/*"
             ]
           }
         },
@@ -540,16 +487,11 @@
       "projectType": "library",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/popover/tsconfig.lib.json",
             "project": "libs/ui-toolkit/popover/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            }
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -560,7 +502,8 @@
               "libs/ui-toolkit/popover/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/ui-toolkit/popover/**/*"
             ]
           }
         },
@@ -585,16 +528,11 @@
       "projectType": "library",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/popup-confirm/tsconfig.lib.json",
             "project": "libs/ui-toolkit/popup-confirm/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            }
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -605,7 +543,8 @@
               "libs/ui-toolkit/popup-confirm/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/ui-toolkit/popup-confirm/**/*"
             ]
           }
         },
@@ -636,16 +575,11 @@
       "projectType": "library",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/section-title/tsconfig.lib.json",
             "project": "libs/ui-toolkit/section-title/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            }
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -656,7 +590,8 @@
               "libs/ui-toolkit/section-title/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/ui-toolkit/section-title/**/*"
             ]
           }
         },
@@ -681,16 +616,11 @@
       "projectType": "library",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/slide-toggle/tsconfig.lib.json",
             "project": "libs/ui-toolkit/slide-toggle/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            }
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "test": {
@@ -709,7 +639,8 @@
               "libs/ui-toolkit/slide-toggle/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/ui-toolkit/slide-toggle/**/*"
             ]
           }
         }
@@ -726,10 +657,11 @@
       "projectType": "library",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/directives/tsconfig.lib.json",
-            "project": "libs/ui-toolkit/directives/ng-package.json"
+            "project": "libs/ui-toolkit/directives/ng-package.json",
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "test": {
@@ -748,7 +680,8 @@
               "libs/ui-toolkit/directives/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/ui-toolkit/directives/**/*"
             ]
           }
         }
@@ -773,16 +706,9 @@
               "libs/shell/buttons-indicators/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/shell/buttons-indicators/**/*"
             ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/shell/buttons-indicators/jest.config.js",
-            "tsConfig": "libs/shell/buttons-indicators/tsconfig.spec.json",
-            "setupFile": "libs/shell/buttons-indicators/src/test-setup.ts"
           }
         }
       },
@@ -802,16 +728,9 @@
               "libs/shell/controls/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/shell/controls/**/*"
             ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/shell/controls/jest.config.js",
-            "tsConfig": "libs/shell/controls/tsconfig.spec.json",
-            "setupFile": "libs/shell/controls/src/test-setup.ts"
           }
         }
       },
@@ -831,16 +750,9 @@
               "libs/shell/layout/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/shell/layout/**/*"
             ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/shell/layout/jest.config.js",
-            "tsConfig": "libs/shell/layout/tsconfig.spec.json",
-            "setupFile": "libs/shell/layout/src/test-setup.ts"
           }
         }
       },
@@ -860,16 +772,9 @@
               "libs/shell/popups-modals/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/shell/popups-modals/**/*"
             ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/shell/popups-modals/jest.config.js",
-            "tsConfig": "libs/shell/popups-modals/tsconfig.spec.json",
-            "setupFile": "libs/shell/popups-modals/src/test-setup.ts"
           }
         }
       },
@@ -889,16 +794,9 @@
               "libs/shell/presentational/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/shell/presentational/**/*"
             ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/shell/presentational/jest.config.js",
-            "tsConfig": "libs/shell/presentational/tsconfig.spec.json",
-            "setupFile": "libs/shell/presentational/src/test-setup.ts"
           }
         }
       },
@@ -911,10 +809,11 @@
       "prefix": "gorilainvest",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/gdk/tsconfig.lib.json",
-            "project": "libs/gdk/ng-package.json"
+            "project": "libs/gdk/ng-package.json",
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -925,7 +824,8 @@
               "libs/gdk/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/gdk/**/*"
             ]
           }
         },
@@ -933,8 +833,7 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/gdk/jest.config.js",
-            "tsConfig": "libs/gdk/tsconfig.spec.json",
-            "setupFile": "libs/gdk/src/test-setup.ts"
+            "passWithNoTests": true
           }
         }
       },
@@ -947,10 +846,11 @@
       "prefix": "gorilainvest",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/scroll-container/tsconfig.lib.json",
-            "project": "libs/ui-toolkit/scroll-container/ng-package.json"
+            "project": "libs/ui-toolkit/scroll-container/ng-package.json",
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -961,7 +861,8 @@
               "libs/ui-toolkit/scroll-container/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/ui-toolkit/scroll-container/**/*"
             ]
           }
         },
@@ -987,10 +888,11 @@
       "prefix": "gor",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/page-header/tsconfig.lib.json",
-            "project": "libs/ui-toolkit/page-header/ng-package.json"
+            "project": "libs/ui-toolkit/page-header/ng-package.json",
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -1001,7 +903,8 @@
               "libs/ui-toolkit/page-header/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/ui-toolkit/page-header/**/*"
             ]
           }
         },
@@ -1027,10 +930,11 @@
       "prefix": "gor",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/pipes/tsconfig.lib.json",
-            "project": "libs/ui-toolkit/pipes/ng-package.json"
+            "project": "libs/ui-toolkit/pipes/ng-package.json",
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -1041,7 +945,8 @@
               "libs/ui-toolkit/pipes/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/ui-toolkit/pipes/**/*"
             ]
           }
         },
@@ -1063,10 +968,11 @@
       "prefix": "gor",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/icon/tsconfig.lib.json",
-            "project": "libs/ui-toolkit/icon/ng-package.json"
+            "project": "libs/ui-toolkit/icon/ng-package.json",
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -1077,7 +983,8 @@
               "libs/ui-toolkit/icon/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/ui-toolkit/icon/**/*"
             ]
           }
         },
@@ -1103,10 +1010,11 @@
       "prefix": "gor",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/form-text/tsconfig.lib.json",
-            "project": "libs/ui-toolkit/form-text/ng-package.json"
+            "project": "libs/ui-toolkit/form-text/ng-package.json",
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -1117,7 +1025,8 @@
               "libs/ui-toolkit/form-text/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/ui-toolkit/form-text/**/*"
             ]
           }
         },
@@ -1138,16 +1047,11 @@
       "prefix": "gor",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/sort-header/tsconfig.lib.json",
             "project": "libs/ui-toolkit/sort-header/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            }
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -1158,7 +1062,8 @@
               "libs/ui-toolkit/sort-header/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/ui-toolkit/sort-header/**/*"
             ]
           }
         },
@@ -1190,10 +1095,11 @@
       "prefix": "gor",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/datepicker/tsconfig.lib.json",
-            "project": "libs/ui-toolkit/datepicker/ng-package.json"
+            "project": "libs/ui-toolkit/datepicker/ng-package.json",
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -1204,7 +1110,8 @@
               "libs/ui-toolkit/datepicker/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/ui-toolkit/datepicker/**/*"
             ]
           }
         },
@@ -1236,16 +1143,11 @@
       "prefix": "gor",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/letterhead/tsconfig.lib.json",
             "project": "libs/ui-toolkit/letterhead/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            }
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -1256,7 +1158,8 @@
               "libs/ui-toolkit/letterhead/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/ui-toolkit/letterhead/**/*"
             ]
           }
         },
@@ -1288,10 +1191,11 @@
       "prefix": "gor",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/tooltip/tsconfig.lib.json",
-            "project": "libs/ui-toolkit/tooltip/ng-package.json"
+            "project": "libs/ui-toolkit/tooltip/ng-package.json",
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -1302,7 +1206,8 @@
               "libs/ui-toolkit/tooltip/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/ui-toolkit/tooltip/**/*"
             ]
           }
         },
@@ -1328,16 +1233,11 @@
       "prefix": "gor",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/enhanced-header/tsconfig.lib.json",
             "project": "libs/ui-toolkit/enhanced-header/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            }
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -1348,7 +1248,8 @@
               "libs/ui-toolkit/enhanced-header/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/ui-toolkit/enhanced-header/**/*"
             ]
           }
         },
@@ -1380,16 +1281,11 @@
       "prefix": "gor",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/modals/tsconfig.lib.json",
             "project": "libs/ui-toolkit/modals/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles",
-                "node_modules"
-              ]
-            }
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -1400,7 +1296,8 @@
               "libs/ui-toolkit/modals/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/ui-toolkit/modals/**/*"
             ]
           }
         },
@@ -1432,15 +1329,11 @@
       "prefix": "gor",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/ui-toolkit/shadow/tsconfig.lib.json",
             "project": "libs/ui-toolkit/shadow/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared-styles"
-              ]
-            }
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           }
         },
         "lint": {
@@ -1451,7 +1344,8 @@
               "libs/ui-toolkit/shadow/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "!libs/ui-toolkit/shadow/**/*"
             ]
           }
         },
@@ -1482,7 +1376,8 @@
       "versionMismatch": false
     },
     "defaultCollection": "@nrwl/angular",
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "8244fa33-ca14-41a3-8822-ab53cad1dd64"
   },
   "schematics": {
     "@nrwl/schematics:application": {

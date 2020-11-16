@@ -3,6 +3,11 @@
   "dest": "../../../dist/letterhead",
   "lib": {
     "entryFile": "src/index.ts",
+    "umdModuleIds": {
+      "@gorilainvest/ui-toolkit/directives": "../../../dist/directives",
+      "@gorilainvest/ui-toolkit/icon": "../../../dist/icon",
+      "@gorilainvest/ui-toolkit/shadow": "../../../dist/shadow"
+    },
     "styleIncludePaths": [ "../../shared-styles" ]
   }
 }

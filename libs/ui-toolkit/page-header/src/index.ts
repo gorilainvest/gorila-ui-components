@@ -1,1 +1,1 @@
-export * from './lib/page-header.module';
+export * from './public_api';

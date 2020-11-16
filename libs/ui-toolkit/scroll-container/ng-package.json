@@ -3,6 +3,9 @@
   "dest": "../../../dist/scroll-container",
   "lib": {
     "entryFile": "src/index.ts",
+    "umdModuleIds": {
+      "ngx-take-until-destroy": "ngx-take-until-destroy"
+    },
     "styleIncludePaths": [ "../../shared-styles" ]
   }
 }

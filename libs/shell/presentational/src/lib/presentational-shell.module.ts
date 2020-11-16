@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { NgModule, Provider } from '@angular/core';
+import { Injectable, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -12,13 +12,13 @@ import { ArrowVariationModule } from '@gorilainvest/ui-toolkit/arrow-variation';
 import { DataFormatterModule } from '@gorilainvest/ui-toolkit/data-formatter';
 import { PipesModule } from '@gorilainvest/ui-toolkit/pipes';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { TranslateLoader } from '@ngx-translate/core';
 
 import { PresentationalComponent } from './presentational/presentational.component';
 import { ArrowVariationComponent } from './ui/arrow-variation/arrow-variation.component';
 import { DataFormatterComponent } from './ui/data-formatter/data-formatter.component';
 import { PipesComponent } from './ui/pipes';
 
+@Injectable()
 export class TranslateServicePresentational {
   public instant = (str) => str;
 }

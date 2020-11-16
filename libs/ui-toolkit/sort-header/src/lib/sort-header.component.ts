@@ -1,3 +1,4 @@
+import { FocusMonitor } from '@angular/cdk/a11y';
 import {
   ChangeDetectorRef,
   ChangeDetectionStrategy,
@@ -7,7 +8,8 @@ import {
   Inject,
   Input,
   Optional,
-  ViewEncapsulation
+  ViewEncapsulation,
+  ElementRef
 } from '@angular/core';
 import { MatSortHeader, MatSortHeaderIntl, MatSort, matSortAnimations } from '@angular/material/sort';
 
@@ -74,9 +76,11 @@ export class SortHeaderComponent extends MatSortHeader {
     public _intl: MatSortHeaderIntl,
     changeDetectorRef: ChangeDetectorRef,
     @Optional() public _sort: MatSort,
-    @Inject('MAT_SORT_HEADER_COLUMN_DEF') @Optional() public _columnDef: MatSortHeaderColumnDef
+    @Inject('MAT_SORT_HEADER_COLUMN_DEF') @Optional() public _columnDef: MatSortHeaderColumnDef,
+    _focusMonitor: FocusMonitor,
+    _elementRef: ElementRef<HTMLElement>
   ) {
-    super(_intl, changeDetectorRef, _sort, _columnDef);
+    super(_intl, changeDetectorRef, _sort, _columnDef, _focusMonitor, _elementRef);
   }
 
   public _renderArrow() {

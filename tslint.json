@@ -7,8 +7,12 @@
     "arrow-return-shorthand": true,
     "ban": [
       true,
-      ["fit"],
-      ["fdescribe"]
+      [
+        "fit"
+      ],
+      [
+        "fdescribe"
+      ]
     ],
     "callable-types": true,
     "class-name": true,
@@ -16,7 +20,10 @@
       "severity": "warn"
     },
     "forin": true,
-    "import-blacklist": [true, "rxjs/Rx"],
+    "import-blacklist": [
+      true,
+      "rxjs/Rx"
+    ],
     "interface-over-type-literal": true,
     "member-access": false,
     "member-ordering": [
@@ -32,14 +39,24 @@
     ],
     "no-arg": true,
     "no-bitwise": true,
-    "no-console": [true, "debug", "info", "time", "timeEnd", "trace"],
+    "no-console": [
+      true,
+      "debug",
+      "info",
+      "time",
+      "timeEnd",
+      "trace"
+    ],
     "no-construct": true,
     "no-debugger": true,
     "no-duplicate-super": true,
     "no-empty": false,
     "no-empty-interface": true,
     "no-eval": true,
-    "no-inferrable-types": [true, "ignore-params"],
+    "no-inferrable-types": [
+      true,
+      "ignore-params"
+    ],
     "no-misused-new": true,
     "no-non-null-assertion": true,
     "no-shadowed-variable": true,
@@ -53,19 +70,34 @@
     "object-literal-sort-keys": false,
     "prefer-const": true,
     "radix": true,
-    "triple-equals": [true, "allow-null-check"],
+    "triple-equals": [
+      true,
+      "allow-null-check"
+    ],
     "unified-signatures": true,
     "variable-name": false,
     "directive-selector": [
       true,
       "attribute",
-      ["gdk", "gor", "gro", "mag", "mur"],
+      [
+        "gdk",
+        "gor",
+        "gro",
+        "mag",
+        "mur"
+      ],
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      ["gdk", "gor", "gro", "mag", "mur"],
+      [
+        "gdk",
+        "gor",
+        "gro",
+        "mag",
+        "mur"
+      ],
       "kebab-case"
     ],
     "no-output-on-prefix": true,
@@ -85,9 +117,12 @@
         "depConstraints": [
           {
             "sourceTag": "*",
-            "onlyDependOnLibsWithTags": ["*"]
+            "onlyDependOnLibsWithTags": [
+              "*"
+            ]
           }
-        ]
+        ],
+        "enforceBuildableLibDependency": true
       }
     ]
   }

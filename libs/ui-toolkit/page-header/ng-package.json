@@ -3,6 +3,9 @@
   "dest": "../../../dist/page-header",
   "lib": {
     "entryFile": "src/index.ts",
+    "umdModuleIds": {
+      "@gorilainvest/ui-toolkit/scroll-container": "../../../dist/scroll-container"
+    },
     "styleIncludePaths": [ "../../shared-styles" ]
   }
 }

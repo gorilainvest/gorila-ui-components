@@ -1,7 +1,22 @@
 {
   "extends": "../../../tslint.json",
   "rules": {
-    "directive-selector": [true, "attribute", "gorilainvest", "camelCase"],
-    "component-selector": [true, "element", "gorilainvest", "kebab-case"]
+    "directive-selector": [
+      true,
+      "attribute",
+      "gorilainvest",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "gorilainvest",
+      "kebab-case"
+    ]
+  },
+  "linterOptions": {
+    "exclude": [
+      "!**/*"
+    ]
   }
 }
