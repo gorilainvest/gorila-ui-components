@@ -2,7 +2,8 @@
   "name": "@gorilainvest/ui-toolkit",
   "version": "3.0.0",
   "files": [
-    "dist"
+    "dist",
+    "decorate-angular-cli.js"
   ],
   "scripts": {
     "affected": "nx affected",
@@ -18,7 +19,7 @@
     "build-storybook": "build-storybook",
     "precodacy-coverage": "find coverage/libs -name lcov.info -exec echo -a {} \\; | xargs lcov -o coverage/lcov.info",
     "codacy-coverage": "cat ./coverage/lcov.info | codacy-coverage",
-    "precompodoc": "nx dep-graph --file guides/assets/dep-graph.svg && node scripts/fix-docs-links.js",
+    "precompodoc": "node scripts/fix-docs-links.js",
     "compodoc": "compodoc",
     "compodoc:coverage": "compodoc --coverageTest",
     "coverage": "cross-env ENABLE_COVERAGE=true node scripts/test-all.js",
