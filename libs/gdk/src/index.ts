@@ -1,1 +1,1 @@
-export * from "./lib/gdk.module";
+export * from "./public_api";

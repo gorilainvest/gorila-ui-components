@@ -51,14 +51,14 @@ describe('SlideToggleComponent', () => {
       expect(buttonDebugElement.styles['backgroundColor']).toEqual('');
     });
 
-    it('expect color to be #ff0000', () => {
+    it('expect color to be #ff0000 in rgb()', () => {
       component.checked = true;
       component.color = '#ff0000';
       fixture.detectChanges();
       const buttonDebugElement = fixture.debugElement.query(
         By.css('.slider.round')
       );
-      expect(buttonDebugElement.styles['backgroundColor']).toEqual('#ff0000');
+      expect(buttonDebugElement.styles['backgroundColor']).toEqual('rgb(255, 0, 0)');
     });
   });
 });

@@ -1,45 +1,33 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { MAT_MOMENT_DATE_FORMATS, MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatButtonModule } from '@angular/material/button';
+import { DateAdapter, MAT_DATE_FORMATS } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { ButtonModule } from '@gorilainvest/ui-toolkit/button';
 
+import { GorilaDatepickerAdapter } from './adapter/datepicker.adapter';
 import { CalendarHeaderComponent } from './calendar-header/calendar-header.component';
 import { DatepickerContentComponent } from './datepicker-content/datepicker-content.component';
 import { DatepickerToggleComponent } from './datepicker-toggle/datepicker-toggle.component';
 import { DatepickerComponent } from './datepicker.component';
 import { DatepickerModeService } from './service/datepicker-mode.service';
 
-/** @ignore */
-export const MODULE_METADATA = {
+@NgModule({
   imports: [
     CommonModule,
     ButtonModule,
     MatButtonModule,
     MatDatepickerModule,
-    MatMomentDateModule
+    MatMomentDateModule,
   ],
-  declarations: [
-    DatepickerComponent,
-    DatepickerContentComponent,
-    DatepickerToggleComponent,
-    CalendarHeaderComponent,
-  ],
+  declarations: [DatepickerComponent, DatepickerContentComponent, DatepickerToggleComponent, CalendarHeaderComponent],
   providers: [
     DatepickerModeService,
+    { provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS },
+    { provide: DateAdapter, useClass: GorilaDatepickerAdapter },
   ],
-  exports: [
-    DatepickerComponent,
-    DatepickerContentComponent,
-    DatepickerToggleComponent,
-    CalendarHeaderComponent
-  ],
-  entryComponents: [
-    CalendarHeaderComponent,
-    DatepickerContentComponent
-  ]
-};
-
-@NgModule(MODULE_METADATA)
+  exports: [DatepickerComponent, DatepickerContentComponent, DatepickerToggleComponent, CalendarHeaderComponent],
+  entryComponents: [CalendarHeaderComponent, DatepickerContentComponent],
+})
 export class DatepickerModule {}

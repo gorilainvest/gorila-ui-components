@@ -38,6 +38,7 @@ describe('SlideToggleGroupComponent', () => {
 
     beforeEach(() => {
       component.data = data;
+      data.forEach((d) => component.toggleChange(d.cod, false));
     });
     it('seting 1 and 9 false - should be [] again', () => {
       spyOn(component.selecteds, 'emit');
@@ -64,13 +65,13 @@ describe('SlideToggleGroupComponent', () => {
       expect(component.selecteds.emit).toHaveBeenCalledWith(['1', '3', '9']);
     });
 
-    it('seting 3,4 true then 3 false (9 was selected in other test) - should be [1,4,9]', () => {
+    it('seting 3,4 true then 3 false', () => {
       spyOn(component.selecteds, 'emit');
       component.toggleChange('3', true);
       component.toggleChange('4', true);
       component.toggleChange('3', false);
       fixture.detectChanges();
-      expect(component.selecteds.emit).toHaveBeenCalledWith(['1', '4', '9']);
+      expect(component.selecteds.emit).toHaveBeenCalledWith(['4']);
     });
   });
 });

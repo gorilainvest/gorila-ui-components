@@ -3,6 +3,10 @@
   "dest": "../../../dist/data-formatter",
   "lib": {
     "entryFile": "src/index.ts",
+    "umdModuleIds": {
+      "@ngx-translate/core": "@ngx-translate/core",
+      "ngx-moment": "ngx-moment"
+    },
     "styleIncludePaths": [ "../../shared-styles" ]
   }
 }

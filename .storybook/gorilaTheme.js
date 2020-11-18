@@ -1,6 +1,6 @@
 import { create } from '@storybook/theming';
 
-export default {
+const gorilaTheme = create({
   base: 'light',
 
   colorPrimary: '#10c0c6',
@@ -32,7 +32,6 @@ export default {
   inputBorderRadius: 4,
 
   brandTitle: 'Gorila UI-Toolkit Storybook',
-  brandUrl: 'https://gorila.com.br'
-  // brandImage: 'https://placehold.it/350x150',
-};
-
+  brandUrl: 'https://gorila.com.br',
+});;
+export default gorilaTheme;

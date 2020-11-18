@@ -1,1 +1,1 @@
-export * from './lib/sort-header.module';
+export * from './public_api';

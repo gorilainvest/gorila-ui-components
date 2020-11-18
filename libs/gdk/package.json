@@ -3,9 +3,5 @@
   "version": "0.0.2",
   "files": [
     "dist"
-  ],
-  "peerDependencies": {
-    "@angular/common": "^8.0.0",
-    "@angular/core": "^8.0.0"
-  }
+  ]
 }

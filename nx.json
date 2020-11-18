@@ -3,9 +3,9 @@
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": "*",
-    "tsconfig.json": "*",
     "tslint.json": "*",
-    "nx.json": "*"
+    "nx.json": "*",
+    "tsconfig.base.json": "*"
   },
   "projects": {
     "arrow-variation": {
@@ -108,9 +108,6 @@
       ]
     },
     "widgets-system": {
-      "tags": []
-    },
-    "widgets-system-e2e": {
       "tags": []
     },
     "directives": {
@@ -252,5 +249,20 @@
         "group:layout"
       ]
     }
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": [
+          "lint",
+          "test",
+          "e2e"
+        ]
+      }
+    }
+  },
+  "affected": {
+    "defaultBase": "master"
   }
 }

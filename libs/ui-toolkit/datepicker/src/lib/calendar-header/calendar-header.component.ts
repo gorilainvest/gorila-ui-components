@@ -9,11 +9,13 @@ import {
   Optional,
   ViewEncapsulation,
 } from '@angular/core';
-import { DateAdapter, MAT_DATE_FORMATS, MatDateFormats } from '@angular/material/core';
+import { DateAdapter } from '@angular/material/core';
+import type { MatDateFormats } from '@angular/material/core';
+import { MAT_DATE_FORMATS } from '@angular/material/core';
 import { MatCalendar, MatCalendarHeader, MatDatepickerIntl } from '@angular/material/datepicker';
 import { untilDestroyed } from 'ngx-take-until-destroy';
 
-import { DatePickerMode } from '../model/datepicker.model';
+import type { DatePickerMode } from '../model/datepicker.model';
 import { DatepickerModeService } from '../service/datepicker-mode.service';
 
 /**

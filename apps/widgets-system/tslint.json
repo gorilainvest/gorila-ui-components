@@ -10,5 +10,10 @@
       ],
       "kebab-case"
     ]
+  },
+  "linterOptions": {
+    "exclude": [
+      "!**/*"
+    ]
   }
 }
