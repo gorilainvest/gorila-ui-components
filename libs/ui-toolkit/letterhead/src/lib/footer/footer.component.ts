@@ -52,4 +52,9 @@ export class LetterheadFooterComponent {
    * Second line of footer's middle section.
    */
   @Input() public middleSub: string;
+
+  /**
+   * Text to be displayed as footnote
+   */
+  @Input() public footnoteText: string;
 }
