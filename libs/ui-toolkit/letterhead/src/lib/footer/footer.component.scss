@@ -1,4 +1,5 @@
 @import "~@gorilainvest/styles/scss/colors";
+$page-footnote-height: 80px;
 $page-footer-height: 152px;
 $page-padding: 60px;
 
@@ -8,12 +9,29 @@ $page-padding: 60px;
   background: #fff;
 }
 
+.letterhead-footnote {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: $page-footnote-height;
+  margin: (2 * $page-padding - $page-footnote-height) $page-padding 0;
+
+  &-text {
+    padding-bottom: 10px;
+    font-size: 12px;
+    color: $dark-gray;
+
+    text-align: start;
+    white-space: pre-line;
+  }
+}
+
 .letterhead-footer {
   display: grid;
   grid-template-areas: 'ltop mtop rtop'
     'lbot mbot rbot';
   grid-template-columns: repeat(3, 1fr);
-  margin: 2*$page-padding $page-padding 0;
+  margin: 0 $page-padding;
   padding-top: 30px;
   padding-bottom: $page-footer-height - 60px;
 
