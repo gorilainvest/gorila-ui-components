@@ -32,7 +32,6 @@
     "ghpages:compodoc": "npm run compodoc -- --output dist/apps/widgets-system/docs",
     "ghpages:storybook": "npm run build-storybook -- --output-dir dist/apps/widgets-system/storybook",
     "help": "nx help",
-    "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
     "lint": "eslint . && ng lint",
     "ng": "nx",
     "nx": "nx",
