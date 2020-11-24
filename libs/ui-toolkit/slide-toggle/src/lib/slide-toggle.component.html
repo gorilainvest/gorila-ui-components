@@ -1,4 +1,4 @@
-<div class="toggle" [ngClass]="{ disabled: disabled }">
+<div class="toggle {{ cssClass }}" [ngClass]="{ disabled: disabled }">
   <label class="switch">
     <input type="checkbox" [checked]="checked" (change)="changeChecked()" />
     <span class="slider round" [style.backgroundColor]="checked ? color : ''">
