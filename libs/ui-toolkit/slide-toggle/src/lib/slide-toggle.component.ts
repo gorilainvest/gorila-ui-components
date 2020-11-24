@@ -22,6 +22,11 @@ export class SlideToggleComponent {
   @Input() public color = '';
 
   /**
+   * The toggle class to be customized.
+   */
+  @Input() public cssClass = '';
+
+  /**
    * The toggle disable state.
    */
   @Input() public disabled = false;
