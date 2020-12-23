@@ -25,9 +25,9 @@ export function formatNumber(value: number): number {
 
   const absValue = Math.abs(value);
 
-  if (Nx10a[9] <= absValue) {
+  if (Nx10a[9] < absValue) {
     factor = Nx10a[9];
-  } else if (Nx10a[6] <= absValue) {
+  } else if (Nx10a[6] < absValue) {
     factor = Nx10a[6];
   }
 
@@ -42,8 +42,8 @@ export function formatNumber(value: number): number {
 export function getSuffix(value: number): string {
   value = Math.abs(value);
 
-  if (Nx10a[9] <= value) { return 'Bi'; }
-  if (Nx10a[6] <= value) { return 'Mi'; }
+  if (Nx10a[9] < value) { return 'Bi'; }
+  if (Nx10a[6] < value) { return 'Mi'; }
   return '';
 }
 
