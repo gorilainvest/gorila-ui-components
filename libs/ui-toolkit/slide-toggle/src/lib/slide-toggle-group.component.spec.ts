@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { SlideToggleComponent } from './slide-toggle.component';
 import { SlideToggleGroupComponent } from './slide-toggle-group.component';
@@ -7,7 +7,7 @@ describe('SlideToggleGroupComponent', () => {
   let component: SlideToggleGroupComponent;
   let fixture: ComponentFixture<SlideToggleGroupComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [SlideToggleGroupComponent, SlideToggleComponent]
     }).compileComponents();

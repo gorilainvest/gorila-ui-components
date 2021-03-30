@@ -48,7 +48,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -66,7 +65,10 @@
                 }
               ]
             }
-          }
+          },
+          "outputs": [
+            "{options.outputPath}"
+          ]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -106,7 +108,10 @@
               "apps/widgets-system/src/favicon.ico",
               "apps/widgets-system/src/assets"
             ]
-          }
+          },
+          "outputs": [
+            "coverage/apps/widgets-system/"
+          ]
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
@@ -162,7 +167,10 @@
                 "node_modules"
               ]
             }
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui-toolkit/arrow-variation"
+          ]
         }
       },
       "schematics": {
@@ -208,7 +216,10 @@
                 "node_modules"
               ]
             }
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui-toolkit/button"
+          ]
         }
       },
       "schematics": {
@@ -249,7 +260,10 @@
             "main": "libs/ui-toolkit/card-container/src/test.ts",
             "tsConfig": "libs/ui-toolkit/card-container/tsconfig.spec.json",
             "karmaConfig": "libs/ui-toolkit/card-container/karma.conf.js"
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui-toolkit/card-container"
+          ]
         }
       },
       "schematics": {
@@ -296,7 +310,10 @@
                 "node_modules"
               ]
             }
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui-toolkit/countdown-button"
+          ]
         }
       },
       "schematics": {
@@ -343,7 +360,10 @@
                 "node_modules"
               ]
             }
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui-toolkit/currency-display"
+          ]
         }
       },
       "schematics": {
@@ -384,7 +404,10 @@
             "main": "libs/ui-toolkit/enhanced-title/src/test.ts",
             "tsConfig": "libs/ui-toolkit/enhanced-title/tsconfig.spec.json",
             "karmaConfig": "libs/ui-toolkit/enhanced-title/karma.conf.js"
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui-toolkit/enhanced-title"
+          ]
         }
       },
       "schematics": {
@@ -431,7 +454,10 @@
                 "node_modules"
               ]
             }
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui-toolkit/data-formatter"
+          ]
         }
       },
       "schematics": {
@@ -472,7 +498,10 @@
             "main": "libs/ui-toolkit/loading/src/test.ts",
             "tsConfig": "libs/ui-toolkit/loading/tsconfig.spec.json",
             "karmaConfig": "libs/ui-toolkit/loading/karma.conf.js"
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui-toolkit/loading"
+          ]
         }
       },
       "schematics": {
@@ -513,7 +542,10 @@
             "main": "libs/ui-toolkit/popover/src/test.ts",
             "tsConfig": "libs/ui-toolkit/popover/tsconfig.spec.json",
             "karmaConfig": "libs/ui-toolkit/popover/karma.conf.js"
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui-toolkit/popover"
+          ]
         }
       },
       "schematics": {
@@ -560,7 +592,10 @@
                 "node_modules"
               ]
             }
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui-toolkit/popup-confirm"
+          ]
         }
       },
       "schematics": {
@@ -601,7 +636,10 @@
             "main": "libs/ui-toolkit/section-title/src/test.ts",
             "tsConfig": "libs/ui-toolkit/section-title/tsconfig.spec.json",
             "karmaConfig": "libs/ui-toolkit/section-title/karma.conf.js"
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui-toolkit/section-title"
+          ]
         }
       },
       "schematics": {
@@ -629,7 +667,10 @@
             "main": "libs/ui-toolkit/slide-toggle/src/test.ts",
             "tsConfig": "libs/ui-toolkit/slide-toggle/tsconfig.spec.json",
             "karmaConfig": "libs/ui-toolkit/slide-toggle/karma.conf.js"
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui-toolkit/slide-toggle"
+          ]
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
@@ -670,7 +711,10 @@
             "main": "libs/ui-toolkit/directives/src/test.ts",
             "tsConfig": "libs/ui-toolkit/directives/tsconfig.spec.json",
             "karmaConfig": "libs/ui-toolkit/directives/karma.conf.js"
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui-toolkit/directives"
+          ]
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
@@ -834,7 +878,10 @@
           "options": {
             "jestConfig": "libs/gdk/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": [
+            "coverage/libs/gdk"
+          ]
         }
       },
       "schematics": {}
@@ -872,7 +919,10 @@
             "main": "libs/ui-toolkit/scroll-container/src/test.ts",
             "tsConfig": "libs/ui-toolkit/scroll-container/tsconfig.spec.json",
             "karmaConfig": "libs/ui-toolkit/scroll-container/karma.conf.js"
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui-toolkit/scroll-container"
+          ]
         }
       },
       "schematics": {
@@ -914,7 +964,10 @@
             "main": "libs/ui-toolkit/page-header/src/test.ts",
             "tsConfig": "libs/ui-toolkit/page-header/tsconfig.spec.json",
             "karmaConfig": "libs/ui-toolkit/page-header/karma.conf.js"
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui-toolkit/page-header"
+          ]
         }
       },
       "schematics": {
@@ -956,7 +1009,10 @@
             "main": "libs/ui-toolkit/pipes/src/test.ts",
             "tsConfig": "libs/ui-toolkit/pipes/tsconfig.spec.json",
             "karmaConfig": "libs/ui-toolkit/pipes/karma.conf.js"
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui-toolkit/pipes"
+          ]
         }
       },
       "schematics": {}
@@ -994,7 +1050,10 @@
             "main": "libs/ui-toolkit/icon/src/test.ts",
             "tsConfig": "libs/ui-toolkit/icon/tsconfig.spec.json",
             "karmaConfig": "libs/ui-toolkit/icon/karma.conf.js"
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui-toolkit/icon"
+          ]
         }
       },
       "schematics": {
@@ -1036,7 +1095,10 @@
             "main": "libs/ui-toolkit/form-text/src/test.ts",
             "tsConfig": "libs/ui-toolkit/form-text/tsconfig.spec.json",
             "karmaConfig": "libs/ui-toolkit/form-text/karma.conf.js"
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui-toolkit/form-text"
+          ]
         }
       }
     },
@@ -1079,7 +1141,10 @@
                 "node_modules"
               ]
             }
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui-toolkit/sort-header"
+          ]
         }
       },
       "schematics": {
@@ -1127,7 +1192,10 @@
                 "node_modules"
               ]
             }
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui-toolkit/datepicker"
+          ]
         }
       },
       "schematics": {
@@ -1175,7 +1243,10 @@
                 "node_modules"
               ]
             }
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui-toolkit/letterhead"
+          ]
         }
       },
       "schematics": {
@@ -1217,7 +1288,10 @@
             "main": "libs/ui-toolkit/tooltip/src/test.ts",
             "tsConfig": "libs/ui-toolkit/tooltip/tsconfig.spec.json",
             "karmaConfig": "libs/ui-toolkit/tooltip/karma.conf.js"
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui-toolkit/tooltip"
+          ]
         }
       },
       "schematics": {
@@ -1265,7 +1339,10 @@
                 "node_modules"
               ]
             }
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui-toolkit/enhanced-header"
+          ]
         }
       },
       "schematics": {
@@ -1313,7 +1390,10 @@
                 "node_modules"
               ]
             }
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui-toolkit/modals"
+          ]
         }
       },
       "schematics": {
@@ -1360,7 +1440,10 @@
                 "libs/shared-styles"
               ]
             }
-          }
+          },
+          "outputs": [
+            "coverage/libs/ui-toolkit/shadow"
+          ]
         }
       },
       "schematics": {

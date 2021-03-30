@@ -1,5 +1,5 @@
 import { Component, NgZone } from '@angular/core';
-import { async, ComponentFixture, TestBed, tick } from '@angular/core/testing';
+import { ComponentFixture, TestBed, tick, waitForAsync } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
 import { ScrollContainerComponent } from './scroll-container.component';
@@ -13,7 +13,7 @@ describe('ScrollContainerComponent', () => {
   let scrollable: CdkScrollable;
   let fixture: ComponentFixture<ScrollContainerComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [CommonModule, ScrollingModule],
       declarations: [ScrollContainerComponent]
@@ -33,7 +33,7 @@ describe('ScrollContainerComponent', () => {
     expect(component.scrollStyle.height).toBe(component.initialHeight);
   });
 
-  it('should change to scrolled size after scrolling, when distance to edge becomes greater than previous scroll length', async(() => {
+  it('should change to scrolled size after scrolling, when distance to edge becomes greater than previous scroll length', waitForAsync(() => {
     dispatcher.register(scrollable);
     spyOn(scrollable, 'measureScrollOffset').and.returnValue(500);
 
@@ -43,7 +43,7 @@ describe('ScrollContainerComponent', () => {
     expect(component.scrollStyle.height).toBe(component.scrolledHeight);
   }));
 
-  it('should revert to initial size after scrolling, when distance to edge becomes smaller than the return offset', async(() => {
+  it('should revert to initial size after scrolling, when distance to edge becomes smaller than the return offset', waitForAsync(() => {
     dispatcher.register(scrollable);
     spyOn(scrollable, 'measureScrollOffset').and.returnValue(0);
 

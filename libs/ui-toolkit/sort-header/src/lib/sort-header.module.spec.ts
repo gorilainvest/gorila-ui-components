@@ -1,10 +1,10 @@
-import { async, TestBed } from '@angular/core/testing';
+import { TestBed, waitForAsync } from '@angular/core/testing';
 import { ICON_BASE_SRC } from '@gorilainvest/ui-toolkit/icon';
 
 import { SortHeaderModule } from './sort-header.module';
 
 describe('SortHeaderModule', () => {
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [SortHeaderModule],
       providers: [

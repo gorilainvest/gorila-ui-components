@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
 import { CurrencyDisplayComponent } from './currency-display.component';
@@ -9,7 +9,7 @@ describe('CurrencyDisplayComponent', () => {
   let component: CurrencyDisplayComponent;
   let fixture: ComponentFixture<CurrencyDisplayComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [CurrencyDisplayModule]
     })

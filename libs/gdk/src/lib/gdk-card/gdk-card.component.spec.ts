@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { ComponentFixture, TestBed, waitForAsync } from "@angular/core/testing";
 
 import { GdkModule } from "../gdk.module";
 import { GdkCardComponent } from "./gdk-card.component";
@@ -7,7 +7,7 @@ describe("GdkCardComponent", () => {
   let component: GdkCardComponent;
   let fixture: ComponentFixture<GdkCardComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [GdkModule]
     }).compileComponents();
