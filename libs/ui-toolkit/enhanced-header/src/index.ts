@@ -1,1 +1,1 @@
-export * from './lib/enhanced-header.module';
+export * from './public_api';
