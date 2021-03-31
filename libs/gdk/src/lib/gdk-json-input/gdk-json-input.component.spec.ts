@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { GdkJsonInputComponent } from './gdk-json-input.component';
 
@@ -6,7 +6,7 @@ describe('JsonInputComponent', () => {
   let component: GdkJsonInputComponent;
   let fixture: ComponentFixture<GdkJsonInputComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ GdkJsonInputComponent ]
     })

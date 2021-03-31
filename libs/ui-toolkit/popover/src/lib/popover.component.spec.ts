@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { PopoverRefStub } from '../testing/popover-ref.stub';
 import { PopoverRef } from './popover-ref';
@@ -7,7 +7,7 @@ import { PopoverComponent } from './popover.component';
 describe('PopoverComponent - ', () => {
   let component: PopoverComponent;
   let fixture: ComponentFixture<PopoverComponent>;
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [PopoverComponent],
       providers: [

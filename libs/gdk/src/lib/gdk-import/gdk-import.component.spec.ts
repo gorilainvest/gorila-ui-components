@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { GdkModule } from "../gdk.module";
 import { GdkImportComponent } from './gdk-import.component';
@@ -7,7 +7,7 @@ describe('GdkImportComponent', () => {
   let component: GdkImportComponent;
   let fixture: ComponentFixture<GdkImportComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [GdkModule]
     })

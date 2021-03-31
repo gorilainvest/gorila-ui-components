@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { DirectivesModule } from '@gorilainvest/ui-toolkit/directives';
 import { ICON_BASE_SRC, IconModule } from '@gorilainvest/ui-toolkit/icon';
@@ -12,7 +12,7 @@ describe('LetterheadComponent', () => {
   let component: LetterheadComponent;
   let fixture: ComponentFixture<LetterheadComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule, IconModule, DirectivesModule, ShadowModule],
       declarations: [

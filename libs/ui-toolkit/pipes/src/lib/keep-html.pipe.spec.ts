@@ -1,5 +1,5 @@
 import { SecurityContext } from '@angular/core';
-import { async, TestBed } from '@angular/core/testing';
+import { TestBed, waitForAsync } from '@angular/core/testing';
 import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 
 import { KeepHtmlPipe } from './keep-html.pipe';
@@ -13,7 +13,7 @@ describe('GorKeepHtmlPipe', () => {
   let domSanitizer: DomSanitizer;
   let pipe: KeepHtmlPipe;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [BrowserModule],
       providers: [{ provide: DomSanitizer, useValue: new DomSanitizerStub() }]

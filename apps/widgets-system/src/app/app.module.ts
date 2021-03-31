@@ -31,9 +31,10 @@ import { HomeComponent } from "./home/home.component";
     ReactiveFormsModule,
     NxModule.forRoot(),
     RouterModule.forRoot(ROUTES, {
-      initialNavigation: "enabled",
-      useHash: true
-    }),
+    initialNavigation: "enabled",
+    useHash: true,
+    relativeLinkResolution: 'legacy'
+}),
     MatCardModule,
     MatCheckboxModule,
     MatDialogModule,

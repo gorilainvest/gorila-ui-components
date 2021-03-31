@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
 import { EnhancedHeaderComponent } from './enhanced-header.component';
@@ -8,7 +8,7 @@ describe('EnhancedHeaderComponent', () => {
   let component: EnhancedHeaderComponent;
   let fixture: ComponentFixture<EnhancedHeaderComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [EnhancedHeaderModule]
     })

@@ -1,6 +1,6 @@
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { EnhancedTitleModule } from '@gorilainvest/ui-toolkit/enhanced-title';
 
@@ -23,7 +23,7 @@ class TestHostComponent {}
 describe('PageHeaderComponent', () => {
   let fixture: ComponentFixture<TestHostComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [EnhancedTitleModule, ScrollingModule],
       declarations: [PageHeaderComponent, TestHostComponent]
@@ -47,7 +47,7 @@ describe('PageHeaderComponent', () => {
     expect(filters).toEqual('Header Filters');
   });
 
-  it("should acquire the class 'scrolled' after scrolling, when distance to edge becomes more than the departure offset", async(() => {
+  it("should acquire the class 'scrolled' after scrolling, when distance to edge becomes more than the departure offset", waitForAsync(() => {
     fixture.debugElement.query(By.css('#div-container')).nativeElement.scrollTo(0, 130);
     setTimeout(() => {
       fixture.detectChanges();
@@ -56,7 +56,7 @@ describe('PageHeaderComponent', () => {
     }, 250);
   }));
 
-  it("should not have class 'scrolled' after scrolling, when distance to edge becomes smaller than the return offset", async(() => {
+  it("should not have class 'scrolled' after scrolling, when distance to edge becomes smaller than the return offset", waitForAsync(() => {
     fixture.debugElement.query(By.css('#div-container')).nativeElement.scrollTo(0, 130);
     setTimeout(() => {
       fixture.detectChanges();

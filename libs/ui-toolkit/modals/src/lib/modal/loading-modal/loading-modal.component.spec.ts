@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { By } from '@angular/platform-browser';
 import { LoadingModule } from '@gorilainvest/ui-toolkit/loading';
@@ -10,7 +10,7 @@ describe('LoadingModalComponent', () => {
   let component: LoadingModalComponent;
   let fixture: ComponentFixture<LoadingModalComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [LoadingModule, PipesModule],
       declarations: [LoadingModalComponent],
