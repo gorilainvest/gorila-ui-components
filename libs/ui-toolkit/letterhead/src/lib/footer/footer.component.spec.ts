@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { LetterheadFooterComponent } from './footer.component';
 import { By } from '@angular/platform-browser';
 
@@ -6,7 +6,7 @@ describe('LetterheadFooterComponent', () => {
   let component: LetterheadFooterComponent;
   let fixture: ComponentFixture<LetterheadFooterComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [
         LetterheadFooterComponent

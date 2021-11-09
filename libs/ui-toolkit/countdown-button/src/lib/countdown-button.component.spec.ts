@@ -1,10 +1,4 @@
-import {
-  async,
-  ComponentFixture,
-  fakeAsync,
-  TestBed,
-  tick as _tick
-} from '@angular/core/testing';
+import { ComponentFixture, fakeAsync, TestBed, tick as _tick, waitForAsync } from '@angular/core/testing';
 import { asyncScheduler } from 'rxjs';
 
 
@@ -17,7 +11,7 @@ describe('CountdownButtonComponent', () => {
   let fixture: ComponentFixture<CountdownButtonComponent>;
   let tick: (ms: number) => void;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ButtonComponent, CountdownButtonComponent]
     }).compileComponents();

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { By } from "@angular/platform-browser";
 
 import { ArrowVariationComponent, PATH_ARROW } from './arrow-variation.component';
@@ -7,7 +7,7 @@ describe('ArrowVariationComponent', () => {
   let component: ArrowVariationComponent;
   let fixture: ComponentFixture<ArrowVariationComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ArrowVariationComponent]
     }).compileComponents();
