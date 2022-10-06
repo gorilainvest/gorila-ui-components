@@ -3,6 +3,7 @@ import {
   ElementRef,
   Input,
   OnChanges,
+  OnDestroy,
   OnInit,
   SimpleChanges
 } from '@angular/core';
@@ -10,6 +11,7 @@ import {
 import Popper from 'popper.js';
 import { merge, path } from 'ramda';
 import { timer } from 'rxjs';
+import { untilDestroyed } from 'ngx-take-until-destroy';
 
 import tippy, {
   Instance as TippyInstance
@@ -25,7 +27,7 @@ import { HTMLTippyProps, tippyOptionsDefault } from './tippy.model';
  *
  */
 @Directive({ selector: '[gorTippy]' })
-export class TippyDirective implements OnInit, OnChanges {
+export class TippyDirective implements OnInit, OnChanges, OnDestroy {
   /**
    * The descriptor of a tippy instance.
    */
@@ -53,6 +55,12 @@ export class TippyDirective implements OnInit, OnChanges {
     }
   }
 
+  public ngOnDestroy() {
+    if (this.tippy) {
+      this.tippy.destroy();
+    }
+  }
+
   private loadTippy() {
 
     if (
@@ -63,7 +71,7 @@ export class TippyDirective implements OnInit, OnChanges {
     }
 
 
-    timer(500).subscribe(() => {
+    timer(500).pipe(untilDestroyed(this)).subscribe(() => {
       try {
         const el = this.el.nativeElement;
         if (this.tippy) {
