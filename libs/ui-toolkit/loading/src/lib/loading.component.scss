@@ -1,3 +1,5 @@
+@import '~@gorilainvest/styles/scss/_colors.scss';
+
 .container {
   display: flex;
   flex-direction: column;
@@ -9,7 +11,7 @@
 }
 
 .loading-component {
-  color: #22bdbf;
+  color: $gorila-primary;
   font-weight: 800;
   text-align: center;
 
@@ -44,7 +46,7 @@
 .loading-spinner {
   display: inline-block;
 
-  border-color: #22bdbf;
+  border-color: $gorila-primary;
   border-style: solid;
   border-right-color: transparent;
   border-radius: 50%;

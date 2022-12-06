@@ -10,7 +10,7 @@ addParameters({
     values: [
       { name: 'Light Mode', value: '#f1f1f1' },
       { name: 'Dark Mode', value: '#22313f' },
-      { name: 'Default Theme', value: '#10c0c6' },
+      { name: 'Default Theme', value: '#3366FF' },
       { name: 'Cash Theme', value: '#314a61' },
       { name: 'Currency Theme', value: '#fcbd1f', default: true },
       { name: 'Fixed Income Theme', value: '#815ae8' },

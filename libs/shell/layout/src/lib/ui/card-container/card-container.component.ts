@@ -7,7 +7,7 @@ import { FormControl } from "@angular/forms";
   styleUrls: ["./card-container.component.scss"]
 })
 export class CardContainerComponent implements OnInit {
-  colorEndFormControl = new FormControl("#10c0c6");
+  colorEndFormControl = new FormControl("#3366FF");
   colorInitFormControl = new FormControl("#4dde90");
   titleFormControl = new FormControl("Nice title");
 

@@ -9,7 +9,7 @@ export type Themes = Theme[];
 
 export const THEMES: Themes = [
   {
-    primary: '#11c0c5',
+    primary: '#3366FF',
     accent: '#5ce385',
     name: 'portfolio',
     isDefault: true
