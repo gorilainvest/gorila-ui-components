@@ -71,10 +71,10 @@ storiesOf('Card Container', module)
         <gor-card-container title="This is a sample">
             ${content}
         </gor-card-container>
-        <gor-card-container title="This is a sample" colorInit="#10c0c6" colorEnd="#4dde90">
+        <gor-card-container title="This is a sample" colorInit="#3366FF" colorEnd="#3366FF">
             ${content}
         </gor-card-container>
-        <gor-card-container title="This is a sample" colorInit="#10c0c6" colorEnd="#4dde90" subtitle="with a subtitle">
+        <gor-card-container title="This is a sample" colorInit="#3366FF" colorEnd="#3366FF" subtitle="with a subtitle">
             ${content}
         </gor-card-container>
         `
@@ -82,8 +82,8 @@ storiesOf('Card Container', module)
   .add('editable', () => ({
     props: {
       title: text('title', 'This is a sample'),
-      colorInit: text('colorInit', '#10c0c6'),
-      colorEnd: text('colorEnd', '#4dde90'),
+      colorInit: text('colorInit', '#3366FF'),
+      colorEnd: text('colorEnd', '#3366FF'),
       subtitle: text('subtitle', 'with a subtitle')
     },
     styles,
@@ -98,8 +98,8 @@ storiesOf('Card Container', module)
     template: `
       <gor-card-container
         title="Title"
-        colorInit="#10c0c6"
-        colorEnd="#4dde90"
+        colorInit="#3366FF"
+        colorEnd="#3366FF"
         contentTitle="Content Title"
       >
         ${content}
@@ -122,8 +122,8 @@ storiesOf('Card Container', module)
     styles,
     template: `
       <gor-card-container
-        colorInit="#10c0c6"
-        colorEnd="#4dde90"
+        colorInit="#3366FF"
+        colorEnd="#3366FF"
         [displayShadow]="true"
       >
         ${content}

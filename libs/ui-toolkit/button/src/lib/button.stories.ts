@@ -16,10 +16,10 @@ storiesOf('Button', module)
     },
     template: `
       <mag-button btnType="green" [disabled]="false" (click)="onClick()">
-        I am a green button
+        I am a primary button
       </mag-button>
       <mag-button btnType="gray" [disabled]="false" (click)="onClick()">
-        I am a gray button
+        I am a secondary button
       </mag-button>
       <mag-button btnType="green" [disabled]="true">
         Don't click me

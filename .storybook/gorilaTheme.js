@@ -3,7 +3,7 @@ import { create } from '@storybook/theming';
 const gorilaTheme = create({
   base: 'light',
 
-  colorPrimary: '#10c0c6',
+  colorPrimary: '#3366FF',
   colorSecondary: '#4dde90',
 
   // UI
@@ -22,7 +22,7 @@ const gorilaTheme = create({
 
   // Toolbar default and active colors
   barTextColor: '#555b5b',
-  barSelectedColor: '#10c0c6',
+  barSelectedColor: '#3366FF',
   barBg: '#ffffff',
 
   // Form colors

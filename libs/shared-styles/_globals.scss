@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+@import "~@gorilainvest/styles/scss/colors";
 
 html,
 body {
@@ -145,7 +146,7 @@ mat-error * {
 }
 
 .text-default {
-  color: #10c0c6;
+  color: $gorila-primary;
 }
 
 .height-auto {
@@ -169,3 +170,8 @@ mat-error * {
     width: 100%;
   }
 }
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background { 
+  background-color: $gorila-primary !important;
+}
+
