@@ -8,7 +8,7 @@ import { timer } from 'rxjs';
 
 import { ModalModule } from '../modal.module';
 import { SimpleModalComponent } from './simple-modal.component';
-import type { SimpleModalData, SocialMediaArray } from './simple-modal.data';
+import  { SimpleModalData, SocialMediaArray } from './simple-modal.data';
 
 const socialMediaMock = [
   {

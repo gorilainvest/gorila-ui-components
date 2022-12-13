@@ -1,6 +1,6 @@
 import { Component, Inject, Input } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import type { SimpleModalData, SocialMediaArray } from './simple-modal.data';
+import  { SimpleModalData, SocialMediaArray } from './simple-modal.data';
 
 @Component({
   selector: 'gor-simple-modal',
