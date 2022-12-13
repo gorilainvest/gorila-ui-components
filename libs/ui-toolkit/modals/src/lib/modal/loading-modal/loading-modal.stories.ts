@@ -5,7 +5,7 @@ import { PipesModule } from '@gorilainvest/ui-toolkit/pipes';
 import { text, withKnobs } from '@storybook/addon-knobs';
 import { moduleMetadata, storiesOf } from '@storybook/angular';
 
-import  { SimpleModalData } from '../../..';
+import { SimpleModalData } from '../../..';
 import { LoadingModalComponent, ModalModule } from '../../..';
 
 @Component({
