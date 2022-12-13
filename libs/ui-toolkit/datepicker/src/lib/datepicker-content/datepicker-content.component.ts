@@ -25,9 +25,9 @@ import { Moment } from 'moment';
 import { CalendarHeaderComponent } from '../calendar-header/calendar-header.component';
 import { DatepickerModeService } from '../service/datepicker-mode.service';
 
-import type { ComponentType } from '@angular/cdk/portal';
-import type { MatCalendarView, MatDateRangeSelectionStrategy } from '@angular/material/datepicker';
-import type { DatePickerMode } from '../model/datepicker.model';
+import { ComponentType } from '@angular/cdk/portal';
+import { MatCalendarView, MatDateRangeSelectionStrategy } from '@angular/material/datepicker';
+import { DatePickerMode } from '../model/datepicker.model';
 const mapMode = {
   'year-month': { view: 'multi-year'},
   'year-only': { view: 'multi-year'}

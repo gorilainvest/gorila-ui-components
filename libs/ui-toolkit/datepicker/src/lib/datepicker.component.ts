@@ -4,7 +4,7 @@ import { MatDatepicker, MAT_SINGLE_DATE_SELECTION_MODEL_PROVIDER } from '@angula
 import { take } from 'rxjs/operators';
 
 import { DatepickerContentComponent } from './datepicker-content/datepicker-content.component';
-import type { DatePickerMode } from './model/datepicker.model';
+import { DatePickerMode } from './model/datepicker.model';
 
 /**
  * Component responsible for managing the datepicker popup/dialog.
